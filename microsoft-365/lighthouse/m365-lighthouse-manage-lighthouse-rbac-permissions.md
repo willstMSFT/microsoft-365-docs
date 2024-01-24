@@ -5,7 +5,7 @@ ms.author: sharik
 author: SKjerland
 manager: scotv
 ms.reviewer: taylorau
-ms.date: 01/17/2024
+ms.date: 01/23/2024
 audience: Admin
 ms.topic: article
 ms.service: microsoft-365-lighthouse
@@ -30,7 +30,10 @@ When administrators assign a Lighthouse RBAC role to a user in the partner tenan
 
 ## Before you begin
 
-To access the Lighthouse permissions page and manage permissions, you must be a Global Administrator in Microsoft Entra ID.
+To access the Lighthouse permissions page and manage permissions, you must have one of the following roles:
+
+- Global Administrator in Microsoft Entra ID
+- Lighthouse Administrator in Microsoft 365 Lighthouse
 
 ## View Lighthouse RBAC role membership and associated security group
 
@@ -39,6 +42,9 @@ To access the Lighthouse permissions page and manage permissions, you must be a 
 2. Select a Lighthouse role from the list to open the Lighthouse role details pane.
  
 3. View users in the partner tenant who are assigned the Lighthouse RBAC role and the associated security group.
+
+> [!NOTE]
+> To view security group membership for Lighthouse users with the Lighthouse Operator role, go to the Delegated access page in Lighthouse. The Delegated access page provides security group membership details for all delegated access relationships.
 
 ## Assign Lighthouse RBAC roles to users in the partner tenant
 
