@@ -34,15 +34,27 @@ To use Lighthouse, you need a combination of roles assigned via RBAC and GDAP.
 
 ## Managing Lighthouse RBAC permissions in the partner tenant
 
-Lighthouse permissions in the partner tenant are managed by assigning RBAC roles. Each role has a set of permissions that determines which data users can access and change within the partner tenant.  
+Lighthouse permissions in the partner tenant are managed by assigning RBAC roles. Each role has a set of permissions that determines which data users can access and change within the partner tenant. Administrators in Lighthouse should use a combination of RBAC and GDAP to provide least-privileged access to data based on the tasks each user needs to perform.   
 
-RBAC roles are managed from the Lighthouse permissions page in Lighthouse. To access the Lighthouse permissions page and manage permissions, you must be a Global Administrator in Microsoft Entra ID. To learn more, see [Manage Lighthouse RBAC permissions in Microsoft 365 Lighthouse](m365-lighthouse-manage-lighthouse-rbac-permissions.md).
+RBAC roles are managed from the Lighthouse permissions page in Lighthouse. To access the Lighthouse permissions page and manage permissions, you must have one of the following roles:
 
-There's currently only one Lighthouse RBAC role: Lighthouse Account Manager. The following table describes the Lighthouse Account Manager role.
+- Global Administrator in Microsoft Entra ID
+- Lighthouse Administrator in Microsoft 365 Lighthouse
 
-| Lighthouse&nbsp;RBAC&nbsp;role | Description |
+To learn more, see [Manage Lighthouse RBAC permissions in Microsoft 365 Lighthouse](m365-lighthouse-manage-lighthouse-rbac-permissions.md).
+
+The following table provides an overview of the different RBAC roles. For a list of actions each role can perform in the partner tenant, see [Lighthouse RBAC roles and capabilities](#lighthouse-rbac-roles-and-capabilities). 
+
+| Lighthouse&nbsp;RBAC&nbsp;role | Overview |
 |---|---|
+| Lighthouse Administrator | Text |
+| Lighthouse Operator | Text |
+| Lighthouse Reader | Text |
 | Lighthouse Account Manager | Provides full access to Sales Advisor pages and data across the entire partner tenant. Lighthouse Account Managers can export Sales Advisor data. |
+
+
+
+
 
 ## Lighthouse RBAC roles and capabilities
 
