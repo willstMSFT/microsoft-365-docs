@@ -5,7 +5,7 @@ ms.author: sharik
 author: SKjerland
 manager: scotv
 ms.reviewer: taylorau
-ms.date: 06/23/2023
+ms.date: 01/26/2024
 audience: Admin
 ms.topic: article
 ms.service: microsoft-365-lighthouse
@@ -47,40 +47,42 @@ The following table provides an overview of the different RBAC roles. For a list
 
 | Lighthouse&nbsp;RBAC&nbsp;role | Overview |
 |---|---|
-| Lighthouse Administrator | Text |
-| Lighthouse Operator | Text |
-| Lighthouse Reader | Text |
-| Lighthouse Account Manager | Provides full access to Sales Advisor pages and data across the entire partner tenant. Lighthouse Account Managers can export Sales Advisor data. |
+| Lighthouse Administrator<sup>1</sup> | Assign the Lighthouse Administrator role to users who manage the Microsoft 365 Lighthouse service, including customer tenant management, deployment plans, and alerts configuration. Lighthouse Administrators can manage GDAP and Lighthouse RBAC permissions.<br><br>To assign Lighthouse RBAC roles, a Lighthouse Administrator must have the Privileged Role Administrator role in Microsoft Entra ID.<br><br>To manage GDAP, a Lighthouse Administrator must be a member of the Admin Agent group in Partner Center. |
+| Lighthouse Account Manager | Assign the Lighthouse Account Manager role too users who need full access to Sales Advisor pages and data across the entire partner tenant. Lighthouse Account Managers can export Sales Advisor data. |
+| Lighthouse Operator | The Lighthouse Operator role is automatically assigned to users with GDAP permissions in a customer tenant. A user's permissions and management capabilities are defined by the associated GDAP permissions for each customer tenant that they manage.<br><br>Users in a Just-in-Time (JIT) agent support role who have no other GDAP permissions are assigned the Lighthouse Operator role only when they have elevated JIT permissions. |
+| Lighthouse Reader<sup>1</sup> | Assign the Lighthouse Reader role to users who need read-only access to data in Lighthouse, including read-only access to the Alerts, Baseline, and Tenants pages.<br><br>**Note:**GDAP permissions control which customer tenant information is viewable in Lighthouse (not including the Tenants page). |
 
-
-
-
+<sup>1</sup> Lighthouse Administrator and Lighthouse Reader roles only manage Lighthouse workloads.
 
 ## Lighthouse RBAC roles and capabilities
 
 The following table describes the actions that Lighthouse Account Managers can perform in Lighthouse.
 
-| Area | Actions | Lighthouse&nbsp;Account&nbsp;Manager |
-|---|---|:---:|
-| **Tenants** | View the Tenants page | &check; |
-|  | Manage tags |  |
-|  | Activate and inactivate a tenant |  |
-|  | View delegated status | &check; |
-|  | View baseline assignment |  |
-|  | View deployment status | &check; |
-|  | View and edit customer contact information and website | &check; |
-| **Baselines** | View baselines (default, custom) |  |
-|  | Create, edit, and assign baselines |  |
-| **Alerts** | View alerts | &check; |
-|  | Manage alerts (change severity, status, or assignment) |  |
-|  | Create, edit, and delete alert rules |  |
-| **Permissions** | Set up and manage Lighthouse permissions |  |
-|  | Set up and manage GDAP |  |
-|  | View GDAP status detail |  |
-| **Audit logs** | View audit logs |  |
-| **Sales Advisor** | View Sales Advisor reports and manage data | &check; |
-| **Support** | Open and manage service requests |  |
-| **Service&nbsp;health** | Monitor service health |  |
+| Area | Actions | Lighthouse&nbsp;Administrator | Lighthouse&nbsp;Account&nbsp;Manager | Lighthouse&nbsp;Operator | Lighthouse&nbsp;Reader |
+|---|---|:---:|:---:|:---:|:---:|
+| **Tenants** | View the Tenants page | &check; | &check; | &check; | &check; |
+|  | Manage tags | &check; |  |  |  |
+|  | Activate and inactivate a tenant | &check; |  |  |  |
+|  | View delegated status | &check; | &check; | &check; | &check; |
+|  | View baseline assignment | &check; | &check; | &check; | &check; |
+|  | View deployment status | &check; | &check; | &check; | &check; |
+|  | View and edit customer contact and website information | &check; | &check; | &check; | &check; |
+| **Baselines** | View baselines (default, custom) | &check; |  | &check; | &check; |
+|  | Create, edit, and assign baselines | &check; |  |  |  |
+| **Alerts** | View alerts | &check; | &check; | &check; | &check; |
+|  | Manage alerts (change severity, status, or assignment) | &check; |  | &check; |  |
+|  | Create, edit, and delete alert rules | &check; |  |  |  |
+| **Permissions** | Set up and manage Lighthouse permissions | &check; |  |  |  |
+|  | Set up and manage GDAP | &check; |  |  |  |
+|  | View GDAP status detail | &check; |  |  |  |
+| **Audit logs** | View audit logs | &check; |  | &check; |  |
+| **Sales Advisor** | View Sales Advisor reports and manage data | &check; | &check; |  |  |
+| **Support** | Create and manage service requests<sup>1</sup> | &check; |  |  |  |
+| **Service&nbsp;health** | Monitor service health<sup>2</sup> | &check; |  | &check; |  |
+
+<sup>1</sup> To create and manage service requests, Lighthouse users must have at least one Microsoft Entra role assigned to them with the following property set: **microsoft.office365.supportTickets/allEntities/allTasks**. For a complete list of Microsoft Entra roles, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
+
+<sup>2</sup> To monitor service health, Lighthouse users must have at least one Microsoft Entra role in the partner tenant with the following property set: **microsoft.office365.serviceHealth/allEntities/allTasks**. For a complete list of Microsoft Entra roles, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
 
 ## Managing GDAP in the customer tenant
 
@@ -94,10 +96,11 @@ For more information about GDAP or Delegated Admin Privileges (DAP) deprecation,
 
 ## Related content
 
-[Requirements for Microsoft 365 Lighthouse](m365-lighthouse-requirements.md) (article)  
+[Assign roles and permissions to users](/partner-center/permissions-overview) (article)
+[Manage Lighthouse RBAC permissions in Microsoft 365 Lighthouse](m365-lighthouse-manage-lighthouse-rbac-permissions.md) (article) 
+[Requirements for Microsoft 365 Lighthouse](m365-lighthouse-requirements.md) (article)
+[View your Microsoft Entra roles in Microsoft 365 Lighthouse](m365-lighthouse-view-your-roles.md) (article)   
 [Delegated administration privileges (DAP) FAQ](/partner-center/dap-faq) (article)  
-[View your Microsoft Entra roles in Microsoft 365 Lighthouse](m365-lighthouse-view-your-roles.md) (article)  
-[Assign roles and permissions to users](/partner-center/permissions-overview) (article)  
 [Overview of Microsoft 365 Lighthouse](m365-lighthouse-overview.md) (article)  
-[Sign up for Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md) (article)  
 [Microsoft 365 Lighthouse FAQ](m365-lighthouse-faq.yml) (article)
+[Sign up for Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md) (article) 
