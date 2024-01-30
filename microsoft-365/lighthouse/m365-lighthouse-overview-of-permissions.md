@@ -52,11 +52,14 @@ The following table provides an overview of the different RBAC roles. For a list
 | Lighthouse Operator | The Lighthouse Operator role is automatically assigned to users with GDAP permissions in a customer tenant. A user's permissions and management capabilities are defined by the associated GDAP permissions for each customer tenant that they manage.<br><br>Users in a Just-in-Time (JIT) agent support role who have no other GDAP permissions are assigned the Lighthouse Operator role only when they have elevated JIT permissions. |
 | Lighthouse Reader<sup>1</sup> | Assign the Lighthouse Reader role to users who need read-only access to data in Lighthouse, including read-only access to the Alerts, Baseline, and Tenants pages.<br><br>**Note:** GDAP permissions control which customer tenant information is viewable in Lighthouse (not including the Tenants page). |
 
-<sup>1</sup> Lighthouse Administrator and Lighthouse Reader roles only manage Lighthouse workloads.
+<sup>1</sup> Lighthouse Administrator and Lighthouse Reader roles don't provide access to customer data. Access to customer data is governed by the Lighthouse user's GDAP permissions. We recommend that you use GDAP reader roles across customer tenants to give Lighthouse users an aggregate view across all customer tenants. 
 
 ## Lighthouse RBAC roles and capabilities
 
-The following table describes the actions that Lighthouse Account Managers can perform in Lighthouse.
+The following table describes the actions that the different RBAC roles can perform in Lighthouse.
+
+> [!NOTE]
+> Users with the Entra ID Global Reader role are automatically granted the Lighthouse Reader role. Users with the Entra ID Global Administrator role are automatically granted the Lighthouse Administrator role.
 
 | Area | Actions | Lighthouse&nbsp;Administrator | Lighthouse&nbsp;Account&nbsp;Manager | Lighthouse&nbsp;Operator | Lighthouse&nbsp;Reader |
 |---|---|:---:|:---:|:---:|:---:|
@@ -66,7 +69,8 @@ The following table describes the actions that Lighthouse Account Managers can p
 |  | View delegated status | &check; | &check; | &check; | &check; |
 |  | View baseline assignment | &check; | &check; | &check; | &check; |
 |  | View deployment status | &check; | &check; | &check; | &check; |
-|  | View and edit customer contact and website information | &check; | &check; | &check; | &check; |
+|  | View customer contact and website information | &check; | &check; | &check; | &check; |
+|  | Edit customer contact and website information | &check; | &check; | &check; | |
 | **Baselines** | View baselines (default, custom) | &check; |  | &check; | &check; |
 |  | Create, edit, and assign baselines | &check; |  |  |  |
 | **Alerts** | View alerts | &check; | &check; | &check; | &check; |
