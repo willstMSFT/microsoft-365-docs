@@ -1,5 +1,5 @@
 ---
-title: Use a prebuilt model to extract information from general documents in Microsoft Syntex
+title: Use a prebuilt model to extract information from simple documents in Microsoft Syntex
 ms.author: chucked
 author: chuckedmonson
 manager: jtremper
@@ -14,37 +14,37 @@ ms.collection:
     - enabler-strategic
     - m365initiative-syntex
 ms.localizationpriority:  medium
-description: Learn how to use a prebuilt general document model in Microsoft Syntex.
+description: Learn how to use a simple document processing model in Microsoft Syntex.
 
 ---
 
-# Use a prebuilt model to extract information from general documents in Microsoft Syntex
+# Use a prebuilt model to extract information from simple documents in Microsoft Syntex
 
-The *general document prebuilt model* analyzes and extracts key information from documents. The model recognizes contracts in various formats and extracts key contract information, such as client name and address, contract duration, and renewal date.
+The *simple document processing model* offers a flexible, pre-trained solution for extracting key-value pairs, selection marks, and named entities from basic structured documents. Unlike other prebuilt models with fixed schemas, this model can identify keys that others might miss, providing a valuable alternative to custom model labeling and training. It also supports barcodes and language detection.
 
 > [!NOTE]
-> Currently, this model is available only for .pdf and image file types. More file types will be added in future releases.
+> Currently, this model is available only for .pdf and image file types in the English language. More supported file types and languages will be added in future releases.
 
-To use a contracts model, follow these steps:
+To use a simple document processing model, follow these steps:
 
-- Step 1: [Create a contracts model](#step-1-create-a-contracts-model)
+- Step 1: [Create a simple document processing model](#step-1-create-a-simple-document-processing-model)
 - Step 2: [Upload an example file to analyze](#step-2-upload-an-example-file-to-analyze)
 - Step 3: [Select extractors for your model](#step-3-select-extractors-for-your-model)
 - Step 4: [Apply the model](#step-4-apply-the-model)
 
-## Step 1: Create a contracts model
+## Step 1: Create a simple document processing model
 
-Follow the instructions in [Create a model in Syntex](create-syntex-model.md#set-up-a-prebuilt-model) to create a contracts prebuilt model. Then continue with the following steps to complete your model.
+Follow the instructions in [Create a model in Syntex](create-syntex-model.md#set-up-a-prebuilt-model) to create a simple document processing model. Then continue with the following steps to complete your model.
 
 ## Step 2: Upload an example file to analyze
 
 1. On the **Models** page, in the **Add a file to analyze** section, select **Add a file**.
 
-    ![Screenshot of the new models page showing the Add a file to analyze section.](../media/content-understanding/prebuilt-add-file-to-analyze-contract.png) 
+    ![Screenshot of the new models page showing the Add a file to analyze section.](../media/content-understanding/prebuilt-add-file-to-analyze-contract.png)
 
 2. On the **Files to analyze the model** page, select **Add** to find the file you want to use.
 
-    ![Screenshot of the Files to analyze the model page showing the Add button.](../media/content-understanding/prebuilt-add-file-button.png) 
+    ![Screenshot of the Files to analyze the model page showing the Add button.](../media/content-understanding/prebuilt-add-file-button.png)
 
 3. On the **Add a file from the training files library** page, select the file, and then select **Add**.
 
@@ -56,11 +56,9 @@ Follow the instructions in [Create a model in Syntex](create-syntex-model.md#set
 
 On the extractor details page, you'll see the document area on the right and the **Extractors** panel on the left. The **Extractors** panel shows the list of extractors that have been identified in the document.
 
-   ![Screenshot of the extractor details page and Extractors panel.](../media/content-understanding/prebuilt-extractor-details-page-contracts.png) 
+   ![Screenshot of the extractor details page and Extractors panel.](../media/content-understanding/prebuilt-extractor-details-page-contracts.png)
 
 The entity fields that are highlighted in green in the document area are the items that were detected by the model when it analyzed the file. When you select an entity to extract, the highlighted field will change to blue. If you later decide not to include the entity, the highlighted field will change to gray. The highlights make it easier to see the current state of the extractors you've selected.
-
-The prebuilt contracts model lets you have multiple values for a given field. For example, if a contract involves two or more parties, it could apply to multiple jurisdictions. In addition, the parties and jurisdictions are themselves objects with multiple properties. 
 
 > [!TIP]
 > You can use the scroll wheel on your mouse or the controls at the bottom of the document area to zoom in or out as needed to read the entity fields.
@@ -68,7 +66,7 @@ The prebuilt contracts model lets you have multiple values for a given field. Fo
 ### Select an extractor entity
 
 You can select an extractor either from the document area or from the **Extractors** panel, depending on your preference.
- 
+
 - To select an extractor from the document area, select the entity field.
 
     ![Screenshot of the document area showing how to select an entity field.](../media/content-understanding/prebuilt-document-area-select-field-contracts.png) 
