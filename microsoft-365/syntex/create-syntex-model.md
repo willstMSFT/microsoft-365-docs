@@ -4,7 +4,7 @@ ms.author: chucked
 author: lkueter
 manager: jtremper
 ms.reviewer: ssquires
-ms.date: 06/28/2024
+ms.date: 09/30/2024
 audience: admin
 ms.topic: conceptual
 ms.service: microsoft-syntex
@@ -163,6 +163,7 @@ The **Set up a prebuilt model** section shows the types of prebuilt models you c
 - Invoice processing
 - Receipt processing
 - Sensitive information processing
+- Simple document processing
 
 Select one of the following tabs to continue with the prebuilt model you want to use.
 
@@ -266,6 +267,34 @@ Select one of the following tabs to continue with the prebuilt model you want to
 4. When you're ready to create the model, select **Create**.
 
 5. You're now ready to [complete setting up the model](prebuilt-model-sensitive-info.md#set-up-a-sensitive-information-model).
+
+
+# [Simple document processing](#tab/simple-document-processing)
+
+1. Select **Simple document processing**.
+
+2. On the **Simple document processing: Details** page, you'll find more information about the model. If you want to proceed with using the model, select **Next**.
+
+3. On the right panel of the **Create a simple document processing model** page, enter the following information.
+
+    - **Model name** – Enter the name of the model, for example *Service agreement*.
+
+    - **Description** – Enter information about how this model will be used.
+
+        ![Screenshot of the right panel of the Create a simple document processing model page.](../media/content-understanding/create-a-model-panel.png) 
+
+4. Under **Advanced settings**:
+
+    - In the **Content type** section, choose whether to create a new content type or to use an existing one.
+
+    - In the **Compliance** section, under **Retention labels**, select the retention label you want to add. If a retention label has been already applied to the library where the file is stored, it will be selected.
+
+    > [!NOTE]
+    > Sensitivity labels are not available for prebuilt models at this time.
+
+5. When you're ready to create the model, select **Create**.
+
+6. You're now ready to [complete setting up the model](prebuilt-model-simple.md).
 
 ---
 
