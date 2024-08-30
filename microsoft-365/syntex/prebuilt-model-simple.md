@@ -40,7 +40,7 @@ Follow the instructions in [Create a model in Syntex](create-syntex-model.md#set
 
 1. On the **Models** page, in the **Add a file to analyze** section, select **Add a file**.
 
-    ![Screenshot of the new models page showing the Add a file to analyze section.](../media/content-understanding/prebuilt-add-file-to-analyze-contract.png)
+    ![Screenshot of the new models page showing the Add a file to analyze section.](../media/content-understanding/prebuilt-add-file-to-analyze-simple.png)
 
 2. On the **Files to analyze the model** page, select **Add** to find the file you want to use.
 
