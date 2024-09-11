@@ -3,15 +3,17 @@ title: Managing Microsoft 365 endpoints
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
-ms.date: 10/30/2023
+ms.date: 01/19/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-365-enterprise
+ms.subservice: network
 ms.localizationpriority: medium
 ms.collection:
 - scotvorg
 - M365-subscription-management
 - Strat_O365_Enterprise
+- must-keep
 f1.keywords:
 - CSH
 ms.custom: 
@@ -191,7 +193,7 @@ Microsoft 365 and other Microsoft services use several third-party services such
 
 As Microsoft 365 is a suite of services built to function over the internet, the reliability and availability promises are based on many standard internet services being available. For example, standard internet services such as DNS, CRL, and CDNs must be reachable to use Microsoft 365 just as they must be reachable to use most modern internet services.
 
-The Microsoft 365 suite is broken down into major service areas. These areas can be selectively enabled for connectivity and there's a Common area, which is a dependency for all and is always required.
+The Microsoft 365 suite is broken down into four major service areas representing the three primary workloads and a set of common resources. These service areas may be used to associate traffic flows with a particular application, however given that features often consume endpoints across multiple workloads, these service areas cannot effectively be used to restrict access.
 
 | Service Area | Description |
 |:-----|:-----|

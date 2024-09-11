@@ -10,11 +10,11 @@ f1.keywords:
 - NOCSH
 ms.service: microsoft-365-frontline
 ms.collection: 
-  - M365-collaboration
-  - m365-frontline
-  - highpri
-  - m365solution-frontline
-  - m365solution-scenario
+- M365-collaboration
+- m365-frontline
+- highpri
+- m365solution-frontline
+- m365solution-scenario
 ms.localizationpriority: high
 search.appverid: MET150
 searchScope:
@@ -23,7 +23,7 @@ searchScope:
 appliesto: 
   - Microsoft Teams
   - Microsoft 365 for frontline workers
-ms.date: 1/17/2024
+ms.date: 02/07/2024
 ---
 
 # Frontline team collaboration
@@ -72,12 +72,17 @@ Your team can use apps in Teams to coordinate and collaborate with each other on
 - [Create, manage, and share schedules with Shifts](#create-manage-and-share-schedules-with-shifts)
 - [Keep in touch with Walkie Talkie](#keep-in-touch-with-walkie-talkie)
 - [Boost morale with Praise](#boost-morale-with-praise)
-- [Track and monitor work with Tasks](#track-and-monitor-work-with-tasks)
+- [Track and monitor work with Planner](#track-and-monitor-work-with-planner)
 - [Streamline approvals with Approvals](#streamline-approvals-with-approvals)
 - [Check in on progress with Updates](#check-in-on-progress-with-updates)
+- [Create a personalized experience with Viva Connections](#create-a-personalized-experience-with-viva-connections)
 
 > [!TIP]
 > Examples are given for the financial services, healthcare, nonprofit, and retail industries, but you can use these apps for an organization in any sector.
+
+You manage apps for your organization in the Teams admin center. To learn more, see [Overview of app management and governance in Teams admin center](/microsoftteams/manage-apps).
+
+Your users can add any apps that you have allowed to their teams. Share this training with your users to show them how: [Find and use apps](https://support.microsoft.com/office/find-and-use-apps-6e22a734-c002-4da0-ba63-681f155b142d).
 
 ### Create, manage, and share schedules with Shifts
 
@@ -120,9 +125,9 @@ Learn how to [manage the Praise app for your organization](/microsoftteams/manag
 
 Share this [Praise video training](https://support.microsoft.com/office/communication-and-praise-7d37ef80-542b-42e5-aa01-0fabbaa634b6) with your users.
 
-### Track and monitor work with Tasks
+### Track and monitor work with Planner
 
-Use Tasks in Teams to track to-do items for your whole frontline team. Store managers and employees can create, assign, and schedule tasks, categorize tasks, and update status at any time from any device running Teams. IT pros and admins can also publish tasks to specific teams for your organization. For example, you could publish a set of tasks for daily cleaning or steps to set up a new display.
+Use Planner in Teams to track tasks for your whole frontline team. Store managers and employees can create, assign, and schedule tasks, categorize tasks, and update status at any time from any device running Teams. IT pros and admins can also publish tasks to specific teams for your organization. For example, you could publish a set of tasks for daily cleaning or steps to set up a new display.
 
 |Industry |Example |
 |:--------|:-------|
@@ -131,9 +136,9 @@ Use Tasks in Teams to track to-do items for your whole frontline team. Store man
 |Financial services |A bank manager can assign mortgage specialists a task to review and get familiar with new rates or policies. |
 |Manufacturing |A supervisor can assign a worker a task to inspect a new batch of products. |
 
-Learn how to [manage the Tasks app for your organization](/microsoftteams/manage-tasks-app?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json).
+Learn how to [manage the Planner app for your organization](/microsoftteams/manage-planner-app?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json).
 
-Share this [Tasks video training](https://support.microsoft.com/office/use-the-tasks-app-in-teams-e32639f3-2e07-4b62-9a8c-fd706c12c070) with your users.
+Share the [Planner in Teams help & learning](https://support.microsoft.com/office/getting-started-with-planner-in-teams-7a5e58f1-2cee-41b0-a41d-55d512c4a59c) with your users.
 
 ### Streamline approvals with Approvals
 
@@ -165,19 +170,7 @@ Learn how to [manage the Updates app for your organization](/microsoftteams/mana
 
 Share this [Updates video training](https://support.microsoft.com/office/get-started-in-updates-c03a079e-e660-42dc-817b-ca4cfd602e5a) with your users.
 
-## Manage apps
-
-Manage apps for your organization in the Teams admin center. To learn more, see [Overview of app management and governance in Teams admin center](/microsoftteams/manage-apps).
-
-Your users can add any apps that you have allowed to their teams. Share this training with your users to show them how: [Find and use apps](https://support.microsoft.com/office/find-and-use-apps-6e22a734-c002-4da0-ba63-681f155b142d).
-
-## Communicate over email with Exchange Online and Outlook
-
-Email is a core communication tool for most workplaces. [Set up email with Exchange Online](flw-setup-microsoft-365.md#set-up-email-with-exchange-online) to let your frontline managers and workers communicate with each other, with employees in other locations, or with headquarters. Users must have an F3 license to have an email mailbox.
-
-You can also set up shared mailboxes to allow for incoming mail from customers (such as for customer service or scheduling requests) and have a group of workers who monitor and send email from a public email alias like info@contoso.com. For more information about shared mailboxes, see [About shared mailboxes](../admin/email/about-shared-mailboxes.md) and [Open and use a shared mailbox in Outlook](https://support.microsoft.com/office/open-and-use-a-shared-mailbox-in-outlook-d94a8e9e-21f1-4240-808b-de9c9c088afd).
-
-## Use Viva Connections to create a personalized experience
+### Create a personalized experience with Viva Connections
 
 Viva Connections is part of the [Microsoft Viva suite](/viva/microsoft-viva-overview) and enables you to create a personalized landing experience in Teams.
 
@@ -185,8 +178,15 @@ The Viva Connections dashboard provides fast and easy access to information and 
 
 Learn more about [Viva Connections](/viva/connections/viva-connections-overview) and [how to create a Viva Connections dashboard](/viva/connections/create-dashboard).
 
+## Communicate over email with Exchange Online and Outlook
+
+Email is a core communication tool for most workplaces. [Set up email with Exchange Online](flw-setup-microsoft-365.md#set-up-email-with-exchange-online) to let your frontline managers and workers communicate with each other, with employees in other locations, or with headquarters. Users must have an F3 license to have an email mailbox.
+
+You can also set up shared mailboxes to allow for incoming mail from customers (such as for customer service or scheduling requests) and have a group of workers who monitor and send email from a public email alias like info@contoso.com. For more information about shared mailboxes, see [About shared mailboxes](../admin/email/about-shared-mailboxes.md) and [Open and use a shared mailbox in Outlook](https://support.microsoft.com/office/open-and-use-a-shared-mailbox-in-outlook-d94a8e9e-21f1-4240-808b-de9c9c088afd).
+
 ## Learn more about Teams capabilities for specific industries
 
-- [Teams for Retail](teams-for-retail-landing-page.md)
+- [Teams for Financial Services](teams-for-financial-services.md)
 - [Teams for Healthcare](teams-in-hc.md)
 - [Teams for Manufacturing](teams-for-manufacturing.md)
+- [Teams for Retail](teams-for-retail-landing-page.md)

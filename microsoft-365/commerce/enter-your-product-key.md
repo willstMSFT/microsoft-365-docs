@@ -10,6 +10,7 @@ ms.reviewer: drjones, jobailey
 audience: Admin
 ms.topic: how-to
 ms.service: microsoft-365-business
+ms.subservice: m365-commerce-marketplace
 ms.localizationpriority: medium
 ms.collection:
 - Tier1
@@ -25,6 +26,8 @@ ms.custom:
 - okr_SMB
 - AdminSurgePortfolio
 - AdminTemplateSet
+- admindeeplinkMAC
+- GAUpdates
 description: "Learn how to redeem a product key to activate or extend your Microsoft business subscription." 
 ms.date: 09/07/2023
 ---
@@ -41,7 +44,7 @@ A *product key* is a 25-character alphanumeric code that represents a prepaid li
   
 ## Before you begin
 
-If you’re an existing customer, you must be a global or billing admin to do the tasks in this article. For more information, see [About admin roles](../admin/add-users/about-admin-roles.md).
+If you’re an existing customer, you must be at least a Billing Administrator to do the tasks in this article. For more information, see [About admin roles](../admin/add-users/about-admin-roles.md).
 
 ## Activate a new subscription
 

@@ -9,6 +9,7 @@ ms.reviewer: mijeffer, nicholak
 audience: Admin
 ms.topic: how-to
 ms.service: microsoft-365-business
+ms.subservice: m365-commerce-acquisition
 ms.localizationpriority: medium
 ms.collection: 
 - Tier1
@@ -18,8 +19,10 @@ ms.collection:
 ms.custom:
   - commerce_subscriptions
   - AdminSurgePortfolio
+  - admindeeplinkMAC
   - has-azure-ad-ps-ref
   - azure-ad-ref-level-one-done
+  - GAUpdates
 search.appverid: MET150
 description: "Learn how to manage free self-service sign-up subscriptions for your organization in the Microsoft 365 admin center."
 ms.date: 01/02/2024
@@ -32,10 +35,7 @@ There are a limited number of free self-service sign-up subscriptions available 
 
 ## Before you begin
 
-You must be a global or billing admin to perform the tasks in this article. For more information, see [About admin roles](../../admin/add-users/about-admin-roles.md).
-
-> [!NOTE]
-> If you're the person who signed up for the subscription, you're automatically a global admin.
+You must be at least a Billing Administrator to perform the tasks in this article. For more information, see [About admin roles](../../admin/add-users/about-admin-roles.md).
 
 ## View a list of self-service sign-up subscriptions
 
@@ -50,7 +50,7 @@ Self-service sign-up subscriptions are free and are available for a larger list 
 
 ## Block users from signing up
 
-You use the [**Update-MgPolicyAuthorizationPolicy**](/powershell/module/msonline/set-msolcompanysettings?preserve-view=true&view=azureadps-1.0) cmdlet with the **AllowAdHocSubscriptions** parameter to control whether users can sign up for self-service sign-up subscriptions. For more information, see [How do I control self-service settings?](/azure/active-directory/users-groups-roles/directory-self-service-signup#how-do-i-control-self-service-settings)
+You use the [**Update-MgPolicyAuthorizationPolicy**](/powershell/module/microsoft.graph.identity.signins/update-mgpolicyauthorizationpolicy?view=graph-powershell-1.0&preserve-view=true) cmdlet with the **AllowedToSignUpEmailBasedSubscriptions** parameter to control whether users can sign up for self-service sign-up subscriptions. For more information, see [How do I control self-service settings?](/azure/active-directory/users-groups-roles/directory-self-service-signup#how-do-i-control-self-service-settings)
 
 ## Delete a self-service sign-up subscription
 

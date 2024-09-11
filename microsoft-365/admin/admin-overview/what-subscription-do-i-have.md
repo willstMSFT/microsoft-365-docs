@@ -9,6 +9,7 @@ ms.reviewer: emmasheridan, nicholak
 audience: Admin
 ms.topic: how-to
 ms.service: microsoft-365-business
+ms.subservice: m365-commerce-acquisition
 ms.localizationpriority: medium
 ms.collection: 
 - Tier1
@@ -26,7 +27,7 @@ ms.custom:
 - AdminTemplateSet
 search.appverid: MET150
 description: "Find out what Microsoft business subscriptions your organization has by using the Your products page in the Microsoft 365 admin center."
-ms.date: 10/05/2023
+ms.date: 07/22/2024
 ---
 
 # What Microsoft business subscriptions do I have?

@@ -3,7 +3,7 @@ title: Licensing for Microsoft Syntex
 ms.author: chucked
 author: chuckedmonson
 ms.reviewer: ssquires, kkameth
-ms.date: 09/25/2023
+ms.date: 02/15/2024
 manager: jtremper
 audience: admin
 ms.topic: conceptual
@@ -40,20 +40,21 @@ Pay-as-you-go currently supports the following Syntex services:
 - Prebuilt document processing
 - Structured and freeform document processing
 - Unstructured document processing
+- Autofill columns
 - Content assembly
 - Image tagging
 - Taxonomy tagging
 - Translation
 - Syntex eSignature
 - Optical character recognition
-- Microsoft 365 Archive (Preview)
+- Microsoft 365 Archive
 - Microsoft 365 Backup (Preview)
 
 More Syntex services will be added as they become available.
 
 ### Feature limited preview
 
-Pay-as-you-go licensing includes access to additional Syntex features for a limited time as a preview. You won't be charged on a pay-as-you-go basis during the preview. These features include:
+Pay-as-you-go licensing includes access to additional Syntex features for a limited time as a preview. The feature limited preview ends September 20, 2024. You won't be charged on a pay-as-you-go basis during the preview. These features include:
 
 - Content query
 - Universal annotations
@@ -72,7 +73,7 @@ As of July 1, 2023, per-user licenses are no longer available for purchase. Per-
 Users with active per-user licenses can perform the following tasks:
 
 - Apply an unstructured document processing model to a library. (Unlicensed users can be granted access to a content center and can create models there, but can't apply them to a document library.)
-- Create a structured document processing model or a freeform document processing model via the entry point in a library.
+- Create a prebuilt, structured, or freeform document processing model via the entry point in a library.
 - Upload content to a library where a custom model has been applied.
 - Run an unstructured document processing model on-demand.
 - Create a modern template with content assembly.
@@ -83,7 +84,7 @@ Users with active per-user licenses can perform the following tasks:
 - Use the document library rules to move or copy content.
 - Merge and extract PDFs
 
-If you plan to use a custom Power Platform environment for structured or freeform document processing, see [Using a custom Power Platform environment](structured-freeform-setup.md#using-a-custom-power-platform-environment).
+If you plan to use a custom Power Platform environment for structured or freeform document processing, see [Set up a custom Power Platform environment](structured-freeform-setup.md#set-up-a-custom-power-platform-environment).
 
 <!---
 ## AI Builder credits

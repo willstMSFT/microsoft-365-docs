@@ -1,10 +1,10 @@
 ---
-title: Set up Microsoft SharePoint eSignature
+title: Set up SharePoint eSignature
 ms.author: chucked
 author: chuckedmonson
 manager: jtremper
 ms.reviewer: amcdonnell
-ms.date: 11/15/2023
+ms.date: 09/10/2024
 audience: admin
 ms.topic: conceptual
 ms.service: microsoft-syntex
@@ -14,37 +14,44 @@ ms.collection:
     - enabler-strategic
     - m365initiative-syntex
 ms.localizationpriority: medium
-description: Learn how to set up and manage sites in Microsoft SharePoint eSignature. 
+description: Learn how to set up and manage sites in SharePoint eSignature. 
 ---
 
-# Set up Microsoft SharePoint eSignature
+# Set up SharePoint eSignature
 
 > [!NOTE]
-> Microsoft SharePoint eSignature is currently rolling out to the US market. If a tenant's location is the United States, SharePoint eSignature will be available for that tenant. For US-located, multi-geo enabled tenants, eSignature will be available in the home geo only. SharePoint eSignature will roll out to other regions in 2024.
+> SharePoint eSignature is available in selected regions. If a tenant's location is a supported region, SharePoint eSignature will be available for that tenant. For multi-geo enabled tenants in supported regsions, eSignature will be available in the home geo only.  SharePoint eSignature will roll out to [other regions](esignature-overview.md#regional-availability) later this year.
 
-The SharePoint eSignature service is set up in the Microsoft 365 admin center. SharePoint eSignature uses simple electronic signatures. Before you begin, determine whether this feature is appropriate for your needs and then read the [Microsoft SharePoint eSignature terms of service](/legal/microsoft-365/esignature-terms-of-service).
+The SharePoint eSignature service is set up in the Microsoft 365 admin center. Before you begin, determine whether this feature is appropriate for your needs by reading the [Before you begin section](esignature-overview.md#before-you-begin).
 
 ## Prerequisites
 
 ### Licensing
 
-Before you can use SharePoint eSignature, you must first link your Azure subscription in [Syntex pay-as-you-go](syntex-azure-billing.md). SharePoint eSignature is billed based on the [type and number of transactions](syntex-pay-as-you-go-services.md).
+Before you can use SharePoint eSignature, you must first link an Azure subscription in [Syntex pay-as-you-go](syntex-azure-billing.md). Taxonomy tagging in Syntex is billed based on the [type and number of transactions](syntex-pay-as-you-go-services.md).
 
 ### Permissions
 
-You must have Global admin or SharePoint admin permissions to be able to access the Microsoft 365 admin center and set up SharePoint eSignature.  
+You must be a [SharePoint Administrator](/entra/identity/role-based-access-control/permissions-reference#sharepoint-administrator) or [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) to be able to access the Microsoft 365 admin center and set up SharePoint eSignature.
+
+[!INCLUDE [global-administrator-note](../includes/global-administrator-note.md)]
+
+> [!NOTE]
+> If you will be requesting signatures from external recipients, you need to enable [Microsoft Entra B2B integration for SharePoint and OneDrive](/sharepoint/sharepoint-azureb2b-integration) and [guest sharing](/microsoft-365/solutions/collaborate-in-site). External recipients are people outside your organization and would be onboarded as guests into your tenant. Microsoft Entra B2B provides authentication and management of guests. For more information, see [External recipients](#external-recipients) later in this article.
 
 ## Set up SharePoint eSignature
 
-1. In the Microsoft 365 admin center, select <a href="https://go.microsoft.com/fwlink/p/?linkid=2171997" target="_blank">**Setup**</a>, and then select **Use content AI with Microsoft Syntex**.
+1. In the Microsoft 365 admin center, select <a href="https://go.microsoft.com/fwlink/p/?linkid=2171997" target="_blank">**Setup**</a>.
 
-2. On the **Use content AI with Microsoft Syntex** page, select **Manage Microsoft Syntex**.
+2. Under **Files and content**, select **Automate content processes with Syntex**.
 
-3. On the **Manage Microsoft Syntex** page, select **eSignature**.
+3. On the **Automate content processes with Syntex** page, select **Go to Syntex settings**.
 
-4. For existing customers, read the [terms of service](/legal/microsoft-365/esignature-terms-of-service), and then select **Turn on** to enable the service.
+4. On the Syntex page, under **Document & image services**, select **eSignature**.
 
-5. For new Syntex customers, the Syntex eSignature service is turned on once you enter your billing information and accepted the [terms of service](/legal/microsoft-365/esignature-terms-of-service). On the **eSignature** page:
+5. For existing customers, read the [terms of service](/legal/microsoft-365/esignature-terms-of-service), and then select **Turn on** to enable the service.
+
+6. For new Syntex customers, the SharePoint eSignature service is turned on once you enter your billing information and accept the [terms of service](/legal/microsoft-365/esignature-terms-of-service). On the **eSignature** page:
 
    - To turn off the service, select **Turn off**.
    - To manage which sites the service is available, see [Manage sites](#manage-sites).
@@ -72,6 +79,38 @@ By default, SharePoint eSignature is turned on for libraries in all SharePoint s
 
 2. If SharePoint eSignature is turned on, there will be a **Turn off** button visible. To turn off SharePoint eSignature, select **Turn off**.
 
+### Add other signature providers
+
+1. On the **Manage Microsoft Syntex** page, select **eSignature**.
+
+2. On the **eSignature** panel, select **Add or remove other signature providers**.
+
+3. On the **Edit signature providers** panel, select the provider you want to add.
+
+    ![Screenshot showing the Edit signature providers panel.](../media/content-understanding/esignature-edit-providers-panel.png)
+
+4. Select **Save**.
+
+> [!NOTE]
+> Although [pay-as-you-go billing](syntex-azure-billing.md) must be set up to use eSignature, you are not charged for using other signature providers.
+
+## External recipients
+
+### Microsoft Entra B2B
+
+Microsoft Entra B2B provides authentication and management of guests. External signers or recipients are considered as guests within your tenant. To be able to send requests to signers outside your organization, you need to enable [Microsoft Entra B2B integration for SharePoint and OneDrive](/sharepoint/sharepoint-azureb2b-integration). You would need to resend the eSignature request if a guest user is deleted from the tenant while a signature request is still ongoing. The guest user would no longer be able to access the request document or the final signed document. If you need to delete a guest user, make sure they are not a party to any ongoing request.
+
+### Authentication
+
+External recipients might need to authenticate before they're able to access a document for signing. The type of authentication required by the external recipients depends on the configuration for guests at the SharePoint level or at the tenant level. Additionally, if the guest belongs to an organization with a Microsoft 365 tenant, it's possible for their organization's setup to affect their authentication experience when attempting to sign the document. For more information, see [Collaboration with guests in a site](/microsoft-365/solutions/collaborate-in-site).
+
+### Conditional access
+
+Certain [conditional access](/entra/identity/conditional-access/overview) might determine whether external recipients (signers outside of your organization or Microsoft 365 tenant) will be able sign a document. Depending on the admin setup, external signers might not be able to access and read the document for signing. In some other cases, they might be able to access the document for signing, but the signing operation will be unsuccessful. One common way to resolve this is to add the **Microsoft eSignature Service** to the list of approved apps via the Microsoft Entra admin center.
+
+> [!NOTE]
+> When using other electronic signature providers, settings within Microsoft 365 don't impact whether you can send requests outside to external recipients.
+
 ## Document storage and retention
 
 ### Document storage
@@ -98,12 +137,11 @@ Every email notification sent in relation to a signature request contains a URL 
   
 For more protection, when a sender cancels a request, recipients immediately lose access to the request document. The email notification received by recipients won't contain a URL link to view the request.
 
-## External signers
+### Other electronic signature providers
 
-### Conditional access
+At the end of the signing process when all required parties have signed, a copy of the signed document is automatically saved to SharePoint. The signed document is saved to a provider-specific folder of a special **Apps** folder in SharePoint. Every document library has a provider-specific folder where all documents signed by using that provider are saved. The signed document will be stored in the folder path < Document library > → Apps → Signed documents → < Provider >
 
-Certain [conditional access](/entra/identity/conditional-access/overview) might determine whether external recipients (signers outside of your organization or Microsoft 365 tenant) will be able sign a document. Depending on the admin setup, external signers might not be able to access and read the document for signing. In some other cases, they might be able to access the document for signing, but the signing operation will be unsuccessful. One common way to resolve this is to add the **Microsoft eSignature Service** to the list of approved apps via the Microsoft Entra admin center.
+![Screenshot showing a signed document in a provider-specific folder.](../media/content-understanding/esignature-other-provider-folder.png)
 
-### Authentication
-
-External users might need to authenticate before they're able to access a document for signing. The type of authentication required by the external recipients depends on the configuration for guest users at the SharePoint level or at the tenant level. Additionally, if the external user belongs to an organization with a Microsoft 365 tenant, it's possible for their organization's setup to affect their authentication experience when attempting to sign the document.
+> [!NOTE]
+> How long a copy of the signed document is retained in the other provider's platform depends solely on your document storage and retention policy settings for that provider service.

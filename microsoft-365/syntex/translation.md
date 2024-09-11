@@ -4,7 +4,7 @@ ms.author: chucked
 author: chuckedmonson
 manager: jtremper
 ms.reviewer: ssquires
-ms.date: 01/19/2024
+ms.date: 08/06/2024
 audience: admin
 ms.topic: conceptual
 ms.service: microsoft-syntex
@@ -22,6 +22,8 @@ description: Learn how to translate documents using Microsoft Syntex.
 Translation in Microsoft Syntex lets you create a translated copy of a file manually on demand or automatically by using rules. You can set a rule to create a translated copy automatically when a document is created, or when data in a column is modified.​
 
 When a file is translated, the file name of the translated copy is appended to show the ISO code for the language.
+
+   ![Screenshot showing the translated filename with the language code appended.](../media/content-understanding/translation-file-with-language-code.png)
 
 ## Translate a document on demand
 
@@ -45,10 +47,16 @@ To create a translated version of a document, follow these steps:
 
    ![Screenshot showing the translation confirmation screen.](../media/content-understanding/translation-confirmation.png)
 
+   It can take several minutes for the translated file to be created. When the process is completed, the translated file will appear in the document library.
+
+   If you try to submit a duplicate translation request before the file has finished processing, you'll receive a message telling you to wait a few minutes before trying again.
+
+   ![Screenshot showing the message to wait a few minutes and trying again.](../media/content-understanding/translation-wait-message.png)
+
 ## Translate a document automatically
 
-You can create a rule to automatically translate a document [when a new file is added](#translate-a-video-transcript) or [when data in a column changes](#when-data-in-a-column-changes).
-
+You can create a rule to automatically translate a document [when a new file is added](content-processing-translate.md#translate-a-document-when-a-new-file-is-added) or [when data in a column changes](content-processing-translate.md#translate-a-document-when-data-in-a-column-changes). For step-by-step instruction, see [Create a rule to translate a document](content-processing-translate.md).
+<!---
 ### When a new file is added
 
 To create a rule to translate documents automatically when a document is created, follow these steps:
@@ -100,6 +108,7 @@ To create a rule to translate documents automatically when data in a column chan
      ![Screenshot of the Create a rule page showing the enter a language option.](../media/content-understanding/translation-column-enter-language.png)
 
 4. When your rule statement is complete, select **Create**. You can [see and manage the new rule](content-processing-overview.md#manage-a-rule) on the **Manage rules** page.
+
 <!---
 ### View the translation activity feed of a document library
 

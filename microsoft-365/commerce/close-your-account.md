@@ -9,6 +9,7 @@ ms.reviewer: emmasheridan, nicholak
 audience: Admin
 ms.topic: how-to
 ms.service: microsoft-365-business
+ms.subservice: m365-commerce-acquisition
 ms.localizationpriority: medium
 ms.collection:
 - Tier1
@@ -16,14 +17,15 @@ ms.collection:
 - M365-subscription-management
 - Adm_O365
 ms.custom:
-  - commerce_subscriptions
-  - AdminSurgePortfolio
-  - fwlink 2133922 to Delete subscription heading
-  - AdminTemplateSet
-  - has-azure-ad-ps-ref
+- commerce_subscriptions
+- AdminSurgePortfolio
+- fwlink 2133922 to Delete subscription heading
+- AdminTemplateSet
+- admindeeplinkMAC
+- has-azure-ad-ps-ref
 search.appverid: MET150
 description: "Learn how to close your business account with Microsoft. All information related to your account is deleted including licenses, users, and user data."
-ms.date: 08/31/2023
+ms.date: 07/22/2024
 ---
 
 # Close your Microsoft business account
