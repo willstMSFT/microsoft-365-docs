@@ -5,7 +5,7 @@ ms.author: sharik
 author: SKjerland
 manager: scotv
 ms.reviewer: taylorau
-ms.date: 04/24/2024
+ms.date: 10/04/2024
 audience: Admin
 ms.topic: how-to
 ms.service: microsoft-365-lighthouse
@@ -30,10 +30,7 @@ When administrators assign a Lighthouse RBAC role to a user in the partner tenan
 
 ## Before you begin
 
-To access the Lighthouse permissions page and manage permissions, you must have one of the following roles:
-
-- Global Administrator in Microsoft Entra ID
-- Lighthouse Administrator in Microsoft 365 Lighthouse
+To access the Lighthouse permissions page and manage permissions, you must be an Administrator in Microsoft 365 Lighthouse.
 
 ## View Lighthouse RBAC role membership and associated security group
 
