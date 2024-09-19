@@ -1,5 +1,5 @@
 ---
-title: "Export user saved and shared prompts in Copilot Lab"
+title: "Export prompts that users saved or shared in Copilot Lab"
 description: "Provides admins the steps to take to export prompts that users saved or shared in Copilot Lab"
 ms.author: danbrown
 author: DHB-MSFT
@@ -15,7 +15,7 @@ hideEdit: true
 ms.date: 09/30/2024
 ---
 
-# Export user saved and shared prompts in Copilot Lab
+# Export prompts that users saved or shared in Copilot Lab
 
 In [Copilot Lab](https://copilot.cloud.microsoft/prompts), users can save or share prompts they created, including sharing prompts with a specific team (in Microsoft Teams) that they're a member of. As an admin, you can use Windows PowerShell to export data to a file about either of the following types of prompts in Copilot Lab:
 
