@@ -17,16 +17,15 @@ ms.date: 09/30/2024
 
 # Export user saved and shared prompts in Copilot Lab
 
-This article describes how a global admin can export from [Copilot Lab](https://copilot.cloud.microsoft/prompts) the saved and shared prompts for a specific user. The exported data includes data about the prompts saved or shared by the user.
-
-This article also describes how a global admin can export prompts from Copilot Lab that are shared with a specific team (in Microsoft Teams). In this case, the exported data includes data about the prompts that are published to a specific team that the user is an owner of.
-
-The export process is done by using Windows PowerShell. To get started, [download the CopilotLabDSR PowerShell script](https://download.microsoft.com/download/b/a/b/babff430-cc1f-46e0-b98b-2997d79af5ae/tenant-admin-scripts.zip).
-
-You can run the CopilotLabDSR PowerShell script to export either of the following types of prompts:
+In [Copilot Lab](https://copilot.cloud.microsoft/prompts), users can save or share prompts they created, including sharing prompts with a specific team (in Microsoft Teams) that they're a member of. As an admin, you can use Windows PowerShell to export data to a file about either of the following types of prompts in Copilot Lab:
 
 - The saved and shared prompts of a specific user.
 - The prompts shared with a specific team.
+
+To get started, you need to [download the CopilotLabDSR PowerShell script](https://download.microsoft.com/download/b/a/b/babff430-cc1f-46e0-b98b-2997d79af5ae/tenant-admin-scripts.zip).
+
+> [!NOTE]
+> The user account running the PowerShell script to export the data needs to be assigned the Global admin role.
 
 ## To export the saved and shared prompts of a specific user
 
@@ -40,7 +39,7 @@ Export-PromptsUserContent -UserAadIdOrPrincipalName <user's Entra ID or UPN> -Ex
 |--------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | UserAadIdOrPrincipalName | Use either the Microsoft Entra ID or the User Principal Name (UPN) of the user for which you want to export content.                                     |
 | ExportDirectory          | Location to store your output files. The folder should already exist. If not specified, the export files are saved to the current folder.                |
-| PromptType               | Specify "saved" to export the prompts saved by the user. Specify "shared"' to export the prompts for which a shareable link to the prompt was generated. |
+| PromptType               | Specify "saved" to export the prompts saved by the user. Specify "shared" to export the prompts for which a shareable link to the prompt was generated. |
 
 For example, the following exports Adam Barr's saved prompts in Copilot Lab using his UPN and downloads the export files to the location C:\PromptsExportAdamBarr.
 
@@ -64,7 +63,7 @@ Export-PromptsGroupContent -M365TeamsGroupId < team ID> -ExportDirectory <output
 | M365TeamsGroupId | ID of the team to which the prompts were shared.                                                                                     |
 | ExportDirectory  | Location to store your output files. The folder should already exist. If not specified, the export files are saved to the current folder. |
 
-For example, the following exports the prompts shared to the team with ID <d0efcad2-6744-0de6-0624-ea467d4293af> in Copilot Lab  and downloads the export files to the location C:\PromptsExportAdamBarr.
+For example, the following exports the prompts shared in Copilot Lab to the team with an ID of "d0efcad2-6744-0de6-0624-ea467d4293af" and downloads the export files to the location C:\PromptsExportAdamBarr.
 
 ```powershell
 Export- PromptsGroupContent -M365TeamsGroupId  d0efcad2-6744-0de6-0624-ea467d4293af -ExportDirectory C:\PromptsExportAdamBarr
@@ -76,7 +75,7 @@ Export- PromptsGroupContent -M365TeamsGroupId  d0efcad2-6744-0de6-0624-ea467d429
 2. When prompted to authenticate, sign in with an account that is assigned the Global Admin role.
 3. After the PowerShell cmdlet runs successfully, go to your export location to view your exported files.
 
-## What gets exported and how to read it
+## Properties contained in the export file and their descriptions
 
 After running the PowerShell cmdlet to export your user's data from Copilot Lab, you'll receive one file in your download location folder. You can use the information in the following sections to help you understand the properties you see in the file you received.
 
