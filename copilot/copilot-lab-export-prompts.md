@@ -1,0 +1,143 @@
+---
+title: "Export user saved and shared prompts in Copilot Lab"
+description: "Provides admins the steps to take to export prompts that users saved or shared in Copilot Lab"
+ms.author: danbrown
+author: DHB-MSFT
+manager: laurawi
+ms.topic: concept-article
+ms.service: microsoft-365-copilot
+ms.localizationpriority: medium
+ms.collection: 
+- privacy-copilot
+- m365copilot
+- magic-ai-copilot
+hideEdit: true
+ms.date: 09/30/2024
+---
+
+# Export user saved and shared prompts in Copilot Lab
+
+This article describes how a global admin can export from [Copilot Lab](https://copilot.cloud.microsoft/prompts) the saved and shared prompts for a specific user. The exported data includes data about the prompts saved or shared by the user.
+
+This article also describes how a global admin can export prompts from Copilot Lab that are shared with a specific team (in Microsoft Teams). In this case, the exported data includes data about the prompts that are published to a specific team that the user is an owner of.
+
+The export process is done by using Windows PowerShell. To get started, [download the CopilotLabDSR PowerShell script](https://download.microsoft.com/download/b/a/b/babff430-cc1f-46e0-b98b-2997d79af5ae/tenant-admin-scripts.zip).
+
+You can run the CopilotLabDSR PowerShell script to export either of the following types of prompts:
+
+- The saved and shared prompts of a specific user.
+- The prompts shared with a specific team.
+
+## To export the saved and shared prompts of a specific user
+
+1. From Windows PowerShell, use the `Export- PromptsUserContent` cmdlet to export the saved or shared prompts of a specific user from Copilot Lab.
+
+```powershell
+Export-PromptsUserContent -UserAadIdOrPrincipalName <user's Entra ID or UPN> -ExportDirectory <output location> -PromptType <type of prompt>
+```
+
+| Parameter                | Description                                                                                                                                              |
+|--------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| UserAadIdOrPrincipalName | Use either the Microsoft Entra ID or the User Principal Name (UPN) of the user for which you want to export content.                                     |
+| ExportDirectory          | Location to store your output files. The folder should already exist. If not specified, the export files are saved to the current folder.                |
+| PromptType               | Specify "saved" to export the prompts saved by the user. Specify "shared"' to export the prompts for which a shareable link to the prompt was generated. |
+
+For example, the following exports Adam Barr's saved prompts in Copilot Lab using his UPN and downloads the export files to the location C:\PromptsExportAdamBarr.
+
+```powershell
+Export- PromptsUserContent -UserAadIdOrPrincipalName adambarr@contoso.onmicrosoft.com -ExportDirectory C:\PromptsExportAdamBarr -PromptType saved
+```
+
+2. When prompted to authenticate, sign in with an account that is assigned the Global Admin role, not as the user you want to export.
+3. After the PowerShell cmdlet runs successfully, go to your export location to view your exported files.
+
+## To export prompts shared with a specific team
+
+1. From Windows PowerShell, use the `Export-PromptsGroupContent` cmdlet to export the prompts published to the specific team in Copilot Lab.
+
+```powershell
+Export-PromptsGroupContent -M365TeamsGroupId < team ID> -ExportDirectory <output location>
+```
+
+| Parameter        | Description                                                                                                                               |
+|------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| M365TeamsGroupId | ID of the team to which the prompts were shared.                                                                                     |
+| ExportDirectory  | Location to store your output files. The folder should already exist. If not specified, the export files are saved to the current folder. |
+
+For example, the following exports the prompts shared to the team with ID <d0efcad2-6744-0de6-0624-ea467d4293af> in Copilot Lab  and downloads the export files to the location C:\PromptsExportAdamBarr.
+
+```powershell
+Export- PromptsGroupContent -M365TeamsGroupId  d0efcad2-6744-0de6-0624-ea467d4293af -ExportDirectory C:\PromptsExportAdamBarr
+```
+
+> [!TIP]
+> To find the ID of the team, go to **Teams** > **Manage teams** in the [Teams admin center](https://admin.teams.microsoft.com/).
+
+2. When prompted to authenticate, sign in with an account that is assigned the Global Admin role.
+3. After the PowerShell cmdlet runs successfully, go to your export location to view your exported files.
+
+## What gets exported and how to read it
+
+After running the PowerShell cmdlet to export your user's data from Copilot Lab, you'll receive one file in your download location folder. You can use the information in the following sections to help you understand the properties you see in the file you received.
+
+### Export file for the saved and shared prompts of a specific user
+
+The file name is prefixed with "User" and the Microsoft Entra ID of the user followed by the prompts type used for export. The file has the properties listed in the following table.
+
+| Property                                            | Description                                                             |
+|-----------------------------------------------------|-------------------------------------------------------------------------|
+| Prompts                                             | An array of users saved or shared prompts information.                  |
+| Prompt.Title                                        | Title of the prompt given by user while saving or sharing the prompt.   |
+| Prompt.PromptText                                   | Prompt text                                                             |
+| Prompt.Products                                     | A list containing the product in which user saved or shared the prompt. |
+| Prompt.CreatedTime                                  | Time when the user saved the prompt.                                    |
+| Prompt.SharedTime                                   | Time when the user shared the prompt                                    |
+| Prompt.HydratedEntities                             | List of entities with type and entity information.                      |
+| Prompt.HydratedEntities.Type                        | Currently People, File, and Meeting entity types are supported.         |
+| Prompt.HydratedEntities.Entity                      | Entity information based on entity type.                                |
+| Prompt.HydratedEntities.Entity.Id                   | Unique entity ID.                                                       |
+| Prompt.HydratedEntities.Entity.DisplayName          | Person entity display name.                                             |
+| Prompt.HydratedEntities.Entity.EmailAddresses       | List of email addresses for person entity.                              |
+| Prompt.HydratedEntities.Entity.ReferenceId          | Unique ID for instrumentation mapping.                                  |
+| Prompt.HydratedEntities.Entity.FileName             | Name of the file entity.                                                |
+| Prompt.HydratedEntities.Entity.AccessUrl            | Access URL of file entity.                                              |
+| Prompt.HydratedEntities.Entity.SpoId                | SharePoint Document Identifier for File entity.                         |
+| Prompt.HydratedEntities.Entity.OriginalId           | Meeting ID of event entity.                                             |
+| Prompt.HydratedEntities.Entity.Subject              | Subject of event entity.                                                |
+| Prompt.HydratedEntities.Entity.SkypeTeamsMeetingUrl | URL of event entity.                                                    |
+| Prompt.HydratedEntities.Entity.Start                | Start time of event entity.                                             |
+| Prompt.HydratedEntities.Entity.End                  | End time of event entity.                                               |
+| Prompt.HydratedEntities.Entity.OrganizerName        | Organizer Name of event entity.                                         |
+| Prompt.HydratedEntities.Entity.OrganizerAddress     | Organizer Address of event entity.                                      |
+| Prompt.HydratedEntities.Entity.Attendees            | Attendees list of event entity.                                         |
+
+### Export file for the prompts shared with a specific team
+
+The file name is prefixed with "Group" and the ID of the team. The file has the properties listed in the following table.
+
+| Property                                            | Description                                                             |
+|-----------------------------------------------------|-------------------------------------------------------------------------|
+| Prompts                                             | An array of users saved or shared prompts information.                  |
+| Prompt.Title                                        | Title of the prompt given by user while saving or sharing the prompt.   |
+| Prompt.PromptText                                   | Prompt text                                                             |
+| Prompt.Products                                     | A list containing the product in which user saved or shared the prompt. |
+| Prompt.PublishedTime                                | Time when prompt was published to the team.                             |
+| Prompt.PublishedBy                                  | UPN of the user who published the prompt to the team.                   |
+| Prompt.HydratedEntities                             | List of entities with type and entity information.                      |
+| Prompt.HydratedEntities.Type                        | Currently People, File, and Meeting entity types are supported.         |
+| Prompt.HydratedEntities.Entity                      | Entity information based on entity type.                                |
+| Prompt.HydratedEntities.Entity.Id                   | Unique entity ID.                                                       |
+| Prompt.HydratedEntities.Entity.DisplayName          | Person entity display name.                                             |
+| Prompt.HydratedEntities.Entity.EmailAddresses       | List of email addresses for person entity.                              |
+| Prompt.HydratedEntities.Entity.ReferenceId          | Unique ID for instrumentation mapping.                                  |
+| Prompt.HydratedEntities.Entity.FileName             | Name of the file entity.                                                |
+| Prompt.HydratedEntities.Entity.AccessUrl            | Access URL of file entity.                                              |
+| Prompt.HydratedEntities.Entity.SpoId                | SharePoint Document Identifier for File entity.                         |
+| Prompt.HydratedEntities.Entity.OriginalId           | Meeting ID of event entity.                                             |
+| Prompt.HydratedEntities.Entity.Subject              | Subject of event entity.                                                |
+| Prompt.HydratedEntities.Entity.SkypeTeamsMeetingUrl | URL of event entity.                                                    |
+| Prompt.HydratedEntities.Entity.Start                | Start time of event entity.                                             |
+| Prompt.HydratedEntities.Entity.End                  | End time of event entity.                                               |
+| Prompt.HydratedEntities.Entity.OrganizerName        | Organizer Name of event entity.                                         |
+| Prompt.HydratedEntities.Entity.OrganizerAddress     | Organizer Address of event entity.                                      |
+| Prompt.HydratedEntities.Entity.Attendees            | Attendees list of event entity.                                         |
