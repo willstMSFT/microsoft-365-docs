@@ -4,7 +4,7 @@ ms.author: chucked
 author: chuckedmonson
 manager: jtremper
 ms.reviewer: ssquires
-ms.date: 09/30/2024
+ms.date: 010/15/2024
 audience: admin
 ms.topic: conceptual
 ms.service: microsoft-syntex
@@ -20,26 +20,26 @@ description: Learn how to use a simple document processing model in Microsoft Sy
 
 # Use a prebuilt model to extract information from simple documents in Microsoft Syntex
 
-The *simple document processing model* offers a flexible, pre-trained solution for extracting key-value pairs, selection marks, and named entities from basic structured documents. Unlike other prebuilt models with fixed schemas, this model can identify keys that others might miss, providing a valuable alternative to custom model labeling and training. It also supports barcodes and language detection.
+The *simple document processing model* offers a flexible, pretrained solution for extracting key-value pairs, selection marks, and named entities from basic structured documents. Unlike other prebuilt models with fixed schemas, this model can identify keys that others might miss, providing a valuable alternative to custom model labeling and training. It also supports barcodes and language detection.
 
-## Types of documents for this model
+## Types of documents
 
 Simple document processing works best with the types of documents that contain structured information, such as:
 
-- **Forms**: These often have clear fields and labels, making it easier to extract key-value pairs.
+- **Forms** – These often have clear fields and labels, making it easier to extract key-value pairs.
 
-- **Invoices**: Typically include consistent layouts with tables and key-value pairs.
+- **Invoices** – Typically include consistent layouts with tables and key-value pairs.
 
-- **Receipts**: Similar to invoices, they have structured data that can be easily extracted.
+- **Receipts** – Similar to invoices, they have structured data that can be easily extracted.
 
-- **Contracts**: Contain well-defined sections and clauses that can be parsed effectively.
+- **Contracts** – Contain well-defined sections and clauses that can be parsed effectively.
 
-- **Bank statements**: Include tables and structured data that are ideal for extraction.
+- **Bank statements**–: Include tables and structured data that are ideal for extraction.
 
-These documents benefit from the optical character recognition (OCR) capabilities and deep learning models used to extract key-value pairs, tables, and selection marks.
+These documents benefit from the optical character recognition (OCR) capabilities and deep learning processes used to extract key-value pairs, tables, and selection marks.
 
 > [!NOTE]
-> Currently, this model is available only for .pdf and image file types in the English language. More supported file types and languages will be added in future releases.
+> Currently, this model is available for .pdf and image file types and in a variety of languages. More supported file types will be added in future releases.
 
 To use a simple document processing model, follow these steps:
 
@@ -70,11 +70,11 @@ Follow the instructions in [Create a model in Syntex](create-syntex-model.md#set
 
 ## Step 3: Select extractors for your model
 
-On the extractor details page, you'll see the document area on the right and the **Extractors** panel on the left. The **Extractors** panel shows the list of extractors that have been identified in the document.
+On the extractor details page, you see the document area on the right of the page and the **Extractors** panel on the left. The **Extractors** panel shows the list of extractors that have been identified in the document.
 
    ![Screenshot of the extractor details page and Extractors panel.](../media/content-understanding/prebuilt-extractor-details-page-simple.png)
 
-The entity fields that are highlighted in green in the document area are the items that were detected by the model when it analyzed the file. When you select an entity to extract, the highlighted field will change to blue. If you later decide not to include the entity, the highlighted field will change to gray. The highlights make it easier to see the current state of the extractors you've selected.
+The entity fields that are highlighted in green in the document area are the items that were detected by the model when it analyzed the file. When you select an entity to extract, the highlighted field changes to blue. If you later decide not to include the entity, the highlighted field changes to gray. The highlights make it easier to see the current state of the extractors you select.
 
 > [!TIP]
 > You can use the scroll wheel on your mouse or the controls at the bottom of the document area to zoom in or out as needed to read the entity fields.
@@ -91,17 +91,17 @@ You can select an extractor either from the document area or from the **Extracto
 <!---
     ![Screenshot of the Extractors panel showing how to select an entity field.](../media/content-understanding/prebuilt-extractors-panel-select-field-contracts.png) 
 --->
-When you select an extractor, a **Select extractor?** box is displayed in the document area. The box shows the extractor name, the original value, and the option to select it as an extractor. You can also change the key name of the extractor and the column type.
+When you select an extractor, the **Select extractor?** box is displayed in the document area. The box shows the extractor name, the original value, and the option to select it as an extractor. You can also change the key name of the extractor and the column type.
 
    ![Screenshot of the Select extractor box on the extractor details page.](../media/content-understanding/prebuilt-select-distractor-box-simple.png)
 
 The original value is what is actually in the document. The extracted value is what will be written into the column in SharePoint. When the model is applied to a library, you can use column formatting to specify how you want it to look in the document.
 
-Continue to select additional extractors you want to you use. You can also add other files to analyze for this model configuration.
+Continue to select other extractors you want to you use. You can also add other files to analyze for this model configuration.
 
 ### Rename an extractor
 
-The extractor names will be used as the column names when the model is applied to the library.
+The extractor names are used as the column names when the model is applied to the library.
 Because of this, you might want to change the generated name to a more accurate name.
 
 There are three ways you can rename an extractor:
@@ -131,11 +131,11 @@ To rename an extractor from the **Extractors** panel:
 
 ### Set a page range for processing
 
-For this model, you can specify to process a range of pages for a file rather than the entire file. On the **Extractors** panel, in the **Page range** section, select the page you want processed. By default, the **Page range** setting is empty. If no page range is provided, the entire document will be processed. For more information, see [Set a page range to extract information from specific pages](page-range.md).
+For this model, you can specify to process a range of pages for a file rather than the entire file. On the **Extractors** panel, in the **Page range** section, select the page you want processed. By default, the **Page range** setting is empty. If no page range is provided, the entire document is processed. For more information, see [Set a page range to extract information from specific pages](page-range.md).
 
 ### Detect the language of a document
 
-For this model, you can detect the language of a document and extract it to a column. On the **Extractors** panel, in the **Language detection** section, toggle to turn on the language detection. It show you the detected language.
+For this model, you can detect the language of a document and extract it to a column. On the **Extractors** panel, in the **Language detection** section, toggle to turn on language detection. It shows you the detected language.
 
    ![Screenshot of the Language detection section of the Extractors panel.](../media/content-understanding/prebuilt-simple-language-detection.png)
 
