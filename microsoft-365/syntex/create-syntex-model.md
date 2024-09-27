@@ -30,28 +30,28 @@ For this article, we start in the **Models** library. For information about the 
 
 If you want to create a local model, see [Create a model on a local SharePoint site](create-local-model.md).
 
-## Create a model
+## Create a custom model
 
-From the **Models** library, select **Create a model**.
+1. From the **Models** library, select **Create a model**.
 
 ![Screenshot of the Models library showing the Create a model button.](../media/content-understanding/create-a-model-from-the-models-page.png) 
 
-On the **Options for model creation** page, select a tab for either **Custom models** or **Prebuilt models**:
+2. On the **Options for model creation** page, select the **Custom models** tab.
 <!---
 - [**Train a custom model**](#train-a-custom-model)
-    
+ 
 - [**Set up a prebuilt model**](#set-up-a-prebuilt-model)
-
-![Screenshot of the Options for model creation page showing the custom models and prebuilt models.](../media/content-understanding/options-for-model-creation-3.png) 
 --->
+![Screenshot of the Options for model creation page showing the custom models and prebuilt models.](../media/content-understanding/create-custom-model-options.png) 
+
 > [!NOTE]
 > These available model options are configured by your Microsoft 365 admin. All model options might not be available.
 
 ## Train a custom model
 
-The **Train a custom model** section shows the training method for the type of custom models you want to create.
+3. Select the type of custom model you want to create. The **Train a custom model** section shows the training method for the type of custom models you want to create. Choose from the following prebuilt models:
 
-![Screenshot of the Train a custom model section on the Options for model creation page.](../media/content-understanding/build-a-custom-model-section.png) 
+![Screenshot showing the Custom models section on the Options for model creation page.](../media/content-understanding/build-a-custom-model-section.png) 
 
 - **Teaching method** – Creates an [unstructured document processing model](document-understanding-overview.md).
 
@@ -153,7 +153,7 @@ Use the **Layout method** to create a [structured document processing model](for
 
 ---
 
-## Set up a prebuilt model
+## Create a prebuilt model
 
 On the **Options for model creation** page, select the **Prebuilt models** tab. Choose from the following prebuilt models:
 <!---
