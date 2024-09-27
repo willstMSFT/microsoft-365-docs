@@ -4,7 +4,7 @@ ms.author: chucked
 author: lkueter
 manager: jtremper
 ms.reviewer: ssquires
-ms.date: 09/30/2024
+ms.date: 10/15/2024
 audience: admin
 ms.topic: conceptual
 ms.service: microsoft-syntex
@@ -36,16 +36,16 @@ From the **Models** library, select **Create a model**.
 
 ![Screenshot of the Models library showing the Create a model button.](../media/content-understanding/create-a-model-from-the-models-page.png) 
 
-On the **Options for model creation** page, there are two sections:
-
+On the **Options for model creation** page, select a tab for either **Custom models** or **Prebuilt models**:
+<!---
 - [**Train a custom model**](#train-a-custom-model)
     
 - [**Set up a prebuilt model**](#set-up-a-prebuilt-model)
 
 ![Screenshot of the Options for model creation page showing the custom models and prebuilt models.](../media/content-understanding/options-for-model-creation-3.png) 
-
+--->
 > [!NOTE]
-> All model options might not be available. These options are configured by your Microsoft 365 admin.
+> These available model options are configured by your Microsoft 365 admin. All model options might not be available.
 
 ## Train a custom model
 
@@ -155,10 +155,10 @@ Use the **Layout method** to create a [structured document processing model](for
 
 ## Set up a prebuilt model
 
-The **Set up a prebuilt model** section shows the types of prebuilt models you can use. 
-
+On the **Options for model creation** page, select the **Prebuilt models** tab. The following types of prebuilt models are available for you to use:
+<!---
 ![Screenshot of the Use a prebuilt model section on the Set up a prebuilt model page.](../media/content-understanding/use-a-trained-model-section-2.png)
-
+--->
 - Contract processing
 - Invoice processing
 - Receipt processing
