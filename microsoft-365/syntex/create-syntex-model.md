@@ -283,14 +283,13 @@ Select one of the following tabs to continue with the prebuilt model you want to
 
         ![Screenshot of the right panel of the Create a simple document processing model page.](../media/content-understanding/create-a-model-panel-simple.png)
 
-4. Under **Advanced settings**:
+4. If you want to change the content type or add compliance labels, select **Advanced settings**.
+
+    ![Screenshot of the Advanced settings section on the Create a simple document processing model page.](../media/content-understanding/create-a-model-panel-simple.png)
 
     - In the **Content type** section, choose whether to create a new content type or to use an existing one.
 
-    - In the **Compliance** section, under **Retention labels**, select the retention label you want to add. If a retention label has been already applied to the library where the file is stored, it will be selected.
-
-    > [!NOTE]
-    > Sensitivity labels are not available for prebuilt models at this time.
+    - In the **Compliance** section, select the retention label or sensitivity label you want to add. If a label has been already applied to the library where the file is stored, it will be selected.
 
 5. When you're ready to create the model, select **Create**.
 
