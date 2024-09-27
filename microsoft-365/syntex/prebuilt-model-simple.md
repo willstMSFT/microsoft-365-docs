@@ -22,7 +22,7 @@ description: Learn how to use a simple document processing model in Microsoft Sy
 
 The *simple document processing model* offers a flexible, pretrained solution for extracting key-value pairs, selection marks, and named entities from basic structured documents. Unlike other prebuilt models with fixed schemas, this model can identify keys that others might miss, providing a valuable alternative to custom model labeling and training. It also supports barcodes and language detection.
 
-## Types of documents
+### Types of documents
 
 Simple document processing works best with the types of documents that contain structured information, such as:
 
