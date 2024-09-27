@@ -128,6 +128,17 @@ To rename an extractor from the **Extractors** panel:
 
 2. In the **Rename extractor** box, enter the new name of the extractor, and then select **Rename**.
 --->
+
+### Set a page range for processing
+
+For this model, you can specify to process a range of pages for a file rather than the entire file. On the **Extractors** panel, in the **Page range** section, select the page you want processed. By default, the **Page range** setting is empty. If no page range is provided, the entire document will be processed. For more information, see [Set a page range to extract information from specific pages](page-range.md).
+
+### Detect the language of a document
+
+For this model, you can detect the language of a document and extract it to a column. On the **Extractors** panel, in the **Language detection** section, toggle to turn on the language detection. It show you the detected language.
+
+   ![Screenshot of the Language detection section of the Extractors panel.](../media/content-understanding/prebuilt-simple-language-detection.png)
+
 ## Step 4: Apply the model
 
 - To save changes and return to the model home page, on the **Extractors** panel, select **Save and exit**.
