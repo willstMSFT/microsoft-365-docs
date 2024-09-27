@@ -151,7 +151,15 @@ Use the **Layout method** to create a [structured document processing model](for
 
 ## Create a prebuilt model
 
-On the **Options for model creation** page, select the **Prebuilt models** tab. Choose from the following prebuilt models:
+1. From the **Models** library, select **Create a model**.
+<!---
+![Screenshot of the Models library showing the Create a model button.](../media/content-understanding/create-a-model-from-the-models-page.png) 
+--->
+2. On the **Options for model creation** page, select the **Prebuilt models** tab.
+
+![Screenshot showing the Prebuilt models section on the Options for model creation page.](../media/content-understanding/build-a-prebuilt-model-section.png)
+
+3. Choose from the following prebuilt models:
 <!---
 ![Screenshot of the Use a prebuilt model section on the Set up a prebuilt model page.](../media/content-understanding/use-a-trained-model-section-2.png)
 --->
