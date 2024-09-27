@@ -38,7 +38,7 @@ If you want to create a local model, see [Create a model on a local SharePoint s
 --->
 2. On the **Options for model creation** page, select the **Custom models** tab.
 
-    ![Screenshot showing the Custom models section on the Options for model creation page.](../media/content-understanding/build-a-custom-model-section.png)
+    ![Screenshot showing the Custom models section on the Options for model creation page.](../media/content-understanding/create-custom-model-options.png)
 
     > [!NOTE]
     > These available model options are configured by your Microsoft 365 admin. All model options might not be available.
