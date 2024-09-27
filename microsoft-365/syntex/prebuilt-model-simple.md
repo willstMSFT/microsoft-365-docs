@@ -84,16 +84,16 @@ The entity fields that are highlighted in green in the document area are the ite
 You can select an extractor either from the document area or from the **Extractors** panel, depending on your preference.
 
 - To select an extractor from the document area, select the entity field.
-
+<!--
     ![Screenshot of the document area showing how to select an entity field.](../media/content-understanding/prebuilt-document-area-select-field-contracts.png) 
-
+--->
 - To select an extractor from the **Extractors** panel, select the checkbox to the right of the entity name.
-
+<!---
     ![Screenshot of the Extractors panel showing how to select an entity field.](../media/content-understanding/prebuilt-extractors-panel-select-field-contracts.png) 
-
+--->
 When you select an extractor, a **Select extractor?** box is displayed in the document area. The box shows the extractor name, the original value, and the option to select it as an extractor. For certain data types such as numbers or dates, it will also show an extracted value.
 
-   ![Screenshot of the Select extractor box on the extractor details page.](../media/content-understanding/prebuilt-select-distractor-box-contracts.png) 
+   ![Screenshot of the Select extractor box on the extractor details page.](../media/content-understanding/prebuilt-select-distractor-box-simple.png)
 
 The original value is what is actually in the document. The extracted value is what will be written into the column in SharePoint. When the model is applied to a library, you can use column formatting to specify how you want it to look in the document.
 
