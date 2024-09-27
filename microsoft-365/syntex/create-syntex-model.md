@@ -53,7 +53,7 @@ If you want to create a local model, see [Create a model on a local SharePoint s
 
 4. Select one of the following tabs to continue with the custom model you want to use.
 
-# [Teaching method](#tab/teaching-method)
+# [Single class model](#tab/single-class-model)
 
 Use the **Teaching method** to create an [unstructured document processing model](document-understanding-overview.md).
 
@@ -73,13 +73,13 @@ Use the **Teaching method** to create an [unstructured document processing model
 
     - In the **Content type** section, choose whether to create a new content type or to use an existing one.
 
-    - In the **Compliance** section, under **Retention labels**, select the retention label you want to add. Under **Sensitivity labels**, select the sensitivity label you want to add. If a compliance label has been already applied to the library where the file is stored, it will be shown.
+    - In the **Compliance** section, select the retention label or sensitivity label you want to add. If a label has been already applied to the library where the file is stored, it will be selected.
 
 5. When you're ready to create the model, select **Create**.
 
 6. You're now ready to [train the model](create-a-classifier.md).
 
-# [Freeform selection method](#tab/freeform-selection-method)
+# [Freeform extraction model](#tab/freeform-extraction-model)
 
 Use the **Freeform selection method** to create a [freeform document processing model](form-processing-overview.md).
 
@@ -99,10 +99,7 @@ Use the **Freeform selection method** to create a [freeform document processing 
 
     - In the **Content type** section, choose whether to create a new content type or to use an existing one.
 
-    - In the **Compliance** section, under **Retention labels**, select the retention label you want to add. If a compliance label has been already applied to the library where the file is stored, it will be shown.
-
-    > [!NOTE]
-    > Sensitivity labels are not available for **Freeform selection method** (freeform document processing models) at this time.
+    - In the **Compliance** section, select the retention label or sensitivity label you want to add. If a label has been already applied to the library where the file is stored, it will be selected.
 
 5. When you're ready to create the model, select **Create**.
 
@@ -111,7 +108,7 @@ Use the **Freeform selection method** to create a [freeform document processing 
     > [!NOTE]
     > When published, this model type is available for reuse by others who do not own the model. Currently, this model can be edited and shared for editing only by the model owner.
 
-# [Layout method](#tab/layout-method)
+# [Structured extraction model](#tab/structured-extraction-model)
 
 Use the **Layout method** to create a [structured document processing model](form-processing-overview.md).
 
@@ -131,10 +128,7 @@ Use the **Layout method** to create a [structured document processing model](for
 
     - In the **Content type** section, choose whether to create a new content type or to use an existing one.
 
-    - In the **Compliance** section, under **Retention labels**, select the retention label you want to add. If a compliance label has been already applied to the library where the file is stored, it will be shown.
-
-    > [!NOTE]
-    > Sensitivity labels are not available for **Layout method** (structured document processing models) at this time.
+    - In the **Compliance** section, select the retention label or sensitivity label you want to add. If a label has been already applied to the library where the file is stored, it will be selected.
 
 5. When you're ready to create the model, select **Create**.
 
@@ -185,10 +179,7 @@ Select one of the following tabs to continue with the prebuilt model you want to
 
     - In the **Content type** section, choose whether to create a new content type or to use an existing one.
 
-    - In the **Compliance** section, under **Retention labels**, select the retention label you want to add. If a retention label has been already applied to the library where the file is stored, it will be selected. 
-
-    > [!NOTE]
-    > Sensitivity labels are not available for prebuilt models at this time.
+    - In the **Compliance** section, select the retention label or sensitivity label you want to add. If a label has been already applied to the library where the file is stored, it will be selected.
 
 5. When you're ready to create the model, select **Create**.
 
@@ -212,10 +203,7 @@ Select one of the following tabs to continue with the prebuilt model you want to
 
     - In the **Content type** section, choose whether to create a new content type or to use an existing one.
 
-    - In the **Compliance** section, under **Retention labels**, select the retention label you want to add. If a retention label has been already applied to the library where the file is stored, it will be selected. 
-
-    > [!NOTE]
-    > Sensitivity labels are not available for prebuilt models at this time.
+    - In the **Compliance** section, select the retention label or sensitivity label you want to add. If a label has been already applied to the library where the file is stored, it will be selected.
 
 5. When you're ready to create the model, select **Create**.
 
@@ -239,7 +227,7 @@ Select one of the following tabs to continue with the prebuilt model you want to
 
     - In the **Content type** section, choose whether to create a new content type or to use an existing one.
 
-    - In the **Compliance** section, under **Retention labels**, select the retention label you want to add. If a retention label has been already applied to the library where the file is stored, it will be selected.
+    - In the **Compliance** section, select the retention label or sensitivity label you want to add. If a label has been already applied to the library where the file is stored, it will be selected.
 
 5. When you're ready to create the model, select **Create**.
 
