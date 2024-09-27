@@ -36,7 +36,7 @@ Simple document processing works best with the types of documents that contain s
 
 - **Bank statements** – Include tables and structured data that are ideal for extraction.
 
-These documents benefit from the optical character recognition (OCR) capabilities and deep learning processes used to extract key-value pairs, tables, and selection marks.
+These documents benefit from the optical character recognition (OCR) capabilities and deep learning processes used to extract key-value pairs, tables, named entities, and selection marks.
 
 > [!NOTE]
 > Currently, this model is available for .pdf and image file types and in a variety of languages. More supported file types will be added in future releases.
