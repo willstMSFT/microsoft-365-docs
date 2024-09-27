@@ -24,7 +24,7 @@ The *simple document processing model* offers a flexible, pre-trained solution f
 
 ## Types of documents for this model
 
-Simple document processing works best with thetypes of documents that contain structured information, such as:
+Simple document processing works best with the types of documents that contain structured information, such as:
 
 - **Forms**: These often have clear fields and labels, making it easier to extract key-value pairs.
 
@@ -72,7 +72,7 @@ Follow the instructions in [Create a model in Syntex](create-syntex-model.md#set
 
 On the extractor details page, you'll see the document area on the right and the **Extractors** panel on the left. The **Extractors** panel shows the list of extractors that have been identified in the document.
 
-   ![Screenshot of the extractor details page and Extractors panel.](../media/content-understanding/prebuilt-extractor-details-page-contracts.png)
+   ![Screenshot of the extractor details page and Extractors panel.](../media/content-understanding/prebuilt-extractor-details-page-simple.png)
 
 The entity fields that are highlighted in green in the document area are the items that were detected by the model when it analyzed the file. When you select an entity to extract, the highlighted field will change to blue. If you later decide not to include the entity, the highlighted field will change to gray. The highlights make it easier to see the current state of the extractors you've selected.
 
