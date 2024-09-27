@@ -155,7 +155,7 @@ Use the **Layout method** to create a [structured document processing model](for
 
 ## Set up a prebuilt model
 
-On the **Options for model creation** page, select the **Prebuilt models** tab. The following types of prebuilt models are available for you to use:
+On the **Options for model creation** page, select the **Prebuilt models** tab. Choose from the following prebuilt models:
 <!---
 ![Screenshot of the Use a prebuilt model section on the Set up a prebuilt model page.](../media/content-understanding/use-a-trained-model-section-2.png)
 --->
