@@ -43,13 +43,13 @@ If you want to create a local model, see [Create a model on a local SharePoint s
     > [!NOTE]
     > These available model options are configured by your Microsoft 365 admin. All model options might not be available.
 
-3. Select the type of custom model you want to create. The **Train a custom model** section shows the training method for the type of custom models you want to create. Choose from the following prebuilt models:
+3. Select the type of custom model you want to create. Choose from the following prebuilt model types:
 
-- **Teaching method** – Creates an [unstructured document processing model](document-understanding-overview.md).
+    - **Single class model** – Creates an [unstructured document processing model](document-understanding-overview.md).
 
-- **Freeform selection method** – Creates a [freeform document processing model](form-processing-overview.md).
+    - **Freeform extraction model** – Creates a [freeform document processing model](form-processing-overview.md).
 
-- **Layout method** – Creates a [structured document processing model](form-processing-overview.md).
+    - **Structured extraction model** – Creates a [structured document processing model](form-processing-overview.md).
 
 4. Select one of the following tabs to continue with the custom model you want to use.
 
