@@ -275,13 +275,13 @@ Select one of the following tabs to continue with the prebuilt model you want to
 
 2. On the **Simple document processing: Details** page, you'll find more information about the model. If you want to proceed with using the model, select **Next**.
 
-3. On the right panel of the **Create a simple document processing model** page, enter the following information.
+3. On the **Create a simple document processing model** page, on right panel, the enter the following information.
 
     - **Model name** – Enter the name of the model, for example *Service agreement*.
 
     - **Description** – Enter information about how this model will be used.
 
-        ![Screenshot of the right panel of the Create a simple document processing model page.](../media/content-understanding/create-a-model-panel.png) 
+        ![Screenshot of the right panel of the Create a simple document processing model page.](../media/content-understanding/create-a-model-panel-simple.png)
 
 4. Under **Advanced settings**:
 
