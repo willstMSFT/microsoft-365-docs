@@ -91,7 +91,7 @@ You can select an extractor either from the document area or from the **Extracto
 <!---
     ![Screenshot of the Extractors panel showing how to select an entity field.](../media/content-understanding/prebuilt-extractors-panel-select-field-contracts.png) 
 --->
-When you select an extractor, a **Select extractor?** box is displayed in the document area. The box shows the extractor name, the original value, and the option to select it as an extractor. For certain data types such as numbers or dates, it will also show an extracted value.
+When you select an extractor, a **Select extractor?** box is displayed in the document area. The box shows the extractor name, the original value, and the option to select it as an extractor. You can also change the key name of the extractor and the column type.
 
    ![Screenshot of the Select extractor box on the extractor details page.](../media/content-understanding/prebuilt-select-distractor-box-simple.png)
 
@@ -101,11 +101,20 @@ Continue to select additional extractors you want to you use. You can also add o
 
 ### Rename an extractor
 
-You can rename an extractor either from the model home page or from the **Extractors** panel. You might consider renaming selected extractors because these names will be used as the column names when the model is applied to the library.
+The extractor names will be used as the column names when the model is applied to the library.
+Because of this, you might want to change the generated name to a more accurate name.
 
-To rename an extractor from the model home page:
+There are three ways you can rename an extractor:
 
-1. In the **Extractors** section, select the extractor you want to rename, and then select **Rename**.
+- In the document area of the extractor details page, select the entity field. On the **Select extractor?** box, in the **Key name** field, enter a new name for the extractor.
+
+- On the **Extractors** panel of the extractor details page, select the extractor you want to rename, and then select **Rename**.
+
+- From the model home page, in the **Extractors** section, select the extractor you want to rename, and then select **Rename**.
+<!---
+To rename an extractor from the model home page :
+
+1. In the **Extractors** section of the extractor details page, select the extractor you want to rename, and then select **Rename**.
 
     ![Screenshot of the Extractors section with the Rename option highlighted.](../media/content-understanding/prebuilt-model-page-rename-extractor.png) 
 
@@ -118,7 +127,7 @@ To rename an extractor from the **Extractors** panel:
     ![Screenshot of the Extractors panel showing how to rename an extractor.](../media/content-understanding/prebuilt-extractors-panel-rename-field.png) 
 
 2. In the **Rename extractor** box, enter the new name of the extractor, and then select **Rename**.
-
+--->
 ## Step 4: Apply the model
 
 - To save changes and return to the model home page, on the **Extractors** panel, select **Save and exit**.
