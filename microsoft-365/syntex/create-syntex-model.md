@@ -281,11 +281,11 @@ Select one of the following tabs to continue with the prebuilt model you want to
 
     - **Description** – Enter information about how this model will be used.
 
-        ![Screenshot of the right panel of the Create a simple document processing model page.](../media/content-understanding/create-a-model-panel-simple.png)
+    ![Screenshot of the right panel of the Create a simple document processing model page.](../media/content-understanding/create-a-model-panel-simple.png)
 
 4. If you want to change the content type or add compliance labels, select **Advanced settings**.
 
-    ![Screenshot of the Advanced settings section on the Create a simple document processing model page.](../media/content-understanding/create-a-model-panel-simple.png)
+    ![Screenshot of the Advanced settings section on the Create a simple document processing model page.](../media/content-understanding/create-model-advanced-settings.png)
 
     - In the **Content type** section, choose whether to create a new content type or to use an existing one.
 
