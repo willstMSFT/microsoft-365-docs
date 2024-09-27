@@ -87,7 +87,7 @@ You can select an extractor either from the document area or from the **Extracto
 <!--
     ![Screenshot of the document area showing how to select an entity field.](../media/content-understanding/prebuilt-document-area-select-field-contracts.png) 
 --->
-- To select an extractor from the **Extractors** panel, select the checkbox to the right of the entity name.
+- To select an extractor from the **Extractors** panel, in the **Extract** column, select the corresponding checkbox to the right of the entity name.
 <!---
     ![Screenshot of the Extractors panel showing how to select an entity field.](../media/content-understanding/prebuilt-extractors-panel-select-field-contracts.png) 
 --->
