@@ -22,6 +22,22 @@ description: Learn how to use a simple document processing model in Microsoft Sy
 
 The *simple document processing model* offers a flexible, pre-trained solution for extracting key-value pairs, selection marks, and named entities from basic structured documents. Unlike other prebuilt models with fixed schemas, this model can identify keys that others might miss, providing a valuable alternative to custom model labeling and training. It also supports barcodes and language detection.
 
+## Types of documents for this model
+
+Simple document processing works best with thetypes of documents that contain structured information, such as:
+
+- **Forms**: These often have clear fields and labels, making it easier to extract key-value pairs.
+
+- **Invoices**: Typically include consistent layouts with tables and key-value pairs.
+
+- **Receipts**: Similar to invoices, they have structured data that can be easily extracted.
+
+- **Contracts**: Contain well-defined sections and clauses that can be parsed effectively.
+
+- **Bank statements**: Include tables and structured data that are ideal for extraction.
+
+These documents benefit from the optical character recognition (OCR) capabilities and deep learning models used to extract key-value pairs, tables, and selection marks.
+
 > [!NOTE]
 > Currently, this model is available only for .pdf and image file types in the English language. More supported file types and languages will be added in future releases.
 
