@@ -55,13 +55,13 @@ If you want to create a local model, see [Create a model on a local SharePoint s
 
 # [Single class model](#tab/single-class-model)
 
-Use the **Teaching method** to create an [unstructured document processing model](document-understanding-overview.md).
+Use the **Single class model** to create an [unstructured document processing model](document-understanding-overview.md).
 
-1. Select **Teaching method**.
+1. Select **Single class model**.
 
-2. On the **Teaching method: Details** page, you'll find more information about the model. If you want to proceed with creating the model, select **Next**.
+2. On the **Single class model: Details** page, you'll find more information about the model. If you want to proceed with creating the model, select **Next**.
 
-3. On the right panel of the **Create a model with the teaching method** page, enter the following information.
+3. On the right panel of the **Create a model using a single class model** page, enter the following information.
 
     - **Model name** – Enter the name of the model, for example *Service agreements*.
 
@@ -81,13 +81,13 @@ Use the **Teaching method** to create an [unstructured document processing model
 
 # [Freeform extraction model](#tab/freeform-extraction-model)
 
-Use the **Freeform selection method** to create a [freeform document processing model](form-processing-overview.md).
+Use the **Freeform extraction model** to create a [freeform document processing model](form-processing-overview.md).
 
-1. Select **Freeform selection method**.
+1. Select **Freeform extraction model**.
 
-2. On the **Freeform selection method: Details** page, you'll find more information about the model. If you want to proceed with creating the model, select **Next**.
+2. On the **Freeform extraction model: Details** page, you'll find more information about the model. If you want to proceed with creating the model, select **Next**.
 
-3. On the right panel of the **Create a model with the freeform selection method** page, enter the following information.
+3. On the right panel of the **Create a model using the freeform extraction model** page, enter the following information.
 
     - **Model name** – Enter the name of the model, for example *Service agreements*.
 
@@ -110,19 +110,19 @@ Use the **Freeform selection method** to create a [freeform document processing 
 
 # [Structured extraction model](#tab/structured-extraction-model)
 
-Use the **Layout method** to create a [structured document processing model](form-processing-overview.md).
+Use the **Structured extraction model** to create a [structured document processing model](form-processing-overview.md).
 
-1. Select **Layout method**.
+1. Select **Structured extraction model**.
 
-2. On the **Layout method: Details** page, you'll find more information about the model. If you want to proceed with creating the model, select **Next**.
+2. On the **Structured extraction model: Details** page, you'll find more information about the model. If you want to proceed with creating the model, select **Next**.
 
-3. On the right panel of the **Create a model with the layout method** page, enter the following information.
+3. On the right panel of the **Create a model using the structured extraction model** page, enter the following information.
 
     - **Model name** – Enter the name of the model, for example *Service agreements*.
 
     - **Description** – Enter information about how this model will be used.
 
-        ![Screenshot of the right panel of the Create a model with the layout method page.](../media/content-understanding/create-a-model-panel.png) 
+        ![Screenshot of the right panel of the Create a model with the structured extraction model page.](../media/content-understanding/create-a-model-panel.png) 
     
 4. Under **Advanced settings**:
 
