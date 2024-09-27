@@ -38,16 +38,12 @@ If you want to create a local model, see [Create a model on a local SharePoint s
 --->
 2. On the **Options for model creation** page, select the **Custom models** tab.
 
-![Screenshot showing the Custom models section on the Options for model creation page.](../media/content-understanding/build-a-custom-model-section.png)
+    ![Screenshot showing the Custom models section on the Options for model creation page.](../media/content-understanding/build-a-custom-model-section.png)
 
-> [!NOTE]
-> These available model options are configured by your Microsoft 365 admin. All model options might not be available.
-
-## Train a custom model
+    > [!NOTE]
+    > These available model options are configured by your Microsoft 365 admin. All model options might not be available.
 
 3. Select the type of custom model you want to create. The **Train a custom model** section shows the training method for the type of custom models you want to create. Choose from the following prebuilt models:
-
-![Screenshot showing the Custom models section on the Options for model creation page.](../media/content-understanding/build-a-custom-model-section.png)
 
 - **Teaching method** – Creates an [unstructured document processing model](document-understanding-overview.md).
 
@@ -55,7 +51,7 @@ If you want to create a local model, see [Create a model on a local SharePoint s
 
 - **Layout method** – Creates a [structured document processing model](form-processing-overview.md).
 
-Select one of the following tabs to continue with the custom model you want to use.
+4. Select one of the following tabs to continue with the custom model you want to use.
 
 # [Teaching method](#tab/teaching-method)
 
