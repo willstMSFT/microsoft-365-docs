@@ -147,7 +147,7 @@ Use the **Structured extraction model** to create a [structured document process
 --->
 2. On the **Options for model creation** page, select the **Prebuilt models** tab.
 
-![Screenshot showing the Prebuilt models section on the Options for model creation page.](../media/content-understanding/build-a-prebuilt-model-section.png)
+    ![Screenshot showing the Prebuilt models section on the Options for model creation page.](../media/content-understanding/build-a-prebuilt-model-section.png)
 <!---
 3. Choose from the following prebuilt models:
 
@@ -255,7 +255,6 @@ Use the **Structured extraction model** to create a [structured document process
 4. When you're ready to create the model, select **Create**.
 
 5. You're now ready to [complete setting up the model](prebuilt-model-sensitive-info.md#set-up-a-sensitive-information-model).
-
 
 # [Simple document processing](#tab/simple-document-processing)
 
