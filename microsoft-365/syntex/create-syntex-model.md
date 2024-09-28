@@ -42,7 +42,7 @@ If you want to create a local model, see [Create a model on a local SharePoint s
 
     > [!NOTE]
     > These available model options are configured by your Microsoft 365 admin. All model options might not be available.
-
+<!---
 3. Select the type of custom model you want to create. Choose from the following prebuilt model types:
 
     - **Single class model** – Creates an [unstructured document processing model](document-understanding-overview.md).
@@ -50,8 +50,8 @@ If you want to create a local model, see [Create a model on a local SharePoint s
     - **Freeform extraction model** – Creates a [freeform document processing model](form-processing-overview.md).
 
     - **Structured extraction model** – Creates a [structured document processing model](form-processing-overview.md).
-
-4. Select one of the following tabs to continue with the custom model you want to use.
+--->
+3. Select one of the following tabs to continue with the custom model you want to use.
 
 # [Single class model](#tab/single-class-model)
 
@@ -68,7 +68,7 @@ Use the **Single class model** to create an [unstructured document processing mo
     - **Description** – Enter information about how this model will be used.
 
         ![Screenshot of the right panel of the Create a model with the teaching method  page.](../media/content-understanding/create-a-model-panel.png) 
-    
+
 4. Under **Advanced settings**:
 
     - In the **Content type** section, choose whether to create a new content type or to use an existing one.
@@ -94,7 +94,7 @@ Use the **Freeform extraction model** to create a [freeform document processing 
     - **Description** – Enter information about how this model will be used.
 
         ![Screenshot of the right panel of the Create a model with the Freeform selection method page.](../media/content-understanding/create-a-model-panel.png) 
-    
+
 4. Under **Advanced settings**:
 
     - In the **Content type** section, choose whether to create a new content type or to use an existing one.
@@ -123,7 +123,7 @@ Use the **Structured extraction model** to create a [structured document process
     - **Description** – Enter information about how this model will be used.
 
         ![Screenshot of the right panel of the Create a model with the structured extraction model page.](../media/content-understanding/create-a-model-panel.png) 
-    
+
 4. Under **Advanced settings**:
 
     - In the **Content type** section, choose whether to create a new content type or to use an existing one.
@@ -148,22 +148,22 @@ Use the **Structured extraction model** to create a [structured document process
 2. On the **Options for model creation** page, select the **Prebuilt models** tab.
 
 ![Screenshot showing the Prebuilt models section on the Options for model creation page.](../media/content-understanding/build-a-prebuilt-model-section.png)
-
-3. Choose from the following prebuilt models:
 <!---
+3. Choose from the following prebuilt models:
+
 ![Screenshot of the Use a prebuilt model section on the Set up a prebuilt model page.](../media/content-understanding/use-a-trained-model-section-2.png)
---->
+
 - Contract processing
 - Invoice processing
 - Receipt processing
 - Sensitive information processing
 - Simple document processing
-
-Select one of the following tabs to continue with the prebuilt model you want to use.
+--->
+3. Select one of the following tabs to continue with the prebuilt model you want to use.
 
 # [Contract processing](#tab/contract-processing)
 
-1. Select **Contract processing**.
+1. Select **Contract processing model**.
 
 2. On the **Contract processing: Details** page, you'll find more information about the model. If you want to proceed with using the model, select **Next**.
 
@@ -187,7 +187,7 @@ Select one of the following tabs to continue with the prebuilt model you want to
 
 # [Invoice processing](#tab/invoice-processing)
 
-1. Select **Invoice processing**.
+1. Select **Invoice processing model**.
 
 2. On the **Invoice processing: Details** page, you'll find more information about the model. If you want to proceed with using the model, select **Next**.
 
@@ -211,7 +211,7 @@ Select one of the following tabs to continue with the prebuilt model you want to
 
 # [Receipt processing](#tab/receipt-processing)
 
-1. Select **Receipt processing**.
+1. Select **Receipt processing model**.
 
 2. On the **Receipt processing: Details** page, you'll find more information about the model. If you want to proceed with using the model, select **Next**.
 
@@ -235,7 +235,7 @@ Select one of the following tabs to continue with the prebuilt model you want to
 
 # [Sensitive information processing](#tab/sensitive-information-processing)
 
-1. Select **Sensitive information processing**.
+1. Select **Sensitive information processing model**.
 
 2. On the **Sensitive information processing: Details** page, you find information about the model and can see examples of a document library looks with entities detected and entities extracted. If you want to proceed with using the model, select **Next**.
 
