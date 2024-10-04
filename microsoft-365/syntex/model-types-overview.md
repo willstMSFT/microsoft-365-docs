@@ -66,7 +66,7 @@ For example, an unstructured document could be a contract renewal letter that ca
 
 This model type supports the widest range of file types and supports [more than 40 languages](/ai-builder/form-processing-model-requirements#model-for-unstructured-and-free-form-documents).
 
-When you create an unstructured document processing model, use the **Teaching method** option.
+When you create an unstructured document processing model, use the **Single class model** option.
 
 For more information, see [Overview of unstructured document processing](document-understanding-overview.md).
 
@@ -83,7 +83,7 @@ Because your organization receives letters and documents in large quantities fro
 
 This model type is the best option for documents in PDF or image files when you don't require automatic classification of the type of document, and it supports [more than 40 languages](/ai-builder/form-processing-model-requirements#model-for-unstructured-and-free-form-documents).
 
-When you create a freeform document processing model, use the **Freeform selection method** option.
+When you create a freeform document processing model, use the **Freeform extraction model** option.
 
 For more information, see [Overview of structured and freeform document processing](form-processing-overview.md).
 
@@ -95,7 +95,7 @@ Structured document processing models use Microsoft Power Apps [AI Builder](/ai-
 
 This model type supports the [widest range of languages](/ai-builder/form-processing-model-requirements#model-for-structured-and-semi-structured-documents) and is trained to understand the layout of your form from example documents, and then learns to look for the data you need to extract from similar locations. Forms usually have a more structured layout where entities are in the same location (for example, a social security number on a tax form).
 
-When you create a structured document processing model, use the **Layout method** option.
+When you create a structured document processing model, use the **Structured extraction model** option.
 
 For more information, see [Overview of structured and freeform document processing](form-processing-overview.md).
 
@@ -110,9 +110,9 @@ Prebuilt models include:
 - [Receipt processing](#receipt-processing)
 - [Sensitive information processing](#sensitive-information-processing)
 - [Sensitive information processing](#simple-document-processing)
-
+<!---
 ![Screenshot of the Options for model creation page showing the prebuilt model options.](../media/content-understanding/build-a-prebuilt-model-section.png)
-
+--->
 Prebuilt models are pretrained to recognize documents and the structured information in the documents. Instead of having to create a new custom model from scratch, you can iterate on an existing pretrained model to add specific fields that fit the needs of your organization.
 
 ### Contract processing
