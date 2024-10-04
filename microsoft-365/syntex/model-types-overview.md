@@ -4,7 +4,7 @@ ms.author: chucked
 author: chuckedmonson
 manager: jtremper
 ms.reviewer: ssquires
-ms.date: 01/29/2024
+ms.date: 10/15/2024
 audience: admin
 ms.topic: conceptual
 ms.custom: intro-overview
@@ -48,8 +48,8 @@ Custom models include:
 - [Structured document processing](#structured-document-processing)
 
 To view the side-by-side differences in custom models, see [Compare custom models](./difference-between-document-understanding-and-form-processing-model.md).
-
-When you create a custom model, you'll select the training method associated with the model type. For example, if you want to create an unstructured document processing model, on the **Options for model creation** page where you create a model, you'll choose the **Teaching method** option. The following table shows the training method associated with each custom model type.
+<!---
+When you create a custom model, you'll select the training method associated with the model type. For example, if you want to create an unstructured document processing model, on the **Options for model creation** page where you create a model, you'll choose the **Single class model** option. The following table shows the training method associated with each custom model type.
 
 |Unstructured<br> document processing  |Freeform<br> document processing  |Structured<br> document processing  |
 |---------|---------|---------|
@@ -57,7 +57,7 @@ When you create a custom model, you'll select the training method associated wit
 
 > [!NOTE]
 > To make the **Freeform selection method** and the **Layout method** options available to users, they first must be configured in the Microsoft 365 admin center.
-
+--->
 ### Unstructured document processing
 
 Use the unstructured document processing model to automatically classify documents and extract information from them. It works best with unstructured documents, such as letters or contracts. These documents must have text that can be identified based on phrases or patterns. The identified text designates both the type of file it is (its classification) and what you'd like to extract (its extractors).
@@ -109,8 +109,9 @@ Prebuilt models include:
 - [Invoice processing](#invoice-processing)
 - [Receipt processing](#receipt-processing)
 - [Sensitive information processing](#sensitive-information-processing)
+- [Sensitive information processing](#simple-document-processing)
 
-![Screenshot of the Options for model creation page showing the prebuilt model options.](../media/content-understanding/use-a-trained-model-section-2.png)
+![Screenshot of the Options for model creation page showing the prebuilt model options.](../media/content-understanding/build-a-prebuilt-model-section.png)
 
 Prebuilt models are pretrained to recognize documents and the structured information in the documents. Instead of having to create a new custom model from scratch, you can iterate on an existing pretrained model to add specific fields that fit the needs of your organization.
 
@@ -137,3 +138,9 @@ For more information about receipt processing models, see [Use a prebuilt model 
 The prebuilt sensitive information processing model analyzes, detects, and extracts key information from documents. The API analyzes contracts in various formats and extracts key sensitive information such as social security numbers, financial account numbers, driver license identification numbers, and other personal information.
 
 For more information about sensitive information processing models, see [Use a prebuilt model to detect sensitive information from documents](prebuilt-model-sensitive-info.md).
+
+### Simple document processing
+
+The prebuilt simple document processing model offers a flexible, pretrained solution for extracting key-value pairs, selection marks, and named entities from basic structured documents. Unlike other prebuilt models with fixed schemas, this model can identify keys that others might miss, providing a valuable alternative to custom model labeling and training. This model also supports barcodes and language detection.
+
+For more information about simple document processing models, see [Use a prebuilt model to detect sensitive information from documents](prebuilt-model-simple.md).
