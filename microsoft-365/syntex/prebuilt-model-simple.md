@@ -20,9 +20,6 @@ description: Learn how to use a simple document processing model in Microsoft Sy
 
 # Use a prebuilt model to extract information from simple documents in Microsoft Syntex
 
-The *simple document processing model* offers a flexible, pretrained solution for extracting key-value pairs, selection marks, and named entities from basic structured documents. Unlike other prebuilt models with fixed schemas, this model can identify keys that others might miss, providing a valuable alternative to custom model labeling and training. It also supports barcodes and language detection.
-
-
 The *simple document processing model* offers a flexible, pretrained solution for extracting information from [basic structured documents](#types-of-documents), such as:
 
 - **Key-value pairs** – Think of these like labels and their corresponding information, such as “Name: John Doe.”
@@ -31,7 +28,7 @@ The *simple document processing model* offers a flexible, pretrained solution fo
 
 - **Named entities** – These are specific items like names of people, places, or organizations mentioned in the text of a document.
 
-Unlike other prebuilt models with fixed schemas, this model can identify keys that others might miss, providing a valuable alternative to custom model labeling and training. It also supports barcodes and language detection.
+Unlike other prebuilt models with fixed schemas, this model can identify keys that others might miss, providing a valuable alternative to custom model labeling and training. This model also supports barcodes and language detection.
 
 ### Types of documents
 
@@ -47,10 +44,10 @@ Simple document processing works best with the types of documents that contain s
 
 - **Bank statements** – Include tables and structured data that are ideal for extraction.
 
-These documents benefit from the optical character recognition (OCR) capabilities and deep learning processes used to extract key-value pairs, tables, named entities, and selection marks.
+These documents benefit from the optical character recognition (OCR) capabilities and deep learning processes used to extract key-value pairs, selection marks, tables, and named entities.
 
 > [!NOTE]
-> Currently, this model is available for .pdf and image file types and in a variety of languages. More supported file types will be added in future releases.
+> Currently, this model is available for .pdf and image file types and in more than 100 languages. More supported file types will be added in future releases.
 
 To use a simple document processing model, follow these steps:
 
