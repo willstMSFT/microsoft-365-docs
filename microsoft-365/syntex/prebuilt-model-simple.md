@@ -20,7 +20,7 @@ description: Learn how to use a simple document processing model in Microsoft Sy
 
 # Use a prebuilt model to extract information from simple documents in Microsoft Syntex
 
-The *simple document processing model* offers a flexible, pretrained solution for extracting information from [basic structured documents](#types-of-documents), such as:
+The *simple document processing model* offers a flexible, pretrained solution for extracting information from [basic structured documents](#types-of-documents), including information such as:
 
 - **Key-value pairs** – Think of these like labels and their corresponding information, such as “Name: John Doe.”
 
