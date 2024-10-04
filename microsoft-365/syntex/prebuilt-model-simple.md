@@ -22,6 +22,17 @@ description: Learn how to use a simple document processing model in Microsoft Sy
 
 The *simple document processing model* offers a flexible, pretrained solution for extracting key-value pairs, selection marks, and named entities from basic structured documents. Unlike other prebuilt models with fixed schemas, this model can identify keys that others might miss, providing a valuable alternative to custom model labeling and training. It also supports barcodes and language detection.
 
+
+The *simple document processing model* offers a flexible, pretrained solution for extracting information from [basic structured documents](#types-of-documents), such as:
+
+- **Key-value pairs** – Think of these like labels and their corresponding information, such as “Name: John Doe.”
+
+- **Selection marks** – These are checkboxes or other marks that indicate choices or selections in a document.
+
+- **Named entities** – These are specific items like names of people, places, or organizations mentioned in the text of a document.
+
+Unlike other prebuilt models with fixed schemas, this model can identify keys that others might miss, providing a valuable alternative to custom model labeling and training. It also supports barcodes and language detection.
+
 ### Types of documents
 
 Simple document processing works best with the types of documents that contain structured information, such as:
@@ -50,7 +61,7 @@ To use a simple document processing model, follow these steps:
 
 ## Step 1: Create a simple document processing model
 
-Follow the instructions in [Create a model in Syntex](create-syntex-model.md#set-up-a-prebuilt-model) to create a simple document processing model. Then continue with the following steps to complete your model.
+Follow the instructions in [Create a model in Syntex](create-syntex-model.md#create-a-prebuilt-model) to create a simple document processing model. Then continue with the following steps to complete your model.
 
 ## Step 2: Upload an example file to analyze
 
