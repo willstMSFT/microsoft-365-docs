@@ -22,7 +22,7 @@ description: Learn how to use a simple document processing model in Microsoft Sy
 
 The *simple document processing model* offers a flexible, pretrained solution for extracting information from [basic structured documents](#types-of-documents), including information such as:
 
-- **Key-value pairs** – Think of these like labels and their corresponding information, such as “Name: John Doe.”
+- **Key-value pairs** – Think of these like labels and their corresponding information, such as “Name: Adele Vance.”
 
 - **Selection marks** – These are checkboxes or other marks that indicate choices or selections in a document.
 
