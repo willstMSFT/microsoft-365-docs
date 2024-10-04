@@ -258,11 +258,11 @@ Use the **Structured extraction model** to create a [structured document process
 
 # [Simple document processing](#tab/simple-document-processing)
 
-1. Select **Simple document processing**.
+1. Select **Simple document processing model**.
 
 2. On the **Simple document processing: Details** page, you'll find more information about the model. If you want to proceed with using the model, select **Next**.
 
-3. On the **Create a simple document processing model** page, on right panel, the enter the following information.
+3. On the **Create a simple document processing model** page, on right panel, enter the following information.
 
     - **Model name** – Enter the name of the model, for example *Service agreement*.
 
