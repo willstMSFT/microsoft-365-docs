@@ -53,7 +53,7 @@ These documents benefit from the optical character recognition (OCR) capabilitie
 
 To use a simple document processing model, follow these steps:
 
-- Step 1: [Create the ](#step-1-create-a-simple-document-processing-model)
+- Step 1: [Create the model](#step-1-create-the-model)
 - Step 2: [Upload an example file to analyze](#step-2-upload-an-example-file-to-analyze)
 - Step 3: [Select extractors for your model](#step-3-select-extractors-for-your-model)
 - Step 4: [Apply the model](#step-4-apply-the-model)
