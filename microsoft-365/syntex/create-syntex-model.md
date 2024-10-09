@@ -280,7 +280,7 @@ Use the **Structured extraction model** to create a [structured document process
 
 5. When you're ready to create the model, select **Create**.
 
-6. You're now ready to [complete setting up the model](prebuilt-model-simple.md).
+6. You're now ready to [complete setting up the model](prebuilt-model-simple.md#step-2-upload-an-example-file-to-analyze).
 
 ---
 
