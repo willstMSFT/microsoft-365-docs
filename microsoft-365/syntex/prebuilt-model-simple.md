@@ -53,12 +53,12 @@ These documents benefit from the optical character recognition (OCR) capabilitie
 
 To use a simple document processing model, follow these steps:
 
-- Step 1: [Create a simple document processing model](#step-1-create-a-simple-document-processing-model)
+- Step 1: [Create the ](#step-1-create-a-simple-document-processing-model)
 - Step 2: [Upload an example file to analyze](#step-2-upload-an-example-file-to-analyze)
 - Step 3: [Select extractors for your model](#step-3-select-extractors-for-your-model)
 - Step 4: [Apply the model](#step-4-apply-the-model)
 
-## Step 1: Create a simple document processing model
+## Step 1: Create the model
 
 Follow the instructions in [Create a model in Syntex](create-syntex-model.md#create-a-prebuilt-model) to create a simple document processing model. Then continue with the following steps to complete your model.
 <!---
