@@ -28,6 +28,8 @@ The *simple document processing model* offers a flexible, pretrained solution fo
 
 - **Named entities** – These are specific items like names of people, places, or organizations mentioned in the text of a document.
 
+- **Barcodes** – These are machine-readable representations of data, typically used for tracking or identification purposes in a document.
+
 Unlike other prebuilt models with fixed schemas, this model can identify keys that others might miss, providing a valuable alternative to custom model labeling and training. This model also supports barcodes and language detection.
 
 ### Types of documents
@@ -87,7 +89,7 @@ On the extractor details page, you see the document area on the right of the pag
 The entity fields that are highlighted in green in the document area are the items that were detected by the model when it analyzed the file. When you select an entity to extract, the highlighted field changes to blue. If you later decide not to include the entity, the highlighted field changes to gray. The highlights make it easier to see the current state of the extractors you select.
 
 > [!TIP]
-> You can use the scroll wheel on your mouse or the controls at the bottom of the document area to zoom in or out as needed to read the entity fields.
+> To zoom in or out to read the entity fields, use your mouse’s scroll wheel or the zoom controls at the bottom of the document area.
 
 ### Select an extractor entity
 
