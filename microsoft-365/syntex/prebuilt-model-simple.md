@@ -28,7 +28,7 @@ The *simple document processing model* offers a flexible, pretrained solution fo
 
 - **Named entities** – These are specific items like names of people, places, or organizations mentioned in the text of a document.
 
-- **Barcodes** – These are machine-readable representations of data that can be typically used for tracking or identification purposes in a document.
+- **Barcodes** – These are machine-readable representations of data that can be used for tracking or identification purposes in a document.
 
 Unlike other prebuilt models with fixed schemas, this model can identify keys that others might miss, providing a valuable alternative to custom model labeling and training. This model also supports barcodes and language detection.
 
