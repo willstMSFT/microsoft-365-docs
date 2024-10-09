@@ -101,11 +101,11 @@ You can select an extractor either from the document area or from the **Extracto
 <!---
     ![Screenshot of the Extractors panel showing how to select an entity field.](../media/content-understanding/prebuilt-extractors-panel-select-field-contracts.png) 
 --->
-When you select an extractor, the **Select extractor?** box is displayed in the document area. The box shows the key name (the name generated for the extractor), the detected value (the value of that field in the document), the column type, and the option to select it as an extractor.
+When you select an extractor, the **Select extractor?** box is displayed in the document area. The box shows the key name (the name generated for the extractor), the detected value (the value of that field in the document), the column type, and the option to select the entity as an extractor.
 
    ![Screenshot of the Select extractor box on the extractor details page.](../media/content-understanding/prebuilt-select-distractor-box-simple.png)
 
-The key name is used as the column name when the model is applied to a SharePoint library. You can change the key name to be more descriptive if you like. The column type shows how the information is displayed in a library. You can change the column type to how you want the information displayed. When the model is applied to a library, you can use column formatting to specify how you want it to look in the document.
+The key name is used as the column name when the model is applied to a SharePoint library. You can change the key name to be more descriptive if you like. The column type shows how the information is displayed in a library. You can change the column type to show how you want the information displayed. When the model is applied to a library, you can use column formatting to specify how you want it to look in the document.
 
 Continue to select other extractors you want to you use. You can also add other files to analyze for this model configuration.
 
