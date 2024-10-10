@@ -43,6 +43,26 @@ highlightedContent:
 productDirectory:
   items:
     # Card
+    - title: Set up and manage frontline devices
+      imageSrc: /office/media/icons/lightbulb-idea-capture-blue.svg
+      links:
+        - url: flw-devices.md
+          text: Device management overview for frontline workers
+        - url: flw-shared-devices.md
+          text: Manage shared devices for frontline workers
+        - url: flw-working-time.md
+          text: Limit access to Teams when frontline staff are off shift
+    # Card
+    - title: Deploy frontline teams
+      imageSrc: /office/media/icons/lightbulb-idea-capture-blue.svg
+      links:
+        - url: frontline-team-options.md
+          text: Determine the best frontline team solution for your organization
+        - url: deploy-dynamic-teams-at-scale.md
+          text: Deploy frontline dynamic teams at scale
+        - url: deploy-teams-at-scale.md
+          text: Deploy frontline static teams at scale  
+    # Card
     - title: Solutions to transform your business
       imageSrc: /office/media/icons/lightbulb-idea-capture-blue.svg
       links:
