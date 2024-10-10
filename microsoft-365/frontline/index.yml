@@ -61,7 +61,15 @@ productDirectory:
         - url: deploy-dynamic-teams-at-scale.md
           text: Deploy frontline dynamic teams at scale
         - url: deploy-teams-at-scale.md
-          text: Deploy frontline static teams at scale  
+          text: Deploy frontline static teams at scale
+      # Card
+    - title: Set up experiences for your frontline
+      imageSrc: /office/media/icons/administrator.svg
+      links:
+        - url: deploy-frontline-operational-hierarchy.md
+          text: Deploy your frontline operational hierarchy
+        - url: set-up-targeted-communications.md
+          text: Set up targeted communications 
     # Card
     - title: Solutions to transform your business
       imageSrc: /office/media/icons/lightbulb-idea-capture-blue.svg
