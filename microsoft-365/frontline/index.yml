@@ -44,7 +44,7 @@ productDirectory:
   items:
     # Card
     - title: Set up and manage frontline devices
-      imageSrc: /office/media/icons/lightbulb-idea-capture-blue.svg
+      imageSrc: /office/media/icons/devices-2-blue.svg
       links:
         - url: flw-devices.md
           text: Device management overview for frontline workers
@@ -54,7 +54,7 @@ productDirectory:
           text: Limit access to Teams when frontline staff are off shift
     # Card
     - title: Deploy frontline teams
-      imageSrc: /office/media/icons/lightbulb-idea-capture-blue.svg
+      imageSrc: /office/media/icons/deploy-blue.svg
       links:
         - url: frontline-team-options.md
           text: Determine the best frontline team solution for your organization
