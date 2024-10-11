@@ -35,9 +35,9 @@ highlightedContent:
       itemType: get-started
       url: flw-choose-scenarios.md
     # Card
-    - title: How to find the best frontline team solution for your organization
-      itemType: whats-new
-      url: frontline-team-options.md
+    - title: Manage team schedules with Shifts
+      itemType: overview
+      url: shifts-for-teams-landing-page.md
 
 # productDirectory section (optional)
 productDirectory:
@@ -69,7 +69,9 @@ productDirectory:
         - url: deploy-frontline-operational-hierarchy.md
           text: Deploy your frontline operational hierarchy
         - url: set-up-targeted-communications.md
-          text: Set up targeted communications 
+          text: Set up targeted communications
+        - url: deploy-shifts-at-scale.md
+          text: Deploy Shifts at scale 
     # Card
     - title: Solutions to transform your business
       imageSrc: /office/media/icons/lightbulb-idea-capture-blue.svg
