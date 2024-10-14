@@ -144,9 +144,14 @@ For this model, you can specify to process a range of pages for a file rather th
 
 ### Detect the language of a document
 
-For this model, you can detect the language of a document and extract it to a column. On the **Extractors** panel, in the **Language detection** section, toggle to turn on language detection. It shows you the detected language.
+For this model, you can detect the language of a document and extract it to a column. On the **Extractors** panel, in the **Language detection** section, toggle to turn on language detection. It shows you the ISO code the detected language.
 
    ![Screenshot of the Language detection section of the Extractors panel.](../media/content-understanding/prebuilt-simple-language-detection.png)
+
+The **Language detection** setting is also available on the **Model settings** panel for the model.
+
+You also can turn on or off the **Language detection** setting from the **Model settings** panel for the model.
+
 
 ## Step 4: Apply the model
 
