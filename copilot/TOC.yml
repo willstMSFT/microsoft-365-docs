@@ -5,8 +5,12 @@
       items:
         - name: Overview of Microsoft 365 Copilot 
           href: microsoft-365-copilot-overview.md
-        - name: Set up Microsoft 365 Copilot
-          href: microsoft-365-copilot-setup.md
+        - name: Get your data ready for Microsoft 365 Copilot
+          items:
+            - name: Set up Microsoft 365 Copilot
+              href: ORIGINAL-microsoft-365-copilot-setup.md
+            - name: Best in class deployment
+              href: copilot-best-in-class.md
     - name: Deploy and enable
       items: 
         - name: Requirements for Microsoft 365 Copilot
