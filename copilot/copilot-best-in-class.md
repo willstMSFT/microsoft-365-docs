@@ -1,14 +1,14 @@
 ---
 title: Get your data ready for Microsoft 365 Copilot with E5 license
 description: The Best in Class deployment for Microsoft 365 Copilot uses a E5 license, SharePoint Advanced Management, and Microsoft Purview. These services help your organization get ready for Copilot. This IT admin guide helps you prevent oversharing, declutter data sources, and monitor site changes. Get your organization and data ready for Copilot by following the steps in this article.
-f1.keywords: microsoft.ai, m365copilot
+f1.keywords:
 - NOCSH
 ms.author: mandia
 author: MandiOhlinger
-manager: laurawi
+manager: dougeby
 ms.date: 10/14/2024
 audience: Admin
-ms.topic: 
+ms.topic: get-started
 ms.service: microsoft-365-copilot
 ms.localizationpriority: medium
 ms.collection: 
@@ -338,7 +338,7 @@ This section walks you through the steps to enable and use sensitivity labels. T
 
         - When creating the policy, make sure you select all the locations you want to autolabel. For example, if you don't want to autolabel emails, then don't select Exchange. You can also create separate policies for each location type.
 
-          :::image type="content" source="media/copilot-best-in-class/purview-sensitivity-labels-auto-label-policy.png" alt-text="In Microsoft Purview, select Exchange email, SharePoint sites, and OneDrive accounts to automatically apply sensitivity labels to unlabeled files." lightbox"media/copilot-best-in-class/purview-sensitivity-labels-auto-label-policy.png":::
+          :::image type="content" source="media/copilot-best-in-class/purview-sensitivity-labels-auto-label-policy.png" alt-text="In Microsoft Purview, select Exchange email, SharePoint sites, and OneDrive accounts to automatically apply sensitivity labels to unlabeled files." lightbox="media/copilot-best-in-class/purview-sensitivity-labels-auto-label-policy.png":::
 
         - When creating the policy, you must create at least one rule. These rules must have a [sensitive info type](/purview/sit-sensitive-information-type-learn-about) condition. You can also use [Trainable classifiers](/purview/trainable-classifiers-learn-about). Be familiar with these features before you create the autolabeling policy.
 
