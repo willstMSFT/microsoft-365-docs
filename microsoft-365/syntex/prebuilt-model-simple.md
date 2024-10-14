@@ -148,10 +148,7 @@ For this model, you can detect the language of a document and extract it to a co
 
    ![Screenshot of the Language detection section of the Extractors panel.](../media/content-understanding/prebuilt-simple-language-detection.png)
 
-The **Language detection** setting is also available on the **Model settings** panel for the model.
-
-You also can turn on or off the **Language detection** setting from the **Model settings** panel for the model.
-
+You also can turn on or off language detection from the **Model settings** panel for the model.
 
 ## Step 4: Apply the model
 
