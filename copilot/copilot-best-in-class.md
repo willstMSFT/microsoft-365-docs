@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 10/14/2024
+ms.date: 10/15/2024
 audience: Admin
 ms.topic: get-started
 ms.service: microsoft-365-copilot
@@ -19,8 +19,6 @@ ms.collection:
 ms.custom: [copilot-learning-hub]
 appliesto:
   - ✅ Microsoft 365 Copilot
-  - ✅ Microsoft SharePoint Premium Advanced Management
-  - ✅ Microsoft Purview
 ---
 
 # Microsoft 365 Copilot - Best in class deployment
@@ -28,11 +26,24 @@ appliesto:
 > [!WARNING]
 > This article is a work in progress for Ignite. Do not publish or share with anyone.
 
-This article builds on what you did in [Baseline](need link??). In the **Best in Class** Microsoft 365 Copilot deployment, you use the features included with your Microsoft 365 E5 license and SharePoint Advanced Management (SAM). When you use these features, you can help prevent oversharing, declutter data sources, and monitor site changes. You also use Purview to enable sensitivity labels for files in SharePoint and OneDrive.
+[Microsoft 365 Copilot](microsoft-365-copilot-overview.md) is an AI-powered productivity tool that uses large language models (LLMs).
 
-Get your organization and data ready for Copilot by following the steps in this article. You can use Copilot to its full potential and get the best results.
+This article provides prescriptive guidance on how IT admins can prepare their organization and their data for Copilot.
 
-??Mention difference between Microsoft Copilot vs Microsoft 365 COpilot
+When getting your organization and your data for Copilot, there are three options:
+
+- [Baseline](need link)
+- [Core](need link)
+- Best in Class (this article) - Microsoft 365 E5 + SharePoint Advanced Management (SAM)
+
+To learn more about these options, including the different license options, see [Overview](microsoft-365-copilot-setup.md).
+
+In the **Best in Class** Microsoft 365 Copilot deployment, you use the features included with your Microsoft 365 E5 + SharePoint Advanced Management (SAM) licenses. With these features, you:
+
+- Use SAM to help prevent oversharing, declutter data sources, and monitor SharePoint site changes.
+- Use Microsoft Purview to enable sensitivity labels, detect sensitive info & restrict endpoints, and keep necessary content (or delete the content you don't need).
+
+When you use the features described in this article, your organization is better prepared for Copilot, inlcuding getting accurate results from Copilot.
 
 This article applies to:
 
@@ -42,85 +53,136 @@ This article applies to:
 
 ## Before you begin
 
-- License requirements
+- Microsoft recommends you start with the steps in [Baseline](need link) to optimize your search in SharePoint, update sharing settings in SharePoint & OneDrive, and check permissions & site access on your SharePoint sites.
 
-  - Microsoft 365 E5
-  - [Microsoft SharePoint Premium - SharePoint Advanced Management](/sharepoint/advanced-management)
-  - Microsoft Purview (included with Microsoft 365 E5)
+  To learn more, see [Baseline](need link).
+
+- The following licenses are required to use the features in this article:
+
+  - [Microsoft 365 E5](https://www.microsoft.com/microsoft-365/enterprise/e5)
+  - [Microsoft SharePoint Premium - SharePoint Advanced Management](/sharepoint/advanced-management#licensing)
+  - [Microsoft Purview](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description) (included with Microsoft 365 E5)
+    - Information Protection
+    - Data loss prevention (DLP)
+    - Communication Compliance
     - eDiscovery Premium
-    - Microsoft Purview Information Protection
 
-    [Microsoft Purview service description and licensing info](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description)
+- This article uses the following admin centers. These admin centers require a specific role to complete the tasks in the article.
 
-- Role requirements
+  - **[Microsoft 365 admin center](https://admin.microsoft.com)**: There are different roles, depending on the task you need to complete. To learn more about roles, see [Commonly used Microsoft 365 admin center roles](/microsoft-365/admin/add-users/about-admin-roles#commonly-used-microsoft-365-admin-center-roles).
+  - **[SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219)**: Sign in as the [SharePoint administrator](/sharepoint/sharepoint-admin-role).
+  - **[Microsoft Purview portal](https://purview.microsoft.com)**: There are different roles, depending on the task you need to complete. To learn more, see:
 
-  - SharePoint administrator
+    - [Permissions required to create and manage sensitivity labels](/purview/get-started-with-sensitivity-labels#permissions-required-to-create-and-manage-sensitivity-labels)
+    - [Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview](/defender-office-365/scc-permissions)
 
+- You must have an appropriate **subscription plan to purchase Microsoft 365 Copilot**.
 
-## Features
+  You can purchase Microsoft 365 Copilot licenses through the [Microsoft 365 admin center](https://admin.microsoft.com) (**Billing** > **Purchase services**), Microsoft partners, or your Microsoft account team.
+
+  Microsoft 365 Copilot licenses are available as an add-on to other licensing plans. To learn more, see [Understand licensing for Microsoft 365 Copilot](microsoft-365-copilot-licensing.md).
+
+- You must have an appropriate **subscription plan to purchase Microsoft 365 Copilot**.
+
+  You can purchase Microsoft 365 Copilot licenses through the [Microsoft 365 admin center](https://admin.microsoft.com) (**Billing** > **Purchase services**), Microsoft partners, or your Microsoft account team.
+
+  Microsoft 365 Copilot licenses are available as an add-on to other licensing plans. To learn more, see [Understand licensing for Microsoft 365 Copilot](microsoft-365-copilot-licensing.md).
+
+## Features - Expand on these features in other sections and then delete this section
 
 - Conditional Access based on identity risk
 - Detect noncompliant usage
 
-## Step 1 - Restrict SharePoint Search (RSS) (introduced in Baseline)
+## Step 1 - Restrict SharePoint Search (RSS)
 
 ✅ **Copilot goal: Disable RSS**
 
-In the **get-ready for Copilot phase**, you review and configure the correct permissions on your SharePoint sites. As a temporary solution, you can use Restricted SharePoint Search. RSS allows you to restrict search results to a specific set of sites that you allow, called the allowlist.
+As you get ready for Copilot, you review and configure the correct permissions on your SharePoint sites. In [Baseline](need link), you might have enabled Restricted SharePoint Search (RSS).
 
-RSS is a temporary solution that gives you time to review and configure the corrections permissions on your SharePoint sites.
+RSS is a temporary solution that gives you time to review and configure the correct permissions on your SharePoint sites. You add the reviewed & corrected sites to an allowed list.
 
-- If your site permissions are set correctly, then disable RSS. When disabled, SharePoint search accesses all your sites. When users enter prompts, Copilot can show data from all your sites, which shows more relevant and complete information in the response.
+- If your SharePoint site permissions are set correctly, then disable RSS.
+
+  When disabled, SharePoint search accesses all your SharePoint sites. When users enter prompts, Copilot can show data from all your sites, which shows more relevant and complete information in the response.
 
   The goal is to disable RSS and allow SharePoint search to access all your sites. This action gives Copilot more data to work with, which can improve the accuracy of the responses.
 
-  OR
+  **OR**
 
-- If you enabled RSS, add more sites to the allowlist. You can add up to 100 sites to the allowlist. Copilot can show data from the allowlist sites in user prompts.
+- If you enabled RSS, then add more sites to the allowed list. You can add up to 100 sites to the allowed list. Copilot can show data from the allowed list sites in user prompts.
 
-  Remember, your goal is to review & configure the correct permissions on your SharePoint sites, and disable RSS. ??ADD: What about new sites, and automatically creating them w/the correct permissions??
+  Remember, your goal is to review & configure the correct permissions on your SharePoint sites, and disable RSS.
 
-### Steps to disable RSS
+To learn more, see:
 
-??Add steps
+- [Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search)
+- [Curate the allowed list for Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search-allowed-list)
+- [Blog - Introducing Restricted SharePoint Search to help you get started with Copilot for Microsoft 365](https://techcommunity.microsoft.com/t5/microsoft-365-copilot/introducing-restricted-sharepoint-search-to-help-you-get-started/ba-p/4071060)
 
-### Steps to add sites to the RSS allowlist
+### Disable RSS and remove sites from the allowed list
 
-??Add steps
+1. Use the `Set-SPOTenantRestrictedSearchMode` PowerShell cmdlet to disable RSS.
+1. Use the `Remove-SPOTenantRestrictedSearchAllowedSite` PowerShell cmdlet to remove sites from the allowed list.
+
+To learn more about these cmdlets, see [Use PowerShell Scripts for Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search-admin-scripts).
+
+### Add sites to the RSS allowed list
+
+1. Get a list of the sites that you want to add to the allowed list.
+
+    **Option 1 - Use the Sharing links report**
+
+    1. Sign in to the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) as a SharePoint administrator.
+    1. Select **Reports** > **Data access governance** > **Sharing links** > **View reports**.
+    1. Select one of the reports, like **"Anyone" links**. This report shows a list of sites with the highest number of **Anyone** links created. These links let anyone access files and folders without signing in. These sites are candidates to allow in tenant/org wide search.
+
+    **Option 2 - Use the sort and filter options for Active sites**
+
+    1. Sign in to the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) as a SharePoint administrator.
+    1. Select **Sites** > **Active sites**.
+    1. Use the sort and filter options to find the most active site, including page views. These sites are candidates to allow in a tenant/organization wide search.
+
+        :::image type="content" source="media/copilot-best-in-class/sharepoint-active-sites-filter.png" alt-text="In SharePoint admin center, select active sites and then use the All sites filter.":::
+
+2. Use the `Add-SPOTenantRestrictedSearchAllowedList` PowerShell cmdlet to add the sites to the allowed list.
+
+    To learn more about this cmdlet, see [Use PowerShell Scripts for Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search-admin-scripts).
 
 ## Step 2 - Use SharePoint Advanced Management (SAM) features
 
-In addition to the SharePoint steps you completed in [Baseline](add link), there are more features in [SharePoint Advanced Management (SAM)](/sharepoint/get-ready-copilot-sharepoint-advanced-management) that can help you with Copilot.
+In addition to the SharePoint steps you completed in [Baseline](add link), there are more features in [SharePoint Advanced Management (SAM)](/sharepoint/get-ready-copilot-sharepoint-advanced-management) that can help you get ready for Copilot.
 
-**Copilot goals with SAM**:
+✅ **Copilot goals with SAM**:
 
 [!div class="checklist"]
 
-- Prevent oversharing.
-- Declutter data sources.
+- Identify SharePoint sites with overshared or sensitive content.
+- Use policy to restrict access to SharePoint sites that are business critical or have sensitive content.
+- Declutter data sources by finding and removing inactive SharePoint sites.
 - Monitor site changes.
 
-To learn more about SAM, see [Get ready for Copilot with SharePoint Advanced Management](/sharepoint/get-ready-copilot-sharepoint-advanced-management).
+This section walks you through different SAM features that can help you get your organization and your data ready for Copilot.
+
+To learn more about SAM + Copilot, see [Get ready for Copilot with SharePoint Advanced Management](/sharepoint/get-ready-copilot-sharepoint-advanced-management).
 
 ### Identify sites with overshared or sensitive content
 
 ✅ **Run [Data access governance (DAG) reports](/SharePoint/data-access-governance-reports) in the SharePoint admin center**
 
-The DAG reports give more detailed information about site sharing link, sensitivity labels, and the **`Everyone except external users`** (EEEU) permissions on your SharePoint sites. Use these reports to find overshared sites.
+The [DAG reports](/SharePoint/data-access-governance-reports) give more detailed information about site sharing links, sensitivity labels, and the **`Everyone except external users`** (EEEU) permissions on your SharePoint sites. Use these reports to find overshared sites.
+
+Overshared sites are sites that are shared with more people than needed. Copilot can show data from these sites in user prompts.
 
 1. Sign in to the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) as a SharePoint administrator.
-2. Select **Reports** > **Data access governance**.
-3. Your report options:
+2. Select **Reports** > **Data access governance**. Your report options:
 
     | Report | Description | Task |
     | --- | --- | --- |
-    | **Sharing links reports** | Shows the sites that have sharing links, including links shared with anyone, shared with people in your organization, and shared with specific people outside of your work or school. | Review these sites. <br/><br/>Make sure the sites are shared with only the users or groups that need access. Remove sharing for unneeded users and groups. |
-    | **Sensitivity labels applied to files** | Shows sites with  Office files that have sensitivity labels. | Review these sites.<br/><br/> Make sure the correct labels are applied. Update the labels as needed. |
+    | **Sharing links** | Shows the sites that have sharing links, including links shared with anyone, shared with people in your organization, and shared with specific people outside of your work or school. | Review these sites. <br/><br/>Make sure the sites are shared with only the users or groups that need access. Remove sharing for unneeded users and groups. |
+    | **Sensitivity labels applied to files** | Shows sites with Office files that have sensitivity labels. | Review these sites.<br/><br/> Make sure the correct labels are applied. Update the labels as needed. |
     | **Shared with `Everyone except external users` (EEEU)** | Shows the sites that are shared with everyone in your organization except external users. | Review these sites. <br/><br/> Determine if EEEU permissions are appropriate. Many sites with EEEU are overshared. Remove the EEEU permission and assign to the users or groups as needed. |
 
-You can run any of these reports individually or run all of them together.
-
-To learn more about these reports, see [Data access governance (DAG) reports](/SharePoint/data-access-governance-reports).
+You can run any of these reports individually or run all of them together. To learn more about these reports, see [Data access governance (DAG) reports](/sharepoint/data-access-governance-reports).
 
 #### Best practices for managing the DAG reports
 
@@ -136,19 +198,52 @@ To learn more about these reports, see [Data access governance (DAG) reports](/S
   - Review and update the sensitivity labels. Make sure the correct labels are applied.
   - Determine if EEEU permissions are needed. If the permission isn't needed, then remove the EEEU permission and assign to individual users or groups as needed.
 
-  ??Bulk action to update??
-
 - **Give the site owners a timeline** to complete these tasks. If they don't complete the task within the timeframe, admins can restrict access using [restricted access control (RAC)](/SharePoint/restricted-access-control).
 
 - **Apply [restricted access control (RAC)](/SharePoint/restricted-access-control)** to sites that appear to be overshared. Inform the site owners of the changes and why.
 
-  If your organization has a [Zero Trust](/security/zero-trust/copilots/zero-trust-microsoft-365-copilot) mindset, then you can apply RAC to all sites. Then, adjust the permissions as needed. If you have many sites, this action can help you quickly secure your sites. But, it can also cause disruptions to users. Make sure you communicate the changes and the reasons for the changes.
+  If your organization has a [Zero Trust](/security/zero-trust/copilots/zero-trust-microsoft-365-copilot) mindset, then you can apply RAC to all sites. Then, adjust the permissions as needed. If you have many sites, this action can help you quickly secure your sites. But, it can cause disruptions to users.
+
+  If you use RAC, make sure you communicate the changes and the reasons for the changes.
+
+### Control access to overshared SharePoint sites
+
+✅ **Use [restricted access control policy](/sharepoint/restricted-access-control) in the SharePoint admin center**
+
+A [restricted access control policy](/sharepoint/restricted-access-control) restricts access to SharePoint sites and content to users in a specific group. Users not in the group can't access the site or its content, even if they previously had permissions or a shared link.
+
+When users in the group have permissions to the content, then that content can show in Copilot results. Users not in the group don't see this info in their Copilot results.
+
+This feature is helpful for admins that must restrict access to business-critical sites or sensitive content.
+
+1. Sign in to the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) as a SharePoint administrator.
+2. Select **Policies** > **Access control** > **Site-level access restriction** > **Allow access restriction** > **Save**.
+
+    This step enables site-level access restriction for your organization. When it's enabled, you can create a restricted access control policy.
+
+3. Select **Sites** > **Active sites** > Select the site you want to manage.
+4. In the **Settings** tab > **Restricted site access** > **Edit**
+5. You can:
+
+    - **Restrict access to this site**: This option restricts access to group-connected sites, like Microsoft 365 Groups and Teams.
+    - **Restrict SharePoint site access to only users in specified groups**: This option restricts access to Microsoft Entra security groups or Microsoft 365 groups.
+
+To learn more, see [Restricted Access Control (RAC)](/sharepoint/restricted-access-control).
+
+> [!TIP]
+> For business-critical sites, you can also:
+>
+> - When you create new sites, configure a RAC policy as part of your custom site provisioning process. This step proactively avoids oversharing.
+> - Consider blocking downloads from selected sites using a block download policy. For example, [block the download of Teams meeting recordings and transcripts](/microsoftteams/block-download-meeting-recording).
+> - Apply encryption with "extract rights" enforced on business-critical office documents. To learn more, see [Microsoft Purview data security and compliance protections for generative AI apps](/purview/ai-microsoft-purview).
 
 ### Find and cleanup inactive sites
 
-✅ **Create a site lifecycle management policy that finds inactive sites**
+✅ **Create a [site lifecycle management policy](/sharepoint/site-lifecycle-management#create-an-inactive-site-policy) that finds inactive sites**
 
 A [site lifecycle management policy](/sharepoint/site-lifecycle-management#create-an-inactive-site-policy) automatically detects inactive sites and sends a notification email to the site owners. When you use the email, the site owners can confirm that the site is still active.
+
+Copilot can show data from these inactive sites in user prompts, which can lead to inaccurate and cluttered Copilot results.
 
 The policy also creates a report that you can download and review. The report shows the inactive sites, the last activity date, and the email notification status.
 
@@ -164,7 +259,7 @@ To learn more about this policy and report, see [site lifecycle management polic
 - **Use the inactive sites policy report** and work with the site owners on the future of their site. The site owners should confirm if the site is still active:
 
   - If the site isn't active, the owner can move any files they want to keep, and then delete the site.
-  - If the site is still active, the owner can review the files, and update the data so it's still accurate.
+  - If the site is still active, the owner can review the files, and update the data so it's accurate.
 
   This action helps reduce outdated content that clutters Copilot's data source, which improves the accuracy of Copilot responses.
 
@@ -172,15 +267,11 @@ To learn more about this policy and report, see [site lifecycle management polic
 
 - **[Delete the inactive site](/sharepoint/delete-site-collection)**. Before you delete a site, inform the site owners and subsite owners of the changes, why the site is being deleted, and when it'll be deleted.
 
-  ??Bulk action to delete? Does the site lifecycle management policy email give the delete option??
-
-**??Site access review (Add to existing task)??**
-
 ### Monitor changes
 
 ✅ **Run the [change history report](/sharepoint/change-history-report) in the SharePoint admin center**
 
-The [change history report](/sharepoint/change-history-report) tracks and monitor changes, including what changed, when the change happened, and who initiated the change. The intent is to identify recent changes that could lead to oversharing.
+The [change history report](/sharepoint/change-history-report) tracks and monitor changes, including what changed, when the change happened, and who initiated the change. The intent is to identify recent changes that could lead to oversharing, which impacts Copilot results.
 
 Use this report to review the changes made to your SharePoint sites and organization settings.
 
