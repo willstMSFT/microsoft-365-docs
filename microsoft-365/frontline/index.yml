@@ -35,7 +35,7 @@ highlightedContent:
       itemType: get-started
       url: flw-choose-scenarios.md
     # Card
-    - title: Manage team schedules with Shifts
+    - title: Schedule management with Shifts
       itemType: overview
       url: shifts-for-teams-landing-page.md
 
@@ -112,8 +112,8 @@ productDirectory:
           text: Planner
         - url: /microsoftteams/manage-updates-app?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
           text: Updates
-        - url: /microsoftteams/manage-virtual-appointments-app?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
-          text: Virtual Appointments
+        - url: /microsoftteams/walkie-talkie?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
+          text: Walkie Talkie
         - url: /microsoftteams/apps-in-teams?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
           text: More >
     # Card
