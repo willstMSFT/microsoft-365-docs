@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 10/15/2024
+ms.date: 10/16/2024
 audience: Admin
 ms.topic: get-started
 ms.service: microsoft-365-copilot
@@ -21,7 +21,7 @@ appliesto:
   - ✅ Microsoft 365 Copilot
 ---
 
-# Microsoft 365 Copilot - Best in class deployment
+# Microsoft 365 Copilot best in class deployment - admin guide
 
 > [!WARNING]
 > This article is a work in progress for Ignite. Do not publish or share with anyone.
@@ -43,7 +43,7 @@ In the **Best in Class** Microsoft 365 Copilot deployment, you use the features 
 - Use SAM to help prevent oversharing, declutter data sources, and monitor SharePoint site changes.
 - Use Microsoft Purview to enable sensitivity labels, detect sensitive info & restrict endpoints, and keep necessary content (or delete the content you don't need).
 
-When you use the features described in this article, your organization is better prepared for Copilot, inlcuding getting accurate results from Copilot.
+When you use the features described in this article, your organization is better prepared for Copilot, including getting accurate results from Copilot.
 
 This article applies to:
 
@@ -53,7 +53,7 @@ This article applies to:
 
 ## Before you begin
 
-- Microsoft recommends you start with the steps in [Baseline](need link) to optimize your search in SharePoint, update sharing settings in SharePoint & OneDrive, and check permissions & site access on your SharePoint sites.
+- Microsoft recommends you start with the steps in [Baseline](need link). In Baseline, you optimize your search in SharePoint, update sharing settings in SharePoint & OneDrive, and check permissions & site access on your SharePoint sites.
 
   To learn more, see [Baseline](need link).
 
@@ -130,19 +130,19 @@ To learn more about these cmdlets, see [Use PowerShell Scripts for Restricted Sh
 
 1. Get a list of the sites that you want to add to the allowed list.
 
-    **Option 1 - Use the Sharing links report**
+    - **Option 1 - Use the Sharing links report**
 
-    1. Sign in to the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) as a SharePoint administrator.
-    1. Select **Reports** > **Data access governance** > **Sharing links** > **View reports**.
-    1. Select one of the reports, like **"Anyone" links**. This report shows a list of sites with the highest number of **Anyone** links created. These links let anyone access files and folders without signing in. These sites are candidates to allow in tenant/org wide search.
+      1. Sign in to the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) as a SharePoint administrator.
+      1. Select **Reports** > **Data access governance** > **Sharing links** > **View reports**.
+      1. Select one of the reports, like **"Anyone" links**. This report shows a list of sites with the highest number of **Anyone** links created. These links let anyone access files and folders without signing in. These sites are candidates to allow in tenant/org wide search.
 
-    **Option 2 - Use the sort and filter options for Active sites**
+    - **Option 2 - Use the sort and filter options for Active sites**
 
-    1. Sign in to the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) as a SharePoint administrator.
-    1. Select **Sites** > **Active sites**.
-    1. Use the sort and filter options to find the most active site, including page views. These sites are candidates to allow in a tenant/organization wide search.
+      1. Sign in to the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) as a SharePoint administrator.
+      1. Select **Sites** > **Active sites**.
+      1. Use the sort and filter options to find the most active site, including page views. These sites are candidates to allow in a tenant/organization wide search.
 
-        :::image type="content" source="media/copilot-best-in-class/sharepoint-active-sites-filter.png" alt-text="In SharePoint admin center, select active sites and then use the All sites filter.":::
+          :::image type="content" source="media/copilot-best-in-class/sharepoint-active-sites-filter.png" alt-text="In SharePoint admin center, select active sites and then use the All sites filter.":::
 
 2. Use the `Add-SPOTenantRestrictedSearchAllowedList` PowerShell cmdlet to add the sites to the allowed list.
 
@@ -222,7 +222,9 @@ This feature is helpful for admins that must restrict access to business-critica
     This step enables site-level access restriction for your organization. When it's enabled, you can create a restricted access control policy.
 
 3. Select **Sites** > **Active sites** > Select the site you want to manage.
-4. In the **Settings** tab > **Restricted site access** > **Edit**
+
+4. Go to the **Settings** tab > **Restricted site access** > **Edit**
+
 5. You can:
 
     - **Restrict access to this site**: This option restricts access to group-connected sites, like Microsoft 365 Groups and Teams.
@@ -302,24 +304,27 @@ Use this report to review the changes made to your SharePoint sites and organiza
 
 ## Step 3 - Use Microsoft Purview features
 
-In addition to the steps you completed in [Baseline](add link), there are more features in [Microsoft Purview](/purview/copilot-in-purview-overview) that can help you with Copilot.
+In addition to the SharePoint steps you completed in [Baseline](add link), there are more features in [Microsoft Purview](/purview/copilot-in-purview-overview) that can help you get ready for Copilot.
 
-**Copilot goals with Purview**:
+✅ **Copilot goals with Purview**:
 
 [!div class="checklist"]
 
-- Enable and use sensitivity labels to label your Microsoft 365 and Office files.
-- DLP something
-- Retention something
-- Compliance something
+- Identify and label sensitive data in your Microsoft 365 and Office files.
+- Detect and protect sensitive information
+- Keep necessary content and delete the content you don't need
+- Detect sensitive data and noncompliant content in Copilot prompts and responses
+- Review and analyze Copilot prompts and responses
 
 To learn more about Purview, see [Microsoft 365 Copilot in Microsoft Purview Overview](/purview/copilot-in-purview-overview).
 
-### Classify and identify sensitive data
+### Identify and label sensitive data
 
-✅ **Enable and use sensitivity labels on your documents, emails, and meetings**
+✅ **Enable and apply [sensitivity labels](/purview/get-started-with-sensitivity-labels) to your documents, emails, and meetings**
 
-Sensitivity labels are a way to classify and identify the sensitivity of your organization's files and meetings. When they're applied to items, like documents and emails, the labels add an extra layer of protection. They can also affect Copilot results, including:
+[Sensitivity labels](/purview/get-started-with-sensitivity-labels) are a way to identify and classify the sensitivity of your organization's files and meetings. When they're applied to items, like documents and emails, the labels add an extra layer of protection.
+
+The sensitivity labels can also affect Copilot results, including:
 
 - Copilot Business Chat can reference data from different types of items. The sensitivity label with the [highest priority](/purview/sensitivity-labels#label-priority-order-matters) is visible to users.
 - If the label applies encryption, Copilot checks the usage rights for the user. For Copilot to return data from that item, the user must be granted permissions to copy from it.
@@ -342,214 +347,236 @@ This section walks you through the steps to enable and use sensitivity labels. T
 >
 > To learn more, see [Create and configure sensitivity labels and their policies](/purview/create-sensitivity-labels).
 
-1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as an admin in one of the groups listed at [Sensitivity labels - permissions](/purview/get-started-with-sensitivity-labels#permissions-required-to-create-and-manage-sensitivity-labels)
-2. **Turn on the default sensitivity labels**:
+#### 1. Turn on the default sensitivity labels
 
-    1. Select **Solutions** > **AI Hub** > **Policies**.
-    1. Select **Fortify your data security for AI** > **Get started** > **Create policies**.
+1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as an admin in one of the groups listed at [Sensitivity labels - permissions](/purview/get-started-with-sensitivity-labels#permissions-required-to-create-and-manage-sensitivity-labels).
 
-        :::image type="content" source="media/copilot-best-in-class/purview-ai-hub-enable-default-labels.png" alt-text="In Microsoft Purview portal, open the AI Hub and create the Fortify your data security for AI policies to turn on sensitivity labels." lightbox="media/copilot-best-in-class/purview-ai-hub-enable-default-labels.png":::
+2. Select **Solutions** > **AI Hub** > **Policies**.
+3. Select **Fortify your data security for AI** > **Get started** > **Create policies**.
 
-    1. To see the default labels, select **Information protection** > **Sensitivity labels**. You might have to select **Refresh**.
+    :::image type="content" source="media/copilot-best-in-class/purview-ai-hub-enable-default-labels.png" alt-text="In Microsoft Purview portal, open the AI Hub and create the Fortify your data security for AI policies to turn on sensitivity labels." lightbox="media/copilot-best-in-class/purview-ai-hub-enable-default-labels.png":::
 
-    When the default labels are turned on:
+4. To see the default labels, select **Information protection** > **Sensitivity labels**. You might have to select **Refresh**.
 
-    - Your users can start manually applying labels to their files and emails.
-    - Admins can start creating policies and configuring features that automatically apply labels to files and emails.
-    - The labels help protect your data and can affect Copilot results.
+When the default labels are turned on:
 
-3. **Automatically apply a sensitivity label** to the following containers:
+- Your users can start manually applying labels to their files and emails.
+- Admins can start creating policies and configuring features that automatically apply labels to files and emails.
+- The labels help protect your data and can affect Copilot results.
 
-    - Microsoft Teams sites
-    - Microsoft 365 Groups
-    - SharePoint sites
+#### 2. Automatically apply a sensitivity label to the following containers
 
-    **Steps**:
+- Microsoft Teams sites
+- Microsoft 365 Groups
+- SharePoint sites
 
-    1. At the container level, there's a set of one-time steps you need to complete, including [enabling sensitivity labels in Microsoft Entra ID and syncing the labels using Windows PowerShell](/purview/sensitivity-labels-teams-groups-sites#how-to-enable-sensitivity-labels-for-containers-and-synchronize-labels).
+**Steps**:
 
-        After you complete these one-time steps, you can apply sensitivity labels to the groups and sites. More built-in sensitivity labels also become available.
+1. At the container level, there's a set of one-time steps you need to complete, including [enabling sensitivity labels in Microsoft Entra ID and syncing the labels using Windows PowerShell](/purview/sensitivity-labels-teams-groups-sites#how-to-enable-sensitivity-labels-for-containers-and-synchronize-labels).
 
-    2. In **Information protection** > **Sensitivity labels**, select an existing label > **Edit label**. When you enable the default sensitivity labels, the label settings are automatically configured for you.
+    After you complete these one-time steps, you can apply sensitivity labels to the groups and sites. More built-in sensitivity labels also become available.
 
-        - **Scope** - Make no changes, unless you want to. The scope of each default label is automatically set to **File** (applies to Office apps, like Word and Excel) and **Emails** (applies to Outlook and Outlook on the web).
+2. In **Information protection** > **Sensitivity labels**, select an existing label > **Edit label**. When you enable the default sensitivity labels, the label settings are automatically configured for you.
 
-          Optionally, you can add **Meetings** (applies to Teams and Outlook). Or, you can create your own custom label and set the scope to include Meetings. It's your choice.
+    - **Scope** - Make no changes, unless you want to. The scope of each default label is automatically set to **File** (applies to Office apps, like Word and Excel) and **Emails** (applies to Outlook and Outlook on the web).
 
-        - **Groups & sites** - Select this option. This setting allows the label to apply to Microsoft Teams, Microsoft 365 Groups, and SharePoint sites containers.
+      Optionally, you can add **Meetings** (applies to Teams and Outlook). Or, you can create your own custom label and set the scope to include Meetings. It's your choice.
 
-          If **Groups & sites** is grayed out, then you didn't complete the [one-time steps in Microsoft Entra ID and Windows PowerShell](/purview/sensitivity-labels-teams-groups-sites#how-to-enable-sensitivity-labels-for-containers-and-synchronize-labels) in the previous step.
+    - **Groups & sites** - Select this option. This setting allows the label to apply to Microsoft Teams, Microsoft 365 Groups, and SharePoint sites containers.
 
-        - **Define protection settings for groups and sites** - This option is available when you select **Groups & sites**. Select the protection settings that you want to apply to the groups and sites. To help you determine the best option for your organization, see [How to configure groups and site settings](/purview/sensitivity-labels-teams-groups-sites#how-to-configure-groups-and-site-settings).
+      If **Groups & sites** is grayed out, then you didn't complete the [one-time steps in Microsoft Entra ID and Windows PowerShell](/purview/sensitivity-labels-teams-groups-sites#how-to-enable-sensitivity-labels-for-containers-and-synchronize-labels) in the previous step.
 
-          :::image type="content" source="media/copilot-best-in-class/purview-sensitivity-label-groups-sites.png" alt-text="When you create a sensitivity label in Microsoft Purview, select groups and sites, and then define the protection settings." lightbox="media/copilot-best-in-class/purview-sensitivity-label-groups-sites.png":::
+    - **Define protection settings for groups and sites** - This option is available when you select **Groups & sites**. Select the protection settings that you want to apply to the groups and sites. To help you determine the best option for your organization, see [How to configure groups and site settings](/purview/sensitivity-labels-teams-groups-sites#how-to-configure-groups-and-site-settings).
 
-          If you [created your own custom labels](/purview/create-sensitivity-labels), then you set the label properties. You can edit your custom labels and change the scope to include **Groups & sites**.
+      :::image type="content" source="media/copilot-best-in-class/purview-sensitivity-label-groups-sites.png" alt-text="When you create a sensitivity label in Microsoft Purview, select groups and sites, and then define the protection settings." lightbox="media/copilot-best-in-class/purview-sensitivity-label-groups-sites.png":::
 
-          To learn more, see [Use sensitivity labels to protect content in Microsoft Teams, Microsoft 365 groups, and SharePoint sites](/purview/sensitivity-labels-teams-groups-sites)
+      If you [created your own custom labels](/purview/create-sensitivity-labels), then you set the label properties. You can edit your custom labels and change the scope to include **Groups & sites**.
 
-    3. **Publish your labels**. For the steps, see [Publish sensitivity labels by creating a label policy](/purview/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
-    4. **Monitor your labels**. Select **Information protection** > **Reports**. You can see the usage of your labels, including the usage of your sensitivity labels.
+      To learn more, see [Use sensitivity labels to protect content in Microsoft Teams, Microsoft 365 groups, and SharePoint sites](/purview/sensitivity-labels-teams-groups-sites)
 
-4. **Set a default sensitivity label** for all your SharePoint document libraries. The SharePoint site admin can do this task.
+3. **Publish your labels**. For the steps, see [Publish sensitivity labels by creating a label policy](/purview/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
+4. **Monitor your labels**. Select **Information protection** > **Reports**. You can see the usage of your labels, including the usage of your sensitivity labels.
 
-    1. In SharePoint, go to the document library > **Settings** > **Library settings**.
-    2. In **Default sensitivity labels**, select the label in the drop-down list, like Confidential.
-    3. **Save** your changes.
+#### 3. Set a default sensitivity label for all your SharePoint document libraries
 
-    When set:
+The SharePoint site admin can do this task.
 
-    - SharePoint automatically applies the label to the files, including files with a lower sensitivity label.
-    - It helps protect your documents without requiring anyone to review the content.
+1. In your SharePoint site, select **Documents** > **Settings** icon > **Library settings** > **More library settings**.
+2. In **Default sensitivity labels** (Apply label to items in this list or library), select the label in the drop-down list, like **Confidential**.
+3. **Save** your changes.
 
-    To learn more, see:
+When set:
 
-    - [Overview - Default sensitivity labels for SharePoint document libraries](/purview/sensitivity-labels-sharepoint-default-label)
-    - [Steps - Add a sensitivity label to SharePoint document library](https://support.microsoft.com/office/add-a-sensitivity-label-to-sharepoint-document-library-54b1602b-db0a-4bcb-b9ac-5e20cbc28089)
+- SharePoint automatically applies the label to the files, including files with a lower sensitivity label.
+- It helps protect your documents without requiring anyone to review the content.
 
-    ??Set this via policy instead of relying on site admins??
+To learn more, see:
 
-5. **Enable sensitivity labels for files in SharePoint and OneDrive**. When enabled, users can manually apply labels to Office files stored in SharePoint and OneDrive, and change any existing label. Admins can create policies that automatically apply labels.
+- [Overview - Default sensitivity labels for SharePoint document libraries](/purview/sensitivity-labels-sharepoint-default-label)
+- [Steps - Add a sensitivity label to SharePoint document library](https://support.microsoft.com/office/add-a-sensitivity-label-to-sharepoint-document-library-54b1602b-db0a-4bcb-b9ac-5e20cbc28089)
 
-    You have two options:
+#### 4. Enable sensitivity labels for files in SharePoint and OneDrive
 
-    - **Option 1**: Select **Information Protection** > **Sensitivity labels**. If you see the following message, select **Turn on now**:
+When enabled, users can manually apply labels to Office files stored in SharePoint and OneDrive, and change any existing label. Admins can create policies that automatically apply labels.
 
-      :::image type="content" source="media/copilot-best-in-class/purview-sensitivity-labels-prompt.png" alt-text="In Microsoft Purview Information Protection, turn on sensitivity labels for SharePoint and OneDrive." lightbox="media/copilot-best-in-class/purview-sensitivity-labels-prompt.png":::
+You have two options:
 
-    - **Option 2**: Use the `[Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant)` Windows PowerShell cmdlet
+- **Option 1**: Select **Information Protection** > **Sensitivity labels**. If you see the following message, select **Turn on now**:
 
-      To learn more about these options, see [Enable sensitivity labels for files in SharePoint and OneDrive](/purview/sensitivity-labels-sharepoint-onedrive-files).
+  :::image type="content" source="media/copilot-best-in-class/purview-sensitivity-labels-prompt.png" alt-text="In Microsoft Purview Information Protection, turn on sensitivity labels for SharePoint and OneDrive." lightbox="media/copilot-best-in-class/purview-sensitivity-labels-prompt.png":::
 
-6. **Automatically apply sensitivity labels to unlabeled files** in SharePoint sites, OneDrive accounts, Exchange emails, and Office files. When they're automatically applied, you don't have to rely on end users to apply labels to their files.
+- **Option 2**: Use the `[Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant)` Windows PowerShell cmdlet
 
-    1. Automatically label unlabeled files in SharePoint sites & OneDrive accounts, and unlabeled emails in Exchange:
+  To learn more about these options, see [Enable sensitivity labels for files in SharePoint and OneDrive](/purview/sensitivity-labels-sharepoint-onedrive-files).
 
-        - For the specific steps and information that you need to know, including learning about simulation mode, see [How to configure autolabeling policies for SharePoint, OneDrive, and Exchange](/purview/apply-sensitivity-label-automatically#how-to-configure-auto-labeling-policies-for-sharepoint-onedrive-and-exchange).
+#### 5. Automatically apply sensitivity labels to unlabeled files in SharePoint sites, OneDrive accounts, Exchange emails, and Office files
 
-        - When creating the policy, make sure you select all the locations you want to autolabel. For example, if you don't want to autolabel emails, then don't select Exchange. You can also create separate policies for each location type.
+When they're automatically applied, you don't have to rely on end users to apply labels to their files.
 
-          :::image type="content" source="media/copilot-best-in-class/purview-sensitivity-labels-auto-label-policy.png" alt-text="In Microsoft Purview, select Exchange email, SharePoint sites, and OneDrive accounts to automatically apply sensitivity labels to unlabeled files." lightbox="media/copilot-best-in-class/purview-sensitivity-labels-auto-label-policy.png":::
+1. Automatically label unlabeled files in SharePoint sites & OneDrive accounts, and unlabeled emails in Exchange:
 
-        - When creating the policy, you must create at least one rule. These rules must have a [sensitive info type](/purview/sit-sensitive-information-type-learn-about) condition. You can also use [Trainable classifiers](/purview/trainable-classifiers-learn-about). Be familiar with these features before you create the autolabeling policy.
+    - For the specific steps and information that you need to know, including learning about simulation mode, see [How to configure autolabeling policies for SharePoint, OneDrive, and Exchange](/purview/apply-sensitivity-label-automatically#how-to-configure-auto-labeling-policies-for-sharepoint-onedrive-and-exchange).
 
-        - Know the existing label you want to automatically apply. You can only select one label for each autolabel policy.
+    - When creating the policy, make sure you select all the locations you want to autolabel. For example, if you don't want to autolabel emails, then don't select Exchange. You can also create separate policies for each location type.
 
-    2. Automatically label Office files & emails, and require users to apply labels on their Office files. When you publish a sensitivity label, the label shows up in your Office apps. At any time, users can also manually apply the label to their files and emails.
+      :::image type="content" source="media/copilot-best-in-class/purview-sensitivity-labels-auto-label-policy.png" alt-text="In Microsoft Purview, select Exchange email, SharePoint sites, and OneDrive accounts to automatically apply sensitivity labels to unlabeled files." lightbox="media/copilot-best-in-class/purview-sensitivity-labels-auto-label-policy.png":::
 
-        - When you add the default label or create your own (**Information Protection** > **Sensitivity labels** > select a label > **Edit label**), enable the **Auto-labeling for files and emails** setting. This setting automatically applies the sensitivity label to the files and emails that match the conditions you set.
+    - When creating the policy, you must create at least one rule. These rules must have a [sensitive info type](/purview/sit-sensitive-information-type-learn-about) condition. You can also use [Trainable classifiers](/purview/trainable-classifiers-learn-about). Be familiar with these features before you create the autolabeling policy.
 
-          :::image type="content" source="media/copilot-best-in-class/purview-edit-sensitivity-label-auto-label.png" alt-text="In Microsoft Purview Information Protection, edit an existing sensitivity label and select the autolabeling for files and emails setting." lightbox="media/copilot-best-in-class/purview-edit-sensitivity-label-auto-label.png":::
+    - Know the existing label you want to automatically apply. You can only select one label for each autolabel policy.
 
-        - When you publish the label (**Information Protection** > **Sensitivity labels** > **Policies** > **Publishing policies**), enable the **Require users to apply a label to their email and documents** setting. This setting forces users to apply the label to their files and emails.
+2. Automatically label Office files & emails, and require users to apply labels on their Office files. When you publish a sensitivity label, the label shows up in your Office apps. At any time, users can also manually apply the label to their files and emails.
 
-          :::image type="content" source="media/copilot-best-in-class/purview-sensitivity-labels-publish-require-users.png" alt-text="In Microsoft Purview Information Protection, publish a label and select the require users to apply a label to their email and documents setting." lightbox="media/copilot-best-in-class/purview-sensitivity-labels-publish-require-users.png":::
+    - When you add the default label or create your own (**Information Protection** > **Sensitivity labels** > select a label > **Edit label**), enable the **Auto-labeling for files and emails** setting. This setting automatically applies the sensitivity label to the files and emails that match the conditions you set.
 
-        To learn more about sensitivity labels in Office apps, see [Manage sensitivity labels in Office apps](/purview/sensitivity-labels-office-apps).
+      :::image type="content" source="media/copilot-best-in-class/purview-edit-sensitivity-label-auto-label.png" alt-text="In Microsoft Purview Information Protection, edit an existing sensitivity label and select the autolabeling for files and emails setting." lightbox="media/copilot-best-in-class/purview-edit-sensitivity-label-auto-label.png":::
+
+    - When you publish the label (**Information Protection** > **Sensitivity labels** > **Policies** > **Publishing policies**), enable the **Require users to apply a label to their email and documents** setting. This setting forces users to apply the label to their files and emails.
+
+      :::image type="content" source="media/copilot-best-in-class/purview-sensitivity-labels-publish-require-users.png" alt-text="In Microsoft Purview Information Protection, publish a label and select the require users to apply a label to their email and documents setting." lightbox="media/copilot-best-in-class/purview-sensitivity-labels-publish-require-users.png":::
+
+    To learn more about sensitivity labels in Office apps, see [Manage sensitivity labels in Office apps](/purview/sensitivity-labels-office-apps).
 
 ### Detect and protect sensitive information
 
-✅ **Use data loss prevention (DLP) policies to detect sensitive info and restrict endpoints**
+✅ **Use [data loss prevention (DLP) policies](/purview/dlp-learn-about-dlp) to detect sensitive info**
 
-DLP is a security feature in Microsoft Purview. It can help organizations protect sensitive information and prevent unauthorized sharing or leakage. Basically, it helps prevent users from inappropriately sharing sensitive data with people who shouldn't have it.
+[Data loss prevention (DLP)](/purview/dlp-learn-about-dlp) helps organizations protect sensitive information and prevent unauthorized sharing or leakage. Basically, it helps prevent users from sharing sensitive data with people who shouldn't have it.
 
-The intent is to dynamically protect sensitive information from being overshared and reduce the risk of oversharing across instant messages and user endpoints.
+The intent is to dynamically protect sensitive information, like financial data, social security numbers, and health records, from being overshared.
 
-For example, you can create a DLP policy that ??
+When DLP policies find this data, it can act and help prevent the data from showing up in Copilot results.
 
-With DLP policies, you can also:
-
-- Use the [trainable classifier tool](/purview/trainable-classifiers-get-started-with) to identify categories of content, like source code, financial documents, and HR.
-- ??Mention something about sensitivity labels??
+With DLP policies, you can also use the [trainable classifier tool](/purview/trainable-classifiers-get-started-with) to identify categories of content, like source code, financial documents, and HR.
 
 This section walks you through the steps to create DLP policies for Microsoft Teams & your Windows and macOS endpoints, and use Adaptive Protection policies integrated with **Insider Risk Management** and DLP.
 
 To learn more about DLP, see [Learn about data loss prevention in Microsoft Purview](/purview/dlp-learn-about-dlp).
 
+#### 1. Open the Microsoft Purview portal
+
 1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as one of the admins listed at [Create and deploy DLP policies - Permissions](/purview/dlp-create-deploy-policy).
 2. Select **Solutions** > **Data Loss Prevention**.
-3. **Create a DLP policy for Teams**. These policies can detect when sensitive info, like bank account numbers or passport numbers, are shared in Teams messages. Then, you can create policy tips to educate users or add actions that control sharing.
 
-    By default, Purview includes some policies for Teams that you can enable.
+#### 2. Create a DLP policy for Teams
 
-    1. In **Data Loss Prevention**, select **Overview**.
-    2. Scroll down to see the following policies:
+These policies can detect when sensitive info, like bank account numbers or passport numbers, are shared in Teams messages. Then, you can create policy tips to educate users or add actions that control sharing.
 
-        - Start monitoring unprotected sensitive info in Teams
-        - Automatically configure Teams DLP policies to protect files shared in team messages
+By default, Purview includes some policies for Teams that you can enable.
 
-        You can turn on these policies and also review the settings in the policy:
+1. In **Data Loss Prevention**, select **Overview**.
+2. Scroll down to see the following policies:
 
-        :::image type="content" source="media/copilot-best-in-class/purview-dlp-default-policy-teams.png" alt-text="In Microsoft Purview Data Loss Prevention (DLP), turn on the unprotected sensitive info in Teams policy.":::
+    - Start monitoring unprotected sensitive info in Teams
+    - Automatically configure Teams DLP policies to protect files shared in team messages
 
-    3. If you're getting started with DLP policies, then enable these default policies. If you're more experienced or want to create your own policies, then you can.
+    You can turn on these policies and also review the settings in the policy:
+
+    :::image type="content" source="media/copilot-best-in-class/purview-dlp-default-policy-teams.png" alt-text="In Microsoft Purview Data Loss Prevention (DLP), turn on the unprotected sensitive info in Teams policy.":::
+
+3. If you're getting started with DLP policies, then enable these default policies. If you're more experienced or want to create your own policies, then you can.
+
+To learn more, see:
+
+- [Create and Deploy data loss prevention policies](/purview/dlp-create-deploy-policy)
+- [Teams DLP Policies](/purview/dlp-teams-default-policy)
+- [Data loss prevention and Microsoft Teams](/purview/dlp-microsoft-teams)
+
+#### 3. Create an endpoint DLP policy for your Windows and macOS devices
+
+On the devices (also called endpoints), these policies can block specific apps, apply different restrictions to a specific group of printers, and block specific browsers from accessing files.
+
+1. In **Data Loss Prevention**, select **Overview**.
+2. Select **Turn on advanced classification**. This action enables the endpoint DLP policies:
+
+    :::image type="content" source="media/copilot-best-in-class/purview-dlp-endpoint-enable.png" alt-text="In Microsoft Purview Data Loss Prevention (DLP), select the turn on advanced classification setting to enables DLP policies." lightbox="media/copilot-best-in-class/purview-dlp-endpoint-enable.png":::
+
+3. In **Overview**, select the settings icon (top right corner) > **Data Loss Prevention**:
+
+    :::image type="content" source="media/copilot-best-in-class/purview-dlp-solution-settings.png" alt-text="In Microsoft Purview Data Loss Prevention (DLP), select settings and then select Data Loss Prevention.":::
+
+4. In **Endpoint DLP settings**, you can see all the different type of settings you can configure. To learn more about these policy settings, see [Configure endpoint data loss prevention settings](/purview/dlp-configure-endpoint-settings).
+
+To learn more about DLP policies for endpoints, see:
+
+- [Get started with endpoint data loss prevention](/purview/endpoint-dlp-getting-started)
+- [Configure endpoint data loss prevention settings](/purview/dlp-configure-endpoint-settings)
+- [Use Endpoint data loss prevention](/purview/endpoint-dlp-using)
+
+> [!NOTE]
+> If you use a mobile device managment (MDM) service to manage and help protect you devices, like [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), then keep using your MDM provider. The endpoint DLP policies focus on data loss prevention with your Microsoft 365 data. MDM focuses on device management. You use them simulatenously.
+
+#### 4. Create Adaptive Protection policies
+
+[Adaptive Protection](/purview/dlp-adaptive-protection-learn) policies integrate **Insider Risk Management** with DLP. When [insider risk](/purview/insider-risk-management-adaptive-protection) identifies a user that's engaging in risky behavior, the user is dynamically assigned an [insider risk level](/purview/insider-risk-management-adaptive-protection#insider-risk-levels), like **Elevated**.
+
+Adaptive Protection can automatically create DLP policies that help protect the organization against the risky behavior associated with the insider risk level. As the insider risk level changes for users, the DLP policies applied to users can also adjust.
+
+**Turn on Adaptive Protection**:
+
+1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as one of the admins listed at [Adaptive Protection - Permissions](/purview/insider-risk-management-adaptive-protection#permissions-for-adaptive-protection).
+2. Select **Solutions** > **Insider Risk Management** > **Adaptive Protection**.
+3. In **Dashboard**, select **Quick setup**.
+
+    - [Adaptive Protection - Quick Setup](/purview/insider-risk-management-adaptive-protection) is the easiest and fastest way to get started with Adaptive Protection. It automatically creates and dynamically assigns the insider risk policies, DLP policies, and a Conditional Access policy.
+
+      When the risk level is met, the policies automatically adjust to match the new risk level.
+
+    - You can also create a [custom policy](/purview/insider-risk-management-adaptive-protection#custom-setup) instead of using the quick setup. If you create a custom policy, then you must also create the DLP and Conditional Access policies.
+
+To learn more, see [Adaptive Protection policies](/purview/insider-risk-management-adaptive-protection).
+
+#### 5. Test and monitor your policies
+
+- For DLP policies, you can:
+
+  - **Test your policies** using [simulation mode](/purview/dlp-test-dlp-policies). Simulation mode allows you to see the effect of an individual policy without enforcing the policy. Use it to find the items that match your policy.
+
+  - **Monitor your policies** with alerts and built-in reports, including risky user activities outside of DLP policies.
 
     To learn more, see:
 
-    - [Create and Deploy data loss prevention policies](/purview/dlp-create-deploy-policy)
-    - [Teams DLP Policies](/purview/dlp-teams-default-policy)
-    - [Data loss prevention and Microsoft Teams](/purview/dlp-microsoft-teams)
-
-4. **Create an endpoint DLP policy** for your Windows and macOS devices (called endpoints). On the devies, these policies can block specific apps, apply different restrictions to a specific group of printers, and block specific browsers from accessing files.
-
-    1. In **Data Loss Prevention**, select **Overview**.
-    1. Select **Turn on advanced classification**. This action enables the endpoint DLP policies:
-
-        :::image type="content" source="media/copilot-best-in-class/purview-dlp-endpoint-enable.png" alt-text="In Microsoft Purview Data Loss Prevention (DLP), select the turn on advanced classification setting to enables DLP policies." lightbox="media/copilot-best-in-class/purview-dlp-endpoint-enable.png":::
-
-        In **Overview**, select the settings gear icon (top right corner) > **Data Loss Prevention**:
-
-        :::image type="content" source="media/copilot-best-in-class/purview-dlp-solution-settings.png" alt-text="In Microsoft Purview Data Loss Prevention (DLP), select settings and then select Data Loss Prevention.":::
-
-        In **Endpoint DLP settings**, you can see all the different type of settings you can configure. To learn more about these policy settings, see [Configure endpoint data loss prevention settings](/purview/dlp-configure-endpoint-settings).
-
-    To learn more about DLP policies for endpoints, see:
-
-    - [Get started with endpoint data loss prevention](/purview/endpoint-dlp-getting-started)
-    - [Configure endpoint data loss prevention settings](/purview/dlp-configure-endpoint-settings)
-    - [Use Endpoint data loss prevention](/purview/endpoint-dlp-using)
-
-    ??Why use this instead of Intune? Or, maybe add some info about Intune providing more features admins can control??
-
-5. **Create Adaptive Protection policies** and [automatically assign DLP policies](/purview/dlp-adaptive-protection-learn) based on the user's identified risk level.
-
-    Adaptive Protection policies integrate **Insider Risk Management** with DLP. When [insider risk](/purview/insider-risk-management-adaptive-protection) identifies a user that's engaging in risky behavior, the user is dynamically assigned an [insider risk level](/purview/insider-risk-management-adaptive-protection#insider-risk-levels), like **Elevated**.
-
-    Adaptive Protection can automatically create a DLP policy that helps protect the organization against the risky behavior associated with the insider risk level. As the insider risk level changes for users, the DLP policies applied to users can also adjust.
-
-    **Turn on Adaptive Protection**:
-
-    1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as one of the admins listed at [Adaptive Protection - Permissions](/purview/insider-risk-management-adaptive-protection#permissions-for-adaptive-protection).
-    1. Select **Solutions** > **Insider Risk Management** > **Adaptive Protection**.
-    1. In **Dashboard**, select **Quick setup**.
-
-        [Adaptive Protection - Quick Setup](/purview/insider-risk-management-adaptive-protection) is the easiest and fastest way to get started with Adaptive Protection. It automatically creates the insider risk policies, DLP policies, and a Conditional Access policy.
-
-        You can also create a [custom policy](/purview/insider-risk-management-adaptive-protection#custom-setup) instead of using the quick setup. The choice is yours.
-
-    1. [automatically assign DLP policies](/purview/dlp-adaptive-protection-learn) based on the user's identified risk level.
-
-        ??How to do this??
-
-    To learn more, see [Adaptive Protection policies](/purview/insider-risk-management-adaptive-protection).
-
-6. Deploy your policies (??) and regularly review your policies.
-
-    - [Test your Data Loss Prevention policies](/purview/dlp-test-dlp-policies)
+    - [Viewing policy application results](/purview/insider-risk-management-activities)
     - [Get started with the data loss prevention analytics](/purview/dlp-analytics-get-started)
-    - [Investigate insider risk management activities](/purview/insider-risk-management-activities)
 
-### ✅ Retention policies and labels
+- When you enable Adaptive Protection and your policies are configured, you can get policy metrics, users with an assigned risk level, and the policies currently in-scope for the user.
 
-Retention labels help you retain necessary content and delete the content you don't need.
+  To learn more, see:
 
-For example, there are regulations that might require you to keep content for a certain period of time. Or, you might have content that you want to delete after a certain period of time.
+  - [Help dynamically mitigate risks with Adaptive Protection](/purview/insider-risk-management-adaptive-protection)
+  - [Investigate insider risk management activities](/purview/insider-risk-management-activities)
+
+### Keep necessary content and delete the content you don't need
+
+✅ **Use [data lifecycle management](/purview/data-lifecycle-management) for data retention**
+
+[Data lifecycle management](/purview/data-lifecycle-management) uses retention policies and labels, which help you keep necessary content and delete the content you don't need.
 
 As admin, you can automatically apply retention labels that keep (or dispose) of content that match specific conditions, like keep documents based on their content. When the labels are created, at any time users can manually apply retention labels to their content.
 
-- Retention labels don't persist if the content is moved outside Microsoft 365.
+For example, there are regulations that might require you to keep content for a certain period of time. Or, you might have content that you want to delete after a certain period of time.
 
-??How does this impact Copilot results??
+When users enter prompts, Copilot can show data from different sources. When you the retention features, you're decluttering your data sources. Any decluttering efforts result in more accurate results from Copilot.
 
 1. To manage retention labels in Microsoft Purview, you have two options - **Records Management** or **Data Lifecycle Management**. Decide which option is best for your content:
 
@@ -559,7 +586,9 @@ As admin, you can automatically apply retention labels that keep (or dispose) of
 
     You can use both options and create separate retention policies depending on the type of data you need to keep (or delete).
 
-2. Create the policy and/or labels. When you create the policy and/or labels, you can set the retention period, the actions to take when the retention period expires, and the conditions that must be met for the policy to apply.
+2. Create the policy and/or labels.
+
+    When you create the policy and labels, you can set the retention period, the actions to take when the retention period expires, and the conditions that must be met for the policy to apply.
 
     # [Data Lifecycle Management](#tab/dlm)
 
@@ -567,10 +596,12 @@ As admin, you can automatically apply retention labels that keep (or dispose) of
 
         To learn more, see [Data Lifecycle Management - Permissions](/purview/get-started-with-data-lifecycle-management#permissions-for-retention-policies-and-retention-labels).
 
-    2. Create a **retention policy** and/or a **retention label**. Decide which option is best for your content:
+    2. Select **Solutions** > **Data Lifecycle Management**.
 
-        - **Retention policies** (**Data Lifecycle Management** > **Policies** > **Retention policies**) apply to the container level, like a SharePoint site or an Exchange mailbox. Content in the container automatically inherits the retention settings.
-        - **Retention labels** (**Data Lifecycle Management** > **Retention labels**) apply to the file level, like a specific document or email.
+    3. Create a **retention policy** and/or a **retention label**. Decide which option is best for your content:
+
+        - **Retention policies** (**Policies** > **Retention policies**) apply to the container level, like a SharePoint site or an Exchange mailbox. Content in the container automatically inherits the retention settings.
+        - **Retention labels** apply to the file level, like a specific document or email.
 
         To learn more, see:
 
@@ -584,10 +615,12 @@ As admin, you can automatically apply retention labels that keep (or dispose) of
 
         To learn more, see [Records management - Permissions](/purview/get-started-with-records-management#permissions)
 
-    2. Create a **File plan** and/or a **Label policy**. Decide which option is best for your content:
+    2. Select **Solutions** > **Records Management**.
 
-        - **File plan** (**Records Management** > **File plan**) applies item-level retention settings.
+    3. Create a **File plan** and/or a **Label policy**. Decide which option is best for your content:
+
         - **Label policies** (**Records Management** > **Policies** > **Label policies**) automatically labels content based on conditions you define. Users can also manually apply in specific locations.
+        - **File plan** applies item-level retention settings.
 
         To learn more, see:
 
@@ -599,21 +632,27 @@ As admin, you can automatically apply retention labels that keep (or dispose) of
 
 3. Monitor the retention labels to see how they're being used.
 
-    1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as a ??.
+    1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as one of the admins listed at:
+
+        - [Content explorer - Permissions](/purview/data-classification-content-explorer)
+        - [Activity explorer - Permissions](/purview/data-classification-activity-explorer#permissions)
+
     2. Use [Content explorer](/purview/data-classification-content-explorer) to get information on the items using retention labels.
 
         There are a few ways to open Content Explorer:
 
         - **Data Loss Prevention** > **Explorers**
         - **Records Management** > **Explorers**
+        - **Information protection** > **Explorers**
 
     3. Use [Activity explorer](/purview/data-classification-activity-explorer) to get a historical view of activities on your content that has retention labels. There are different filters you can use.
 
-      There are a few ways to open Activity Explorer:
+        There are a few ways to open Activity Explorer:
 
-      - **AI Hub**
-      - **Data Loss Prevention** > **Explorers**
-      - **Records Management** > **Explorers**
+        - **AI Hub**
+        - **Data Loss Prevention** > **Explorers**
+        - **Records Management** > **Explorers**
+        - **Information protection** > **Explorers**
 
 To learn more, see:
 
@@ -623,13 +662,13 @@ To learn more, see:
 
 ### Detect sensitive data and noncompliant content in Copilot interactions
 
-✅ **Create Communication Compliance policies to monitor interactions with Microsoft 365 Copilot**
+✅ **Create [Communication Compliance policies](/purview/communication-compliance) to monitor interactions with Microsoft 365 Copilot**
 
-Communication Compliance can detect, capture, and act on potentially inappropriate messages in your organization. This information includes sensitive or confidential information, harassing or threatening language, and sharing of adult content.
+[Communication Compliance](/purview/communication-compliance) can detect, capture, and act on potentially inappropriate messages in your organization. The inappropriate content includes sensitive or confidential information, harassing or threatening language, and sharing of adult content.
 
-Communication Compliance comes with some predefined that help you get started. We recommend you use these predefined templates. You can also create your own custom policies.
+Communication Compliance comes with some predefined policies that help you get started. We recommend you use these predefined templates. You can also create your own custom policies.
 
-These policies monitor and evaluate interactions with Copilot.
+These policies monitor and evaluate prompts and responses with Copilot.
 
 1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as one of the admins listed at [Communication Compliance - Permissions](/purview/communication-compliance-configure#step-1-required-enable-permissions-for-communication-compliance).
 
@@ -658,21 +697,30 @@ To learn more, see:
 - [Get started with communication compliance](/purview/communication-compliance-configure)
 - [Create Communication Compliance policies](/purview/communication-compliance-policies)
 
-### Preserve, collect, review, analyze, and export Copilot interactions
+### Review and analyze Copilot prompts and responses
 
-✅ Use eDiscovery to analyze Copilot user prompts and responses
+✅ **Use [eDiscovery](/purview/ediscovery-overview) to analyze Copilot user prompts and responses**
 
-eDiscovery policies can search for Copilot activity data and delete it.
+**??PENDING CALL WITH ROBERT MAZZOLI**
 
-When you use Copilot, this feature helps you:
+Oustanding ??
+Seems there's two options for Copilot:
+- Use content search in general to find something
+- Use the search & delete article
+
+
+[eDiscovery Premium](/purview/ediscovery-overview) lets you discover data at the source and stays within your Microsoft 365 security and compliance boundary.
+
+When you use Copilot, eDiscovery helps you:
 
 - Find and remove sensitive information or inappropriate content included in Copilot activities.
 - Respond to a data spillage incident when content containing confidential or malicious information is released through Copilot-related activity.
 
-1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as one of the admins listed at [Communication Compliance - Permissions]().
+1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as the eDiscovery Manager. To learn more, see [eDiscovery - Permissions](/purview/ediscovery-assign-permissions).
 
-2. Select **Solutions** > **eDiscovery** > **Cases** > **Create Case**.
-3. ?? Select **Add data sources**, and add the sources you want to search for Copilot activity data.
+2. Select **Solutions** > **eDiscovery**.
+3. Select **Cases** > **Create Case**.
+1. Select **Add data sources**, and add the sources you want to search for Copilot activity data.
 
     For a list of data sources you can add, see [Data sources for Copilot data](/purview/ediscovery-search-and-delete-copilot-data#data-sources-for-copilot-data)
 
@@ -684,3 +732,5 @@ To learn more, see:
 
 AI Hub
 Search for Copilot in Purview TOC
+
+https://learn.microsoft.com/viva/insights/org-team-insights/copilot-dashboard
