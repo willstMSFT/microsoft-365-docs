@@ -222,7 +222,9 @@ This feature is helpful for admins that must restrict access to business-critica
     This step enables site-level access restriction for your organization. When it's enabled, you can create a restricted access control policy.
 
 3. Select **Sites** > **Active sites** > Select the site you want to manage.
+
 4. Go to the **Settings** tab > **Restricted site access** > **Edit**
+
 5. You can:
 
     - **Restrict access to this site**: This option restricts access to group-connected sites, like Microsoft 365 Groups and Teams.
@@ -730,4 +732,5 @@ To learn more, see:
 
 AI Hub
 Search for Copilot in Purview TOC
+
 https://learn.microsoft.com/viva/insights/org-team-insights/copilot-dashboard
