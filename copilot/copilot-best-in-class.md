@@ -362,7 +362,7 @@ When the default labels are turned on:
 - Admins can start creating policies and configuring features that automatically apply labels to files and emails.
 - The labels help protect your data and can affect Copilot results.
 
-##### 2. Automatically apply a sensitivity label to the following containers
+#### 2. Automatically apply a sensitivity label to the following containers
 
 - Microsoft Teams sites
 - Microsoft 365 Groups
@@ -500,9 +500,9 @@ To learn more, see:
 - [Teams DLP Policies](/purview/dlp-teams-default-policy)
 - [Data loss prevention and Microsoft Teams](/purview/dlp-microsoft-teams)
 
-#### 3. Create an endpoint DLP policy for your Windows and macOS devices (called endpoints)
+#### 3. Create an endpoint DLP policy for your Windows and macOS devices
 
-On the devices, these policies can block specific apps, apply different restrictions to a specific group of printers, and block specific browsers from accessing files.
+On the devices (also called endpoints), these policies can block specific apps, apply different restrictions to a specific group of printers, and block specific browsers from accessing files.
 
 1. In **Data Loss Prevention**, select **Overview**.
 2. Select **Turn on advanced classification**. This action enables the endpoint DLP policies:
@@ -524,7 +524,7 @@ To learn more about DLP policies for endpoints, see:
 > [!NOTE]
 > If you use a mobile device managment (MDM) service to manage and help protect you devices, like [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), then keep using your MDM provider. The endpoint DLP policies focus on data loss prevention with your Microsoft 365 data. MDM focuses on device management. You use them simulatenously.
 
-#### 4. Create [Adaptive Protection](/purview/dlp-adaptive-protection-learn) policies
+#### 4. Create Adaptive Protection policies
 
 [Adaptive Protection](/purview/dlp-adaptive-protection-learn) policies integrate **Insider Risk Management** with DLP. When [insider risk](/purview/insider-risk-management-adaptive-protection) identifies a user that's engaging in risky behavior, the user is dynamically assigned an [insider risk level](/purview/insider-risk-management-adaptive-protection#insider-risk-levels), like **Elevated**.
 
