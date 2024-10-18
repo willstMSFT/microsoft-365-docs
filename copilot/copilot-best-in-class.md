@@ -567,8 +567,8 @@ To create retention policies, use **Data Lifecycle Management** from the Microso
     
     Use the following instructions to create the retention labels, and then manually apply them to items by publishing the labels or automatically applying them:
    
-        - [Manually apply retention labels](/purview/create-apply-retention-labels#manually-apply-retention-labels)
-        - [Create an auto-apply retention label policy](/purview/apply-retention-labels-automatically#how-to-create-an-auto-apply-retention-label-policy)
+    - [Manually apply retention labels](/purview/create-apply-retention-labels#manually-apply-retention-labels)
+    - [Create an auto-apply retention label policy](/purview/apply-retention-labels-automatically#how-to-create-an-auto-apply-retention-label-policy)
   
     # [Data Lifecycle Management](#tab/dlm)
 
