@@ -545,7 +545,7 @@ To learn more, see [Adaptive Protection policies](/purview/insider-risk-manageme
 
 [Data lifecycle management](/purview/data-lifecycle-management) uses retention policies and optionally, retention labels. Perhaps best known for retaining content for compliance reasons, these policies and labels can also automatically delete old and stale information. As a result, Copilot is less likely to return inaccurate information from out-of-date documents and emails. 
 
-Retention policies can also retain Copilot prompts and responses for compliance requirements, even if [users delete them](https://support.microsoft.com/office/delete-your-microsoft-365-copilot-activity-history-76de8afa-5eaf-43b0-bda8-0076d6e0390f). For more information, see [Learn about retention for Copilot](/purview/retention-policies-copilot).
+Retention policies can also retain Copilot prompts and responses for compliance requirements, even if [users delete them](https://support.microsoft.com/office/delete-your-microsoft-365-copilot-activity-history-76de8afa-5eaf-43b0-bda8-0076d6e0390f). For more information about retaining Copilot prompts and responses, see [Learn about retention for Copilot](/purview/retention-policies-copilot).
 
 Settings in a retention policy apply at the container level, like a SharePoint site or an Exchange mailbox. These settings are then automatically inherited by the data in that container. If you need [exceptions for individual emails or documents](/purview/create-retention-labels-data-lifecycle-management), use retention labels. For example, you have a retention policy to delete data in OneDrive if it's older than one year, but users can apply retention labels to keep specific documents from automatic deletion.
 
@@ -555,7 +555,7 @@ Settings in a retention policy apply at the container level, like a SharePoint s
 
 3. Select **Solutions** > **Data Lifecycle Management** > **Policies** > **Retention policies**.
 
-4. Select **New retention policy** and follow the instructions. For more help, see [Create and configure retention labels](/purview/create-retention-labels-data-lifecycle-management).
+4. Select **New retention policy** and follow the instructions. For more help, see [Create and configure retention policies](/purview/create-retention-policies).
 
 5. If needed, create and apply retention labels.
     
