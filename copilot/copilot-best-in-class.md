@@ -551,8 +551,7 @@ To create retention policies, use **Data Lifecycle Management** from the Microso
 
 | Data Lifecycle Management | Records Management |
 | --- | --- |
-| [Data Lifecycle Management](/purview/data-lifecycle-management) for retention policies that manage automatic retention and deletion for Microsoft 365 workloads  and Microsoft 365 Copilot interactions, retention labels for exceptions.|
-| [Records Management](/purview/records-management) for retention labels that provide more configuration options for high-value documents and emails that typically have stricter compliance requirements. Required if you want to use disposition review.| 
+| [Data Lifecycle Management](/purview/data-lifecycle-management) for retention policies that manage automatic retention and deletion for Microsoft 365 workloads  and Microsoft 365 Copilot interactions, retention labels for exceptions.| [Records Management](/purview/records-management) for retention labels that provide more configuration options for high-value documents and emails that typically have stricter compliance requirements. Required if you want to use disposition review.| 
 
 1. To create your retention policies sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as a Compliance Administrator.
 
@@ -563,14 +562,16 @@ To create retention policies, use **Data Lifecycle Management** from the Microso
 4. Select **New retention policy** and follow the instructions. For more help, see [Create and configure retention labels](/purview/create-retention-labels-data-lifecycle-management).
 
 5. If needed, create and apply retention labels.
-
-   Use the following instructions to create the retention labels, and then apply them to items by publishing the labels, or automatically applying them:
+    
+    Use the following instructions to create the retention labels, and then apply them to items by publishing the labels, or automatically applying them:
          - [Manually apply retention labels](/purview/create-apply-retention-labels#manually-apply-retention-labels)
          - [Create an autoapply retention label policy](/purview/apply-retention-labels-automatically#how-to-create-an-auto-apply-retention-label-policy)
   
     # [Data Lifecycle Management](#tab/dlm)
 
-From **Data Lifecycle Management**, select **Retention labels** > **Create a label**. Follow the configuration instructions and if you need more help, see [How to create retention labels for data lifecycle management](/purview/create-retention-labels-data-lifecycle-management#how-to-create-retention-labels-for-data-lifecycle-management).
+    From **Data Lifecycle Management**, select **Retention labels** > **Create a label**.
+
+    Follow the configuration instructions and if you need more help, see [How to create retention labels for data lifecycle management](/purview/create-retention-labels-data-lifecycle-management#how-to-create-retention-labels-for-data-lifecycle-management).
 
      # [Records management](#tab/rm)
 
@@ -580,7 +581,9 @@ From **Data Lifecycle Management**, select **Retention labels** > **Create a lab
 
     2. Select **Solutions** > **Records Management**.
 
-    3. Select **File plan** > **Create a label** > **Retention label** and/or a **Label policy**. Follow the configuration instructions and if you need more help, see [Use file plan to create and manage retention labels](/purview/file-plan-manager).
+    3. Select **File plan** > **Create a label** > **Retention label**.
+    
+     Follow the configuration instructions and if you need more help, see [Use file plan to create and manage retention labels](/purview/file-plan-manager).
 
     ---
 
