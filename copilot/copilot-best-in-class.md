@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 10/16/2024
+ms.date: 10/17/2024
 audience: Admin
 ms.topic: get-started
 ms.service: microsoft-365-copilot
@@ -24,7 +24,7 @@ appliesto:
 # Microsoft 365 Copilot best in class deployment - admin guide
 
 > [!WARNING]
-> This article is a work in progress for Ignite. Do not publish or share with anyone.
+> This article is a work in progress for Ignite. Do not publish.
 
 [Microsoft 365 Copilot](microsoft-365-copilot-overview.md) is an AI-powered productivity tool that uses large language models (LLMs).
 
@@ -179,7 +179,7 @@ Overshared sites are sites that are shared with more people than needed. Copilot
     | Report | Description | Task |
     | --- | --- | --- |
     | **Sharing links** | Shows the sites that have sharing links, including links shared with anyone, shared with people in your organization, and shared with specific people outside of your work or school. | Review these sites. <br/><br/>Make sure the sites are shared with only the users or groups that need access. Remove sharing for unneeded users and groups. |
-    | **Sensitivity labels applied to files** | Shows sites with Office files that have sensitivity labels. | Review these sites.<br/><br/> Make sure the correct labels are applied. Update the labels as needed. |
+    | **Sensitivity labels applied to files** | Shows sites with Office files that have sensitivity labels. | Review these sites.<br/><br/> Make sure the correct labels are applied. Update the labels as needed. To learn more, see [Identify and label sensitive data](#identify-and-label-sensitive-data) (in this article). |
     | **Shared with `Everyone except external users` (EEEU)** | Shows the sites that are shared with everyone in your organization except external users. | Review these sites. <br/><br/> Determine if EEEU permissions are appropriate. Many sites with EEEU are overshared. Remove the EEEU permission and assign to the users or groups as needed. |
 
 You can run any of these reports individually or run all of them together. To learn more about these reports, see [Data access governance (DAG) reports](/sharepoint/data-access-governance-reports).
@@ -311,12 +311,12 @@ In addition to the SharePoint steps you completed in [Baseline](add link), there
 [!div class="checklist"]
 
 - Identify and label sensitive data in your Microsoft 365 and Office files.
-- Detect and protect sensitive information
-- Keep necessary content and delete the content you don't need
-- Detect sensitive data and noncompliant content in Copilot prompts and responses
-- Review and analyze Copilot prompts and responses
+- Detect and protect sensitive information from unauthorized sharing or leakage.
+- Delete the content you don't need.
+- Detect sensitive data and noncompliant content in Copilot prompts and responses.
+- Review and analyze Copilot prompts and responses.
 
-To learn more about Purview, see [Microsoft 365 Copilot in Microsoft Purview Overview](/purview/copilot-in-purview-overview).
+To learn more about Microsoft Purview, see [Microsoft 365 Copilot in Microsoft Purview Overview](/purview/copilot-in-purview-overview).
 
 ### Identify and label sensitive data
 
@@ -330,22 +330,14 @@ The sensitivity labels can also affect Copilot results, including:
 - If the label applies encryption, Copilot checks the usage rights for the user. For Copilot to return data from that item, the user must be granted permissions to copy from it.
 - Sensitivity labels go with the content, even if the content is moved outside Microsoft 365.
 
-When you apply sensitivity labels to your files and meetings, there's an order that you should follow. The order helps you start labeling at the top, and working your way down to individual files. The order:
-
-1. Apply sensitivity labels at the container level (Microsoft Teams sites, Microsoft 365 Groups, and SharePoint sites).
-2. Set the default sensitivity label for all your SharePoint document libraries. When you set the default, SharePoint can automatically apply the label to the files.
-3. Enable sensitivity labels for files in SharePoint and OneDrive.
-4. Automatically apply sensitivity labels to unlabeled files in SharePoint sites, OneDrive accounts, Exchange emails, and Office files.
-
-This section walks you through the steps to enable and use sensitivity labels. To learn more about sensitivity labels, see:
+This section walks you through the steps to enable and use the default sensitivity labels included with Microsoft Purview. At any time, you can create your own custom sensitivity labels, and use your custom labels instead. To learn more about sensitivity labels, see:
 
 - [Default labels and policies to protect your data](/purview/mip-easy-trials)
 - [Automatically apply sensitivity labels](/purview/apply-sensitivity-label-automatically)
+- [Create and configure sensitivity labels and their policies](/purview/create-sensitivity-labels)
 
 > [!NOTE]
-> This section uses the default sensitivity labels included with Microsoft Purview. At anytime, you can create your own custom sensitivity labels, and use your custom labels instead.
->
-> To learn more, see [Create and configure sensitivity labels and their policies](/purview/create-sensitivity-labels).
+> You can also enable sensitivity labels at the container-level. This feature doesn't impact Copilot results, but does provide an extra layer of security. To learn more, see [Use sensitivity labels to protect content in Microsoft Teams, Microsoft 365 groups, and SharePoint sites](/purview/sensitivity-labels-teams-groups-sites).
 
 #### 1. Turn on the default sensitivity labels
 
@@ -360,44 +352,37 @@ This section walks you through the steps to enable and use sensitivity labels. T
 
 When the default labels are turned on:
 
+- The labels help protect your data and can affect Copilot results.
 - Your users can start manually applying labels to their files and emails.
 - Admins can start creating policies and configuring features that automatically apply labels to files and emails.
-- The labels help protect your data and can affect Copilot results.
 
-#### 2. Automatically apply a sensitivity label to the following containers
+#### 2. Publish your labels and educate your users
 
-- Microsoft Teams sites
-- Microsoft 365 Groups
-- SharePoint sites
+1. **Publish the labels**. When you publish the labels, they show up in your Office apps, like Word and Excel. Users can manually apply a label to their files and emails.
 
-**Steps**:
+    To learn more, including the steps to publish, see [Publish sensitivity labels by creating a label policy](/purview/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
 
-1. At the container level, there's a set of one-time steps you need to complete, including [enabling sensitivity labels in Microsoft Entra ID and syncing the labels using Windows PowerShell](/purview/sensitivity-labels-teams-groups-sites#how-to-enable-sensitivity-labels-for-containers-and-synchronize-labels).
+2. **Educate your users** on when to apply the correct sensitivity labels. When the labels are published, you can [automatically apply a label to files](#5-automatically-apply-sensitivity-labels-to-unlabeled-files-in-sharepoint-sites-onedrive-accounts-exchange-emails-and-office-files) (described in a later step). If default label is incorrect, make sure your users know how to update the label and how to choose the correct label.
 
-    After you complete these one-time steps, you can apply sensitivity labels to the groups and sites. More built-in sensitivity labels also become available.
+    For a description of the default sensitivity labels, see [Default sensitivity labels](/purview/mip-easy-trials#default-sensitivity-labels).
 
-2. In **Information protection** > **Sensitivity labels**, select an existing label > **Edit label**. When you enable the default sensitivity labels, the label settings are automatically configured for you.
+3. **Monitor your labels**. Select **Information protection** > **Reports**. You can see the usage of your labels.
 
-    - **Scope** - Make no changes, unless you want to. The scope of each default label is automatically set to **File** (applies to Office apps, like Word and Excel) and **Emails** (applies to Outlook and Outlook on the web).
+#### 3. Enable sensitivity labels for files in SharePoint and OneDrive
 
-      Optionally, you can add **Meetings** (applies to Teams and Outlook). Or, you can create your own custom label and set the scope to include Meetings. It's your choice.
+When enabled, users can manually apply labels to Office files stored in SharePoint and OneDrive, and change any existing label. Admins can create policies that automatically apply labels.
 
-    - **Groups & sites** - Select this option. This setting allows the label to apply to Microsoft Teams, Microsoft 365 Groups, and SharePoint sites containers.
+You have two options:
 
-      If **Groups & sites** is grayed out, then you didn't complete the [one-time steps in Microsoft Entra ID and Windows PowerShell](/purview/sensitivity-labels-teams-groups-sites#how-to-enable-sensitivity-labels-for-containers-and-synchronize-labels) in the previous step.
+- **Option 1**: Select **Information Protection** > **Sensitivity labels**. If you see the following message, select **Turn on now**:
 
-    - **Define protection settings for groups and sites** - This option is available when you select **Groups & sites**. Select the protection settings that you want to apply to the groups and sites. To help you determine the best option for your organization, see [How to configure groups and site settings](/purview/sensitivity-labels-teams-groups-sites#how-to-configure-groups-and-site-settings).
+  :::image type="content" source="media/copilot-best-in-class/purview-sensitivity-labels-prompt.png" alt-text="In Microsoft Purview Information Protection, turn on sensitivity labels for SharePoint and OneDrive." lightbox="media/copilot-best-in-class/purview-sensitivity-labels-prompt.png":::
 
-      :::image type="content" source="media/copilot-best-in-class/purview-sensitivity-label-groups-sites.png" alt-text="When you create a sensitivity label in Microsoft Purview, select groups and sites, and then define the protection settings." lightbox="media/copilot-best-in-class/purview-sensitivity-label-groups-sites.png":::
+- **Option 2**: Use the `[Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant)` Windows PowerShell cmdlet
 
-      If you [created your own custom labels](/purview/create-sensitivity-labels), then you set the label properties. You can edit your custom labels and change the scope to include **Groups & sites**.
+  To learn more about these options, see [Enable sensitivity labels for files in SharePoint and OneDrive](/purview/sensitivity-labels-sharepoint-onedrive-files).
 
-      To learn more, see [Use sensitivity labels to protect content in Microsoft Teams, Microsoft 365 groups, and SharePoint sites](/purview/sensitivity-labels-teams-groups-sites)
-
-3. **Publish your labels**. For the steps, see [Publish sensitivity labels by creating a label policy](/purview/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
-4. **Monitor your labels**. Select **Information protection** > **Reports**. You can see the usage of your labels, including the usage of your sensitivity labels.
-
-#### 3. Set a default sensitivity label for all your SharePoint document libraries
+#### 4. Set a default sensitivity label for all your SharePoint document libraries
 
 The SharePoint site admin can do this task.
 
@@ -414,20 +399,6 @@ To learn more, see:
 
 - [Overview - Default sensitivity labels for SharePoint document libraries](/purview/sensitivity-labels-sharepoint-default-label)
 - [Steps - Add a sensitivity label to SharePoint document library](https://support.microsoft.com/office/add-a-sensitivity-label-to-sharepoint-document-library-54b1602b-db0a-4bcb-b9ac-5e20cbc28089)
-
-#### 4. Enable sensitivity labels for files in SharePoint and OneDrive
-
-When enabled, users can manually apply labels to Office files stored in SharePoint and OneDrive, and change any existing label. Admins can create policies that automatically apply labels.
-
-You have two options:
-
-- **Option 1**: Select **Information Protection** > **Sensitivity labels**. If you see the following message, select **Turn on now**:
-
-  :::image type="content" source="media/copilot-best-in-class/purview-sensitivity-labels-prompt.png" alt-text="In Microsoft Purview Information Protection, turn on sensitivity labels for SharePoint and OneDrive." lightbox="media/copilot-best-in-class/purview-sensitivity-labels-prompt.png":::
-
-- **Option 2**: Use the `[Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant)` Windows PowerShell cmdlet
-
-  To learn more about these options, see [Enable sensitivity labels for files in SharePoint and OneDrive](/purview/sensitivity-labels-sharepoint-onedrive-files).
 
 #### 5. Automatically apply sensitivity labels to unlabeled files in SharePoint sites, OneDrive accounts, Exchange emails, and Office files
 
@@ -457,7 +428,9 @@ When they're automatically applied, you don't have to rely on end users to apply
 
     To learn more about sensitivity labels in Office apps, see [Manage sensitivity labels in Office apps](/purview/sensitivity-labels-office-apps).
 
-### Detect and protect sensitive information
+?? Add something about CA to block access to external users or guests, for example. Not sure where yet. ??
+
+### Detect and protect sensitive information from unauthorized sharing or leakage
 
 ✅ **Use [data loss prevention (DLP) policies](/purview/dlp-learn-about-dlp) to detect sensitive info**
 
@@ -566,25 +539,25 @@ To learn more, see [Adaptive Protection policies](/purview/insider-risk-manageme
   - [Help dynamically mitigate risks with Adaptive Protection](/purview/insider-risk-management-adaptive-protection)
   - [Investigate insider risk management activities](/purview/insider-risk-management-activities)
 
-### Keep necessary content and delete the content you don't need
+### Delete the content you don't need
 
 ✅ **Use [data lifecycle management](/purview/data-lifecycle-management) for data retention**
 
 [Data lifecycle management](/purview/data-lifecycle-management) uses retention policies and labels, which help you keep necessary content and delete the content you don't need.
 
-As admin, you can automatically apply retention labels that keep (or dispose) of content that match specific conditions, like keep documents based on their content. When the labels are created, at any time users can manually apply retention labels to their content.
+As admin, you can automatically apply retention labels that delete (or keep) content that matches specific conditions. For example, there are regulations that might require you to keep content for a certain period of time. Or, you might have content that you want to delete after a certain period of time.
 
-For example, there are regulations that might require you to keep content for a certain period of time. Or, you might have content that you want to delete after a certain period of time.
+When the labels are created, users can manually apply retention labels to their content.
 
-When users enter prompts, Copilot can show data from different sources. When you the retention features, you're decluttering your data sources. Any decluttering efforts result in more accurate results from Copilot.
+When users enter prompts, Copilot can show data from different sources. When you use the retention features, you're decluttering your data sources. Any decluttering efforts result in more accurate results from Copilot.
 
 1. To manage retention labels in Microsoft Purview, you have two options - **Records Management** or **Data Lifecycle Management**. Decide which option is best for your content:
 
     | Records management | Data Lifecycle Management |
     | --- | --- |
-    | [Records management](/purview/records-management) helps you manage regulatory, legal, and business-critical records, which typically have strict compliance requirements. | [Data Lifecycle Management](/purview/data-lifecycle-management) is best for general and broader data management needs that don't have stringent requirements. It also has flexible retention and deletion policies. |
+    | [Records management](/purview/records-management) helps you manage regulatory, legal, and business-critical records, which typically have strict compliance requirements. It also has flexible retention and deletion policies. | [Data Lifecycle Management](/purview/data-lifecycle-management) is best for general and broader data management needs that don't have stringent requirements. It also has flexible retention and deletion policies. |
 
-    You can use both options and create separate retention policies depending on the type of data you need to keep (or delete).
+    You can use both options and create separate retention policies depending on the type of data you need to delete (or keep).
 
 2. Create the policy and/or labels.
 
@@ -699,11 +672,18 @@ To learn more, see:
 
 ### Review and analyze Copilot prompts and responses
 
+Two options:
+
+- eDiscovery
+- AI Hub
+
 ✅ **Use [eDiscovery](/purview/ediscovery-overview) to analyze Copilot user prompts and responses**
 
 **??PENDING CALL WITH ROBERT MAZZOLI**
 
-Oustanding ??
+Prompts are responses are in AI Hub; AI Hub includes in eDiscovery
+
+Outstanding ??
 Seems there's two options for Copilot:
 - Use content search in general to find something
 - Use the search & delete article
@@ -730,7 +710,10 @@ To learn more, see:
 - [eDiscovery Premium](/purview/ediscovery-premium-get-started)
 
 
-AI Hub
+AI Hub: 
+- Might want to remove screen shots, as UI is changing often.
+- Confirm license info - included with E5?
+
 Search for Copilot in Purview TOC
 
 https://learn.microsoft.com/viva/insights/org-team-insights/copilot-dashboard
