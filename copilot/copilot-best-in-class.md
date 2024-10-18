@@ -545,11 +545,11 @@ To learn more, see [Adaptive Protection policies](/purview/insider-risk-manageme
 
 [Data lifecycle management](/purview/data-lifecycle-management) uses retention policies and optionally, retention labels. Perhaps best known for retaining content for compliance reasons, these policies and labels can also automatically delete old and stale information. As a result, Copilot is less likely to return inaccurate information from out-of-date documents and emails. 
 
-Retention policies can also retain Copilot prompts and responses for compliance requirements, even if users delete them.
+Retention policies can also retain Copilot prompts and responses for compliance requirements, even if [users delete them]([Retention policies can also retain Copilot prompts and responses for compliance requirements, even if [users delete them](https://support.microsoft.com/office/delete-your-microsoft-365-copilot-activity-history-76de8afa-5eaf-43b0-bda8-0076d6e0390f).
 
-Settings in a retention policy apply at the container level, like a SharePoint site or an Exchange mailbox. These settings are then automatically inherited by the data in that container. If you need exceptions for individual emails or documents, use retention labels.
+Settings in a retention policy apply at the container level, like a SharePoint site or an Exchange mailbox. These settings are then automatically inherited by the data in that container. If you need [exceptions for individual emails or documents](/purview/create-retention-labels-data-lifecycle-management), use retention labels.
 
-To create retention policies, use **Data Lifecycle Management** from the Microsoft Purview. To create retention labels for individual documents or emails, you can use either **Data Lifecycle Management** or **Records Management**. Labels for records management have more configuration options, such as a [disposition review process](/purview/disposition) if you need manual confirmation before items are automatically deleted.
+To create retention policies, use **Data Lifecycle Management** from the Microsoft Purview. To create retention labels for individual documents or emails, you can use either **Data Lifecycle Management** or **Records Management**. Labels for records management include more configuration options, such as a [disposition review process](/purview/disposition) if you need manual confirmation before items are automatically deleted.
 
 | Data Lifecycle Management | Records Management |
 | --- | --- |
