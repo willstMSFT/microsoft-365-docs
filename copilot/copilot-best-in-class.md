@@ -339,7 +339,9 @@ This section walks you through the steps to create and use the default sensitivi
 - [Microsoft Purview strengthens information protection for Copilot](/purview/ai-microsoft-purview#microsoft-purview-strengthens-information-protection-for-copilot)
 
 > [!NOTE]
-> When sensitivity labels are configured for groups and sites, you can apply the labels to containers, such as SharePoint sites. Items in the container don't inherit the sensitivity label, so there's no direct impact to Copilot responses. However, the label settings can restrict access to the container to provide an extra layer of security, such as enforcing Conditional Access and setting the default sharing link for a site. As a result, if a user can't access the site, neither can Copilot on behalf of that user. To learn more, see [Use sensitivity labels to protect content in Microsoft Teams, Microsoft 365 groups, and SharePoint sites](/purview/sensitivity-labels-teams-groups-sites).
+> This section doesn't include applying sensitivity labels to containers, such as SharePoint sites. When sensitivity labels are configured for groups and sites, items in the container don't inherit the sensitivity label, so there's no direct impact to Copilot responses. However, the label settings can restrict access to the container to provide an extra layer of security, such as enforcing Conditional Access and setting the default sharing link for a site. As a result, if a user can't access the site, neither can Copilot on behalf of that user.
+> 
+> To learn more, see [Use sensitivity labels to protect content in Microsoft Teams, Microsoft 365 groups, and SharePoint sites](/purview/sensitivity-labels-teams-groups-sites).
 
 #### 1. Create the default sensitivity labels
 
@@ -405,7 +407,10 @@ To learn more, see:
 
 #### 5. Automatically apply sensitivity labels to files and emails
 
-Automatic labeling helps to correctly identify a higher priority label for more sensitive information that needs more restrictive settings than a default label. When you use this labeling method as a label setting, it's using client-side auto-labeling. Users see the label automatically applied in their Office apps, or you can recommend the label to them. When you use an auto-labeling policy, it's using service-side auto-labeling. As the term suggests, there's no user interaction and you can label at scale for files at rest in OneDrive and SharePoint, and all emails that are sent and received.
+Automatic labeling helps to correctly identify a higher priority label for more sensitive information that needs more restrictive settings than a default label:
+
+- When you use this labeling method as a label setting, it's using client-side auto-labeling. Users see the label automatically applied in their Office apps, or you can recommend the label to them.
+- When you use an auto-labeling policy, it's using service-side auto-labeling. As the term suggests, there's no user interaction and you can label at scale for files at rest in OneDrive and SharePoint, and all emails that are sent and received.
 
 If you created the default sensitivity labels and policies, they include both [client-side auto-labeling](/purview/mip-easy-trials#client-side-auto-labeling) and [service-side auto-labeling](/purview/mip-easy-trials#service-side-auto-labeling) to detect credit card numbers and personal data. These default settings make it easy for you to test the auto-labeling functionality. Then you can edit these or create your own auto-labeling settings to identify data in your organization that needs a specific sensitivity label to apply protection actions, such as encryption.  
 
