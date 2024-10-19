@@ -41,7 +41,7 @@ To learn more about these options, including the different license options, see 
 In the **Best in Class** Microsoft 365 Copilot deployment, you use the features included with your Microsoft 365 E5 + SharePoint Advanced Management (SAM) licenses. With these features, you:
 
 - Use SAM to help prevent oversharing, declutter data sources, and monitor SharePoint site changes.
-- Use Microsoft Purview to enable sensitivity labels, detect sensitive info & restrict endpoints, and keep necessary content (or delete the content you don't need).
+- Use Microsoft Purview to apply sensitivity labels, detect sensitive info & restrict endpoints, and keep necessary content (or delete the content you don't need).
 
 When you use the features described in this article, your organization is better prepared for Copilot, including getting accurate results from Copilot.
 
@@ -383,7 +383,10 @@ You have two options:
 
 - **Option 2**: Use the `[Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant)` Windows PowerShell cmdlet
 
-To learn more about these options, see [Enable sensitivity labels for files in SharePoint and OneDrive](/purview/sensitivity-labels-sharepoint-onedrive-files).
+To learn more about this configuration, see [Enable sensitivity labels for files in SharePoint and OneDrive](/purview/sensitivity-labels-sharepoint-onedrive-files).
+
+> [!TIP]
+> Although not related to Copilot, now is a good time to [enable co-authoring for encrypted files](/purview/sensitivity-labels-coauthoring), if it's not already enabled. This setting ensures the best user experience for collaboration. 
 
 #### 4. Set default sensitivity labels for your SharePoint document libraries
 
