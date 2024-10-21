@@ -41,7 +41,7 @@ To learn more about these options, including the different license options, see 
 In the **Best in Class** Microsoft 365 Copilot deployment, you use the features included with your Microsoft 365 E5 + SharePoint Advanced Management (SAM) licenses. With these features, you:
 
 - Use SAM to help prevent oversharing, declutter data sources, and monitor SharePoint site changes.
-- Use Microsoft Purview to enable sensitivity labels, detect sensitive info & restrict endpoints, and keep necessary content (or delete the content you don't need).
+- Use Microsoft Purview to apply sensitivity labels, detect sensitive info & restrict endpoints, and keep necessary content (or delete the content you don't need).
 
 When you use the features described in this article, your organization is better prepared for Copilot, including getting accurate results from Copilot.
 
@@ -320,57 +320,60 @@ To learn more about Microsoft Purview, see [Microsoft 365 Copilot in Microsoft P
 
 ### Identify and label sensitive data
 
-✅ **Enable and apply [sensitivity labels](/purview/get-started-with-sensitivity-labels) to your documents, emails, and meetings**
+✅ **Create and apply [sensitivity labels](/purview/get-started-with-sensitivity-labels) to your documents, emails, and meetings**
 
-[Sensitivity labels](/purview/get-started-with-sensitivity-labels) are a way to identify and classify the sensitivity of your organization's files and meetings. When they're applied to items, like documents and emails, the labels add an extra layer of protection.
+[Sensitivity labels](/purview/sensitivity-labels) are a way to identify and classify the sensitivity of your organization's data. When they're applied to items, like documents and emails, the labels add an extra layer of protection.
 
 The sensitivity labels can also affect Copilot results, including:
 
-- Copilot Business Chat can reference data from different types of items. The sensitivity label with the [highest priority](/purview/sensitivity-labels#label-priority-order-matters) is visible to users.
+- The label settings include protection actions, such as access to sites, customizable headers and footers, and encryption
 - If the label applies encryption, Copilot checks the usage rights for the user. For Copilot to return data from that item, the user must be granted permissions to copy from it.
-- Sensitivity labels go with the content, even if the content is moved outside Microsoft 365.
+- In Copilot Business Chat that can reference data from different types of items, sensitivity labels are visible in returned results and the latest response displays the sensitivity label with the [highest priority](/purview/sensitivity-labels#label-priority-order-matters).
+- If Copilot creates new content from labeled items, the sensitivity label from the source item is automatically inherited.
+- Sensitivity labels go with the content, even if it's moved outside Microsoft 365.  
 
-This section walks you through the steps to enable and use the default sensitivity labels included with Microsoft Purview. At any time, you can create your own custom sensitivity labels, and use your custom labels instead. To learn more about sensitivity labels, see:
+This section walks you through the steps to create and use the default sensitivity labels from Microsoft Purview. If you need to use your own label names and configurations, you can create these manually or edit the default labels. You can't create default labels if you've already created your own sensitivity labels. To learn more about sensitivity labels, see:
 
+- [Get started with sensitivity labels](/purview/get-started-with-sensitivity-labels)
 - [Default labels and policies to protect your data](/purview/mip-easy-trials)
-- [Automatically apply sensitivity labels](/purview/apply-sensitivity-label-automatically)
-- [Create and configure sensitivity labels and their policies](/purview/create-sensitivity-labels)
+- [Microsoft Purview strengthens information protection for Copilot](/purview/ai-microsoft-purview#microsoft-purview-strengthens-information-protection-for-copilot)
 
 > [!NOTE]
-> You can also enable sensitivity labels at the container-level. This feature doesn't impact Copilot results, but does provide an extra layer of security. To learn more, see [Use sensitivity labels to protect content in Microsoft Teams, Microsoft 365 groups, and SharePoint sites](/purview/sensitivity-labels-teams-groups-sites).
+> This section doesn't include applying sensitivity labels to containers, such as SharePoint sites. When sensitivity labels are configured for groups and sites, items in the container don't inherit the sensitivity label, so there's no direct impact to Copilot responses. However, the label settings can restrict access to the container to provide an extra layer of security, such as enforcing Conditional Access and setting the default sharing link for a site. As a result, if a user can't access the site, neither can Copilot on behalf of that user.
+> 
+> To learn more, see [Use sensitivity labels to protect content in Microsoft Teams, Microsoft 365 groups, and SharePoint sites](/purview/sensitivity-labels-teams-groups-sites).
 
-#### 1. Turn on the default sensitivity labels
+#### 1. Create the default sensitivity labels
 
 1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as an admin in one of the groups listed at [Sensitivity labels - permissions](/purview/get-started-with-sensitivity-labels#permissions-required-to-create-and-manage-sensitivity-labels).
 
-2. Select **Solutions** > **AI Hub** > **Policies**.
-3. Select **Fortify your data security for AI** > **Get started** > **Create policies**.
+2. Select **Solutions** > **AI Hub** > **Overview**.
+3. From the **Recommendations** section, locate **Fortify your data security for AI** to create the default labels and their policies.
+4. To see or edit the default labels, or if you need to create your own labels, select **Information protection** > **Sensitivity labels**. You might have to select **Refresh**.
 
-    :::image type="content" source="media/copilot-best-in-class/purview-ai-hub-enable-default-labels.png" alt-text="In Microsoft Purview portal, open the AI Hub and create the Fortify your data security for AI policies to turn on sensitivity labels." lightbox="media/copilot-best-in-class/purview-ai-hub-enable-default-labels.png":::
-
-4. To see the default labels, select **Information protection** > **Sensitivity labels**. You might have to select **Refresh**.
-
-When the default labels are turned on:
+When you have sensitivity labels:
 
 - The labels help protect your data and can affect Copilot results.
-- Your users can start manually applying labels to their files and emails.
+- Your users can start manually applying published labels to their files and emails.
 - Admins can start creating policies and configuring features that automatically apply labels to files and emails.
 
 #### 2. Publish your labels and educate your users
 
-1. **Publish the labels**. When you publish the labels, they show up in your Office apps, like Word and Excel. Users can manually apply a label to their files and emails.
+1. If you're using the default sensitivity labels that were created for you, they're automatically published to all users, even if you edit them. If you created your own sensitivity labels, you'll need to add them to a publishing policy before users can manually apply them in their Office apps. These policies also have settings that you'll want to consider, such as a default label, and require users to label their data.  
 
-    To learn more, including the steps to publish, see [Publish sensitivity labels by creating a label policy](/purview/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
+    To learn more, see [Publish sensitivity labels by creating a label policy](/purview/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
 
-2. **Educate your users** on when to apply the correct sensitivity labels. When the labels are published, you can [automatically apply a label to files](#5-automatically-apply-sensitivity-labels-to-unlabeled-files-in-sharepoint-sites-onedrive-accounts-exchange-emails-and-office-files) (described in a later step). If default label is incorrect, make sure your users know how to update the label and how to choose the correct label.
+2. **Educate your users** and provide instructions when to apply the correct sensitivity label. In addition to manually applying labels, the default label policy includes applying the **General \ All Employees (unrestricted)** label as the default label. While this offers a good base layer of protection, users should change the label if necessary, particularly for more sensitive content that requires encryption.
 
-    For a description of the default sensitivity labels, see [Default sensitivity labels](/purview/mip-easy-trials#default-sensitivity-labels).
+    To help you with this step, see [End-user documentation for sensitivity labels](/purview/get-started-with-sensitivity-labels#end-user-documentation-for-sensitivity-labels).
 
 3. **Monitor your labels**. Select **Information protection** > **Reports**. You can see the usage of your labels.
 
 #### 3. Enable sensitivity labels for files in SharePoint and OneDrive
 
-When enabled, users can manually apply labels to Office files stored in SharePoint and OneDrive, and change any existing label. Admins can create policies that automatically apply labels.
+There's a one-time configuration required to enable sensitivity labels for SharePoint and OneDrive. It's also required for Microsoft 365 Copilot to access encrypted files stored in these locations.
+
+As with all tenant-level configuration changes for SharePoint and OneDrive, it takes about 15 minutes for the change to take effect. Then users can select sensitivity labels in Office on the web and you can create policies that automatically label files in these locations. 
 
 You have two options:
 
@@ -380,55 +383,42 @@ You have two options:
 
 - **Option 2**: Use the `[Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant)` Windows PowerShell cmdlet
 
-  To learn more about these options, see [Enable sensitivity labels for files in SharePoint and OneDrive](/purview/sensitivity-labels-sharepoint-onedrive-files).
+To learn more about this configuration, see [Enable sensitivity labels for files in SharePoint and OneDrive](/purview/sensitivity-labels-sharepoint-onedrive-files).
 
-#### 4. Set a default sensitivity label for all your SharePoint document libraries
+> [!TIP]
+> Although not related to Copilot, now is a good time to [enable co-authoring for encrypted files](/purview/sensitivity-labels-coauthoring), if it's not already enabled. This setting ensures the best user experience for collaboration. 
+
+#### 4. Set default sensitivity labels for your SharePoint document libraries
+
+This configuration is appropriate when your document libraries store files with the same level of sensitivity. 
 
 The SharePoint site admin can do this task.
 
 1. In your SharePoint site, select **Documents** > **Settings** icon > **Library settings** > **More library settings**.
-2. In **Default sensitivity labels** (Apply label to items in this list or library), select the label in the drop-down list, like **Confidential**.
+2. In **Default sensitivity labels** (Apply label to items in this list or library), select a sensitivity label from the drop-down list.
 3. **Save** your changes.
 
 When set:
 
-- SharePoint automatically applies the label to the files, including files with a lower sensitivity label.
-- It helps protect your documents without requiring anyone to review the content.
+- SharePoint automatically applies the label to the files, which can include [files with a lower sensitivity label](/purview/sensitivity-labels-sharepoint-default-label#will-an-existing-label-be-overridden).
+- It provides a baseline level of protection that's specfiic to the document library without the requirement for content inspection or relying on users.
 
 To learn more, see:
 
 - [Overview - Default sensitivity labels for SharePoint document libraries](/purview/sensitivity-labels-sharepoint-default-label)
 - [Steps - Add a sensitivity label to SharePoint document library](https://support.microsoft.com/office/add-a-sensitivity-label-to-sharepoint-document-library-54b1602b-db0a-4bcb-b9ac-5e20cbc28089)
 
-#### 5. Automatically apply sensitivity labels to unlabeled files in SharePoint sites, OneDrive accounts, Exchange emails, and Office files
+#### 5. Automatically apply sensitivity labels to files and emails
 
-When they're automatically applied, you don't have to rely on end users to apply labels to their files.
+Automatic labeling helps to correctly identify a higher priority label for more sensitive information that needs more restrictive settings than a default label:
 
-1. Automatically label unlabeled files in SharePoint sites & OneDrive accounts, and unlabeled emails in Exchange:
+- When you use this labeling method as a label setting, it's using client-side auto-labeling. Users see the label automatically applied in their Office apps, or you can recommend the label to them.
+- When you use an auto-labeling policy, it's using service-side auto-labeling. As the term suggests, there's no user interaction and you can label at scale for files at rest in OneDrive and SharePoint, and all emails that are sent and received.
 
-    - For the specific steps and information that you need to know, including learning about simulation mode, see [How to configure autolabeling policies for SharePoint, OneDrive, and Exchange](/purview/apply-sensitivity-label-automatically#how-to-configure-auto-labeling-policies-for-sharepoint-onedrive-and-exchange).
+If you created the default sensitivity labels and policies, they include both [client-side auto-labeling](/purview/mip-easy-trials#client-side-auto-labeling) and [service-side auto-labeling](/purview/mip-easy-trials#service-side-auto-labeling) to detect credit card numbers and personal data. These default settings make it easy for you to test the auto-labeling functionality. Then you can edit these or create your own auto-labeling settings to identify data in your organization that needs a specific sensitivity label to apply protection actions, such as encryption.  
 
-    - When creating the policy, make sure you select all the locations you want to autolabel. For example, if you don't want to autolabel emails, then don't select Exchange. You can also create separate policies for each location type.
+For the specific steps and information that you need to know, including learning about simulation mode for auto-labeling policies, see [Apply a sensitivity label to content automatically](/purview/apply-sensitivity-label-automatically).
 
-      :::image type="content" source="media/copilot-best-in-class/purview-sensitivity-labels-auto-label-policy.png" alt-text="In Microsoft Purview, select Exchange email, SharePoint sites, and OneDrive accounts to automatically apply sensitivity labels to unlabeled files." lightbox="media/copilot-best-in-class/purview-sensitivity-labels-auto-label-policy.png":::
-
-    - When creating the policy, you must create at least one rule. These rules must have a [sensitive info type](/purview/sit-sensitive-information-type-learn-about) condition. You can also use [Trainable classifiers](/purview/trainable-classifiers-learn-about). Be familiar with these features before you create the autolabeling policy.
-
-    - Know the existing label you want to automatically apply. You can only select one label for each autolabel policy.
-
-2. Automatically label Office files & emails, and require users to apply labels on their Office files. When you publish a sensitivity label, the label shows up in your Office apps. At any time, users can also manually apply the label to their files and emails.
-
-    - When you add the default label or create your own (**Information Protection** > **Sensitivity labels** > select a label > **Edit label**), enable the **Auto-labeling for files and emails** setting. This setting automatically applies the sensitivity label to the files and emails that match the conditions you set.
-
-      :::image type="content" source="media/copilot-best-in-class/purview-edit-sensitivity-label-auto-label.png" alt-text="In Microsoft Purview Information Protection, edit an existing sensitivity label and select the autolabeling for files and emails setting." lightbox="media/copilot-best-in-class/purview-edit-sensitivity-label-auto-label.png":::
-
-    - When you publish the label (**Information Protection** > **Sensitivity labels** > **Policies** > **Publishing policies**), enable the **Require users to apply a label to their email and documents** setting. This setting forces users to apply the label to their files and emails.
-
-      :::image type="content" source="media/copilot-best-in-class/purview-sensitivity-labels-publish-require-users.png" alt-text="In Microsoft Purview Information Protection, publish a label and select the require users to apply a label to their email and documents setting." lightbox="media/copilot-best-in-class/purview-sensitivity-labels-publish-require-users.png":::
-
-    To learn more about sensitivity labels in Office apps, see [Manage sensitivity labels in Office apps](/purview/sensitivity-labels-office-apps).
-
-?? Add something about CA to block access to external users or guests, for example. Not sure where yet. ??
 
 ### Detect and protect sensitive information from unauthorized sharing or leakage
 
