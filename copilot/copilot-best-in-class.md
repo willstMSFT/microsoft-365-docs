@@ -535,15 +535,9 @@ To learn more, see [Adaptive Protection policies](/purview/insider-risk-manageme
 
 [Data lifecycle management](/purview/data-lifecycle-management) uses retention policies and optionally, retention labels. Perhaps best known for retaining content for compliance reasons, these policies and labels can also automatically delete old and stale information. As a result, Copilot is less likely to return inaccurate information from out-of-date documents and emails. 
 
-Retention policies can also retain Copilot prompts and responses for compliance requirements, even if [users delete them](https://support.microsoft.com/office/delete-your-microsoft-365-copilot-activity-history-76de8afa-5eaf-43b0-bda8-0076d6e0390f).
+Retention policies can also retain Copilot prompts and responses for compliance requirements, even if [users delete them](https://support.microsoft.com/office/delete-your-microsoft-365-copilot-activity-history-76de8afa-5eaf-43b0-bda8-0076d6e0390f). For more information about retaining Copilot prompts and responses, see [Learn about retention for Copilot](/purview/retention-policies-copilot).
 
-Settings in a retention policy apply at the container level, like a SharePoint site or an Exchange mailbox. These settings are then automatically inherited by the data in that container. If you need [exceptions for individual emails or documents](/purview/create-retention-labels-data-lifecycle-management), use retention labels.
-
-To create retention policies, use **Data Lifecycle Management** from the Microsoft Purview. To create retention labels for individual documents or emails, you can use either **Data Lifecycle Management** or **Records Management**. Labels for records management include more configuration options, such as a [disposition review process](/purview/disposition) if you need manual confirmation before items are automatically deleted.
-
-| Data Lifecycle Management | Records Management |
-| --- | --- |
-| [Data Lifecycle Management](/purview/data-lifecycle-management) for retention policies that manage automatic retention and deletion for Microsoft 365 workloads and Microsoft 365 Copilot interactions, retention labels for exceptions.| [Records Management](/purview/records-management) for retention labels that provide more configuration options for high-value documents and emails that typically have stricter compliance requirements. Required if you want to use disposition review.| 
+Settings in a retention policy apply at the container level, like a SharePoint site or an Exchange mailbox. These settings are then automatically inherited by the data in that container. If you need [exceptions for individual emails or documents](/purview/create-retention-labels-data-lifecycle-management), use retention labels. For example, you have a retention policy to delete data in OneDrive if it's older than one year, but users can apply retention labels to keep specific documents from automatic deletion.
 
 1. To create your retention policies sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as a Compliance Administrator.
 
@@ -551,14 +545,15 @@ To create retention policies, use **Data Lifecycle Management** from the Microso
 
 3. Select **Solutions** > **Data Lifecycle Management** > **Policies** > **Retention policies**.
 
-4. Select **New retention policy** and follow the instructions. For more help, see [Create and configure retention labels](/purview/create-retention-labels-data-lifecycle-management).
+4. Select **New retention policy** and follow the instructions. For more help, see [Create and configure retention policies](/purview/create-retention-policies).
 
 5. If needed, create and apply retention labels.
     
-    Use the following instructions to create the retention labels, and then manually apply them to items by publishing the labels or automatically applying them:
-   
-    - [Manually apply retention labels](/purview/create-apply-retention-labels#manually-apply-retention-labels)
-    - [Create an auto-apply retention label policy](/purview/apply-retention-labels-automatically#how-to-create-an-auto-apply-retention-label-policy)
+   You can use either **Data Lifecycle Management** or **Records Management** to create the labels. Records management includes more configuration options, such as a [disposition review process](/purview/disposition) if you need manual confirmation before items are automatically deleted.
+
+    | Data Lifecycle Management | Records Management |
+    | --- | --- |
+    | [Data Lifecycle Management](/purview/data-lifecycle-management) for retention policies that manage automatic retention and deletion for Microsoft 365 workloads and Microsoft 365 Copilot interactions, retention labels for exceptions.| [Records Management](/purview/records-management) for retention labels that provide more configuration options for high-value documents and emails that typically have stricter compliance requirements. Required if you want to use disposition review.| 
   
     # [Data Lifecycle Management](#tab/dlm)
 
@@ -579,6 +574,11 @@ To create retention policies, use **Data Lifecycle Management** from the Microso
         Follow the configuration instructions and if you need more help, see [Use file plan to create and manage retention labels](/purview/file-plan-manager).
 
     ---
+
+    After you've created the retention labels, you can then apply them to documents and emails:
+
+    - [Publish retention labels and apply them in apps](/purview/create-apply-retention-labels)
+    - [Automatically apply a retention label to retain or delete content](/purview/apply-retention-labels-automatically)
 
 3. If you applied retention labels, monitor them to see how they're being used.
 
