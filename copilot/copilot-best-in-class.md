@@ -93,62 +93,7 @@ This article applies to:
 - Conditional Access based on identity risk
 - Detect noncompliant usage
 
-## Step 1 - Restrict SharePoint Search (RSS)
-
-✅ **Copilot goal: Disable RSS**
-
-As you get ready for Copilot, you review and configure the correct permissions on your SharePoint sites. In [Baseline](need link), you might have enabled Restricted SharePoint Search (RSS).
-
-RSS is a temporary solution that gives you time to review and configure the correct permissions on your SharePoint sites. You add the reviewed & corrected sites to an allowed list.
-
-- If your SharePoint site permissions are set correctly, then disable RSS.
-
-  When disabled, SharePoint search accesses all your SharePoint sites. When users enter prompts, Copilot can show data from all your sites, which shows more relevant and complete information in the response.
-
-  The goal is to disable RSS and allow SharePoint search to access all your sites. This action gives Copilot more data to work with, which can improve the accuracy of the responses.
-
-  **OR**
-
-- If you enabled RSS, then add more sites to the allowed list. You can add up to 100 sites to the allowed list. Copilot can show data from the allowed list sites in user prompts.
-
-  Remember, your goal is to review & configure the correct permissions on your SharePoint sites, and disable RSS.
-
-To learn more, see:
-
-- [Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search)
-- [Curate the allowed list for Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search-allowed-list)
-- [Blog - Introducing Restricted SharePoint Search to help you get started with Copilot for Microsoft 365](https://techcommunity.microsoft.com/t5/microsoft-365-copilot/introducing-restricted-sharepoint-search-to-help-you-get-started/ba-p/4071060)
-
-### Disable RSS and remove sites from the allowed list
-
-1. Use the `Set-SPOTenantRestrictedSearchMode` PowerShell cmdlet to disable RSS.
-1. Use the `Remove-SPOTenantRestrictedSearchAllowedSite` PowerShell cmdlet to remove sites from the allowed list.
-
-To learn more about these cmdlets, see [Use PowerShell Scripts for Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search-admin-scripts).
-
-### Add sites to the RSS allowed list
-
-1. Get a list of the sites that you want to add to the allowed list.
-
-    - **Option 1 - Use the Sharing links report**
-
-      1. Sign in to the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) as a SharePoint administrator.
-      1. Select **Reports** > **Data access governance** > **Sharing links** > **View reports**.
-      1. Select one of the reports, like **"Anyone" links**. This report shows a list of sites with the highest number of **Anyone** links created. These links let anyone access files and folders without signing in. These sites are candidates to allow in tenant/org wide search.
-
-    - **Option 2 - Use the sort and filter options for Active sites**
-
-      1. Sign in to the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) as a SharePoint administrator.
-      1. Select **Sites** > **Active sites**.
-      1. Use the sort and filter options to find the most active site, including page views. These sites are candidates to allow in a tenant/organization wide search.
-
-          :::image type="content" source="media/copilot-best-in-class/sharepoint-active-sites-filter.png" alt-text="In SharePoint admin center, select active sites and then use the All sites filter.":::
-
-2. Use the `Add-SPOTenantRestrictedSearchAllowedList` PowerShell cmdlet to add the sites to the allowed list.
-
-    To learn more about this cmdlet, see [Use PowerShell Scripts for Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search-admin-scripts).
-
-## Step 2 - Use SharePoint Advanced Management (SAM) features
+## Step 1 - Use SharePoint Advanced Management (SAM) features
 
 In addition to the SharePoint steps you completed in [Baseline](add link), there are more features in [SharePoint Advanced Management (SAM)](/sharepoint/get-ready-copilot-sharepoint-advanced-management) that can help you get ready for Copilot.
 
@@ -156,14 +101,44 @@ In addition to the SharePoint steps you completed in [Baseline](add link), there
 
 [!div class="checklist"]
 
+- Declutter data sources by finding and removing inactive SharePoint sites.
 - Identify SharePoint sites with overshared or sensitive content.
 - Use policy to restrict access to SharePoint sites that are business critical or have sensitive content.
-- Declutter data sources by finding and removing inactive SharePoint sites.
 - Monitor site changes.
 
 This section walks you through different SAM features that can help you get your organization and your data ready for Copilot.
 
 To learn more about SAM + Copilot, see [Get ready for Copilot with SharePoint Advanced Management](/sharepoint/get-ready-copilot-sharepoint-advanced-management).
+
+### Find and cleanup inactive sites
+
+✅ **Create a [site lifecycle management policy](/sharepoint/site-lifecycle-management#create-an-inactive-site-policy) that finds inactive sites**
+
+A [site lifecycle management policy](/sharepoint/site-lifecycle-management#create-an-inactive-site-policy) automatically detects inactive sites and sends a notification email to the site owners. When you use the email, the site owners can confirm that the site is still active.
+
+Copilot can show data from these inactive sites in user prompts, which can lead to inaccurate and cluttered Copilot results.
+
+The policy also creates a report that you can download and review. The report shows the inactive sites, the last activity date, and the email notification status.
+
+1. Sign in to the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) as a SharePoint administrator.
+2. Expand **Policies** > select **Site lifecycle management**.
+3. Select **Create a policy**, enter your parameters, and finish your policy.
+4. When the policy runs and finds inactive sites, the policy automatically emails the site owners. It also creates the report. Use this report to work with the site owners to determine the next steps, like deleting the site.
+
+To learn more about this policy and report, see [site lifecycle management policy](/sharepoint/site-lifecycle-management#create-an-inactive-site-policy).
+
+#### Best practices for managing inactive SharePoint sites
+
+- **Use the inactive sites policy report** and work with the site owners on the future of their site. The site owners should confirm if the site is still active:
+
+  - If the site isn't active, the owner can move any files they want to keep, and then delete the site.
+  - If the site is still active, the owner can review the files, and update the data so it's accurate.
+
+  This action helps reduce outdated content that clutters Copilot's data source, which improves the accuracy of Copilot responses.
+
+- **Give the site owners a timeline** to complete these tasks. If they don't complete the task within the timeframe, admins can [delete the inactive site](/sharepoint/delete-site-collection).
+
+- **[Delete the inactive site](/sharepoint/delete-site-collection)**. Before you delete a site, inform the site owners and subsite owners of the changes, why the site is being deleted, and when it'll be deleted.
 
 ### Identify sites with overshared or sensitive content
 
@@ -178,7 +153,7 @@ Overshared sites are sites that are shared with more people than needed. Copilot
 
     | Report | Description | Task |
     | --- | --- | --- |
-    | **Sharing links** | Shows the sites that have sharing links, including links shared with anyone, shared with people in your organization, and shared with specific people outside of your work or school. | Review these sites. <br/><br/>Make sure the sites are shared with only the users or groups that need access. Remove sharing for unneeded users and groups. |
+    | **Sharing links** | Shows the sites that have sharing links, including links shared with **Anyone**, shared with **People in your organization**, and shared with **Specific people** outside of your work or school. | Review these sites. <br/><br/>Make sure the sites are shared with only the users or groups that need access. Remove sharing for unneeded users and groups. |
     | **Sensitivity labels applied to files** | Shows sites with Office files that have sensitivity labels. | Review these sites.<br/><br/> Make sure the correct labels are applied. Update the labels as needed. To learn more, see [Identify and label sensitive data](#identify-and-label-sensitive-data) (in this article). |
     | **Shared with `Everyone except external users` (EEEU)** | Shows the sites that are shared with everyone in your organization except external users. | Review these sites. <br/><br/> Determine if EEEU permissions are appropriate. Many sites with EEEU are overshared. Remove the EEEU permission and assign to the users or groups as needed. |
 
@@ -239,36 +214,6 @@ To learn more, see [Restricted Access Control (RAC)](/sharepoint/restricted-acce
 > - Consider blocking downloads from selected sites using a block download policy. For example, [block the download of Teams meeting recordings and transcripts](/microsoftteams/block-download-meeting-recording).
 > - Apply encryption with "extract rights" enforced on business-critical office documents. To learn more, see [Microsoft Purview data security and compliance protections for generative AI apps](/purview/ai-microsoft-purview).
 
-### Find and cleanup inactive sites
-
-✅ **Create a [site lifecycle management policy](/sharepoint/site-lifecycle-management#create-an-inactive-site-policy) that finds inactive sites**
-
-A [site lifecycle management policy](/sharepoint/site-lifecycle-management#create-an-inactive-site-policy) automatically detects inactive sites and sends a notification email to the site owners. When you use the email, the site owners can confirm that the site is still active.
-
-Copilot can show data from these inactive sites in user prompts, which can lead to inaccurate and cluttered Copilot results.
-
-The policy also creates a report that you can download and review. The report shows the inactive sites, the last activity date, and the email notification status.
-
-1. Sign in to the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) as a SharePoint administrator.
-2. Expand **Policies** > select **Site lifecycle management**.
-3. Select **Create a policy**, enter your parameters, and finish your policy.
-4. When the policy runs and finds inactive sites, the policy automatically emails the site owners. It also creates the report. Use this report to work with the site owners to determine the next steps, like deleting the site.
-
-To learn more about this policy and report, see [site lifecycle management policy](/sharepoint/site-lifecycle-management#create-an-inactive-site-policy).
-
-#### Best practices for managing inactive SharePoint sites
-
-- **Use the inactive sites policy report** and work with the site owners on the future of their site. The site owners should confirm if the site is still active:
-
-  - If the site isn't active, the owner can move any files they want to keep, and then delete the site.
-  - If the site is still active, the owner can review the files, and update the data so it's accurate.
-
-  This action helps reduce outdated content that clutters Copilot's data source, which improves the accuracy of Copilot responses.
-
-- **Give the site owners a timeline** to complete these tasks. If they don't complete the task within the timeframe, admins can [delete the inactive site](/sharepoint/delete-site-collection).
-
-- **[Delete the inactive site](/sharepoint/delete-site-collection)**. Before you delete a site, inform the site owners and subsite owners of the changes, why the site is being deleted, and when it'll be deleted.
-
 ### Monitor changes
 
 ✅ **Run the [change history report](/sharepoint/change-history-report) in the SharePoint admin center**
@@ -301,6 +246,62 @@ Use this report to review the changes made to your SharePoint sites and organiza
 - **Apply [restricted access control (RAC)](/SharePoint/restricted-access-control)** to sites that appear to be overshared. Inform the site owners of the changes and why.
 
   If your organization has a [Zero Trust](/security/zero-trust/copilots/zero-trust-microsoft-365-copilot) mindset, then you can apply RAC to all sites. Then, adjust the permissions as needed. If you have many sites, this action can help you quickly secure your sites. But, it can also cause disruptions to users. Make sure you communicate the changes and the reasons for the changes.
+
+## Step 2 - Restrict SharePoint Search (RSS)
+
+✅ **Copilot goal: Disable RSS**
+
+As you get ready for Copilot, you review and configure the correct permissions on your SharePoint sites. In [Baseline](need link), you might have enabled Restricted SharePoint Search (RSS).
+
+RSS is a temporary solution that gives you time to review and configure the correct permissions on your SharePoint sites. You add the reviewed & corrected sites to an allowed list.
+
+- If your SharePoint site permissions are set correctly, then disable RSS.
+
+  When disabled, SharePoint search accesses all your SharePoint sites. When users enter prompts, Copilot can show data from all your sites, which shows more relevant and complete information in the response.
+
+  The goal is to disable RSS and allow SharePoint search to access all your sites. This action gives Copilot more data to work with, which can improve the accuracy of the responses.
+
+  **OR**
+
+- If you enabled RSS, then add more sites to the allowed list. You can add up to 100 sites to the allowed list. Copilot can show data from the allowed list sites in user prompts.
+
+  Remember, your goal is to review & configure the correct permissions on your SharePoint sites, and disable RSS.
+
+To learn more, see:
+
+- [Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search)
+- [Curate the allowed list for Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search-allowed-list)
+- [Blog - Introducing Restricted SharePoint Search to help you get started with Copilot for Microsoft 365](https://techcommunity.microsoft.com/t5/microsoft-365-copilot/introducing-restricted-sharepoint-search-to-help-you-get-started/ba-p/4071060)
+
+### Disable RSS and remove sites from the allowed list
+
+1. Use the `Set-SPOTenantRestrictedSearchMode` PowerShell cmdlet to disable RSS.
+1. Use the `Remove-SPOTenantRestrictedSearchAllowedSite` PowerShell cmdlet to remove sites from the allowed list.
+
+To learn more about these cmdlets, see [Use PowerShell Scripts for Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search-admin-scripts).
+
+### Add sites to the RSS allowed list
+
+1. Get a list of the sites that you want to add to the allowed list.
+
+    - **Option 1 - Use the Sharing links report**
+
+      1. Sign in to the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) as a SharePoint administrator.
+      1. Select **Reports** > **Data access governance** > **Sharing links** > **View reports**.
+      1. Select one of the reports, like **"Anyone" links**. This report shows a list of sites with the highest number of **Anyone** links created. These links let anyone access files and folders without signing in. These sites are candidates to allow in tenant/org wide search.
+
+    - **Option 2 - Use the sort and filter options for Active sites**
+
+      1. Sign in to the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) as a SharePoint administrator.
+      1. Select **Sites** > **Active sites**.
+      1. Use the sort and filter options to find the most active site, including page views. These sites are candidates to allow in a tenant/organization wide search.
+
+          :::image type="content" source="media/copilot-best-in-class/sharepoint-active-sites-filter.png" alt-text="In SharePoint admin center, select active sites and then use the All sites filter.":::
+
+2. Use the `Add-SPOTenantRestrictedSearchAllowedList` PowerShell cmdlet to add the sites to the allowed list.
+
+    To learn more about this cmdlet, see [Use PowerShell Scripts for Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search-admin-scripts).
+
 
 ## Step 3 - Use Microsoft Purview features
 
