@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 10/17/2024
+ms.date: 10/21/2024
 audience: Admin
 ms.topic: get-started
 ms.service: microsoft-365-copilot
@@ -533,44 +533,48 @@ To learn more, see [Adaptive Protection policies](/purview/insider-risk-manageme
 
 ✅ **Use [data lifecycle management](/purview/data-lifecycle-management) for automatic data retention or deletion**
 
-[Data lifecycle management](/purview/data-lifecycle-management) uses retention policies and optionally, retention labels. Perhaps best known for retaining content for compliance reasons, these policies and labels can also automatically delete old and stale information. As a result, Copilot is less likely to return inaccurate information from out-of-date documents and emails. 
+[Data lifecycle management](/purview/data-lifecycle-management) uses retention policies and optionally, retention labels. They're typically used to retain content for compliance reasons and can also automatically delete stale information.
 
-Retention policies can also retain Copilot prompts and responses for compliance requirements, even if [users delete them](https://support.microsoft.com/office/delete-your-microsoft-365-copilot-activity-history-76de8afa-5eaf-43b0-bda8-0076d6e0390f). For more information about retaining Copilot prompts and responses, see [Learn about retention for Copilot](/purview/retention-policies-copilot).
+For example, your organization might have regulatory requirements that require you to keep content for a certain period of time. Or, you might have content that you want to delete because it's old, outdated, or no longer needed.
 
-Settings in a retention policy apply at the container level, like a SharePoint site or an Exchange mailbox. These settings are then automatically inherited by the data in that container. If you need [exceptions for individual emails or documents](/purview/create-retention-labels-data-lifecycle-management), use retention labels. For example, you have a retention policy to delete data in OneDrive if it's older than one year, but users can apply retention labels to keep specific documents from automatic deletion.
+If you have stale data in your organization, then create and use retention policies. These policies help Copilot return more accurate information from your documents and emails.
 
-1. To create your retention policies sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as a Compliance Administrator.
+Retention policies can also retain Copilot prompts and responses for compliance requirements, even if [users delete their Copilot activity](https://support.microsoft.com/office/delete-your-microsoft-365-copilot-activity-history-76de8afa-5eaf-43b0-bda8-0076d6e0390f). For more information about retaining Copilot prompts and responses, see [Learn about retention for Copilot](/purview/retention-policies-copilot).
+
+Settings in a retention policy apply at the container level, like a SharePoint site or an Exchange mailbox. These settings are automatically inherited by the data in that container. If you need [exceptions for individual emails or documents](/purview/create-retention-labels-data-lifecycle-management), then use retention labels. For example, you have a retention policy to delete data in OneDrive if the data is older than one year. But, users can apply retention labels to keep specific documents from automatic deletion.
+
+1. To create retention policies, sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as a Compliance Administrator.
 
     To learn more about the permissions, see [Data Lifecycle Management - Permissions](/purview/get-started-with-data-lifecycle-management#permissions-for-retention-policies-and-retention-labels).
 
-3. Select **Solutions** > **Data Lifecycle Management** > **Policies** > **Retention policies**.
+2. Select **Solutions** > **Data Lifecycle Management** > **Policies** > **Retention policies**.
 
-4. Select **New retention policy** and follow the instructions. For more help, see [Create and configure retention policies](/purview/create-retention-policies).
+3. Select **New retention policy** and follow the instructions. For more speicific information, see [Create and configure retention policies](/purview/create-retention-policies).
 
-5. If needed, create and apply retention labels.
-    
-   You can use either **Data Lifecycle Management** or **Records Management** to create the labels. Records management includes more configuration options, such as a [disposition review process](/purview/disposition) if you need manual confirmation before items are automatically deleted.
+4. If needed, create and apply retention labels.
 
-    | Data Lifecycle Management | Records Management |
-    | --- | --- |
-    | [Data Lifecycle Management](/purview/data-lifecycle-management) for retention policies that manage automatic retention and deletion for Microsoft 365 workloads and Microsoft 365 Copilot interactions, retention labels for exceptions.| [Records Management](/purview/records-management) for retention labels that provide more configuration options for high-value documents and emails that typically have stricter compliance requirements. Required if you want to use disposition review.| 
+   You can use either **Data Lifecycle Management** or **Records Management** to create the labels. Records management includes more configuration options, like a [disposition review process](/purview/disposition). A disposition review is helpful if you need manual confirmation before items are automatically deleted.
   
     # [Data Lifecycle Management](#tab/dlm)
 
-    From **Data Lifecycle Management**, select **Retention labels** > **Create a label**.
+    Use [Data Lifecycle Management](/purview/data-lifecycle-management) for retention policies that manage automatic retention and deletion for Microsoft 365 workloads & Microsoft 365 Copilot interactions, and retention labels for any exceptions.
+
+    - From **Data Lifecycle Management**, select **Retention labels** > **Create a label**.
 
     Follow the configuration instructions and if you need more help, see [How to create retention labels for data lifecycle management](/purview/create-retention-labels-data-lifecycle-management#how-to-create-retention-labels-for-data-lifecycle-management).
 
      # [Records management](#tab/rm)
 
-    1. You need to be signed in to the [Microsoft Purview portal](https://purview.microsoft.com/) as a member of the Records Management admin role group.
+    Use [Records Management](/purview/records-management) for retention labels that provide more configuration options for high-value documents and emails that typically have stricter compliance requirements. If you want to use a disposition review, then you must use Records Management.
+
+    1. Sign in to the [Microsoft Purview portal](https://purview.microsoft.com/) as a member of the Records Management admin role group.
 
         To learn more about the permissions, see [Records management - Permissions](/purview/get-started-with-records-management#permissions)
 
     2. Select **Solutions** > **Records Management**.
 
     3. Select **File plan** > **Create a label** > **Retention label**.
-    
+
         Follow the configuration instructions and if you need more help, see [Use file plan to create and manage retention labels](/purview/file-plan-manager).
 
     ---
@@ -580,7 +584,7 @@ Settings in a retention policy apply at the container level, like a SharePoint s
     - [Publish retention labels and apply them in apps](/purview/create-apply-retention-labels)
     - [Automatically apply a retention label to retain or delete content](/purview/apply-retention-labels-automatically)
 
-3. If you applied retention labels, monitor them to see how they're being used.
+5. If you applied retention labels, monitor them to see how they're being used.
 
     1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as one of the admins listed at:
 
@@ -655,12 +659,15 @@ Two options:
 
 ✅ **Use [eDiscovery](/purview/ediscovery-overview) to analyze Copilot user prompts and responses**
 
+
+
 **??PENDING CALL WITH ROBERT MAZZOLI**
 
 Prompts are responses are in AI Hub; AI Hub includes in eDiscovery
 
 Outstanding ??
 Seems there's two options for Copilot:
+
 - Use content search in general to find something
 - Use the search & delete article
 
