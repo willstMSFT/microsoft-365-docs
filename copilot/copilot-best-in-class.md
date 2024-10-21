@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 10/17/2024
+ms.date: 10/21/2024
 audience: Admin
 ms.topic: get-started
 ms.service: microsoft-365-copilot
@@ -326,21 +326,23 @@ To learn more about Microsoft Purview, see [Microsoft 365 Copilot in Microsoft P
 
 The sensitivity labels can also affect Copilot results, including:
 
-- The label settings include protection actions, such as access to sites, customizable headers and footers, and encryption
+- The label settings include protection actions, like access to sites, customizable headers and footers, and encryption.
 - If the label applies encryption, Copilot checks the usage rights for the user. For Copilot to return data from that item, the user must be granted permissions to copy from it.
-- In Copilot Business Chat that can reference data from different types of items, sensitivity labels are visible in returned results and the latest response displays the sensitivity label with the [highest priority](/purview/sensitivity-labels#label-priority-order-matters).
+- In Copilot Business Chat that can reference data from different types of items, sensitivity labels are visible in returned results. The latest response displays the sensitivity label with the [highest priority](/purview/sensitivity-labels#label-priority-order-matters).
 - If Copilot creates new content from labeled items, the sensitivity label from the source item is automatically inherited.
-- Sensitivity labels go with the content, even if it's moved outside Microsoft 365.  
+- Sensitivity labels go with the content, even if the content moves outside Microsoft 365.
 
-This section walks you through the steps to create and use the default sensitivity labels from Microsoft Purview. If you need to use your own label names and configurations, you can create these manually or edit the default labels. You can't create default labels if you've already created your own sensitivity labels. To learn more about sensitivity labels, see:
+This section walks you through the steps to create and use the default sensitivity labels from Microsoft Purview. If you need to use your own label names and configurations, then create the labels manually or edit the default labels. If you already created your own sensitivity labels, then you can't create the default labels. To learn more about sensitivity labels, see:
 
 - [Get started with sensitivity labels](/purview/get-started-with-sensitivity-labels)
 - [Default labels and policies to protect your data](/purview/mip-easy-trials)
 - [Microsoft Purview strengthens information protection for Copilot](/purview/ai-microsoft-purview#microsoft-purview-strengthens-information-protection-for-copilot)
 
 > [!NOTE]
-> This section doesn't include applying sensitivity labels to containers, such as SharePoint sites. When sensitivity labels are configured for groups and sites, items in the container don't inherit the sensitivity label, so there's no direct impact to Copilot responses. However, the label settings can restrict access to the container to provide an extra layer of security, such as enforcing Conditional Access and setting the default sharing link for a site. As a result, if a user can't access the site, neither can Copilot on behalf of that user.
-> 
+> You can enable sensitivity labels at the container-level, like SharePoint sites. When sensitivity labels are configured for groups and sites, items in the container don't inherit the sensitivity label. So, there isn't a direct impact to Copilot responses.
+>
+> However, the label settings can restrict access to the container, which provides an extra layer of security, like enforcing Conditional Access and setting the default sharing link for a site. As a result, if a user can't access the site, Copilot can't access the site on behalf of that user.
+>
 > To learn more, see [Use sensitivity labels to protect content in Microsoft Teams, Microsoft 365 groups, and SharePoint sites](/purview/sensitivity-labels-teams-groups-sites).
 
 #### 1. Create the default sensitivity labels
@@ -348,8 +350,8 @@ This section walks you through the steps to create and use the default sensitivi
 1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as an admin in one of the groups listed at [Sensitivity labels - permissions](/purview/get-started-with-sensitivity-labels#permissions-required-to-create-and-manage-sensitivity-labels).
 
 2. Select **Solutions** > **AI Hub** > **Overview**.
-3. From the **Recommendations** section, locate **Fortify your data security for AI** to create the default labels and their policies.
-4. To see or edit the default labels, or if you need to create your own labels, select **Information protection** > **Sensitivity labels**. You might have to select **Refresh**.
+3. In the **Recommendations** section, select **Fortify your data security for AI**. This step creates the default labels and their policies.
+4. To see or edit the default labels, or to create your own labels, select **Information protection** > **Sensitivity labels**. You might have to select **Refresh**.
 
 When you have sensitivity labels:
 
@@ -359,21 +361,25 @@ When you have sensitivity labels:
 
 #### 2. Publish your labels and educate your users
 
-1. If you're using the default sensitivity labels that were created for you, they're automatically published to all users, even if you edit them. If you created your own sensitivity labels, you'll need to add them to a publishing policy before users can manually apply them in their Office apps. These policies also have settings that you'll want to consider, such as a default label, and require users to label their data.  
+1. If you're using the default sensitivity labels, the labels are automatically published to all users, even if you edit the labels.
+
+    If you created your own sensitivity labels, then add your labels to a publishing policy. When they're published, users can manually apply the labels in their Office apps. These publishing policies also have settings that you need to consider, like a default label and requiring users to label their data.
 
     To learn more, see [Publish sensitivity labels by creating a label policy](/purview/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
 
-2. **Educate your users** and provide instructions when to apply the correct sensitivity label. In addition to manually applying labels, the default label policy includes applying the **General \ All Employees (unrestricted)** label as the default label. While this offers a good base layer of protection, users should change the label if necessary, particularly for more sensitive content that requires encryption.
+2. Educate your users and provide guidance on when to apply the correct sensitivity label.
+
+    In addition to manually applying labels, the default label policy includes applying the **General \ All Employees (unrestricted)** label as the default label. This label offers a base layer of protection. But, users should change the label if needed, especially for more sensitive content that requires encryption.
 
     To help you with this step, see [End-user documentation for sensitivity labels](/purview/get-started-with-sensitivity-labels#end-user-documentation-for-sensitivity-labels).
 
-3. **Monitor your labels**. Select **Information protection** > **Reports**. You can see the usage of your labels.
+3. Monitor your labels. Select **Information protection** > **Reports**. You can see the usage of your labels.
 
 #### 3. Enable sensitivity labels for files in SharePoint and OneDrive
 
-There's a one-time configuration required to enable sensitivity labels for SharePoint and OneDrive. It's also required for Microsoft 365 Copilot to access encrypted files stored in these locations.
+This step is a one-time configuration that's required to enable sensitivity labels for SharePoint and OneDrive. It's also required for Microsoft 365 Copilot to access encrypted files stored in these locations.
 
-As with all tenant-level configuration changes for SharePoint and OneDrive, it takes about 15 minutes for the change to take effect. Then users can select sensitivity labels in Office on the web and you can create policies that automatically label files in these locations. 
+As with all tenant-level configuration changes for SharePoint and OneDrive, it takes about 15 minutes for the change to take effect. Then users can select sensitivity labels in Office on the web and you can create policies that automatically label files in these locations.
 
 You have two options:
 
@@ -381,27 +387,27 @@ You have two options:
 
   :::image type="content" source="media/copilot-best-in-class/purview-sensitivity-labels-prompt.png" alt-text="In Microsoft Purview Information Protection, turn on sensitivity labels for SharePoint and OneDrive." lightbox="media/copilot-best-in-class/purview-sensitivity-labels-prompt.png":::
 
-- **Option 2**: Use the `[Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant)` Windows PowerShell cmdlet
+- **Option 2**: Use the `[Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant)` Windows PowerShell cmdlet.
 
 To learn more about this configuration, see [Enable sensitivity labels for files in SharePoint and OneDrive](/purview/sensitivity-labels-sharepoint-onedrive-files).
 
 > [!TIP]
-> Although not related to Copilot, now is a good time to [enable co-authoring for encrypted files](/purview/sensitivity-labels-coauthoring), if it's not already enabled. This setting ensures the best user experience for collaboration. 
+> Although not related to Copilot, now is a good time to [enable co-authoring for encrypted files](/purview/sensitivity-labels-coauthoring), if it's not already enabled. This setting ensures the best user experience for collaboration.
 
 #### 4. Set default sensitivity labels for your SharePoint document libraries
 
-This configuration is appropriate when your document libraries store files with the same level of sensitivity. 
+This configuration is appropriate when your document libraries store files with the same level of sensitivity.
 
 The SharePoint site admin can do this task.
 
 1. In your SharePoint site, select **Documents** > **Settings** icon > **Library settings** > **More library settings**.
-2. In **Default sensitivity labels** (Apply label to items in this list or library), select a sensitivity label from the drop-down list.
+2. In **Default sensitivity labels** (Apply label to items in this list or library), select a sensitivity label from the drop-down list, like **Confidential**
 3. **Save** your changes.
 
 When set:
 
 - SharePoint automatically applies the label to the files, which can include [files with a lower sensitivity label](/purview/sensitivity-labels-sharepoint-default-label#will-an-existing-label-be-overridden).
-- It provides a baseline level of protection that's specfiic to the document library without the requirement for content inspection or relying on users.
+- It provides a baseline level of protection that's specific to the document library. It doesn't require content inspection and doesn't rely on end users.
 
 To learn more, see:
 
@@ -410,15 +416,18 @@ To learn more, see:
 
 #### 5. Automatically apply sensitivity labels to files and emails
 
-Automatic labeling helps to correctly identify a higher priority label for more sensitive information that needs more restrictive settings than a default label:
+You can automatically apply labels to files in SharePoint sites, OneDrive accounts, Exchange emails, and Office files. Automatic labeling helps to identify a higher priority label for more sensitive information that might need a more restrictive setting than a default label.
 
-- When you use this labeling method as a label setting, it's using client-side auto-labeling. Users see the label automatically applied in their Office apps, or you can recommend the label to them.
-- When you use an auto-labeling policy, it's using service-side auto-labeling. As the term suggests, there's no user interaction and you can label at scale for files at rest in OneDrive and SharePoint, and all emails that are sent and received.
+- For the specific steps and information that you need to know, including learning about simulation mode for auto-labeling policies, see [Apply a sensitivity label to content automatically](/purview/apply-sensitivity-label-automatically).
 
-If you created the default sensitivity labels and policies, they include both [client-side auto-labeling](/purview/mip-easy-trials#client-side-auto-labeling) and [service-side auto-labeling](/purview/mip-easy-trials#service-side-auto-labeling) to detect credit card numbers and personal data. These default settings make it easy for you to test the auto-labeling functionality. Then you can edit these or create your own auto-labeling settings to identify data in your organization that needs a specific sensitivity label to apply protection actions, such as encryption.  
+**Client-side auto-labeling vs. service-side auto-labeling**:
 
-For the specific steps and information that you need to know, including learning about simulation mode for auto-labeling policies, see [Apply a sensitivity label to content automatically](/purview/apply-sensitivity-label-automatically).
+- When you auto-label documents and emails in use by Word, Excel, PowerPoint, and Outlook, it's using client-side auto-labeling. Users see the label automatically applied in their Office apps, or you can recommend the appropriate label to the user.
+- When you auto-label documents stored in all SharePoint or OneDrive sites, and all emails sent using Exchange Online, it's using service-side auto-labeling. There isn't any user interaction. You can label at scale for files at rest in OneDrive and SharePoint, and all emails that are sent and received.
 
+If you created the default sensitivity labels and policies, they include both [client-side auto-labeling](/purview/mip-easy-trials#client-side-auto-labeling) and [service-side auto-labeling](/purview/mip-easy-trials#service-side-auto-labeling) to detect credit card numbers and personal data. These default settings make it easy for you to test the auto-labeling functionality.
+
+You can edit or create your own auto-labeling settings to help identify your organization data that needs a specific sensitivity label to apply protection actions, like encryption.
 
 ### Detect and protect sensitive information from unauthorized sharing or leakage
 
@@ -533,54 +542,58 @@ To learn more, see [Adaptive Protection policies](/purview/insider-risk-manageme
 
 ✅ **Use [data lifecycle management](/purview/data-lifecycle-management) for automatic data retention or deletion**
 
-[Data lifecycle management](/purview/data-lifecycle-management) uses retention policies and optionally, retention labels. Perhaps best known for retaining content for compliance reasons, these policies and labels can also automatically delete old and stale information. As a result, Copilot is less likely to return inaccurate information from out-of-date documents and emails. 
+[Data lifecycle management](/purview/data-lifecycle-management) uses retention policies and optionally, retention labels. They're typically used to retain content for compliance reasons and can also automatically delete stale information.
 
-Retention policies can also retain Copilot prompts and responses for compliance requirements, even if [users delete them](https://support.microsoft.com/office/delete-your-microsoft-365-copilot-activity-history-76de8afa-5eaf-43b0-bda8-0076d6e0390f). For more information about retaining Copilot prompts and responses, see [Learn about retention for Copilot](/purview/retention-policies-copilot).
+For example, your organization might have regulatory requirements that require you to keep content for a certain period of time. Or, you might have content that you want to delete because it's old, outdated, or no longer needed.
 
-Settings in a retention policy apply at the container level, like a SharePoint site or an Exchange mailbox. These settings are then automatically inherited by the data in that container. If you need [exceptions for individual emails or documents](/purview/create-retention-labels-data-lifecycle-management), use retention labels. For example, you have a retention policy to delete data in OneDrive if it's older than one year, but users can apply retention labels to keep specific documents from automatic deletion.
+If you have stale data in your organization, then create and use retention policies. These policies help Copilot return more accurate information from your documents and emails.
 
-1. To create your retention policies sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as a Compliance Administrator.
+Retention policies can also retain Copilot prompts and responses for compliance requirements, even if [users delete their Copilot activity](https://support.microsoft.com/office/delete-your-microsoft-365-copilot-activity-history-76de8afa-5eaf-43b0-bda8-0076d6e0390f). To learn more, see [Learn about retention for Copilot](/purview/retention-policies-copilot).
+
+Settings in a retention policy apply at the container level, like a SharePoint site or an Exchange mailbox. These settings are automatically inherited by the data in that container. If you need [exceptions for individual emails or documents](/purview/create-retention-labels-data-lifecycle-management), then use retention labels. For example, you have a retention policy to delete data in OneDrive if the data is older than one year. But, users can apply retention labels to keep specific documents from automatic deletion.
+
+1. To create retention policies, sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as a Compliance Administrator.
 
     To learn more about the permissions, see [Data Lifecycle Management - Permissions](/purview/get-started-with-data-lifecycle-management#permissions-for-retention-policies-and-retention-labels).
 
-3. Select **Solutions** > **Data Lifecycle Management** > **Policies** > **Retention policies**.
+2. Select **Solutions** > **Data Lifecycle Management** > **Policies** > **Retention policies**.
 
-4. Select **New retention policy** and follow the instructions. For more help, see [Create and configure retention policies](/purview/create-retention-policies).
+3. Select **New retention policy** and follow the instructions. For more specific information, see [Create and configure retention policies](/purview/create-retention-policies).
 
-5. If needed, create and apply retention labels.
-    
-   You can use either **Data Lifecycle Management** or **Records Management** to create the labels. Records management includes more configuration options, such as a [disposition review process](/purview/disposition) if you need manual confirmation before items are automatically deleted.
+4. If needed, create and apply retention labels.
 
-    | Data Lifecycle Management | Records Management |
-    | --- | --- |
-    | [Data Lifecycle Management](/purview/data-lifecycle-management) for retention policies that manage automatic retention and deletion for Microsoft 365 workloads and Microsoft 365 Copilot interactions, retention labels for exceptions.| [Records Management](/purview/records-management) for retention labels that provide more configuration options for high-value documents and emails that typically have stricter compliance requirements. Required if you want to use disposition review.| 
+   You can use either **Data Lifecycle Management** or **Records Management** to create the labels. Records management includes more configuration options, like a [disposition review process](/purview/disposition). A disposition review is helpful if you need manual confirmation before items are automatically deleted.
   
     # [Data Lifecycle Management](#tab/dlm)
 
-    From **Data Lifecycle Management**, select **Retention labels** > **Create a label**.
+    Use [Data Lifecycle Management](/purview/data-lifecycle-management) for retention policies that manage automatic retention and deletion for Microsoft 365 workloads & Microsoft 365 Copilot interactions, and retention labels for any exceptions.
+
+    - From **Data Lifecycle Management**, select **Retention labels** > **Create a label**.
 
     Follow the configuration instructions and if you need more help, see [How to create retention labels for data lifecycle management](/purview/create-retention-labels-data-lifecycle-management#how-to-create-retention-labels-for-data-lifecycle-management).
 
-     # [Records management](#tab/rm)
+     # [Records Management](#tab/rm)
 
-    1. You need to be signed in to the [Microsoft Purview portal](https://purview.microsoft.com/) as a member of the Records Management admin role group.
+    Use [Records Management](/purview/records-management) for retention labels that provide more configuration options for high-value documents and emails that typically have stricter compliance requirements. If you want to use a disposition review, then you must use Records Management.
+
+    1. Sign in to the [Microsoft Purview portal](https://purview.microsoft.com/) as a member of the Records Management admin role group.
 
         To learn more about the permissions, see [Records management - Permissions](/purview/get-started-with-records-management#permissions)
 
     2. Select **Solutions** > **Records Management**.
 
     3. Select **File plan** > **Create a label** > **Retention label**.
-    
+
         Follow the configuration instructions and if you need more help, see [Use file plan to create and manage retention labels](/purview/file-plan-manager).
 
     ---
 
-    After you've created the retention labels, you can then apply them to documents and emails:
+    After you've created the retention labels, you can then apply the labels to documents and emails:
 
     - [Publish retention labels and apply them in apps](/purview/create-apply-retention-labels)
     - [Automatically apply a retention label to retain or delete content](/purview/apply-retention-labels-automatically)
 
-3. If you applied retention labels, monitor them to see how they're being used.
+5. If you applied retention labels, monitor them to see how they're being used.
 
     1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as one of the admins listed at:
 
@@ -655,12 +668,13 @@ Two options:
 
 ✅ **Use [eDiscovery](/purview/ediscovery-overview) to analyze Copilot user prompts and responses**
 
-**??PENDING CALL WITH ROBERT MAZZOLI**
+**IN-PROGRESS**
 
 Prompts are responses are in AI Hub; AI Hub includes in eDiscovery
 
 Outstanding ??
 Seems there's two options for Copilot:
+
 - Use content search in general to find something
 - Use the search & delete article
 
@@ -682,7 +696,7 @@ When you use Copilot, eDiscovery helps you:
 
 To learn more, see:
 
-- [Search for and optionally delete Copilot interactions in eDiscovery](/purview/ediscovery-search-and-delete-copilot-data)
+- [Search for and optionally delete Copilot interactions in eDiscovery](/purview/edisc-search-copilot-data)
 - [eDiscovery Premium](/purview/ediscovery-premium-get-started)
 
 
@@ -693,3 +707,10 @@ AI Hub:
 Search for Copilot in Purview TOC
 
 https://learn.microsoft.com/viva/insights/org-team-insights/copilot-dashboard
+
+"content search" is included automatically in new eDisc cases, just say search
+
+can do only search with E5
+more advanced features require edisc premium features
+
+PM: Nina chen
