@@ -670,7 +670,7 @@ There are two ways to review and analyze Copilot prompts and responses - **AI Hu
 
 # [AI Hub](#tab/aihub)
 
-[AI Hub](/purview/ai-microsoft-purview) is a central location in the Microsoft Purview portal that proactively monitors AI use. It includes eDiscovery and you can use it to analyze and review Copilot prompts and responses.
+[AI Hub](/purview/ai-microsoft-purview#microsoft-purview-ai-hub-provides-insights-policies-and-controls-for-ai-apps) is a central location in the Microsoft Purview portal that proactively monitors AI use. It includes eDiscovery and you can use it to analyze and review Copilot prompts and responses.
 
 1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as an admin in one of the groups listed at [AI Hub - Permissions](/purview/ai-microsoft-purview-permissions).
 2. Select **Solutions** > **AI Hub** > **Activity Explorer**.
@@ -679,7 +679,7 @@ There are two ways to review and analyze Copilot prompts and responses - **AI Hu
 
 To learn more, see:
 
-- [AI Hub](/purview/ai-microsoft-purview)
+- [Microsoft Purview AI Hub](/purview/ai-microsoft-purview-considerations)
 - [AI Hub - Activity explorer events](/purview/ai-microsoft-purview-considerations#activity-explorer-events)
 
 # [eDiscovery](#tab/edisc)
