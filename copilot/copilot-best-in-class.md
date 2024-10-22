@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 10/21/2024
+ms.date: 10/22/2024
 audience: Admin
 ms.topic: get-started
 ms.service: microsoft-365-copilot
@@ -87,11 +87,6 @@ This article applies to:
   You can purchase Microsoft 365 Copilot licenses through the [Microsoft 365 admin center](https://admin.microsoft.com) (**Billing** > **Purchase services**), Microsoft partners, or your Microsoft account team.
 
   Microsoft 365 Copilot licenses are available as an add-on to other licensing plans. To learn more, see [Understand licensing for Microsoft 365 Copilot](microsoft-365-copilot-licensing.md).
-
-## Features - Expand on these features in other sections and then delete this section
-
-- Conditional Access based on identity risk
-- Detect noncompliant usage
 
 ## Step 1 - Use SharePoint Advanced Management (SAM) features
 
@@ -662,56 +657,48 @@ To learn more, see:
 
 ### Review and analyze Copilot prompts and responses
 
-Two options:
+✅ **Use [AI Hub](/purview/ai-microsoft-purview) or [eDiscovery](/purview/edisc) to analyze Copilot user prompts and responses**
 
-- eDiscovery
-- AI Hub
+When users enter a prompt and get a response from Copilot, you can view and search these interactions.
 
-✅ **Use [eDiscovery](/purview/ediscovery-overview) to analyze Copilot user prompts and responses**
-
-**IN-PROGRESS**
-
-Prompts are responses are in AI Hub; AI Hub includes in eDiscovery
-
-Outstanding ??
-Seems there's two options for Copilot:
-
-- Use content search in general to find something
-- Use the search & delete article
-
-
-[eDiscovery Premium](/purview/ediscovery-overview) lets you discover data at the source and stays within your Microsoft 365 security and compliance boundary.
-
-When you use Copilot, eDiscovery helps you:
+When you use Copilot, these features help you:
 
 - Find and remove sensitive information or inappropriate content included in Copilot activities.
-- Respond to a data spillage incident when content containing confidential or malicious information is released through Copilot-related activity.
+- Respond to a data spillage incident when confidential or malicious information is released through Copilot-related activity.
 
-1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as the eDiscovery Manager. To learn more, see [eDiscovery - Permissions](/purview/ediscovery-assign-permissions).
+There are two ways to review and analyze Copilot prompts and responses - **AI Hub** and **eDiscovery**.
 
-2. Select **Solutions** > **eDiscovery**.
-3. Select **Cases** > **Create Case**.
-1. Select **Add data sources**, and add the sources you want to search for Copilot activity data.
+# [AI Hub](#tab/aihub)
 
-    For a list of data sources you can add, see [Data sources for Copilot data](/purview/ediscovery-search-and-delete-copilot-data#data-sources-for-copilot-data)
+[AI Hub](/purview/ai-microsoft-purview) is a central location in the Microsoft Purview portal that proactively monitors AI use. It includes eDiscovery and you can use it to analyze and review Copilot prompts and responses.
+
+1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as an admin in one of the groups listed at [AI Hub - Permissions](/purview/ai-microsoft-purview-permissions).
+2. Select **Solutions** > **AI Hub** > **Activity Explorer**.
+3. Select an existing activity in the list. For example, if there's a **Sensitive info types detected** activity, select it.
+4. Select **View related AI interaction activity**. In **Interaction details**, you can see the app, and the prompt & response. You can also export an activity.
 
 To learn more, see:
 
-- [Search for and optionally delete Copilot interactions in eDiscovery](/purview/edisc-search-copilot-data)
-- [eDiscovery Premium](/purview/ediscovery-premium-get-started)
+- [AI Hub](/purview/ai-microsoft-purview)
+- [AI Hub - Activity explorer events](/purview/ai-microsoft-purview-considerations#activity-explorer-events)
 
+# [eDiscovery](#tab/edisc)
 
-AI Hub: 
-- Might want to remove screen shots, as UI is changing often.
-- Confirm license info - included with E5?
+[eDiscovery](/purview/edisc) uses cases to identify, hold, export, and analyze content found in mailboxes and sites. You can this feature to analyze Copilot prompts and responses, and delete Copilot data.
 
-Search for Copilot in Purview TOC
+1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as an admin in one of the groups [eDiscovery - Permissions](/purview/ediscovery-assign-permissions).
+2. Select **Solutions** > **eDiscovery** > **Cases**.
+3. Create a **case** and a **search** query. A search query searches in-place content, like email, documents, and instant messaging conversations.
 
-https://learn.microsoft.com/viva/insights/org-team-insights/copilot-dashboard
+    When you create a search query, you enter the [Data sources that have Copilot data](/purview/edisc-search-copilot-data#data-sources-for-copilot-data).
 
-"content search" is included automatically in new eDisc cases, just say search
+4. The data returned is the Copilot prompts and responses. You can review and export this information. If the data contains sensitive information, you can also delete it.
 
-can do only search with E5
-more advanced features require edisc premium features
+To learn more, see [Search for and optionally delete Copilot interactions in eDiscovery](/purview/edisc-search-copilot-data).
 
-PM: Nina chen
+---
+
+## Related content
+
+- [Microsoft 365 Copilot requirements and prerequisites](/copilot/microsoft-365/microsoft-365-copilot-requirements)
+- [Provision Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-setup)
