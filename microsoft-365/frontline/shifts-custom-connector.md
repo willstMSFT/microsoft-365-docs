@@ -28,12 +28,12 @@ ms.date:
 
 Before you get started, complete the following prerequisites:
 
-- Determine what data you want to sync between your WFM system and Shifts, according to your business needs.
-- Register an application in Microsoft Entra for the [workforceIntegration](graph/api/resources/workforceintegration?view=graph-rest-1.0) Graph API.
+- Determine what data you want to sync between your WFM system and Shifts according to your business needs.
+- Register an application in Microsoft Entra for the [workforceIntegration](/graph/api/resources/workforceintegration?view=graph-rest-1.0) Graph API.
 
     Choose the **Accounts in this organizational directory only (Single tenant)** option so that only users in your tenant can use the application. To learn more, see [Register an application with the Microsoft identity platform](/entra/identity-platform/quickstart-register-app).
 
-- (Optional) Create teams in Teams that match the teams and locations in your WFM system, and add people to the teams:
+- (Optional) Create teams in Teams that match the teams and locations in your WFM system, and add people to each team:
   - Add your frontline managers as team owners and/or schedule owners. Learn more about [team owners and schedule owners in Shifts](shifts-frontline-manager-worker-roles.md).
   - Add your frontline workers as team members.
   
@@ -46,9 +46,9 @@ Before you get started, complete the following prerequisites:
 
 ### Sync data from your WFM system to Shifts
 
-Use Graph APIs to read schedule data from your WFM system and write to Shifts. For example, to add a shift to Shifts, use the [Create shift](/graph/api/schedule-post-shifts?view=graph-rest-1.0) API.
+Use Shifts Graph APIs to read schedule data from your WFM system and write the data to Shifts. For example, to add a shift to Shifts, use the [Create shift](/graph/api/schedule-post-shifts?view=graph-rest-1.0) API.
 
-See the [API v1.0 reference for Shifts APIs](/graph/api/resources/shift?view=graph-rest-1.0).
+See the [Graph API v1.0 reference for Shifts APIs](/graph/api/resources/shift?view=graph-rest-1.0). They're listed under **Shift management**.
 
 #### Graph API permissions
 
