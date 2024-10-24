@@ -105,6 +105,16 @@ This section walks you through different SAM features that can help you get your
 
 To learn more about SAM + Copilot, see [Get ready for Copilot with SharePoint Advanced Management](/sharepoint/get-ready-copilot-sharepoint-advanced-management).
 
+### Ensure all sites have valid owners
+
+✅ **Run a [Site Ownership policy](/sharepoint/tbd) that finds any sites that don't have at least two owners**
+
+A Site ownership policy automatically detects sites that don't have at least two owners and help to find potential owners. Set up the policy in simulation mode to identify owners based on your desired criteria. Then upgrade the policy to Active mode to enable notifications to site owner candidates.
+
+You need site owners to help confirm the site is still active, perform [Site access review](/sharepoint/site-access-review#review-everyone-except-external-users-site-access-review-requests-for-site-owners), update content permissions and control access when needed.
+
+To learn more about this policy and report, see [Site ownership policy](/sharepoint/tbd).
+
 ### Find and cleanup inactive sites
 
 ✅ **Create a [site lifecycle management policy](/sharepoint/site-lifecycle-management#create-an-inactive-site-policy) that finds inactive sites**
@@ -118,22 +128,21 @@ The policy also creates a report that you can download and review. The report sh
 1. Sign in to the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) as a SharePoint administrator.
 2. Expand **Policies** > select **Site lifecycle management**.
 3. Select **Create a policy**, enter your parameters, and finish your policy.
-4. When the policy runs and finds inactive sites, the policy automatically emails the site owners. It also creates the report. Use this report to work with the site owners to determine the next steps, like deleting the site.
+4. When the policy runs and finds inactive sites, the policy automatically emails the site owners. The site owners should confirm if the site is still active.
+1. If the site owners confirm the sties aren't needed, you need to put inactive sites either in read-only mode with SAM [Inactive Sites - Read only capability](/sharepoint/tbd), or move the sites to Microsoft 365 Archive with SAM [Inactive Sites - Archive capability](/sharepoint/tbd).
 
 To learn more about this policy and report, see [site lifecycle management policy](/sharepoint/site-lifecycle-management#create-an-inactive-site-policy).
 
 #### Best practices for managing inactive SharePoint sites
 
-- **Use the inactive sites policy report** and work with the site owners on the future of their site. The site owners should confirm if the site is still active:
+- [**Use the policy execution report**](/sharepoint/site-lifecycle-management) to keep track on site owner action status in response to the notifications.
+- Select the Get AI insights button to [**get AI insights**](/sharepoint/advanced-management#ai-insights) generated for the report to help you identify issues with the sites and possible actions to address these issues.
+- **Give the site owners a timeline** to complete these tasks. If they don't complete the task within the timeframe, you can move the sites to [Microsoft 365 Archive](/microsoft-365/archive/archive-overview) using SAM [Inactive Sites - Archive capability](/sharepoint/tbd) so that you can reactive them later if needed.
 
-  - If the site isn't active, the owner can move any files they want to keep, and then delete the site.
-  - If the site is still active, the owner can review the files, and update the data so it's accurate.
+> [!TIP]
+> Sites moved to Microsoft 365 Archive are no longer accessible by anyone in the organization outside of Microsoft Purview or admin search. This means Copilot won't include content from these sites when responding to user prompts.
 
-  This action helps reduce outdated content that clutters Copilot's data source, which improves the accuracy of Copilot responses.
-
-- **Give the site owners a timeline** to complete these tasks. If they don't complete the task within the timeframe, admins can [delete the inactive site](/sharepoint/delete-site-collection).
-
-- **[Delete the inactive site](/sharepoint/delete-site-collection)**. Before you delete a site, inform the site owners and subsite owners of the changes, why the site is being deleted, and when it'll be deleted.
+This action helps reduce outdated content that clutters Copilot's data source, which improves the accuracy of Copilot responses.
 
 ### Identify sites with overshared or sensitive content
 
@@ -151,6 +160,7 @@ Overshared sites are sites that are shared with more people than needed. Copilot
     | **Sharing links** | Shows the sites that have sharing links, including links shared with **Anyone**, shared with **People in your organization**, and shared with **Specific people** outside of your work or school. | Review these sites. <br/><br/>Make sure the sites are shared with only the users or groups that need access. Remove sharing for unneeded users and groups. |
     | **Sensitivity labels applied to files** | Shows sites with Office files that have sensitivity labels. | Review these sites.<br/><br/> Make sure the correct labels are applied. Update the labels as needed. To learn more, see [Identify and label sensitive data](#identify-and-label-sensitive-data) (in this article). |
     | **Shared with `Everyone except external users` (EEEU)** | Shows the sites that are shared with everyone in your organization except external users. | Review these sites. <br/><br/> Determine if EEEU permissions are appropriate. Many sites with EEEU are overshared. Remove the EEEU permission and assign to the users or groups as needed. |
+    |**Oversharing Baseline Report for Sites, OneDrives and Files**|Scans all sites in your tenant, and lists sites that share content with more than a specified number of users (you specify the number).|Sort, filter or download the report, and identify the sites with potentially overshared content.|
 
 You can run any of these reports individually or run all of them together. To learn more about these reports, see [Data access governance (DAG) reports](/sharepoint/data-access-governance-reports).
 
@@ -162,50 +172,38 @@ You can run any of these reports individually or run all of them together. To le
 
   Your organization is paying for the license to run these reports and use the data to make decisions. Make sure you're getting the most out of it.
 
-- **Share the report data with site owners**. The site owners should:
-
-  - Update or remove unneeded shared links. The goal is to only allow access to the users that need it.
-  - Review and update the sensitivity labels. Make sure the correct labels are applied.
-  - Determine if EEEU permissions are needed. If the permission isn't needed, then remove the EEEU permission and assign to individual users or groups as needed.
-
-- **Give the site owners a timeline** to complete these tasks. If they don't complete the task within the timeframe, admins can restrict access using [restricted access control (RAC)](/SharePoint/restricted-access-control).
-
-- **Apply [restricted access control (RAC)](/SharePoint/restricted-access-control)** to sites that appear to be overshared. Inform the site owners of the changes and why.
-
-  If your organization has a [Zero Trust](/security/zero-trust/copilots/zero-trust-microsoft-365-copilot) mindset, then you can apply RAC to all sites. Then, adjust the permissions as needed. If you have many sites, this action can help you quickly secure your sites. But, it can cause disruptions to users.
-
-  If you use RAC, make sure you communicate the changes and the reasons for the changes.
+- Select the Get AI insights button to [**get AI insights**](/sharepoint/advanced-management#ai-insights) generated for the report to help you identify issues with the sites and possible actions to address these issues.
 
 ### Control access to overshared SharePoint sites
 
-✅ **Use [restricted access control policy](/sharepoint/restricted-access-control) in the SharePoint admin center**
+✅ **Initiate [Site access reviews](/sharepoint/site-access-review) by site owners**
+
+From a Data access governance (DAG) report, you can select sites with oversharing risks, then initiate site access reviews. Site Owners receive notification for each site that requires attention. They can use the Site reviews page to track and manage multiple review requests.
+The site owner reviews access in two main areas: SharePoint groups and individual items to determine whether the broad sharing is appropriate, or it is indeed oversharing and requires remediation.
+If the site owner determines that the content is indeed overshared, they can take easy remediation actions by using the Access Review dashboard to update permissions.
+
+✅ **Use [restricted access control policy (RAC)](/sharepoint/restricted-access-control) in the SharePoint admin center**
 
 A [restricted access control policy](/sharepoint/restricted-access-control) restricts access to SharePoint sites and content to users in a specific group. Users not in the group can't access the site or its content, even if they previously had permissions or a shared link.
 
-When users in the group have permissions to the content, then that content can show in Copilot results. Users not in the group don't see this info in their Copilot results.
+When users in the group have permissions to the content, then that content can show in Copilot results. Users not in the group don't see this info in their Copilot results. You can set up restricted access control for individual sites or OneDrive.
 
-This feature is helpful for admins that must restrict access to business-critical sites or sensitive content.
+✅ **Use [restricted content discoverability policy (RCD)](/sharepoint/tbd) in the SharePoint admin center**
 
-1. Sign in to the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) as a SharePoint administrator.
-2. Select **Policies** > **Access control** > **Site-level access restriction** > **Allow access restriction** > **Save**.
+Different from RAC, the restricted content discoverability policy leaves site access unchanged but prevents the site’s content from being surfaced in Microsoft 365 Copilot or organization-wide Search for all users. 
 
-    This step enables site-level access restriction for your organization. When it's enabled, you can create a restricted access control policy.
+The SharePoint Admin can set restricted content discoverability on individual sites.
 
-3. Select **Sites** > **Active sites** > Select the site you want to manage.
+#### Best practices for control access to overshared SharePoint sites
 
-4. Go to the **Settings** tab > **Restricted site access** > **Edit**
+- If your organization has a [Zero Trust](/security/zero-trust/copilots/zero-trust-microsoft-365-copilot) mindset, then you can apply RAC to all sites. Then, adjust the permissions as needed. If you have many sites, this action can help you quickly secure your sites. But, it can cause disruptions to users.
 
-5. You can:
-
-    - **Restrict access to this site**: This option restricts access to group-connected sites, like Microsoft 365 Groups and Teams.
-    - **Restrict SharePoint site access to only users in specified groups**: This option restricts access to Microsoft Entra security groups or Microsoft 365 groups.
-
-To learn more, see [Restricted Access Control (RAC)](/sharepoint/restricted-access-control).
+- If you use RAC or RCD, make sure you communicate the changes and the reasons for the changes.
 
 > [!TIP]
 > For business-critical sites, you can also:
 >
-> - When you create new sites, configure a RAC policy as part of your custom site provisioning process. This step proactively avoids oversharing.
+> - When you create new sites, configure a RAC or RCD policy as part of your custom site provisioning process. This step proactively avoids oversharing.
 > - Consider blocking downloads from selected sites using a block download policy. For example, [block the download of Teams meeting recordings and transcripts](/microsoftteams/block-download-meeting-recording).
 > - Apply encryption with "extract rights" enforced on business-critical office documents. To learn more, see [Microsoft Purview data security and compliance protections for generative AI apps](/purview/ai-microsoft-purview).
 
