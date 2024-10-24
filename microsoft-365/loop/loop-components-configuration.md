@@ -56,8 +56,8 @@ There are several IT Admin settings provided to enable the Loop component experi
 
 |Configure  |Setting Type  |Specific Policy  |Notes  |
 |---------|---------|---------|---------|
-|Loop component experiences across Microsoft 365    |  Cloud Policy       | **Create and view Loop files in Microsoft apps that support Loop**        |   Applies to: <br/> - Outlook integration<br> - OneNote integration<br> - Whiteboard integration<br> Does **NOT** apply to:<br>   - Loop workspaces<br>   - Teams integration<br>   - Copilot pages      |
-|Copilot pages integration     |   Cloud Policy      |  **Create and view Loop files in Microsoft 365 Copilot Chat**       |  Applies to Pages in Copilot Chat       |
+|Loop component experiences across Microsoft 365    |  Cloud Policy       | **Create and view Loop files in Microsoft apps that support Loop**        |   Applies to: <br/> - Outlook integration<br> - OneNote integration<br> - Whiteboard integration<br> Does **NOT** apply to:<br>   - Loop workspaces<br>   - Teams integration<br>   - Copilot Pages      |
+|Copilot Pages integration     |   Cloud Policy      |  **Create and view Loop files in Microsoft 365 Copilot Chat**       |  Applies to Copilot Pages in a Copilot chat experience       |
 |Outlook integration of Loop experiences     |   Cloud Policy      |  **Create and view Loop files in Outlook**       |  First checks **Create and view Loop files in Microsoft apps that support Loop**; then applies **Create and view Loop files in Outlook**, if applicable.       |
 |Teams integration     |     SharePoint property    |   See [Settings management for Loop components in Teams](#settings-management-for-loop-functionality-in-teams)      |  Teams only checks the settings in this row.       |
 
@@ -65,9 +65,9 @@ There are several IT Admin settings provided to enable the Loop component experi
 
 |Scenario  |Policies Configured  |
 |---------|---------|
-|Enable Loop components everywhere     |  **Create and view Loop files in Microsoft apps that support Loop** = Enabled (or Not Configured)<br/>**Create and view Loop files in Microsoft 365 Copilot Chat** = Enabled (or Not Configured)<br/>[Teams-only] `Set-SPOTenant -IsLoopEnabled $true`, `Set-SPOTenant -IsCollabMeetingNotesFluidEnabled $true`       |
-|Enable Loop components everywhere, but Disable integration in Communication app (Outlook, Teams)     |    **Create and view Loop files in Microsoft apps that support Loop** = Enabled (or Not Configured)<br/>**Create and view Loop files in Microsoft 365 Copilot Chat** = Enabled (or Not Configured)<br/>**Create and view Loop files in Outlook** = Disabled<br/>[Teams-only] `Set-SPOTenant -IsLoopEnabled $false`, `Set-SPOTenant -IsCollabMeetingNotesFluidEnabled $false`     |
-|Disable Loop components everywhere     |    **Create and view Loop files in Microsoft apps that support Loop** = Disabled<br/>**Create and view Loop files in Microsoft 365 Copilot Chat** = Disabled<br/>[Teams-only] `Set-SPOTenant -IsLoopEnabled $false`, `Set-SPOTenant -IsCollabMeetingNotesFluidEnabled $false`     |
+|Enable Loop components everywhere     |  **Create and view Loop files in Microsoft apps that support Loop** = Enabled (or Not Configured)<br/><br/>**Create and view Loop files in Microsoft 365 Copilot Chat** = Enabled (or Not Configured)<br/><br/>[Teams-only] `Set-SPOTenant -IsLoopEnabled $true`, `Set-SPOTenant -IsCollabMeetingNotesFluidEnabled $true`       |
+|Enable Loop components everywhere, but Disable integration in Communication app (Outlook, Teams)     |    **Create and view Loop files in Microsoft apps that support Loop** = Enabled (or Not Configured)<br/><br/>**Create and view Loop files in Microsoft 365 Copilot Chat** = Enabled (or Not Configured)<br/><br/>**Create and view Loop files in Outlook** = Disabled<br/>[Teams-only] `Set-SPOTenant -IsLoopEnabled $false`, `Set-SPOTenant -IsCollabMeetingNotesFluidEnabled $false`     |
+|Disable Loop components everywhere     |    **Create and view Loop files in Microsoft apps that support Loop** = Disabled<br/><br/>**Create and view Loop files in Microsoft 365 Copilot Chat** = Disabled<br/><br/>[Teams-only] `Set-SPOTenant -IsLoopEnabled $false`, `Set-SPOTenant -IsCollabMeetingNotesFluidEnabled $false`     |
 
 ## User experience expectations when admin settings are configured
 
@@ -115,6 +115,7 @@ The Loop experiences (except for Microsoft Teams) check the following [Cloud Pol
         - **Enabled**: Copilot pages experience is available to the users.
         - **Disabled**: Copilot pages experience isn't available to the users.
         - **Not configured**: Copilot pages experience is available to the users.
+        - **NOTE**: If your organization has [disabled the creation of OneDrive](/sharepoint/manage-user-profiles#disable-onedrive-creation-for-some-users), regardless of the setting noted here, these people in your organization will not be able to create a Copilot Pages workspace.
     - For **Create and view Loop files in Outlook**:
         - **Enabled**: Loop experience is available to the users.
         - **Disabled**: Loop experience isn't available to the users.
