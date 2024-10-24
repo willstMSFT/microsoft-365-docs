@@ -62,6 +62,9 @@ This article applies to:
   - [Microsoft 365 E5](https://www.microsoft.com/microsoft-365/enterprise/e5) or [Office 365 E5](https://www.microsoft.com/microsoft-365/enterprise/office-365-e5)
     - [Microsoft Purview](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description) - Included with your E5 license
 
+  > [!TIP]
+  > For a list of the features and services you get with your license, see [Microsoft 365, Office 365, Enterprise Mobility + Security, and Windows 11 Subscriptions](https://aka.ms/M365EnterprisePlans).
+
   - [Microsoft 365 Copilot](microsoft-365-copilot-licensing.md)
 
     - [Microsoft SharePoint Premium - SharePoint Advanced Management](/sharepoint/advanced-management#licensing) - Included with your Copilot license
