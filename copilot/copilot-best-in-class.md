@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 10/22/2024
+ms.date: 10/24/2024
 audience: Admin
 ms.topic: get-started
 ms.service: microsoft-365-copilot
@@ -60,12 +60,10 @@ This article applies to:
 - The following licenses are required to use the features in this article:
 
   - [Microsoft 365 E5](https://www.microsoft.com/microsoft-365/enterprise/e5)
-  - [Microsoft SharePoint Premium - SharePoint Advanced Management](/sharepoint/advanced-management#licensing)
-  - [Microsoft Purview](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description) (included with Microsoft 365 E5)
-    - Information Protection
-    - Data loss prevention (DLP)
-    - Communication Compliance
-    - eDiscovery Premium
+    - [Microsoft Purview](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description) - Included with your Microsoft 365 E5 license
+
+  - [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot##plans)
+    - [Microsoft SharePoint Premium - SharePoint Advanced Management](/sharepoint/advanced-management#licensing) - Included with your Copilot license  
 
 - This article uses the following admin centers. These admin centers require a specific role to complete the tasks in the article.
 
