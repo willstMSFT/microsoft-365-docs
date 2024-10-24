@@ -62,6 +62,9 @@ This article applies to:
   - [Microsoft 365 E5](https://www.microsoft.com/microsoft-365/enterprise/e5) or [Office 365 E5](https://www.microsoft.com/microsoft-365/enterprise/office-365-e5)
     - [Microsoft Purview](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description) - Included with your E5 license
 
+  > [!TIP]
+  > For a list of the features and services you get with your license, see [Microsoft 365, Office 365, Enterprise Mobility + Security, and Windows 11 Subscriptions](https://aka.ms/M365EnterprisePlans).
+
   - [Microsoft 365 Copilot](microsoft-365-copilot-licensing.md)
 
     - [Microsoft SharePoint Premium - SharePoint Advanced Management](/sharepoint/advanced-management#licensing) - Included with your Copilot license
@@ -169,7 +172,9 @@ You can run any of these reports individually or run all of them together. To le
 ✅ **Initiate [Site access reviews](/sharepoint/site-access-review) by site owners**
 
 From a Data access governance (DAG) report, you can select sites with oversharing risks, then initiate site access reviews. Site Owners receive notification for each site that requires attention. They can use the Site reviews page to track and manage multiple review requests.
-The site owner reviews access in two main areas: SharePoint groups and individual items to determine whether the broad sharing is appropriate, or it is indeed oversharing and requires remediation.
+
+The site owner reviews access in two main areas: SharePoint groups and individual items to determine whether the broad sharing is appropriate, or it's indeed oversharing and requires remediation.
+
 If the site owner determines that the content is indeed overshared, they can take easy remediation actions by using the Access Review dashboard to update permissions.
 
 ✅ **Use [restricted access control policy (RAC)](/sharepoint/restricted-access-control) in the SharePoint admin center**
@@ -180,7 +185,7 @@ When users in the group have permissions to the content, then that content can s
 
 ✅ **Use [restricted content discoverability policy (RCD)](/sharepoint/tbd) in the SharePoint admin center**
 
-Different from RAC, the restricted content discoverability policy leaves site access unchanged but prevents the site’s content from being surfaced in Microsoft 365 Copilot or organization-wide Search for all users. 
+Different from RAC, the restricted content discoverability policy leaves site access unchanged but prevents the site's content from being surfaced in Microsoft 365 Copilot or organization-wide Search for all users. 
 
 The SharePoint Admin can set restricted content discoverability on individual sites.
 
@@ -434,7 +439,33 @@ To learn more about DLP, see [Learn about data loss prevention in Microsoft Purv
 1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as one of the admins listed at [Create and deploy DLP policies - Permissions](/purview/dlp-create-deploy-policy).
 2. Select **Solutions** > **Data Loss Prevention**.
 
-#### 2. Create a DLP policy for Teams
+#### 2. Create the default DLP policies
+
+For Exchange Online, SharePoint Online, and OneDrive, you can use DLP to identify, monitor, and automatically protect sensitive information across emails and files, including files stored in Microsoft Teams file repositories.
+
+Specifically, you configure DLP to inspect emails and files for sensitive information.
+
+1. In **Data Loss Prevention**, select **Overview**.
+2. In **Protect sensitive info**, you might see a list of sensitive information types that DLP already detected in your organization:
+
+    :::image type="content" source="media/copilot-best-in-class/purview-dlp-protect-sensitive-info.png" alt-text="In Microsoft Purview Data Loss Prevention, go to protect sensitive info and view the sensitive information detected by DLP." lightbox="media/copilot-best-in-class/purview-dlp-protect-sensitive-info.png":::
+
+3. Select **Get started** > **Create selected policies**. This step creates the default policies:
+
+    :::image type="content" source="media/copilot-best-in-class/purview-dlp-create-default-policies.png" alt-text="In Microsoft Purview Data Loss Prevention, go to protect sensitive info and create the default policies." lightbox="media/copilot-best-in-class/purview-dlp-create-default-policies.png":::
+
+    By default, Exchange Online emails, SharePoint sites, and OneDrive accounts are automatically enabled locations for all users within the tenant. So when you create a DLP policy, the policy automatically applies to these locations.
+
+4. To create a new DLP policy, select **Policies** > **Create policy**.
+
+    When you create your own policy, you can choose the category, like Financial or Medical. If your organization has sensitive information in these areas, then you should create a custom DLP policy.
+
+    To learn more, see:
+
+    - [Design a DLP policy](/purview/dlp-policy-design)
+    - [Create and Deploy DLP policies](/purview/dlp-create-deploy-policy)
+
+#### 3. Create a DLP policy for Teams
 
 These policies can detect when sensitive info, like bank account numbers or passport numbers, are shared in Teams messages. Then, you can create policy tips to educate users or add actions that control sharing.
 
@@ -458,7 +489,7 @@ To learn more, see:
 - [Teams DLP Policies](/purview/dlp-teams-default-policy)
 - [Data loss prevention and Microsoft Teams](/purview/dlp-microsoft-teams)
 
-#### 3. Create an endpoint DLP policy for your Windows and macOS devices
+#### 4. Create an endpoint DLP policy for your Windows and macOS devices
 
 On the devices (also called endpoints), these policies can block specific apps, apply different restrictions to a specific group of printers, and block specific browsers from accessing files.
 
@@ -482,7 +513,7 @@ To learn more about DLP policies for endpoints, see:
 > [!NOTE]
 > If you use a mobile device managment (MDM) service to manage and help protect you devices, like [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), then keep using your MDM provider. The endpoint DLP policies focus on data loss prevention with your Microsoft 365 data. MDM focuses on device management. You use them simulatenously.
 
-#### 4. Create Adaptive Protection policies
+#### 5. Create Adaptive Protection policies
 
 [Adaptive Protection](/purview/dlp-adaptive-protection-learn) policies integrate **Insider Risk Management** with DLP. When [insider risk](/purview/insider-risk-management-adaptive-protection) identifies a user that's engaging in risky behavior, the user is dynamically assigned an [insider risk level](/purview/insider-risk-management-adaptive-protection#insider-risk-levels), like **Elevated**.
 
@@ -502,7 +533,7 @@ Adaptive Protection can automatically create DLP policies that help protect the 
 
 To learn more, see [Adaptive Protection policies](/purview/insider-risk-management-adaptive-protection).
 
-#### 5. Test and monitor your policies
+#### 6. Test and monitor your policies
 
 - For DLP policies, you can:
 
