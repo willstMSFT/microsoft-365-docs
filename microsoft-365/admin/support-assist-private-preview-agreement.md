@@ -14,6 +14,8 @@ ms.collection:
 - Adm_O365
 - scotvorg
 - must-keep
+ms.custom:
+- asset-status-exempt-cela
 ROBOTS: NOINDEX, NOFOLLOW 
 description: "Support Assist Private Preview Agreement"
 ms.date: 10/31/2024
