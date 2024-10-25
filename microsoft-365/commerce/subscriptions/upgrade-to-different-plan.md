@@ -55,11 +55,8 @@ Changing plans is the right choice when you want to move all users assigned to a
    - If you’re using the **Simplified view**, select **Subscriptions**.
    - If you’re using the **Dashboard view**, go to the **Billing** > <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">Your products</a> page.
 2. Select the subscription that you want to manage.
-3. On the subscription details page, in the **Other subscription options** section, select **Change to a different subscription option**.
-4. On the **Compare products and select another option** page, select a different plan to compare with your current plan. When you find the one that you want to buy, select **Next**.
-5. Choose when to schedule the change, enter the number of licenses that you want, select a subscription length and a billing frequency, then select **Next**.
-6. Review your selections, then select **Save changes**.
-
+1. On the subscription details page, in the **Other subscription options** section, select **Change to a different subscription option**.
+1. Choose when to schedule the change, enter the number of licenses that you want, select a subscription length and a billing frequency, then select **Change plan**.
 ### If you have an MOSA billing account type
 
 [!INCLUDE [office-365-operated-by-21vianet-admin-center-link](../../includes/office-365-operated-by-21vianet-admin-center-link.md)]
