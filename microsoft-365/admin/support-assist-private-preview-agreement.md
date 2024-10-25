@@ -127,16 +127,11 @@ b\) Falsify any protocol or email header information (e.g., "spoofing") within t
 
 c\) Access or use the Pre-Release Technologies:
 
-    i) within or to support Participant’s live operating or commercial production environment except as set forth in this Agreement and unless otherwise notified by Microsoft in writing.
-
-    ii) in any way prohibited by any law, regulation or governmental order or decree or that violates others’ legal rights.
-
-    iii) in any way that could harm the Pre-Release Technologies or impair anyone else’s use of the Pre-Release Technologies (e.g., denial of service attacks, etc.).
-
-    iv) to try to gain unauthorized access to any service, data, account, or network by any means.
-
-    v) to send "spam" (i.e., unsolicited bulk or commercial messages) or otherwise make available any offering designed to violate these terms; or
-
+    i) within or to support Participant’s live operating or commercial production environment except as set forth in this Agreement and unless otherwise notified by Microsoft in writing.\
+    ii) in any way prohibited by any law, regulation or governmental order or decree or that violates others’ legal rights.\
+    iii) in any way that could harm the Pre-Release Technologies or impair anyone else’s use of the Pre-Release Technologies (e.g., denial of service attacks, etc.).\
+    iv) to try to gain unauthorized access to any service, data, account, or network by any means.\
+    v) to send "spam" (i.e., unsolicited bulk or commercial messages) or otherwise make available any offering designed to violate these terms; or\
     vi) access the Pre-Release Technologies through any other Pre-Release Technologies subscription without the express permission of the subscription holder.
 
 ## 7. Confidentiality; Proprietary Rights
@@ -145,10 +140,8 @@ c\) Access or use the Pre-Release Technologies:
 
 a\) The information shared under this Agreement (except Feedback) is Confidential Information subject to the NDA. If there is no NDA, or the NDA is terminated or otherwise ceases to be in effect, the following terms shall apply:
 
-    i) Use of Confidential Information. Starting on the day of disclosure and continuing for five years, neither party will disclose the other’s Confidential Information to third parties except as otherwise expressly provided in this Section 5.1(b). Each party will use such information only for purposes of the parties’ business relationship under this Agreement. Each party will take reasonable steps to protect the other’s Confidential Information. Each party may disclose the other’s Confidential Information to Affiliates, employees, and contractors and will remain responsible for their unauthorized use or disclosure. These disclosures may be made only on a need-to-know basis, subject to the obligations of this Section 5.1(b).
-
-    ii) Cooperation in the event of disclosure. Each party will immediately notify the other party upon discovery of any unauthorized use or disclosure of Confidential Information. Each party will help the other party regain possession of the Confidential Information and prevent further unauthorized use or disclosure.
-
+    i) Use of Confidential Information. Starting on the day of disclosure and continuing for five years, neither party will disclose the other’s Confidential Information to third parties except as otherwise expressly provided in this Section 5.1(b). Each party will use such information only for purposes of the parties’ business relationship under this Agreement. Each party will take reasonable steps to protect the other’s Confidential Information. Each party may disclose the other’s Confidential Information to Affiliates, employees, and contractors and will remain responsible for their unauthorized use or disclosure. These disclosures may be made only on a need-to-know basis, subject to the obligations of this Section 5.1(b).\
+    ii) Cooperation in the event of disclosure. Each party will immediately notify the other party upon discovery of any unauthorized use or disclosure of Confidential Information. Each party will help the other party regain possession of the Confidential Information and prevent further unauthorized use or disclosure.\
     iii) Residuals. Each party receiving Residuals may freely use them without payment and need not limit personnel assignments based on access to Confidential Information. This section is not a copyright or patent license and does not modify duties to safeguard Confidential Information.
 
 ### 7.2 Reservation of Rights; No Other License
@@ -185,22 +178,16 @@ To the extent Microsoft is a processor of Personal Data subject to the European 
 
 a\) Processing Details. The parties acknowledge and agree that:
 
-    i) The subject-matter of the processing is limited to Personal Data within the scope of GDPR;
-
-    ii) The duration of the processing shall be for the duration of the Participant’s right to participate in the Preview and until all Personal Data is deleted or returned in accordance with Participant instructions or this Agreement;
-
-    iii) The nature and purpose of the processing shall be to provide the Pre-Release Technologies pursuant to the Agreement;
-
-    iv) The types of Personal Data processed by the Pre-Release Technologies include those expressly identified in Article 4 of the GDPR to the extent included by Participant in Data; and
-
+    i) The subject-matter of the processing is limited to Personal Data within the scope of GDPR;\
+    ii) The duration of the processing shall be for the duration of the Participant’s right to participate in the Preview and until all Personal Data is deleted or returned in accordance with Participant instructions or this Agreement;\
+    iii) The nature and purpose of the processing shall be to provide the Pre-Release Technologies pursuant to the Agreement;\
+    iv) The types of Personal Data processed by the Pre-Release Technologies include those expressly identified in Article 4 of the GDPR to the extent included by Participant in Data; and\
     vi) The categories of data subjects are Participant’s representatives and end users, such as employees, contractors, collaborators, and customers.
 
 b\) Data Transfers.
 
-    i) Data and Personal Data that Microsoft processes on Participant’s behalf may be transferred to, and stored and processed in, the United States or any other country in which Microsoft or its Sub-processors operate. Participant appoints Microsoft to perform any such transfer of Participant Data and Personal Data to any such country and to store and process Data and Personal Data to provide the Pre-Release Technologies.
-
-    ii) Microsoft will abide by the requirements of European Economic Area and Swiss data protection law regarding the collection, use, transfer, retention and other processing of Personal Data from the European Economic Area and Switzerland. All transfers of Personal Data to a third country or an international organization will be subject to appropriate safeguards as described in Article 46 of the GDPR and such transfers and safeguards will be documented according to Article 30(2) of the GDPR.
-
+    i) Data and Personal Data that Microsoft processes on Participant’s behalf may be transferred to, and stored and processed in, the United States or any other country in which Microsoft or its Sub-processors operate. Participant appoints Microsoft to perform any such transfer of Participant Data and Personal Data to any such country and to store and process Data and Personal Data to provide the Pre-Release Technologies.\
+    ii) Microsoft will abide by the requirements of European Economic Area and Swiss data protection law regarding the collection, use, transfer, retention and other processing of Personal Data from the European Economic Area and Switzerland. All transfers of Personal Data to a third country or an international organization will be subject to appropriate safeguards as described in Article 46 of the GDPR and such transfers and safeguards will be documented according to Article 30(2) of the GDPR.\
     iii) In addition, Microsoft is certified to meet the EU-U.S. and Swiss-U.S. Privacy Shield Frameworks and the commitments they entail. Microsoft agrees to notify Participant in the event that it determines that it can no longer meet its obligation to provide the same level of protection as is required by the Privacy Shield principles.
 
 ### 11.2 Acknowledgments and Consent by Participant
@@ -295,19 +282,19 @@ The Participant’s use of the Preview described herein is subject to and incorp
 
   - ***If yes,***
 
-> [ ] Preview Service complies with GDPR.
->
-> [ ] Preview Pre-Release Technology complies with the Data Protection Addendum in the Product Terms.
->
-> [x] Preview Service is not designed to be used by EU data subjects. Customer **should not** process personal data of EU Data Subjects (as defined by the GDPR).
+    [ ] Preview Service complies with GDPR.
+
+    [ ] Preview Pre-Release Technology complies with the Data Protection Addendum in the Product Terms.
+
+    [x] Preview Service is not designed to be used by EU data subjects. Customer **should not** process personal data of EU Data Subjects (as defined by the GDPR).
 
 - **Preview Pre-Release Technology Description:**
 
-> The Microsoft 365 admin center will introduce a new "Support Assistant" feature, starting with a Preview in early November 2024. This AI-driven conversational experience can be toggled on in the Help & Support pane by admins. It will be available to a select group of English locale customers.
->
-> If a tenant is selected to take part in this Preview, admins will start seeing the Support Assistant Preview toggle in Help & Support. If you are not part of the Preview, admins will not see any changes to Help & Support.
->
-> After admins select the Help & Support button in the bottom right corner of Microsoft 365 admin center pages, a pane opens to show the new Support Assistant Preview toggle. This experience is powered by Copilot Studio and aims to improve the help and support experience by providing additional functionalities and a conversational ability to receive help.
+    The Microsoft 365 admin center will introduce a new "Support Assistant" feature, starting with a Preview in early November 2024. This AI-driven conversational experience can be toggled on in the Help & Support pane by admins. It will be available to a select group of English locale customers.
+
+    If a tenant is selected to take part in this Preview, admins will start seeing the Support Assistant Preview toggle in Help & Support. If you are not part of the Preview, admins will not see any changes to Help & Support.
+
+    After admins select the Help & Support button in the bottom right corner of Microsoft 365 admin center pages, a pane opens to show the new Support Assistant Preview toggle. This experience is powered by Copilot Studio and aims to improve the help and support experience by providing additional functionalities and a conversational ability to receive help.
 
 - **Additional Terms specific to this Preview Prerequisites:**
 
@@ -325,8 +312,8 @@ The Participant’s use of the Preview described herein is subject to and incorp
 
 - **Term of Preview**: \[insert length of time that Preview will last, no longer than 12 months\] this Preview ends June 30, 2025, or 30 days after the feature become commercially generally available, whichever is sooner.
 
-**  
-**
+\  
+\
 
 **Exhibit 2 – GDPR Terms**
 
@@ -338,20 +325,13 @@ For purposes of these GDPR Terms, Participant and Microsoft agree that Participa
 
 2\) Processing by Microsoft shall be governed by these GDPR Terms under European Union (hereafter "Union") or Member State law and are binding on Microsoft with regard to Participant. The subject-matter and duration of the processing, the nature and purpose of the processing, the type of Personal Data, the categories of data subjects and the obligations and rights of the Participant are set forth in section 11 above, including these GDPR Terms. In particular, Microsoft shall:
 
-    a. process the Personal Data only on documented instructions from Participant, including with regard to transfers of Personal Data to a third country or an international organization, unless required to do so by Union or Member State law to which Microsoft is subject; in such a case, Microsoft shall inform Participant of that legal requirement before processing, unless that law prohibits such information on important grounds of public interest;
-
-    b. ensure that persons authorized to process the Personal Data have committed themselves to confidentiality or are under an appropriate statutory obligation of confidentiality;
-
-    c. take all measures required pursuant to Article 32 of the GDPR;
-
-    d. respect the conditions referred to in paragraphs 1 and 3 for engaging another processor;
-
-    e. taking into account the nature of the processing, assist Participant by appropriate technical and organizational measures, insofar as this is possible, for the fulfilment of the Participant’s obligation to respond to requests for exercising the data subject's rights laid down in Chapter III of the GDPR;
-
-    f. assist Participant in ensuring compliance with the obligations pursuant to Articles 32 to 36 of the GDPR, taking into account the nature of processing and the information available to Microsoft;
-
-    g. at the choice of Participant, delete or return all the Personal Data to Participant after the end of the provision of services relating to processing, and delete existing copies unless Union or Member State law requires storage of the Personal Data;
-
+    a. process the Personal Data only on documented instructions from Participant, including with regard to transfers of Personal Data to a third country or an international organization, unless required to do so by Union or Member State law to which Microsoft is subject; in such a case, Microsoft shall inform Participant of that legal requirement before processing, unless that law prohibits such information on important grounds of public interest;\
+    b. ensure that persons authorized to process the Personal Data have committed themselves to confidentiality or are under an appropriate statutory obligation of confidentiality;\
+    c. take all measures required pursuant to Article 32 of the GDPR;\
+    d. respect the conditions referred to in paragraphs 1 and 3 for engaging another processor;\
+    e. taking into account the nature of the processing, assist Participant by appropriate technical and organizational measures, insofar as this is possible, for the fulfilment of the Participant’s obligation to respond to requests for exercising the data subject's rights laid down in Chapter III of the GDPR;\
+    f. assist Participant in ensuring compliance with the obligations pursuant to Articles 32 to 36 of the GDPR, taking into account the nature of processing and the information available to Microsoft;\
+    g. at the choice of Participant, delete or return all the Personal Data to Participant after the end of the provision of services relating to processing, and delete existing copies unless Union or Member State law requires storage of the Personal Data;\
     h. make available to Participant all information necessary to demonstrate compliance with the obligations laid down in Article 28 of the GDPR and allow for and contribute to audits, including inspections, conducted by Participant or another auditor mandated by Participant.
 
 3\) Microsoft shall immediately inform Participant if, in its opinion, an instruction infringes the GDPR or other Union or Member State data protection provisions. (Article 28(3))
@@ -360,12 +340,9 @@ For purposes of these GDPR Terms, Participant and Microsoft agree that Participa
 
 5\) Taking into account the state of the art, the costs of implementation and the nature, scope, context, and purposes of processing as well as the risk of varying likelihood and severity for the rights and freedoms of natural persons, Participant and Microsoft shall implement appropriate technical and organizational measures to ensure a level of security appropriate to the risk, including inter alia as appropriate:
 
-    a. the pseudonymization and encryption of Personal Data;
-
-    b. the ability to ensure the ongoing confidentiality, integrity, availability and resilience of processing systems and services;
-
-    c. the ability to restore the availability and access to Personal Data in a timely manner in the event of a physical or technical incident; and
-
+    a. the pseudonymization and encryption of Personal Data;\
+    b. the ability to ensure the ongoing confidentiality, integrity, availability and resilience of processing systems and services;\
+    c. the ability to restore the availability and access to Personal Data in a timely manner in the event of a physical or technical incident; and\
     d. a process for regularly testing, assessing, and evaluating the effectiveness of technical and organizational measures for ensuring the security of the processing. (Article 32(1))
 
 6\) In assessing the appropriate level of security, account shall be taken of the risks that are presented by processing, in particular from accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or access to Personal Data transmitted, stored, or otherwise processed. (Article 32(2))
