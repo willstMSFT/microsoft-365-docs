@@ -131,7 +131,7 @@ When you create a signature request with SharePoint eSignature, it goes through 
 When the status of a request is **Completed**, **Canceled**, or **Declined**, the request can no longer be acted on by either the sender or the recipients. As an example, if a recipient declines a request, the sender would need to send a new request after the reason for declining has been addressed. The original declined request can't be edited.
 
 > [!NOTE]
-> For requests sent via other eSignature providers, the status reflected are determined by the signature provider and may differ from the status highlighted above.  
+> For requests sent via other electronic signature providers, the status reflected is determined by the signature provider and might differ from the status described above.  
 
 ## Access the signed document
 ### Documents signed with Microsoft SharePoint eSignature
