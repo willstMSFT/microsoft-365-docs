@@ -17,7 +17,7 @@ ms.collection:
 appliesto: 
   - Microsoft Teams
   - Microsoft 365 for frontline workers
-ms.date: 10/24/2024
+ms.date: 10/25/2024
 
 ---
 
@@ -32,7 +32,7 @@ ms.date: 10/24/2024
 
 Open shifts are shifts that aren't assigned to anyone. In Shifts, frontline managers can create and share open shifts in the schedule for frontline workers to request.
 
-### What is the open shifts across locations feature?
+### What are open shifts across locations?
 
 With the open shifts across locations feature in Shifts, your frontline managers can offer open shifts across multiple locations (teams) within the regions or areas defined in your operational hierarchy. This allows frontline workers to see and request open shifts available at other specified locations.
 
@@ -55,12 +55,12 @@ You can organize your organization’s teams by country, region, area, city, dis
 
 After you define your hierarchy, frontline managers (team owners or schedule owners) must turn on the feature for their team's schedule on the **Settings** tab in Shifts.
 
-:::image type="content" source="media/shifts-open-shifts-across-locations-setting.png" alt-text="Screenshot of the Open shifts section in Shifts settings, showing the Open shifts and Open shifts across locations settings and the Check eligibility button." lightbox="media/shifts-open-shifts-across-locations-setting.png":::
-
 > [!NOTE]
 > To check whether this feature is set up for their team, managers can select **Check eligibility**. If you defined an operational hierarchy and the team is included within the hierarchy, managers don't need to perform this step.
 
-After a manager turns on the capability in Shifts settings, they can choose to enable it for each open shift they create in a schedule group by using the **Open shifts across locations** toggle.
+:::image type="content" source="media/shifts-open-shifts-across-locations-setting.png" alt-text="Screenshot of the Open shifts section in Shifts settings, showing the Open shifts and Open shifts across locations settings and the Check eligibility button." lightbox="media/shifts-open-shifts-across-locations-setting.png":::
+
+After a manager turns on the capability in Shifts settings, they can choose to enable it for each open shift they create in a schedule group by using the **Open shift across locations** toggle.
 
 :::image type="content" source="media/shifts-open-shifts-across-locations-toggle.png" alt-text="Screenshot of the Open shifts across locations toggle for an open shift." lightbox="media/shifts-open-shifts-across-locations-toggle.png":::
 
