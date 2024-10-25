@@ -86,7 +86,42 @@ All write operations to Shifts (including write operations initiated from the co
 
 ### Base URL
 
-The base URL is determined based on your [workforceIntegration](/graph/api/resources/workforceintegration?view=graph-rest-1.0).
+The base URL is determined by your [workforceIntegration](/graph/api/resources/workforceintegration?view=graph-rest-1.0).
+For example, if "url" is `https://contosoconnector.com/wfi` and "apiVersion" is `1`, the base URL is `https://contosoconnector/com/wfi` and the `/connect` endpoint is `https://contosoconnector/wfi/v1/connect`.
+
+### Encryption
+
+All requests are encrypted using AES-256-CBC-HMAC-SHA256 with the shared key provided in the workForceIntegration Create request.
+
+### Endpoints
+
+#### POST /connect
+
+This endpoint is only called during Graph API `POST /teamwork/workforceIntegrations`. This is basically a ping test to test the connection.
+
+**Request**
+ConnectRequest
+
+```http
+{
+   "tenantId": "a1s2s355-a2s3-j7h6-f4d3-k2h9j4mqpz",
+   "userId": "4fbc12d7-1234-56ef-8a90-bc123d45678f"
+}
+```
+
+**Response**
+
+Return HTTP 200 OK
+
+#### POST /teams/{teamsId}/update
+
+When a change is made to an entity in a [schedule](/graph/api/resources/schedule?view=graph-rest-1.0) with a [workforceIntegration](/graph/api/resources/workforceintegration?view=graph-rest-1.0), Shifts calls this endpoint to get approval. When approved, the change is saved in Shifts.
+
+As your WFM system is the source of truth, when the connector receives a request to this endpoint, it should first attempt to make the change in the WFM system. If the change is successful, return success. Otherwise, return failure.
+
+#### X-MS-WFMPassthrough header
+
+Shifts calls this endpoint for every change (including changes initiated from the connector/WFM system). If the connector sent an update to Shifts using Graph API and added the `X-MS-WFMPassthrough: workforceIntegratonId` header, the request coming to this endpoint will have the same header. This allows you to identify and handle these requests appropriately. For example, return success without making the same change in the WFM system as it would be redundant and can cause the connector to get stuck in an infinite loop.
 
 ## Step 2: Register your connector
 
