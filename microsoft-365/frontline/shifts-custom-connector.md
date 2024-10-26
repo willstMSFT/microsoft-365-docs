@@ -46,9 +46,11 @@ Before you get started, complete the following prerequisites:
 
 ### Sync data from your WFM system to Shifts
 
-Use Shifts Graph APIs to read schedule data from your WFM system and write the data to Shifts. For example, to add a shift to Shifts, use the [Create shift](/graph/api/schedule-post-shifts?view=graph-rest-1.0) API.
+Use Shifts Graph APIs to read schedule data from your WFM system and write the data to Shifts.
 
-See the [Graph API v1.0 reference for Shifts APIs](/graph/api/resources/shift?view=graph-rest-1.0). They're listed under **Shift management**.
+For example, to add a shift to Shifts, use the [Create shift](/graph/api/schedule-post-shifts?view=graph-rest-1.0) API.
+
+See the [Microsoft Graph API v1.0 reference](/graph/api/resources/shift?view=graph-rest-1.0) and [Microsoft Graph API beta reference](/graph/api/resources/shift?view=graph-rest-beta) reference for Shifts APIs, which are listed under **Shift management**.
 
 #### Graph API permissions
 
@@ -61,45 +63,49 @@ Developers can authenticate against the Graph API either using delegated access 
 |[Delegated](#delegated-authentication)|Schedule.Read.All|Schedule.ReadWrite.All|
 |[Application](#application-authentication)|Schedule.Read.All|Schedule.ReadWrite.All|
 
-#### Delegated authentication
+##### Delegated authentication
 
 When authenticating on behalf of a user, the application uses the user's identity to authenticate and is authorized based on the user's permissions. This is useful for client applications where a user is signed in and the application needs to access data or perform tasks on behalf of the user. For example, a client application where a user is signed in should authenticate as a user.
 
-#### Application authentication
+##### Application authentication
 
 When authenticating as an application, the application uses its own identity to authenticate and is authorized based on its own permissions. This is useful for background services or daemons that need to access data or perform tasks without user interaction. For example, a background sync service should be authenticated as an application.
 
 > [!NOTE]
 > The `MS-APP-ACT-AS` header is required when you use application authentication. The header should contain the user ID (GUID) of the user that your application is acting on behalf of. It’s recommended that you use the user ID of a team owner when updating the schedule.
 
-### Initial sync
+#### Initial sync
 
 For the first sync, the service should read all data in your WFM system and write it to Shifts.
 
-### Periodic sync
+#### Periodic sync
 
 The service should also perform a periodic sync by writing all changes that occurred in your WFM system within a certain timeframe, excluding the changes initiated from Shifts (as described in Sync data from Shifts to your WFM system), as these changes are already written in Shifts.
 
-All write operations to Shifts (including write operations initiated from the connector) trigger a call to the connector’s `/update` endpoint. Therefore, we recommend that you add the `X-MS-WFMPassthrough: workforceIntegratonId` header to all write calls. This allows you to identify and ignore your own changes in callback notifications and prevent the connector from getting stuck in an infinite loop.
+All write operations to Shifts (including write operations initiated from the connector) trigger a call to the connector’s /update endpoint. We recommend that you add the `X-MS-WFMPassthrough: workforceIntegratonId` header to all write calls. This allows you to identify and ignore your own changes in callback notifications and prevent the connector from getting stuck in an infinite loop.
 
 ### Sync data from Shifts to your WFM system
 
-### Base URL
+#### Base URL
 
 The base URL is determined by your [workforceIntegration](/graph/api/resources/workforceintegration?view=graph-rest-1.0).
-For example, if "url" is `https://contosoconnector.com/wfi` and "apiVersion" is `1`, the base URL is `https://contosoconnector/com/wfi` and the `/connect` endpoint is `https://contosoconnector/wfi/v1/connect`.
 
-### Encryption
+For example, if **url** is https://contosoconnector.com/wfi and **apiVersion** is 1:
+
+- The base URL is `https://contosoconnector/com/wfi`
+- The /connect endpoint is `https://contosoconnector/wfi/v1/connect`
+
+#### Encryption
 
 All requests are encrypted using AES-256-CBC-HMAC-SHA256 with the shared key provided in the workForceIntegration Create request.
 
-### Endpoints
+#### Endpoints
 
-#### POST /connect
+##### POST /connect
 
 This endpoint is only called during Graph API `POST /teamwork/workforceIntegrations`. This is basically a ping test to test the connection.
 
-**Request**
+**Request**<br>
 ConnectRequest
 
 ```http
@@ -111,17 +117,111 @@ ConnectRequest
 
 **Response**
 
-Return HTTP 200 OK
+Return HTTP `200 OK`
 
-#### POST /teams/{teamsId}/update
+##### POST /teams/{teamsId}/update
 
 When a change is made to an entity in a [schedule](/graph/api/resources/schedule?view=graph-rest-1.0) with a [workforceIntegration](/graph/api/resources/workforceintegration?view=graph-rest-1.0), Shifts calls this endpoint to get approval. When approved, the change is saved in Shifts.
 
 As your WFM system is the source of truth, when the connector receives a request to this endpoint, it should first attempt to make the change in the WFM system. If the change is successful, return success. Otherwise, return failure.
 
-#### X-MS-WFMPassthrough header
+##### X-MS-WFMPassthrough header
 
-Shifts calls this endpoint for every change (including changes initiated from the connector/WFM system). If the connector sent an update to Shifts using Graph API and added the `X-MS-WFMPassthrough: workforceIntegratonId` header, the request coming to this endpoint will have the same header. This allows you to identify and handle these requests appropriately. For example, return success without making the same change in the WFM system as it would be redundant and can cause the connector to get stuck in an infinite loop.
+Shifts calls this endpoint for every change (including changes initiated from the connector/WFM system). If the connector sent an update to Shifts using Graph API and added the `X-MS-WFMPassthrough: workforceIntegratonId` header, the request coming to this endpoint will have the same header.
+
+This allows you to identify and handle these requests appropriately. For example, return success without making the same change in the WFM system because it would be redundant and can cause the connector to get stuck in an infinite loop.
+
+**Return response code**<br>
+Any response from the integration, including an error, must have a HTTP response code `200 OK`. The response body must have the status and error message reflecting the appropriate sub call error state. Any response from the integration other than `200 OK` is treated as an error and returned to the caller (client or Graph).
+
+**Request**<br>
+WfiRequestContainer
+
+```json
+{
+  "requests": [
+    {
+      "id": "SHFT_12345678-1234-1234-1234-1234567890ab",
+      "method": "POST",
+      "url": "/shifts/SHFT_12345678-1234-1234-1234-1234567890ab",
+      "headers": {
+        "X-MS-Transaction-ID": "1",
+        "X-MS-Expires": "2024-10-11T21:27:59.0134605Z"
+      },
+      "body": {
+        "draftShift": {
+          "activities": [],
+          "isActive": true,
+          "startDateTime": "2024-10-12T15:00:00.000Z",
+          "endDateTime": "2024-10-12T17:00:00.000Z",
+          "theme": "Blue"
+        },
+        "isStagedForDeletion": false,
+        "schedulingGroupId": "TAG_a3e0b3f1-4a5c-4c2e-8eeb-5b8c3d1e3f8b",
+        "userId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+        "createdDateTime": "2024-10-11T21:27:28.762Z",
+        "lastModifiedDateTime": "2024-10-11T21:27:28.762Z",
+        "lastModifiedBy": {
+          "user": {
+            "id": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+            "displayName": "Jon Doe"
+          }
+        },
+        "id": "SHFT_12345678-1234-1234-1234-1234567890ab"
+      }
+    }
+  ]
+}
+```
+
+**Response**<br>
+WfiResponse
+
+Success: Return HTTP `200 OK`
+
+```json
+{
+  "responses": [
+    {
+      "id": "SHFT_12345678-1234-1234-1234-1234567890ab",
+      "status": 200,
+      "body": {
+        "eTag": "3f4e5d6c-7a8b-9c0d-1e2f-3g4h5i6j7k8l",
+        "error": null,
+        "data": null
+      }
+    }
+  ]
+}
+```
+
+Failure: return HTTP `200 OK`
+
+```json
+{
+    "responses": [
+        {
+            "id": "SHFT_12345678-1234-1234-1234-1234567890ab",
+            "status": 500,
+            "body": {
+                "error": {
+                    "code": "500",
+                    "message": “Could not add the shift”
+                },
+                "data": null
+            }
+        }
+    ]
+}
+```
+
+##### POST /teams/{teamsId}/read
+
+> [!NOTE]
+> This endpoint is supported when using the beta Graph API (as of October 2024) and add `eligibilityFilteringEnabledEntities` in WorkforceIntegration.
+
+The /read endpoint handles requests from Shifts to fetch either eligible TimeOffReason for a certain user or eligible shifts for SwapRequest.
+
 
 ## Step 2: Register your connector
 
