@@ -43,7 +43,7 @@ Partner tenant users assigned the Administrator role in Lighthouse can do the fo
 - Review audit logs. 
 - Create, edit, and view alert rules.
 
-## Managing Lighthouse RBAC permissions in the partner tenant
+## Manage Lighthouse RBAC permissions in the partner tenant
 
 Lighthouse permissions in the partner tenant are managed by assigning RBAC roles. Each role has a set of permissions that determines which data users can access and change within the partner tenant. Administrators in Lighthouse should use a combination of RBAC and GDAP to provide least-privileged access to data based on the tasks each user needs to perform.   
 
@@ -101,7 +101,7 @@ The following table describes the actions that the different RBAC roles can perf
 
 For a complete list of Microsoft Entra roles, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
 
-## Managing GDAP in the customer tenant
+## Manage GDAP in the customer tenant
 
 GDAP gives you a high level of control and flexibility by providing access to customer tenants through [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference). Assigning the least-privileged roles by task to MSP technicians through GDAP reduces security risk for both MSPs and customers.  
 
