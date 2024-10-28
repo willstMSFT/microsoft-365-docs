@@ -1,5 +1,5 @@
 ---
-title: Update a template in SharePoint Agreements AI
+title: Update a template in SharePoint Agreements
 ms.author: chucked
 author: chuckedmonson
 manager: jtremper
@@ -15,10 +15,10 @@ ms.collection:
     - m365initiative-syntex
 ms.localizationpriority:  medium
 ROBOTS: NOINDEX, NOFOLLOW
-description: Learn how to update a template with the SharePoint Agreements AI solution.
+description: Learn how to update a template with the SharePoint Agreements solution.
 ---
 
-# Update a template in SharePoint Agreements AI
+# Update a template in SharePoint Agreements
 
 Templates have their own lifecycle management requirements and will change over time as a business updates its requirements for the content of structure of agreements.
 
