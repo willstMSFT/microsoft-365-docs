@@ -29,7 +29,7 @@ Where the loop content was originally created determines its storage location. S
 
 ## Loop app's usage of organization's storage quota
 
-Loop app workspaces are stored inside your tenant. Loop workspaces and pages count against your tenant's storage quota, starting November 2023.
+Loop app workspaces are stored inside your tenant, within SharePoint Embedded. All Loop workspaces and pages, including Shared workspaces, Personal workspaces, Ideas, and Copilot Pages, count against your tenant's storage quota, starting November 2023.
 
 ## Content permissions mechanism
 

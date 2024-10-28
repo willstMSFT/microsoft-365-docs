@@ -5,7 +5,7 @@ author: chuckedmonson
 manager: jtremper
 audience: admin
 ms.reviewer: sreelakshmi
-ms.date: 07/31/2024
+ms.date: 10/25/2024
 ms.topic: conceptual
 ms.service: microsoft-365-backup
 ms.custom: backup
@@ -235,13 +235,13 @@ Microsoft 365 Backup supports the backup and restoration of any site and user ac
 
 - Site search is case-sensitive and is a prefix-type search.
 
-- SharePoint sites and OneDrive accounts being restored to a prior point in time aren't locked in a read-only state. Therefore, users might not realize their current edits will be imminently rolled back and lost.
+- OneDrive accounts and SharePoint sites being restored to a prior point in time aren't locked in a read-only state. Therefore, users might not realize their current edits will be imminently rolled back and lost.
 
 - For restores to a new URL, it might take up to 15 minutes for the destination URL to be displayed in the tool once a SharePoint site or OneDrive account restore to a new URL session completes.
 
 - For restores to a new URL, only the admin who executed the restore has ownership permissions for the restored SharePoint sites or OneDrive accounts in the new URLs. Restores to the same URL reverts permissions to their original state.
 
-- A site or OneDrive account that is under the strict SEC 17a-4(f) hold policy will fail any in-place restores so as to honor that immutability promise. For sites under that type of hold, you have to restore to a new URL or remove the hold. Any other type of preservation hold that doesn't have a strict admin lockout will allow an in-place restore. Restoring these types of sites as the preservation hold library will be reverted to the prior point in time. A new URL restore is recommended for that type of site as the cleanest option.
+- A OneDrive account or SharePoint site that is under the strict SEC 17a-4(f) hold policy will fail any in-place restores so as to honor that immutability promise. For sites under that type of hold, you have to restore to a new URL or remove the hold. Any other type of preservation hold that doesn't have a strict admin lockout will allow an in-place restore. Restoring these types of sites as the preservation hold library will be reverted to the prior point in time. A new URL restore is recommended for that type of site as the cleanest option.
 
 - The restore point frequency dictates the points in time from which you can recover a prior state of your data. Restore points start being generated when you enable the backup policy for a given OneDrive account, SharePoint Site, or Exchange Online mailbox. For Exchange Online, restore points are available for 10 minutes for the entire year. For OneDrive and SharePoint, the available restore points drop to weekly from 10 minutes for the first two weeks. Based on the defined and currently invariable backup frequency setting previously described, the following example highlights what is possible.
 
@@ -255,7 +255,7 @@ Microsoft 365 Backup supports the backup and restoration of any site and user ac
 
 - Mailbox draft items aren't backed up or restorable.
 
-- For calendar item item restore, restoring organizer copy doesn't automatically make attendee copies catch up, it only allows future updates by organizer to work for all users added on the calendar item.
+- For calendar item restore, restoring organizer copy doesn't automatically make attendee copies catch up, it only allows future updates by organizer to work for all users added on the calendar item.
 
 - To restore a OneDrive account and Exchange mailbox for a user who is deleted from Microsoft Entra ID, use this instruction:  
 
@@ -275,9 +275,13 @@ Microsoft 365 Backup supports the backup and restoration of any site and user ac
 
 - OneDrive accounts and SharePoint sites that undergo the following types of changes won't be undoable via restore: tenant rename, tenant move, and site URL change.  
 
-- If there are no differences between the current state of a mailbox and the prior point in time from which you're attempting a restore, a restore isn't performed and no new folders are created when a "restore to a new location" request is made.
+- Only mailbox items that were changed, deleted to the Recoverable Items folder, or purged can be restored. Learn more about the Recoverable Items folder in Exchange Online.
 
-- SharePoint sites and OneDrive accounts being restored to a new URL have a read-only lock on that new URL. The [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) can download documents or remove the read-only lock manually.
+- Items moved to Deleted Items folder won't be restored by Microsoft 365 Backup. You can recover them by moving them back to the Inbox from the Deleted Items folder.
+
+- When choosing to “Replace mailbox items with backups,” items will be restored to the original location in the user's Inbox.  The only exception to this is if an item was edited while in the Deleted Items folder, as this creates a new version of an item where its original location is the Deleted Items folder.   
+
+- OneDrive accounts and SharePoint sites being restored to a new URL have a read-only lock on that new URL. The [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) can download documents or remove the read-only lock manually.
 
     [!INCLUDE [global-administrator-note](../includes/global-administrator-note.md)]
 
