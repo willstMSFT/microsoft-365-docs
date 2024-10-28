@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 10/24/2024
+ms.date: 10/28/2024
 audience: Admin
 ms.topic: get-started
 ms.service: microsoft-365-copilot
@@ -32,9 +32,9 @@ This article provides prescriptive guidance on how IT admins can prepare their o
 
 When getting your organization and your data for Copilot, there are three options:
 
-- [Baseline](need link)
-- [Core](need link)
-- Best in Class (this article) - Microsoft 365 E5 + SharePoint Advanced Management (SAM)
+- **[Baseline](need link)**
+- **[Core](need link)**
+- **Best in Class (this article)** - Microsoft 365 E5 + SharePoint Advanced Management (SAM)
 
 To learn more about these options, including the different license options, see [Overview](microsoft-365-copilot-setup.md).
 
@@ -678,12 +678,11 @@ To learn more, see:
 
 ✅ **Use [AI Hub](/purview/ai-microsoft-purview) or [eDiscovery](/purview/edisc) to analyze Copilot user prompts and responses**
 
-When users enter a prompt and get a response from Copilot, you can view and search these interactions.
+When users enter a prompt and get a response from Copilot, you can view and search these interactions. Specifically, these features help you:
 
-When you use Copilot, these features help you:
-
-- Find and remove sensitive information or inappropriate content included in Copilot activities.
+- Find sensitive information or inappropriate content included in Copilot activities.
 - Respond to a data spillage incident when confidential or malicious information is released through Copilot-related activity.
+- With eDiscovery, you can remove sensitive information or inappropriate content included in Copilot activities.
 
 There are two ways to review and analyze Copilot prompts and responses - **AI Hub** and **eDiscovery**.
 
