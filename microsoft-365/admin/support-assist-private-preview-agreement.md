@@ -27,7 +27,7 @@ Effective Date: October 31<sup>st</sup>, 2024
 
 The following Preview Agreement ("Agreement") is an agreement between you ("**Participant**") and Microsoft Corporation (or based on where Participant is located one of its affiliates) ("**Microsoft**"), each of which has authorized a signatory to participate in this Agreement on its behalf. IF YOU COMPLY WITH THESE TERMS, YOU HAVE THE RIGHTS BELOW. BY PARTICIPATING IN THE PREVIEW, YOU ACCEPT THESE TERMS.
 
-This Agreement represents Microsoft's standard ter/ms and conditions for use of its Pre-Release Technologies and is not subject to negotiation. By accepting this Agreement, Participant represents that it is acting as an agent of an organization with which they are affiliated and has the authority to bind that entity and to participate in the Preview on behalf of such entity.
+This Agreement represents Microsoft's standard terms and conditions for use of its Pre-Release Technologies and is not subject to negotiation. By accepting this Agreement, Participant represents that it is acting as an agent of an organization with which they are affiliated and has the authority to bind that entity and to participate in the Preview on behalf of such entity.
 
 ## 1. Definitions
 
@@ -127,12 +127,12 @@ b. Falsify any protocol or email header information (e.g., "spoofing") within th
 
 c. Access or use the Pre-Release Technologies:
 
-    i. within or to support Participant's live operating or commercial production environment except as set forth in this Agreement and unless otherwise notified by Microsoft in writing.
-    ii. in any way prohibited by any law, regulation or governmental order or decree or that violates others' legal rights.
-    iii. in any way that could harm the Pre-Release Technologies or impair anyone else's use of the Pre-Release Technologies (e.g., denial of service attacks, etc.).
-    iv. to try to gain unauthorized access to any service, data, account, or network by any means.
-    v. to send "spam" (i.e., unsolicited bulk or commercial messages) or otherwise make available any offering designed to violate these terms; or
-    vi. access the Pre-Release Technologies through any other Pre-Release Technologies subscription without the express permission of the subscription holder.
+> i. within or to support Participant's live operating or commercial production environment except as set forth in this Agreement and unless otherwise notified by Microsoft in writing.
+> ii. in any way prohibited by any law, regulation or governmental order or decree or that violates others' legal rights.
+> iii. in any way that could harm the Pre-Release Technologies or impair anyone else's use of the Pre-Release Technologies (e.g., denial of service attacks, etc.).
+> iv. to try to gain unauthorized access to any service, data, account, or network by any means.
+> v. to send "spam" (i.e., unsolicited bulk or commercial messages) or otherwise make available any offering designed to violate these terms; or
+> vi. access the Pre-Release Technologies through any other Pre-Release Technologies subscription without the express permission of the subscription holder.
 
 ## 7. Confidentiality; Proprietary Rights
 
@@ -140,9 +140,9 @@ c. Access or use the Pre-Release Technologies:
 
 a. The information shared under this Agreement (except Feedback) is Confidential Information subject to the NDA. If there is no NDA, or the NDA is terminated or otherwise ceases to be in effect, the following terms shall apply:
 
-    i. Use of Confidential Information. Starting on the day of disclosure and continuing for five years, neither party will disclose the other's Confidential Information to third parties except as otherwise expressly provided in this Section 5.1(b). Each party will use such information only for purposes of the parties' business relationship under this Agreement. Each party will take reasonable steps to protect the other's Confidential Information. Each party may disclose the other's Confidential Information to Affiliates, employees, and contractors and will remain responsible for their unauthorized use or disclosure. These disclosures may be made only on a need-to-know basis, subject to the obligations of this Section 5.1(b).
-    ii. Cooperation in the event of disclosure. Each party will immediately notify the other party upon discovery of any unauthorized use or disclosure of Confidential Information. Each party will help the other party regain possession of the Confidential Information and prevent further unauthorized use or disclosure.
-    iii. Residuals. Each party receiving Residuals may freely use them without payment and need not limit personnel assignments based on access to Confidential Information. This section is not a copyright or patent license and does not modify duties to safeguard Confidential Information.
+> i. Use of Confidential Information. Starting on the day of disclosure and continuing for five years, neither party will disclose the other's Confidential Information to third parties except as otherwise expressly provided in this Section 5.1(b). Each party will use such information only for purposes of the parties' business relationship under this Agreement. Each party will take reasonable steps to protect the other's Confidential Information. Each party may disclose the other's Confidential Information to Affiliates, employees, and contractors and will remain responsible for their unauthorized use or disclosure. These disclosures may be made only on a need-to-know basis, subject to the obligations of this Section 5.1(b).
+> ii. Cooperation in the event of disclosure. Each party will immediately notify the other party upon discovery of any unauthorized use or disclosure of Confidential Information. Each party will help the other party regain possession of the Confidential Information and prevent further unauthorized use or disclosure.
+> iii. Residuals. Each party receiving Residuals may freely use them without payment and need not limit personnel assignments based on access to Confidential Information. This section is not a copyright or patent license and does not modify duties to safeguard Confidential Information.
 
 ### 7.2 Reservation of Rights; No Other License
 
@@ -168,7 +168,7 @@ Microsoft may apply security technologies and procedures to help protect against
 
 ## 10. Privacy; Consent to Use of Data
 
-Your privacy is important to us. Some features of the Pre-Release Technologies send, receive, or otherwise process Participant Data or information when you use those features. Some of these features can be switched off in the user interface, or you can choose not to use them. We describe how we use and protect Participant Data and any information we collect from you in the Microsoft Privacy Statement available at [https://privacy.microsoft.com/en-us/privacystatement]<https://privacy.microsoft.com/en-us/privacystatement> or a successor location. Please read the Microsoft Privacy Statement carefully. This Agreement incorporates the Microsoft Privacy Statement by reference. By using the Pre-Release Technologies or agreeing to these terms, you consent to Microsoft's collection, use, and disclosure of Participant Data and information as described in the Microsoft Privacy Statement.
+Your privacy is important to us. Some features of the Pre-Release Technologies send, receive, or otherwise process Participant Data or information when you use those features. Some of these features can be switched off in the user interface, or you can choose not to use them. We describe how we use and protect Participant Data and any information we collect from you in the Microsoft Privacy Statement available at [https://privacy.microsoft.com/privacystatement](https://privacy.microsoft.com/privacystatement) or a successor location. Please read the Microsoft Privacy Statement carefully. This Agreement incorporates the Microsoft Privacy Statement by reference. By using the Pre-Release Technologies or agreeing to these terms, you consent to Microsoft's collection, use, and disclosure of Participant Data and information as described in the Microsoft Privacy Statement.
 
 ## 11. Data Processing
 
@@ -178,17 +178,17 @@ To the extent Microsoft is a processor of Personal Data subject to the European 
 
 a. Processing Details. The parties acknowledge and agree that:
 
-    i. The subject-matter of the processing is limited to Personal Data within the scope of GDPR;
-    ii. The duration of the processing shall be for the duration of the Participant's right to participate in the Preview and until all Personal Data is deleted or returned in accordance with Participant instructions or this Agreement;
-    iii. The nature and purpose of the processing shall be to provide the Pre-Release Technologies pursuant to the Agreement;
-    iv. The types of Personal Data processed by the Pre-Release Technologies include those expressly identified in Article 4 of the GDPR to the extent included by Participant in Data; and
-    vi. The categories of data subjects are Participant's representatives and end users, such as employees, contractors, collaborators, and customers.
+> i. The subject-matter of the processing is limited to Personal Data within the scope of GDPR;
+> ii. The duration of the processing shall be for the duration of the Participant's right to participate in the Preview and until all Personal Data is deleted or returned in accordance with Participant instructions or this Agreement;
+> iii. The nature and purpose of the processing shall be to provide the Pre-Release Technologies pursuant to the Agreement;
+> iv. The types of Personal Data processed by the Pre-Release Technologies include those expressly identified in Article 4 of the GDPR to the extent included by Participant in Data; and
+> vi. The categories of data subjects are Participant's representatives and end users, such as employees, contractors, collaborators, and customers.
 
 b. Data Transfers.
 
-    i. Data and Personal Data that Microsoft processes on Participant's behalf may be transferred to, and stored and processed in, the United States or any other country in which Microsoft or its Sub-processors operate. Participant appoints Microsoft to perform any such transfer of Participant Data and Personal Data to any such country and to store and process Data and Personal Data to provide the Pre-Release Technologies.
-    ii. Microsoft will abide by the requirements of European Economic Area and Swiss data protection law regarding the collection, use, transfer, retention and other processing of Personal Data from the European Economic Area and Switzerland. All transfers of Personal Data to a third country or an international organization will be subject to appropriate safeguards as described in Article 46 of the GDPR and such transfers and safeguards will be documented according to Article 30(2) of the GDPR.
-    iii. In addition, Microsoft is certified to meet the EU-U.S. and Swiss-U.S. Privacy Shield Frameworks and the commitments they entail. Microsoft agrees to notify Participant in the event that it determines that it can no longer meet its obligation to provide the same level of protection as is required by the Privacy Shield principles.
+> i. Data and Personal Data that Microsoft processes on Participant's behalf may be transferred to, and stored and processed in, the United States or any other country in which Microsoft or its Sub-processors operate. Participant appoints Microsoft to perform any such transfer of Participant Data and Personal Data to any such country and to store and process Data and Personal Data to provide the Pre-Release Technologies.
+> ii. Microsoft will abide by the requirements of European Economic Area and Swiss data protection law regarding the collection, use, transfer, retention and other processing of Personal Data from the European Economic Area and Switzerland. All transfers of Personal Data to a third country or an international organization will be subject to appropriate safeguards as described in Article 46 of the GDPR and such transfers and safeguards will be documented according to Article 30(2) of the GDPR.
+> iii. In addition, Microsoft is certified to meet the EU-U.S. and Swiss-U.S. Privacy Shield Frameworks and the commitments they entail. Microsoft agrees to notify Participant in the event that it determines that it can no longer meet its obligation to provide the same level of protection as is required by the Privacy Shield principles.
 
 ### 11.2 Acknowledgments and Consent by Participant
 
@@ -234,7 +234,7 @@ Microsoft may provide Participant with notices in any manner Microsoft chooses, 
 
 ### 17.3 Term and Termination
 
-This Agreement is effective on Participant's acceptance of the Preview terms. This Agreement will remain in effect for the duration of your participation in the Preview unless terminated by Microsoft. Your license to use the Pre-Release Technologies will end on the earlier of a) the date specified in any notice Microsoft provides to you; or b) the commercial release of the Pre-Release Technologies. Microsoft may suspend or cancel the Pre-Release Technologies or terminate this Agreement at any time for any reason. Microsoft may also terminate this Agreement or suspend Participant's use of the Preview Service immediately upon prior written notice to Participant if Participant breaches this Agreement and either (i) the breach is one that cannot be cured, or (ii) Participant fails to cure the breach within five days after it receives notice of the breach.
+This Agreement is effective on Participant's acceptance of the Preview terms. This Agreement will remain in effect for the duration of your participation in the Preview unless terminated by Microsoft. Your license to use the Pre-Release Technologies will end on the earlier of a\) the date specified in any notice Microsoft provides to you; or b\) the commercial release of the Pre-Release Technologies. Microsoft may suspend or cancel the Pre-Release Technologies or terminate this Agreement at any time for any reason. Microsoft may also terminate this Agreement or suspend Participant's use of the Preview Service immediately upon prior written notice to Participant if Participant breaches this Agreement and either (i) the breach is one that cannot be cured, or (ii) Participant fails to cure the breach within five days after it receives notice of the breach.
 
 Upon cancellation, suspension, or termination, Participant's right to use the Pre-Release Technologies stops immediately. There is no guarantee that Participant Data and applications will be retrievable. Microsoft may delete any Participant Data that remains in the Pre-Release Technologies after this Agreement terminates. Participant understands and agrees that it will not use the Pre-Release Technologies for anything that is mission critical to its business operations and will only use Participant Data that Participant has backed up. Participant may stop using and accessing the Pre-Release Technologies at any time without further obligation, whether or not it deletes or extracts it Participant Data.
 
