@@ -145,7 +145,18 @@ To ensure data quality, we perform daily data validation checks for the past thr
 | Uses Teams chat                   | Indicates whether the user has participated in at least one chat using Teams in the past 30 days.                              |
 | Uses Outlook Email                | Indicates whether the user has sent at least one email using Outlook in the past 30 days.                                    |
 | Uses Office docs                  | Indicates whether the user has collaborated on at least one document or file using OneDrive or sharepoint in the past 30 days. |
-| Suggested candidate for Copilot      | These users are the most likely in your organization to use Copilot features if assigned a license based on their Microsoft 365 app activity. Each week, the top 25% of eligible users in your organization are flagged in this column based on their use of the Microsoft 365 app where Copilot brings value (such as Microsoft Teams and Outlook). In general, users with higher Microsoft 365 app usage intensity will be flagged as suggested candidates. Users not tagged in this column can still benefit from Copilot; this column is simply intended to help organizations prioritize users for license assignment as part of initial Copilot rollout.  |
+| Suggested candidate for Copilot      | Flags the top 25% of eligible, non-licensed users based on their Microsoft 365 app usage intensity.  |
+
+### Additional details for Suggested candidate for Copilot
+
+The Suggested Candidate for Copilot License feature in the Microsoft 365 Copilot Usage Reports is designed to assist organizations in identifying users who may benefit most from Microsoft 365 Copilot based on their usage intensity of Microsoft 365 applications. Each week, the feature flags the top 25% of eligible, non-licensed users within an organization. These suggested candidates are selected without individual stack ranking or comparisons between employees.
+
+- The feature analyzes the Microsoft 365 usage across the users that have not been assigned Copilot licenses each week. It then flags the top 25% of them as suggested candidates. This selection is based solely on app usage intensity in applications where Microsoft 365 Copilot provides value, such as Microsoft Outlook, Teams, Word, or other Microsoft 365 apps.
+- The feature evaluates usage intensity of Microsoft 365 applications, not the productivity or output of the user.
+- The feature does not rank users within the selected 25% group, meaning there is no individual stack ranking among suggested candidates. Users are not ranked against each other within the selected group. By not stack ranking, the feature avoids any comparison of users that could otherwise be inferred as a performance measure.
+- Each week, the feature re-evaluates the user base again and suggests the top 25% based on usage metrics for that corresponding week.  
+- If an end-user is assigned a Microsoft 365 Copilot license, they will not be part of this suggested list.
+- The primary purpose is to support organizations with the rollout of Microsoft 365 Copilot by highlighting users who are more likely to benefit from its capabilities due to their app usage patterns. It is not intended to evaluate productivity or imply performance levels among employees.
 
 ## Make the user-specific data anonymous
 
