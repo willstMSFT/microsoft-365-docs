@@ -1,5 +1,5 @@
 ---
-title: Create an agreement in SharePoint Agreements AI
+title: Create an agreement in SharePoint Agreements
 ms.author: chucked
 author: chuckedmonson
 manager: jtremper
@@ -15,10 +15,10 @@ ms.collection:
     - m365initiative-syntex
 ms.localizationpriority:  medium
 ROBOTS: NOINDEX, NOFOLLOW
-description: Learn how to create an agreement with the SharePoint Agreements AI solution.
+description: Learn how to create an agreement with the SharePoint Agreements solution.
 ---
 
-# Create an agreement in SharePoint Agreements AI
+# Create an agreement in SharePoint Agreements
 
 ## Create an agreement from a published template
 

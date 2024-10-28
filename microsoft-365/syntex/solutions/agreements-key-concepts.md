@@ -1,5 +1,5 @@
 ---
-title: Key concepts in SharePoint Agreements AI
+title: Key concepts in SharePoint Agreements
 ms.author: chucked
 author: chuckedmonson
 manager: jtremper
@@ -15,12 +15,12 @@ ms.collection:
     - m365initiative-syntex
 ms.localizationpriority:  medium
 ROBOTS: NOINDEX, NOFOLLOW
-description: Learn about the concepts of workspaces, categories, templates, and sections in the SharePoint Agreements AI solution.
+description: Learn about the concepts of workspaces, categories, templates, and sections in the SharePoint Agreements solution.
 ---
 
-# Key concepts in SharePoint Agreements AI
+# Key concepts in SharePoint Agreements
 
-SharePoint Agreements AI is an end-to-end solution that gives you the flexibility to easily manage agreements across your organization. *Workspaces*, *categories*, *templates*, and *sections* are four essential concepts that can help you organize and manage your agreements.
+SharePoint Agreements is an end-to-end solution that gives you the flexibility to easily manage agreements across your organization. *Workspaces*, *categories*, *templates*, and *sections* are four essential concepts that can help you organize and manage your agreements.
 
 **Workspaces** allow you to organize and manage agreements across your organization. When you create a workspace, a SharePoint site is created and is assigned to the workspace. You can create a workspace for business processes or departments in your organization that manages agreements. For example, you can have one workspace for your procurement team, and another one for your human resources team. Agreements, templates, and other files exist within the workspace and are stored in the corresponding SharePoint site. Roles are assigned to users at a workspace level, and permissions can be managed at a workspace level.
 
@@ -32,7 +32,7 @@ SharePoint Agreements AI is an end-to-end solution that gives you the flexibilit
 
 ## Roles
 
-Roles are assigned at a workspace level. Currently, SharePoint Agreements AI supports the following roles:
+Roles are assigned at a workspace level. Currently, SharePoint Agreements supports the following roles:
 
 | Role | Description | Permissions  | Recommendation   |
 | --- | --- | --- | --- |
