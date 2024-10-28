@@ -33,7 +33,7 @@ This article provides prescriptive guidance on how IT admins can prepare their o
 When getting your organization and your data for Copilot, there are three options:
 
 - **[Baseline](need link)**
-- **[Core](need link)**
+- **[Core](copilot-core.md)**
 - **Best in Class (this article)** - Microsoft 365 E5 + SharePoint Advanced Management (SAM)
 
 To learn more about these options, including the different license options, see [Overview](microsoft-365-copilot-setup.md).

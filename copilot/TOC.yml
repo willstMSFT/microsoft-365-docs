@@ -9,6 +9,8 @@
           items:
             - name: ORIGINAL-Set up Microsoft 365 Copilot
               href: microsoft-365-copilot-setup.md
+            - name: Core deployment
+              href: copilot-core.md
             - name: Best in class deployment
               href: copilot-best-in-class.md
     - name: Deploy and enable
