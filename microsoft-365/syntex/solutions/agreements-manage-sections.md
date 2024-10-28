@@ -1,5 +1,5 @@
 ---
-title: Manage template sections in SharePoint Agreements AI
+title: Manage template sections in SharePoint Agreements
 ms.author: chucked
 author: chuckedmonson
 manager: jtremper
@@ -15,10 +15,10 @@ ms.collection:
     - m365initiative-syntex
 ms.localizationpriority:  medium
 ROBOTS: NOINDEX, NOFOLLOW
-description: Learn how to create, publish, and manage template sections in the SharePoint Agreements AI solution.
+description: Learn how to create, publish, and manage template sections in the SharePoint Agreements solution.
 ---
 
-# Manage template sections in SharePoint Agreements AI
+# Manage template sections in SharePoint Agreements
 
 Sections are reusable blocks of content that ensure the use of consistent language across your agreements. You can define a section and use it across multiple templates. For example, you might have a section for privacy clause or payment terms for your purchase agreements, while you can have a section for relocation package for your full-time employee templates. Sections are saved as Microsoft Word documents in the section library on your Agreements site.
 
@@ -106,7 +106,7 @@ Once you're done setting up the section, you must publish it. Only published sec
 
 Once you have made the relevant changes to section and configured section settings, you can choose to send a draft section for approval before publishing the section.
 
-SharePoint Agreements AI uses the Approvals app in Microsoft Teams to send approval requests. For more information, see [Approvals in Microsoft Teams](/power-automate/teams/native-approvals-in-teams).
+SharePoint Agreements uses the Approvals app in Microsoft Teams to send approval requests. For more information, see [Approvals in Microsoft Teams](/power-automate/teams/native-approvals-in-teams).
 
 To request approval before publishing the section, follow these steps:
 
