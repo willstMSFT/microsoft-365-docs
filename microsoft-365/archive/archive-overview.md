@@ -54,6 +54,11 @@ Administrators should notify the site owners and end users before a site is arch
 
 Document Center templates are not available to archive with Microsoft 365 Archive.
 
+## Related articles
+
+[Education offering](archive-education-offering.md)
+
+
 <!---
 ## Preview limitations
 

@@ -62,3 +62,14 @@ No, if you purchase additional storage packs you won't get reimbursed for any un
 
 You will not be charged for monthly storage costs, but you will still pay applicable reactivation fees.
 
+#### Does archived content get returned in Copilot for M365 queries?
+
+No, archived content is not used by Copilot for M365. 
+
+#### Can you delete an archived site, should you no longer need it?  
+
+Yes, you can directly delete an archived site without the need to reactivate. 
+
+#### Can archived content in legal hold be deleted?
+
+Content under legal hold cannot be deleted. If the legal hold is removed or the retention policy has expired, the content can be deleted.
