@@ -4,7 +4,7 @@ f1.keywords: NOCSH
 ms.author: cmcatee
 author: cmcatee-MSFT
 manager: scotv
-ms.reviewer: 
+ms.reviewer: rabhange
 audience: Admin
 ms.topic: legal
 ms.service: microsoft-365-business
