@@ -79,5 +79,7 @@ New-UnifiedGroup -DisplayName <TargetGroupDisplayName> -Alias <TargetGroupAlias>
 >[!Important]
 >Microsoft 365 Groups connected to SharePoint sites **MUST be pre-created using this method**. Pre-creating Microsoft 365 groups using any other methods will cause SharePoint site migrations to fail.
 
+> [!WARNING]
+> If the Microsoft 365 Group name contains a period character (.), the migration fails with an **Invalid character** error.
 
 ## Step 5: [Prepare the identity mapping file](cross-tenant-SharePoint-migration-step5.md)
