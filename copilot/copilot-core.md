@@ -234,8 +234,6 @@ For example, your organization might have regulatory requirements that require y
 
 If you have stale data in your organization, then create and use retention policies. These policies help Copilot return more accurate information from your documents and emails.
 
-Retention policies can also retain Copilot prompts and responses for compliance requirements, even if [users delete their Copilot activity](https://support.microsoft.com/office/delete-your-microsoft-365-copilot-activity-history-76de8afa-5eaf-43b0-bda8-0076d6e0390f). To learn more, see [Learn about retention for Copilot](/purview/retention-policies-copilot).
-
 Settings in a retention policy apply at the container level, like a SharePoint site or an Exchange mailbox. These settings are automatically inherited by the data in that container. If you need [exceptions for individual emails or documents](/purview/create-retention-labels-data-lifecycle-management), then use retention labels. For example, you have a retention policy to delete data in OneDrive if the data is older than one year. But, users can apply retention labels to keep specific documents from automatic deletion.
 
 1. To create retention policies, sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as a Compliance Administrator.
