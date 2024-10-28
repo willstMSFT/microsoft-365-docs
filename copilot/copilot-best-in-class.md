@@ -33,12 +33,12 @@ This article provides prescriptive guidance on how IT admins can prepare their o
 When getting your organization and your data for Copilot, there are three options:
 
 - **[Baseline](need link)**
-- **[Core](need link)**
+- **[Core](copilot-core.md)**
 - **Best in Class (this article)** - Microsoft 365 E5 + SharePoint Advanced Management (SAM)
 
-To learn more about these options, including the different license options, see [Overview](microsoft-365-copilot-setup.md).
+To learn more about these options, including the different license options, see [Overview](new article / need link).
 
-In the **Best in Class** Microsoft 365 Copilot deployment, you use the features included with your Microsoft 365 E5 + SharePoint Advanced Management (SAM) licenses. With these features, you:
+In the **Best in Class** Microsoft 365 Copilot deployment, you use the features included with your Microsoft 365 E5 and Microsoft 365 Copilot licenses. With these features, you:
 
 - Use SAM to help prevent oversharing, declutter data sources, and monitor SharePoint site changes.
 - Use Microsoft Purview to apply sensitivity labels, detect sensitive info & restrict endpoints, and keep necessary content (or delete the content you don't need).
