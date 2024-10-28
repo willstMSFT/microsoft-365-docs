@@ -34,13 +34,13 @@ When getting your organization and your data for Copilot, there are three option
 
 - **[Baseline](need link)** - Microsoft 365 E3
 - **Core** (this article) - Microsoft 365 E3 + SharePoint Advanced Management (SAM)
-- **[Best in Class](copilot-best-in-class)** - Microsoft 365 E5 + SharePoint Advanced Management (SAM)
+- **[Best in Class](copilot-best-in-class.md)** - Microsoft 365 E5 + SharePoint Advanced Management (SAM)
 
-To learn more about these options, including the different license options, see [Overview](microsoft-365-copilot-setup.md).
+To learn more about these options, including the different license options, see [Overview](new article / need link).
 
-In the **Core** Microsoft 365 Copilot deployment, you use the features included with your Microsoft 365 E3 + SharePoint Advanced Management (SAM) licenses. With these features, you:
+In the **Core** Microsoft 365 Copilot deployment, you use the features included with your Microsoft 365 E3 and Microsoft 365 Copilot licenses. With these features, you:
 
-- Use SAM to help prevent oversharing, declutter data sources, and monitor SharePoint site changes.
+- Use SharePoint Advanced Management (SAM) to help prevent oversharing, declutter data sources, and monitor SharePoint site changes.
 - Use Microsoft Purview to enable sensitivity labels, detect sensitive info & restrict endpoints, and keep necessary content (or delete the content you don't need).
 
 When you use the features described in this article, your organization is better prepared for Copilot, including getting accurate results from Copilot.
@@ -137,12 +137,6 @@ In addition to the SharePoint steps you completed in [Baseline](add link), there
 - Review and analyze Copilot prompts and responses.
 
 To learn more about Microsoft Purview, see [Microsoft 365 Copilot in Microsoft Purview Overview](/purview/copilot-in-purview-overview).
-
-Gain visibility into how users are interacting with data in the organization and with Microsoft 365 Copilot
-
-Protect sensitive information from being shared beyond its intended audience and reduce the risk of oversharing
-Retain the data you need to keep and remove data that no longer has business value to reduce data surface for oversharing
-Gain additional understanding of content used and shared in Copilot interactions
 
 ### Identify and label sensitive data
 
@@ -315,7 +309,7 @@ To learn more, see:
 
 4. The data returned is the Copilot prompts and responses. You can review and export this information. If the data contains sensitive information, you can also delete it.
 
-To learn more, see [Search for and optionally delete Copilot interactions in eDiscovery](/purview/edisc-search-copilot-data).
+To learn more, see [Search for Copilot interactions in eDiscovery](/purview/edisc-search-copilot-data).
 
 ---
 
