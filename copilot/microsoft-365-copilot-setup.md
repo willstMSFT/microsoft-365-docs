@@ -20,9 +20,14 @@ description: Learn how IT administrators can prepare their organization for Micr
 
 # Get started with Microsoft 365 Copilot - admin guide
 
-[Microsoft 365 Copilot](microsoft-365-copilot-overview.md) is an AI-powered productivity tool that uses large language models (LLMs). It integrates with your data, with Microsoft Graph, and with Microsoft 365 Apps.
+[Microsoft 365 Copilot](microsoft-365-copilot-overview.md) is an AI-powered productivity tool that uses large language models (LLMs).
 
-It works alongside popular Microsoft 365 Apps, like Word, Excel, PowerPoint, Outlook, Teams, and more. Copilot provides real-time intelligent assistance, enabling users to enhance their creativity, productivity, and skills.
+Copilot:
+
+- Integrates with your data, including Microsoft Graph for emails, files, meetings, chats, calendars, and contacts.
+- Works alongside popular Microsoft 365 Apps, like Word, Excel, PowerPoint, Outlook, and Teams.
+- Uses natural language prompting to get real-time results from the data your users can access. It uses your Microsoft Graph content with the same access controls as other Microsoft 365 services.
+- Provides enables users to enhance their creativity, productivity, and skills.
 
 This article covers how IT admins can prepare their organization for Copilot.
 
@@ -57,7 +62,9 @@ This section gives an overview of the prerequisites (licensing and admin centers
   - [Microsoft Purview service description](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description)
   - [Microsoft SharePoint Premium - SharePoint Advanced Management overview](/sharepoint/advanced-management#licensing)
 
-### App requirements
+### App requirements - DELETE
+
+**Delete this section. It's already listed in [microsoft-365-copilot-requirements.md](microsoft-365-copilot-requirements.md).**
 
 - **Microsoft 365 Apps** - Including desktop applications, like Word, Excel, PowerPoint, Outlook, and Teams. Copilot is available in web versions of the apps when a license is assigned. To get started with the implementation process, see [Deployment guide for Microsoft 365 Apps](/deployoffice/deployment-guide-microsoft-365-apps).
 
@@ -73,7 +80,7 @@ This section gives an overview of the prerequisites (licensing and admin centers
 
 - **Microsoft Whiteboard** - To use Microsoft 365 Copilot with Microsoft Whiteboard, you must have Whiteboard enabled for your tenant. To learn more about Microsoft Whiteboard, see [Manage access to Microsoft Whiteboard for your organization](/microsoft-365/whiteboard/manage-whiteboard-access-organizations).
 
-## Step 1 - Optimize search in SharePoint
+## Step 1 - Optimize search in SharePoint - ADD TO BASELINE
 
 ✅ **Optimize your SharePoint content for search**
 
@@ -96,11 +103,11 @@ To learn more about privacy with Microsoft 365 Copilot, see [Data, Privacy, and
 
 ### Prevent oversharing and control access with SharePoint and OneDrive
 
-To get ready for your organization’s Microsoft 365 Copilot adoption, there are a few [highly recommended steps you can take with SharePoint and OneDrive](/sharepoint/get-ready-copilot-sharepoint-advanced-management).
+To get ready for your organization's Microsoft 365 Copilot adoption, there are a few [highly recommended steps you can take with SharePoint and OneDrive](/sharepoint/get-ready-copilot-sharepoint-advanced-management).
 
 To start, you can:
 
-✅ **Reduce accidental oversharing with SharePoint sharing settings**
+✅ **Reduce accidental oversharing with SharePoint sharing settings - BASELINE**
 
 To minimize accidental content oversharing with Copilot results, implement sharing settings at the organization and site levels:
 
@@ -118,7 +125,7 @@ To minimize accidental content oversharing with Copilot results, implement shari
     - Make sure that [Site Owners receive a request to access the site](https://support.microsoft.com/office/set-up-and-manage-access-requests-94b26e0b-2822-49d4-929a-8455698654b3).
     - [Change the external sharing setting for a user's OneDrive](/sharepoint/user-external-sharing-settings). When a user saves a file to OneDrive, it's in the end user's personal storage. The user has full control over the file and can share it with others. To ensure data security, review OneDrive sharing features.
 
-✅ **Check permissions and site access in SharePoint admin center**
+✅ **Check permissions and site access in SharePoint admin center - BASELINE**
 
 To ensure data is secure, review SharePoint site access and permissions. Prioritize sites that contain sensitive information.
 
@@ -130,12 +137,12 @@ To ensure data is secure, review SharePoint site access and permissions. Priorit
 
 1. In the **Membership** tab, review access to site owners, members, and visitors. Ensure that only the necessary users have access to the site.
 
-✅ **Identify sites with potentially overshared content and control access**
+✅ **Identify sites with potentially overshared content and control access - CORE, BEST IN CLASS**
 
 1. Use the following SharePoint Advanced Management (SAM) activity-based reports to quickly identify the most actively overshared sites:
 
     - [Usage of "Everyone Except External Users"](/sharepoint/data-access-governance-reports#content-shared-with-everyone-except-external-users-eeeu-reports) 
-    - [Usage of “People in your organization" sharing links](/sharepoint/data-access-governance-reports#sharing-links-reports) 
+    - [Usage of "People in your organization" sharing links](/sharepoint/data-access-governance-reports#sharing-links-reports) 
     - [Usage of "Anyone" sharing links](/sharepoint/data-access-governance-reports#sharing-links-reports) 
 
 2. [Initiate a Site Access Review](/sharepoint/restricted-access-control) for site owners to confirm overshared content and take remediation steps. SharePoint admins can use the [Restricted Access Control Policy](/sharepoint/restricted-access-control) to restrict access to a site with overshared content.
