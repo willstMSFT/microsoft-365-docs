@@ -1,5 +1,5 @@
 ---
-title: Approval notifications in SharePoint Agreements AI
+title: Approval notifications in SharePoint Agreements
 ms.author: chucked
 author: chuckedmonson
 manager: jtremper
@@ -15,10 +15,10 @@ ms.collection:
     - m365initiative-syntex
 ms.localizationpriority:  medium
 ROBOTS: NOINDEX, NOFOLLOW
-description: Learn about the approval notifications in the SharePoint Agreements AI solution.
+description: Learn about the approval notifications in the SharePoint Agreements solution.
 ---
 
-# Approval notifications in SharePoint Agreements AI
+# Approval notifications in SharePoint Agreements
 
 Agreement approval notifications are sent through the Approvals app in Microsoft Teams. Agreement creators can also choose to notify approvers via email.
 
