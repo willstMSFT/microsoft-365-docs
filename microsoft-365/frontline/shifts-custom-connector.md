@@ -41,23 +41,19 @@ Before you get started, complete the following prerequisites:
 
 ## Register an app in the Microsoft Entra admin center
 
+Follow these steps to register an app in the Microsoft identity platform, configure permissions for the app to access Microsoft Graph, and get an access token for authorization.
+
 1. Sign in to the Microsoft Entra admin center as at least a [Cloud Application Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator).
 1. Register your app. For steps, see [Register an application with the Microsoft identity platform](/graph/auth-register-app-v2).
-1. Assign the following Microsoft Graph [application permissions](/graph/permissions-overview?tabs=http#application-permissions) to your app for app-only access.
-
-      |Permission type |Read-only permissions|Read/write permissions|
-      |---------|---------|---------|
-      |Application|Schedule.Read.All|Schedule.ReadWrite.All|
-
-      Then, grant admin consent to the permissions, and get an access token.
+1. Assign the **Schedule.ReadWrite.All** [application permissions](/graph/permissions-overview?tabs=http#application-permissions) to the app for app-only access and get an access token.
 
       For step-by-step guidance, see [Get access without a user](/graph/auth-v2-service?view=graph-rest-1.0).
 
-      The access token verifies that your app is authorized to [call Microsoft Graph using its own identity](/graph/auth/auth-concepts#access-scenarios). Developers must include it in the Authorization header of requests.
+  The access token verifies that your app is authorized to [call Microsoft Graph using its own identity](/graph/auth/auth-concepts#access-scenarios). It must be included in the Authorization header of requests.
 
 ## Sync data from your WFM system to Shifts
 
-Use Shifts Graph APIs to read schedule data from your WFM system and write the data to Shifts.
+Use Shifts APIs in Microsoft Graph to read schedule data from your WFM system and write the data to Shifts.
 
 For example, to add a shift to Shifts, use the [Create shift](/graph/api/schedule-post-shifts?view=graph-rest-1.0) API.
 
@@ -74,7 +70,7 @@ For the first sync, the service should read data in your WFM system and write th
 
 After the first sync, you can choose to:
 
-- **Synchronously update Shifts with changes in your WFM system**: Use Graph API to send an update to Shifts for every change made in your WFM system.
+- **Synchronously update Shifts with changes in your WFM system**: Send an update to Shifts for every change made in your WFM system.
 - **Asynchronously update Shifts with changes in your WFM system**: Perform a periodic sync by writing all changes that occurred in your WFM system within a certain timeframe (for example, 30 seconds, 10 minutes) to Shifts.
 
     All write operations to Shifts, including write operations initiated by the connector, trigger a call to the connector’s /update endpoint. We recommend that you include the `X-MS-WFMPassthrough: workforceIntegratonId` header to all write calls so the connector can identify and handle them appropriately. For example, if the change was initiated by your WFM system, approve it without applying an update to your WFM system.
@@ -82,49 +78,51 @@ After the first sync, you can choose to:
   > [!NOTE]
   > If you're configuring the connector to sync data bidirectionally between your WFM system and Shifts, exclude changes initiated from Shifts in the periodic sync. These changes are already written in Shifts.
 
-## Register and enable  workforce integration
+## Register and enable your workforce integration
 
 ### Register your workforce integration in your tenant
 
-1. Register your [workforceIntegration](/graph/api/workforceintegration-post?view=graph-rest-1.0) in your tenant.
+Register your [workforceIntegration](/graph/api/workforceintegration-post?view=graph-rest-1.0) in your tenant.
 
-    Here's an example:
+Here's an example request:
 
-    ```http
-    POST /teamwork/workforceIntegrations
-    { 
-      "displayName": "Contoso Integration", 
-      "apiVersion": 1, 
-      "encryption": { 
-        "protocol": "sharedSecret", 
-        "secret": "secret-value" 
-      }, 
-      "isActive": true, 
-      "url": "https://contosoWorkforceIntegration.com/contoso", 
-      "supportedEntities": "Shift,SwapRequest,TimeOffReason”, 
-      "eligibilityFilteringEnabledEntities": "SwapRequest,OfferShiftRequest,TimeOffReason" 
-    }
-    ```
+```http
+POST /teamwork/workforceIntegrations
+{ 
+  "displayName": "xyzIntegration", 
+  "apiVersion": 1, 
+  "encryption": { 
+    "protocol": "sharedSecret", 
+    "secret": "secret-value" 
+  }, 
+  "isActive": true, 
+  "url": "https://xyzWorkforceIntegration.com/contoso", 
+  "supportedEntities": "Shift,SwapRequest,TimeOffReason”, 
+  "eligibilityFilteringEnabledEntities": "SwapRequest,OfferShiftRequest,TimeOffReason" 
+}
+```
 
-    - Specify the endpoint where Shifts can reach your connector for synchronous calls. The base URL is `${url}/v${apiVersion}/`. In this example, the base URL is `https://contosoWorkforceIntegration.com/contoso/v1/`.
-    - During this API call, Shifts calls the /connect endpoint of your WFI application to test the connection. The connect endpoint is `${baseUrl}/connect`. In this example, the /connect endpoint is `https://contosoWorkforceIntegration.com/contoso/v1/connect`. The API returns a success response only if the /connect endpoint returns an HTTP `200 OK` response.
-    - The shared secret for encryption is generated by your application and shared with the Shifts service during WFI registration. Use the secret to decrypt the encrypted JSON payloads sent to your WFI endpoint from Shifts. The payload is encrypted using `AES-256-CBC-HMAC-SHA256`. Your application should persist this secret safely. For example, in a key vault.
-    - Specify the entities to sync. Your connector's /update endpoint is called when any of these entities are changed so you can approve or reject the change. For a list of entities, see [workforceIntegration resource type](/graph/api/resources/workforceintegration?view=graph-rest-1.0).
+- Specify the endpoint where Shifts can reach your connector for synchronous calls. The base URL is `${url}/v${apiVersion}/`. In this example, the base URL is `https://contosoWorkforceIntegration.com/contoso/v1/`.
+- During this API call, Shifts calls the /connect endpoint of your WFI app to test the connection. The connect endpoint is `${baseUrl}/connect`. In this example, the /connect endpoint is `https://contosoWorkforceIntegration.com/contoso/v1/connect`. The API returns a success response only if the /connect endpoint returns an HTTP `200 OK` response.
+- The shared secret for encryption should be generated by your app and shared with the Shifts service during WFI registration. The secret has a limit of 64 characters, and should be exactly 64 characters. Use it to decrypt the encrypted JSON payloads sent to your WFI endpoint from Shifts. The payload is encrypted using `AES-256-CBC-HMAC-SHA256`. Your application should persist this secret safely. For example, in a key vault.
+- Specify the entities to sync. Your connector's /update endpoint is called when any of these entities are changed so you can approve or reject the change. For a list of supported entities, see [workforceIntegration resource type](/graph/api/resources/workforceintegration?view=graph-rest-1.0).
 
-        > [!NOTE]
-        > This list is an [evolvable enumeration](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations). You must use the `Prefer: include-unknown-enum-members` request header to get all the values.
-    - Specify the entities for eligibility filtering. Options are:
+> [!NOTE]
+> This list is an [evolvable enumeration](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations). You must use the `Prefer: include-unknown-enum-members` request header to get all the values.
 
-      - `None`: Empty list
-      - `SwapRequests`: Get a filtered list of shifts a user can choose in a swap request.
-      - `TimeOffReasons`: Get a filtered list of time off reasons a user can select when they request time off.
+- Specify the entities for eligibility filtering. Options are:
+  - `None`: Empty list
+  - `SwapRequests`: Get a filtered list of shifts a user can choose in a swap request.
+  - `TimeOffReasons`: Get a filtered list of time off reasons a user can select when they request time off.
 
-        > [!NOTE]
-        > This list is an [evolvable enumeration](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations). You must use the `Prefer: include-unknown-enum-members` request header to get all the values.
+> [!NOTE]
+> This list is an [evolvable enumeration](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations). You must use the `Prefer: include-unknown-enum-members` request header to get all the values.
 
 ### Enable your workforce integration for a team schedule
 
 Enable your workforce integration on the schedules you want to manage. This is done when you create or update the schedule on the team.
+
+Here's an example of a request.
 
 ```http
 POST teams/{teamId}/schedule
