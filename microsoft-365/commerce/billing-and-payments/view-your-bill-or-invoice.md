@@ -86,6 +86,11 @@ You can submit your Fapiao request to our [Fapiao management system](https://go.
 
 ::: moniker-end
 
+## Download tax receipt
+
+You can download your tax receipt in certain jurisdictions from the Billing>Billing and Payments page.  
+If a tax receipt is available for an invoice, there will be a "Download tax receipt" option on the context menu next to the invoice id.
+
 ## Run the Unknown Charge Diagnostic
 
 If you're a Microsoft 365 Global Administrator and you have a Microsoft Online Services Agreement (MOSA) billing account type, you can use a diagnostic tool to research unexpected charges in your invoice. The tool runs within the Microsoft 365 admin center, and lets you investigate charges from Microsoft that appear on your credit or debit card statement. [Find out what type of billing account you have](../manage-billing-accounts.md#view-my-billing-accounts).
