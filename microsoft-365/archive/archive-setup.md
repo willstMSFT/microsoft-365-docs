@@ -72,7 +72,7 @@ Once pay-as-you-go billing is enabled for Microsoft Syntex in the Microsoft 365 
 
 1. On the **Turn on SharePoint site archive** panel, select **Turn on**. 
 
-:::image type="content" source="../media/archive/syntex.png" alt-text="Screenshot of Microsoft 365 Archive enabled." lightbox="../media/archive/syntex.png":::
+:::image type="content" source="../media/archive/syntex2.png" alt-text="Screenshot of Microsoft 365 Archive enabled." lightbox="../media/archive/syntex2.png":::
 
 Microsoft 365 Archive is now enabled for you, and you're able to archive content from the SharePoint admin center.
 
