@@ -20,6 +20,9 @@ description: Learn how administrators can prepare their organization for Microso
 
 # Preparing for Microsoft 365 Copilot - admin guide
 
+[**this is a draft that will replace the current set up guide, I think. work in progress**]
+
+
 [Microsoft 365 Copilot](microsoft-365-copilot-overview.md) is an AI-powered productivity tool that uses large language models (LLMs). It integrates with your data, with Microsoft Graph, and with Microsoft 365 Apps.
 
 It works alongside popular Microsoft 365 Apps, like Word, Excel, PowerPoint, Outlook, Teams, and more. Copilot provides real-time intelligent assistance, enabling users to enhance their creativity, productivity, and skills.
@@ -53,6 +56,8 @@ This article provides guidance for administrators on preparing their organizatio
 - To view Microsoft 365 app requirements, see [Microsoft 365 Copilot requirements](microsoft-365-copilot-requirements.md).
 
 ## Readiness activities
+
+[**work in progress**]
 
 To ensure a smooth transition to Microsoft 365 Copilot, administrators should undertake the following readiness activities:
 
