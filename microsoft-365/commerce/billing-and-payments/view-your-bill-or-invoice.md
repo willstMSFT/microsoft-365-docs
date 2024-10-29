@@ -108,7 +108,7 @@ You can submit your Fapiao request to our [Fapiao management system](https://go.
 
 ## Download your tax receipt
 
-You can download your tax receipt in certain jurisdictions from the **Billing** > **Billing and payments** page. If a tax receipt is available for an invoice, you see a **Download tax receipt** option on the context menu next to the invoice id.
+You can download your tax receipt in certain jurisdictions from the **Billing** > **Billing and payments** page. If a tax receipt is available for an invoice, you see a **Download tax receipt** option on the context menu next to the invoice ID.
 
 ## Run the Unknown Charge Diagnostic
 
