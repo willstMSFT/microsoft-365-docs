@@ -33,7 +33,7 @@ For customers that are subject to the pooled storage policy, they'll have access
 
 If the storage report isn't available, then it’s possible that your tenant isn't subject to the pooled storage policy. To determine if your tenant is subject to the pooled storage policy, review whether most (greater than 50%) EDU licenses are assigned compared to non-EDU licenses, or if your tenant has purchased more EDU licenses than non-EDU licenses. 
 
-:::image type="content" source="../media/archive/storage.png" alt-text="Screenshot of Example view of storage report." lightbox="../media/archive/m365admin-storage.png":::
+:::image type="content" source="../media/archive/storage.png" alt-text="Screenshot of Example view of storage report." lightbox="../media/archive/storage.png":::
 
 ## Pricing model
 
