@@ -63,12 +63,35 @@ Check out this video and others on our [YouTube channel](https://go.microsoft.co
    - If you're using the **Simplified view**, select **Billing**, then select **View invoices**.
    - If you're using the **Dashboard view**, go to the **Billing** > <a href="https://go.microsoft.com/fwlink/p/?linkid=2102895" target="_blank">Bills & payments</a> page.
 2. If you have more than one billing account, select **Change billing account** to view invoices associated with each billing account.
-3. Select an invoice from the list to view the details online. If you don’t see any invoices, change the date range.
+1. Select an invoice from the list to view the details online. If you don’t see any invoices, change the date range or select a different Billing account from the Billing account view selector.
+
+1. The invoice details provide useful information including
+
+   1. Date - date of the charge
+      
+   1. Service period - dates the charges apply to. This is the same as the Purchase charge dates on the invoice pdf.
+      
+   1. Transaction type - This gives information on the type of charge.  See additional information on transaction types below.
+      
 4. To download the .PDF version of your invoice, select **Download PDF**.
+
+### Transaction type details
+
+|Transaction type| Description|
+| -------- | -------- |
+| Purchase| This is for new purchases.  Your first invoice for a new purchase will have this transaction type   |
+|Monthly payment|Recurring cycle charges|
+|Renew|Your subscription has renewed to a new term|
+|Re-enable|If your subscription was disabled and re-enabled.|
+|Add quantity|Licenses added to an existing subscription|
+|Remove quantity|Licenses removed from an existing subscription|
+|Usage charges|If you have a consumption based subscription like Azure, charges will show as "usage charges"|
+|Cancel|If you cancel and are eligible for a prorated refund.|
+|Convert|When you convert from one subscription to another|
+|Credit|If a credit has been applied to your account.|
 
 > [!NOTE]
 > The online version of your invoice looks different from the .PDF version that you download.
-
 If you want to receive a copy of your invoice in email, see [Manage billing notifications and invoice attachments](manage-billing-notifications.md).
 
 ::: moniker range="o365-21vianet"
