@@ -39,19 +39,21 @@ Before you get started, complete the following prerequisites:
     > [!NOTE]
     > This prerequisite step is optional but recommended. If you choose not to set up your teams beforehand, you can do so after you create and register your connector.
 
-## Register an application in the Microsoft Entra admin center
+## Register an app in the Microsoft Entra admin center
 
 1. Sign in to the Microsoft Entra admin center as at least a [Cloud Application Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator).
-1. Register your application. For steps, see [Register an application with the Microsoft identity platform](/graph/auth-register-app-v2).
-1. On your application's API permissions page, configure the following Microsoft Graph [application permissions](/graph/permissions-overview?tabs=http#application-permissions) (app roles) and get an access token.
+1. Register your app. For steps, see [Register an application with the Microsoft identity platform](/graph/auth-register-app-v2).
+1. Assign the following Microsoft Graph [application permissions](/graph/permissions-overview?tabs=http#application-permissions) to your app for app-only access.
 
       |Permission type |Read-only permissions|Read/write permissions|
       |---------|---------|---------|
       |Application|Schedule.Read.All|Schedule.ReadWrite.All|
 
-    For steps, see [Get access without a user](/graph/auth-v2-service?view=graph-rest-1.0).
+      Then, grant admin consent to the permissions, and get an access token.
 
-    The access token verifies that your application is authorized to [access Microsoft Graph using its own identity](/graph/auth/auth-concepts#access-scenarios). Developers must include it in the Authorization header of requests.
+      For step-by-step guidance, see [Get access without a user](/graph/auth-v2-service?view=graph-rest-1.0).
+
+      The access token verifies that your app is authorized to [call Microsoft Graph using its own identity](/graph/auth/auth-concepts#access-scenarios). Developers must include it in the Authorization header of requests.
 
 ## Sync data from your WFM system to Shifts
 
@@ -82,7 +84,7 @@ After the first sync, you can choose to:
 
 ## Register and enable  workforce integration
 
-### Register your workforce integraion in your tenant
+### Register your workforce integration in your tenant
 
 1. Register your [workforceIntegration](/graph/api/workforceintegration-post?view=graph-rest-1.0) in your tenant.
 
