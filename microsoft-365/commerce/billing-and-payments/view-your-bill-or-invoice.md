@@ -64,9 +64,11 @@ Check out this video and others on our [YouTube channel](https://go.microsoft.co
    - If you're using the **Dashboard view**, go to the **Billing** > <a href="https://go.microsoft.com/fwlink/p/?linkid=2102895" target="_blank">Bills & payments</a> page.
 2. If you have more than one billing account, select **Change billing account** to view invoices associated with each billing account.
 3. Select an invoice from the list to view the details online. If you don’t see any invoices, change the date range or select a different Billing account from the Billing account view selector. The invoice details provide useful information including:
-  - Date$mdash;date of the charge
-  - Service period$mdash;dates the charges apply to. This is the same as the **Purchase charge dates** on the invoice pdf.
-  - Transaction type$mdash;gives information about the type of charge. For details, see [Transaction type details](#transaction-type-details).
+
+  - Date&mdash;date of the charge
+  - Service period&mdash;dates the charges apply to. This is the same as the **Purchase charge dates** on the invoice pdf.
+  - Transaction type&mdash;gives information about the type of charge. For details, see [Transaction type details](#transaction-type-details).
+
 4. To download the .PDF version of your invoice, select **Download PDF**.
 
 ### Transaction type details
