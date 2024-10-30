@@ -1,12 +1,12 @@
 ---
 title: Get your data ready for Microsoft 365 Copilot with E5 license
-description: The Best in Class deployment for Microsoft 365 Copilot uses a E5 license, SharePoint Advanced Management, and Microsoft Purview. These services help your organization get ready for Copilot. This IT admin guide helps you prevent oversharing, declutter data sources, and monitor site changes. Get your organization and data ready for Copilot by following the steps in this article.
+description: The E5 deployment for Microsoft 365 Copilot uses a E5 license, SharePoint Advanced Management, and Microsoft Purview. These services help your organization get ready for Copilot. This IT admin guide helps you prevent oversharing, declutter data sources, and monitor site changes. Get your organization and data ready for Copilot by following the steps in this article.
 f1.keywords:
 - NOCSH
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 10/28/2024
+ms.date: 10/30/2024
 audience: Admin
 ms.topic: get-started
 ms.service: microsoft-365-copilot
@@ -21,7 +21,7 @@ appliesto:
   - ✅ Microsoft 365 Copilot
 ---
 
-# Microsoft 365 Copilot best in class deployment - admin guide
+# Microsoft 365 Copilot admin guide for E5 licenses
 
 > [!WARNING]
 > This article is a work in progress for Ignite. Do not publish.
@@ -30,15 +30,14 @@ appliesto:
 
 This article provides prescriptive guidance on how IT admins can prepare their organization and their data for Copilot.
 
-When getting your organization and your data for Copilot, there are three options:
+When getting your organization and your data for Copilot, there are two options:
 
-- **[Baseline](need link)**
-- **[Core](copilot-core.md)**
-- **Best in Class (this article)** - Microsoft 365 E5 + SharePoint Advanced Management (SAM)
+- **[E3 license](microsoft-365-copilot-e3-guide.md)**
+- **E5 license (this article)** - Microsoft 365 E5 + SharePoint Advanced Management (SAM)
 
 To learn more about these options, including the different license options, see [Overview](new article / need link).
 
-In the **Best in Class** Microsoft 365 Copilot deployment, you use the features included with your Microsoft 365 E5 and Microsoft 365 Copilot licenses. With these features, you:
+In the **E5** Microsoft 365 Copilot deployment, you use the features included with your Microsoft 365 E5 and Microsoft 365 Copilot licenses. With these features, you:
 
 - Use SAM to help prevent oversharing, declutter data sources, and monitor SharePoint site changes.
 - Use Microsoft Purview to apply sensitivity labels, detect sensitive info & restrict endpoints, and keep necessary content (or delete the content you don't need).
@@ -55,7 +54,7 @@ This article applies to:
 
 - Microsoft recommends you start with the steps in [Baseline](need link). In Baseline, you optimize your search in SharePoint, update sharing settings in SharePoint & OneDrive, and check permissions & site access on your SharePoint sites.
 
-  To learn more, see [Baseline](need link).
+  ??Make sure this info is in E5 article, and then delete bullet??
 
 - The following licenses are required to use the features in this article:
 
@@ -83,7 +82,7 @@ This article applies to:
 
 ## Step 1 - Use SharePoint Advanced Management (SAM) features
 
-In addition to the SharePoint steps you completed in [Baseline](add link), there are more features in [SharePoint Advanced Management (SAM)](/sharepoint/get-ready-copilot-sharepoint-advanced-management) that can help you get ready for Copilot.
+There are features in [SharePoint Advanced Management (SAM)](/sharepoint/get-ready-copilot-sharepoint-advanced-management) that can help you get ready for Copilot.
 
 ✅ **Copilot goals with SAM**:
 
@@ -239,7 +238,7 @@ Use this report to review the changes made to your SharePoint sites and organiza
 
 ✅ **Copilot goal: Disable RSS**
 
-As you get ready for Copilot, you review and configure the correct permissions on your SharePoint sites. In [Baseline](need link), you might have enabled Restricted SharePoint Search (RSS).
+As you get ready for Copilot, you review and configure the correct permissions on your SharePoint sites. You might have enabled Restricted SharePoint Search (RSS).
 
 RSS is a temporary solution that gives you time to review and configure the correct permissions on your SharePoint sites. You add the reviewed & corrected sites to an allowed list.
 
@@ -284,7 +283,7 @@ To learn more about these cmdlets, see [Use PowerShell Scripts for Restricted Sh
       1. Select **Sites** > **Active sites**.
       1. Use the sort and filter options to find the most active site, including page views. These sites are candidates to allow in a tenant/organization wide search.
 
-          :::image type="content" source="media/copilot-best-in-class/sharepoint-active-sites-filter.png" alt-text="In SharePoint admin center, select active sites and then use the All sites filter.":::
+          :::image type="content" source="media/microsoft-365-copilot-e5-guide/sharepoint-active-sites-filter.png" alt-text="In SharePoint admin center, select active sites and then use the All sites filter.":::
 
 2. Use the `Add-SPOTenantRestrictedSearchAllowedList` PowerShell cmdlet to add the sites to the allowed list.
 
@@ -293,7 +292,7 @@ To learn more about these cmdlets, see [Use PowerShell Scripts for Restricted Sh
 
 ## Step 3 - Use Microsoft Purview features
 
-In addition to the SharePoint steps you completed in [Baseline](add link), there are more features in [Microsoft Purview](/purview/copilot-in-purview-overview) that can help you get ready for Copilot.
+There are features in [Microsoft Purview](/purview/copilot-in-purview-overview) that can help you get ready for Copilot.
 
 ✅ **Copilot goals with Purview**:
 
@@ -374,7 +373,7 @@ You have two options:
 
 - **Option 1**: Select **Information Protection** > **Sensitivity labels**. If you see the following message, select **Turn on now**:
 
-  :::image type="content" source="media/copilot-best-in-class/purview-sensitivity-labels-prompt.png" alt-text="In Microsoft Purview Information Protection, turn on sensitivity labels for SharePoint and OneDrive." lightbox="media/copilot-best-in-class/purview-sensitivity-labels-prompt.png":::
+  :::image type="content" source="media/microsoft-365-copilot-e5-guide/purview-sensitivity-labels-prompt.png" alt-text="In Microsoft Purview Information Protection, turn on sensitivity labels for SharePoint and OneDrive." lightbox="media/microsoft-365-copilot-e5-guide/purview-sensitivity-labels-prompt.png":::
 
 - **Option 2**: Use the `[Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant)` Windows PowerShell cmdlet.
 
@@ -448,11 +447,11 @@ Specifically, you configure DLP to inspect emails and files for sensitive inform
 1. In **Data Loss Prevention**, select **Overview**.
 2. In **Protect sensitive info**, you might see a list of sensitive information types that DLP already detected in your organization:
 
-    :::image type="content" source="media/copilot-best-in-class/purview-dlp-protect-sensitive-info.png" alt-text="In Microsoft Purview Data Loss Prevention, go to protect sensitive info and view the sensitive information detected by DLP." lightbox="media/copilot-best-in-class/purview-dlp-protect-sensitive-info.png":::
+    :::image type="content" source="media/microsoft-365-copilot-e5-guide/purview-dlp-protect-sensitive-info.png" alt-text="In Microsoft Purview Data Loss Prevention, go to protect sensitive info and view the sensitive information detected by DLP." lightbox="media/microsoft-365-copilot-e5-guide/purview-dlp-protect-sensitive-info.png":::
 
 3. Select **Get started** > **Create selected policies**. This step creates the default policies:
 
-    :::image type="content" source="media/copilot-best-in-class/purview-dlp-create-default-policies.png" alt-text="In Microsoft Purview Data Loss Prevention, go to protect sensitive info and create the default policies." lightbox="media/copilot-best-in-class/purview-dlp-create-default-policies.png":::
+    :::image type="content" source="media/microsoft-365-copilot-e5-guide/purview-dlp-create-default-policies.png" alt-text="In Microsoft Purview Data Loss Prevention, go to protect sensitive info and create the default policies." lightbox="media/microsoft-365-copilot-e5-guide/purview-dlp-create-default-policies.png":::
 
     By default, Exchange Online emails, SharePoint sites, and OneDrive accounts are automatically enabled locations for all users within the tenant. So when you create a DLP policy, the policy automatically applies to these locations.
 
@@ -479,7 +478,7 @@ By default, Purview includes some policies for Teams that you can enable.
 
     You can turn on these policies and also review the settings in the policy:
 
-    :::image type="content" source="media/copilot-best-in-class/purview-dlp-default-policy-teams.png" alt-text="In Microsoft Purview Data Loss Prevention (DLP), turn on the unprotected sensitive info in Teams policy.":::
+    :::image type="content" source="media/microsoft-365-copilot-e5-guide/purview-dlp-default-policy-teams.png" alt-text="In Microsoft Purview Data Loss Prevention (DLP), turn on the unprotected sensitive info in Teams policy.":::
 
 3. If you're getting started with DLP policies, then enable these default policies. If you're more experienced or want to create your own policies, then you can.
 
@@ -496,11 +495,11 @@ On the devices (also called endpoints), these policies can block specific apps, 
 1. In **Data Loss Prevention**, select **Overview**.
 2. Select **Turn on advanced classification**. This action enables the endpoint DLP policies:
 
-    :::image type="content" source="media/copilot-best-in-class/purview-dlp-endpoint-enable.png" alt-text="In Microsoft Purview Data Loss Prevention (DLP), select the turn on advanced classification setting to enables DLP policies." lightbox="media/copilot-best-in-class/purview-dlp-endpoint-enable.png":::
+    :::image type="content" source="media/microsoft-365-copilot-e5-guide/purview-dlp-endpoint-enable.png" alt-text="In Microsoft Purview Data Loss Prevention (DLP), select the turn on advanced classification setting to enables DLP policies." lightbox="media/microsoft-365-copilot-e5-guide/purview-dlp-endpoint-enable.png":::
 
 3. In **Overview**, select the settings icon (top right corner) > **Data Loss Prevention**:
 
-    :::image type="content" source="media/copilot-best-in-class/purview-dlp-solution-settings.png" alt-text="In Microsoft Purview Data Loss Prevention (DLP), select settings and then select Data Loss Prevention.":::
+    :::image type="content" source="media/microsoft-365-copilot-e5-guide/purview-dlp-solution-settings.png" alt-text="In Microsoft Purview Data Loss Prevention (DLP), select settings and then select Data Loss Prevention.":::
 
 4. In **Endpoint DLP settings**, you can see all the different type of settings you can configure. To learn more about these policy settings, see [Configure endpoint data loss prevention settings](/purview/dlp-configure-endpoint-settings).
 
@@ -655,7 +654,7 @@ These policies monitor and evaluate prompts and responses with Copilot.
 
 3. For the predefined policies, select **Create policy** > **Detect Microsoft 365 Copilot interactions**:
 
-    :::image type="content" source="media/copilot-best-in-class/purview-communication-compliance-default-policy.png" alt-text="In Microsoft Purview Communication Compliance, create the detect Microsoft 365 Copilot interactions policy.":::
+    :::image type="content" source="media/microsoft-365-copilot-e5-guide/purview-communication-compliance-default-policy.png" alt-text="In Microsoft Purview Communication Compliance, create the detect Microsoft 365 Copilot interactions policy.":::
 
     This Copilot policy helps you get started. There are also other predefined templates you can use. At any time, you can also create your own custom policies.
 

@@ -1,12 +1,12 @@
 ---
 title: Get your data ready for Microsoft 365 Copilot with E3 license
-description: The Core deployment for Microsoft 365 Copilot uses a E3 license, SharePoint Advanced Management, and Microsoft Purview. These services help your organization get ready for Copilot. This IT admin guide helps you prevent oversharing, declutter data sources, and monitor site changes. Get your organization and data ready for Copilot by following the steps in this article.
+description: The E3 deployment for Microsoft 365 Copilot uses a E3 license, SharePoint Advanced Management, and Microsoft Purview. These services help your organization get ready for Copilot. This IT admin guide helps you prevent oversharing, declutter data sources, and monitor site changes. Get your organization and data ready for Copilot by following the steps in this article.
 f1.keywords:
 - NOCSH
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 10/28/2024
+ms.date: 10/30/2024
 audience: Admin
 ms.topic: get-started
 ms.service: microsoft-365-copilot
@@ -21,7 +21,7 @@ appliesto:
   - ✅ Microsoft 365 Copilot
 ---
 
-# Microsoft 365 Copilot Core deployment - admin guide
+# Microsoft 365 Copilot admin guide for E3 licenses
 
 > [!WARNING]
 > This article is a work in progress for Ignite. Do not publish.
@@ -30,15 +30,14 @@ appliesto:
 
 This article provides prescriptive guidance on how IT admins can prepare their organization and their data for Copilot.
 
-When getting your organization and your data for Copilot, there are three options:
+When getting your organization and your data for Copilot, there are two options:
 
-- **[Baseline](need link)** - Microsoft 365 E3
-- **Core** (this article) - Microsoft 365 E3 + SharePoint Advanced Management (SAM)
-- **[Best in Class](copilot-best-in-class.md)** - Microsoft 365 E5 + SharePoint Advanced Management (SAM)
+- **E3 license** (this article) - Microsoft 365 E3 + SharePoint Advanced Management (SAM)
+- **[E5 license](microsoft-365-copilot-e5-guide.md)** - Microsoft 365 E5 + SharePoint Advanced Management (SAM)
 
-To learn more about these options, including the different license options, see [Overview](new article / need link).
+To learn more about these options, including the different license options, see [Microsoft 365 E3 and E5 feature comparison list for Microsoft 365 Copilot](microsoft-365-copilot-e3-e5-overview.md).
 
-In the **Core** Microsoft 365 Copilot deployment, you use the features included with your Microsoft 365 E3 and Microsoft 365 Copilot licenses. With these features, you:
+In the **E3** Microsoft 365 Copilot deployment, you use the features included with your Microsoft 365 E3 and Microsoft 365 Copilot licenses. With these features, you:
 
 - Use SharePoint Advanced Management (SAM) to help prevent oversharing, declutter data sources, and monitor SharePoint site changes.
 - Use Microsoft Purview to enable sensitivity labels, detect sensitive info & restrict endpoints, and keep necessary content (or delete the content you don't need).
@@ -55,7 +54,7 @@ This article applies to:
 
 - Microsoft recommends you start with the steps in [Baseline](need link). In Baseline, you optimize your search in SharePoint, update sharing settings in SharePoint & OneDrive, and check permissions & site access on your SharePoint sites.
 
-  To learn more, see [Baseline](need link).
+  ??Make sure this info is in E3 article, and then delete bullet??
 
 - The following licenses are required to use the features in this article:
 
@@ -83,13 +82,13 @@ This article applies to:
 
 ## Step 1 - Use SharePoint features
 
-- Create include files and copy content from Best in Class.
+- Create include files and copy content from E5 guide.
 
 ## Step 2 - Restrict SharePoint Search (RSS)
 
 ✅ **Copilot goal: Expand the RSS allowed list**
 
-As you get ready for Copilot, you review and configure the correct permissions on your SharePoint sites. In [Baseline](need link), you might have enabled Restricted SharePoint Search (RSS).
+As you get ready for Copilot, you review and configure the correct permissions on your SharePoint sites. The next step is to enable Restricted SharePoint Search (RSS).
 
 RSS is a temporary solution that gives you time to review and configure the correct permissions on your SharePoint sites. You add the reviewed & corrected sites to an allowed list.
 
@@ -117,7 +116,7 @@ To learn more, see:
       1. Select **Sites** > **Active sites**.
       1. Use the sort and filter options to find the most active site, including page views. These sites are candidates to allow in a tenant/organization wide search.
 
-          :::image type="content" source="media/copilot-core/sharepoint-active-sites-filter.png" alt-text="In SharePoint admin center, select active sites and then use the All sites filter.":::
+          :::image type="content" source="media/microsoft-365-copilot-e3-guide/sharepoint-active-sites-filter.png" alt-text="In SharePoint admin center, select active sites and then use the All sites filter.":::
 
 2. Use the `Add-SPOTenantRestrictedSearchAllowedList` PowerShell cmdlet to add the sites to the allowed list.
 
@@ -125,7 +124,7 @@ To learn more, see:
 
 ## Step 3 - Use Microsoft Purview
 
-In addition to the SharePoint steps you completed in [Baseline](add link), there are more features in Microsoft Purview that can help you get ready for Copilot.
+There are features in Microsoft Purview that can help you get ready for Copilot.
 
 ✅ **Copilot goals with Purview**:
 
@@ -142,15 +141,15 @@ To learn more about Microsoft Purview, see [Microsoft 365 Copilot in Microsoft P
 
 #### 1. Create the default sensitivity labels
 
-- Create include files and copy content from Best in Class.
+- Create include files and copy content from E5 guide.
 
 #### 2. Publish your labels and educate your users
 
-- Create include files and copy content from Best in Class.
+- Create include files and copy content from E5 guide.
 
 #### 3. Enable sensitivity labels for files in SharePoint and OneDrive
 
-- Create include files and copy content from Best in Class.
+- Create include files and copy content from E5 guide.
 
 #### 4. Set a default sensitivity label for your SharePoint document libraries
 
@@ -205,11 +204,11 @@ To learn more about DLP, see [Learn about data loss prevention in Microsoft Purv
 
 #### 1. Open the Microsoft Purview portal
 
-- Create include files and copy content from Best in Class.
+- Create include files and copy content from E5 guide.
 
 #### 2. Create the default DLP policies
 
-- Create include files and copy content from Best in Class.
+- Create include files and copy content from E5 guide.
 
 #### 3. Test and monitor your policies
 
