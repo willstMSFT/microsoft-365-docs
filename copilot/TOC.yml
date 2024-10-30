@@ -9,10 +9,12 @@
           items:
             - name: Understand licensing for Microsoft 365 Copilot
               href: microsoft-365-copilot-licensing.md
-            - name: E3 Copilot guide
-              href: copilot-core.md
-            - name: E5 Copilot guide
-              href: copilot-best-in-class.md
+            - name: E3 and E5 feature comparison list for Copilot
+              href: microsoft-365-copilot-e3-e5-overview.md
+            - name: E3 Microsoft 365 Copilot guide
+              href: microsoft-365-copilot-e3-guide.md
+            - name: E5 Microsoft 365 Copilot guide
+              href: microsoft-365-copilot-e5-guide.md
     - name: Deploy and enable
       items: 
         - name: Requirements for Microsoft 365 Copilot
