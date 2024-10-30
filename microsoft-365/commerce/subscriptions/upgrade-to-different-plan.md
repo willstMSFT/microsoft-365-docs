@@ -45,7 +45,8 @@ When your business needs change, or you want more features, you can change to a 
 
 Changing plans is the right choice when you want to move all users assigned to a single plan. When you change plans, all users in the current plan are assigned licenses for the new plan at the same time. If you only want to move some users to a new plan, buy a new plan with the number of licenses you need, and assign those licenses to the users that you want to move. For more information, see [Move users to a different subscription](move-users-different-subscription.md).
 
-Note: If you have an MCA billing account, you can follow the steps to [Automatically change your subscription to a new plan](/microsoft-365/commerce/subscriptions/upgrade-to-different-plan) and move some users to a new plan by entering the number of licenses that you want. You must assign the new licenses to the users you want to move. 
+> [!NOTE]
+> If you have an MCA billing account, you can follow the steps to [Automatically change your subscription to a new plan](/microsoft-365/commerce/subscriptions/upgrade-to-different-plan) and move some users to a new plan by entering the number of licenses that you want. You must assign the new licenses to the users you want to move. 
 
 ## Automatically change your subscription to a new plan
 
