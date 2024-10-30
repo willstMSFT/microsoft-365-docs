@@ -54,7 +54,7 @@ This article applies to:
 
 - Microsoft recommends you start with the steps in [Baseline](need link). In Baseline, you optimize your search in SharePoint, update sharing settings in SharePoint & OneDrive, and check permissions & site access on your SharePoint sites.
 
-  ??Make sure this info is in E5 article??
+  ??Make sure this info is in E5 article, and then delete bullet??
 
 - The following licenses are required to use the features in this article:
 

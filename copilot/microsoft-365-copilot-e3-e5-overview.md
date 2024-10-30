@@ -8,7 +8,7 @@ author: MandiOhlinger
 manager: laurawi
 ms.date: 10/30/2024
 audience: Admin
-ms.topic: 
+ms.topic: get-started
 ms.service: microsoft-365-copilot
 ms.localizationpriority: medium
 ms.collection: 
@@ -36,7 +36,7 @@ There are different features in the Microsoft 365 E3 and E5 licenses that can he
 - Declutter data sources
 - Identify and label sensitive data in your Microsoft 365 and Office files
 
-Use the information in this article to know the features available to you based on your license. It can also help you decide which license is right for you based on the features your organization wants and needs.
+Use the information in this article to become familiar with the features available to you, based on your license. It can also help you decide which license is right for you based on the features your organization wants and needs.
 
 If you're currently [licensed for Copilot](microsoft-365-copilot-licensing.md) or plan to get it, this article can help.
 
@@ -48,11 +48,11 @@ This article applies to:
 
 ## Microsoft 365 E3 and E5 feature table
 
-The following table lists some of the features that can help with Copilot.
+The following table lists some of the features that can help with Copilot. These features impact Copilot results and can help you manage Copilot interactions (prompts and responses).
 
 | &nbsp; | E3 license | E5 license |
 | --- | --- | --- |
-| License requirements | - Microsoft 365 E3 or Office 365 E3 <br/>- Microsoft 365 Copilot (includes SharePoint Advanced Management (SAM)) | - Microsoft 365 E5 or Office 365 E5 <br/>- Microsoft 365 Copilot (includes SharePoint Advanced Management (SAM)) |
+| License requirements | - Microsoft 365 E3 or Office 365 E3 <br/>- Microsoft 365 Copilot (includes SharePoint Advanced Management) | - Microsoft 365 E5 or Office 365 E5 <br/>- Microsoft 365 Copilot (includes SharePoint Advanced Management) |
 | Restricted SharePoint Search (RSS) | ✅  | ✅  |
 | &nbsp; | &nbsp; | &nbsp; |
 | **Microsoft Purview features** | &nbsp; | &nbsp; |
@@ -61,7 +61,7 @@ The following table lists some of the features that can help with Copilot.
 | Adaptive Protection | n/a | ✅ |
 | Data lifecycle management  | ✅ <br/><br/> You can: <br/><br/> - Create retention policies<br/> - Manually apply retention labels<br/> - Use Content explorer | ✅ <br/><br/> You can: <br/><br/> - Create retention policies<br/> - Manually apply retention labels<br/> - Auto-apply retention labels <br/> - Use Content explorer <br/> - Use Activity explorer |
 | Communication Compliance | n/a | ✅ |
-| eDiscovery | ✅ <br/><br/>eDiscovery (Standard) for sites, files, email; search | ✅ <br/><br/> search and delete |
+| eDiscovery | ✅ <br/><br/>Can search. | ✅ <br/><br/> Can search and delete. |
 | AI Hub |  ✅ | ✅ |
 | &nbsp; | &nbsp; | &nbsp; |
 | **SharePoint Advanced Management (SAM) features** | &nbsp; | &nbsp; |
@@ -72,8 +72,8 @@ The following table lists some of the features that can help with Copilot.
 
 To learn more about these features and how they affect Copilot, see:
 
-- [Microsoft 365 Copilot E3 deployment - admin guide](microsoft-365-copilot-e3-guide.md)
-- [Microsoft 365 Copilot E5 deployment - admin guide](microsoft-365-copilot-e5-guide.md)
+- [Microsoft 365 Copilot admin guide for E3 licenses](microsoft-365-copilot-e3-guide.md)
+- [Microsoft 365 Copilot admin guide for E5 licenses](microsoft-365-copilot-e5-guide.md)
 
 To learn more about licensing, see:
 
@@ -99,7 +99,7 @@ To learn more about these policies, see [AI Hub - one-click policies](/purview/a
 
 ### Copilot dashboard in Viva Insights
 
-Viva Insights provides actionable insights to help your organization get ready to deploy AI, drive adoption, and measure the effect of Copilot.
+[Viva Insights](/viva/insights/introduction) provides actionable insights to help your organization get ready to deploy AI, drive adoption, and measure the effect of Copilot.
 
 The dashboard shows metrics on readiness, adoption, impact, and sentiment.
 
@@ -113,11 +113,11 @@ To learn more, see [Microsoft Copilot Dashboard for Microsoft 365 customers](/vi
 
 The next step is to start using the features in your Microsoft 365 license:
 
-- [Microsoft 365 Copilot E3 deployment - admin guide](microsoft-365-copilot-e3-guide.md)
-- [Microsoft 365 Copilot E5 deployment - admin guide](microsoft-365-copilot-e5-guide.md)
+- [Microsoft 365 Copilot admin guide for E3 licenses](microsoft-365-copilot-e3-guide.md)
+- [Microsoft 365 Copilot admin guide for E5 licenses](microsoft-365-copilot-e5-guide.md)
 
 ## Related content
 
 - [Microsoft 365 Copilot licensing](microsoft-365-copilot-licensing.md)
-- [Microsoft 365 Copilot E3 deployment - admin guide](microsoft-365-copilot-e3-guide.md)
-- [Microsoft 365 Copilot E5 deployment - admin guide](microsoft-365-copilot-e5-guide.md)
+- [Microsoft 365 Copilot admin guide for E3 licenses](microsoft-365-copilot-e3-guide.md)
+- [Microsoft 365 Copilot admin guide for E5 licenses](microsoft-365-copilot-e5-guide.md)
