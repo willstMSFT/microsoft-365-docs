@@ -26,11 +26,11 @@ appliesto:
 > [!WARNING]
 > This article is a work in progress for Ignite. Do not publish.
 
-When you're preparing your organization for [Microsoft 365 Copilot](microsoft-365-copilot-overview.md) or are ready to start using Copilot now, there are features in your E3 license that can help get your data ready.
+When you're preparing your organization for [Microsoft 365 Copilot](microsoft-365-copilot-overview.md) or you're ready to start using Copilot, there are features in your E3 license that can help get your data ready.
 
 When users enter a prompt, Copilot can respond with data that the user has permission to access. Overshared and outdated data can lead to inaccurate results from Copilot.
 
-This article provides guidance for IT admins with a **Microsoft 365 E3** and **SharePoint Advanced Management (SAM)** licenses. With the features included in these licenses, you:
+This article provides guidance for IT admins with **Microsoft 365 E3** and **SharePoint Advanced Management (SAM)** licenses. With the features included in these licenses, you:
 
 - Use SharePoint Advanced Management (SAM) to help prevent oversharing, declutter data sources, restrict SharePoint searches, and monitor SharePoint site changes.
 - Use Microsoft Purview to enable sensitivity labels, identify and protect sensitive data, and delete the content you don't need.
@@ -43,7 +43,8 @@ This article applies to:
 - Microsoft SharePoint Premium - SharePoint Advanced Management (SAM)
 - Microsoft Purview
 
-If you have an E5 license, then see [Microsoft 365 Copilot admin guide for E5 licenses](microsoft-365-copilot-e5-guide.md). For a comparison of the features in E3 and E5 licenses, see [Compare Microsoft Copilot features in E3 and E5 licenses](microsoft-365-copilot-e3-e5-overview.md).
+> [!NOTE]
+> If you have an E5 license, then see [Microsoft 365 Copilot admin guide for E5 licenses](microsoft-365-copilot-e5-guide.md). For a comparison of the features in E3 and E5 licenses, see [Compare Microsoft Copilot features in E3 and E5 licenses](microsoft-365-copilot-e3-e5-overview.md).
 
 ## Before you begin
 
