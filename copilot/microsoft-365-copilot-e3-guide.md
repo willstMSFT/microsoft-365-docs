@@ -5,7 +5,7 @@ f1.keywords:
 - NOCSH
 ms.author: mandia
 author: MandiOhlinger
-manager: dougeby
+manager: laurawi
 ms.date: 10/30/2024
 audience: Admin
 ms.topic: get-started
@@ -26,29 +26,24 @@ appliesto:
 > [!WARNING]
 > This article is a work in progress for Ignite. Do not publish.
 
-[Microsoft 365 Copilot](microsoft-365-copilot-overview.md) is an AI-powered productivity tool that uses large language models (LLMs).
+When you're preparing your organization for [Microsoft 365 Copilot](microsoft-365-copilot-overview.md) or are ready to start using Copilot now, there are features in your E3 license that can help get your data ready.
 
-This article provides prescriptive guidance on how IT admins can prepare their organization and their data for Copilot.
+When users enter a prompt, Copilot can respond with data that the user has permission to access. Overshared and outdated data can lead to inaccurate results from Copilot.
 
-When getting your organization and your data for Copilot, there are two options:
+This article provides guidance for IT admins with a **Microsoft 365 E3** and **SharePoint Advanced Management (SAM)** licenses. With the features included in these licenses, you:
 
-- **E3 license** (this article) - Microsoft 365 E3 + SharePoint Advanced Management (SAM)
-- **[E5 license](microsoft-365-copilot-e5-guide.md)** - Microsoft 365 E5 + SharePoint Advanced Management (SAM)
+- Use SharePoint Advanced Management (SAM) to help prevent oversharing, declutter data sources, restrict SharePoint searches, and monitor SharePoint site changes.
+- Use Microsoft Purview to enable sensitivity labels, identify and protect sensitive data, and delete the content you don't need.
 
-To learn more about these options, including the different license options, see [Microsoft 365 E3 and E5 feature comparison list for Microsoft 365 Copilot](microsoft-365-copilot-e3-e5-overview.md).
-
-In the **E3** Microsoft 365 Copilot deployment, you use the features included with your Microsoft 365 E3 and Microsoft 365 Copilot licenses. With these features, you:
-
-- Use SharePoint Advanced Management (SAM) to help prevent oversharing, declutter data sources, and monitor SharePoint site changes.
-- Use Microsoft Purview to enable sensitivity labels, detect sensitive info & restrict endpoints, and keep necessary content (or delete the content you don't need).
-
-When you use the features described in this article, your organization is better prepared for Copilot, including getting accurate results from Copilot.
+When you use the features described in this article, your organization is better prepared for Copilot, including getting more accurate results from Copilot.
 
 This article applies to:
 
 - Microsoft 365 Copilot
 - Microsoft SharePoint Premium - SharePoint Advanced Management (SAM)
 - Microsoft Purview
+
+If you have an E5 license, then see [Microsoft 365 Copilot admin guide for E5 licenses](microsoft-365-copilot-e5-guide.md). For a comparison of the features in E3 and E5 licenses, see [Compare Microsoft Copilot features in E3 and E5 licenses](microsoft-365-copilot-e3-e5-overview.md).
 
 ## Before you begin
 
@@ -80,7 +75,7 @@ This article applies to:
     - [Permissions required to create and manage sensitivity labels](/purview/get-started-with-sensitivity-labels#permissions-required-to-create-and-manage-sensitivity-labels)
     - [Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview](/defender-office-365/scc-permissions)
 
-## Step 1 - Use SharePoint features
+## Step 1 - Use SharePoint Advanced Management (SAM) features
 
 - Create include files and copy content from E5 guide.
 
