@@ -276,13 +276,13 @@ This diagnostic is split into multiple sections that detail steps to remediate t
 
 1. Force Sign Out - First, it is important to force a user to sign out of all sessions:
 
-    a. Go to the [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/homepage).
+      a. Go to the [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/homepage).
 
-    b. Navigate to _Users > Active users_.
+      b. Navigate to _Users > Active users_.
 
-    c. Click on the desired user.
+      c. Click on the desired user.
 
-    d. On the Account Tab, under _Sign-out_, select _Sign out of all sessions_.
+      d. On the Account Tab, under _Sign-out_, select _Sign out of all sessions_.
 
 2. Reset Password - [Reset the password.](/microsoft-365/admin/add-users/reset-passwords) Don't send the new password to the user through email, because the attacker may still have access to the mailbox. Be sure to use a strong and unique password: upper and lowercase letters, at least one number, and at least one special character.
 
