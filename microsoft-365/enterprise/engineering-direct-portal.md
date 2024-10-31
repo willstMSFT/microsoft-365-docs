@@ -262,7 +262,7 @@ Follow the following steps to enable and customize Auto Archive settings based o
 
 1. Save your changes to apply the new settings. 
 
-## Remediate a Compromised Account
+### Remediate a Compromised Account
 
 If you or your user suspects an account has been accessed by someone who shouldn’t have access, it may be compromised. The **Remediate a Compromised Account** diagnostic will help you check different aspects of the affected mailbox and guide you through the steps to recover the account. Please use this diagnostic if you or your user notice any signs that one of your user's accounts may have been compromised.
 
@@ -282,7 +282,7 @@ Steps and Output
 
     c. Click on the desired user.
 
-    d. On the Account Tab, under _Sign-out_, click, _Sign out of all sessions_.
+    d. On the Account Tab, under _Sign-out_, select _Sign out of all sessions_.
 
 2. Reset Password - [Please reset the password.](/microsoft-365/admin/add-users/reset-passwords) Don't send the new password to the user through email, because the attacker may still have access to the mailbox. Be sure to use a strong and unique password: upper and lowercase letters, at least one number, and at least one special character.
 
@@ -298,17 +298,17 @@ Steps and Output
 
 5. Remove Account from Administrative Roles - To ensure that the attacker can't perform administrative actions, [remove compromised account from any administrative roles](/microsoft-365/admin/add-users/assign-admin-roles?WT.mc_id=365AdminCSH_SupportCentral). You can restore the user's membership once the account is secured.
 
-6. Enable Mailbox Logging - Mailbox logging is the capability of capturing and analyzing audit logs related to security, compliance, and other activities within Microsoft 365 or Office 365. [Please enable mailbox logging.](/purview/audit-log-enable-disable?tabs=microsoft-purview-portal)
+6. Enable Mailbox Logging - Mailbox logging is the capability of capturing and analyzing audit logs related to security, compliance, and other activities within Microsoft 365 or Office 365. [Enable mailbox logging.](/purview/audit-log-enable-disable?tabs=microsoft-purview-portal)
 
     a. The status of logging on the mailbox will be shown (Enabled or Disabled).
 
 7. Remove Unusual Mailbox Delegates - A mailbox delegate is someone you authorize to manage your email and calendar on your behalf. Displayed below are all the delegates that aren't the mailbox owner. [Delete any unknown users.](/exchange/recipients-in-exchange-online/manage-permissions-for-recipients)
 
-    a. Users who have delegate permission will be displayed with the fields, user (email), `isinherited`, and access rights.
+    a. Users who have delegate permission will be displayed with the fields `user (email)`, `isinherited`, and `access rights`.
 
 8. Remove Unusual Inbox Rules - Inbox rules are often used by attackers to forward emails to themselves. [Check if there are any unusual rules and delete them.](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules)
 
-    a. The inbox rules registered on the mailbox will be displayed with the identity, name, description, forwardto address, and enabled status.
+    a. The inbox rules registered on the mailbox will be displayed with the identity, name, description, `forwardto` address, and enabled status.
 
 9. Remove Unusual SMTP Forwarding - Simple Mail Transfer Protocol (SMTP) is the protocol responsible for sending emails from the sender's email client to the email server. [Check if there is SMTP forwarding.](/exchange/recipients-in-exchange-online/manage-user-mailboxes/manage-user-mailboxes)
 
