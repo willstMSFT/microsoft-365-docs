@@ -5,14 +5,14 @@ ms.author: kvice
 manager: scotv
 ms.date: 10/31/2024
 ms.topic: article
-ms.service: microsoft-365-business  
-ms.subservice: m365-admin-center  
+ms.service: microsoft-365-enterprise
+ms.subservice: administration
 ms.localizationpriority: medium
 ms.collection: 
 - scotvorg
 - must-keep
 ms.custom: QuickDraft  
-ms.reviewer: kwekua; holliep  
+ms.reviewer: holliep  
 search.appverid: MET150  
 f1.keywords:  
 audience:  
