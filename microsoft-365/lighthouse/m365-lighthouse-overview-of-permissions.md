@@ -5,7 +5,7 @@ ms.author: sharik
 author: SKjerland
 manager: scotv
 ms.reviewer: taylorau
-ms.date: 10/30/2024
+ms.date: 10/31/2024
 audience: Admin
 ms.topic: concept-article
 ms.service: microsoft-365-lighthouse
@@ -20,7 +20,7 @@ ms.custom:
 - AdminSurgePortfolib
 - M365-Lighthouse                         
 search.appverid: MET150
-description: "For Managed Service Providers (MSPs) using Microsoft 365 Lighthouse, learn more about Lighthouse permission requirements."
+description: "For Managed Service Providers (MSPs) using Microsoft 365 Lighthouse, learn more about how permissions work in Lighthouse."
 ---
 
 # Overview of permissions in Microsoft 365 Lighthouse
@@ -56,10 +56,7 @@ The following table provides an overview of each Lighthouse RBAC role. For a lis
 
 The following table describes the actions that each Lighthouse RBAC role can perform in Lighthouse. For some actions, you need to hold a Microsoft Entra role in addition to a Lighthouse RBAC role. For other actions, only a Microsoft Entra role is required. Microsoft Entra role requirements are indicated in the last column of the table. For a complete list of Microsoft Entra roles and the actions they can perform, see [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference).
 
-> [!NOTE]
-> Users with the Microsoft Entra Global Reader role are automatically assigned the Lighthouse Reader role. Users with the Microsoft Entra Global Administrator role are automatically assigned the Lighthouse Administrator role.
-
-| Area | Actions | Account&nbsp;Manager | Administrator | Operator | Reader | Need Entra&nbsp;role? |
+| Area | Actions | Account&nbsp;Manager | Administrator | Operator | Reader | Need Microsoft Entra&nbsp;role? |
 |---|---|:---:|:---:|:---:|:---:|:---:|
 | **Home page** | View data on cards |  |  |  |  | Yes |
 |  | Add users |  |  |  |  | Yes |
@@ -68,7 +65,7 @@ The following table describes the actions that each Lighthouse RBAC role can per
 | **Alerts** | View alerts and alert rules | &check; | &check; |  | &check; | No |
 |  | Manage alerts (change severity, status, or assignment) |  | &check; |  |  | No |
 |  | Create, edit, and delete alert rules |  | &check; |  |  | No |
-| **Copilot insights** | View opportunites and adoption data |  |  |  |  | Yes|
+| **Copilot insights** | View opportunities and adoption data |  |  |  |  | Yes|
 | **Tenants** | View the Tenants page | &check; | &check; | &check; | &check; | No |
 |  | View tenant details |  |  |  |  | Yes |
 |  | Export data | &check; | &check; | &check; | &check; | No |
@@ -93,18 +90,18 @@ The following table describes the actions that each Lighthouse RBAC role can per
 |  | View and manage self-service password reset | | | | | Yes |
 | **Devices** | View device security data | | | | | Yes |
 |  | View vulnerability management data | | | | | Yes |
-|  | View device comliance data | | | | | Yes |
+|  | View device compliance data | | | | | Yes |
 |  | View threat management data | | | | | Yes |
 |  | View device health data | | | | | Yes |
 |  | View Windows 365 data | | | | | Yes |
 |  | View Windows event logs | | | | | Yes |
 | **Apps** | View app performance and app management data | | | | | Yes |
-| **Data protection** | View protected data | | | | | Yes | 
+| **Quarantined messages** | View and manage quarantined messages | | | | | Yes | 
 | **Baselines** | View baselines (default, custom) and task details |  | &check; | &check; | &check; | No|
 |  | Create, clone, edit, and assign baselines | |  &check; |  |  | No |
 |  | View deployment insights | | | | | Yes |
-| **Service&nbsp;health** | Monitor service health<sup>1</sup> |  | &check; | &check; |  | Yes |
-| **Support** | Create and manage service requests<sup>2</sup> |  | &check; |  |  | Yes |
+| **Service&nbsp;health** | Monitor service health<sup>1</sup> |  |  |  |  | No |
+| **Support** | Create and manage service requests<sup>2</sup> |  |  |  |  | No |
 | **Audit logs** | View audit logs |  | &check; |  |  | Yes
 | **Permissions** | View the Lighthouse Permissions page | |  &check; |  |  | No|
 |  | Set up and manage Lighthouse permissions |  | &check; |  |  | No |
@@ -113,9 +110,9 @@ The following table describes the actions that each Lighthouse RBAC role can per
 |  | View subscription renewals | &check; | &check; |  |  | No |
 |  | View license requests | &check; | &check; |  |  | No |
 
-<sup>1</sup> To monitor service health, Lighthouse users must have at least one Microsoft Entra role assigned to them with the following property set: **microsoft.office365.serviceHealth/allEntities/allTasks**. The users must also have at least the Admin Agent role or Helpdesk Agent role assigned to them in Partner Center. 
+<sup>1</sup> To monitor service health, Lighthouse users must hold at least one Microsoft Entra role in the partner tenant with the following property set: **microsoft.office365.serviceHealth/allEntities/allTasks**. The users must also have at least the Admin Agent role or Helpdesk Agent role assigned to them in Partner Center. 
 
-<sup>2</sup> To create and manage service requests, Lighthouse users must have at least one Microsoft Entra role assigned to them with the following property set: **microsoft.office365.supportTickets/allEntities/allTasks**.
+<sup>2</sup> To create and manage service requests, Lighthouse users must hold at least one Microsoft Entra role in the partner tenant with the following property set: **microsoft.office365.supportTickets/allEntities/allTasks**.
 
 ## Manage GDAP in the customer tenant
 
@@ -131,10 +128,10 @@ For a complete list of Microsoft Entra roles and the actions they can perform, s
 
 ## Related content
 
-[Requirements for Microsoft 365 Lighthouse](m365-lighthouse-requirements.md) (article)  
 [View your Microsoft Entra roles in Microsoft 365 Lighthouse](m365-lighthouse-view-your-roles.md) (article)  
+[Manage Lighthouse RBAC permissions in Microsoft 365 Lighthouse](m365-lighthouse-manage-lighthouse-rbac-permissions.md) (article)  
+[Set up GDAP in Microsoft 365 Lighthouse](m365-lighthouse-setup-gdap.md) (article)  
+[Overview of the Delegated access page in Microsoft 365 Lighthouse](m365-lighthouse-delegated-access-overview.md) (article)  
 [Assign roles and permissions to users - Partner Center](/partner-center/permissions-overview) (article)  
-[Overview of Microsoft 365 Lighthouse](m365-lighthouse-overview.md) (article)  
-[Sign up for Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md) (article)  
 [GDAP frequently asked questions - Partner Center](/partner-center/gdap-faq) (article)  
-[Microsoft 365 Lighthouse FAQ](m365-lighthouse-faq.yml) (article)
+[Microsoft 365 Lighthouse frequently asked questions (FAQs)](m365-lighthouse-faq.yml) (article)
