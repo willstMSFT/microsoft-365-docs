@@ -43,7 +43,7 @@ For a successful preview experience, you need to be one of the following admin r
 
 - Organizational message writer
 
-The organizational message writer role is the new built-in role that allows assigned admins to view and configure messages. The global administrator can assign the organizational message writer role to admin:
+The Organizational message writer role is the new built-in role that allows assigned admins to view and configure messages. The Global administrator can assign the Organizational message writer role to admins:
 
 1. Go to **Roles** \> **Role assignments**.
 
@@ -76,7 +76,7 @@ The desktop teaching call-out is supported by Microsoft 365 Consumer and Commerc
 
 To enable Adoption Score Organizational Messages, the global administrator needs to enable Adoption Score first:
 
-1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">admin center</a> as a global administrator and go to **Reports** \> **Adoption Score**.
+1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">admin center</a> and go to **Reports** \> **Adoption Score**.
 
 2. Select **Enable Adoption Score**. It can take up to 24 hours for insights to become available.
 
