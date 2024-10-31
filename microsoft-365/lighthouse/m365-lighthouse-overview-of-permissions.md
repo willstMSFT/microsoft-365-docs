@@ -5,7 +5,7 @@ ms.author: sharik
 author: SKjerland
 manager: scotv
 ms.reviewer: taylorau
-ms.date: 10/28/2024
+ms.date: 10/30/2024
 audience: Admin
 ms.topic: concept-article
 ms.service: microsoft-365-lighthouse
@@ -34,7 +34,7 @@ To use Lighthouse, you need a combination of roles assigned via RBAC and GDAP.
 
 ## Manage Lighthouse RBAC permissions in the partner tenant
 
-Lighthouse permissions in the partner tenant are managed by assigning RBAC roles in Lighthouse. Each role has a set of permissions that determines which data users can access and change within the partner tenant.    
+Lighthouse permissions in the partner tenant are managed by assigning RBAC roles in Lighthouse. Each role has a set of permissions that determines which data users can access and change within the partner tenant. Lighthouse RBAC roles don't provide access to customer data. Access to customer data is governed by a Lighthouse user's GDAP permissions (see [Manage GDAP in the customer tenant](#manage-gdap-in-the-customer-tenant)).
 
 RBAC roles are managed from the Lighthouse permissions page in Lighthouse. To access the Lighthouse permissions page and manage permissions, you must hold one of the following roles:
 
@@ -47,12 +47,10 @@ The following table provides an overview of each Lighthouse RBAC role. For a lis
 
 | Lighthouse&nbsp;RBAC&nbsp;role | Overview |
 |---|---|
-| Account Manager | Account Managers have full access to Sales Advisor pages and data across the entire partner tenant. Lighthouse Account Managers can export Sales Advisor data. |
-| Administrator<sup>1</sup> | Administrators have full administrative permissions in Lighthouse. Lighthouse Administrators can manage RBAC and GDAP permissions and can create baselines, tags, and alerts.<br><br>Lighthouse Administrators are automatically assigned the Privileged Role Administrator, User Administrator, and Group Administrator roles in Microsoft Entra ID and the Admin Agent role in Partner Center. |
-| Operator | Operators manage customer tenants in Lighthouse based on the GDAP permissions assigned to them for each customer tenant that they manage. Lighthouse Operators can also view high-level customer tenant status and manage alerts.<br><br>**Note:** Lighthouse Administrators can use templates on the Delegated access page to assign GDAP permissions to Lighthouse users. This automatically assigns the Operator role to users for the tenants for which they have GDAP permissions.<br><br>Users in a Just-in-Time (JIT) agent support role who have no other GDAP permissions are assigned the Lighthouse Operator role only when they have elevated JIT permissions. |
-| Reader<sup>1</sup> | Readers have read-only access to data in Lighthouse. Lighthouse Readers can view high-level customer tenant status and alerts. |
-
-<sup>1</sup> Lighthouse Administrator and Lighthouse Reader roles don't provide access to customer data. Access to customer data is governed by the Lighthouse user's GDAP permissions. We recommend that you use GDAP reader roles across customer tenants to give Lighthouse users an aggregate view across all customer tenants. 
+| Account Manager | Account Managers have full access to Sales Advisor pages and data across the entire partner tenant.<br><br>Account Managers can export Sales Advisor data. |
+| Administrator | Administrators have full administrative permissions in Lighthouse. <br><br>Administrators can manage RBAC and GDAP permissions and can create baselines, tags, and alerts.<br><br>Administrators are automatically assigned the Privileged Role Administrator, User Administrator, and Group Administrator roles in Microsoft Entra ID and the Admin Agent role in Partner Center. |
+| Operator | Operators manage customer tenants in Lighthouse based on the GDAP permissions assigned to them for each customer tenant that they manage.<br><br>Operators can view high-level customer tenant status and manage alerts.<br><br>Lighthouse users who hold at least one Microsoft Entra role are automatically assigned the Operator role.<br><br>**Note:** Lighthouse Administrators can use templates on the Delegated access page to assign GDAP permissions to Lighthouse users. |
+| Reader | Readers have read-only access to data in Lighthouse.<br><br>Lighthouse Readers can view high-level customer tenant status and alerts. |
 
 ## Lighthouse RBAC roles and capabilities
 
@@ -121,7 +119,7 @@ The following table describes the actions that each Lighthouse RBAC role can per
 
 ## Manage GDAP in the customer tenant
 
-GDAP gives you a high level of control and flexibility by providing access to customer tenants through [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference). Assigning the least-privileged roles by task to MSP technicians through GDAP reduces security risk for both MSPs and customers.  
+Just as Lighthouse RBAC roles manage permissions in the partner tenant, GDAP manages permissions in the customer tenants. GDAP gives you a high level of control and flexibility by providing access to customer tenants through [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference). Assigning the least-privileged roles by task to MSP technicians through GDAP reduces security risk for both MSPs and customers. We recommend that you use GDAP reader roles across customer tenants to give Lighthouse users an aggregate view across all customer tenants.
 
 For more information about setting up a GDAP relationship with a customer tenant in Lighthouse, see [Obtain granular admin permissions to manage a customer's service - Partner Center](/partner-center/gdap-obtain-admin-permissions-to-manage-customer). 
 
