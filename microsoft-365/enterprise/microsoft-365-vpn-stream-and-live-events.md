@@ -4,7 +4,7 @@ ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
 ms.reviewer: bryanyce
-ms.date: 09/12/2024
+ms.date: 10/31/2024
 audience: Admin
 ms.topic: conceptual
 ms.service: microsoft-365-enterprise
@@ -81,7 +81,7 @@ FQDNs aren't required in the VPN configuration, they're purely for use in PAC fi
 
 For organizations that utilize a PAC file to route traffic through a proxy while on VPN, this is normally achieved using FQDNs. However, with Teams events, the host names provided contain wildcards that resolve to IP addresses used by Content Delivery Networks (CDNs) which aren't utilized exclusively for Teams events traffic. Thus, if the request is sent direct based on DNS wildcard match alone, traffic to these endpoints will be blocked as there's no route via the direct path for it in [Step 3](#3-configure-routing-on-the-vpn-to-enable-direct-egress) later in this article.
 
-To solve this, we can provide the following IPs and use them in combination with the host names in an example PAC file as described in [Step 1](#1-configure-external-dns-resolution). The PAC file checks if the URL matches those used for Teams events and then if it does, it then also checks to see if the IP returned from a DNS lookup matches those provided for the service. If _both_ match, then the traffic is routed direct. If either element (FQDN/IP) doesn't match, then the traffic is sent to the proxy. As a result, the configuration ensures that anything that resolves to an IP outside of the scope of both the IP and defined namespaces traverses the proxy via the VPN as normal.
+To solve this, we can provide the following IPs and use them in combination with the host names in an example PAC file as described in [Step 1](#1-configure-external-dns-resolution). The PAC file checks if the URL matches those used for Teams events and if it does, it then also checks to see if the IP returned from a DNS lookup matches those provided for the service. If _both_ match, then the traffic is routed direct. If either element (FQDN/IP) doesn't match, then the traffic is sent to the proxy. As a result, the configuration ensures that anything that resolves to an IP outside of the scope of both the IP and defined namespaces traverses the proxy via the VPN as normal.
 
 ### Gathering the current lists of CDN Endpoints
 
@@ -95,7 +95,7 @@ For the **Commercial** cloud:
 
 For the **Government** clouds **(GCC, GCC High and DoD)**:
 
-- For Azure CDN from Microsoft, you can download the list from [Download Azure IP Ranges and Service Tags – US Government Cloud from Official Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=57063) - you'll need to look specifically for the service tag _AzureFrontdoor.Frontend_ in the JSON; _addressPrefixes_ will show the IPv4/IPv6 subnets. Over time the IPs can change, but the service tag list is always updated before they're put in use.
+- For Azure CDN from Microsoft, you can download the list from [Download Azure IP Ranges and Service Tags – US Government Cloud from Official Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=57063) - you'll need to look specifically for the service tag `AzureFrontdoor.Frontend` in the JSON; _addressPrefixes_ will show the IPv4/IPv6 subnets. Over time the IPs can change, but the service tag list is always updated before they're put in use.
 
 The following script can generate a PAC file that will include the namespaces and IP listings for the Teams Events attendee traffic. The **-Instance** parameter determines the specified environment - the supported values are [Worldwide, USGov, USGovGCCHigh and UsGovDoD]. Optionally, the script can also include the Optimize and Allow domains as well using the **-Type** parameter.
 
@@ -103,7 +103,7 @@ The following script can generate a PAC file that will include the namespaces an
 
 Here's an example of how to generate the PAC file for the Commercial cloud:
 
-1. Save the script below to your local hard disk as _Get-EventsPacFile.ps1_.
+1. Save the script to your local hard disk as _Get-EventsPacFile.ps1_.
 1. Go to the [Verizon URL](/rest/api/cdn/edge-nodes/list#code-try-0) and download the resulting JSON (copy paste it into a file named cdnedgenodes.json)
 1. Put the file into the same folder as the script.
 1. In a PowerShell window, run the following command. If you only desire the Optimize names (and not Optimize and Allow) change the -Type parameter to Optimize.
