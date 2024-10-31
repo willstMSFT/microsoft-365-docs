@@ -284,7 +284,7 @@ Steps and Output
 
     d. On the Account Tab, under _Sign-out_, select _Sign out of all sessions_.
 
-2. Reset Password - [Please reset the password.](/microsoft-365/admin/add-users/reset-passwords) Don't send the new password to the user through email, because the attacker may still have access to the mailbox. Be sure to use a strong and unique password: upper and lowercase letters, at least one number, and at least one special character.
+2. Reset Password - [Reset the password.](/microsoft-365/admin/add-users/reset-passwords) Don't send the new password to the user through email, because the attacker may still have access to the mailbox. Be sure to use a strong and unique password: upper and lowercase letters, at least one number, and at least one special character.
 
     a. The last time a user reset the password will be displayed.
 
