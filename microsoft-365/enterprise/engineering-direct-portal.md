@@ -272,7 +272,7 @@ This diagnostic is split into multiple sections that detail steps to remediate t
 
 - Email Address of Compromised Account
 
-Steps and Output
+#### Steps and Output
 
 1. Force Sign Out - First, it is important to force a user to sign out of all sessions:
 
