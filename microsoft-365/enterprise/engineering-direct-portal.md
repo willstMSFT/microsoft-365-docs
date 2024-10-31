@@ -93,6 +93,8 @@ In this section:
 - [Validate DKIM Signing Configuration](#validate-dkim-signing-configuration)
 - [Auto Archive Detection](#auto-archive-detection)
 
+- [Remediate a Compromised Account](#Remediate-a-Compromised-Account)
+
 ### Visual Mail Flow
 
 Visual Mail Flow enables you to examine issues related to mail flow, such as email submission, group expansion, processing by transport agents (such as AntiSpam, mail flow rules, Data Loss Prevention), and delivery.
