@@ -36,7 +36,7 @@ To use Lighthouse, you need a combination of roles assigned via RBAC and GDAP.
 
 Lighthouse permissions in the partner tenant are managed by assigning RBAC roles in Lighthouse. Each role has a set of permissions that determines which data users can access and change within the partner tenant. Lighthouse RBAC roles don't provide access to customer data. Access to customer data is governed by a Lighthouse user's GDAP permissions (see [Manage GDAP in the customer tenant](#manage-gdap-in-the-customer-tenant)).
 
-RBAC roles are managed from the Lighthouse permissions page in Lighthouse. To access the Lighthouse permissions page and manage permissions, you must hold one of the following roles:
+RBAC roles are managed from the **Lighthouse permissions** page in Lighthouse. To access the **Lighthouse permissions** page and manage permissions, you must hold one of the following roles:
 
 - Privileged Role Administrator in Microsoft Entra ID
 - Administrator in Lighthouse
@@ -49,7 +49,7 @@ The following table provides an overview of each Lighthouse RBAC role. For a lis
 |---|---|
 | Account Manager | Account Managers have full access to Sales Advisor pages and data across the entire partner tenant.<br><br>Account Managers can export Sales Advisor data. |
 | Administrator | Administrators have full administrative permissions in Lighthouse. <br><br>Administrators can manage RBAC and GDAP permissions and can create baselines, tags, and alerts.<br><br>Administrators are automatically assigned the Privileged Role Administrator, User Administrator, and Group Administrator roles in Microsoft Entra ID and the Admin Agent role in Partner Center. |
-| Operator | Operators manage customer tenants in Lighthouse based on the GDAP permissions assigned to them for each customer tenant that they manage.<br><br>Operators can view high-level customer tenant status and manage alerts.<br><br>Lighthouse users who hold at least one Microsoft Entra role are automatically assigned the Operator role.<br><br>**Note:** Lighthouse Administrators can use templates on the Delegated access page to assign GDAP permissions to Lighthouse users. |
+| Operator | Operators manage customer tenants in Lighthouse based on the GDAP permissions assigned to them for each customer tenant that they manage.<br><br>Operators can view high-level customer tenant status and manage alerts.<br><br>Lighthouse users who hold at least one Microsoft Entra role are automatically assigned the Operator role.<br><br>**Note:** Lighthouse Administrators can use templates on the **Delegated access** page to assign GDAP permissions to Lighthouse users. |
 | Reader | Readers have read-only access to data in Lighthouse.<br><br>Lighthouse Readers can view high-level customer tenant status and alerts. |
 
 ## Lighthouse RBAC roles and capabilities
@@ -66,7 +66,7 @@ The following table describes the actions that each Lighthouse RBAC role can per
 |  | Manage alerts (change severity, status, or assignment) |  | &check; |  |  | No |
 |  | Create, edit, and delete alert rules |  | &check; |  |  | No |
 | **Copilot insights** | View opportunities and adoption data |  |  |  |  | Yes|
-| **Tenants** | View the Tenants page | &check; | &check; | &check; | &check; | No |
+| **Tenants** | View the **Tenants** page | &check; | &check; | &check; | &check; | No |
 |  | View tenant details |  |  |  |  | Yes |
 |  | Export data | &check; | &check; | &check; | &check; | No |
 |  | View tags | &check; | &check; | &check; | &check; | No |
@@ -103,9 +103,9 @@ The following table describes the actions that each Lighthouse RBAC role can per
 | **Service&nbsp;health** | Monitor service health<sup>1</sup> |  |  |  |  | No |
 | **Support** | Create and manage service requests<sup>2</sup> |  |  |  |  | No |
 | **Audit logs** | View audit logs |  | &check; |  |  | Yes
-| **Permissions** | View the Lighthouse Permissions page | |  &check; |  |  | No|
+| **Permissions** | View the **Lighthouse Permissions** page | |  &check; |  |  | No|
 |  | Set up and manage Lighthouse permissions |  | &check; |  |  | No |
-|  | View, set up, and manage GDAP on the Delegated access page |  | &check; |  |  | No |
+|  | View, set up, and manage GDAP on the **Delegated access** page |  | &check; |  |  | No |
 | **Sales Advisor** | View opportunities | &check; | &check; |  |  | No |
 |  | View subscription renewals | &check; | &check; |  |  | No |
 |  | View license requests | &check; | &check; |  |  | No |
