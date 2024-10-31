@@ -101,6 +101,8 @@ If you have an MCA billing account type, the top of the billing account details 
 > [!IMPORTANT]
 > Billing account roles only apply to billing accounts, and don't apply to other Microsoft 365 admin center scenarios.
 
+If you’re a Global Administrator, you can assign yourself a Billing account role in the Microsoft 365 admin center through the billing account roles and permissions. Elevating your access to manage billing accounts gives you the ability to view and manage cost and billing for your accounts. You can view invoices, charges, products that are purchased, and the users who have access to the billing accounts.
+
 You can provide others with access to the billing account in the Microsoft 365 admin center through the billing account roles and permissions. For instructions about how to grant billing account access to other users, see [Assign billing account roles](#assign-billing-account-roles).
 
 Only a billing account owner can grant access to a billing account. You can assign the following roles to users:
