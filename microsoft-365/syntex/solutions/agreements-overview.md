@@ -1,5 +1,5 @@
 ---
-title: Introduction to SharePoint Agreements AI 
+title: Introduction to SharePoint Agreements
 ms.author: chucked
 author: chuckedmonson
 manager: jtremper
@@ -15,17 +15,17 @@ ms.collection:
     - m365initiative-syntex
 ms.localizationpriority:  medium
 ROBOTS: NOINDEX, NOFOLLOW
-description: Learn how to get started with the SharePoint Agreements AI solution.
+description: Learn how to get started with the SharePoint Agreements solution.
 ---
 
-# Introduction to SharePoint Agreements AI
+# Introduction to SharePoint Agreements
 
 > [!NOTE]
-> SharePoint Agreements AI is now generally available for early access customers. Contact your Microsoft representative or submit your nomination for the limited GA here: [Sign up for limited GA](https://aka.ms/AgreementsSelectiveGA). For a list of articles to help you set up and use this feature, see [Help documentation](#help-documentation).
+> SharePoint Agreements is now generally available for early access customers. Contact your Microsoft representative or submit your nomination for the limited GA here: [Sign up for limited GA](https://aka.ms/AgreementsSelectiveGA). For a list of articles to help you set up and use this feature, see [Help documentation](#help-documentation).
 
 ## Overview
 
-SharePoint Agreements AI is an end-to-end solution, powered by AI, to help streamline and simplify your agreements, such as nondisclosure agreements (NDAs) and statements of work (SOWs). From drafting to execution, the solution is ready to integrate seamlessly into your flow of work.
+SharePoint Agreements is an end-to-end solution, powered by AI, to help streamline and simplify your agreements, such as nondisclosure agreements (NDAs) and statements of work (SOWs). From drafting to execution, the solution is ready to integrate seamlessly into your flow of work.
 
 Centralize your agreements in the new Agreements app in Microsoft Teams, draft agreements with native Microsoft Word capabilities, and gain valuable AI-driven insights, making management of your agreements easier and more efficient.
 
@@ -33,9 +33,9 @@ Centralize your agreements in the new Agreements app in Microsoft Teams, draft a
 
 ## What you can do
 
-With SharePoint Agreements AI, you can:
+With SharePoint Agreements, you can:
 
-- **Centrally manage** your agreements in one place using familiar tools. SharePoint Agreements AI provides the [Agreements app in Microsoft Teams](https://teams.microsoft.com/l/app/fc0c5127-1a8c-4d12-9500-c142ca453b83?source=app-details-dialog) to manage all your agreements. You can view agreement lists, track their status, and receive expiring agreement reports.
+- **Centrally manage** your agreements in one place using familiar tools. SharePoint Agreements provides the [Agreements app in Microsoft Teams](https://teams.microsoft.com/l/app/fc0c5127-1a8c-4d12-9500-c142ca453b83?source=app-details-dialog) to manage all your agreements. You can view agreement lists, track their status, and receive expiring agreement reports.
   
 - **Simplify your agreements process** from template to eSignature. Native capabilities in Microsoft Word allow drafting templates by adding fields. Reusable sections from the sections library can be included to ensure consistent language across all agreements. Agreements can then be generated from these templates by filling in field values and routing them for eSignature.
   
@@ -47,9 +47,9 @@ With SharePoint Agreements AI, you can:
 
 |Article  |Description  |
 |---------|---------|
-|[Key concepts](agreements-key-concepts.md)    |Learn the key concepts in SharePoint Agreements AI.         |
-|[Frequently asked questions](agreements-faq.md)    |Get answers to frequently asked questions about SharePoint Agreements AI.         |
-|[Licensing requirements](agreements-license-requirements.md)    |Learn how to get and assign licenses for SharePoint Agreements AI.         |
+|[Key concepts](agreements-key-concepts.md)    |Learn the key concepts in SharePoint Agreements.         |
+|[Frequently asked questions](agreements-faq.md)    |Get answers to frequently asked questions about SharePoint Agreements.         |
+|[Licensing requirements](agreements-license-requirements.md)    |Learn how to get and assign licenses for SharePoint Agreements.         |
 |[Set up the solution](agreements-setup.md)    |Learn how to set up and manage workspaces, add the Agreements app in Microsoft Teams, and more.         |
 |[Get users ready](agreements-user-prereqs.md)    |Learn how to get users ready to use all of the  solution features.         |
 |[Create a template](agreements-create-template.md)    |Learn how to create and publish templates, set up fields and sections, configure workflows, and more.         |
