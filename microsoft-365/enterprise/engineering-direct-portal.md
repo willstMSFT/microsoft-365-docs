@@ -3,7 +3,7 @@ title: "Engineering Direct Portal in the Microsoft 365 Admin Center"
 author: kelleyvice-msft
 ms.author: kvice  
 manager: scotv
-ms.date: 10/04/2024
+ms.date: 10/31/2024
 ms.topic: article
 ms.service: microsoft-365-business  
 ms.subservice: m365-admin-center  
@@ -262,67 +262,67 @@ Follow the steps below to enable and customize Auto Archive settings based on yo
 
 1. Save your changes to apply the new settings. 
 
-### Remediate a Compromised Account
+## Remediate a Compromised Account
 
-If you or your user suspects an account has been accessed by someone who shouldn’t have access, it may be compromised.  Our “Remediate a Compromised Account” diagnostic will help you check different aspects of the affected mailbox and guide you through the steps to recover the account.  Please use this diagnostic if you or your user notice any signs that one of your users’ accounts may have been compromised.
+If you or your user suspects an account has been accessed by someone who shouldn’t have access, it may be compromised. The “Remediate a Compromised Account” diagnostic will help you check different aspects of the affected mailbox and guide you through the steps to recover the account. Please use this diagnostic if you or your user notice any signs that one of your users’ accounts may have been compromised.
 
 This diagnostic is split into multiple sections that detail steps to remediate the account. Each step lists the actions required or links to an article that can be explained in more detail. Furthermore, there will be additional account details for each step, such as when the user last reset the password, what MFA is enabled on the account, and which IP addresses have accessed the mailbox.
 
-Inputs
+**Inputs**
 
 - Email Address of Compromised Account
 
 Steps and Output
 
-1.      Force Sign Out - First, it is important to force a user to sign out of all sessions:
+1. Force Sign Out - First, it is important to force a user to sign out of all sessions:
 
-a.      Go to the [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/homepage)
+  a. Go to the [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/homepage)
 
-b.     Navigate to _Users > Active users_
+  b. Navigate to _Users > Active users_
 
-c.      Click on the desired user
+  c. Click on the desired user
 
-d.     On the Account Tab, under _Sign-out_, click, _Sign out of all sessions_
+  d. On the Account Tab, under _Sign-out_, click, _Sign out of all sessions_
 
-2.      Reset Password - [Please reset the password.](/microsoft-365/admin/add-users/reset-passwords?view=o365-worldwide) Don't send the new password to the user through email, because the attacker may still have access to the mailbox. Be sure to use a strong and unique password: upper and lowercase letters, at least one number, and at least one special character.
+2. Reset Password - [Please reset the password.](/microsoft-365/admin/add-users/reset-passwords) Don't send the new password to the user through email, because the attacker may still have access to the mailbox. Be sure to use a strong and unique password: upper and lowercase letters, at least one number, and at least one special character.
 
-a.      The last time a user reset the password will be displayed.
+  a. The last time a user reset the password will be displayed.
 
-3.      Enable Multi Factor Authentication - [Multi-Factor Authentication (MFA)](/entra/identity/authentication/concept-mfa-howitworks) is crucial for enhancing security and protecting user accounts. [Please Enable MFA](/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication?view=o365-worldwide)
+3. Enable Multi Factor Authentication - [Multi-Factor Authentication (MFA)](/entra/identity/authentication/concept-mfa-howitworks) is crucial for enhancing security and protecting user accounts. [Please Enable MFA](/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication)
 
-a.      A list of types of MFA enabled on the user will be displayed.
+  a. A list of types of MFA enabled on the user will be displayed.
 
-4.      Block Suspicious IP Addresses - Blocking suspicious or harmful IP addresses is an essential cybersecurity measure. [Please Review the IP Addresses that have activity on this account and block any that are suspicious](/defender-office-365/tenant-allow-block-list-urls-configure)
+4. Block Suspicious IP Addresses - Blocking suspicious or harmful IP addresses is an essential cybersecurity measure. [Please Review the IP Addresses that have activity on this account and block any that are suspicious](/defender-office-365/tenant-allow-block-list-urls-configure)
 
-a.      A list of IP addresses that performed actions on the account will be displayed.
+  a. A list of IP addresses that performed actions on the account will be displayed.
 
-5.      Remove Account from Administrative Roles - To ensure that the attacker cannot perform administrative actions [please remove compromised account from any administrative roles](/microsoft-365/admin/add-users/assign-admin-roles?view=o365-worldwide&WT.mc_id=365AdminCSH_SupportCentral) You can restore the user's membership once the account is secured.
+5. Remove Account from Administrative Roles - To ensure that the attacker cannot perform administrative actions [please remove compromised account from any administrative roles](/microsoft-365/admin/add-users/assign-admin-roles?WT.mc_id=365AdminCSH_SupportCentral) You can restore the user's membership once the account is secured.
 
-6.      Enable Mailbox Logging - Mailbox logging is the capability of capturing and analyzing audit logs related to security, compliance, and other activities within Microsoft 365 or Office 365. [Please enable mailbox logging.](/purview/audit-log-enable-disable?tabs=microsoft-purview-portal)
+6. Enable Mailbox Logging - Mailbox logging is the capability of capturing and analyzing audit logs related to security, compliance, and other activities within Microsoft 365 or Office 365. [Please enable mailbox logging.](/purview/audit-log-enable-disable?tabs=microsoft-purview-portal)
 
-a.      The status of logging on the mailbox will be shown (Enabled or Disabled)
+  a. The status of logging on the mailbox will be shown (Enabled or Disabled)
 
-7.      Remove Unusual Mailbox Delegates - A mailbox delegate is someone you authorize to manage your email and calendar on your behalf. Displayed below are all the delegates that are not the mailbox owner. [Please delete any unknown users.](/exchange/recipients-in-exchange-online/manage-permissions-for-recipients)
+7. Remove Unusual Mailbox Delegates - A mailbox delegate is someone you authorize to manage your email and calendar on your behalf. Displayed below are all the delegates that are not the mailbox owner. [Please delete any unknown users.](/exchange/recipients-in-exchange-online/manage-permissions-for-recipients)
 
-a.      Users who have delegate permission will be displayed with the fields, user (email), isinherited, and access rights.
+  a. Users who have delegate permission will be displayed with the fields, user (email), isinherited, and access rights.
 
-8.      Remove Unusual Inbox Rules - Inbox rules are often used by attackers to forward emails to themselves. [Please check if there are any unusual rules and delete them.](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules)
+8. Remove Unusual Inbox Rules - Inbox rules are often used by attackers to forward emails to themselves. [Please check if there are any unusual rules and delete them.](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules)
 
-a.      The inbox rules registered on the mailbox will be displayed with the identity, name, description, forwardto address, and enabled status.
+  a. The inbox rules registered on the mailbox will be displayed with the identity, name, description, forwardto address, and enabled status.
 
-9.      Remove Unusual SMTP Forwarding - Simple Mail Transfer Protocol (SMTP) is the protocol responsible for sending emails from the sender's email client to the email server [Please check if there is SMTP forwarding.](/exchange/recipients-in-exchange-online/manage-user-mailboxes/manage-user-mailboxes)
+9. Remove Unusual SMTP Forwarding - Simple Mail Transfer Protocol (SMTP) is the protocol responsible for sending emails from the sender's email client to the email server [Please check if there is SMTP forwarding.](/exchange/recipients-in-exchange-online/manage-user-mailboxes/manage-user-mailboxes)
 
-a.      SMTP forwarding registered on the mailbox will be displayed
+  a. SMTP forwarding registered on the mailbox will be displayed
 
 10. Remove Unusual Accepted Domains - An accepted domain in a mailbox allows users in a domain to send and receive mail. [Please delete any unusual domains.](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains)
 
-a.      Accepted domains registered on the tenant will be displayed.
+  a. Accepted domains registered on the tenant will be displayed.
 
 11. Remove Unusual Inbound and Outbound Connectors - Inbound connectors manage email traffic coming into your organization, while outbound connectors control the flow of emails leaving your organization [Please check if there are any unusual connectors and delete them.](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/set-up-connectors-to-route-mail)
 
-a.      Connectors registered on the tenant will be displayed.
+  a. Connectors registered on the tenant will be displayed.
 
-Further Steps
+**Further Steps**
 
 If the user still shows signs of being compromised, please reach out to Microsoft Support for further help.
 
