@@ -199,6 +199,9 @@
 
         - name: Multitenant collaboration
           items:
+            - name: Multitenant org FAQ
+              href: multitenant-org-faq.md
+              displayName: FAQ
             - name: Plan for multitenant orgs
               href: plan-multi-tenant-org-overview.md
             - name: Set up a multitenant org
