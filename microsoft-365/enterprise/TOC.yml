@@ -199,6 +199,9 @@
 
         - name: Multitenant collaboration
           items:
+            - name: Manage multitenant org settings
+              href: manage-multitenant-org-settings.md
+              displayName: multitenant
             - name: Plan for multitenant orgs
               href: plan-multi-tenant-org-overview.md
             - name: Set up a multitenant org
