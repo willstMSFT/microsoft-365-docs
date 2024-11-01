@@ -294,7 +294,7 @@ There are features in [Microsoft Purview](/purview/copilot-in-purview-overview) 
 
 [!div class="checklist"]
 
-- Identify and label sensitive data in your Microsoft 365 and Office files.
+- Identify and label sensitive data in Microsoft 365.
 - Detect and protect sensitive information from unauthorized sharing or leakage.
 - Delete the content you don't need.
 - Detect sensitive data and noncompliant content in Copilot prompts and responses.
@@ -304,9 +304,11 @@ To learn more about Microsoft Purview, see [Microsoft 365 Copilot in Microsoft P
 
 ### Identify and label sensitive data
 
-✅ **Create and apply [sensitivity labels](/purview/get-started-with-sensitivity-labels) to your documents, emails, and meetings**
+✅ **Create and apply [sensitivity labels](/purview/get-started-with-sensitivity-labels) to protect your datas**
 
-[Sensitivity labels](/purview/sensitivity-labels) are a way to identify and classify the sensitivity of your organization's data. When they're applied to items, like documents and emails, the labels add an extra layer of protection.
+[Sensitivity labels](/purview/sensitivity-labels) are a way to identify and classify the sensitivity of your organization's data, adding an extra layer of protection to your data. 
+
+When sensitivity labels are applied to items, like documents and emails, the labels add the protection directly to this data. As a result, that protection persists, wherever it's stored. When sensitivity labels are applied to containers, like SharePoint sites and groups, the labels add protection indirectly by controlling access to the container where the data is stored. For example, privacy settings, external user access, and access from unmanaged devices.
 
 The sensitivity labels can also affect Copilot results, including:
 
@@ -314,52 +316,62 @@ The sensitivity labels can also affect Copilot results, including:
 - If the label applies encryption, Copilot checks the usage rights for the user. For Copilot to return data from that item, the user must be granted permissions to copy from it.
 - In Copilot Business Chat that can reference data from different types of items, sensitivity labels are visible in returned results. The latest response displays the sensitivity label with the [highest priority](/purview/sensitivity-labels#label-priority-order-matters).
 - If Copilot creates new content from labeled items, the sensitivity label from the source item is automatically inherited.
-- Sensitivity labels go with the content, even if the content moves outside Microsoft 365.
 
-This section walks you through the steps to create and use the default sensitivity labels from Microsoft Purview. If you need to use your own label names and configurations, then create the labels manually or edit the default labels. If you already created your own sensitivity labels, then you can't create the default labels. To learn more about sensitivity labels, see:
+This section walks you through the steps to create and use the default sensitivity labels from Microsoft Purview. If you need to use your own label names and configurations, create the labels manually or edit the default labels. If you already created your own sensitivity labels, then you can't create the default labels. To learn more about sensitivity labels, see:
 
 - [Get started with sensitivity labels](/purview/get-started-with-sensitivity-labels)
 - [Default labels and policies to protect your data](/purview/mip-easy-trials)
 - [Microsoft Purview strengthens information protection for Copilot](/purview/ai-microsoft-purview#microsoft-purview-strengthens-information-protection-for-copilot)
 
-> [!NOTE]
-> You can enable sensitivity labels at the container-level, like SharePoint sites. When sensitivity labels are configured for groups and sites, items in the container don't inherit the sensitivity label. So, there isn't a direct impact to Copilot responses.
->
-> However, the label settings can restrict access to the container, which provides an extra layer of security, like enforcing Conditional Access and setting the default sharing link for a site. As a result, if a user can't access the site, Copilot can't access the site on behalf of that user.
->
-> To learn more, see [Use sensitivity labels to protect content in Microsoft Teams, Microsoft 365 groups, and SharePoint sites](/purview/sensitivity-labels-teams-groups-sites).
-
 #### 1. Create the default sensitivity labels
 
 1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as an admin in one of the groups listed at [Sensitivity labels - permissions](/purview/get-started-with-sensitivity-labels#permissions-required-to-create-and-manage-sensitivity-labels).
 
-2. Select **Solutions** > **AI Hub** > **Overview**.
+2. Select **Solutions** > **Data Security Posture Management for AI** > **Overview**.
 3. In the **Recommendations** section, select **Fortify your data security for AI**. This step creates the default labels and their policies.
 4. To see or edit the default labels, or to create your own labels, select **Information protection** > **Sensitivity labels**. You might have to select **Refresh**.
 
-When you have sensitivity labels:
+When you have the default sensitivity labels:
 
 - The labels help protect your data and can affect Copilot results.
 - Your users can start manually applying published labels to their files and emails.
 - Admins can start creating policies and configuring features that automatically apply labels to files and emails.
 
-#### 2. Publish your labels and educate your users
+#### 2. Enable and configure sensitivity labels for containers
+
+The default sensitivity labels don't include settings for groups and sites, which let you apply a sensitivity label to a SharePoint or Teams site. When these sites have a sensitivity label applied, items in the container don't inherit the sensitivity label. Instead, the label settings can restrict access to the container, which provides an extra layer of security when you use Copilot because if a user can't access the site, neither can Copilot on behalf of that user.
+
+For example, you can set the privacy setting to **Private**, which restricts site access to only approved members in your organization. When the label is applied to the site, it replaces any previous setting and locks it for as long as the label is applied. This is a more secure setting than letting anybody access the site and allowing users to change the setting. When only approved memebers can acess the data, it helps to prevent oversharing of data that might be accessible to Copilot.
+
+Before you can configure any label settings for groups and sites, you must enable this capability for your tenant and then synchronize your labels. This is a one-time PowerShell configuration: [How to enable sensitivity labels for containers and synchronize labels](/purview/sensitivity-labels-teams-groups-sites#how-to-enable-sensitivity-labels-for-containers-and-synchronize-labels).
+
+You can then edit your sensitivity labels, or create new sensitivity labels specifically for groups and sites:
+
+1. For the sensitivity label scope, select **Groups & sites**. You won't be able to select this scope until you've completed the PowerShell steps for your tenant.
+
+2. Select the groupings of settings to configure. Some of the settings have backend dependencies, such as Conditional Access must already be configured. That's not the case for the privacy setting, which is included in **Privacy and external user access settings**.
+
+3. Save your settings.
+
+For more information, including details of all the available label settings that you can configure for groups and sites, see [Use sensitivity labels to protect content in Microsoft Teams, Microsoft 365 groups, and SharePoint sites](/purview/sensitivity-labels-teams-groups-sites).
+
+#### 3. Publish your labels and educate your users
 
 1. If you're using the default sensitivity labels, the labels are automatically published to all users, even if you edit the labels.
 
-    If you created your own sensitivity labels, then add your labels to a publishing policy. When they're published, users can manually apply the labels in their Office apps. These publishing policies also have settings that you need to consider, like a default label and requiring users to label their data.
+    If you created your own sensitivity labels, you must add your labels to a publishing policy. When they're published, users can manually apply the labels in their Office apps. For labels that include the **Groups & sites** scope, users can apply these labels to new and existing sites and teams. The publishing policies also have settings that you need to consider, like a default label and requiring users to label their data.
 
     To learn more, see [Publish sensitivity labels by creating a label policy](/purview/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
 
 2. Educate your users and provide guidance on when to apply the correct sensitivity label.
 
-    In addition to manually applying labels, the default label policy includes applying the **General \ All Employees (unrestricted)** label as the default label. This label offers a base layer of protection. But, users should change the label if needed, especially for more sensitive content that requires encryption.
+    In addition to manually applying labels, the default label policy includes applying the **General \ All Employees (unrestricted)** label as the default label for items. This label offers a base layer of protection. But, users should change the label if needed, especially for more sensitive content that requires encryption.
 
     To help you with this step, see [End-user documentation for sensitivity labels](/purview/get-started-with-sensitivity-labels#end-user-documentation-for-sensitivity-labels).
 
 3. Monitor your labels. Select **Information protection** > **Reports**. You can see the usage of your labels.
 
-#### 3. Enable sensitivity labels for files in SharePoint and OneDrive
+#### 4. Enable sensitivity labels for files in SharePoint and OneDrive
 
 This step is a one-time configuration that's required to enable sensitivity labels for SharePoint and OneDrive. It's also required for Microsoft 365 Copilot to access encrypted files stored in these locations.
 
@@ -378,14 +390,15 @@ To learn more about this configuration, see [Enable sensitivity labels for files
 > [!TIP]
 > Although not related to Copilot, now is a good time to [enable co-authoring for encrypted files](/purview/sensitivity-labels-coauthoring), if it's not already enabled. This setting ensures the best user experience for collaboration.
 
-#### 4. Set default sensitivity labels for your SharePoint document libraries
+#### 5. Set default sensitivity labels for your SharePoint document libraries
 
 This configuration is appropriate when your document libraries store files with the same level of sensitivity.
 
 The SharePoint site admin can do this task.
 
 1. In your SharePoint site, select **Documents** > **Settings** icon > **Library settings** > **More library settings**.
-2. In **Default sensitivity labels** (Apply label to items in this list or library), select a sensitivity label from the drop-down list, like **Confidential**
+2. In **Default sensitivity labels** (Apply label to items in this list or library), select a sensitivity label from the drop-down list, such as **Confidential
+\ All Employees**
 3. **Save** your changes.
 
 When set:
@@ -398,7 +411,7 @@ To learn more, see:
 - [Overview - Default sensitivity labels for SharePoint document libraries](/purview/sensitivity-labels-sharepoint-default-label)
 - [Steps - Add a sensitivity label to SharePoint document library](https://support.microsoft.com/office/add-a-sensitivity-label-to-sharepoint-document-library-54b1602b-db0a-4bcb-b9ac-5e20cbc28089)
 
-#### 5. Automatically apply sensitivity labels to files and emails
+#### 6. Automatically apply sensitivity labels to files and emails
 
 You can automatically apply labels to files in SharePoint sites, OneDrive accounts, Exchange emails, and Office files. Automatic labeling helps to identify a higher priority label for more sensitive information that might need a more restrictive setting than a default label.
 
