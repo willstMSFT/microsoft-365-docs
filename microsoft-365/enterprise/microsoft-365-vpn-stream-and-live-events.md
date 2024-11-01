@@ -216,11 +216,11 @@ The file to print the content to.
 
 .EXAMPLE
 
-Get-TLEPacFile.ps1 -Instance Worldwide -CdnEdgeNodesFilePath .\cdnedgenodes.json -Type OptimizeAndAllow -FilePath .\Commercial.pac 
+Get-EventsPacFile.ps1 -Instance Worldwide -CdnEdgeNodesFilePath .\cdnedgenodes.json -Type OptimizeAndAllow -FilePath .\Commercial.pac 
 
 .EXAMPLE
 
-Get-TLEPacFile.ps1 -Instance USGov -FilePath .\USGov.pac -Type OptimizeAndAllow
+Get-EventsPacFile.ps1 -Instance USGov -FilePath .\USGov.pac -Type OptimizeAndAllow
 
 
 #>
