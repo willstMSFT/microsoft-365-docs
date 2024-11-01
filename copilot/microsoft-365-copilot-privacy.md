@@ -153,7 +153,7 @@ If you turn off connected experiences that analyze your content on devices in yo
 
 This applies to when you’re running the most current version of these apps on Windows, Mac, iOS, or Android devices.
 
-There's also a privacy control that turns off all connected experiences, including connected experiences that analyze your content. If you use that privacy control, Microsoft 365 Copilot features won’t be available for certain apps on certain devices as described above.
+There's also a privacy control that turns off all connected experiences, including connected experiences that analyze your content. If you use that privacy control, Microsoft 365 Copilot features won’t be available in the apps and on the devices described above.
 
 #### Privacy control for optional connected experiences
 
