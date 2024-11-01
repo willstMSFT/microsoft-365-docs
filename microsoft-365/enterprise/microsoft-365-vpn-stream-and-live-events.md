@@ -118,7 +118,7 @@ Here's an example of how to generate the PAC file for the Commercial cloud:
 
 Here's an example of how to generate the PAC file for the GCC environment:
 
-1. Save the script below to your local hard disk as _Get-EventsPacFile.ps1_.
+1. Save the script to your local hard disk as _Get-EventsPacFile.ps1_.
 1. In a PowerShell window, run the following command. If you only desire the Optimize names (and not Optimize and Allow) change the -Type parameter to Optimize.
 
    ```powershell
@@ -538,7 +538,8 @@ Again, we don't recommend performing VPN offload using just the FQDNs; utilizing
 
 The final step is to add a direct route for the Teams event IPs described in **Gathering the current lists of CDN Endpoints** into the VPN configuration to ensure the traffic isn't sent via the forced tunnel into the VPN. Detailed information on how to do this for Microsoft 365 Optimize endpoints can be found in the [Implement VPN split tunneling](microsoft-365-vpn-implement-split-tunnel.md#implement-vpn-split-tunneling) section of [Implementing VPN split tunneling for Microsoft 365](microsoft-365-vpn-implement-split-tunnel.md). The process is exactly the same for the Teams events IPs listed in this document.
 
-Note that only the IPs (not FQDNs) from [Gathering the current lists of CDN Endpoints](#gathering-the-current-lists-of-cdn-endpoints) should be used for VPN configuration.
+> [!NOTE]
+> Only the IPs (not FQDNs) from [Gathering the current lists of CDN Endpoints](#gathering-the-current-lists-of-cdn-endpoints) should be used for VPN configuration.
 
 ## FAQ
 
