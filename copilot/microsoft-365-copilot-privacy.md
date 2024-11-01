@@ -13,7 +13,7 @@ ms.collection:
 - m365copilot
 - magic-ai-copilot
 hideEdit: true
-ms.date: 10/18/2024
+ms.date: 11/01/2024
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -81,7 +81,7 @@ For Microsoft Teams chats with Copilot, admins can also use [Microsoft Teams Exp
 
 ### Deleting the history of user interactions with Microsoft 365 Copilot
 
-Your users can delete their Copilot interaction history, which includes their prompts and the responses Copilot returns, by going to the [My Account portal](https://myaccount.microsoft.com/). For more information, see [Delete your Microsoft 365 Copilot interaction history](https://support.microsoft.com/office/76de8afa-5eaf-43b0-bda8-0076d6e0390f).
+Your users can delete their Copilot interaction history, which includes their prompts and the responses Copilot returns, by going to the [My Account portal](https://myaccount.microsoft.com/). For more information, see [Delete your Microsoft 365 Copilot activity history](https://support.microsoft.com/office/76de8afa-5eaf-43b0-bda8-0076d6e0390f).
 
 ## Microsoft 365 Copilot and the EU Data Boundary
 
@@ -143,12 +143,15 @@ Some privacy controls for connected experiences in Microsoft 365 Apps can affect
 
 #### Privacy control for connected experiences that analyze your content
 
-If you turn off connected experiences that analyze your content on Windows or Mac devices in your organization, Microsoft 365 Copilot features won’t be available to your users in the following apps:
+If you turn off connected experiences that analyze your content on devices in your organization, Microsoft 365 Copilot features won’t be available to your users in the following apps:
 
 - Excel
-- PowerPoint
 - OneNote
+- Outlook
+- PowerPoint
 - Word
+
+This applies to when you’re running the most current version of these apps on Windows, Mac, iOS, or Android devices.
 
 There's also a privacy control that turns off all connected experiences, including connected experiences that analyze your content. If you use that privacy control, Microsoft 365 Copilot features won’t be available for certain apps on certain devices as described above.
 
