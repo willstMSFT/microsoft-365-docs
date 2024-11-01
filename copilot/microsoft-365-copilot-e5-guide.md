@@ -351,7 +351,7 @@ You can then edit your sensitivity labels, or create new sensitivity labels spec
 
 2. Select the groupings of settings to configure. Some of the settings have backend dependencies, such as Conditional Access must already be configured. That's not the case for the privacy setting, which is included in **Privacy and external user access settings**.
 
-3. Save your settings.
+3. Configure the settings you want to use and save your changes.
 
 For more information, including details of all the available label settings that you can configure for groups and sites, see [Use sensitivity labels to protect content in Microsoft Teams, Microsoft 365 groups, and SharePoint sites](/purview/sensitivity-labels-teams-groups-sites).
 
