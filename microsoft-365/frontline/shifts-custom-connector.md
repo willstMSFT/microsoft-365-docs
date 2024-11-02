@@ -42,34 +42,34 @@ You can set up your connector to sync data unidirectionally or bidirectionally.
   - At least a [Cloud Application Administrator](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json#cloud-application-administrator) to register an app in the Microsoft Entra admin center
   - Global Administrator to register your workforce integration
   
-## Create your connector
+## Create a connector
 
 ### Sync changes made in Shifts to your WFM system
 
-To set up your connector to receive and process requests from Shifts, implement the following endpoints:
+To set up your connector to receive and process requests from Shifts, you need to implement the following endpoints:
 
 - [/connect](#post-connect)
 - [/update](#post-teamsteamsidupdate)
 
-**Base URL**
+**Determine your base URL and /connect and /update endpoint URLs**
 
-The base URL (webhook endpoint) is determined by the **url** and **apiVersion** properties of the [workforceIntegration](/graph/api/resources/workforceintegration?view=graph-rest-1.0) object when you register your workforce integration.
+The base URL (webhook) is `https://{url}/v{apiVersion}`, where **url** and **apiVersion** are the properties of the [workforceIntegration](/graph/api/resources/workforceintegration?view=graph-rest-1.0) object for when you [register your workforce integration](#register-your-workforce-integration-in-your-tenant).
 
 For example, if **url** is `https://contosoconnector.com/wfi` and **apiVersion** is 1:
 
 - The base URL is `https://contosoconnector/com/wfi/v1`.
 - The /connect endpoint is `https://contosoconnector/wfi/v1/connect`.
-- The /update endpoint is `https://contosoconnector/wfi/v1/connect/v1/teams/{teamsId}/update`.
+- The /update endpoint is `https://contosoconnector/wfi/v1/teams/{teamsId}/update`.
 
 **Encryption**
 
-All requests are encrypted using `AES-256-CBC-HMAC-SHA256` with the shared key provided in the [Create workforceIntegration](/graph/api/workforceintegration-post?view=graph-rest-1.0&tabs=http) request.
+All requests are encrypted using `AES-256-CBC-HMAC-SHA256`. You specify the shared secret key when you [register your workforce integration](#register-your-workforce-integration-in-your-tenant).
 
 #### Endpoints
 
 ##### POST /connect
 
-When you register your workforce integration, Shifts calls this endpoint to test the connection. A success response is returned only if the /connect endpoint returns an HTTP 200 OK response.
+When you [register your workforce integration](#register-your-workforce-integration-in-your-tenant), Shifts calls this endpoint to test the connection. A success response is returned only if this endpoint returns an HTTP 200 OK response.
 
 ###### Example
 
@@ -83,29 +83,32 @@ ConnectRequest
 }
 ```
 
-**Response**
-
+**Response**<br>
 Return HTTP `200 OK`
 
 ##### POST /teams/{teamsId}/update
 
 When a change is made to an Shifts entity in a [schedule](/graph/api/resources/schedule?view=graph-rest-1.0) with a [workforceIntegration](/graph/api/resources/workforceintegration?view=graph-rest-1.0), Shifts calls this endpoint to get approval. When approved, the change is saved in Shifts.
 
-As your WFM system is the source of truth, when the connector receives a request to this endpoint, it should first attempt to make the change in the WFM system. If the change is successful, return success. Otherwise, return failure.
+As your WFM system is the system of record, when the connector receives a request to this endpoint, it should first attempt to make the change in the WFM system. If the change is successful, return success. Otherwise, return failure.
 
-###### X-MS-WFMPassthrough header
-
-Shifts calls this endpoint for every change (including changes initiated from the connector/WFM system). If the connector sent an update to Shifts using Graph API and added the `X-MS-WFMPassthrough: workforceIntegratonId` header, the request coming to this endpoint will have the same header.
-
-This allows you to identify and handle these requests appropriately. For example, return success without making the same change in the WFM system because it would be redundant and can cause the connector to get stuck in an infinite loop.
+Shifts calls this endpoint for every change (including changes initiated from the connector/WFM system). If the connector sent an update to Shifts using Graph API and added the `X-MS-WFMPassthrough: workforceIntegratonId` header, the request coming to this endpoint will have the same header. This allows you to identify and handle these requests appropriately. For example, return success without making the same change in the WFM system as it would be redundant and can cause the connector to get stuck in an infinite loop.
 
 **Return response code**<br>
 Any response from the integration, including an error, must have an HTTP response code `200 OK`. The response body must have the status and error message that reflects the appropriate sub call error state. Any response from the integration other than `200 OK` is treated as an error and returned to the caller (client or Graph).
+
+###### Make Shifts read-only for one-way sync
+
+To do this, return a failure response for all requests from Shifts.
+
+For example, if you don't want users making changes to shifts in Shifts, the endpoint must return a failure response whenever it receives a request regarding a shift entity.
 
 ###### Example
 
 **Request**<br>
 WfiRequestContainer
+
+The following example shows a request that asks whether a shift entity (a shift with ID SHFT_12345678-1234-1234-1234-1234567890ab) with the properties outlined in "body" can be saved in Shifts. This request was triggered when a user created a shift in Shifts.
 
 ```http
 {
@@ -134,7 +137,7 @@ WfiRequestContainer
         "lastModifiedBy": {
           "user": {
             "id": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
-            "displayName": "Jon Doe"
+            "displayName": "Adele Vance"
           }
         },
         "id": "SHFT_12345678-1234-1234-1234-1234567890ab"
@@ -148,6 +151,8 @@ WfiRequestContainer
 WfiResponse
 
 Success: Return HTTP `200 OK`
+
+The endpoint approved the request. The shift is saved in Shifts, and the user can see the shift in the schedule.
 
 ```http
 {
@@ -166,6 +171,8 @@ Success: Return HTTP `200 OK`
 ```
 
 Failure: return HTTP `200 OK`
+
+The endpoint denied the request. The user receives a “Could not add the shift” error message in Shifts.
 
 ```http
 {
@@ -231,7 +238,7 @@ Follow these steps to register an app for your connector in the Microsoft identi
 
       The access token verifies that your app is authorized to [call Microsoft Graph using its own identity](/graph/auth/auth-concepts#access-scenarios) using the *Schedule.ReadWrite.All* permission. It must be included in the Authorization header of requests.
 
-## Register and enable your workforce integration
+## Register and enable the workforce integration
 
 ### Register your workforce integration in your tenant
 
@@ -249,7 +256,7 @@ POST https://graph.microsoft.com/v1.0/teamwork/workforceIntegrations/
     "secret": "secret-value" 
   }, 
   "isActive": true, 
-  "url": "https://contosoconnector.com/contoso", 
+  "url": "https://contosoconnector.com/wfi", 
   "supportedEntities": "shift,swapRequest,userShiftPreferences,openshift,openShiftRequest,offerShiftRequest”,
 }
 ```
@@ -275,12 +282,14 @@ To learn more, see [workforceIntegration resource type](/graph/api/resources/wor
     > [!NOTE]
     > This list is an [evolvable enumeration](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations). You must use the `Prefer: include-unknown-enum-members` request header to get all the values.-->
 
-### Create and set up teams in Teams
+### Set up teams in Teams
 
-Create teams in Teams that match the teams and locations in your WFM system, and add people to each team:
+1. Create teams in Teams that match the teams and locations in your WFM system, and add people to each team:
 
-- Add your frontline managers as team owners. Make sure you add the user in the `MS-APP-ACT-AS` header as team owner of each respective team.
-- Add your frontline workers as team members.
+    - Add your frontline managers as team owners. Make sure you add the user in the `MS-APP-ACT-AS` header as the team owner of each respective team.
+    - Add your frontline workers as team members.
+1. Create a schedule for each team.
+1. Create schedule groups, and add people to each schedule group. 
   
 For guidance on creating frontline teams, see [How to find the best frontline team solution for your organization](frontline-team-options.md). To create teams at scale, see [Deploy frontline dynamic teams at scale](deploy-dynamic-teams-at-scale.md) and [Deploy frontline static teams at scale](deploy-teams-at-scale.md).
 
@@ -299,7 +308,7 @@ POST teams/{teamId}/schedule
 }
 ```
 
-- Your workforceIntegrationId is obtained when you registered your app.
+- The workforceIntegrationId is obtained when you registered your app.
 - You can enable a maximum of one workforce integration on a schedule. If you include multiple workforce integration Ids, the first one is used.
 
 ## Frequently asked questions
@@ -331,7 +340,7 @@ Every Shifts entity in the `supportedEntities` list request body must start with
 
 **I registered the WFI through GraphAPI and implemented the /update, /read, and /connect endpoints, but the webhook isn't working.**
 
-Maybe you haven't enabled the WFI for your team, or you registered the wrong WFI ID with a different callback URL.
+Maybe you haven't enabled the workforce integration for your team, or you registered the wrong WFI ID with a different callback URL.
 
 ## Related articles
 
