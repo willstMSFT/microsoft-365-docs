@@ -28,12 +28,20 @@ Integrate Shifts, the schedule management tool in Microsoft Teams, with your wor
 
 This article gives you an overview of how to create a connector using the Microsoft Graph API to integrate Shifts with your WFM system.
 
-A connector syncs schedule data between your WFM system and Shifts, bringing your organization’s schedules into Teams. Shifts is where your frontline engage for their scheduling needs. Your WFM system is the system of record for business rules, compliance, and intelligence.
+A connector syncs schedule data between your WFM system and Shifts, bringing your organization’s schedules into Teams. Shifts is where your frontline workforce engage for their scheduling needs. Your WFM system is the system of record for business rules, compliance, and intelligence.
 
 You can set up your connector to sync data unidirectionally or bidirectionally.
 
-- **Sync data from your WFM system to Shifts**: This is a one-way sync where schedule data in your WFM system is synced to Shifts. The connector reads data in your WFM system and writes the data to Shifts. Any changes made in Shifts aren’t reflected in your WFM system. 
+- **Sync data from your WFM system to Shifts**: This is a one-way sync where schedule data in your WFM system is synced to Shifts. The connector reads data in your WFM system and writes the data to Shifts. Any changes made in Shifts aren’t reflected in your WFM system.
 - **Sync data between your WFM system and Shifts**: This is a two-way sync. Schedule data in your WFM system is synced to Shifts and changes made to schedules in Shifts are synced back to your WFM system. The connector validates and approves changes made in Shifts according to business rules enforced by your WFM system before the changes are written to Shifts.
+
+## Terminology used in this article
+
+|Terminology  |Description |
+|---------|---------|
+|connector    |         |
+|workforce integration    |         |
+| |         |
 
 ## Prerequisites
 
@@ -48,22 +56,24 @@ You can set up your connector to sync data unidirectionally or bidirectionally.
 
 To set up your connector to receive and process requests from Shifts, you need to implement the following endpoints:
 
-- [/connect](#post-connect)
-- [/update](#post-teamsteamsidupdate)
+- [/connect](#post-connect) (required)
+- [/update](#post-teamsteamsidupdate) (required)
+- /read (optional)
 
-**Determine your base URL and /connect and /update endpoint URLs**
+#### Determine the base URL and /connect and /update endpoint URLs
 
 The base URL (webhook) is `https://{url}/v{apiVersion}`, where **url** and **apiVersion** are the properties of the [workforceIntegration](/graph/api/resources/workforceintegration?view=graph-rest-1.0) object for when you [register your workforce integration](#register-your-workforce-integration-in-your-tenant).
 
-For example, if **url** is `https://contosoconnector.com/wfi` and **apiVersion** is 1:
+For example, if **url** is `https://contosoconnector.com/wfi` and **apiVersion** is `1`:
 
 - The base URL is `https://contosoconnector/com/wfi/v1`.
 - The /connect endpoint is `https://contosoconnector/wfi/v1/connect`.
 - The /update endpoint is `https://contosoconnector/wfi/v1/teams/{teamsId}/update`.
+- The /read endpoint is `https://contosoconnector/wfi/v1/teams/{teamsId}/read`
 
 **Encryption**
 
-All requests are encrypted using `AES-256-CBC-HMAC-SHA256`. You specify the shared secret key when you [register your workforce integration](#register-your-workforce-integration-in-your-tenant).
+All requests are encrypted using AES-256-CBC-HMAC-SHA256. You specify the shared secret key when you [register your workforce integration](#register-your-workforce-integration-in-your-tenant).
 
 #### Endpoints
 
@@ -88,27 +98,27 @@ Return HTTP `200 OK`
 
 ##### POST /teams/{teamsId}/update
 
-When a change is made to an Shifts entity in a [schedule](/graph/api/resources/schedule?view=graph-rest-1.0) with a [workforceIntegration](/graph/api/resources/workforceintegration?view=graph-rest-1.0), Shifts calls this endpoint to get approval. When approved, the change is saved in Shifts.
+When a change is made to a Shifts entity in a [schedule](/graph/api/resources/schedule?view=graph-rest-1.0) with a [workforceIntegration](/graph/api/resources/workforceintegration?view=graph-rest-1.0), Shifts calls this endpoint to get approval. If the endpoint approves the request, the change is saved in Shifts.
 
 As your WFM system is the system of record, when the connector receives a request to this endpoint, it should first attempt to make the change in the WFM system. If the change is successful, return success. Otherwise, return failure.
 
 Shifts calls this endpoint for every change (including changes initiated from the connector/WFM system). If the connector sent an update to Shifts using Graph API and added the `X-MS-WFMPassthrough: workforceIntegratonId` header, the request coming to this endpoint will have the same header. This allows you to identify and handle these requests appropriately. For example, return success without making the same change in the WFM system as it would be redundant and can cause the connector to get stuck in an infinite loop.
 
 **Return response code**<br>
-Any response from the integration, including an error, must have an HTTP response code `200 OK`. The response body must have the status and error message that reflects the appropriate sub call error state. Any response from the integration other than `200 OK` is treated as an error and returned to the caller (client or Graph).
+Any response from the integration, including an error, must have an HTTP response code `200 OK`. The response body must have the status and error message that reflects the appropriate sub call error state. Any response from the integration other than `200 OK` is treated as an error and returned to the caller (client or Microsoft Graph).
 
 ###### Make Shifts read-only for one-way sync
 
 To do this, return a failure response for all requests from Shifts.
 
-For example, if you don't want users making changes to shifts in Shifts, the endpoint must return a failure response whenever it receives a request regarding a shift entity.
+For example, if you don't want users making changes to shifts in Shifts, the endpoint must return a failure response whenever it receives a request regarding a `shift` entity.
 
 ###### Example
 
 **Request**<br>
 WfiRequestContainer
 
-The following example shows a request that asks whether a shift entity (a shift with ID SHFT_12345678-1234-1234-1234-1234567890ab) with the properties outlined in "body" can be saved in Shifts. This request was triggered when a user created a shift in Shifts.
+The following example shows a request from Shifts that asks whether a shift entity (a shift with ID SHFT_12345678-1234-1234-1234-1234567890ab) with the properties listed in **body** can be saved in Shifts. This request was triggered when a user created a shift in Shifts.
 
 ```http
 {
@@ -152,7 +162,7 @@ WfiResponse
 
 Success: Return HTTP `200 OK`
 
-The endpoint approved the request. The shift is saved in Shifts, and the user can see the shift in the schedule.
+This is an example of the response if the endpoint approved the request. In this scenario, the shift is saved in Shifts, and the user can see the shift in the schedule.
 
 ```http
 {
@@ -170,9 +180,9 @@ The endpoint approved the request. The shift is saved in Shifts, and the user ca
 }
 ```
 
-Failure: return HTTP `200 OK`
+Failure: Return HTTP `200 OK`
 
-The endpoint denied the request. The user receives a “Could not add the shift” error message in Shifts.
+This is an example of the response if the endpoint denied the request. In this scenario, the user receives a “Could not add the shift” error message in Shifts.
 
 ```http
 {
@@ -194,10 +204,71 @@ The endpoint denied the request. The user receives a “Could not add the shift�
 
 ##### POST /teams/{teamsId}/read
 
-This endpoint handles requests from Shifts to fetch eligible time off reasons for a user or eligible shifts for swap requests.
+This endpoint handles requests from Shifts to fetch eligible time-off reasons or eligible shifts for swap requests for a user.
 
 > [!NOTE]
-> This endpoint is supported only when using the beta Graph API (as of October 2024) and adding `eligibilityFilteringEnabledEntities` in workforceIntegration.
+> As of October 2024, this endpoint is supported only in the beta version of the Microsoft Graph API.<!--and adding `eligibilityFilteringEnabledEntities` in workforceIntegration.-->
+
+**Return response code**<br>
+Any response from the integration, including an error, must have an HTTP response code `200 OK`. The response body must have the status and error message that reflects the appropriate sub call error state. Any response from the integration other than `200 OK` is treated as an error and returned to the caller (client or Microsoft Graph).
+
+###### TimeOffReason
+
+The following example shows a request from Shifts that asks which time off reasons a user (user ID aa162a04-bec6-4b81-ba99-96caa7b2b24d) is eligible for. This request was triggered when the user requests time off in Shifts.
+
+**Request**
+
+```http
+ { 
+  "requests": [ 
+    { 
+      "id": "aa162a04-bec6-4b81-ba99-96caa7b2b24d", 
+      "method": "GET", 
+      "url": "/users/aa162a04-bec6-4b81-ba99-96caa7b2b24d/timeOffReasons?requestType=TimeOffReason"
+    } 
+  ] 
+}
+```
+
+**Response**<br>
+Success: Return HTTP `200 OK`
+
+The response shows that the eligible time off reason IDs for the user are "TOR_29f4a110-ae53-458b-83d6-00c910fe2fbc" and "TOR_8c0e8d07-ac1a-48dc-b3af-7bc71a62ff7d". In Shifts, the user sees these corresponding time-off reasons to choose
+
+```http
+ { 
+  "requests": [ 
+    { 
+      "id": "aa162a04-bec6-4b81-ba99-96caa7b2b24d", 
+      "method": "GET", 
+      "url": "/users/aa162a04-bec6-4b81-ba99-96caa7b2b24d/timeOffReasons?requestType=TimeOffReason"
+    } 
+  ] 
+}
+```
+
+Failure: Return HTTP `200 OK`
+
+In this example, an error response is returned because the connector couldn't reach the WFM system to retrieve time off reasons for the user.
+
+```http
+ {
+  "responses": [
+    {
+      "id": "aa162a04-bec6-4b81-ba99-96caa7b2b24d",
+      "status": 503,
+      "body": {
+        "data": null,
+        "error": {
+          "code": "503",
+          "message": "Could not reach WFM"
+        }
+      }
+    }
+  ]
+}
+```
+
 
 ### Sync data from your WFM system to Shifts
 
@@ -242,9 +313,9 @@ Follow these steps to register an app for your connector in the Microsoft identi
 
 ### Register your workforce integration in your tenant
 
-Use the [Create workforceIntegration](/graph/api/workforceintegration-post?view=graph-rest-1.0&tabs=http) API to register your workforce integration in your tenant. Registering your workforce integration defines the Shifts entities to support for synchronous change notifications, the URL for callbacks from Shifts, and the encryption settings for communication between Shifts and the connector.
+Use the [Create workforceIntegration](/graph/api/workforceintegration-post?view=graph-rest-1.0&tabs=http) API to register your workforce integration in your tenant. Registering your workforce integration defines the encryption settings for communication between Shifts and the connector, the URL for callbacks from Shifts, and the Shifts entities to support for synchronous change notifications.
 
-Here's an example request.
+**Example**
 
 ```http
 POST https://graph.microsoft.com/v1.0/teamwork/workforceIntegrations/
@@ -261,13 +332,15 @@ POST https://graph.microsoft.com/v1.0/teamwork/workforceIntegrations/
 }
 ```
 
-|Property  |More information  |
-|---------|---------|-
+|Property  |More information|
+|---------|---------|
 |encryption|Set **protocol** to `sharedSecret`. The **secret** value is generated by your app and shared with Shifts during registration. It has a 64-character limit, and should be exactly 64 characters. Use the secret to decrypt the encrypted JSON payloads that are sent to your connector's endpoint from Shifts. The payload is encrypted using AES-256-CBC-HMAC-SHA256. Your app should safely persist this secret. For example, in a key vault.|
-|supportedEntities |Specify the Shifts entities to sync. Shifts will make a call back to your connector's /update endpoint when any of these entities change so that you can approve or reject the change. Possible values are: `none`, `shift`, `swapRequest`, `userShiftPreferences`, `openshift`, `openShiftRequest`, `offerShiftRequest`<br><br>**Note** This list is an [evolvable enumeration](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations). You must use the `Prefer: include-unknown-enum-members` request header to get all the values.|
-|Row3     |         |
+|supportedEntities |Specify the Shifts entities you want the connector to support for syncing. Shifts will make a call back to your connector's [/update](#post-teamsteamsidupdate) endpoint when any of these entities change so that you can approve or reject the change. Possible values are: `none`, `shift`, `swapRequest`, `userShiftPreferences`, `openshift`, `openShiftRequest`, `offerShiftRequest`<br><br>**Note** This list is an [evolvable enumeration](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations). You must use the `Prefer: include-unknown-enum-members` request header to get all the values.|
+|url|The workforce integration URL for callbacks from the Shifts service.|
 
 To learn more, see [workforceIntegration resource type](/graph/api/resources/workforceintegrationencryption?view=graph-rest-1.0)
+
+
 <!-- The shared secret for encryption should be generated by your app and shared with Shifts during registration. The secret has a 64-character limit, and should be exactly 64 characters. Use it to decrypt the encrypted JSON payloads that are sent to your connector's endpoint from Shifts. The payload is encrypted using AES-256-CBC-HMAC-SHA256. Your app should safely persist this secret. For example, in a key vault.
 - Specify the entities to sync. Shifts will call your connector's /update endpoint when any of these entities change so you can approve or reject the change. For a list of these entities, see [workforceIntegration resource type](/graph/api/resources/workforceintegration?view=graph-rest-1.0).
 
@@ -308,7 +381,7 @@ POST teams/{teamId}/schedule
 }
 ```
 
-- The workforceIntegrationId is obtained when you registered your app.
+- The workforceIntegrationId is obtained when you registered you.
 - You can enable a maximum of one workforce integration on a schedule. If you include multiple workforce integration Ids, the first one is used.
 
 ## Frequently asked questions
@@ -326,7 +399,7 @@ Shifts attempts to retry the read/update endpoint multiple times. Eventually, Sh
 
 **How do I identify whether the request is being made originally in Shifts or in the WFM system to prevent an infinite loop?**
 
-Add the `X-MS-WFMPassthrough: workforceIntegratonId` header to all write/update calls to identify/ignore the changes triggered by connector. This header is used to indicate that the request is being made because of a preceding call made by the WFM connector service to Shifts Graph API when performing a data sync.
+Add the `X-MS-WFMPassthrough: workforceIntegratonId` header to all write/update calls to identify/ignore the changes triggered by connector. This header is used to indicate that the request is being made because of a preceding call from  the WFM connector service to Shifts when performing a data sync.
 
 **I registered the WFI through Graph API with eligibilityFilteringEnabledEntities including SwapRequest,OfferShiftRequest,TimeOffReason but the response body doesn't show the eligibilityFilteringEnabledEntities list.**
 
