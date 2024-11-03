@@ -62,7 +62,7 @@ To set up your connector to receive and process requests from Shifts, you need t
 
 #### Determine the base URL and /connect and /update endpoint URLs
 
-The base URL (webhook) is `https://{url}/v{apiVersion}`, where **url** and **apiVersion** are the properties of the [workforceIntegration](/graph/api/resources/workforceintegration?view=graph-rest-1.0) object for when you [register your workforce integration](#register-your-workforce-integration-in-your-tenant).
+The base URL (webhook) is `https://{url}/v{apiVersion}`, where **url** and **apiVersion** are the properties you set for the[workforceIntegration](/graph/api/resources/workforceintegration?view=graph-rest-1.0) object when you [register your workforce integration](#register-your-workforce-integration-in-your-tenant).
 
 For example, if **url** is `https://contosoconnector.com/wfi` and **apiVersion** is `1`:
 
@@ -71,7 +71,7 @@ For example, if **url** is `https://contosoconnector.com/wfi` and **apiVersion**
 - The /update endpoint is `https://contosoconnector/wfi/v1/teams/{teamsId}/update`.
 - The /read endpoint is `https://contosoconnector/wfi/v1/teams/{teamsId}/read`
 
-**Encryption**
+#### Encryption
 
 All requests are encrypted using AES-256-CBC-HMAC-SHA256. You specify the shared secret key when you [register your workforce integration](#register-your-workforce-integration-in-your-tenant).
 
@@ -98,7 +98,7 @@ Return HTTP `200 OK`
 
 ##### POST /teams/{teamsId}/update
 
-When a change is made to a Shifts entity in a [schedule](/graph/api/resources/schedule?view=graph-rest-1.0) with a [workforceIntegration](/graph/api/resources/workforceintegration?view=graph-rest-1.0), Shifts calls this endpoint to get approval. If the endpoint approves the request, the change is saved in Shifts.
+When a change is made to a Shifts entity in a [schedule](/graph/api/resources/schedule?view=graph-rest-1.0) that's [enabled for a workforce integration](#enable-your-workforce-integration-for-a-team-schedule), Shifts calls this endpoint to get approval. If the endpoint approves the request, the change is saved in Shifts.
 
 As your WFM system is the system of record, when the connector receives a request to this endpoint, it should first attempt to make the change in the WFM system. If the change is successful, return success. Otherwise, return failure.
 
@@ -118,7 +118,7 @@ For example, if you don't want users making changes to shifts in Shifts, the end
 **Request**<br>
 WfiRequestContainer
 
-The following example shows a request from Shifts that asks whether a shift entity (a shift with ID SHFT_12345678-1234-1234-1234-1234567890ab) with the properties listed in **body** can be saved in Shifts. This request was triggered when a user created a shift in Shifts.
+The following example shows a request from Shifts that asks whether the shift, whose ID is SHFT_12345678-1234-1234-1234-1234567890ab and has the properties listed in **body**, can be saved in Shifts. This request was triggered when a user created a shift in Shifts.
 
 ```http
 {
@@ -162,7 +162,7 @@ WfiResponse
 
 Success: Return HTTP `200 OK`
 
-This is an example of the response if the endpoint approved the request. In this scenario, the shift is saved in Shifts, and the user can see the shift in the schedule.
+This example shows the response returned when the endpoint approves the request. In this scenario, the shift is saved in Shifts, and the user can see the shift in the schedule.
 
 ```http
 {
@@ -182,7 +182,7 @@ This is an example of the response if the endpoint approved the request. In this
 
 Failure: Return HTTP `200 OK`
 
-This is an example of the response if the endpoint denied the request. In this scenario, the user receives a “Could not add the shift” error message in Shifts.
+This example shows the response returned when the endpoint denies the request. In this scenario, the user receives a “Could not add the shift” error message in Shifts.
 
 ```http
 {
@@ -212,7 +212,7 @@ This endpoint handles requests from Shifts to fetch eligible time-off reasons or
 **Return response code**<br>
 Any response from the integration, including an error, must have an HTTP response code `200 OK`. The response body must have the status and error message that reflects the appropriate sub call error state. Any response from the integration other than `200 OK` is treated as an error and returned to the caller (client or Microsoft Graph).
 
-###### TimeOffReason
+###### Example: TimeOffReason
 
 The following example shows a request from Shifts that asks which time off reasons a user (user ID aa162a04-bec6-4b81-ba99-96caa7b2b24d) is eligible for. This request was triggered when the user requests time off in Shifts.
 
@@ -233,7 +233,7 @@ The following example shows a request from Shifts that asks which time off reaso
 **Response**<br>
 Success: Return HTTP `200 OK`
 
-The response shows that the eligible time off reason IDs for the user are "TOR_29f4a110-ae53-458b-83d6-00c910fe2fbc" and "TOR_8c0e8d07-ac1a-48dc-b3af-7bc71a62ff7d". In Shifts, the user sees these corresponding time-off reasons to choose
+The following response shows that the eligible time off reason IDs for the user are "TOR_29f4a110-ae53-458b-83d6-00c910fe2fbc" and "TOR_8c0e8d07-ac1a-48dc-b3af-7bc71a62ff7d". The user sees the corresponding time-off reasons to choose from in Shift.
 
 ```http
  { 
@@ -269,6 +269,66 @@ In this example, an error response is returned because the connector couldn't re
 }
 ```
 
+###### Example: SwapRequest
+
+**Request**
+
+The following example shows a request from Shifts that asks which shifts are eligible for a swap with the shift whose ID is SHFT_5e2b51ac-dc47-4a66-83ea-1bbbf81ac029 between 2024-10-01T04:00:00.0000000Z and 2024-11-01T03:59:59.9990000Z.
+
+```http
+{
+  "requests": [
+    {
+      "id": " SHFT_5e2b51ac-dc47-4a66-83ea-1bbbf81ac029",
+      "method": "GET",
+      "url": "/shifts/SHFT_5e2b51ac-dc47-4a66-83ea-1bbbf81ac029/requestableShifts?requestType=SwapRequest&startTime=2024-10-01T04:00:00.0000000Z&endTime=2024-11-01T03:59:59.9990000Z"
+    }
+  ]
+}
+```
+
+**Response**<br>
+Success: Return HTTP `200 OK`
+
+The following response shows that the shift can be swapped with the shift whose ID is SHFT_98e96e23-966b-43be-b90d-4697037b67af.
+
+```http
+{ 
+  "responses": [ 
+    { 
+      "id": " SHFT_5e2b51ac-dc47-4a66-83ea-1bbbf81ac029", 
+      "status": 200, 
+      "body": { 
+        "data": ["SHFT_98e96e23-966b-43be-b90d-4697037b67af"],
+        "error": null, 
+      } 
+    }
+  ]
+}
+```
+
+Failure: Return HTTP `200 OK`
+
+In this example, an error response is returned because the connector couldn't reach the WFM system to retrieve eligible shifts for a swap request for the user.
+
+```http
+{
+  "responses": [
+    {
+      "id": " SHFT_5e2b51ac-dc47-4a66-83ea-1bbbf81ac029",
+      "status": 503,
+      "body": {
+        "data": null,
+        "error": {
+          "code": "503",
+          "message": "could not reach WFM"
+        }
+      }
+    }
+  ]
+}
+
+```
 
 ### Sync data from your WFM system to Shifts
 
@@ -292,7 +352,7 @@ After the first sync, you can choose to:
 - **Synchronously update Shifts with changes in your WFM system**: Send an update to Shifts for every change made in your WFM system.
 - **Asynchronously update Shifts with changes in your WFM system**: Perform a periodic sync by writing all changes that occurred in your WFM system within a certain timeframe (for example, 30 seconds, 10 minutes) to Shifts.
 
-    All write operations to Shifts, including write operations initiated by the connector, trigger a call to the connector’s /update endpoint. We recommend you include the `X-MS-WFMPassthrough: workforceIntegratonId` header to all write calls so the connector can identify and handle them appropriately. For example, if the change was initiated by your WFM system, approve it without applying an update to your WFM system.
+    All write operations to Shifts, including write operations initiated by the connector, trigger a call to the connector’s /update endpoint. We recommend you include the `X-MS-WFMPassthrough: workforceIntegratonId` header to all write calls so the connector can identify and handle them appropriately. For example, your WFM system initiated the change, approve it without applying an update to your WFM system.
 
   > [!NOTE]
   > If you're configuring the connector to sync data bidirectionally between your WFM system and Shifts, exclude changes initiated from Shifts in the periodic sync. These changes are already written in Shifts.
@@ -368,7 +428,7 @@ For guidance on creating frontline teams, see [How to find the best frontline te
 
 ### Enable your workforce integration for a team schedule
 
-Enable your workforce integration on the schedules you want to manage. This is done when you create or update the schedule on the team.
+Enable your workforce integration on the schedules you want to manage. This is done when you create or update the schedule on a team.
 
 Here's an example of a request.
 
@@ -414,6 +474,124 @@ Every Shifts entity in the `supportedEntities` list request body must start with
 **I registered the WFI through GraphAPI and implemented the /update, /read, and /connect endpoints, but the webhook isn't working.**
 
 Maybe you haven't enabled the workforce integration for your team, or you registered the wrong WFI ID with a different callback URL.
+
+## Endpoint reference
+
+### Request
+
+#### ConnectRequest
+
+|Property  |Type |Description |
+|---------|---------|---------|
+|tenant Id|String|ID of the tenant for the workforce integration|
+|userId|String|ID of the user for the workforce integration|
+
+```http
+{
+  "tenantId": "string",
+  "userId": "string"
+}
+```
+
+#### WfiRequestContainer
+
+|Property  |Type |Description |
+|---------|---------|---------|
+|requests|WfiRequest collection|List of WfiRequests|
+
+```http
+{
+  "requests": [
+    {
+      "id": "string",
+      "method": "string",
+      "url": "string",
+      "headers": {
+        "X-MS-Transaction-ID": "string",
+        "X-MS-Expires": "string (DateTime)"
+      },
+      "body": "ShiftsEntity"
+    }
+  ]
+}
+```
+
+Number of elements in a request:
+
+- In most cases, a request has one element.
+- For some requests, such as swap shift request approvals, there are five elements. These elements are one PUT swap request, two DELETE shifts (for the existing shifts), and two POST shifts (for the new shifts).
+
+#### WfiRequest
+
+|Property  |Type |Description |
+|---------|---------|---------|
+|id  |String|ID of the entity|
+|method |String|The method being invoked on the item
+(POST, DELETE, PUT, GET, and so on)|
+|url|String|Indicates the type of entity and operation details|
+|header|WfiRequestHeader |Header|
+|body|ShiftsEntity |Body of the entity related to the request|
+
+#### WfiRequestHeader
+
+|Property  |Type |Description |
+|---------|---------|---------|
+|X-MS-Transaction-ID |String|Transaction ID|
+|X-MS-Expires|String (DateTime)|Transaction Expiration DateTime|
+
+The `X-MS-WFMPassthrough: workforceIntegratonId` won't be included in WfiRequestHeader. It should be extracted from the HttpRequest.
+
+### Response
+
+#### WfiResponseContainer
+
+|Property  |Type |Description |
+|---------|---------|---------|
+|responses |WfiResponse collection|List of WfiResponses|
+
+```http
+{
+  "responses": [
+    {
+      "id": "string",
+      "status": "string",
+      "body": {
+        "eTag": "string",
+        "error": {
+          "code": "string",
+          "message": "string"
+        },
+        "data": ["string1", "string2"]
+      }
+    }
+  ]
+}
+```
+
+#### WfiResponse
+
+|Property  |Type |Description |
+|---------|---------|---------|
+|id|String|ID of the entity|
+|method|String|The method being invoked on this item
+(POST, PUT, and so on)|
+|status|String|Result of the operation|
+|body|WfiResponseBody|WfiResponseBody|
+
+#### WfiResponse
+
+|Property  |Type |Description |
+|---------|---------|---------|
+|eTag |String|eTag|
+|error|WfiResponseError|Details about the error|
+|data|String|The requested data (for read requests)|
+
+#### WfiResponseError
+
+|Property  |Type |Description |
+|---------|---------|---------|
+|code|String|Error code|
+|message|String|Error message|
 
 ## Related articles
 
