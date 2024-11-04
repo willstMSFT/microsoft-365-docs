@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: laurawi
-ms.date: 10/30/2024
+ms.date: 11/04/2024
 audience: Admin
 ms.topic: get-started
 ms.service: microsoft-365-copilot
@@ -283,7 +283,7 @@ There are two ways to review and analyze Copilot prompts and responses - **AI Hu
 1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as an admin in one of the groups listed at [AI Hub - Permissions](/purview/ai-microsoft-purview-permissions).
 2. Select **Solutions** > **AI Hub** > **Activity Explorer**.
 3. Select an existing activity in the list. For example, if there's a **Sensitive info types detected** activity, select it.
-4. Select **View related AI interaction activity**. In **Interaction details**, you can see the app, and the prompt & response. You can also export an activity.
+4. Select **View related AI interaction activity**. In **Interaction details**, you can see the app and export an activity.
 
 To learn more, see:
 
