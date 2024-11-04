@@ -54,27 +54,53 @@ You can set up your connector to sync data unidirectionally or bidirectionally.
 
 ## Overview
 
+|Step|Column1  |Column2  |Column3  | Column4|
+|---------|---------|---------|---------|---------|
+|1|Create your connector    || <!--[Step 1: Create your connector](#step-1-create-your-connector)<br>-->Step 1A: [Sync changes made in Shifts to your WFM system](#step-1a-sync-changes-made-in-shifts-to-your-wfm-system)<br>Step 1B: [Sync data from your WFM system to Shifts](#step-1b-sync-data-from-your-wfm-system-to-shifts)        |Developer|
+|2|Register an app in the Microsoft Entra admin center|| Step 2: [Register an app in the Microsoft Entra admin center](#step-2-register-an-app-in-the-microsoft-entra-admin-center)|An account that is at least a Cloud Application Administrator|
+|3|Set up teams in Teams     ||Step 3: [Set up teams in Teams](#step-3-set-up-teams-in-teams)|         |
+|4|Register and enable the workforce integration     ||<!--[Step 4: Register and enable the workforce integration](#step-4-register-and-enable-the-workforce-integration)<br>-->Step 4A: [Register the workforce integration](#step-4a-register-the-workforce-integration)<br>Step 4B: [Enable the workforce integration for your team schedules](#step-4b-enable-the-workforce-integration-for-your-team-schedules)      |Step 4A: Global administrator<br>Step 4B: Developer         |
   
 ## Step 1: Create your connector
+
+To create your connector, complete the following steps:
+
+- [Step 1A: Sync changes made in Shifts to your WFM system](#step-1a-sync-changes-made-in-shifts-to-your-wfm-system)
+- [Step 1B: Sync data from your WFM system to Shifts](#step-1b-sync-data-from-your-wfm-system-to-shifts)
 
 ### Step 1A: Sync changes made in Shifts to your WFM system
 
 To set up your connector to receive and process requests from Shifts, you need to implement the following endpoints:
 
 - [/connect](#post-connect) (required)
-- [/update](#post-teamsteamsidupdate) (required)
-- [/read](#post-teamsteamsidread) (optional)
+- [/update](#post-teamsteamidupdate) (required)
+- [/read](#post-teamsteamidread) (optional)
 
-#### Determine your base URL and /connect and /update endpoint URLs
+#### Determine your base URL and endpoint URLs
 
 The base URL (webhook) is `https://{url}/v{apiVersion}`, where **url** and **apiVersion** are the properties you set in the [workforceIntegration](/graph/api/resources/workforceintegration?view=graph-rest-1.0) object when you [register the workforce integration](#register-the-workforce-integration).
+
+The endpoint URLs use the following format:
+
+- /connect: `https://{url}/v{apiVersion}/connect`
+- /update: `https://{url}/v{apiVersion}/teams/{teamid}/update`
+- /read: `https://{url}/v{apiVersion}/teams/{teamid}/read`
 
 For example, if **url** is `https://contosoconnector.com/wfi` and **apiVersion** is `1`:
 
 - The base URL is `https://contosoconnector/com/wfi/v1`.
 - The /connect endpoint is `https://contosoconnector/wfi/v1/connect`.
-- The /update endpoint is `https://contosoconnector/wfi/v1/teams/{teamsId}/update`.
-- The /read endpoint is `https://contosoconnector/wfi/v1/teams/{teamsId}/read`
+- The /update endpoint is `https://contosoconnector/wfi/v1/teams/{teamid}/update`.
+- The /read endpoint is `https://contosoconnector/wfi/v1/teams/{teamid}/read`
+
+<!--The base URL (webhook) is `https://{url}/v{apiVersion}`, where **url** and **apiVersion** are the properties you set in the [workforceIntegration](/graph/api/resources/workforceintegration?view=graph-rest-1.0) object when you [register the workforce integration](#register-the-workforce-integration).
+
+For example, if **url** is `https://contosoconnector.com/wfi` and **apiVersion** is `1`:
+
+- The base URL is `https://contosoconnector/com/wfi/v1`.
+- The /connect endpoint is `https://contosoconnector/wfi/v1/connect`.
+- The /update endpoint is `https://contosoconnector/wfi/v1/teams/{teamid}/update`.
+- The /read endpoint is `https://contosoconnector/wfi/v1/teams/{teamid}/read`-->
 
 #### Encryption
 
@@ -101,7 +127,7 @@ ConnectRequest
 **Response**<br>
 Return HTTP `200 OK`
 
-##### POST /teams/{teamsId}/update
+##### POST /teams/{teamid}/update
 
 Shifts calls this endpoint to get approval when a change is made to a Shifts entity in a [schedule](/graph/api/resources/schedule?view=graph-rest-1.0) that's [enabled for a workforce integration](#enable-the-workforce-integration-for-your-team-schedules). If the endpoint approves the request, the change is saved in Shifts.
 
@@ -112,11 +138,11 @@ Shifts calls this endpoint for every change (including changes initiated from th
 **Return response code**<br>
 Any response from the integration, including an error, must have an HTTP response code `200 OK`. The response body must have the status and error message that reflects the appropriate sub call error state. Any response from the integration other than `200 OK` is treated as an error and returned to the caller (client or Microsoft Graph).
 
-###### Make Shifts read-only if you want to set up a one-way sync
+###### If you want to set up a one-way sync, make Shifts read-only
 
 For a one-way sync, you must make Shifts read-only so that users can't make changes in Shifts. To make Shifts read-only, return a failure response for all requests from Shifts.
 
-For example, if you don't want users making changes to shifts in the schedule, this endpoint must return a failure response whenever it receives a request regarding a `shift` entity.
+For example, to block users from making changes to shifts in the schedule, this endpoint must return a failure response whenever it receives a request regarding a `shift` entity.
 
 ###### Example
 
@@ -207,21 +233,21 @@ This example shows the response returned if the endpoint denied the request. In 
 }
 ```
 
-##### POST /teams/{teamsId}/read
+##### POST /teams/{teamid}/read
 
 This endpoint handles requests from Shifts to fetch eligible time-off reasons or eligible shifts for swap requests for a user.
 
 > [!NOTE]
-> As of October 2024, this endpoint is supported only in the beta version of the Microsoft Graph API. You must also specify `eligibilityFilteringEnabledEntities` values when you [register the workforce integration](#register-the-workforce-integration).
+> As of October 2024, this endpoint is supported only in the beta version of the Microsoft Graph API. You must also specify values for the **eligibilityFilteringEnabledEntities** property when you [register the workforce integration](#register-the-workforce-integration).
 
 **Return response code**<br>
-Any response from the integration, including an error, must have an HTTP response code `200 OK`. The response body must have the status and error message that reflects the appropriate sub call error state. Any response from the integration other than `200 OK` is treated as an error and returned to the caller (client or Microsoft Graph).
+Any response from the integration, including an error, must have an HTTP response code `200 OK`. The response body must include the status and error message that reflects the appropriate sub call error state. Any response from the integration other than `200 OK` is treated as an error and returned to the caller (client or Microsoft Graph).
 
 ###### Example: TimeOffReason
 
-The following example shows a request from Shifts that asks which time off reasons a user (user ID aa162a04-bec6-4b81-ba99-96caa7b2b24d) is eligible for. This request was triggered when the user requests time off in Shifts.
-
 **Request**
+
+The following example shows a request from Shifts that asks which time off reasons a user (user ID aa162a04-bec6-4b81-ba99-96caa7b2b24d) is eligible for. This request was triggered when the user requests time off in Shifts.
 
 ```http
  { 
@@ -387,7 +413,7 @@ For guidance on creating frontline teams, see [How to find the best frontline te
 
 ## Step 4: Register and enable the workforce integration
 
-### Register the workforce integration
+### Step 4A: Register the workforce integration
 
 Use the [Create workforceIntegration](/graph/api/workforceintegration-post?view=graph-rest-1.0&tabs=http) API to register your workforce integration in your tenant. Registering your workforce integration defines the encryption settings for communication between Shifts and the connector, the URL for callbacks from Shifts, and the Shifts entities to support for synchronous change notifications.
 
@@ -411,8 +437,8 @@ POST https://graph.microsoft.com/v1.0/teamwork/workforceIntegrations/
 |Property  |More information|
 |---------|---------|
 |encryption|Set **protocol** to `sharedSecret`. The **secret** value is generated by your app and shared with Shifts during registration. It has a 64-character limit, and should be exactly 64 characters. Use the secret to decrypt the encrypted JSON payloads that are sent to your connector's endpoint from Shifts. The payload is encrypted using AES-256-CBC-HMAC-SHA256. Your app should safely persist this secret. For example, in a key vault.|
-|supportedEntities |The Shifts entities you want the connector to support for syncing. Shifts will make a call back to your connector's [/update](#post-teamsteamsidupdate) endpoint when any of these entities change so that you can approve or reject the change. Possible values are: `none`, `shift`, `swapRequest`, `userShiftPreferences`, `openshift`, `openShiftRequest`, `offerShiftRequest`<br><br>**Note** This list is an [evolvable enumeration](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations). You must use the `Prefer: include-unknown-enum-members` request header to get all the values.|
-|eligibilityFilteringEnabledEntities|**Note**: As of October 2024, this endpoint is supported only in the beta version of the Microsoft Graph API.<br><br>The Shifts entities that you want to connector to support for eligibility filtering. Possible values are:<ul><li>`none`: Empty list</li><li>`SwapRequests`: Shifts calls your connector's [/read](#post-teamsteamsidread) endpoint to get a filtered list of shifts a user can choose for a swap request.</li><li>`TimeOffReasons`:Shifts calls your connector's [/read](#post-teamsteamsidread) endpoint to get a filtered list of time-off reasons a user can choose from when they request time off. </li></ul>**Note** This list is an [evolvable enumeration](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations). You must use the `Prefer: include-unknown-enum-members` request header to get all the values.|
+|supportedEntities |The Shifts entities you want the connector to support for syncing. Shifts will make a call back to your connector's [/update](#post-teamsteamidupdate) endpoint when any of these entities change so that you can approve or reject the change. Possible values are: `none`, `shift`, `swapRequest`, `userShiftPreferences`, `openshift`, `openShiftRequest`, `offerShiftRequest`<br><br>**Note** This list is an [evolvable enumeration](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations). You must use the `Prefer: include-unknown-enum-members` request header to get all the values.|
+|eligibilityFilteringEnabledEntities|**Note**: As of October 2024, this endpoint is supported only in the beta version of the Microsoft Graph API.<br><br>The Shifts entities that you want to connector to support for eligibility filtering. Possible values are:<ul><li>`none`: Empty list</li><li>`SwapRequests`: Shifts calls your connector's [/read](#post-teamsteamidread) endpoint to get a filtered list of shifts a user can choose for a swap request.</li><li>`TimeOffReasons`:Shifts calls your connector's [/read](#post-teamsteamidread) endpoint to get a filtered list of time-off reasons a user can choose from when they request time off. </li></ul>**Note** This list is an [evolvable enumeration](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations). You must use the `Prefer: include-unknown-enum-members` request header to get all the values.|
 |url|The workforce integration URL for callbacks from Shifts.|
 
 To learn more, see [workforceIntegration resource type](/graph/api/resources/workforceintegration?view=graph-rest-1.0)
@@ -431,7 +457,7 @@ To learn more, see [workforceIntegration resource type](/graph/api/resources/wor
     > [!NOTE]
     > This list is an [evolvable enumeration](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations). You must use the `Prefer: include-unknown-enum-members` request header to get all the values.-->
 
-### Enable the workforce integration for your team schedules
+### Step 4B: Enable the workforce integration for your team schedules
 
 Enable your workforce integration on the schedules you want to manage. To do this, use the [Create or replace schedule](/graph/api/team-put-schedule?view=graph-rest-1.0) API to create or update the schedule for your teams.
 
@@ -528,14 +554,25 @@ Number of elements in a request:
 
 #### WfiRequest
 
+##### For POST /teams/{teamId}/update
+
 |Property  |Type |Description |
 |---------|---------|---------|
 |id  |String|ID of the entity|
-|method |String|The method being invoked on the item
-(POST, DELETE, PUT, GET, and so on)|
-|url|String|Indicates the type of entity and operation details|
+|method |String|The method invoked on the item. Use `POST` to create an entity, `PUT` to update an entity, `DELETE` to delete an entity. |
+|url|String|Indicates the type of entity and operation details. The format is `/{EntityType}/{EntityId}`. Possible values for `{EntityType}` are `shifts`, `swapRequests`, `timeoffReasons`, `openshifts`, `openshiftrequests`, `offershiftrequests`, `timesoff`, `timeOffRequests`. For example, `/shifts/SHFT_12345678-1234-1234-1234-1234567890ab`.|
 |header|WfiRequestHeader |Header|
-|body|ShiftsEntity |Body of the entity related to the request|
+|body|ShiftsEntity |Body of the entity related to the request. Must match `{EntityType}` in the **url** property. Use one of [shift](/graph/api/resources/shift?view=graph-rest-1.0), [swapShiftsChangeRequest](/graph/api/resources/swapshiftschangerequest?view=graph-rest-1.0), [timeOffReason](/graph/api/resources/timeoffreason?view=graph-rest-1.0), [openshift](/graph/api/resources/openshift?view=graph-rest-1.0), [openShiftChangeRequest](/graph/api/resources/openshiftchangerequest?view=graph-rest-beta), [offerShiftRequests](/graph/api/resources/offershiftrequest?view=graph-rest-1.0), [timeOff](/graph/api/resources/timeoff?view=graph-rest-1.0), [timeOffRequest](/graph/api/resources/timeoffrequest?view=graph-rest-1.0). For example, `/shifts/SHFT_12345678-1234-1234-1234-1234567890ab`.|
+
+#### For POST /teams/{teamsId}/read  
+
+|Property  |Type |Description |
+|---------|---------|---------|
+|id  |String|ID of the entity|
+|method |String|The method invoked on the item. Is always `GET`.|
+|url|String|Indicates the type of entity and operation details.<ul><li>**TimeOffReasons**: The format is `/users/{userId}/timeOffReasons?requestType=TimeOffReason`. For example, `“/users/aa162a04-bec6-4b81-ba99-96caa7b2b24d/timeOffReasons?requestType=TimeOffReason`.</li><li>**SwapRequest**: The format is `“/shifts/{ShiftsId}/requestableShifts?requestType=SwapRequest\u0026startTime={startTime}\u0026endTime={endTime}`. For example, `shifts/SHFT_1132430e-365e-4dc5-b8b0-b800592a81a8/requestableShifts?requestType=SwapRequest\u0026startTime=2024-10-01T07:00:00.0000000Z\u0026endTime=2024-11-01T06:59:59.9990000Z`. </li></ul>|
+|header|WfiRequestHeader |Header|
+|body|ShiftsEntity |Body of the entity related to the request. Is always `null`.|
 
 #### WfiRequestHeader
 
@@ -578,8 +615,7 @@ The `X-MS-WFMPassthrough: workforceIntegratonId` won't be included in WfiRequest
 |Property  |Type |Description |
 |---------|---------|---------|
 |id|String|ID of the entity|
-|method|String|The method being invoked on this item
-(POST, PUT, and so on)|
+|method|String|The method being invoked on this item. For example, POST, PUT.|
 |status|String|Result of the operation|
 |body|WfiResponseBody|WfiResponseBody|
 
