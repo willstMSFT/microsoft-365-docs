@@ -24,11 +24,11 @@ ms.date:
 
 ## Overview
 
-Integrate Shifts, the schedule management tool in Microsoft Teams, with your workforce management (WFM) system. After you set up an integration, your frontline can access their schedules in your WFM system from within Shifts.
+Integrate Shifts, the schedule management app in Microsoft Teams, with your workforce management (WFM) system. After you set up an integration, your frontline can access their schedules in your WFM system from within Shifts.
 
 This article gives you an overview of how to create a connector using the Microsoft Graph API to integrate Shifts with your WFM system.
 
-A connector syncs schedule data between your WFM system and Shifts, bringing your organization’s schedules into Teams. Shifts is where your frontline workforce engage for their scheduling needs. Your WFM system is the system of record for business rules, compliance, and intelligence.
+A connector syncs schedule data between your WFM system and Shifts, bringing your organization’s schedules into Teams. Shifts is where your frontline  engage for their scheduling needs. Your WFM system is the system of record for business rules, compliance, and intelligence.
 
 You can set up your connector to sync data unidirectionally or bidirectionally.
 
@@ -126,7 +126,7 @@ Return HTTP `200 OK`
 
 ##### POST /teams/{teamid}/update
 
-Shifts calls this endpoint to get approval when a change is made to a Shifts entity in a [schedule](/graph/api/resources/schedule?view=graph-rest-1.0) that's [enabled for a workforce integration](#step-4b-enable-the-workforce-integration-for-your-team-schedules). If the endpoint approves the request, the change is saved in Shifts.
+Shifts calls this endpoint to get approval when a change is made to a Shifts entity in a [schedule](/graph/api/resources/schedule?view=graph-rest-1.0) that's [enabled for a workforce integration](#step-4b-enable-the-workforce-integration-for-your-team-schedules). If this endpoint approves the request, the change is saved in Shifts.
 
 As your WFM system is the system of record, when the connector receives a request to this endpoint, it should first attempt to make the change in the WFM system. If the change is successful, return success. Otherwise, return failure.
 
@@ -565,25 +565,33 @@ Number of elements in a request:
 
 #### WfiRequest
 
+|Property  |Type |Description |
+|---------|---------|---------|
+|id  |String|ID of the entity|
+|method |String|The method invoked on the item. For example, `POST`, `PUT`, `GET`, `DELETE`. |
+|url |String|Indicates the type of entity and operation details.|
+|headers|WfiRequestHeader |Headers|
+|body|ShiftsEntity |Body of the entity related to the request.|
+
 ##### For POST /teams/{teamId}/update
 
 |Property  |Type |Description |
 |---------|---------|---------|
 |id  |String|ID of the entity|
-|method |String|The method invoked on the item. Use `POST` to create an entity, `PUT` to update an entity, `DELETE` to delete an entity. |
-|url|String|Indicates the type of entity and operation details. The format is `/{EntityType}/{EntityId}`. Possible values for `{EntityType}` are `shifts`, `swapRequests`, `timeoffReasons`, `openshifts`, `openshiftrequests`, `offershiftrequests`, `timesoff`, `timeOffRequests`. For example, `/shifts/SHFT_12345678-1234-1234-1234-1234567890ab`.|
+|method |String|Use `POST` to create an entity, `PUT` to update an entity, `DELETE` to delete an entity. |
+|url|String|The format is `/{EntityType}/{EntityId}`. Possible values for `{EntityType}` are `shifts`, `swapRequests`, `timeoffReasons`, `openshifts`, `openshiftrequests`, `offershiftrequests`, `timesoff`, `timeOffRequests`. For example, `/shifts/SHFT_12345678-1234-1234-1234-1234567890ab`.|
 |header|WfiRequestHeader |Header|
-|body|ShiftsEntity |Body of the entity related to the request. Must match `{EntityType}` in the **url** property. Use one of [shift](/graph/api/resources/shift?view=graph-rest-1.0), [swapShiftsChangeRequest](/graph/api/resources/swapshiftschangerequest?view=graph-rest-1.0), [timeOffReason](/graph/api/resources/timeoffreason?view=graph-rest-1.0), [openshift](/graph/api/resources/openshift?view=graph-rest-1.0), [openShiftChangeRequest](/graph/api/resources/openshiftchangerequest?view=graph-rest-beta), [offerShiftRequests](/graph/api/resources/offershiftrequest?view=graph-rest-1.0), [timeOff](/graph/api/resources/timeoff?view=graph-rest-1.0), [timeOffRequest](/graph/api/resources/timeoffrequest?view=graph-rest-1.0). For example, `/shifts/SHFT_12345678-1234-1234-1234-1234567890ab`.|
+|body|ShiftsEntity |Must match `{EntityType}` in the **url** property. Use one of [shift](/graph/api/resources/shift?view=graph-rest-1.0), [swapShiftsChangeRequest](/graph/api/resources/swapshiftschangerequest?view=graph-rest-1.0), [timeOffReason](/graph/api/resources/timeoffreason?view=graph-rest-1.0), [openshift](/graph/api/resources/openshift?view=graph-rest-1.0), [openShiftChangeRequest](/graph/api/resources/openshiftchangerequest?view=graph-rest-beta), [offerShiftRequests](/graph/api/resources/offershiftrequest?view=graph-rest-1.0), [timeOff](/graph/api/resources/timeoff?view=graph-rest-1.0), [timeOffRequest](/graph/api/resources/timeoffrequest?view=graph-rest-1.0). For example, `/shifts/SHFT_12345678-1234-1234-1234-1234567890ab`.|
 
 #### For POST /teams/{teamsId}/read  
 
 |Property  |Type |Description |
 |---------|---------|---------|
 |id  |String|ID of the entity|
-|method |String|The method invoked on the item. Is always `GET`.|
-|url|String|Indicates the type of entity and operation details.<ul><li>**TimeOffReasons**: The format is `/users/{userId}/timeOffReasons?requestType=TimeOffReason`. For example, `/users/aa162a04-bec6-4b81-ba99-96caa7b2b24d/timeOffReasons?requestType=TimeOffReason`.</li><li>**SwapRequest**: The format is `/shifts/{ShiftsId}/requestableShifts?requestType=SwapRequest\u0026startTime={startTime}\u0026endTime={endTime}`. For example, `shifts/SHFT_1132430e-365e-4dc5-b8b0-b800592a81a8/requestableShifts?requestType=SwapRequest\u0026startTime=2024-10-01T07:00:00.0000000Z\u0026endTime=2024-11-01T06:59:59.9990000Z`. </li></ul>|
+|method |Is always `GET`.|
+|url|String|<ul><li>**TimeOffReasons**: The format is `/users/{userId}/timeOffReasons?requestType=TimeOffReason`. For example, `/users/aa162a04-bec6-4b81-ba99-96caa7b2b24d/timeOffReasons?requestType=TimeOffReason`.</li><li>**SwapRequest**: The format is `/shifts/{ShiftsId}/requestableShifts?requestType=SwapRequest\u0026startTime={startTime}\u0026endTime={endTime}`. For example, `shifts/SHFT_1132430e-365e-4dc5-b8b0-b800592a81a8/requestableShifts?requestType=SwapRequest\u0026startTime=2024-10-01T07:00:00.0000000Z\u0026endTime=2024-11-01T06:59:59.9990000Z`. </li></ul>|
 |header|WfiRequestHeader |Header|
-|body|ShiftsEntity |Body of the entity related to the request. Is always `null`.|
+|body|ShiftsEntity |Is always `null`.|
 
 #### WfiRequestHeader
 
