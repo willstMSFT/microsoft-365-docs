@@ -2,8 +2,8 @@
 title: Onboard your organization's devices to Microsoft Defender for Business
 description: Onboard your organization's devices to Microsoft Defender for Business
 search.appverid: MET150
-ms.author: siosulli
-author: siosulli
+ms.author: chrisda
+author: chrisda
 manager: deniseb
 audience: Admin
 ms.topic: how-to
