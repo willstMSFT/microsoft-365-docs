@@ -22,6 +22,8 @@ ms.date:
 
 # Integrate your workforce management system with Shifts using a custom connector
 
+## Overview
+
 Integrate Shifts, the schedule management tool in Microsoft Teams, with your workforce management (WFM) system. After you set up an integration, your frontline can access their schedules in your WFM system from within Shifts.
 
 This article gives you an overview of how to create a connector using the Microsoft Graph API to integrate Shifts with your WFM system.
@@ -32,7 +34,7 @@ You can set up your connector to sync data unidirectionally or bidirectionally.
 
 - **Sync data from your WFM system to Shifts**: This is a **one-way sync** where schedule data in your WFM system is synced to Shifts. The connector reads data in your WFM system and writes the data to Shifts. Changes made in Shifts by users aren’t reflected in your WFM system.
 
-- **Sync data between your WFM system and Shifts**: This is a **two-way sync**. Schedule data in your WFM system is synced to Shifts and changes made in Shifts by users are synced back to your WFM system. The connector validates and approves changes made in Shifts according to business rules enforced by your WFM system before the changes are written to Shifts.
+- **Sync data between your WFM system and Shifts**: This is a **two-way sync**. Schedule data in your WFM system is synced to Shifts and changes made in Shifts by users are synced back to your WFM system. The connector validates and approves the changes that users make in Shifts according to business rules enforced by your WFM system before the changes are written to Shifts.
 
 <!-- **One-way sync**: In a one-sync, schedule data in your WFM system is synced to Shifts. The connector reads data in your WFM system and writes the data to Shifts. Any changes made in Shifts by users aren't reflected in your WFM system.
 - **Two-way sync**: In a two-way sync, schedule data in your WFM system is synced to Shifts and changes made in Shifts by users are synced back to your WFM system. The connector validates and approves changes made in Shifts according to business rules enforced by your WFM system before the changes are written to Shifts.-->
@@ -52,14 +54,16 @@ You can set up your connector to sync data unidirectionally or bidirectionally.
   - At least a [Cloud Application Administrator](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json#cloud-application-administrator) to register an app in the Microsoft Entra admin center
   - Global Administrator to register the workforce integration
 
-## Overview
+## Get familiar with the integration process
 
-|Step|Column1  |Column2  |Column3  | Column4|
-|---------|---------|---------|---------|---------|
-|1|Create your connector    || <!--[Step 1: Create your connector](#step-1-create-your-connector)<br>-->Step 1A: [Sync changes made in Shifts to your WFM system](#step-1a-sync-changes-made-in-shifts-to-your-wfm-system)<br>Step 1B: [Sync data from your WFM system to Shifts](#step-1b-sync-data-from-your-wfm-system-to-shifts)        |Developer|
-|2|Register an app in the Microsoft Entra admin center|| Step 2: [Register an app in the Microsoft Entra admin center](#step-2-register-an-app-in-the-microsoft-entra-admin-center)|An account that is at least a Cloud Application Administrator|
-|3|Set up teams in Teams     ||Step 3: [Set up teams in Teams](#step-3-set-up-teams-in-teams)|         |
-|4|Register and enable the workforce integration     ||<!--[Step 4: Register and enable the workforce integration](#step-4-register-and-enable-the-workforce-integration)<br>-->Step 4A: [Register the workforce integration](#step-4a-register-the-workforce-integration)<br>Step 4B: [Enable the workforce integration for your team schedules](#step-4b-enable-the-workforce-integration-for-your-team-schedules)      |Step 4A: Global administrator<br>Step 4B: Developer         |
+Review the following information to get an understanding of the overall integration process, including who performs each step.
+
+|Step| |&nbsp; |Who performs this step|
+|---------|---------|---------|---------|
+|1|Create your connector:<ul><li>Step 1A: [Sync changes made in Shifts to your WFM system](#step-1a-sync-changes-made-in-shifts-to-your-wfm-system)</li><li>Step 1B: [Sync data from your WFM system to Shifts](#step-1b-sync-data-from-your-wfm-system-to-shifts)</li></ul>| |Developer|
+|2|[Register an app in the Microsoft Entra admin center](#step-2-register-an-app-in-the-microsoft-entra-admin-center)||An account that is at least a Cloud Application Administrator |
+|3|[Set up teams in Teams](#step-3-set-up-teams-in-teams)    ||Developer or Teams administrator |
+|4|Register and enable the workforce integration:<ul><li>Step 4A: [Register the workforce integration](#step-4a-register-the-workforce-integration)</li><li>Step 4B: [Enable the workforce integration for your team schedules](#step-4b-enable-the-workforce-integration-for-your-team-schedules)</li></ul>    ||Step 4A: Global Administrator<br>Step 4B: Developer|
   
 ## Step 1: Create your connector
 
@@ -76,15 +80,15 @@ To set up your connector to receive and process requests from Shifts, you need t
 - [/update](#post-teamsteamidupdate) (required)
 - [/read](#post-teamsteamidread) (optional)
 
-#### Determine your base URL and endpoint URLs
+**Determine your base URL and endpoint URLs**
 
 The base URL (webhook) is `https://{url}/v{apiVersion}`, where **url** and **apiVersion** are the properties you set in the [workforceIntegration](/graph/api/resources/workforceintegration?view=graph-rest-1.0) object when you [register the workforce integration](#register-the-workforce-integration).
 
-The endpoint URLs use the following format:
+The relative paths of the endpoint URLs are as follows:
 
-- /connect: `https://{url}/v{apiVersion}/connect`
-- /update: `https://{url}/v{apiVersion}/teams/{teamid}/update`
-- /read: `https://{url}/v{apiVersion}/teams/{teamid}/read`
+- /connect: `/connect`
+- /update: `/teams/{teamid}/update`
+- /read: `/teams/{teamid}/read`
 
 For example, if **url** is `https://contosoconnector.com/wfi` and **apiVersion** is `1`:
 
@@ -93,16 +97,7 @@ For example, if **url** is `https://contosoconnector.com/wfi` and **apiVersion**
 - The /update endpoint is `https://contosoconnector/wfi/v1/teams/{teamid}/update`.
 - The /read endpoint is `https://contosoconnector/wfi/v1/teams/{teamid}/read`
 
-<!--The base URL (webhook) is `https://{url}/v{apiVersion}`, where **url** and **apiVersion** are the properties you set in the [workforceIntegration](/graph/api/resources/workforceintegration?view=graph-rest-1.0) object when you [register the workforce integration](#register-the-workforce-integration).
-
-For example, if **url** is `https://contosoconnector.com/wfi` and **apiVersion** is `1`:
-
-- The base URL is `https://contosoconnector/com/wfi/v1`.
-- The /connect endpoint is `https://contosoconnector/wfi/v1/connect`.
-- The /update endpoint is `https://contosoconnector/wfi/v1/teams/{teamid}/update`.
-- The /read endpoint is `https://contosoconnector/wfi/v1/teams/{teamid}/read`-->
-
-#### Encryption
+**Encryption**
 
 All requests are encrypted using AES-256-CBC-HMAC-SHA256. You specify the shared secret key when you [register the workforce integration](#register-the-workforce-integration).
 
@@ -402,18 +397,32 @@ Follow these steps to register an app for your connector in the Microsoft identi
 
 ## Step 3: Set up teams in Teams
 
-1. Create teams in Teams that match the teams and locations in your WFM system, and add people to each team:
+Set up the teams in Teams that you want to sync. You can use existing teams or create new teams.
 
-    - Add your frontline managers as team owners. Make sure you add the user in the `MS-APP-ACT-AS` header as a team owner of each respective team.
-    - Add your frontline workers as team members.
-1. Create a schedule for each team.
-1. Create schedule groups, and add people to each schedule group.
-  
-For guidance on creating frontline teams, see [How to find the best frontline team solution for your organization](frontline-team-options.md). To create teams at scale, see [Deploy frontline dynamic teams at scale](deploy-dynamic-teams-at-scale.md) and [Deploy frontline static teams at scale](deploy-teams-at-scale.md).
+1. Create teams in Teams that match the teams and locations in your WFM system, and add the following people to each team:
+
+    - Frontline managers as team owners. Make sure you add the user in the `MS-APP-ACT-AS` header as a team owner of each respective team.
+    - Frontline workers as team members.
+1. Create a schedule in Shifts for each team. To learn more, see [Create or replace schedule](/graph/api/team-put-schedule?view=graph-rest-1.0).
+1. Add schedule groups to the schedule on each team. Schedule groups are used to group employees based on common characteristics within a team. For example, schedule groups can be departments or job types. To learn more, see [schedulingGroup resource type](/graph/api/resources/schedulinggroup?view=graph-rest-1.0).
+1. Add employees to each schedule group. To learn more, see [Replace schedulingGroup](/graph/api/schedulinggroup-put?view=graph-rest-1.0).
+
+> [!NOTE]
+> You can also use the Teams admin center to set up your teams and deploy Shifts to the teams. To learn more, see:
+>
+>- [Deploy frontline dynamic teams at scale](deploy-dynamic-teams-at-scale.md)
+>- [Deploy Shifts to your frontline teams at scale](deploy-shifts-at-scale.md)
 
 ## Step 4: Register and enable the workforce integration
 
+To register and enable the workforce integration, complete the following steps:
+
+- [Step 4A: Register the workforce integration](#step-4a-register-the-workforce-integration)
+- [Step 4B: Enable the workforce integration for your team schedules](#step-4b-enable-the-workforce-integration-for-your-team-schedules)
+
 ### Step 4A: Register the workforce integration
+
+You must be a Global Administrator to perform this step.
 
 Use the [Create workforceIntegration](/graph/api/workforceintegration-post?view=graph-rest-1.0&tabs=http) API to register your workforce integration in your tenant. Registering your workforce integration defines the encryption settings for communication between Shifts and the connector, the URL for callbacks from Shifts, and the Shifts entities to support for synchronous change notifications.
 
@@ -434,14 +443,14 @@ POST https://graph.microsoft.com/v1.0/teamwork/workforceIntegrations/
 }
 ```
 
+Here's more information about the properties in the request. To learn more, see [workforceIntegration resource type](/graph/api/resources/workforceintegration?view=graph-rest-1.0).
+
 |Property  |More information|
 |---------|---------|
-|encryption|Set **protocol** to `sharedSecret`. The **secret** value is generated by your app and shared with Shifts during registration. It has a 64-character limit, and should be exactly 64 characters. Use the secret to decrypt the encrypted JSON payloads that are sent to your connector's endpoint from Shifts. The payload is encrypted using AES-256-CBC-HMAC-SHA256. Your app should safely persist this secret. For example, in a key vault.|
+|encryption|Set **protocol** to `sharedSecret`. The **secret** value is generated when you [registered your app in the Microsoft Entra admin center](#step-2-register-an-app-in-the-microsoft-entra-admin-center) and is shared with Shifts during the workforce integration registration process. It has a 64-character limit, and should be exactly 64 characters. Use the secret to decrypt the encrypted JSON payloads that are sent to your connector's endpoint from Shifts. The payload is encrypted using AES-256-CBC-HMAC-SHA256. Your app should safely persist this secret. For example, in a key vault.|
 |supportedEntities |The Shifts entities you want the connector to support for syncing. Shifts will make a call back to your connector's [/update](#post-teamsteamidupdate) endpoint when any of these entities change so that you can approve or reject the change. Possible values are: `none`, `shift`, `swapRequest`, `userShiftPreferences`, `openshift`, `openShiftRequest`, `offerShiftRequest`<br><br>**Note** This list is an [evolvable enumeration](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations). You must use the `Prefer: include-unknown-enum-members` request header to get all the values.|
 |eligibilityFilteringEnabledEntities|**Note**: As of October 2024, this endpoint is supported only in the beta version of the Microsoft Graph API.<br><br>The Shifts entities that you want to connector to support for eligibility filtering. Possible values are:<ul><li>`none`: Empty list</li><li>`SwapRequests`: Shifts calls your connector's [/read](#post-teamsteamidread) endpoint to get a filtered list of shifts a user can choose for a swap request.</li><li>`TimeOffReasons`:Shifts calls your connector's [/read](#post-teamsteamidread) endpoint to get a filtered list of time-off reasons a user can choose from when they request time off. </li></ul>**Note** This list is an [evolvable enumeration](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations). You must use the `Prefer: include-unknown-enum-members` request header to get all the values.|
 |url|The workforce integration URL for callbacks from Shifts.|
-
-To learn more, see [workforceIntegration resource type](/graph/api/resources/workforceintegration?view=graph-rest-1.0)
 
 <!-- The shared secret for encryption should be generated by your app and shared with Shifts during registration. The secret has a 64-character limit, and should be exactly 64 characters. Use it to decrypt the encrypted JSON payloads that are sent to your connector's endpoint from Shifts. The payload is encrypted using AES-256-CBC-HMAC-SHA256. Your app should safely persist this secret. For example, in a key vault.
 - Specify the entities to sync. Shifts will call your connector's /update endpoint when any of these entities change so you can approve or reject the change. For a list of these entities, see [workforceIntegration resource type](/graph/api/resources/workforceintegration?view=graph-rest-1.0).
