@@ -125,7 +125,7 @@ The following sections list the policy settings you can use to help secure and m
 
 ## Managed email profile option
 
-The following option can block users from accessing their Microsoft 365 email if they’re using a manually created email profile. Users on iOS devices must delete their manually created email profile before they can access their email. After they delete the profile, a new profile is automatically created on the device. For instructions on how end users can get compliant, see [An existing email account was found](/intune-user-help/existing-company-email-account-found).
+The following option can block users from accessing their Microsoft 365 email if they’re using a manually created email profile. Users on iOS devices must delete their manually created email profile before they can access their email. After they delete the profile, a new profile is automatically created on the device. For instructions on how end users can get compliant, see [An existing email account was found](/mem/intune/user-help/how-do-i-find-the-serial-number-on-my-device-ios).
 
 |Setting name|iOS|Android|Samsung Knox|
 |---|---|---|---|
