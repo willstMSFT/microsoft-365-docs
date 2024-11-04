@@ -30,7 +30,7 @@ jobs:
       run: |
 
         # Define the starting week date and starting month date
-        $StartingWeekDate = Get-Date "2024-11-04"
+        $StartingWeekDate = Get-Date "2024-10-31"
         $StartingMonthDate = Get-Date "2024-05-01"
 
         # Get the current date
