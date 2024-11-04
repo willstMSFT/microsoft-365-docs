@@ -58,7 +58,7 @@ You can set up your connector to sync data unidirectionally or bidirectionally.
 
 Review the following information to get an understanding of the overall integration process, including who performs each step.
 
-|Step| |&nbsp; |Who performs this step|
+|Step|Actions|More information|Who performs this step|
 |---------|---------|---------|---------|
 |1|Create your connector:<ul><li>Step 1A: [Sync changes made in Shifts to your WFM system](#step-1a-sync-changes-made-in-shifts-to-your-wfm-system)</li><li>Step 1B: [Sync data from your WFM system to Shifts](#step-1b-sync-data-from-your-wfm-system-to-shifts)</li></ul>| |Developer|
 |2|[Register an app in the Microsoft Entra admin center](#step-2-register-an-app-in-the-microsoft-entra-admin-center)||An account that is at least a Cloud Application Administrator |
@@ -82,7 +82,7 @@ To set up your connector to receive and process requests from Shifts, you need t
 
 **Determine your base URL and endpoint URLs**
 
-The base URL (webhook) is `https://{url}/v{apiVersion}`, where **url** and **apiVersion** are the properties you set in the [workforceIntegration](/graph/api/resources/workforceintegration?view=graph-rest-1.0) object when you [register the workforce integration](#register-the-workforce-integration).
+The base URL (webhook) is `https://{url}/v{apiVersion}`, where **url** and **apiVersion** are the properties you set in the [workforceIntegration](/graph/api/resources/workforceintegration?view=graph-rest-1.0) object when you [register the workforce integration](#step-4a-register-the-workforce-integration).
 
 The relative paths of the endpoint URLs are as follows:
 
@@ -99,13 +99,13 @@ For example, if **url** is `https://contosoconnector.com/wfi` and **apiVersion**
 
 **Encryption**
 
-All requests are encrypted using AES-256-CBC-HMAC-SHA256. You specify the shared secret key when you [register the workforce integration](#register-the-workforce-integration).
+All requests are encrypted using AES-256-CBC-HMAC-SHA256. You specify the shared secret key when you [register the workforce integration](#step-4a-register-the-workforce-integration).
 
 #### Endpoints
 
 ##### POST /connect
 
-Shifts calls this endpoint to test the connection when you [register the workforce integration](#register-the-workforce-integration). A success response is returned only if this endpoint returns an HTTP `200 OK` response.
+Shifts calls this endpoint to test the connection when you [register the workforce integration](#step-4a-register-the-workforce-integration). A success response is returned only if this endpoint returns an HTTP `200 OK` response.
 
 ###### Example
 
@@ -124,7 +124,7 @@ Return HTTP `200 OK`
 
 ##### POST /teams/{teamid}/update
 
-Shifts calls this endpoint to get approval when a change is made to a Shifts entity in a [schedule](/graph/api/resources/schedule?view=graph-rest-1.0) that's [enabled for a workforce integration](#enable-the-workforce-integration-for-your-team-schedules). If the endpoint approves the request, the change is saved in Shifts.
+Shifts calls this endpoint to get approval when a change is made to a Shifts entity in a [schedule](/graph/api/resources/schedule?view=graph-rest-1.0) that's [enabled for a workforce integration](#step-4b-enable-the-workforce-integration-for-your-team-schedules). If the endpoint approves the request, the change is saved in Shifts.
 
 As your WFM system is the system of record, when the connector receives a request to this endpoint, it should first attempt to make the change in the WFM system. If the change is successful, return success. Otherwise, return failure.
 
@@ -233,7 +233,7 @@ This example shows the response returned if the endpoint denied the request. In 
 This endpoint handles requests from Shifts to fetch eligible time-off reasons or eligible shifts for swap requests for a user.
 
 > [!NOTE]
-> As of October 2024, this endpoint is supported only in the beta version of the Microsoft Graph API. You must also specify values for the **eligibilityFilteringEnabledEntities** property when you [register the workforce integration](#register-the-workforce-integration).
+> As of October 2024, this endpoint is supported only in the beta version of the Microsoft Graph API. You must also specify values for the **eligibilityFilteringEnabledEntities** property when you [register the workforce integration](#step-4a-register-the-workforce-integration).
 
 **Return response code**<br>
 Any response from the integration, including an error, must have an HTTP response code `200 OK`. The response body must include the status and error message that reflects the appropriate sub call error state. Any response from the integration other than `200 OK` is treated as an error and returned to the caller (client or Microsoft Graph).
@@ -481,7 +481,7 @@ POST https://graph.microsoft.com/v1.0/teams/{teamId}/schedule
 }
 ```
 
-- Specify the workforceIntegrationId that was generated when you [registered the workforce integration](#register-the-workforce-integration).
+- Specify the workforceIntegrationId that was generated when you [registered the workforce integration](#step-4a-register-the-workforce-integration).
 - You can enable a maximum of one workforce integration on a schedule. If you include more than one workforceIntegrationId in the request, the first one is used.
 
 ## Frequently asked questions
