@@ -57,9 +57,15 @@ The <a href="https://go.microsoft.com/fwlink/p/?linkid=2084771" target="_blank">
 
 If you have more than one billing account, you can use the billing account selector to set a default billing account. When you set a default billing account, we use that account as the first choice for all your billing activities. You can change your default billing account at any time.
 
-1. Go to the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339"").
-1. Select the **Navigation menu**, then select **Billing** > [Bills & payments](https://go.microsoft.com/fwlink/p/?linkid=2102895).
+1. Go to the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339%22%22).
+1. Select the **Navigation menu**, then select **Billing** > <a href="https://go.microsoft.com/fwlink/p/?linkid=2102895" target="_blank">Bills & payments</a>.
 1. On the **Invoices** tab, select **Change billing account**.
+1. Select a billing account from the list, then select **Set as default**.
+
+You can also change your default billing account from the **Your products** page. 
+
+1. In the admin center, select the **Navigation menu**, then select **Billing** > <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">Your products</a>.
+1. Select **Change billing account**.
 1. Select a billing account from the list, then select **Set as default**.
 
 ## Understand the billing account details page
@@ -94,6 +100,8 @@ If you have an MCA billing account type, the top of the billing account details 
 
 > [!IMPORTANT]
 > Billing account roles only apply to billing accounts, and don't apply to other Microsoft 365 admin center scenarios.
+
+If you’re a Global Administrator, you can assign yourself a Billing account role in the Microsoft 365 admin center through the billing account roles and permissions. Elevating your access to manage billing accounts gives you the ability to view and manage cost and billing for your accounts. You can view invoices, charges, products that are purchased, and the users who have access to the billing accounts.
 
 You can provide others with access to the billing account in the Microsoft 365 admin center through the billing account roles and permissions. For instructions about how to grant billing account access to other users, see [Assign billing account roles](#assign-billing-account-roles).
 
