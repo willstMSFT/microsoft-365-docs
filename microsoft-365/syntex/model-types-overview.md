@@ -109,7 +109,7 @@ Prebuilt models include:
 - [Invoice processing](#invoice-processing)
 - [Receipt processing](#receipt-processing)
 - [Sensitive information processing](#sensitive-information-processing)
-- [Sensitive information processing](#simple-document-processing)
+- [Simple document processing](#simple-document-processing)
 <!---
 ![Screenshot of the Options for model creation page showing the prebuilt model options.](../media/content-understanding/build-a-prebuilt-model-section.png)
 --->
