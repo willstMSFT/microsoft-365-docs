@@ -570,7 +570,7 @@ Number of elements in a request:
 |---------|---------|---------|
 |id  |String|ID of the entity|
 |method |String|The method invoked on the item. Is always `GET`.|
-|url|String|Indicates the type of entity and operation details.<ul><li>**TimeOffReasons**: The format is `/users/{userId}/timeOffReasons?requestType=TimeOffReason`. For example, `“/users/aa162a04-bec6-4b81-ba99-96caa7b2b24d/timeOffReasons?requestType=TimeOffReason`.</li><li>**SwapRequest**: The format is `“/shifts/{ShiftsId}/requestableShifts?requestType=SwapRequest\u0026startTime={startTime}\u0026endTime={endTime}`. For example, `shifts/SHFT_1132430e-365e-4dc5-b8b0-b800592a81a8/requestableShifts?requestType=SwapRequest\u0026startTime=2024-10-01T07:00:00.0000000Z\u0026endTime=2024-11-01T06:59:59.9990000Z`. </li></ul>|
+|url|String|Indicates the type of entity and operation details.<ul><li>**TimeOffReasons**: The format is `/users/{userId}/timeOffReasons?requestType=TimeOffReason`. For example, `/users/aa162a04-bec6-4b81-ba99-96caa7b2b24d/timeOffReasons?requestType=TimeOffReason`.</li><li>**SwapRequest**: The format is `/shifts/{ShiftsId}/requestableShifts?requestType=SwapRequest\u0026startTime={startTime}\u0026endTime={endTime}`. For example, `shifts/SHFT_1132430e-365e-4dc5-b8b0-b800592a81a8/requestableShifts?requestType=SwapRequest\u0026startTime=2024-10-01T07:00:00.0000000Z\u0026endTime=2024-11-01T06:59:59.9990000Z`. </li></ul>|
 |header|WfiRequestHeader |Header|
 |body|ShiftsEntity |Body of the entity related to the request. Is always `null`.|
 
@@ -581,7 +581,7 @@ Number of elements in a request:
 |X-MS-Transaction-ID |String|Transaction ID|
 |X-MS-Expires|String (DateTime)|Transaction expiration DateTime|
 
-The `X-MS-WFMPassthrough: workforceIntegratonId` won't be included in WfiRequestHeader. It should be extracted from the HttpRequest.
+`X-MS-WFMPassthrough: workforceIntegratonId` won't be included in WfiRequestHeader. It should be extracted from the HttpRequest.
 
 ### Response
 
