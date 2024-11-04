@@ -28,6 +28,9 @@ Monthly archive usage is calculated as the sum of the usage of all currently arc
 
 To see the pricing for Microsoft 365 Archive, see [Pay-as-you-go services and pricing for Microsoft Syntex](/microsoft-365/syntex/syntex-pay-as-you-go-services).
 
+> [!NOTE]
+> Unlicensed archived OneDrive sites cannot use additional SharePoint storage to bypass archive costs. For more information, see [Manage unlicensed OneDrive user accounts](/SharePoint/unlicensed-onedrive-accounts#frequently-asked-questions).
+
 ## Pricing calculator
 
 The Microsoft 365 Archive pricing calculator is a tool that helps you estimate the costs that you incur to archive your Microsoft 365 data.
