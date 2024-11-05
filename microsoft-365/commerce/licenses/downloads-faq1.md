@@ -22,7 +22,7 @@ ms.date: 11/04/2024
 
 # Download volume licensing products
 
-You can download products that you bought via volume licensing (VL) either as Executable (EXE) files or as ISO (International Standards Organization) image files from the **Downloads** page in the <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 admin center</a>.
+If you bought products via volume licensing (VL), you can download the products either as Executable (EXE) files or as ISO (International Standards Organization) image files from the **Downloads** page in the <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 admin center</a>.
 
 ## Before you begin
 
@@ -58,7 +58,7 @@ When you download products from the Microsoft 365 admin center, you can choose b
 
 ### Products not available to download
 
-In general, the VL catalog contains the most recent version of software. However, there are some limited exceptions for older editions of products (N-2 and beyond) that might be available.
+In general, the VL catalog contains the most recent versions of software. However, there are some limited exceptions for older editions of products (N-2 and beyond) that might be available.
 
 If you want to exercise your VL "downgrade right" to use prior versions of the software edition that you licensed but are no longer available as Microsoft VL downloads, you might be able to source CD/DVD media from past shipments of "comprehensive kits" or "subscription kits" that you received. Alternatively, your Microsoft Resellers might still have inventory. However, Microsoft doesn't provide physical media for products bought through VL contracts
 
@@ -101,7 +101,7 @@ This section provides information about how to download VL software for PC and M
 
 ### Download volume licensing versions of Office for PC
 
-There aren't any full ISO Download files for the 2019, 2021 or 2024 versions of Office in the Microsoft 365 admin center under **Volume licensing**. Only Office Online Server has an ISO download. Instead, the installation files are available on the Office Content Delivery Network (CDN).
+There are no full ISO Download files for the 2019, 2021 or 2024 versions of Office in the Microsoft 365 admin center under **Volume licensing**. Only Office Online Server has an ISO download. Instead, the installation files are available on the Office Content Delivery Network (CDN).
 
 The VL download catalog includes the [Office Deployment Tool (ODT)](https://www.microsoft.com/download/details.aspx?id=49117) which you can download. The ODT provides more information about installation procedures.
 
@@ -138,7 +138,7 @@ If you need further assistance during product installation or activation, you ca
 
 It's possible to upgrade from an evaluation edition of Microsoft SQL Server to a production version without having to do a full install. To upgrade, you must perform an Edition Upgrade, which requires that you input a SQL license key. The license key is embedded in the software's activation wizard and isn't displayed in the VL product catalog.
 
-To find the key, download the SQL ISO file from the Microsoft 365 admin center > **Your Products** > **Volume Licensing** > **Product and services** > **Downloads**. On your computer, open the *..\x64* folder, then open the *DefaultSetup.ini* file to find the SQL License key.
+To find the key, download the SQL ISO file from the <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 admin center</a> > **Your Products** > **Volume Licensing** > **Product and services** > **Downloads**. On your computer, open the *..\x64* folder, then open the *DefaultSetup.ini* file to find the SQL License key.
 
 If you already installed the evaluation version with a valid VLK ISO, run the Installation Center, and select the **Edition Upgrade** option. The VLK product key is automatically detected.
 
@@ -162,10 +162,10 @@ Alternatively, you can [create a Microsoft technical support case](https://suppo
 
 Volume Licensing Services can help you navigate the VL experience in Microsoft 365 admin center, and confirm the availability of specific download files in the VL catalog.
 
-Submit a case via Microsoft 365 admin center > **Help & Support** or, if you're unable to access the admin center, see [Contacting volume licensing support](/licensing/contact-us).
+Submit a case in the admin center by going to <a href="https://go.microsoft.com/fwlink/p/?linkid=2166757" target="_blank">Help & Support</a>. If you're unable to access the admin center, see [Contacting volume licensing support](/licensing/contact-us).
 
-> [!NOTE]
-> Creating your support case online before your phone support is faster, as your contact information is captured upfront and you immediately receive a case number to give to our support team when you call.
+> [!TIP]
+> Creating your support case online before your phone support is faster, because your contact information is captured upfront and you immediately receive a case number to give to our support team when you call.
 
 ## Related content
 
