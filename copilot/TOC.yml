@@ -19,12 +19,14 @@
       items: 
         - name: Requirements for Microsoft 365 Copilot
           href: microsoft-365-copilot-requirements.md
-        - name: ORIGINAL-Set up Microsoft 365 Copilot
-          href: microsoft-365-copilot-setup.md
+        - name: Understand licensing for Microsoft 365 Copilot
+          href: microsoft-365-copilot-licensing.md
+        - name: Enable users for Microsoft 365 Copilot 
+          href: microsoft-365-copilot-enable-users.md  
+        - name: Copilot Prompt Gallery
+          href: copilot-prompt-gallery.md
         - name: Adoption resources
           href: microsoft-365-copilot-enablement-resources.md
-        - name: Enable users for Microsoft 365 Copilot 
-          href: microsoft-365-copilot-enable-users.md
     - name: Manage
       items:
         - name: Manage Microsoft 365 Copilot settings
