@@ -126,13 +126,16 @@ Return HTTP `200 OK`
 
 ##### POST /teams/{teamid}/update
 
-Shifts calls this endpoint to get approval when a change is made to a Shifts entity in a [schedule](/graph/api/resources/schedule?view=graph-rest-1.0) that's [enabled for a workforce integration](#step-4b-enable-the-workforce-integration-for-your-team-schedules). If this endpoint approves the request, the change is saved in Shifts.
+Shifts calls this endpoint to get approval when a change is made to a Shifts entity in a [schedule](/graph/api/resources/schedule?view=graph-rest-1.0) that's [enabled for the workforce integration](#step-4b-enable-the-workforce-integration-for-your-team-schedules). If this endpoint approves the request, the change is saved in Shifts.
 
 As your WFM system is the system of record, when the connector receives a request to this endpoint, it should first attempt to make the change in the WFM system. If the change is successful, return success. Otherwise, return failure.
 
 Shifts calls this endpoint for every change (including changes initiated from the connector/WFM system). If the connector sent an update to Shifts using Graph API and added the `X-MS-WFMPassthrough: workforceIntegratonId` header, the request coming to this endpoint will have the same header. This allows you to identify and handle these requests appropriately. For example, return success without making the same change in the WFM system as it would be redundant and can cause the connector to get stuck in an infinite loop.
 
-See [WfiRequest](#wfirequest) in the **Endpoint reference** section of this article for more information on Request and Response models.
+:::image type="content" source="media/shifts-custom-connector-update.png" alt-text="Diagram showing the flow for syncing updates from Shifts to your WFM system.":::
+
+> [!NOTE]
+> See [WfiRequest](#wfirequest) in the **Endpoint reference** section of this article for more information on Request and Response models.
 
 **Return response code**<br>
 Any response from the integration, including an error, must have an HTTP response code `200 OK`. The response body must have the status and error message that reflects the appropriate sub call error state. Any response from the integration other than `200 OK` is treated as an error and returned to the caller (client or Microsoft Graph).
@@ -238,6 +241,8 @@ This endpoint handles requests from Shifts to fetch eligible time-off reasons or
 
 > [!NOTE]
 > As of October 2024, this endpoint is supported only in the beta version of the Microsoft Graph API. You must also specify values for the **eligibilityFilteringEnabledEntities** property when you [register the workforce integration](#step-4a-register-the-workforce-integration-in-your-tenant).
+
+:::image type="content" source="media/shifts-custom-connector-read.png" alt-text="Diagram showing the flow for eligibility filtering requests.":::
 
 **Return response code**<br>
 Any response from the integration, including an error, must have an HTTP response code `200 OK`. The response body must include the status and error message that reflects the appropriate sub call error state. Any response from the integration other than `200 OK` is treated as an error and returned to the caller (client or Microsoft Graph).
@@ -371,6 +376,8 @@ See the [Microsoft Graph API v1.0 reference](/graph/api/resources/shift?view=gra
 > [!NOTE]
 > The `MS-APP-ACT-AS` header is required in requests and must contain the ID (GUID) of the user your app is acting on behalf of. We recommend you use the user ID of a team owner when updating the schedule.
 
+:::image type="content" source="media/shifts-custom-connector-wfm-to-shifts.png" alt-text="Diagram that shows the flow for syncing data from your WFM system to Shifts.":::
+
 #### Initial sync
 
 For the first sync, the connector should read data in your WFM system and write the data to Shifts. We recommend you sync two weeks of future data.
@@ -485,7 +492,7 @@ POST https://graph.microsoft.com/v1.0/teams/{teamId}/schedule
 }
 ```
 
-- Specify the workforceIntegrationId that was generated when you [registered the workforce integration](#step-4a-register-the-workforce-integration-in-your-tenant-in-your-tenant).
+- Specify the workforceIntegrationId that was generated when you [registered the workforce integration](#step-4a-register-the-workforce-integration-in-your-tenant).
 - You can enable a maximum of one workforce integration on a schedule. If you include more than one workforceIntegrationId in the request, the first one is used.
 
 ## Frequently asked questions
