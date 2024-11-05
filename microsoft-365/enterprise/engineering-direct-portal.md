@@ -328,7 +328,7 @@ If the user still shows signs of being compromised, reach out to Microsoft Suppo
 
 ### Guest Access in Teams
 
-The Guest Access Diagnostic for Microsoft Teams helps troubleshoot various issues that may hinder guests from accessing a team, such as inviting guests, accessing team content, and using specific guest features. Since guest settings are managed at both organizational and team levels, this diagnostic checks for any misconfigurations that could impact guest access. It aggregates these issues and presents them in one place, with each misconfigured setting accompanied by guidance for admins. Additionally, the diagnostic assesses the provisioning of guest user accounts. It also allows for optional inputs at org, team and user levels, giving you the flexibility to customize the output you receive.
+The **Guest Access Diagnostic for Microsoft Teams** helps troubleshoot various issues that may hinder guests from accessing a team, such as inviting guests, accessing team content, and using specific guest features. Since guest settings are managed at both organizational and team levels, this diagnostic checks for any misconfigurations that could impact guest access. It aggregates these issues and presents them in one place, with each misconfigured setting accompanied by guidance for admins. Additionally, the diagnostic assesses the provisioning of guest user accounts. It also allows for optional inputs at org, team and user levels, giving you the flexibility to customize the output you receive.
 
 #### Org-level settings
 
@@ -341,11 +341,11 @@ These settings at the organization level are evaluated to check for misconfigura
 |SharePoint External Sharing settings |SharePoint Admin Center |<li>Only people in your organization</li><li>Existing guests only</li> |
 |Guest Access setting |Teams Admin Center |Off |
 
-#### User-level Setup
+#### User-level setup
 
 This diagnostic checks the guest user account provisioning in both Entra and Teams when a guest user is provided as input. If a Teams team is also specified, it will verify the guest user's membership in that team. 
 
-#### Additional Settings
+#### Additional settings
 
 In addition, this diagnostic also displays some settings that could affect your guest access experience. These settings are not evaluated for misconfiguration.  
 
@@ -363,7 +363,7 @@ In addition, this diagnostic also displays some settings that could affect your 
 
 This diagnostic should assist to resolve your guest access issues and provide a seamless guest experience in Teams.  
 
-If problems persist, please reach out to Microsoft support for assistance. 
+If problems persist, reach out to Microsoft support for assistance. 
 
 ## More information
 
