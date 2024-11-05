@@ -22,8 +22,7 @@ ms.date: 11/04/2024
 
 # Download volume licensing products
 
-You can download products that you bought via volume licensing (VL) either as Executable (EXE) files  or as ISO (International Standards Organization) image files from the **Downloads** page in the <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339
-" target="_blank">Microsoft 365 admin center</a>.
+You can download products that you bought via volume licensing (VL) either as Executable (EXE) files or as ISO (International Standards Organization) image files from the **Downloads** page in the <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 admin center</a>.
 
 ## Before you begin
 
@@ -34,8 +33,7 @@ You can download products that you bought via volume licensing (VL) either as Ex
 
 ## Find out if a product is available to download
 
-1. In the <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339
-" target="_blank">Microsoft 365 admin center</a>, go to the **Billing** > **Your products** > **Volume Licensing** > **Products and services** page, then select **View downloads and keys**.
+1. In the <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 admin center</a>, go to the **Billing** > **Your products** > **Volume Licensing** > **Products and services** page, then select **View downloads and keys**.
 2. Select the product or select the **Downloads** button to view the downloadable ISO files.\
     Not all products are available to download. If there's no software download file, you  see "This product is not available for download."
 3. Choose the **Language** and **Operating System Type** and select a download action or the download icon.
