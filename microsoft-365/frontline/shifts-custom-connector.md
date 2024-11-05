@@ -65,7 +65,7 @@ Review the following information to get an understanding of the overall integrat
 |1|Create your connector:<ul><li>Step 1A: [Sync changes made in Shifts to your WFM system](#step-1a-sync-changes-made-in-shifts-to-your-wfm-system)</li><li>Step 1B: [Sync data from your WFM system to Shifts](#step-1b-sync-data-from-your-wfm-system-to-shifts)</li></ul>| |Developer|
 |2|[Register an app in the Microsoft Entra admin center](#step-2-register-an-app-in-the-microsoft-entra-admin-center)||An account that is at least a Cloud Application Administrator |
 |3|[Set up teams in Teams](#step-3-set-up-teams-in-teams)    ||Developer or Teams administrator |
-|4|Register and enable the workforce integration:<ul><li>Step 4A: [Register the workforce integration](#step-4a-register-the-workforce-integration)</li><li>Step 4B: [Enable the workforce integration for your team schedules](#step-4b-enable-the-workforce-integration-for-your-team-schedules)</li></ul>    ||Step 4A: Global Administrator<br>Step 4B: Developer|
+|4|Register and enable the workforce integration:<ul><li>Step 4A: [Register the workforce integration in your tenant](#step-4a-register-the-workforce-integration-in-your-tenant)</li><li>Step 4B: [Enable the workforce integration for your team schedules](#step-4b-enable-the-workforce-integration-for-your-team-schedules)</li></ul>    ||Step 4A: Global Administrator<br>Step 4B: Developer|
   
 ## Step 1: Create your connector
 
@@ -84,7 +84,7 @@ To set up your connector to receive and process requests from Shifts, you need t
 
 **Determine your base URL and endpoint URLs**
 
-The base URL (webhook) is `https://{url}/v{apiVersion}`, where **url** and **apiVersion** are the properties you set in the [workforceIntegration](/graph/api/resources/workforceintegration?view=graph-rest-1.0) object when you [register the workforce integration](#step-4a-register-the-workforce-integration).
+The base URL (webhook) is `https://{url}/v{apiVersion}`, where **url** and **apiVersion** are the properties you set in the [workforceIntegration](/graph/api/resources/workforceintegration?view=graph-rest-1.0) object when you [register the workforce integration](#step-4a-register-the-workforce-integration-in-your-tenant).
 
 The relative paths of the endpoint URLs are as follows:
 
@@ -97,17 +97,17 @@ For example, if **url** is `https://contosoconnector.com/wfi` and **apiVersion**
 - The base URL is `https://contosoconnector/com/wfi/v1`.
 - The /connect endpoint is `https://contosoconnector/wfi/v1/connect`.
 - The /update endpoint is `https://contosoconnector/wfi/v1/teams/{teamid}/update`.
-- The /read endpoint is `https://contosoconnector/wfi/v1/teams/{teamid}/read`
+- The /read endpoint is `https://contosoconnector/wfi/v1/teams/{teamid}/read`.
 
 **Encryption**
 
-All requests are encrypted using AES-256-CBC-HMAC-SHA256. You specify the shared secret key when you [register the workforce integration](#step-4a-register-the-workforce-integration). Responses sent back to Shifts shouldn't be encrypted.
+All requests are encrypted using AES-256-CBC-HMAC-SHA256. You specify the shared secret key when you [register the workforce integration](#step-4a-register-the-workforce-integration-in-your-tenant). Responses sent back to Shifts shouldn't be encrypted.
 
 #### Endpoints
 
 ##### POST /connect
 
-Shifts calls this endpoint to test the connection when you [register the workforce integration](#step-4a-register-the-workforce-integration). A success response is returned only if this endpoint returns an HTTP `200 OK` response.
+Shifts calls this endpoint to test the connection when you [register the workforce integration](#step-4a-register-the-workforce-integration-in-your-tenant). A success response is returned only if this endpoint returns an HTTP `200 OK` response.
 
 ###### Example
 
@@ -131,6 +131,8 @@ Shifts calls this endpoint to get approval when a change is made to a Shifts ent
 As your WFM system is the system of record, when the connector receives a request to this endpoint, it should first attempt to make the change in the WFM system. If the change is successful, return success. Otherwise, return failure.
 
 Shifts calls this endpoint for every change (including changes initiated from the connector/WFM system). If the connector sent an update to Shifts using Graph API and added the `X-MS-WFMPassthrough: workforceIntegratonId` header, the request coming to this endpoint will have the same header. This allows you to identify and handle these requests appropriately. For example, return success without making the same change in the WFM system as it would be redundant and can cause the connector to get stuck in an infinite loop.
+
+See [WfiRequest](#wfirequest) in the **Endpoint reference** section of this article for more information on Request and Response models.
 
 **Return response code**<br>
 Any response from the integration, including an error, must have an HTTP response code `200 OK`. The response body must have the status and error message that reflects the appropriate sub call error state. Any response from the integration other than `200 OK` is treated as an error and returned to the caller (client or Microsoft Graph).
@@ -235,7 +237,7 @@ This example shows the response returned if the endpoint denied the request. In 
 This endpoint handles requests from Shifts to fetch eligible time-off reasons or eligible shifts for swap requests for a user.
 
 > [!NOTE]
-> As of October 2024, this endpoint is supported only in the beta version of the Microsoft Graph API. You must also specify values for the **eligibilityFilteringEnabledEntities** property when you [register the workforce integration](#step-4a-register-the-workforce-integration).
+> As of October 2024, this endpoint is supported only in the beta version of the Microsoft Graph API. You must also specify values for the **eligibilityFilteringEnabledEntities** property when you [register the workforce integration](#step-4a-register-the-workforce-integration-in-your-tenant).
 
 **Return response code**<br>
 Any response from the integration, including an error, must have an HTTP response code `200 OK`. The response body must include the status and error message that reflects the appropriate sub call error state. Any response from the integration other than `200 OK` is treated as an error and returned to the caller (client or Microsoft Graph).
@@ -371,7 +373,7 @@ See the [Microsoft Graph API v1.0 reference](/graph/api/resources/shift?view=gra
 
 #### Initial sync
 
-For the first sync, the service should read data in your WFM system and write the data to Shifts. We recommend you sync two weeks of future data.
+For the first sync, the connector should read data in your WFM system and write the data to Shifts. We recommend you sync two weeks of future data.
 
 #### After the initial sync
 
@@ -419,10 +421,10 @@ Set up the teams in Teams that you want to sync. You can use existing teams or c
 
 To register and enable the workforce integration, complete the following steps:
 
-- [Step 4A: Register the workforce integration](#step-4a-register-the-workforce-integration)
+- [Step 4A: Register the workforce integration](#step-4a-register-the-workforce-integration-in-your-tenant)
 - [Step 4B: Enable the workforce integration for your team schedules](#step-4b-enable-the-workforce-integration-for-your-team-schedules)
 
-### Step 4A: Register the workforce integration
+### Step 4A: Register the workforce integration in your tenant
 
 You must be a Global Administrator to perform this step.
 
@@ -483,7 +485,7 @@ POST https://graph.microsoft.com/v1.0/teams/{teamId}/schedule
 }
 ```
 
-- Specify the workforceIntegrationId that was generated when you [registered the workforce integration](#step-4a-register-the-workforce-integration).
+- Specify the workforceIntegrationId that was generated when you [registered the workforce integration](#step-4a-register-the-workforce-integration-in-your-tenant-in-your-tenant).
 - You can enable a maximum of one workforce integration on a schedule. If you include more than one workforceIntegrationId in the request, the first one is used.
 
 ## Frequently asked questions
