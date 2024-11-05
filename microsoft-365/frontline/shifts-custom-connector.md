@@ -132,7 +132,9 @@ As your WFM system is the system of record, when the connector receives a reques
 
 Shifts calls this endpoint for every change (including changes initiated from the connector/WFM system). If the connector sent an update to Shifts using Graph API and added the `X-MS-WFMPassthrough: workforceIntegratonId` header, the request coming to this endpoint will have the same header. This allows you to identify and handle these requests appropriately. For example, return success without making the same change in the WFM system as it would be redundant and can cause the connector to get stuck in an infinite loop.
 
-:::image type="content" source="media/shifts-custom-connector-update.png" alt-text="Diagram showing the flow for syncing updates from Shifts to your WFM system.":::
+The following diagram shows the flow of data.
+
+:::image type="content" source="media/shifts-custom-connector-update.png" alt-text="Diagram showing the flow for  updates from Shifts to your WFM system.":::
 
 > [!NOTE]
 > See [WfiRequest](#wfirequest) in the **Endpoint reference** section of this article for more information on Request and Response models.
@@ -241,6 +243,8 @@ This endpoint handles requests from Shifts to fetch eligible time-off reasons or
 
 > [!NOTE]
 > As of October 2024, this endpoint is supported only in the beta version of the Microsoft Graph API. You must also specify values for the **eligibilityFilteringEnabledEntities** property when you [register the workforce integration](#step-4a-register-the-workforce-integration-in-your-tenant).
+
+The following diagram shows the flow of data.
 
 :::image type="content" source="media/shifts-custom-connector-read.png" alt-text="Diagram showing the flow for eligibility filtering requests.":::
 
@@ -375,6 +379,8 @@ See the [Microsoft Graph API v1.0 reference](/graph/api/resources/shift?view=gra
 
 > [!NOTE]
 > The `MS-APP-ACT-AS` header is required in requests and must contain the ID (GUID) of the user your app is acting on behalf of. We recommend you use the user ID of a team owner when updating the schedule.
+
+The following diagram shows the flow of data.
 
 :::image type="content" source="media/shifts-custom-connector-wfm-to-shifts.png" alt-text="Diagram that shows the flow for syncing data from your WFM system to Shifts.":::
 
