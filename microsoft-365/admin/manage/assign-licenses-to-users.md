@@ -63,9 +63,6 @@ The **Licenses** page lets you assign or unassign licenses for up to 20 users at
 
 The **Licenses** page shows an aggregate total of licenses for all subscriptions for the same product name. For example, you might have one subscription for Microsoft 365 Business Premium that has five licenses, and another subscription that has eight licenses for the same product. The **Licenses** page shows that you have a total of 13 licenses for Microsoft 365 Business Premium across all your subscriptions. This number is different from what you see on the **Your products** page, which displays a row for each subscription you own, even if they are for the same product.
 
-> [!IMPORTANT]
-> If you want to assign a license to a guest user, follow the steps in [Assign a license to a guest user](#assign-a-license-to-a-guest-user).
-
 ### Assign licenses by using the Licenses page
 
 1. In the admin center, go to the **Billing** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=842264" target="_blank">Licenses</a> page.
@@ -95,9 +92,6 @@ If there's a conflict, you see a message that tells you what the problem is, and
 ## Use the Active users page to assign or unassign licenses
 
 When you use the **Active users** page to assign or unassign licenses, you assign or unassign users licenses to products.
-
-> [!IMPORTANT]
-> If you want to assign a license to a guest user, follow the steps in [Assign a license to a guest user](#assign-a-license-to-a-guest-user).
 
 ### Assign licenses to one user
 
