@@ -351,15 +351,15 @@ In addition, this diagnostic also displays some settings that could affect your 
 
 1. External collaboration’s collaboration restriction setting and guest user access restriction setting in Microsoft Entra Admin Center 
 
-    ![External collaboration’s collaboration restriction setting and guest user access restriction setting]()   
+    ![External collaboration’s collaboration restriction setting and guest user access restriction setting](../media/eng-direct-portal/eng-direct-portal-additional-settings-1.png)   
 
 2. Guest feature settings in Teams Admin Center 
 
-    ![Guest feature settings]()   
+    ![Guest feature settings](../media/eng-direct-portal/eng-direct-portal-additional-settings-2.png)   
 
 3. Teams guest permissions in Teams app 
 
-    ![Teams guest permissions in Teams app]() 
+    ![Teams guest permissions in Teams app](../media/eng-direct-portal/eng-direct-portal-additional-settings-3.png) 
 
 This diagnostic should assist to resolve your guest access issues and provide a seamless guest experience in Teams.  
 
