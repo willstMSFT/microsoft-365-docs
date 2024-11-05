@@ -336,9 +336,9 @@ These settings at the organization level are evaluated to check for misconfigura
 
 |Setting|Where it's located|Setting values considered “misconfigured”|
 | -------- | -------- | -------- |
-|External collaboration setting's guest invite setting|Microsoft Entra Admin Center |"No one in this organization can invite guest users including admins (most restrictive)"<br>"Only users assigned to specific admin roles can invite guests" |
-|M365 group guest setting|Microsoft Admin Center |Either one or both of these settings are turned off:<br>"Let group owners add people outside your organization to Microsoft 365 Groups as guests"<br>"Let guest group members access group content" |
-|SharePoint External Sharing settings |SharePoint Admin Center |"Only people in your organization"<br>"Existing guests only" |
+|External collaboration setting's guest invite setting|Microsoft Entra Admin Center |<li>No one in this organization can invite guest users including admins (most restrictive)</li><li>Only users assigned to specific admin roles can invite guests</li> |
+|M365 group guest setting|Microsoft Admin Center |Either one or both of these settings are turned off:<li>Let group owners add people outside your organization to Microsoft 365 Groups as guests</li><li>Let guest group members access group content</li> |
+|SharePoint External Sharing settings |SharePoint Admin Center |<li>Only people in your organization</li><li>Existing guests only</li> |
 |Guest Access setting |Teams Admin Center |Off |
 
 #### User-level Setup
