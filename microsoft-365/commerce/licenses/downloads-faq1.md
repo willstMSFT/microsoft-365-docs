@@ -41,17 +41,21 @@ You can download products that you bought via volume licensing either as Executa
 > [!NOTE]
 > Pop-up blockers can block downloads. Make sure pop-up blockers are disabled when you download software from the admin center.
 
-## About file types available for downloads
+## About downloading volume licensing products
+
+This section explains the file types for which you can download products, limitations of the VL download catalogue, and products that don't require downloads.
+
+### File types available for downloads
 
 When you download products from the Microsoft 365 admin center, you can choose between the following file types:
 
-- **Executable (EXE) files** are downloaded and installed on the same computer, but you can’t create separate boot disks for installation on other computers.
-- **ISO (International Standards Organization) image files** are exact representations of the content. You can install these on the computer that’s used to download the package or write the files to disks for distribution and installation on other computers.
+- **Executable (EXE) files** are downloaded and installed on the same computer, but you can't create separate boot disks for installation on other computers.
+- **ISO (International Standards Organization) image files** are exact representations of the content. You can install these on the computer that's used to download the package or write the files to disks for distribution and installation on other computers.
 
 > [!NOTE]
 > Not all products are available in all languages and in all formats.
 
-## Products not available to download
+### Products not available to download
 
 In general, the VL catalogue contains the most recent version of software. However, there are some limited exceptions for older editions of products (N-2 and beyond) that might be available.
 
@@ -59,7 +63,7 @@ If you want to exercise your volume licensing "downgrade right" to use prior ver
 
 For more information on downgrade rights, download the following brief: [Downgrade rights for Microsoft Commercial Licensing](https://download.microsoft.com/download/3/D/4/3D42BDC2-6725-4B29-B75A-A5B04179958B/Licensing_brief_PLT_Downgrade_Rights.pdf)  
 
-## Client Access Licenses (CALs) don't require downloads
+### Client Access Licenses (CALs) don't require downloads
 
 A Client Access License (CAL) is a license that gives a user the right to access the services of the server. You don't need a software download file or product key to activate a CAL. Instead, the product is activated and installed through the activation wizard directly from your computer.
 
@@ -73,20 +77,28 @@ Examples of CALs include:
 - System Center
 - Project Server
 
-## Use ISO image file software to download and save the file to a disk
+## Save ISO files to disk or mount as a virtual drive
+
+This section describes your options to either save ISO image files to a CD-R or DVD-R disk, or to mount the ISO files as a virtual drive.
+
+### Save ISO image files to a disk
 
 If you're using a PC with the Windows operating system, you don't need additional software to burn a CD-R or DVD-R disk. Double-click the ISO file that you downloaded, then follow the steps in the Image Burner Wizard.
 
 If you're using an operating system other than Windows, you might need additional software. If your computer is equipped with a CD/DVD burner, the software is probably loaded on your PC. Most CD-R/DVD-R writing software lets you create a disk from an image file. To access this feature, select a menu item such as **Copy Image to CD** or **Burn Image to access**.
 
-## Mount and access ISO files as a virtual device
+### Mount and access ISO files as a virtual drive
 
-If you don't have a CD/DVD burner installed on your computer or media isn't available, you can mount the ISO file as a virtual drive. When you use this method, your computer believes that the file is a real disk drive, and you can read files from this virtual disk.
+If you don't have a CD/DVD burner installed on your computer or media isn't available, you can mount the ISO file as a virtual drive. When you create a virtual drive, your computer believes that the file is a real disk drive, and can read files from it.
 
 > [!IMPORTANT]
-> Using a virtual disk is only advisable for installing applications such as Microsoft 365 or minor system upgrades. You can't install an operating system by using this method because the virtual drive disappears during the installation.
+> We recommend that you only use a virtual drive to install apps like those for Microsoft 365 or for minor system upgrades. You can't install an operating system by using a virtual drive because the virtual drive disappears during the installation.
 
-## Download volume licensing versions of Office
+## Download volume licensing versions for PC and Mac
+
+This section provides information about how to download volume licensing software for PC and Mac.
+
+### Download volume licensing versions of Office for PC
 
 You won't find a full ISO Download file for the 2019, 2021 or 2024 versions of Office in the Microsoft 365 admin center under **Volume licensing** (only Office Online Server has an ISO download). Instead, the installation files are available on the Office Content Delivery Network (CDN).
 
@@ -96,14 +108,18 @@ For more information for IT Pros, see [Deployment Guide for Office 2024](/office
 
 For non-IT Pros, the step-by-step instructions in [How to install Office 2019 installation files not found in VLSC](/office/troubleshoot/installation/how-to-download-office-install-not-in-vlsc).
 
-## Download Microsoft 365 for Mac
+### Download Microsoft 365 for Mac
 
 To run a volume licensing version of Microsoft 365 for Mac, you must download and install the following files:
 
 - The [Volume License (VL) Serializer](/deployoffice/mac/volume-license-serializer) package located in the Microsoft 365 for Mac download file.
 - The [Microsoft 365 for Mac installation package](/officeupdates/update-history-office-for-mac#most-current-packages-for-office-for-mac). Installer package files for individual applications are also available in the Microsoft 365 admin center. Microsoft 365 for Mac doesn’t require a product key because the VL Serializer is used to activate a volume licensed version of Microsoft 365 for Mac.
 
-## Convert Windows Server evaluation edition with volume licensing download version
+## Convert from evaluation versions to volume licensing download versions
+
+This section contains information about how to convert evaluation editions of Windows Server or Microsoft SQl Server to volume licensing versions.
+
+### Convert Windows Server evaluation edition
 
 Before you deploy Windows Server volume licensing download files, there are important considerations if you are upgrading from an Evaluation Edition of Window Server.
 
@@ -117,9 +133,9 @@ Before you proceed, we highly recommend that you review the [Windows Server Inst
 
 If you need further assistance during product installation or activation, you can reach the appropriate Microsoft Technical Support by [creating a technical support case](https://support.serviceshub.microsoft.com/supportforbusiness/create).
 
-## Convert a SQL Server evaluation version with volume licensing download version
+### Convert a Microsoft SQL Server evaluation version
 
-It's possible to upgrade from an evaluation edition of SQL Server to a production version without having to do a full install. To upgrade, you must perform an Edition Upgrade, which requires that you input a SQL license key. The license key is embedded in the software's activation wizard and isn't displayed in the VL product catalogue.
+It's possible to upgrade from an evaluation edition of Microsoft SQL Server to a production version without having to do a full install. To upgrade, you must perform an Edition Upgrade, which requires that you input a SQL license key. The license key is embedded in the software's activation wizard and isn't displayed in the VL product catalogue.
 
 To find the key, download the SQL ISO file from the Microsoft 365 admin center > **Your Products** > **Volume Licensing** > **Product and services** > **Downloads**. On your computer, open the *..\x64* folder, then open the *DefaultSetup.ini* file to find the SQL License key.
 
@@ -129,7 +145,11 @@ Before you attempt to upgrade, make sure to back up your existing version and re
 
 If you need additional assistance with troubleshooting technical issues during product installation, you can reach the appropriate Microsoft Technical Support by [creating a technical support case](https://support.serviceshub.microsoft.com/supportforbusiness/create).
 
-## Get technical support for downloaded products
+## Get support
+
+This section provides information about support options for downloaded products and how to get volume licensing support.
+
+### Technical support for downloaded products
 
 Microsoft doesn't provide technical support as part of volume licensing purchases. For technical support specific to the activation or installation of products bought through volume licensing, customers must use other support options.
 
@@ -137,7 +157,7 @@ Customers can often resolve issues without assistance by using [Microsoft techni
 
 Alternatively, you can [create a Microsoft technical support case](https://support.microsoft.com/oas). If your organization hasn't bought a support plan, a fee might apply.
 
-## Contact volume licensing support
+### Volume licensing support
 
 Volume Licensing Services can help you navigate the volume licensing experience in Microsoft 365 admin center, and confirm the availability of specific download files in the volume licensing catalogue.
 
@@ -146,7 +166,7 @@ Submit a case via Microsoft 365 admin center > **Help & Support** or, if you are
 > [!NOTE]
 > Creating your support case online before your phone support is faster, as your contact information is captured upfront and you immediately receive a case number to give to our support team when you call.
 
-Related content
+## Related content
 
-- [Product keys Frequently Asked Questions](product-keys-faq.yml)
-- [Manage volume licensing user roles Frequently Asked Questions](user-roles-faq.yml)
+[Product keys Frequently Asked Questions](product-keys-faq.yml) (article)\
+[Manage volume licensing user roles Frequently Asked Questions](user-roles-faq.yml) (article)
