@@ -349,9 +349,9 @@ This diagnostic checks the guest user account provisioning in both Entra and Tea
 
 In addition, this diagnostic also displays some settings that could affect your guest access experience. These settings are not evaluated for misconfiguration.  
 
-1. External collaboration’s collaboration restriction setting and guest user access restriction setting in Microsoft Entra Admin Center 
+1. Guest user access restriction setting and collaboration restrictions setting in Microsoft Entra Admin Center 
 
-    ![External collaboration’s collaboration restriction setting and guest user access restriction setting](../media/eng-direct-portal/eng-direct-portal-additional-settings-1.png)   
+    ![Guest user access restriction setting and collaboration restriction setting](../media/eng-direct-portal/eng-direct-portal-additional-settings-1.png)   
 
 2. Guest feature settings in Teams Admin Center 
 
