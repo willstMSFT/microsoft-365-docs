@@ -60,7 +60,7 @@ When you download products from the Microsoft 365 admin center, you can choose b
 
 In general, the VL catalog contains the most recent versions of software. However, there are some limited exceptions for older editions of products (N-2 and beyond) that might be available.
 
-If you want to exercise your VL "downgrade right" to use prior versions of the software edition that you licensed but are no longer available as Microsoft VL downloads, you might be able to source CD/DVD media from past shipments of "comprehensive kits" or "subscription kits" that you received. Alternatively, your Microsoft Resellers might still have inventory. However, Microsoft doesn't provide physical media for products bought through VL contracts
+If you want to exercise your VL "downgrade right" to use prior versions of the software editions that you licensed, but the products are no longer available as Microsoft VL downloads, you might be able to source CD/DVD media from past shipments of "comprehensive kits" or "subscription kits" that you received. Alternatively, your Microsoft Resellers might still have inventory. However, Microsoft doesn't provide physical media for products bought through VL contracts
 
 For more information on downgrade rights, download the following brief: [Downgrade rights for Microsoft Commercial Licensing](https://download.microsoft.com/download/3/D/4/3D42BDC2-6725-4B29-B75A-A5B04179958B/Licensing_brief_PLT_Downgrade_Rights.pdf)  
 
