@@ -328,36 +328,38 @@ If the user still shows signs of being compromised, reach out to Microsoft Suppo
 
 ### Guest Access in Teams
 
-The Guest Access Diagnostic for Microsoft Teams helps troubleshoot various issues that may hinder guests from accessing a team, such as inviting guests, accessing team content, and using specific guest features. Since guest settings are managed at both organizational and team levels, this diagnostic checks for any misconfigurations that could impact guest access. It aggregates these issues and presents them in one place, with each misconfigured setting accompanied by guidance for admins. Additionally, the diagnostic assesses the provisioning of guest user accounts. It also allows for optional inputs at org, team and user levels, giving you the flexibility to customize the output you receive. 
+The Guest Access Diagnostic for Microsoft Teams helps troubleshoot various issues that may hinder guests from accessing a team, such as inviting guests, accessing team content, and using specific guest features. Since guest settings are managed at both organizational and team levels, this diagnostic checks for any misconfigurations that could impact guest access. It aggregates these issues and presents them in one place, with each misconfigured setting accompanied by guidance for admins. Additionally, the diagnostic assesses the provisioning of guest user accounts. It also allows for optional inputs at org, team and user levels, giving you the flexibility to customize the output you receive.
 
-**Org-level settings**  
+#### Org-level settings
 
-These settings at the organization-level are evaluated to check for misconfiguration.  
+These settings at the organization level are evaluated to check for misconfiguration.  
 
-|Setting|Where it’s located|Setting values considered “misconfigured”|
+|Setting|Where it's located|Setting values considered “misconfigured”|
 | -------- | -------- | -------- |
-|External collaboration setting’s guest invite setting|Microsoft Entra Admin Center |"No one in this organization can invite guest users including admins (most restrictive)"<br>"Only users assigned to specific admin roles can invite guests" |
+|External collaboration setting's guest invite setting|Microsoft Entra Admin Center |"No one in this organization can invite guest users including admins (most restrictive)"<br>"Only users assigned to specific admin roles can invite guests" |
 |M365 group guest setting|Microsoft Admin Center |Either one or both of these settings are turned off:<br>"Let group owners add people outside your organization to Microsoft 365 Groups as guests"<br>"Let guest group members access group content" |
 |SharePoint External Sharing settings |SharePoint Admin Center |"Only people in your organization"<br>"Existing guests only" |
 |Guest Access setting |Teams Admin Center |Off |
 
- **User-level Setup** 
+#### User-level Setup
 
-This diagnostic checks the guest user account provisioning in both Entra and Teams when a guest user is provided as input. If a Teams team is also specified, it will verify the guest user’s membership in that team. 
+This diagnostic checks the guest user account provisioning in both Entra and Teams when a guest user is provided as input. If a Teams team is also specified, it will verify the guest user's membership in that team. 
 
-**Additional Settings** 
+#### Additional Settings
 
 In addition, this diagnostic also displays some settings that could affect your guest access experience. These settings are not evaluated for misconfiguration.  
 
-1. External collaboration’s collaboration restriction setting and guest user access restriction setting in Microsoft Entra Admin Center ![External collaboration’s collaboration restriction setting and guest user access restriction setting]()   
+1. External collaboration’s collaboration restriction setting and guest user access restriction setting in Microsoft Entra Admin Center 
 
-1. Guest feature settings in Teams Admin Center 
+    ![External collaboration’s collaboration restriction setting and guest user access restriction setting]()   
 
-![Guest feature settings]()   
+2. Guest feature settings in Teams Admin Center 
 
-1. Teams guest permissions in Teams app 
+    ![Guest feature settings]()   
 
-![Teams guest permissions in Teams app]() 
+3. Teams guest permissions in Teams app 
+
+    ![Teams guest permissions in Teams app]() 
 
 This diagnostic should assist to resolve your guest access issues and provide a seamless guest experience in Teams.  
 
