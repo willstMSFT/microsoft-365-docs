@@ -34,7 +34,8 @@ You can download products that you bought via volume licensing (VL) either as Ex
 ## Find out if a product is available to download
 
 1. In the <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 admin center</a>, go to the **Billing** > **Your products** > **Volume Licensing** > **Products and services** page, then select **View downloads and keys**.
-2. Select the product or select the **Downloads** button to view the downloadable ISO files.\
+2. Select the product or select the **Downloads** button to view the downloadable ISO files.
+
     Not all products are available to download. If there's no software download file, you  see "This product is not available for download."
 3. Choose the **Language** and **Operating System Type** and select a download action or the download icon.
 
@@ -43,23 +44,23 @@ You can download products that you bought via volume licensing (VL) either as Ex
 
 ## About downloading volume licensing products
 
-This section explains the file types for which you can download products, limitations of the VL download catalogue, and products that don't require downloads.
+This section explains the file types for which you can download products, limitations of the VL download catalog, and products that don't require downloads.
 
 ### File types available for downloads
 
 When you download products from the Microsoft 365 admin center, you can choose between the following file types:
 
 - **Executable (EXE) files** are downloaded and installed on the same computer, but you can't create separate boot disks for installation on other computers.
-- **ISO (International Standards Organization) image files** are exact representations of the content. You can install these on the computer that's used to download the package or write the files to disks for distribution and installation on other computers.
+- **ISO (International Standards Organization) image files** are exact representations of the content. You can install these files on the computer that's used to download the package or write the files to disks for distribution and installation on other computers.
 
 > [!NOTE]
 > Not all products are available in all languages and in all formats.
 
 ### Products not available to download
 
-In general, the VL catalogue contains the most recent version of software. However, there are some limited exceptions for older editions of products (N-2 and beyond) that might be available.
+In general, the VL catalog contains the most recent version of software. However, there are some limited exceptions for older editions of products (N-2 and beyond) that might be available.
 
-If you want to exercise your VL "downgrade right" to use prior versions of the software edition that you've licensed but are no longer available as Microsoft VL downloads, you might be able to source CD/DVD media from past shipments of "comprehensive kits" or "subscription kits" that you received. Alternatively, your Microsoft Resellers might still have inventory. However, Microsoft doesn't provide physical media for products bought through VL contracts
+If you want to exercise your VL "downgrade right" to use prior versions of the software edition that you licensed but are no longer available as Microsoft VL downloads, you might be able to source CD/DVD media from past shipments of "comprehensive kits" or "subscription kits" that you received. Alternatively, your Microsoft Resellers might still have inventory. However, Microsoft doesn't provide physical media for products bought through VL contracts
 
 For more information on downgrade rights, download the following brief: [Downgrade rights for Microsoft Commercial Licensing](https://download.microsoft.com/download/3/D/4/3D42BDC2-6725-4B29-B75A-A5B04179958B/Licensing_brief_PLT_Downgrade_Rights.pdf)  
 
@@ -83,9 +84,9 @@ This section describes your options to either save ISO image files to a CD-R or 
 
 ### Save ISO image files to a disk
 
-If you're using a PC with the Windows operating system, you don't need additional software to burn a CD-R or DVD-R disk. Double-click the ISO file that you downloaded, then follow the steps in the Image Burner Wizard.
+If you're using a PC with the Windows operating system, you don't need extra software to burn a CD-R or DVD-R disk. Double-click the ISO file that you downloaded, then follow the steps in the Image Burner Wizard.
 
-If you're using an operating system other than Windows, you might need additional software. If your computer is equipped with a CD/DVD burner, the software is probably loaded on your PC. Most CD-R/DVD-R writing software lets you create a disk from an image file. To access this feature, select a menu item such as **Copy Image to CD** or **Burn Image to access**.
+If you're using an operating system other than Windows, you might need extra software. If your computer is equipped with a CD/DVD burner, the software is probably loaded on your PC. Most CD-R/DVD-R writing software lets you create a disk from an image file. To access this feature, select a menu item such as **Copy Image to CD** or **Burn Image to access**.
 
 ### Mount and access ISO files as a virtual drive
 
@@ -100,9 +101,9 @@ This section provides information about how to download VL software for PC and M
 
 ### Download volume licensing versions of Office for PC
 
-You won't find a full ISO Download file for the 2019, 2021 or 2024 versions of Office in the Microsoft 365 admin center under **Volume licensing** (only Office Online Server has an ISO download). Instead, the installation files are available on the Office Content Delivery Network (CDN).
+There aren't any full ISO Download files for the 2019, 2021 or 2024 versions of Office in the Microsoft 365 admin center under **Volume licensing**. Only Office Online Server has an ISO download. Instead, the installation files are available on the Office Content Delivery Network (CDN).
 
-The VL download catalogue includes the [Office Deployment Tool (ODT)](https://www.microsoft.com/download/details.aspx?id=49117) which you can download. The ODT provides more information about installation procedures.
+The VL download catalog includes the [Office Deployment Tool (ODT)](https://www.microsoft.com/download/details.aspx?id=49117) which you can download. The ODT provides more information about installation procedures.
 
 For more information for IT Pros, see [Deployment Guide for Office 2024](/office/ltsc/2024/deploy).
 
@@ -117,13 +118,13 @@ To run a VL version of Microsoft 365 for Mac, you must download and install the 
 
 ## Convert from evaluation versions to volume licensing download versions
 
-This section contains information about how to convert evaluation editions of Windows Server or Microsoft SQl Server to VL versions.
+This section contains information about how to convert evaluation editions of Windows Server or Microsoft SQL Server to VL versions.
 
 ### Convert Windows Server evaluation edition
 
-Before you deploy Windows Server VL download files, there are important considerations if you are upgrading from an Evaluation Edition of Window Server.
+Before you deploy Windows Server VL download files, there are important considerations if you're upgrading from an Evaluation Edition of Window Server.
 
-As described in [Windows Server Upgrade and Conversion Options](/windows-server/get-started/upgrade-conversion-options), we recommend that you first [convert your evaluation version to a retail](/windows-server/get-started/supported-upgrade-paths#converting-a-current-evaluation-version-to-a-current-retail-version) and then [convert your retail version to a volume licensing version](/windows-server/get-started/supported-upgrade-paths#converting-a-current-retail-version-to-a-current-volume-licensed-version). While this process requires more effort, both upgrade paths are fully supported by Microsoft Technical Support.
+As described in [Windows Server Upgrade and Conversion Options](/windows-server/get-started/upgrade-conversion-options), we recommend that you first [convert your evaluation version to a retail](/windows-server/get-started/supported-upgrade-paths#converting-a-current-evaluation-version-to-a-current-retail-version) and then [convert your retail version to a volume licensing version](/windows-server/get-started/supported-upgrade-paths#converting-a-current-retail-version-to-a-current-volume-licensed-version). While this process requires more effort, Microsoft Technical Support supports both upgrade paths.
 
 Before you proceed, we highly recommend that you review the [Windows Server Installation and Upgrade documentation](/windows-server/get-started/installation-and-upgrade), including the following articles:
 
@@ -135,7 +136,7 @@ If you need further assistance during product installation or activation, you ca
 
 ### Convert a Microsoft SQL Server evaluation version
 
-It's possible to upgrade from an evaluation edition of Microsoft SQL Server to a production version without having to do a full install. To upgrade, you must perform an Edition Upgrade, which requires that you input a SQL license key. The license key is embedded in the software's activation wizard and isn't displayed in the VL product catalogue.
+It's possible to upgrade from an evaluation edition of Microsoft SQL Server to a production version without having to do a full install. To upgrade, you must perform an Edition Upgrade, which requires that you input a SQL license key. The license key is embedded in the software's activation wizard and isn't displayed in the VL product catalog.
 
 To find the key, download the SQL ISO file from the Microsoft 365 admin center > **Your Products** > **Volume Licensing** > **Product and services** > **Downloads**. On your computer, open the *..\x64* folder, then open the *DefaultSetup.ini* file to find the SQL License key.
 
@@ -143,7 +144,7 @@ If you already installed the evaluation version with a valid VLK ISO, run the In
 
 Before you attempt to upgrade, make sure to back up your existing version and review the documentation about the [SQL installation process](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver16&preserve-view=true) and the [different supported upgrade paths from SQL Server versions](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2019?view=sql-server-ver16&preserve-view=true).
 
-If you need additional assistance with troubleshooting technical issues during product installation, you can reach the appropriate Microsoft Technical Support by [creating a technical support case](https://support.serviceshub.microsoft.com/supportforbusiness/create).
+If you need assistance with troubleshooting technical issues during product installation, you can reach the appropriate Microsoft Technical Support by [creating a technical support case](https://support.serviceshub.microsoft.com/supportforbusiness/create).
 
 ## Get support
 
@@ -155,13 +156,13 @@ Microsoft doesn't provide technical support as part of VL purchases. For technic
 
 Customers can often resolve issues without assistance by using [Microsoft technical documentation](https://learn.microsoft.com) or self-help articles like [How to install Office LTSC installation files not found in VLSC](/office/troubleshoot/installation/how-to-download-office-install-not-in-vlsc).
 
-Alternatively, you can [create a Microsoft technical support case](https://support.microsoft.com/oas). If your organization hasn't bought a support plan, a fee might apply.
+Alternatively, you can [create a Microsoft technical support case](https://support.microsoft.com/oas). If your organization didn't buy a support plan, a fee might apply.
 
 ### Volume licensing support
 
-Volume Licensing Services can help you navigate the VL experience in Microsoft 365 admin center, and confirm the availability of specific download files in the VL catalogue.
+Volume Licensing Services can help you navigate the VL experience in Microsoft 365 admin center, and confirm the availability of specific download files in the VL catalog.
 
-Submit a case via Microsoft 365 admin center > **Help & Support** or, if you are unable to access the admin center, see [Contacting volume licensing support](/licensing/contact-us).
+Submit a case via Microsoft 365 admin center > **Help & Support** or, if you're unable to access the admin center, see [Contacting volume licensing support](/licensing/contact-us).
 
 > [!NOTE]
 > Creating your support case online before your phone support is faster, as your contact information is captured upfront and you immediately receive a case number to give to our support team when you call.
