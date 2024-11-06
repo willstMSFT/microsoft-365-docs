@@ -52,4 +52,4 @@ Here's how users can install their apps:
 
 ## Next step
 
-Set up protection for [unmanaged devices](m365bp-protect-pcs-macs.md).
+Set up protection for [unmanaged devices](m365bp-users-protect-unmanaged-devices.md).

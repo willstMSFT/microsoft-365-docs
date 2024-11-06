@@ -19,8 +19,8 @@ audience:
 description: Understand the new Engineering Direct Portal in the Microsoft 365 admin center and learn how to access and use its features
 ai-usage: ai-assisted  
 ---
-  
-# Engineering Direct Portal in the Microsoft 365 Admin Center
+
+  # Engineering Direct Portal in the Microsoft 365 Admin Center
 
 The Engineering Direct Portal is a new feature within the Microsoft 365 admin center designed to provide Office Engineering Direct (OED) customers with an enhanced engineering experience. This article provides an overview of the portal's features, how to access it, and its functionality.
 
@@ -92,8 +92,8 @@ In this section:
 - [Visual Mail Flow](#visual-mail-flow)
 - [Validate DKIM Signing Configuration](#validate-dkim-signing-configuration)
 - [Auto Archive Detection](#auto-archive-detection)
-
 - [Remediate a Compromised Account](#remediate-a-compromised-account)
+- [Guest Access in Teams](#guest-access-in-teams)
 
 ### Visual Mail Flow
 
@@ -325,6 +325,45 @@ This diagnostic is split into multiple sections that detail steps to remediate t
 **Further Steps**
 
 If the user still shows signs of being compromised, reach out to Microsoft Support for further help.
+
+### Guest Access in Teams
+
+The **Guest Access Diagnostic for Microsoft Teams** helps troubleshoot various issues that may hinder guests from accessing a team, such as inviting guests, accessing team content, and using specific guest features. Since guest settings are managed at both organizational and team levels, this diagnostic checks for any misconfigurations that could impact guest access. It aggregates these issues and presents them in one place, with each misconfigured setting accompanied by guidance for admins. Additionally, the diagnostic assesses the provisioning of guest user accounts. It also allows for optional inputs at org, team and user levels, giving you the flexibility to customize the output you receive.
+
+#### Org-level settings
+
+These settings at the organization level are evaluated to check for misconfiguration.  
+
+|Setting|Where it's located|Setting values considered “misconfigured”|
+| -------- | -------- | -------- |
+|External collaboration setting's guest invite setting|Microsoft Entra Admin Center |<li>No one in this organization can invite guest users including admins (most restrictive)</li><li>Only users assigned to specific admin roles can invite guests</li> |
+|M365 group guest setting|Microsoft Admin Center |Either one or both of these settings are turned off:<li>Let group owners add people outside your organization to Microsoft 365 Groups as guests</li><li>Let guest group members access group content</li> |
+|SharePoint External Sharing settings |SharePoint Admin Center |<li>Only people in your organization</li><li>Existing guests only</li> |
+|Guest Access setting |Teams Admin Center |Off |
+
+#### User-level setup
+
+This diagnostic checks the guest user account provisioning in both Entra and Teams when a guest user is provided as input. If a Teams team is also specified, it will verify the guest user's membership in that team. 
+
+#### Additional settings
+
+In addition, this diagnostic also displays some settings that could affect your guest access experience. These settings are not evaluated for misconfiguration.  
+
+1. Guest user access restriction setting and collaboration restrictions setting in Microsoft Entra Admin Center 
+
+    ![Guest user access restriction setting and collaboration restriction setting](../media/eng-direct-portal/eng-direct-portal-additional-settings-1.png)   
+
+2. Guest feature settings in Teams Admin Center 
+
+    ![Guest feature settings](../media/eng-direct-portal/eng-direct-portal-additional-settings-2.png)   
+
+3. Teams guest permissions in Teams app 
+
+    ![Teams guest permissions in Teams app](../media/eng-direct-portal/eng-direct-portal-additional-settings-3.png) 
+
+This diagnostic should assist to resolve your guest access issues and provide a seamless guest experience in Teams.  
+
+If problems persist, reach out to Microsoft support for assistance. 
 
 ## More information
 
