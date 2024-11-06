@@ -28,9 +28,9 @@ Integrate Shifts, the schedule management app in Microsoft Teams, with your work
 
 This article gives you an overview of how to create a connector using the Microsoft Graph API to integrate Shifts with your WFM system.
 
-A connector syncs schedule data between your WFM system and Shifts, bringing your organization’s schedules into Teams. Shifts is where your frontline  engage for their scheduling needs. Your WFM system is the system of record for business rules, compliance, and intelligence.
+A connector syncs schedule data between your WFM system and Shifts, bringing your organization's schedules into Teams. Shifts is where your frontline  engage for their scheduling needs. Your WFM system is the system of record for business rules, compliance, and intelligence.
 
-You can set up your connector to sync data unidirectionally or bidirectionally.
+You can set up your connector for a one-way sync or a two-way sync of data.
 
 - **Sync data from your WFM system to Shifts**: This is a **one-way sync** where schedule data in your WFM system is synced to Shifts. The connector reads data in your WFM system and writes the data to Shifts. Changes made in Shifts by users aren’t reflected in your WFM system.
 
