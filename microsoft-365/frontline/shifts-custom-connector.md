@@ -514,9 +514,8 @@ Eligibility filtering is currently supported through the `https://graph.microsof
 
 **I registered the workforce integration through Graph API and added "supportedEntities" but I get a 400 Bad Request response and an "Invalid payload: Requested value 'shift, ....' was not found." message**
 
-Every Shifts entity in the `supportedEntities` list request body must start with an uppercase letter. For example:
-
-`"supportedEntities":"Shift,SwapRequest,OpenShift"`
+Every Shifts entity in the `supportedEntities` list request body must start with an uppercase letter. For example,
+`"supportedEntities":"Shift,SwapRequest,OpenShift"`.
 
 **I registered the workforce integration through Graph API and implemented the /connect, update, and /read endpoints, but the webhook isn't working.**
 
