@@ -32,7 +32,7 @@ To get started, you need to [download the CopilotLabDSR PowerShell script](https
 1. From Windows PowerShell, use the `Export- PromptsUserContent` cmdlet to export the saved or shared prompts of a specific user from Copilot Prompt Gallery.
 
 ```powershell
-Export-PromptsUserContent -UserAadIdOrPrincipalName <user's Entra ID or UPN> -ExportDirectory <output location> -PromptType <type of prompt>
+Export-PromptsUserContent -UserAadIdOrPrincipalName <Entra ID or UPN of user> -ExportDirectory <output location> -PromptType <type of prompt>
 ```
 
 | Parameter                | Description                                                                                                                                              |
@@ -55,7 +55,7 @@ Export- PromptsUserContent -UserAadIdOrPrincipalName adambarr@contoso.onmicrosof
 1. From Windows PowerShell, use the `Export-PromptsGroupContent` cmdlet to export the prompts published to the specific team in Copilot Prompt Gallery.
 
 ```powershell
-Export-PromptsGroupContent -M365TeamsGroupId < team ID> -ExportDirectory <output location>
+Export-PromptsGroupContent -M365TeamsGroupId <team ID> -ExportDirectory <output location>
 ```
 
 | Parameter        | Description                                                                                                                               |
@@ -66,7 +66,7 @@ Export-PromptsGroupContent -M365TeamsGroupId < team ID> -ExportDirectory <output
 For example, the following exports the prompts shared in Copilot Prompt Gallery to the team with an ID of "d0efcad2-6744-0de6-0624-ea467d4293af" and downloads the export files to the location C:\PromptsExportAdamBarr.
 
 ```powershell
-Export- PromptsGroupContent -M365TeamsGroupId  d0efcad2-6744-0de6-0624-ea467d4293af -ExportDirectory C:\PromptsExportAdamBarr
+Export- PromptsGroupContent -M365TeamsGroupId d0efcad2-6744-0de6-0624-ea467d4293af -ExportDirectory C:\PromptsExportAdamBarr
 ```
 
 > [!TIP]
