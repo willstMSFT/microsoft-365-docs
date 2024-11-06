@@ -249,7 +249,7 @@ This endpoint handles requests from Shifts to fetch eligible time-off reasons or
 
 The following diagram shows the flow of data.
 
-:::image type="content" source="media/shifts-connector-read-from-shifts.png" alt-text="Diagram showing the flow for eligibility filtering requests." lighbox="media/shifts-connector-read-from-shifts.png":::
+:::image type="content" source="media/shifts-connector-read-from-shifts.png" alt-text="Diagram showing the flow for eligibility filtering requests." lightbox="media/shifts-connector-read-from-shifts.png":::
 
 **Return response code**<br>
 Any response from the integration, including an error, must have an HTTP response code `200 OK`. The response body must include the status and error message that reflects the appropriate sub call error state. Any response from the integration other than `200 OK` is treated as an error and returned to the caller (client or Microsoft Graph).
