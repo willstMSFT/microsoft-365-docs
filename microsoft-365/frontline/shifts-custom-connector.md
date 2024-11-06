@@ -58,15 +58,18 @@ You can set up your connector to sync data unidirectionally or bidirectionally.
 
 ### Get familiar with the integration process
 
-Review the following information to get an understanding of the overall integration process, including who performs each step.
+Here's an overview of the integration steps. Review this information to get an understanding of the overall process, including who performs each step.
 
 |Step|Actions|More information|Who performs this step|
 |---------|---------|---------|---------|
-|1|Create your connector:<ul><li>Step 1A: [Sync changes made in Shifts to your WFM system](#step-1a-sync-changes-made-in-shifts-to-your-wfm-system)</li><li>Step 1B: [Sync data from your WFM system to Shifts](#step-1b-sync-data-from-your-wfm-system-to-shifts)</li></ul>| |Developer|
+|1|Create your connector:<ul><li>Step 1A: [Sync changes made in Shifts to your WFM system](#step-1a-sync-changes-made-in-shifts-to-your-wfm-system)<ul><li>[/connect endpoint](#post-connect)</li><li>[/update endpoint](#post-teamsteamidupdate)</li></ul><li>Step 1B: [Sync data from your WFM system to Shifts](#step-1b-sync-data-from-your-wfm-system-to-shifts)</li></ul>| |Developer|
 |2|[Register an app in the Microsoft Entra admin center](#step-2-register-an-app-in-the-microsoft-entra-admin-center)||An account that is at least a Cloud Application Administrator |
 |3|[Set up teams in Teams](#step-3-set-up-teams-in-teams)    ||Developer or Teams administrator |
 |4|Register and enable the workforce integration:<ul><li>Step 4A: [Register the workforce integration in your tenant](#step-4a-register-the-workforce-integration-in-your-tenant)</li><li>Step 4B: [Enable the workforce integration for your team schedules](#step-4b-enable-the-workforce-integration-for-your-team-schedules)</li></ul>    ||Step 4A: Global Administrator<br>Step 4B: Developer|
-  
+
+> [!NOTE]
+> If you want to test your integration as you develop, implement the [/connect endpoint](#post-connect) in step 1A, and then complete steps 2, 3, and 4. Then, go back to step 1A, implement the [/update endpoint](#post-teamsteamidupdate) and complete the remaining steps in step 1.
+
 ## Step 1: Create your connector
 
 To create your connector, complete the following steps:
@@ -84,7 +87,7 @@ To set up your connector to receive and process requests from Shifts, you need t
 
 **Determine your base URL and endpoint URLs**
 
-The base URL (webhook) is `https://{url}/v{apiVersion}`, where **url** and **apiVersion** are the properties you set in the [workforceIntegration](/graph/api/resources/workforceintegration?view=graph-rest-1.0) object when you [register the workforce integration](#step-4a-register-the-workforce-integration-in-your-tenant).
+The base URL (webhook) is `{url}/v{apiVersion}`, where **url** and **apiVersion** are the properties you set in the [workforceIntegration](/graph/api/resources/workforceintegration?view=graph-rest-1.0) object when you [register the workforce integration](#step-4a-register-the-workforce-integration-in-your-tenant).
 
 The relative paths of the endpoint URLs are as follows:
 
@@ -375,7 +378,7 @@ Use Shifts APIs in Microsoft Graph to read schedule data from your WFM system an
 
 For example, to add a shift to Shifts, use the [Create shift](/graph/api/schedule-post-shifts?view=graph-rest-1.0) API.
 
-See the [Microsoft Graph API v1.0 reference](/graph/api/resources/shift?view=graph-rest-1.0) and [Microsoft Graph API beta reference](/graph/api/resources/shift?view=graph-rest-beta) for Shifts APIs, which are listed under **Shift management**.
+See the [Microsoft Graph API v1.0 reference](/graph/api/resources/shift?view=graph-rest-1.0) for Shifts APIs, which are listed under **Shift management**.
 
 > [!NOTE]
 > The `MS-APP-ACT-AS` header is required in requests and must contain the ID (GUID) of the user your app is acting on behalf of. We recommend you use the user ID of a team owner when updating the schedule.
@@ -398,7 +401,7 @@ After the first sync, you can choose to:
     All write operations to Shifts, including write operations initiated by the connector, trigger a call to the connector’s /update endpoint. We recommend you include the `X-MS-WFMPassthrough: workforceIntegratonId` header to all write calls so the connector can identify and handle them appropriately. For example, your WFM system initiated the change, approve it without applying an update to your WFM system.
 
   > [!NOTE]
-  > If you're configuring the connector to sync data bidirectionally between your WFM system and Shifts, exclude changes initiated from Shifts in the periodic sync. These changes are already written in Shifts.
+  > If you're setting up your connector for a two-way sync of data between your WFM system and Shifts, exclude changes initiated from Shifts in the periodic sync. These changes are already written in Shifts.
 
 ## Step 2: Register an app in the Microsoft Entra admin center
 
@@ -456,7 +459,7 @@ POST https://graph.microsoft.com/v1.0/teamwork/workforceIntegrations/
   }, 
   "isActive": true, 
   "url": "https://contosoconnector.com/wfi", 
-  "supportedEntities": "shift,swapRequest,userShiftPreferences,openshift,openShiftRequest,offerShiftRequest”,
+  "supportedEntities": "Shift,SwapRequest,UserShiftPreferences,Openshift,OpenShiftRequest,OfferShiftRequest”,
 }
 ```
 
@@ -464,16 +467,11 @@ See the following table for more information. To learn more, see [workforceInteg
 
 |Property  |More information|
 |---------|---------|
-|encryption|Set **protocol** to `sharedSecret`. The **secret** value is generated when you [registered your app in the Microsoft Entra admin center](#step-2-register-an-app-in-the-microsoft-entra-admin-center) and is shared with Shifts during the workforce integration registration process. It has a 64-character limit, and should be exactly 64 characters. <br><br>Use the secret to decrypt the encrypted JSON payloads that are sent to your connector's endpoint from Shifts. The payload is encrypted using AES-256-CBC-HMAC-SHA256. Your app should safely persist this secret. For example, in a key vault.|
-|supportedEntities |The Shifts entities you want the connector to support for syncing. Shifts makes a call back to your connector's [/update](#post-teamsteamidupdate) endpoint when any of these entities change so that you can approve or reject the change. Possible values are: `none`, `shift`, `swapRequest`, `userShiftPreferences`, `openshift`, `openShiftRequest`, `offerShiftRequest`<br><br>**Note** This list is an [evolvable enumeration](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations). You must use the `Prefer: include-unknown-enum-members` request header to get all the values.|
+|apiVersion|API version for the callback URL. Your [base URL](#step-1a-sync-changes-made-in-shifts-to-your-wfm-system) is comprised of the **url** property and this property.|
+|encryption|Set **protocol** to `sharedSecret`. The **secret** value is that Shfits uses to encrypt requests. It must be exactly 64 characters. <br><br>Use the secret to decrypt the encrypted JSON payloads that are sent to your connector's endpoint from Shifts. The payload is encrypted using AES-256-CBC-HMAC-SHA256. Your app should safely persist this secret. For example, in a key vault.|
+|supportedEntities|The Shifts entities you want the connector to support for syncing. Shifts calls your connector's [/update](#post-teamsteamidupdate) endpoint when any of these entities change so that you can approve or reject the change. For the list of the possible values, see [workforceIntegration resource type](/graph/api/resources/workforceintegration?view=graph-rest-1.0)<br><br>**Note** This list is an [evolvable enumeration](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations). You must use the `Prefer: include-unknown-enum-members` request header to get all the values.|
 |eligibilityFilteringEnabledEntities|**Note**: As of October 2024, this endpoint is supported only in the beta version of the Microsoft Graph API.<br><br>The Shifts entities that you want to connector to support for eligibility filtering. Possible values are:<ul><li>`none`: Empty list</li><li>`SwapRequests`: Shifts calls your connector's [/read](#post-teamsteamidread) endpoint to get a filtered list of shifts a user can choose from for a swap request.</li><li>`TimeOffReasons`: Shifts calls your connector's [/read](#post-teamsteamidread) endpoint to get a filtered list of time-off reasons a user can choose from when they request time off. </li></ul>**Note** This list is an [evolvable enumeration](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations). You must use the `Prefer: include-unknown-enum-members` request header to get all the values.|
-|url|The workforce integration URL for callbacks from Shifts.|
-
-<!-- The shared secret for encryption should be generated by your app and shared with Shifts during registration. The secret has a 64-character limit, and should be exactly 64 characters. Use it to decrypt the encrypted JSON payloads that are sent to your connector's endpoint from Shifts. The payload is encrypted using AES-256-CBC-HMAC-SHA256. Your app should safely persist this secret. For example, in a key vault.
-- Specify the entities to sync. Shifts will call your connector's /update endpoint when any of these entities change so you can approve or reject the change. For a list of these entities, see [workforceIntegration resource type](/graph/api/resources/workforceintegration?view=graph-rest-1.0).
-
-    > [!NOTE]
-    > This list is an [evolvable enumeration](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations). You must use the `Prefer: include-unknown-enum-members` request header to get all the values.
+|url|The workforce integration URL for callbacks from Shifts. Your [base URL](#step-1a-sync-changes-made-in-shifts-to-your-wfm-system) is comprised of this property and the **apiVerson** property.|
 
 - Specify the entities for eligibility filtering. Options are:
   - `None`: Empty list
