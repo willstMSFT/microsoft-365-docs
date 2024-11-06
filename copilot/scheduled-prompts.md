@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: camillepack
 author: camillepack
 manager: scotv
-ms.date: 10/20/2024
+ms.date: 11/06/2024
 audience: Admin
 ms.topic: how-to
 ms.service: microsoft-365-copilot
@@ -49,8 +49,6 @@ To use the Scheduled prompts feature as an admin, no action is required if no DL
 
 If you prefer to not have this feature available to your organization, you can disable the Optional connected experiences setting at [config.office.com](https://config.office.com/). For more information, see [Admin controls for optional connected experiences](/microsoft-365-apps/privacy/optional-connected-experiencess). 
 
-:::image type="content" source="media/prompts-org-policy.png" alt-text="Screenshot showing the pop-up that informs users of their organization's data policy." lightbox="media/prompts-org-policy.png":::
-
 If you turn off the Optional connected experiences setting, this action will prevent anyone in your organization from seeing Scheduled prompts in Copilot.
 
 ### Data policies
@@ -58,6 +56,8 @@ If you turn off the Optional connected experiences setting, this action will pre
 To prevent exposing organizational data, you should also create a data policy in the [Power Platform admin center](https://admin.powerplatform.microsoft.com). Creating a data policy in the center allows you to control access to these connectors in various ways to help reduce risk in your organization. To learn more, see [Data policies - Power Platform](/microsoft-365-apps/privacy/optional-connected-experiences).
 
 ## Disabling Scheduled prompts
+
+:::image type="content" source="media/prompts-org-policy.png" alt-text="Screenshot showing the pop-up that informs users of their organization's data policy." lightbox="media/prompts-org-policy.png":::
 
 If you disable this feature after someone in your organization has already used it:
 
