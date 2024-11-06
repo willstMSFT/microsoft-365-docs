@@ -137,7 +137,7 @@ Shifts calls this endpoint for every change (including changes initiated from th
 
 The following diagram shows the flow of data.
 
-:::image type="content" source="media/shifts-custom-connector-update.png" alt-text="Diagram showing the flow for  updates from Shifts to your WFM system.":::
+:::image type="content" source="media/shifts-connector-update-from-shifts.png" alt-text="Diagram showing the flow for updates from Shifts to your WFM system.":::
 
 > [!NOTE]
 > See [WfiRequest](#wfirequest) in the **Endpoint reference** section of this article for more information on Request and Response models.
@@ -249,7 +249,7 @@ This endpoint handles requests from Shifts to fetch eligible time-off reasons or
 
 The following diagram shows the flow of data.
 
-:::image type="content" source="media/shifts-custom-connector-read.png" alt-text="Diagram showing the flow for eligibility filtering requests.":::
+:::image type="content" source="media/shifts-connector-read-from-shifts.png" alt-text="Diagram showing the flow for eligibility filtering requests.":::
 
 **Return response code**<br>
 Any response from the integration, including an error, must have an HTTP response code `200 OK`. The response body must include the status and error message that reflects the appropriate sub call error state. Any response from the integration other than `200 OK` is treated as an error and returned to the caller (client or Microsoft Graph).
@@ -385,7 +385,7 @@ See the [Microsoft Graph API v1.0 reference](/graph/api/resources/shift?view=gra
 
 The following diagram shows the flow of data.
 
-:::image type="content" source="media/shifts-custom-connector-wfm-to-shifts.png" alt-text="Diagram that shows the flow for syncing data from your WFM system to Shifts.":::
+:::image type="content" source="media/shifts-connector-update-to-shifts.png" alt-text="Diagram that shows the flow for syncing data from your WFM system to Shifts.":::
 
 #### Initial sync
 
