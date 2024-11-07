@@ -4,8 +4,8 @@ description: Learn about new features and capabilities in Microsoft 365 Business
 search.appverid:
 - MET150
 - BCS160
-ms.author: siosulli
-author: siosulli
+ms.author: chrisda
+author: chrisda
 manager: deniseb
 audience: Admin
 ms.topic: overview
