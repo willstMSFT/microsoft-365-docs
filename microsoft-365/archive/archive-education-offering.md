@@ -33,13 +33,18 @@ For customers that are subject to the pooled storage policy, they'll have access
 
 If the storage report isn't available, then it’s possible that your tenant isn't subject to the pooled storage policy. To determine if your tenant is subject to the pooled storage policy, review whether most (greater than 50%) EDU licenses are assigned compared to non-EDU licenses, or if your tenant has purchased more EDU licenses than non-EDU licenses. 
 
+When you [turn on Microsoft 365 Archive](archive-setup.md#set-up-microsoft-365-archive-1) for your tenant, you will see an additional message confirming your education tenant status. If your education tenant status changes and your tenant is no longer subject to the pooled storage limit, you will no longer see this message.  
+
 :::image type="content" source="../media/archive/storage.png" alt-text="Screenshot of Example view of storage report." lightbox="../media/archive/storage.png":::
+
+> [!NOTE]
+> If your tenant is no longer eligible for the Microsoft 365 Archive for Education offering, your tenant's archive content will be charged according to the Microsoft 365 Archive standard rate.
 
 ## Pricing model
 
 Microsoft 365 Archive charges you for storage and reactivation.
 
-- **Storage consumption** is charged at a per-GB monthly rate. For SharePoint sites, this meter is charged only when archived storage in SharePoint plus active pooled storage exceeds the included or licensed allocated pooled storage capacity limit of the tenant. In other words, there's no additional storage cost for archived sites if the tenant hasn't consumed its already licensed storage quota. For unlicensed OneDrive accounts, this meter is charged for every OneDrive account that is archived. For more information about storage capacity limits, see [pooled storage limits.](/office365/servicedescriptions/office-365-platform-service-description/office-365-education#education-pooled-storage-limits)  
+- **Storage consumption** is charged at a per-GB monthly rate. For SharePoint sites, this meter is charged only when archived storage in SharePoint plus active pooled storage exceeds the included or licensed allocated pooled storage capacity limit of the tenant. In other words, there's no additional storage cost for archived sites if the tenant hasn't consumed its already licensed storage quota. For unlicensed OneDrive accounts, this meter is charged for every OneDrive account that is archived. For more information on unlicensed OneDrive accounts, see [Manage unlicensed OneDrive user accounts - SharePoint in Microsoft 365 | Microsoft Learn.](/sharepoint/unlicensed-onedrive-accounts)  
 - **Site reactivation** that is charged at a per-GB rate. The reactivation fee is charged regardless of whether a tenant is over or below its pooled storage capacity limit and only if reactivation is executed more than seven days after the site was most recently put into an archive state. This seven-day grace period provides you with the opportunity to reverse an accidental archival without reaction costs.
 
 Monthly archive usage is calculated as the sum of the usage of all currently archived sites. Each site’s usage can be seen on the site itself or from the Active sites page in the SharePoint admin center. The size of an archived site, and therefore the storage for which it’s billed, changes only if the content in the site changes. For example, content naturally expiring in the recycle bin or a retention policy deleting content within the site directly from archive to the recycle bin.   
