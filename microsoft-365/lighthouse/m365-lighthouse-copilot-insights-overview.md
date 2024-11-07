@@ -78,7 +78,7 @@ At the bottom of the **Adoption** tab is a list of customer tenants that have at
 - **Copilot licenses:** Total number of Microsoft 365 Copilot licenses in the customer tenant. 
 - **Unassigned licenses:** Total number of unassigned Microsoft 365 Copilot licenses in the customer tenant.
 
-# Related content
+## Related content
 
 [Get started with Microsoft 365 Copilot](../../copilot/microsoft-365-copilot-setup.md) (article)\
 [Microsoft 365 Copilot requirements](../../copilot/microsoft-365-copilot-requirements.md) (article)\
