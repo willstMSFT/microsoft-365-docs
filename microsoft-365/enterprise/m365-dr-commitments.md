@@ -81,19 +81,21 @@ The following customer data is stored at rest in the _Local Region Geography_:
 - Topic highlighting is computed dynamically when the SharePoint page is rendered by running a language model against the content of the page and linking it with the knowledge base of Topics. The Topics data is sourced from the Substrate in the _Local Region Geography_.
 - The administration configuration data is stored within the _Local Region Geography_.
 
-## Purview Audit (Standard)
+## Microsoft Purview
+
+### Purview Audit (Standard)
 
 The following customer data is stored at rest in the _Local Region Geography_:
 
 - Service configuration data, audited Activities, audit Records, and audit log query permissions
 
-## Purview Audit (Premium)
+### Purview Audit (Premium)
 
 The following customer data is stored at rest in the _Local Region Geography_:
 
 - In addition to the customer data stored as part of Purview Audit (Standard), configuration and Customer Data related to high-value crucial events
 
-## Data lifecycle management - Data Retention
+### Data lifecycle management - Data Retention
 
 The following customer data is stored at rest in the _Local Region Geography_:
 
@@ -114,13 +116,13 @@ The following customer data is stored at rest in the _Local Region Geography_:
 - Disposition data
 - Mappings between retention labels and Data Loss Prevention (DLP) policies
 
-## Data lifecycle management - Records Management
+### Data lifecycle management - Records Management
 
 The following customer data is stored at rest in the _Local Region Geography_:
 
 - Record retention label definitions, file plan definitions, event-based retention policy settings, disposition review records and records of deletion
 
-## Information Protection - Sensitivity labels
+### Information Protection - Sensitivity labels
 
 The following customer data is stored at rest in the _Local Region Geography_:
 
@@ -131,19 +133,19 @@ The following customer data is stored at rest in the _Local Region Geography_:
 - Activity Explorer and Microsoft 365 unified audit logs
 - Label change justification records
 
-## Information Protection - Data Loss Prevention (DLP)
+### Information Protection - Data Loss Prevention (DLP)
 
 The following customer data is stored at rest in the _Local Region Geography_:
 
 - DLP admin configuration, DLP policies in Compliance Portal, DLP monitored activities, violation history, Activity Explorer and Microsoft 365 unified audit logs, quarantine storage,  DLP Alerts and DLP Alert management dashboard
 
-## Information Protection - Office Message Encryption
+### Information Protection - Office Message Encryption
 
 The following customer data is stored at rest in the _Local Region Geography_:
 
 - Encryption policies, admin settings and encrypted messages
 
-## Risk and compliance - information barriers
+### Risk and compliance - information barriers
 
 The following customer data is stored at rest in the _Local Region Geography_:
 
