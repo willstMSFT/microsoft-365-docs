@@ -952,7 +952,7 @@
       },
       {
          "source_path": "microsoft-365/commerce/licenses/downloads-faq.yml",
-         "redirect_url": "/microsoft-365/commerce/licenses/downloads-faq.md",
+         "redirect_url": "/microsoft-365/commerce/licenses/download-vl-products.md",
          "redirect_document_id": false
       }
   ]
