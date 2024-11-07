@@ -80,8 +80,8 @@ At the bottom of the **Adoption** tab is a list of customer tenants that have at
 
 ## Related content
 
-[Get started with Microsoft 365 Copilot](/copilot/microsoft-365-copilot-setup.md) (article)\
-[Microsoft 365 Copilot requirements](/copilot/microsoft-365-copilot-requirements.md) (article)\
-[Enable users for Microsoft 365 Copilot](/copilot/microsoft-365-copilot-enable-users.md) (article)\
+[Get started with Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-setup.md) (article)\
+[Microsoft 365 Copilot requirements](/copilot/microsoft-365/microsoft-365-copilot-requirements.md) (article)\
+[Enable users for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-enable-users.md) (article)\
 [Overview of the Delegated access page in Microsoft 365 Lighthouse](m365-lighthouse-delegated-access-overview.md) (article)\
 [Set up GDAP in Microsoft 365 Lighthouse](m365-lighthouse-setup-gdap.md) (article)
