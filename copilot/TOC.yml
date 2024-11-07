@@ -3,17 +3,19 @@
   items:
     - name: Get started
       items:
-        - name: Overview of Microsoft 365 Copilot 
+        - name: Overview
           href: microsoft-365-copilot-overview.md
-        - name: Get your data ready for Microsoft 365 Copilot
+        - name: Architecture
+          href: microsoft-365-copilot-architecture.md
+        - name: Get your data ready
           items:
-            - name: License options for Microsoft 365 Copilot
+            - name: License options
               href: microsoft-365-copilot-licensing.md
-            - name: E3 and E5 feature comparison list for Copilot
+            - name: E3 and E5 feature comparison list
               href: microsoft-365-copilot-e3-e5-overview.md
-            - name: E3 guide for Microsoft 365 Copilot
+            - name: E3 feature guide
               href: microsoft-365-copilot-e3-guide.md
-            - name: E5 guide for Microsoft 365 Copilot
+            - name: E5 feature guide
               href: microsoft-365-copilot-e5-guide.md
     - name: Deploy and enable
       items: 
