@@ -17,7 +17,7 @@ ms.custom:
 search.appverid: MET150
 ms.localizationpriority: medium
 description: "Learn about volume licensing downloads in the Microsoft 365 admin center."
-ms.date: 11/05/2024
+ms.date: 11/07/2024
 ---
 
 # Download volume licensing products
