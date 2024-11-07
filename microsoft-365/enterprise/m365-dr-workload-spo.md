@@ -100,6 +100,9 @@ Refer to the link above for more information about the retirement plan and the a
 
 ## **Multi-Geo Capabilities in SharePoint / OneDrive**
 
+> [!IMPORTANT]
+> There is currently a known issue caused by the retirement of BCS that is affecting site moves. The fix is currently being worked on. Currently, if you are facing issues, please try using the PowerShell cmdlet while using the -SuppressBcsCheck parameter.
+
 Multi-Geo capabilities in OneDrive and SharePoint enable control of shared resources like SharePoint team sites and Microsoft 365 group mailboxes stored at rest in a specified _Macro Region Geography_ or _Local Region Geography_.
 
 Each user, Group mailbox, and SharePoint site have a Preferred Data Location (PDL) which denotes the _Macro Region Geography_ or _Local Region Geography_ (location where related data is to be stored). Users' personal data (Exchange mailbox and OneDrive) along with any Microsoft 365 Groups or SharePoint sites that they create can be stored in the specified _Macro Region Geography_ or _Local Region Geographies_ location to meet data residency requirements. You can specify different administrators for each _Macro Region Geography_ or _Local Region Geographies_ location.

@@ -1,5 +1,5 @@
 ---
-title: Set up SharePoint Agreements AI
+title: Set up SharePoint Agreements
 ms.author: chucked
 author: chuckedmonson
 manager: jtremper
@@ -15,10 +15,10 @@ ms.collection:
     - m365initiative-syntex
 ms.localizationpriority:  medium
 ROBOTS: NOINDEX, NOFOLLOW
-description: Learn how to set up licensing tools for the SharePoint Agreements AI solution.
+description: Learn how to set up licensing tools for the SharePoint Agreements solution.
 ---
 
-# Set up SharePoint Agreements AI
+# Set up SharePoint Agreements
 
 ## Overview
 
@@ -38,7 +38,7 @@ Workspaces allow you to organize and manage agreements across your organization.
 
 ### Prerequisites
 
-Before creating a workspace for SharePoint Agreements AI, you need to ensure:  
+Before creating a workspace for SharePoint Agreements, you need to ensure:  
 
 - The user implementing the steps in the article needs to be either a Global Administrator or SharePoint Administrator.
 
