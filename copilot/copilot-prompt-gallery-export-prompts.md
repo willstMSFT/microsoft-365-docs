@@ -27,7 +27,7 @@ To get started, you need to [download the CopilotLabDSR PowerShell script](https
 > [!NOTE]
 > The user account running the PowerShell script to export the data needs to be assigned the Global admin role.
 
-## To export the saved and shared prompts of a specific user
+## Export the saved and shared prompts of a specific user
 
 1. From Windows PowerShell, use the `Export- PromptsUserContent` cmdlet to export the saved or shared prompts of a specific user from Copilot Prompt Gallery.
 
@@ -50,7 +50,7 @@ Export- PromptsUserContent -UserAadIdOrPrincipalName adambarr@contoso.onmicrosof
 2. When prompted to authenticate, sign in with an account that is assigned the Global Admin role, not as the user you want to export.
 3. After the PowerShell cmdlet runs successfully, go to your export location to view your exported files.
 
-## To export prompts shared with a specific team
+## Export prompts shared with a specific team
 
 1. From Windows PowerShell, use the `Export-PromptsGroupContent` cmdlet to export the prompts published to the specific team in Copilot Prompt Gallery.
 
