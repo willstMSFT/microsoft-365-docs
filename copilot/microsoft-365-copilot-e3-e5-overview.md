@@ -21,7 +21,7 @@ appliesto:
   - ✅ Microsoft 365 Copilot
 ---
 
-# Microsoft 365 E3 and E5 feature comparison list for Microsoft 365 Copilot
+# Microsoft 365 license feature comparison list for Microsoft 365 Copilot
 
 > [!WARNING]
 > This article is a work in progress for Ignite. Do not publish.
@@ -46,7 +46,7 @@ This article applies to:
 - Microsoft SharePoint Premium - SharePoint Advanced Management (SAM)
 - Microsoft Purview
 
-## Microsoft 365 E3 and E5 feature table
+## Microsoft 365 license feature table
 
 The following table lists some of the features that can help with Copilot. These features impact Copilot results and can help you manage Copilot interactions (prompts and responses).
 

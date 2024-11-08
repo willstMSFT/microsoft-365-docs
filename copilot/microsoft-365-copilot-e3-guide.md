@@ -6,7 +6,8 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: laurawi
-ms.date: 11/04/2024
+ms.date: 11/07/2024
+ms.reviewer: cabailey, ruihu
 audience: Admin
 ms.topic: get-started
 ms.service: microsoft-365-copilot
@@ -305,6 +306,10 @@ To learn more, see:
 To learn more, see [Search for Copilot interactions in eDiscovery](/purview/edisc-search-copilot-data).
 
 ---
+
+## More resources available to you
+
+- Create include files and copy content from E5 guide.
 
 ## Related content
 
