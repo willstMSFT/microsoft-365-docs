@@ -29,7 +29,7 @@ appliesto:
 
 **Microsoft 365 Copilot is an AI-powered productivity tool**.
 
-It provides real-time intelligence that enables users to complete tasks more efficiently, enhance their productivity & skills, and improve their overall work experience. Users get content relevant to their work tasks, like drafting, summarizing, and answering questions; all in the context of their work within their Microsoft 365 app.
+It provides real-time intelligence that enables users to complete tasks more efficiently, enhance their productivity & skills, and improve their overall work experience. From a business impact perspective, users get content relevant to their work tasks, like drafting, summarizing, and answering questions; all in the context of their work within their Microsoft 365 app.
 
 Microsoft 365 Copilot:
 
@@ -98,6 +98,34 @@ Some of these features include:
 | **Teams** | **Chat**—Copilot can summarize up to 30 days of the chat content before the last message in a chat. <br/><br/>Copilot uses only the single chat thread as source content for responses. It can't reference other chats or data types, like meeting transcripts, emails, and files. Users can select prewritten prompts or write their own questions. Responses include clickable citations that direct users to the relevant source content that was used. <br/><br/> Conversations with Copilot take place in a side panel and allows users to copy and paste. Copilot conversations close when the side panel closes. <br/><br/> **Meetings**—Users can invoke Copilot in meetings or calls within the same tenant. Copilot uses the transcript in real-time to answer questions from the user. It only uses the transcript and knows the name of the user typing the question. <br/><br/> Users can type any question or use predetermined prompts. Copilot answers questions only related to the meeting conversation from the transcript. The user can copy/paste an answer and access Copilot after the meeting ends. <br/><br/> **Copilot**—Users access data across their Microsoft 365 Graph and use LLM functionality. Copilot can be accessed in Teams and when signed-in to Bing with an Active Directory account. <br/><br/> **Calls**—Automates important administrative tasks of a call, like capturing key points, task owners, and next steps. It supports voice over Internet Protocol (VoIP) and public switched telephone network (PSTN) calls. <br/><br/> **Whiteboard**—Use natural language to generate ideas, organize ideas into themes, create designs based on ideas, and summarize whiteboard content. |
 | **OneNote** | **Draft**—Use prompts to draft plans, generate ideas, create lists, and organize information to help you find what you need. |
 | **Forms** | **Draft**—Use prompts to draft questions and suggestions that help you create surveys, polls, and other forms. |
+
+## Microsoft 365 services that help support Copilot
+
+In your Microsoft 365 license, there are services and features that can help you get your data and organization ready for Copilot.
+
+- **SharePoint Advanced Managed (SAM)**
+
+  Microsoft SharePoint Premium – SharePoint Advanced Management (SAM) can help you reduce oversharing and cleanup inactive sites. These tasks help declutter Copilot's data sources and improve the quality of the responses.
+
+  To learn more, see [Get ready for Microsoft 365 Copilot with SharePoint Advanced Management (SAM)](/sharepoint/get-ready-copilot-sharepoint-advanced-management).
+
+- **Restricted SharePoint Search**
+
+  Restricted SharePoint Search (RSS) RSS gives you time to review and configure the correct permissions on your SharePoint sites. You add the reviewed & corrected sites to an allowed list that Copilot can access.
+
+  To learn more, see [Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search).
+
+- **Microsoft Purview**
+
+  Microsoft Purview can classify and label your data based on the sensitivity of the content. It can also help prevent unauthorized sharing or leakage and review Copilot prompts and responses.
+
+  To learn more, see [Microsoft Purview data security and compliance protections for generative AI apps](/purview/ai-microsoft-purview).
+
+To learn more about the features available with your license, see:
+
+- [Microsoft 365 license feature comparison list for Microsoft 365 Copilot](microsoft-365-copilot-e3-e5-overview.md)
+- [Microsoft 365 Copilot admin guide for E3 licenses](microsoft-365-copilot-e3-guide.md)
+- [Microsoft 365 Copilot admin guide for E5 licenses](microsoft-365-copilot-e5-guide.md)
 
 ## Related content
 
