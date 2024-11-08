@@ -3,7 +3,7 @@ title: Licensing for Microsoft Syntex
 ms.author: chucked
 author: chuckedmonson
 ms.reviewer: ssquires, kkameth
-ms.date: 02/15/2024
+ms.date: 11/08/2024
 manager: jtremper
 audience: admin
 ms.topic: conceptual
@@ -42,13 +42,13 @@ Pay-as-you-go currently supports the following Syntex services:
 - Unstructured document processing
 - Autofill columns
 - Content assembly
+- Document translation
 - Image tagging
-- Taxonomy tagging
-- Translation
-- Syntex eSignature
 - Optical character recognition
+- SharePoint eSignature
+- Taxonomy tagging
 - Microsoft 365 Archive
-- Microsoft 365 Backup (Preview)
+- Microsoft 365 Backup
 
 More Syntex services will be added as they become available.
 
@@ -68,7 +68,7 @@ For more information, see [Microsoft Syntex features limited time license agreem
 
 ## If you still have active per-user licenses
 
-As of July 1, 2023, per-user licenses are no longer available for purchase. Per-user licenses purchased before July 1 can still be assigned to new users. After existing per-user licenses expire, you'll need to opt in to Syntex [pay-as-you-go billing](syntex-azure-billing.md) to continue using Syntex services.
+As of July 1, 2023, per-user licenses are no longer available for purchase. Per-user licenses purchased prior to that date can still be assigned to new users. After existing per-user licenses expire, you'll need to opt in to Syntex [pay-as-you-go billing](syntex-azure-billing.md) to continue using Syntex services.
 
 Users with active per-user licenses can perform the following tasks:
 
