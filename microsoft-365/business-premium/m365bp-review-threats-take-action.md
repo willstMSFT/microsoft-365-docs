@@ -1,8 +1,8 @@
 ---
 title: "Review detected threats on devices and take action"
 f1.keywords: NOCSH
-ms.author: siosulli
-author: siosulli
+ms.author: chrisda
+author: chrisda
 manager: deniseb
 audience: Admin
 ms.topic: conceptual

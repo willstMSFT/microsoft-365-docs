@@ -1,5 +1,5 @@
 ---
-title: Create a template in SharePoint Agreements AI
+title: Create a template in SharePoint Agreements
 ms.author: chucked
 author: chuckedmonson
 manager: jtremper
@@ -15,10 +15,10 @@ ms.collection:
     - m365initiative-syntex
 ms.localizationpriority:  medium
 ROBOTS: NOINDEX, NOFOLLOW
-description: Learn how to create a template with the SharePoint Agreements AI solution.
+description: Learn how to create a template with the SharePoint Agreements solution.
 ---
 
-# Create a template in SharePoint Agreements AI
+# Create a template in SharePoint Agreements
 
 Templates serve as a predefined structure that standardizes the creation of documents and agreements. They ensure consistency and uniformity across various documents within the workspace, streamlining the creation process and reducing the likelihood of errors. Templates can include specific sections, formatting, and content guidelines that align with the organization's requirements and branding.
 
