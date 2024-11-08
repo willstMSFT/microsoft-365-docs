@@ -61,7 +61,7 @@ In addition to prompts and responses, web search queries (different from Microso
 
 ## Agents in Microsoft 365 Copilot
 
-When you’re using agents to help Microsoft 365 Copilot to provide more relevant information, check the privacy statement and terms of use of the agents to determine how it will handle your organization’s data.
+When you’re using agents in Microsoft 365 Copilot, check the privacy statement and terms of use of the agents to determine how they'll handle your organization’s data.
 
 ## Footnotes
 
