@@ -61,7 +61,7 @@ Here's an overview of the integration steps. Review this information to get an u
 |---------|---------|---------||
 |1|Create your connector:<ul><li>Step 1a: [Sync changes made in Shifts to your WFM system](#step-1a-sync-changes-made-in-shifts-to-your-wfm-system)<ul><li>[/connect endpoint](#post-connect)</li><li>[/update endpoint](#post-teamsteamidupdate)</li></ul><li>Step 1b: [Sync data from your WFM system to Shifts](#step-1b-sync-data-from-your-wfm-system-to-shifts)</li></ul>|Developer|
 |2|[Register an app in the Microsoft Entra admin center](#step-2-register-an-app-in-the-microsoft-entra-admin-center)|An account that is at least a Cloud Application Administrator |
-|3|[Set up teams in Teams](#step-3-set-up-teams-in-teams)|Developer or Teams administrator |
+|3|[Step 3: Create teams and schedules for syncing](#step-3-create-teams-and-schedules-for-syncing)|Developer or Teams administrator |
 |4|Register and enable the workforce integration:<ul><li>Step 4b: [Register the workforce integration in your tenant](#step-4a-register-the-workforce-integration-in-your-tenant)</li><li>Step 4B: [Enable the workforce integration for your team schedules](#step-4b-enable-the-workforce-integration-for-your-team-schedules)</li></ul>|Step 4b: Global Administrator<br>Step 4B: Developer|
 
 ## Step 1: Create your connector
