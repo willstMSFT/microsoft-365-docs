@@ -26,18 +26,15 @@ ms.date:
 
 Integrate Shifts, the schedule management app in Microsoft Teams, with your workforce management (WFM) system. This integration allows your frontline workforce to view and manage their schedules directly within Shifts.
 
-This article gives you an overview of how to create a connector using the Microsoft Graph API to integrate Shifts with your WFM system.
+In this article, you'll learn how to create a connector using the Microsoft Graph API to facilitate this integration.
 
 A connector syncs schedule data between your WFM system and Shifts, bringing your organization's schedules into Teams. Shifts is where your frontline engage for their scheduling needs. Your WFM system is the system of record for business rules, compliance, and intelligence.
 
 You can set up your connector for either a one-way data sync or a two-way data sync.
 
-- **One-way sync (WFM system to Shifts)**: In this setup, schedule data in your WFM system is synced to Shifts. The connector reads the data in your WFM system and writes it to Shifts. However, any changes made in Shifts by users won't be reflected back in your WFM system.
+- **One-way sync (WFM system to Shifts)**: In this setup, schedule data in your WFM system is synced to Shifts. The connector reads the data in your WFM system and writes it to Shifts. However, any changes made in Shifts by users aren't reflected back in your WFM system.
 
 - **Two-way sync (WFM system and Shifts)**: This setup allows for a bidirectional sync. Schedule data in your WFM system is synced to Shifts, and any changes made in Shifts by users are synced back to your WFM system. The connector validates and approves the changes users make in Shifts according to business rules enforced by your WFM system before the changes are written to Shifts.
-
-<!-- **One-way sync**: In a one-sync, schedule data in your WFM system is synced to Shifts. The connector reads data in your WFM system and writes the data to Shifts. Any changes made in Shifts by users aren't reflected in your WFM system.
-- **Two-way sync**: In a two-way sync, schedule data in your WFM system is synced to Shifts and changes made in Shifts by users are synced back to your WFM system. The connector validates and approves changes made in Shifts according to business rules enforced by your WFM system before the changes are written to Shifts.-->
 
 ### Terminology used in this article
 
@@ -60,7 +57,7 @@ You can set up your connector for either a one-way data sync or a two-way data s
 
 Here's an overview of the integration steps. Review this information to get an understanding of the overall process, including who performs each step.
 
-|Step|What you'll d|Who performs this step|
+|Step|What you'll do|Who performs this step|
 |---------|---------|---------||
 |1|Create your connector:<ul><li>Step 1a: [Sync changes made in Shifts to your WFM system](#step-1a-sync-changes-made-in-shifts-to-your-wfm-system)<ul><li>[/connect endpoint](#post-connect)</li><li>[/update endpoint](#post-teamsteamidupdate)</li></ul><li>Step 1b: [Sync data from your WFM system to Shifts](#step-1b-sync-data-from-your-wfm-system-to-shifts)</li></ul>|Developer|
 |2|[Register an app in the Microsoft Entra admin center](#step-2-register-an-app-in-the-microsoft-entra-admin-center)|An account that is at least a Cloud Application Administrator |
