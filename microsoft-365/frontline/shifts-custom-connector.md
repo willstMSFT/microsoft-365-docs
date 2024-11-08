@@ -30,7 +30,7 @@ In this article, you'll learn how to create a connector using the Microsoft Grap
 
 A connector syncs schedule data between your WFM system and Shifts, bringing your organization's schedules into Teams. Shifts is where your frontline engage for their scheduling needs. Your WFM system is the system of record for business rules, compliance, and intelligence.
 
-You can set up your connector for either a one-way data sync or a two-way data sync.
+You can set up your integration for either a one-way data sync or a two-way data sync.
 
 - **One-way sync (WFM system to Shifts)**: In this setup, schedule data in your WFM system is synced to Shifts. The connector reads the data in your WFM system and writes it to Shifts. However, any changes made in Shifts by users aren't reflected back in your WFM system.
 
