@@ -55,14 +55,21 @@ You can set up your integration for either a one-way data sync or a two-way data
 
 ### Get familiar with the integration process
 
-Here's an overview of the integration process. You must complete all the steps, regardless of whether you're setting up a one-way sync or a two-way sync. <!--Review this information to get an understanding of the overall process, including who performs each step.-->
+Here's an overview of the integration steps. Review this information to get an understanding of the overall process, including who performs each step.
 
-|Step|&nbsp; |Who performs this step|
+<!--|Step|&nbsp; |Who performs this step|
 |---------|---------|---------|
 |1|Create your connector:<ul><li>Step 1a: [Sync changes made in Shifts to your WFM system](#step-1a-sync-changes-made-in-shifts-to-your-wfm-system)<ul><li>[/connect endpoint](#post-connect)</li><li>[/update endpoint](#post-teamsteamidupdate)</li></ul><li>Step 1b: [Sync data from your WFM system to Shifts](#step-1b-sync-data-from-your-wfm-system-to-shifts)</li></ul>|Developer|
 |2|[Register an app in the Microsoft Entra admin center](#step-2-register-an-app-in-the-microsoft-entra-admin-center)|An account that is at least a Cloud Application Administrator |
 |3|[Step 3: Create teams and schedules for syncing](#step-3-create-teams-and-schedules-for-syncing)|Developer or Teams administrator |
-|4|Register and enable the workforce integration:<ul><li>Step 4b: [Register the workforce integration in your tenant](#step-4a-register-the-workforce-integration-in-your-tenant)</li><li>Step 4B: [Enable the workforce integration for your team schedules](#step-4b-enable-the-workforce-integration-for-your-team-schedules)</li></ul>|Step 4b: Global Administrator<br>Step 4B: Developer|
+|4|Register and enable the workforce integration:<ul><li>Step 4b: [Register the workforce integration in your tenant](#step-4a-register-the-workforce-integration-in-your-tenant)</li><li>Step 4B: [Enable the workforce integration for your team schedules](#step-4b-enable-the-workforce-integration-for-your-team-schedules)</li></ul>|Step 4b: Global Administrator<br>Step 4B: Developer|-->
+
+|Step|One-way sync |Two-way sync|Who performs this step|
+|---------|---------|------------------|------------------|
+|1|Create your connector:<ul><li>Step 1a: [Sync changes made in Shifts to your WFM system](#step-1a-sync-changes-made-in-shifts-to-your-wfm-system)<ul><li>Implement [/connect endpoint](#post-connect) and [make Shifts read-only](#if-you-want-to-set-up-a-one-way-sync-make-shifts-read-only)</li><li>Implement [/update endpoint](#post-teamsteamidupdate)</li></ul><li>Step 1b: [Sync data from your WFM system to Shifts](#step-1b-sync-data-from-your-wfm-system-to-shifts)</li></ul>|Create your connector:<ul><li>Step 1a: [Sync changes made in Shifts to your WFM system](#step-1a-sync-changes-made-in-shifts-to-your-wfm-system)<ul><li>Implement [/connect endpoint](#post-connect)</li><li>Implement [/update endpoint](#post-teamsteamidupdate)</li></ul><li>Step 1b: [Sync data from your WFM system to Shifts](#step-1b-sync-data-from-your-wfm-system-to-shifts)</li></ul>|Developer|
+|2|[Register an app in the Microsoft Entra admin center](#step-2-register-an-app-in-the-microsoft-entra-admin-center)|[Register an app in the Microsoft Entra admin center](#step-2-register-an-app-in-the-microsoft-entra-admin-center)|An account that is at least a Cloud Application Administrator |
+|3|[Step 3: Create teams and schedules for syncing](#step-3-create-teams-and-schedules-for-syncing)|[Step 3: Create teams and schedules for syncing](#step-3-create-teams-and-schedules-for-syncing)|Developer or Teams administrator |
+|4|Register and enable the workforce integration:<ul><li>Step 4b: [Register the workforce integration in your tenant](#step-4a-register-the-workforce-integration-in-your-tenant)</li><li>Step 4B: [Enable the workforce integration for your team schedules](#step-4b-enable-the-workforce-integration-for-your-team-schedules)</li></ul>|Register and enable the workforce integration:<ul><li>Step 4b: [Register the workforce integration in your tenant](#step-4a-register-the-workforce-integration-in-your-tenant)</li><li>Step 4B: [Enable the workforce integration for your team schedules](#step-4b-enable-the-workforce-integration-for-your-team-schedules)</li></ul>|Step 4b: Global Administrator<br>Step 4B: Developer|
 
 ## Step 1: Create your connector
 
