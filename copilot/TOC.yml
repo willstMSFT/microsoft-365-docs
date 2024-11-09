@@ -19,6 +19,8 @@
               href: microsoft-365-copilot-e5-guide.md
     - name: Deploy and enable
       items: 
+        - name: Get started with Microsoft 365 Copilot
+          href: microsoft-365-copilot-setup.md
         - name: Requirements for Microsoft 365 Copilot
           href: microsoft-365-copilot-requirements.md
         - name: Understand licensing for Microsoft 365 Copilot
