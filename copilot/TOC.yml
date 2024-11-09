@@ -17,7 +17,7 @@
       items: 
         - name: Requirements for Microsoft 365 Copilot
           href: microsoft-365-copilot-requirements.md
-        - name: ORIGINAL-Set up Microsoft 365 Copilot
+        - name: Get started with Microsoft 365 Copilot
           href: microsoft-365-copilot-setup.md
         - name: Adoption resources
           href: microsoft-365-copilot-enablement-resources.md
