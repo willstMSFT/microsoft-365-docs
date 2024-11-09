@@ -49,7 +49,7 @@ This article provides guidance for administrators on preparing their organizatio
 
   - [Microsoft Purview service description](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description)
   - [Microsoft SharePoint Premium - SharePoint Advanced Management overview](/sharepoint/advanced-management#licensing)
-  
+
 - To view Microsoft 365 app requirements, see [Microsoft 365 Copilot requirements](microsoft-365-copilot-requirements.md).
 
 ## Readiness activities
@@ -59,9 +59,9 @@ To ensure a smooth transition to Microsoft 365 Copilot, administrators should un
 - **Set up a test environment**: Establish a test environment with necessary licenses to validate configurations and test scenarios.
 - **Conduct pilot testing**: Perform pilot testing with a select group of users to identify any issues and gather feedback.
 - **Develop a communication plan**: Create a communication plan to inform users about the upcoming changes and provide them with the necessary resources and support.
-- **Review Conditional Access policies**: Ensure that conditional access policies are appropriately configured. Microsoft 365 Copilot supports tenant-level Conditional Access Policies (CAP) in SharePoint Online.
-- **Review Restricted Access Control and Information Barrier Policies**: Microsoft 365 Copilot does not currently support Restricted Access Control (RAC) and Microsoft 365 Information Barriers.
-- **Ensure network compliance**: Review and ensure that your network meets the requirements for Microsoft 365 Copilot services.
+- **Review Conditional Access policies**: Ensure that conditional access policies are appropriately configured. Microsoft 365 Copilot supports tenant-level Conditional Access Policies in SharePoint Online. To learn more, see [Conditional Access](/entra/identity/conditional-access/overview).
+- **Review SharePoint Search and Advanced Management Policies**: Use SharePoint Advanced Management (SAM) to control access to content, prevent oversharing, and manage content lifecycle. For detailed steps, see [Get ready for Microsoft 365 Copilot with SharePoint Advanced Management (SAM)](/sharepoint/get-ready-copilot-sharepoint-advanced-management). Additionally, consider implementing restricted SharePoint search to limit the discoverability of sensitive content. To learn more, see [Restricted SharePoint Search](/SharePoint/restricted-sharepoint-search).
+- **Ensure network compliance**: Review and ensure that your network meets the requirements for Microsoft 365 Copilot services. To learn more, see [Microsoft 365 Copilot network requirements](microsoft-365-copilot-requirements.md#network-requirements).
 
 ## Security measures for Microsoft 365 Copilot
 
@@ -73,13 +73,13 @@ Multi-factor authentication (MFA) is a critical security measure that requires u
 
 #### Steps to implement MFA
 
-- **Enable MFA for all users**: Ensure that MFA is enabled for all users in your organization. This can be done through the Microsoft 365 admin center. To learn more, see [Set up multifactor authentication for Microsoft 365](/security-and-compliance/set-up-multi-factor-authentication).
+- **Enable MFA for all users**: Ensure that MFA is enabled for all users in your organization. This can be done through the Microsoft 365 admin center. To learn more, see [Set up multifactor authentication for Microsoft 365](/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication).
 - **Configure Conditional Access policies**: Set up conditional access policies to enforce MFA based on user risk, location, and device compliance. For a tutorial, see [Secure user sign-in events with Microsoft Entra multifactor authentication](/entra/identity/authentication/tutorial-enable-azure-mfa)
 - **Educate users**: Provide training and resources to help users understand the importance of MFA and how to use it effectively.
 
 ### Audit logging
 
-Audit logging is essential for tracking and monitoring activities within your Microsoft 365 environment. It helps administrators detect and respond to potential security incidents and ensures compliance with regulatory requirements.
+Audit logging is essential for tracking and monitoring activities within your Microsoft 365 environment. It helps administrators detect and respond to potential security incidents and ensures compliance with regulatory requirements. To learn more, see [Audit logging and monitoring overview](/compliance/assurance/assurance-audit-logging).
 
 #### Steps to implement audit logging
 
@@ -99,9 +99,9 @@ To learn more, see [Microsoft 365 Copilot and privacy controls for connected exp
 
 ### Step 2 - Evaluate data governance maturity and data security controls
 
-✅ **[need to add a line here]**
+✅ **Use the Microsoft 365 Copilot Optimization Assessment**
 
-Before deploying Microsoft 365 Copilot, it is essential to evaluate your organization's data governance maturity and data security controls. This can be achieved by completing the [Microsoft 365 Copilot Optimization Assessment](https://www.microsoft.com/solutionassessments/safeedbackform). Based on the outcomes of the assessment, determine your path forward to ensure that your organization is ready for Copilot deployment.
+Before deploying Microsoft 365 Copilot, it is essential to evaluate your organization's data governance maturity and data security controls. This can be achieved by completing the [Microsoft 365 Copilot Optimization Assessment](https://www.microsoft.com/solutionassessments/). Based on the outcomes of the assessment, determine your path forward to ensure that your organization is ready for Copilot deployment.
 
 ### Step 3 - Update channels
 
@@ -161,7 +161,7 @@ When you're ready to assign Copilot licenses to your users, there are three phas
 
 1. **Pilot**: Assign licenses to a small group of users to test the deployment and gather feedback.
 2. **Deploy**: Assign licenses to a larger group of users.
-3. **Operate**: Monitor usage and adoption, and make adjustments as needed.
+3. **Optimize**: Monitor usage and adoption, and make adjustments as needed.
 
 To learn more about these phases, and possible actions you can take in each phase, see the [Microsoft deployment blueprint to address oversharing in Microsoft 365 Copilot](microsoft-365-copilot-privacy.md#committed-to-responsible-ai).
 
@@ -185,7 +185,7 @@ To help drive adoption, create a group of early adopters. This group can help yo
 
 #### Deploy
 
-✅ Fully deploy Copilot licenses to all users in your organization
+✅ **Fully deploy Copilot licenses to all users in your organization**
 
 To deploy Copilot licenses to all users in your organization, follow these steps:
 
@@ -194,28 +194,28 @@ To deploy Copilot licenses to all users in your organization, follow these steps
 
 During this phase, you may also want to:
 
-- Focus on preventing oversharing by limiting external sharing, restricting access to certain files or folders, and setting up alerts to notify you of any unusual activity. To learn more, see [Site governance, permission, and sharing for site owners](https://support.microsoft.com/office/overview-site-governance-permission-and-sharing-for-site-owners-95e83c3d-e1b0-4aae-9d08-e94dcaa4942es).
+- Focus on preventing oversharing by limiting external sharing, restricting access to certain files or folders, and setting up alerts to notify you of any unusual activity. To learn more, see [Site governance, permission, and sharing for site owners](https://support.microsoft.com/office/overview-site-governance-permission-and-sharing-for-site-owners-95e83c3d-e1b0-4aae-9d08-e94dcaa4942e).
 - Use sensitivity labels to classify and protect sensitive information. These labels allow you to automatically encrypt files containing sensitive data or restrict access to files marked as "confidential." To learn more, see [Get started with sensitivity labels](/purview/get-started-with-sensitivity-labels).
 
 #### Optimize
 
 ✅ **Get insights and user sentiment**
 
-To measure the impact of Copilot on your organization, use the [Copilot Dashboard from Viva Insights](/viva/insights/org-team-insights/copilot-dashboard), and the [Microsoft 365 usage reports in the admin center](/activity-reports/activity-reports). These tools provide organizational leaders and IT decision makers with insights into readiness, adoption, impact, and user sentiment.
+To measure the impact of Copilot on your organization, use the [Copilot Dashboard from Viva Insights](/viva/insights/org-team-insights/copilot-dashboard), and the [Microsoft 365 usage reports in the admin center](/microsoft-365/admin/activity-reports/activity-reports). These tools provide organizational leaders and IT decision makers with insights into readiness, adoption, impact, and user sentiment.
 
 To learn more, see:
 
 - [Open the Microsoft Copilot Dashboard (Preview) from Viva Insights](https://aka.ms/copilotdashboard)
 - [Learn more about the Microsoft Copilot Dashboard (Preview) from Viva Insights](/viva/insights/org-team-insights/copilot-dashboard)
-- [Microsoft 365 reports in the admin center – Microsoft 365 Copilot usage](/activity-reports/microsoft-365-copilot-usage)
-- [Microsoft 365 reports in the admin center – Microsoft 365 Copilot readiness](/activity-reports/microsoft-365-copilot-readiness)
+- [Microsoft 365 reports in the admin center – Microsoft 365 Copilot usage](/microsoft-365/admin//activity-reports/microsoft-365-copilot-usage)
+- [Microsoft 365 reports in the admin center – Microsoft 365 Copilot readiness](/microsoft-365/admin//activity-reports/microsoft-365-copilot-readiness)
 
-## Copilot with Commercial Data Protection
+## Copilot with enterprise data protection
 
-To enhance data security, enable commercial data protection in Copilot for all users in your organization. Follow these steps:
+To enhance data security, enable enterprise data protection (EDP) in Copilot for all users in your organization. Follow these steps:
 
-- **Log into Copilot**: Access Copilot on copilot.microsoft.com and flip the Work/Web toggle to Web. Check if commercial data protection is enabled by looking for the green Protected pill by the user profile.
-- **Review documentation**: Review the Copilot with commercial data protection documentation to ensure that commercial data protection is available for your users.
+- **Log into Copilot**: Access Copilot on [copilot.microsoft.com](https://copilot.microsoft.com/) and ensure that enterprise data protection is enabled.
+- **Review documentation**: Review the [Enterprise Data Protection in Microsoft 365 Copilot documentation](enterprise-data-protection.md) to ensure that EDP is available and properly configured for your users.
 
 ## More resources
 
