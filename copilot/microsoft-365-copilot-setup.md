@@ -49,12 +49,10 @@ This article provides guidance for administrators on preparing their organizatio
 
   - [Microsoft Purview service description](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description)
   - [Microsoft SharePoint Premium - SharePoint Advanced Management overview](/sharepoint/advanced-management#licensing)
-
+  
 - To view Microsoft 365 app requirements, see [Microsoft 365 Copilot requirements](microsoft-365-copilot-requirements.md).
 
 ## Readiness activities
-
-[**work in progress**]
 
 To ensure a smooth transition to Microsoft 365 Copilot, administrators should undertake the following readiness activities:
 
