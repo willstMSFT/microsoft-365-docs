@@ -41,7 +41,7 @@ You can set up your integration for either a one-way data sync or a two-way data
 |Term |Description |
 |---------|---------|
 |connector| An app that syncs schedule data between your WFM system and Shifts.        |
-|workforce integration| An entity that specifies the callback URL for your connector, the encryption method for communication, and the Shifts entities to sync. |
+|workforce integration| An entity that defines the encryption method for communication, the callback URL for your connector, and the Shifts entities to be synced.|
 
 ## Before you begin
 
@@ -55,7 +55,7 @@ You can set up your integration for either a one-way data sync or a two-way data
 
 ### Get familiar with the integration process
 
-Here's an overview of the integration steps. Review this information to get an understanding of the overall process, including who performs each step.
+Here's an overview of the integration process. You must complete all the steps, regardless of whether you're setting up a one-way sync or a two-way sync. <!--Review this information to get an understanding of the overall process, including who performs each step.-->
 
 |Step|&nbsp; |Who performs this step|
 |---------|---------|---------|
