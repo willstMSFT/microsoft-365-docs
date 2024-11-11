@@ -27,11 +27,11 @@ appliesto:
 > [!WARNING]
 > This article is a work in progress for Ignite. Do not publish.
 
-When you create a Microsoft 365 subscription, a tenant is automatically created for your organization. Your tenant sits inside the **Microsoft 365 service boundary**, where [Microsoft 365 Copilot](microsoft-365-copilot-overview) can access your organization's data.
+When you create a Microsoft 365 subscription, a tenant is automatically created for your organization. Your tenant sits inside the **Microsoft 365 service boundary**, where [Microsoft 365 Copilot](microsoft-365-copilot-overview.md) can access your organization's data.
 
 This data includes information that the user can access, including their activities, and the content they create & interact with in Microsoft 365 apps.
 
-:::image type="content" source="media/microsoft-365-copilot-architecture/copilot-tenant-architecture.svg" alt-text="Diagram that shows the Microsoft 365 tenant architecture with Microsoft 365 Copilot and user data." lightbox="media/microsoft-365-copilot-architecture/copilot-tenant-architecture.png":::
+:::image type="content" source="media/microsoft-365-copilot-architecture/copilot-tenant-architecture.svg" alt-text="Diagram that shows the Microsoft 365 tenant architecture with Microsoft 365 Copilot and user data." lightbox="media/microsoft-365-copilot-architecture/copilot-tenant-architecture.svg":::
 
 Copilot is a shared service, just like many other services in Microsoft 365. When using Copilot in your tenant:
 
@@ -50,7 +50,7 @@ When users open a Microsoft 365 app, like Word or PowerPoint, they can use Copil
 
 The following diagram provides a visual representation of how a Copilot prompt works.
 
-:::image type="content" source="media/microsoft-365-copilot-architecture/copilot-query-flow.svg" alt-text="Diagram that shows the relationship between users, devices, apps, and Microsoft 365 Copilot." lightbox="media/microsoft-365-copilot-architecture/copilot-query-flow.png":::
+:::image type="content" source="media/microsoft-365-copilot-architecture/copilot-query-flow.svg" alt-text="Diagram that shows the relationship between users, devices, apps, and Microsoft 365 Copilot." lightbox="media/microsoft-365-copilot-architecture/copilot-query-flow.svg":::
 
 Let's take a look:
 
@@ -72,7 +72,7 @@ Copilot only accesses data that an individual user is authorized to access, base
 
 The following diagram provides a visual representation of how Copilot and user access work together.
 
-:::image type="content" source="media/microsoft-365-copilot-architecture/copilot-user-access.svg" alt-text="Diagram that shows Microsoft 365 Copilot only accesses the data the user has permissions to access." lightbox="media/microsoft-365-copilot-architecture/copilot-user-access.png":::
+:::image type="content" source="media/microsoft-365-copilot-architecture/copilot-user-access.svg" alt-text="Diagram that shows Microsoft 365 Copilot only accesses the data the user has permissions to access." lightbox="media/microsoft-365-copilot-architecture/copilot-user-access.svg":::
 
 Let's take a look:
 
@@ -92,7 +92,7 @@ To learn more, see [Data stored about user interactions with Microsoft 365 Copil
 
 Copilot honors Conditional Access policies and multifactor authentication (MFA).
 
-:::image type="content" source="media/microsoft-365-copilot-architecture/copilot-conditional-access-mfa.svg" alt-text="Diagram that shows Conditional Access and MFA can control access to Microsoft 365 Copilot." lightbox="media/microsoft-365-copilot-architecture/copilot-conditional-access-mfa.png":::
+:::image type="content" source="media/microsoft-365-copilot-architecture/copilot-conditional-access-mfa.svg" alt-text="Diagram that shows Conditional Access and MFA can control access to Microsoft 365 Copilot." lightbox="media/microsoft-365-copilot-architecture/copilot-conditional-access-mfa.svg":::
 
 This means:
 

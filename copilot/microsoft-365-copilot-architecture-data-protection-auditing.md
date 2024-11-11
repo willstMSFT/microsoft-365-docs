@@ -27,7 +27,7 @@ appliesto:
 > [!WARNING]
 > This article is a work in progress for Ignite. Do not publish.
 
-[Microsoft 365 Copilot](microsoft-365-copilot-overview) honors your security & data protection controls, and includes tools for auditing usage data. This article describes and illustrates:
+[Microsoft 365 Copilot](microsoft-365-copilot-overview.md) honors your security & data protection controls, and includes tools for auditing usage data. This article describes and illustrates:
 
 - How Copilot works with Microsoft Purview sensitivity labels.
 - The controls you can use to prevent oversharing data in SharePoint sites and OneDrive.
