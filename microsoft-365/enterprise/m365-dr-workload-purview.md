@@ -104,7 +104,7 @@ Refer to the [ADR Commitment page](m365-dr-commitments.md#risk-and-compliance---
 
 ADR applies to the following services within Purview Information Protection:
 
-#### Office Message Encryption:
+#### Office Message Encryption (OME):
 
 - Basic Office Message Encryption
 - Advanced Office Message Encryption
@@ -138,7 +138,7 @@ Capability summary: Sensitivity labels from Microsoft Purview Information Protec
 
 Commitment:
 
-Refer to the [ADR Commitment page](m365-dr-commitments.md#information-protection---sensitivity-labels) for the specificCustomer Data at rest commitment for Information Protection - Sensitivity labels.
+Refer to the [ADR Commitment page](m365-dr-commitments.md#information-protection---sensitivity-labels) for the specific Customer Data at rest commitment for Information Protection - Sensitivity Labels.
 
 ### Risk & Compliance - Audit (Standard)
 
