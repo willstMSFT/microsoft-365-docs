@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 11/07/2024
+ms.date: 11/11/2024
 audience: Admin
 ms.reviewer: mandia, bcarter
 ms.topic: overview
@@ -96,7 +96,7 @@ Copilot honors Conditional Access (CA) policies and multifactor authentication (
 
 This means:
 
-- If you [enable and configure CA policies](/entra/identity/conditional-access/plan-conditional-access), make sure your users are allowed to access Microsoft 365 services. You can manage access based on conditions you configure, including enforcing device compliance policies you set.
+- If you [enable and configure CA policies](/entra/identity/conditional-access/plan-conditional-access), make sure your users are allowed to access Microsoft 365 services. You can manage access based on conditions you configure, including enforcing device compliance policies you set. To learn more, see [Protect AI with Conditional Access policy](/entra/identity/conditional-access/policy-all-users-copilot-ai-security).
 
   If you use Microsoft Intune, then you can use Intune compliance policies and CA together. To learn more, see [Use compliance policies to set rules for devices you manage with Intune](/mem/intune/protect/device-compliance-get-started).
 
