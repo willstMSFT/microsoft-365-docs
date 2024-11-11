@@ -419,7 +419,7 @@ The SharePoint site admin can select the default label for the document library.
 To learn more, including how to run the PowerShell commands for the checkbox, details about the labeling outcomes for each configuration, and any limitations:
 
 - [Configure a default sensitivity label for a SharePoint document library](/purview/sensitivity-labels-sharepoint-default-label)
-- [Configure SharePoint with a sensitivity label to extend permissions to downloaded documents](purview/sensitivity-labels-sharepoint-extend-permissions)
+- [Configure SharePoint with a sensitivity label to extend permissions to downloaded documents](/purview/sensitivity-labels-sharepoint-extend-permissions)
 
 #### 6. Automatically apply sensitivity labels to files and emails
 
