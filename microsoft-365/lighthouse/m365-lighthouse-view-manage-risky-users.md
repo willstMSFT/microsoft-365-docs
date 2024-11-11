@@ -91,6 +91,6 @@ To take action on multiple affected users at once:
 
 ## Related content
 
-[Tutorial: Use risk detections for user sign-ins to trigger Azure AD Multi-Factor Authentication or password changes](/azure/active-directory/authentication/tutorial-risk-based-sspr-mfa) (article)\
+[Use risk detections for user sign-ins to trigger Microsoft Entra multifactor authentication or password changes](/azure/active-directory/authentication/tutorial-risk-based-sspr-mfa) (tutorial)\
 [What is risk?](/azure/active-directory/identity-protection/concept-identity-protection-risks) (article) \
 [Remediate risks and unblock users](/azure/active-directory/identity-protection/howto-identity-protection-remediate-unblock) (article)
