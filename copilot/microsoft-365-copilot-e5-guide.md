@@ -393,24 +393,36 @@ To learn more about this configuration, see [Enable sensitivity labels for files
 
 #### 5. Set default sensitivity labels for your SharePoint document libraries
 
-This configuration is appropriate when your document libraries store files with the same level of sensitivity.
+Although the default labeling policy is configured to apply the default sensitivity label of **General \ All Employees (unrestricted)** for unlabeled files, emails and meetings, you might want to override that setting with location-based labeling for SharePoint document libraries. This labeling method applies a default label to a document library, so that files in that library can be automatically labeled with two options that are mutually exclusive for the same library:
 
-The SharePoint site admin can do this task.
+- Default sensitivity label that can apply admin-defined permissions (the **Assign permissions now** encrytion option), or no encryption.
+
+    This configuration is appropriate when your document libraries store files that usually have the same level of known sensitivity but for exceptions, you want users to be able to select an alternative label that doesn't apply encryption.
+
+- Default sensitivity label that extends protection to files that are downloaded, copied, or moved. This label must be configured with user-defined permissions (the **Let users assign permissions** encrytion option). Currently in preview, this configuration requires PowerShell commands at the tenant-level and then the site level before you can select the sensitivity label.
+    
+    This configuration is appropriate when you haven't had time to inspect the file contents for sensitivity and as a result, you want to prevent Copilot from accessing the file contents and also continue to protect the files when they are downloaded.  
+
+Both options provide a baseline level of protection that's specific to the document library, doesn't require content inspection, and doesn't rely on action from end users. 
+
+The SharePoint site admin can select the default label for the document library.
 
 1. In your SharePoint site, select **Documents** > **Settings** icon > **Library settings** > **More library settings**.
-2. In **Default sensitivity labels** (Apply label to items in this list or library), select a sensitivity label from the drop-down list, such as **Confidential
-\ All Employees**
-3. **Save** your changes.
+2. In **Default sensitivity labels** (Apply label to items in this list or library):
 
-When set:
+    a. For a standard default sensitivity label, from the drop-down box, select a sensitivity label that's suitable for the majority of files in the libary. It can be a sensitivity label that's configured for admin-defined permissions, such as **Confidential \ All Employees**. Or alternatively, a sensitivity label that doesn't apply encryption, such as **Public**. Don't select the checkbox **Extend protection on download, copy, or move**.
+   
+   b. For a default sensitivity label that extends protection to files that are downloaded, copied, or moved, select the checkbox **Extend protection on download, copy, or move**. Then from the drop-down box, select a sensitivity label that's configured for user-defined permissions, such as **Confidential \ Trusted People**.
 
-- SharePoint automatically applies the label to the files, which can include [files with a lower sensitivity label](/purview/sensitivity-labels-sharepoint-default-label#will-an-existing-label-be-overridden).
-- It provides a baseline level of protection that's specific to the document library. It doesn't require content inspection and doesn't rely on end users.
+    > [!NOTE]
+    > The **Extend protection on download, copy, or move** checkbox isn't displayed until the prerequisite PowerShell commands are complete.
+   
+6. **Save** your changes.
 
-To learn more, see:
+To learn more, including how to run the PowerShell commands for the checkbox, details about the labeling outcomes for each configuration, and any limitations:
 
-- [Overview - Default sensitivity labels for SharePoint document libraries](/purview/sensitivity-labels-sharepoint-default-label)
-- [Steps - Add a sensitivity label to SharePoint document library](https://support.microsoft.com/office/add-a-sensitivity-label-to-sharepoint-document-library-54b1602b-db0a-4bcb-b9ac-5e20cbc28089)
+- [Configure a default sensitivity label for a SharePoint document library](/purview/sensitivity-labels-sharepoint-default-label)
+- [Configure SharePoint with a sensitivity label to extend permissions to downloaded documents](purview/sensitivity-labels-sharepoint-extend-permissions)
 
 #### 6. Automatically apply sensitivity labels to files and emails
 
