@@ -43,7 +43,7 @@ Copilot works together with your Microsoft Purview sensitivity labels and encryp
 
 The following diagram provides a visual representation of how Copilot honors your information protection controls using sensitivity labels and encryption.
 
-:::image type="content" source="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-sensitivity-labels.svg" alt-text="Diagram that shows how Copilot works with documents with Microsoft Purview sensitivity labels." lightbox="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-sensitivity-labels.png":::
+:::image type="content" source="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-sensitivity-labels.png" alt-text="Diagram that shows how Copilot works with documents with Microsoft Purview sensitivity labels." lightbox="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-sensitivity-labels.png":::
 
 Let's take a look:
 
@@ -71,7 +71,7 @@ Microsoft 365 includes controls to help you prevent oversharing data through Cop
 
 The following diagram provides a visual representation of some of the features in your Microsoft 365 E3+ and SharePoint Advanced Management licenses that help you prevent oversharing.
 
-:::image type="content" source="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-oversharing-controls.svg" alt-text="Diagram that shows the controls you can use to prevent sharing specific data in SharePoint Online and OneDrive." lightbox="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-oversharing-controls.png":::
+:::image type="content" source="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-oversharing-controls.png" alt-text="Diagram that shows the controls you can use to prevent sharing specific data in SharePoint Online and OneDrive." lightbox="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-oversharing-controls.png":::
 
 Let's take a look:
 
@@ -101,7 +101,7 @@ Copilot usage data is stored in several places. You can use the tools provided w
 
 The following diagram provides a visual representation of the different features in your Microsoft 365 E5 license that help you search and audit Copilot data.
 
-:::image type="content" source="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-auditing-tools.svg" alt-text="Diagram that shows the controls you can use to prevent sharing specific data in SharePoint Online and OneDrive." lightbox="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-auditing-tools.png":::
+:::image type="content" source="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-auditing-tools.png" alt-text="Diagram that shows the controls you can use to prevent sharing specific data in SharePoint Online and OneDrive." lightbox="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-auditing-tools.png":::
 
 Let's take a look:
 
