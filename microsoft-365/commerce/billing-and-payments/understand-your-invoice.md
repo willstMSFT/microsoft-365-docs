@@ -167,7 +167,7 @@ Payment instructions depend on your payment method and are provided at the botto
 
 - **Purchases Charge dates:** The service period during which you're charged to use the service. These are the dates of service the charge applies to.
 
-- **Billing period:** The time period during which charges accrue. If the period is a single day, only purchases made on that day are shown on the invoice. There's also a monthly invoice with a billing period for the previous month. This invoice is for changes made to an existing subscription, such as adding seats or cancelling.
+- **Billing period:** The time period during which charges accrue. If the period is a single day, only purchases made on that day are shown on the invoice. There's also a monthly invoice with a billing period for the previous month. This invoice is for changes made to an existing subscription, such as adding seats or canceling.
 
 ### Why don't I see Azure prepayment as a payment method?
 
