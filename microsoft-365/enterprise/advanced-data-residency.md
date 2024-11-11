@@ -44,20 +44,6 @@ The following workloads are included in ADR. For more information, see:
   - [Audit (Premium)](m365-dr-workload-purview.md#purview-audit-premium)
   - [Data Lifecycle Management (DLM)](m365-dr-workload-purview.md#purview-audit-premium)
 
-###### **Table 1: Eligible Microsoft Purview Services for Advanced Data Residency**
-
-| Solution Area | Services | Components |
-|:-----|:-----|:-----
-| Data Security |Data Loss Prevention (DLP) |See [insert .md page] for specific commitments.|
-| Data Security |Information Barriers |See [insert .md page] for specific commitments.|
-| Data Security |Information Protection (MIP) |See [insert .md page] for specific commitments.|
-| Risk & Compliance |Audit (Standard) |See [insert .md page] for specific commitments.|
-| Risk & Compliance |Audit (Premium) |See [insert .md page] for specific commitments.|
-| Risk & Compliance |Data Lifecycle Management (DLM) |See [insert .md page] for specific commitments.|
-
-> [!NOTE]
-> *The Microsoft Purview services list mentioned above includes all services covered as part of the Advanced Data Residency commitment as of November 2024. Additional Microsoft Purview services are not currently supported.
-
 > [!NOTE]
 > *Viva Topics will be retired on February 22, 2025. Therefore, as of October 31, 2024, Viva Topics will no longer be a supported workload in ADR. Starting with the upcoming local region launches in Taiwan and New Zealand, Viva Topics customer data will not be migrated to new local regions, nor will new customers have Viva Topics stored in existing local regions. For more details, please visit [aka.ms/TopicsFebSupport](https://aka.ms/TopicsFebSupport).
 
