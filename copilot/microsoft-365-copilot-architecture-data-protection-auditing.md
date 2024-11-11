@@ -71,7 +71,7 @@ Microsoft 365 includes controls to help you prevent oversharing data through Cop
 
 The following diagram provides a visual representation of some of the features in your Microsoft 365 E3+ and SharePoint Advanced Management licenses that help you prevent oversharing.
 
-:::image type="content" source="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-oversharing-controls.png" alt-text="Diagram that shows the controls you can use to prevent sharing specific data in SharePoint Online and OneDrive." lightbox="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-oversharing-controls.png":::
+:::image type="content" source="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-oversharing-controls.png" alt-text="Diagram that shows the controls you can use to prevent sharing specific data in SharePoint Online and OneDrive, and how they affect Microsoft 365 Copilot." lightbox="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-oversharing-controls.png":::
 
 Let's take a look:
 
@@ -101,7 +101,7 @@ Copilot usage data is stored in several places. You can use the tools provided w
 
 The following diagram provides a visual representation of the different features in your Microsoft 365 E5 license that help you search and audit Copilot data.
 
-:::image type="content" source="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-auditing-tools.png" alt-text="Diagram that shows the controls you can use to prevent sharing specific data in SharePoint Online and OneDrive." lightbox="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-auditing-tools.png":::
+:::image type="content" source="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-auditing-tools.png" alt-text="Diagram that shows the eDiscovery, Communication Compliance, and retention features in Microsoft 365 and how they affect Microsoft 365 Copilot." lightbox="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-auditing-tools.png":::
 
 Let's take a look:
 
