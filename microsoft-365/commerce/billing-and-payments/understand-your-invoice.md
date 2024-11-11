@@ -48,7 +48,11 @@ The invoice for your Microsoft business subscription provides a summary of the c
 
 Depending on the billing frequency that you chose when you bought your subscription, you receive an invoice monthly, every three months, every six months, or annually. 
 
-Each new subscription purchase receives the first invoice the next day and is billed on this same day of the month with the frequency selected at purchase. Changes you make to an existing subscription will appear on the monthly invoice around the beginning of the following month.
+Each new subscription purchase receives the first invoice the next day and is billed on this same day of the month with the frequency selected at purchase.  Subscriptions with recurring billing will have subsequent invoices on that same day of the month. 
+
+Changes you make to an existing subscription will appear on the monthly invoice around the beginning of the following month.  
+
+If you acquire multiple new subscriptions on different days within a month (excluding additions to current subscriptions), you will receive separate invoices for each.
 
 > [!NOTE]
 > You can only change the billing frequency for a subscription when you buy, upgrade, or renew a subscription.
