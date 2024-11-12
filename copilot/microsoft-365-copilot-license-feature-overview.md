@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: laurawi
-ms.date: 11/11/2024
+ms.date: 11/12/2024
 audience: Admin
 ms.topic: get-started
 ms.service: microsoft-365-copilot
@@ -56,28 +56,23 @@ The following table lists some of the features that can help with Copilot. These
 | Restricted SharePoint Search (RSS) | ✅  | ✅  |
 | &nbsp; | &nbsp; | &nbsp; |
 | **Microsoft Purview features** | &nbsp; | &nbsp; |
-| Sensitivity labels |  ✅ <br/><br/> You can: <br/><br/>- Create custom labels. <br/> - Manually apply labels. | ✅ <br/><br/> You can: <br/><br/> - Create custom labels. <br/> - Use default labels. <br/> - Manually apply labels. <br/> - Auto-apply labels. |
+| Sensitivity labels |  ✅ <br/><br/> You can: <br/><br/>- Create custom labels. <br/> - Manually apply labels. | ✅ <br/><br/> You can: <br/><br/> - Create custom labels. <br/> - Use default built-in labels. <br/> - Manually apply labels. <br/> - Auto-apply labels. <br/> - Can apply to containers, like a SharePoint or Teams site |
 | Data loss prevention (DLP)| ✅ <br/><br/>Policies can target: <br/><br/>- SharePoint <br/> - Exchange <br/> - OneDrive | ✅ <br/><br/> Policies can target: <br/><br/>- SharePoint <br/> - Exchange <br/> - OneDrive <br/> - Teams <br/> - Endpoints |
 | Adaptive Protection | n/a | ✅ |
-| Data lifecycle management  | ✅ <br/><br/> You can: <br/><br/> - Create retention policies<br/> - Manually apply retention labels<br/> - Use Content explorer | ✅ <br/><br/> You can: <br/><br/> - Create retention policies<br/> - Manually apply retention labels<br/> - Auto-apply retention labels <br/> - Use Content explorer <br/> - Use Activity explorer |
+| Data lifecycle management  | ✅ <br/><br/> You can: <br/><br/> - Create retention policies<br/> - Manually apply retention labels<br/> - Use Content explorer | ✅ <br/><br/> You can: <br/><br/> - Create retention policies<br/> - Manually apply retention labels<br/> - Auto-apply retention labels <br/> - Use Content explorer <br/> - Use Activity explorer <br/> - Can use Data Lifecycle Management or Records Management |
 | Communication Compliance | n/a | ✅ |
 | eDiscovery | ✅ <br/><br/>Can search. | ✅ <br/><br/> Can search and delete. |
 | Data Security Posture Management for AI (previously called AI Hub) |  ✅ | ✅ |
 | &nbsp; | &nbsp; | &nbsp; |
 | **SharePoint Advanced Management (SAM) features** | &nbsp; | &nbsp; |
+| Site ownership policy | ✅ | ✅ |
+| Site lifecycle management | ✅ | ✅ |
 | Data access governance (DAG) reports | ✅ | ✅ |
 | Restricted access control (RAC) | ✅ | ✅ |
-| Site lifecycle management | ✅ | ✅ |
+| Restricted content discoverability policy (RCD) | ✅ | ✅ |
 | Change history report | ✅ | ✅ |
 
-?? ASK RUI ?? Services not in SAM license that comes with Copilot
-
-- Site Lifecycle Management
-- AI Powered Insights, maybe called AI Insights
-- default document library labels
-- extended SharePoint permissions
-- EEEU report
-- Sharing report
+---
 
 To learn more about these features and how they affect Copilot, see:
 
@@ -94,17 +89,17 @@ To learn more about licensing, see:
 
 Microsoft continues to invest in features that help you get ready for Copilot. This section describes some more services and features that are available to you.
 
-### AI Hub in Microsoft Purview
+### Data Security Posture Management for AI in Microsoft Purview
 
-[AI Hub](/purview/ai-microsoft-purview) is a central location that helps you secure data for AI apps and proactively monitor AI use. It has preconfigured policies that focus on AI and reports that give information into AI use within your organization. It also includes eDiscovery and you can use it to analyze Copilot prompts and responses.
+[Data Security Posture Management for AI](/purview/ai-microsoft-purview) is a central location that helps you secure data for AI apps and proactively monitor AI use. It has preconfigured policies that focus on AI and reports that give information into AI use within your organization. It also includes eDiscovery and you can use it to analyze Copilot prompts and responses.
 
-If your focus is on Copilot, then use AI Hub.
+If your focus is on Copilot, then use Data Security Posture Management for AI (previously called AI Hub).
 
-1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as an admin in one of the groups listed at [Microsoft Purview AI Hub - permissions](/purview/ai-microsoft-purview-permissions).
-1. Select **Solutions** > **AI Hub** > **Recommendations**.
+1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as an admin in one of the groups listed at [Microsoft Purview Data Security Posture Management for AI - permissions](/purview/ai-microsoft-purview-permissions).
+1. Select **Solutions** > **Data Security Posture Management for AI** > **Recommendations**.
 1. Create the recommended policies.
 
-To learn more about these policies, see [AI Hub - one-click policies](/purview/ai-microsoft-purview-considerations#one-click-policies-from-the-ai-hub).
+To learn more about these policies, see [Data Security Posture Management for AI - one-click policies](/purview/ai-microsoft-purview-considerations#one-click-policies-from-the-ai-hub).
 
 ### Copilot dashboard in Viva Insights
 
@@ -120,7 +115,7 @@ To learn more, see [Microsoft Copilot Dashboard for Microsoft 365 customers](/vi
 
 ## Get started with your E3 or E5 features
 
-The next step is to start using the features in your Microsoft 365 license:
+The next step is to start using the features in your license:
 
 - [Microsoft 365 Copilot admin guide for E3 licenses](microsoft-365-copilot-e3-guide.md)
 - [Microsoft 365 Copilot admin guide for E5 licenses](microsoft-365-copilot-e5-guide.md)

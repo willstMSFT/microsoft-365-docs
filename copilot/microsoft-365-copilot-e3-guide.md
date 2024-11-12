@@ -266,7 +266,7 @@ To learn more, see:
 
 ### Review and analyze Copilot prompts and responses
 
-✅ **Use [AI Hub](/purview/ai-microsoft-purview) or [eDiscovery](/purview/edisc) to analyze Copilot user prompts and responses**
+✅ **Use [Data Security Posture Management for AI](/purview/ai-microsoft-purview) or [eDiscovery](/purview/edisc) to analyze Copilot user prompts and responses**
 
 When users enter a prompt and get a response from Copilot, you can view and search these interactions. Specifically, these features help you:
 
@@ -277,17 +277,17 @@ There are two ways to review and analyze Copilot prompts and responses - **Data 
 
 # [Data Security Posture Management for AI](#tab/aihub)
 
-[AI Hub](/purview/ai-microsoft-purview#microsoft-purview-ai-hub-provides-insights-policies-and-controls-for-ai-apps) is a central location in the Microsoft Purview portal that proactively monitors AI use. It includes eDiscovery and you can use it to analyze and review Copilot prompts and responses.
+[Data Security Posture Management for AI](/purview/ai-microsoft-purview#microsoft-purview-ai-hub-provides-insights-policies-and-controls-for-ai-apps) (previously called AI Hub) is a central location in the Microsoft Purview portal that proactively monitors AI use. It includes eDiscovery and you can use it to analyze and review Copilot prompts and responses.
 
-1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as an admin in one of the groups listed at [AI Hub - Permissions](/purview/ai-microsoft-purview-permissions).
+1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as an admin in one of the groups listed at [Data Security Posture Management for AI - Permissions](/purview/ai-microsoft-purview-permissions).
 2. Select **Solutions** > **Data Security Posture Management for AI** > **Activity Explorer**.
 3. Select an existing activity in the list. For example, if there's a **Sensitive info types detected** activity, select it.
 4. Select **View related AI interaction activity**. In **Interaction details**, you can see the app and export an activity.
 
 To learn more, see:
 
-- [Microsoft Purview AI Hub](/purview/ai-microsoft-purview-considerations)
-- [AI Hub - Activity explorer events](/purview/ai-microsoft-purview-considerations#activity-explorer-events)
+- [Microsoft Purview Data Security Posture Management for AI](/purview/ai-microsoft-purview-considerations)
+- [Data Security Posture Management for AI - Activity explorer events](/purview/ai-microsoft-purview-considerations#activity-explorer-events)
 
 # [eDiscovery](#tab/edisc)
 
