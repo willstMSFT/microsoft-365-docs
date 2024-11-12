@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: laurawi
-ms.date: 11/11/2024
+ms.date: 11/12/2024
 ms.reviewer: cabailey, ruihu
 audience: Admin
 ms.topic: get-started
@@ -98,13 +98,13 @@ To learn more about SAM + Copilot, see [Get ready for Copilot with SharePoint Ad
 
 ### Ensure all sites have valid owners
 
-✅ **Run a [Site Ownership policy](/sharepoint/tbd) that finds any sites that don't have at least two owners**
+✅ **Run a [Site Ownership policy](/sharepoint/create-sharepoint-site-ownership-policy) that finds any sites that don't have at least two owners**
 
 A Site ownership policy automatically detects sites that don't have at least two owners and can help find potential owners. Set up the policy in simulation mode to identify owners based on your desired criteria. Then, upgrade the policy to Active mode to enable notifications to site owner candidates.
 
 You need site owners to help confirm the site is still active, perform [Site access review](/sharepoint/site-access-review#review-everyone-except-external-users-site-access-review-requests-for-site-owners), update content permissions, and control access when needed.
 
-To learn more about this policy and report, see [Site ownership policy](/sharepoint/tbd).
+To learn more about this policy and report, see [Site ownership policy](/sharepoint/create-sharepoint-site-ownership-policy).
 
 ### Find and cleanup inactive sites
 
@@ -120,7 +120,7 @@ The policy also creates a report that you can download and review. The report sh
 2. Expand **Policies** > select **Site lifecycle management**.
 3. Select **Create a policy**, enter your parameters, and finish your policy.
 4. When the policy runs and finds inactive sites, the policy automatically emails the site owners. The site owners should confirm if the site is still active.
-5. If the site owners confirm the sties aren't needed, then put inactive sites in read-only mode with SAM [Inactive Sites - Read only capability](/sharepoint/tbd), or move the sites to Microsoft 365 Archive with SAM [Inactive Sites - Archive capability](/sharepoint/tbd).
+5. If the site owners confirm the sites aren't needed, then put inactive sites in [read-only mode with SAM](/sharepoint/site-lifecycle-management#read-only-mode), or move the sites to [Microsoft 365 Archive with SAM](/microsoft-365/archive/archive-setup).
 
 To learn more about this policy and report, see [site lifecycle management policy](/sharepoint/site-lifecycle-management#create-an-inactive-site-policy).
 
@@ -128,7 +128,7 @@ To learn more about this policy and report, see [site lifecycle management polic
 
 - [**Use the policy execution report**](/sharepoint/site-lifecycle-management) to keep track on site owner action status in response to the notifications.
 - Select the Get AI insights button to [**get AI insights**](/sharepoint/advanced-management#ai-insights) generated for the report to help you identify issues with the sites and possible actions to address these issues.
-- **Give the site owners a timeline** to complete these tasks. If they don't complete the task within the timeframe, you can move the sites to [Microsoft 365 Archive](/microsoft-365/archive/archive-overview) using SAM [Inactive Sites - Archive capability](/sharepoint/tbd) so that you can reactive them later if needed.
+- **Give the site owners a timeline** to complete these tasks. If they don't complete the task within the timeframe, you can move the sites to [Microsoft 365 Archive](/microsoft-365/archive/archive-overview) using [SAM Inactive Sites - Archive capability](/sharepoint/site-lifecycle-management#create-an-inactive-site-policy) so that you can reactive them later if needed.
 
 This action helps reduce outdated content that clutters Copilot's data source, which improves the accuracy of Copilot responses.
 
@@ -181,9 +181,9 @@ A [restricted access control policy](/sharepoint/restricted-access-control) rest
 
 When users in the group have permissions to the content, then that content can show in Copilot results. Users not in the group don't see this info in their Copilot results. You can set up restricted access control for individual sites or OneDrive.
 
-✅ **Use [restricted content discoverability policy (RCD)](/sharepoint/tbd) in the SharePoint admin center**
+✅ **Use [restricted content discoverability policy (RCD)](/sharepoint/restrcited-content-discoverability) in the SharePoint admin center**
 
-A [restricted content discoverability policy (RCD)](/sharepoint/tbd) doesn't change the site access. Instead, it changes the site's content discoverability. When you apply RCD to a site, the site's content isn't discoverable by Copilot or organization-wide search results for all users.
+A [restricted content discoverability policy (RCD)](/sharepoint/restrcited-content-discoverability) doesn't change the site access. Instead, it changes the site's content discoverability. When you apply RCD to a site, the site's content isn't discoverable by Copilot or organization-wide search results for all users.
 
 The SharePoint Admin can set restricted content discoverability on individual sites.
 
@@ -648,7 +648,7 @@ Settings in a retention policy apply at the container level, like a SharePoint s
 
         There are a few ways to open Activity Explorer:
 
-        - **Data Security Posture Management for AI** (previously called AI Hub)
+        - **Data Security Posture Management for AI**
         - **Data Loss Prevention** > **Explorers**
         - **Records Management** > **Explorers**
         - **Information protection** > **Explorers**
@@ -697,7 +697,7 @@ To learn more, see:
 
 ### Review and analyze Copilot prompts and responses
 
-✅ **Use [AI Hub](/purview/ai-microsoft-purview) or [eDiscovery](/purview/edisc) to analyze Copilot user prompts and responses**
+✅ **Use [Data Security Posture Management for AI](/purview/ai-microsoft-purview) or [eDiscovery](/purview/edisc) to analyze Copilot user prompts and responses**
 
 When users enter a prompt and get a response from Copilot, you can view and search these interactions. Specifically, these features help you:
 
@@ -709,17 +709,17 @@ There are two ways to review and analyze Copilot prompts and responses - **Data 
 
 # [Data Security Posture Management for AI](#tab/aihub)
 
-[AI Hub](/purview/ai-microsoft-purview#microsoft-purview-ai-hub-provides-insights-policies-and-controls-for-ai-apps) is a central location in the Microsoft Purview portal that proactively monitors AI use. It includes eDiscovery and you can use it to analyze and review Copilot prompts and responses.
+[Data Security Posture Management for AI](/purview/ai-microsoft-purview#microsoft-purview-ai-hub-provides-insights-policies-and-controls-for-ai-apps) (previously called AI Hub) is a central location in the Microsoft Purview portal that proactively monitors AI use. It includes eDiscovery and you can use it to analyze and review Copilot prompts and responses.
 
-1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as an admin in one of the groups listed at [AI Hub - Permissions](/purview/ai-microsoft-purview-permissions).
+1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as an admin in one of the groups listed at [Data Security Posture Management for AI - Permissions](/purview/ai-microsoft-purview-permissions).
 2. Select **Solutions** > **Data Security Posture Management for AI** > **Activity Explorer**.
 3. Select an existing activity in the list. For example, if there's a **Sensitive info types detected** activity, select it.
 4. Select **View related AI interaction activity**. In **Interaction details**, you can see the app, and the prompt & response. You can also export an activity.
 
 To learn more, see:
 
-- [Microsoft Purview AI Hub](/purview/ai-microsoft-purview-considerations)
-- [AI Hub - Activity explorer events](/purview/ai-microsoft-purview-considerations#activity-explorer-events)
+- [Microsoft Purview Data Security Posture Management for AI](/purview/ai-microsoft-purview-considerations)
+- [Data Security Posture Management for AI - Activity explorer events](/purview/ai-microsoft-purview-considerations#activity-explorer-events)
 
 # [eDiscovery](#tab/edisc)
 
@@ -737,7 +737,7 @@ To learn more, see [Search for and optionally delete Copilot interactions in eDi
 
 ---
 
-## More resources available to you
+## Technical and deployment resources available to you
 
 - Organizations with a minimum number of Copilot licenses are eligible for a Microsoft coinvestment in deployment and adoption through eligible Microsoft Partners.
 
