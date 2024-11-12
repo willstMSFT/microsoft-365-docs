@@ -69,7 +69,7 @@ You can also export the report data into an Excel .csv file by selecting the ell
 
 You can view a table list to show each active user who accessed Microsoft Copilot from Microsoft Edge or the Microsoft 365 App over the past 180 days.
 
-:::image type="content" source="../../media/microsoft-copilot-export.png" alt-text="Screenshot showing the table list of data for active users for Microsoft Copilot." lightbox="../../media/microsoft-copilot-usage-app.png":::
+:::image type="content" source="../../media/microsoft-copilot-export.png" alt-text="Screenshot showing the table list of data for active users for Microsoft Copilot." lightbox="../../media/microsoft-copilot-export.png":::
 
 You can also export the report data into an Excel .csv file by selecting the **Export** link. This exports the Microsoft Copilot usage data of all users and enables you to do simple sorting, filtering, and searching for further analysis.
 
