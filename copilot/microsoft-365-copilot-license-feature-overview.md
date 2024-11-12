@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: laurawi
-ms.date: 10/30/2024
+ms.date: 11/11/2024
 audience: Admin
 ms.topic: get-started
 ms.service: microsoft-365-copilot
@@ -52,23 +52,32 @@ The following table lists some of the features that can help with Copilot. These
 
 | &nbsp; | E3 license | E5 license |
 | --- | --- | --- |
-| License requirements | - Microsoft 365 E3 or Office 365 E3 <br/>- Microsoft 365 Copilot (includes SharePoint Advanced Management) | - Microsoft 365 E5 or Office 365 E5 <br/>- Microsoft 365 Copilot (includes SharePoint Advanced Management) |
+| License requirements | - Microsoft 365 E3 or Office 365 E3 <br/>- SharePoint Advanced Management <br/>- Microsoft 365 Copilot | - Microsoft 365 E5 or Office 365 E5 <br/>- SharePoint Advanced Management <br/>- Microsoft 365 Copilot |
 | Restricted SharePoint Search (RSS) | ✅  | ✅  |
 | &nbsp; | &nbsp; | &nbsp; |
 | **Microsoft Purview features** | &nbsp; | &nbsp; |
-| Sensitivity labels |  ✅ <br/><br/> You can: <br/><br/>- Create custom labels. <br/> - Use default labels *except* on SharePoint document libraries. Must use custom label. <br/> - Manually apply labels. | ✅ <br/><br/> You can: <br/><br/> - Create custom labels. <br/> - Use default labels. <br/> - Manually apply labels. <br/> - Auto-apply labels. |
+| Sensitivity labels |  ✅ <br/><br/> You can: <br/><br/>- Create custom labels. <br/> - Manually apply labels. | ✅ <br/><br/> You can: <br/><br/> - Create custom labels. <br/> - Use default labels. <br/> - Manually apply labels. <br/> - Auto-apply labels. |
 | Data loss prevention (DLP)| ✅ <br/><br/>Policies can target: <br/><br/>- SharePoint <br/> - Exchange <br/> - OneDrive | ✅ <br/><br/> Policies can target: <br/><br/>- SharePoint <br/> - Exchange <br/> - OneDrive <br/> - Teams <br/> - Endpoints |
 | Adaptive Protection | n/a | ✅ |
 | Data lifecycle management  | ✅ <br/><br/> You can: <br/><br/> - Create retention policies<br/> - Manually apply retention labels<br/> - Use Content explorer | ✅ <br/><br/> You can: <br/><br/> - Create retention policies<br/> - Manually apply retention labels<br/> - Auto-apply retention labels <br/> - Use Content explorer <br/> - Use Activity explorer |
 | Communication Compliance | n/a | ✅ |
 | eDiscovery | ✅ <br/><br/>Can search. | ✅ <br/><br/> Can search and delete. |
-| AI Hub |  ✅ | ✅ |
+| Data Security Posture Management for AI (previously called AI Hub) |  ✅ | ✅ |
 | &nbsp; | &nbsp; | &nbsp; |
 | **SharePoint Advanced Management (SAM) features** | &nbsp; | &nbsp; |
 | Data access governance (DAG) reports | ✅ | ✅ |
 | Restricted access control (RAC) | ✅ | ✅ |
 | Site lifecycle management | ✅ | ✅ |
 | Change history report | ✅ | ✅ |
+
+?? ASK RUI ?? Services not in SAM license that comes with Copilot
+
+- Site Lifecycle Management
+- AI Powered Insights, maybe called AI Insights
+- default document library labels
+- extended SharePoint permissions
+- EEEU report
+- Sharing report
 
 To learn more about these features and how they affect Copilot, see:
 

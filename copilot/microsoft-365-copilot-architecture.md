@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 11/07/2024
+ms.date: 11/11/2024
 audience: Admin
 ms.reviewer: mandia, bcarter
 ms.topic: overview
@@ -27,7 +27,7 @@ appliesto:
 > [!WARNING]
 > This article is a work in progress for Ignite. Do not publish.
 
-When you create a Microsoft 365 subscription, a tenant is automatically created for your organization. Your tenant sits inside the **Microsoft 365 service boundary**, where Microsoft 365 Copilot can access your organization's data.
+When you create a Microsoft 365 subscription, a tenant is automatically created for your organization. Your tenant sits inside the **Microsoft 365 service boundary**, where [Microsoft 365 Copilot](microsoft-365-copilot-overview.md) can access your organization's data.
 
 This data includes information that the user can access, including their activities, and the content they create & interact with in Microsoft 365 apps.
 
@@ -80,7 +80,7 @@ Let's take a look:
 
 - Copilot uses [Microsoft Graph](/graph/overview) to access user data that's in the user's unique context. This user data includes emails, chats, and documents that the user has permission to access.
 
-  There are Microsoft 365 services that help control access and security to your organization's data. These services include Restricted SharePoint Search (RSS), SharePoint Advanced Management (SAM), and Microsoft Purview. To learn more, see [Microsoft 365 E3 and E5 feature comparison list for Microsoft 365 Copilot](microsoft-365-copilot-e3-e5-overview.md).
+  There are Microsoft 365 services that help control access and security to your organization's data. These services include Restricted SharePoint Search (RSS), SharePoint Advanced Management (SAM), and Microsoft Purview. To learn more, see [Microsoft 365 E3 and E5 feature comparison list for Microsoft 365 Copilot](microsoft-365-copilot-license-feature-overview.md).
 
 - Copilot can't access data that the user doesn't have permission to access. In the diagram, the grayed-out data represents data that Copilot can't access.
 
@@ -90,15 +90,15 @@ To learn more, see [Data stored about user interactions with Microsoft 365 Copil
 
 ## Copilot honors Conditional Access and MFA
 
-Copilot honors Conditional Access (CA) policies and multifactor authentication (MFA).
+Copilot honors Conditional Access policies and multifactor authentication (MFA).
 
 :::image type="content" source="media/microsoft-365-copilot-architecture/copilot-conditional-access-mfa.png" alt-text="Diagram that shows Conditional Access and MFA can control access to Microsoft 365 Copilot." lightbox="media/microsoft-365-copilot-architecture/copilot-conditional-access-mfa.png":::
 
 This means:
 
-- If you [enable and configure CA policies](/entra/identity/conditional-access/plan-conditional-access), make sure your users are allowed to access Microsoft 365 services. You can manage access based on conditions you configure, including enforcing device compliance policies you set.
+- If you [enable and configure Conditional Access policies](/entra/identity/conditional-access/plan-conditional-access), make sure your users are allowed to access Microsoft 365 services. You can manage access based on conditions you configure, including enforcing device compliance policies you set. To learn more, see [Protect AI with Conditional Access policy](/entra/identity/conditional-access/policy-all-users-copilot-ai-security).
 
-  If you use Microsoft Intune, then you can use Intune compliance policies and CA together. To learn more, see [Use compliance policies to set rules for devices you manage with Intune](/mem/intune/protect/device-compliance-get-started).
+  If you use Microsoft Intune, then you can use Intune compliance policies and Conditional Access together. To learn more, see [Use compliance policies to set rules for devices you manage with Intune](/mem/intune/protect/device-compliance-get-started).
 
 - Copilot uses the same MFA features you configure for your tenant. With MFA, like all Microsoft 365 services, users must provide multiple forms of verification before they're allowed to access Copilot.
 
@@ -106,6 +106,6 @@ This means:
 
 ## Related content
 
-- [Microsoft 365 Copilot overview](microsoft-365-copilot-overview.md)
+- [Microsoft 365 Copilot data protection and auditing architecture](microsoft-365-copilot-architecture-data-protection-auditing.md)
 - [Setup and deploy Microsoft 365 Copilot](microsoft-365-copilot-setup.md)
 - [Read about Data, Privacy, and Security for Microsoft 365 Copilot](microsoft-365-copilot-privacy.md)

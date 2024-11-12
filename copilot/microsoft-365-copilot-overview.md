@@ -123,7 +123,7 @@ In your Microsoft 365 license, there are services and features that can help you
 
 To learn more about the features available with your license, see:
 
-- [Microsoft 365 license feature comparison list for Microsoft 365 Copilot](microsoft-365-copilot-e3-e5-overview.md)
+- [Microsoft 365 license feature comparison list for Microsoft 365 Copilot](microsoft-365-copilot-license-feature-overview.md)
 - [Microsoft 365 Copilot admin guide for E3 licenses](microsoft-365-copilot-e3-guide.md)
 - [Microsoft 365 Copilot admin guide for E5 licenses](microsoft-365-copilot-e5-guide.md)
 
