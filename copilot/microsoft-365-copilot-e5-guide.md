@@ -404,12 +404,13 @@ You have two automatic labeling options for files in the same document library:
 
 | Library option | When to use this option |
 | -------------- | ----------------------- |
-| **Option 1** - Default sensitivity label that can apply admin-defined permissions (the **Assign permissions now** encryption option), or no encryption. | Use this option when your document libraries store files that usually have the same level of known sensitivity. For exceptions, you want users to be able to select an alternative label that doesn't apply encryption.|
-| **Option 2** - Default sensitivity label that extends protection to files that are downloaded, copied, or moved. This label must be configured with user-defined permissions (the **Let users assign permissions** encryption option). <br/><br/> Currently in preview, this configuration requires PowerShell commands at the tenant-level and then the site level before you can select the sensitivity label. | Use this option when you haven't inspected the file contents for sensitivity. So, you want to prevent Copilot from accessing the file contents and continue to protect the files when they're downloaded.|
+| **Option 1** - Default sensitivity label that can apply admin-defined permissions (the **Assign permissions now** encryption option), or no encryption. | Recommended for new document libraries and when they store files that usually have the same level of known sensitivity. For exceptions, you want users to be able to select an alternative label that doesn't apply encryption.|
+| **Option 2** - Default sensitivity label that extends protection to files that are downloaded, copied, or moved. This label must be configured with user-defined permissions (the **Let users assign permissions** encryption option). <br/><br/> Currently in preview, this configuration requires PowerShell commands at the tenant-level and then the site level before you can select a sensitivity label. | Recommended for existing document libraries when you want to centralize permissions and
+continue to protect files when they're downloaded. This option is suitable when you haven't inspected the file contents for sensitivity. Copilot can't access the labeled file contents, so it can also help to prevent oversharing.|
 
 Both options provide a baseline level of protection that's specific to the document library, doesn't require content inspection, and doesn't rely on action from end users.
 
-The SharePoint site admin can select the default label for the document library.
+The SharePoint site admin can select a default label for the document library.
 
 1. In your SharePoint site, select **Documents** > **Settings** icon > **Library settings** > **More library settings**.
 2. In **Default sensitivity labels** (Apply label to items in this list or library):
