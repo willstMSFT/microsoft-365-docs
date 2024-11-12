@@ -1,23 +1,25 @@
 - name: Microsoft 365 Copilot documentation
   href: index.yml
   items:
-    - name: Get started
+    - name: Get started with Microsoft 365 Copilot
       items:
         - name: Overview
           href: microsoft-365-copilot-overview.md
-        - name: Architecture
+        - name: Architecture & how Copilot works
           href: microsoft-365-copilot-architecture.md
-        - name: Get your data ready
+        - name: Data protection and auditing architecture
+          href: microsoft-365-copilot-architecture-data-protection-auditing.md
+        - name: Get your data ready for Microsoft 365 Copilot
           items:
             - name: License options
               href: microsoft-365-copilot-licensing.md
-            - name: E3 and E5 feature comparison list
-              href: microsoft-365-copilot-e3-e5-overview.md
+            - name: License feature comparison list
+              href: microsoft-365-copilot-license-feature-overview.md
             - name: E3 feature guide
               href: microsoft-365-copilot-e3-guide.md
             - name: E5 feature guide
               href: microsoft-365-copilot-e5-guide.md
-    - name: Deploy and enable
+    - name: Deploy and enable Microsoft 365 Copilot
       items: 
         - name: Set up Microsoft 365 Copilot
           href: microsoft-365-copilot-setup.md
