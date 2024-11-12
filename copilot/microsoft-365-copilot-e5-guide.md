@@ -45,7 +45,7 @@ This article applies to:
 - Microsoft Purview
 
 > [!NOTE]
-> If you have an E3 license, then see [Microsoft 365 Copilot admin guide for E3 licenses](microsoft-365-copilot-e3-guide.md). For a comparison of the features in between licenses, see [Compare Microsoft Copilot features in E3 and E5 licenses](microsoft-365-copilot-license-feature-overview.md).
+> If you have an E3 license, then see [Microsoft 365 Copilot admin guide for E3 licenses](microsoft-365-copilot-e3-guide.md). For a comparison of the features in the licenses, see [Compare Microsoft Copilot features in E3 and E5 licenses](microsoft-365-copilot-license-feature-overview.md).
 
 ## Before you begin
 
