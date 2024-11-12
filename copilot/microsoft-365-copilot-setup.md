@@ -1,5 +1,5 @@
 ---
-title: "Get started with Microsoft 365 Copilot - admin guide"
+title: "Set up Microsoft 365 Copilot"
 f1.keywords:
 - NOCSH
 ms.author: camillepack
@@ -18,7 +18,7 @@ ms.collection:
 description: Learn how IT administrators can prepare their organization for Microsoft 365 Copilot. Admin cans assign licenses, optimize SharePoint search, give enough access, prevent oversharing, use sensitivity labels, create a pilot group, and more.
 ---
 
-# Get started with Microsoft 365 Copilot - admin guide
+# Set up Microsoft 365 Copilot - admin guide
 
 [Microsoft 365 Copilot](microsoft-365-copilot-overview.md) is an AI-powered productivity tool that uses large language models (LLMs). It integrates with your data, with Microsoft Graph, and with Microsoft 365 Apps.
 
@@ -65,7 +65,7 @@ To ensure a smooth transition to Microsoft 365 Copilot, administrators should un
 
 ## Security measures for Microsoft 365 Copilot
 
-To ensure a secure and compliant environment for Microsoft 365 Copilot, it is crucial to implement robust security measures. Two key components of this are Multi-Factor Authentication (MFA) and audit logging. These measures help protect against unauthorized access and provide visibility into user and admin activities.
+To ensure a secure and compliant environment for Microsoft 365 Copilot, it's crucial to implement robust security measures. Two key components of this are Multi-Factor Authentication (MFA) and audit logging. These measures help protect against unauthorized access and provide visibility into user and admin activities.
 
 ### Multi-Factor Authentication (MFA)
 
@@ -83,9 +83,18 @@ Audit logging is essential for tracking and monitoring activities within your Mi
 
 #### Steps to implement audit logging
 
-- **Enable unified audit logging**: Turn on unified audit logging in the Microsoft 365 compliance center to capture all user and admin activities.
+- **Enable unified audit logging**: Turn on unified audit logging in the Microsoft Purview compliance portal to capture all user and admin activities.
 - **Configure audit log retention**: Set up retention policies to ensure that audit logs are retained for the required period based on your organization's compliance needs.
 - **Monitor and review logs**: Regularly monitor and review audit logs to identify any suspicious activities or potential security threats.
+
+### Restrict sensitive info from Copilot
+
+To ensure that sensitive information is protected during the deployment and use of Microsoft 365 Copilot, take the following steps to identify, assess, and mitigate oversharing risks. These measures will help maintain data security and compliance within your organization:
+
+- **Identify most popular sites and assess oversharing** Export the top 100 most used sites from the SharePoint admin center, run the SharePoint Advanced Management (SAM) permission state report, and run the Microsoft Purview Data Security Posture Management (DSPM) Oversharing posture assessment. To learn more, see [Secure by default with Microsoft Purview and protect against oversharing](/purview/deploymentmodels/depmod-securebydefault-intro).
+- **Grant Copilot access to popular, low-risk sites** Cross-reference the report results from SAM and Purview DSPM with the top 100 used sites, and optionally enable Restricted SharePoint Search (RSS) for up to 100 sites identified.
+- **Turn on proactive audit and protection** Disable "everyone except external users" (EEEU) at the tenant level, enable Purview Audit to monitor Copilot interaction activity reports and charts, activate proactive analysis for sensitive data handling with Purview Communications Compliance, and set up audit-mode oversharing policies with SharePoint Online Purview Data Loss Prevention (DLP). To learn more, see [Protect your sensitive data with Microsoft Purview](/purview/information-protection).
+- **Implement access controls and labeling** Initiate SAM Access Review for all sites that are overshared, apply SAM restricted access control (RAC) on business-critical sites, exclude critical sites from Copilot reasoning over them with SAM Restricted Content Discovery (RCD), publish sensitivity labels with Purview Information Protection to Office apps, containers/sites, and Outlook, and exclude Copilot from summarizing sensitive content via sensitivity labels. To learn more, see [Get ready for Microsoft 365 Copilot with SharePoint Advanced Management (SAM)](/sharepoint/get-ready-copilot-sharepoint-advanced-management).
 
 ## Get started and deploy
 
@@ -101,7 +110,7 @@ To learn more, see [Microsoft 365 Copilot and privacy controls for connected exp
 
 ✅ **Use the Microsoft 365 Copilot Optimization Assessment**
 
-Before deploying Microsoft 365 Copilot, it is essential to evaluate your organization's data governance maturity and data security controls. This can be achieved by completing the [Microsoft 365 Copilot Optimization Assessment](https://www.microsoft.com/solutionassessments/). Based on the outcomes of the assessment, determine your path forward to ensure that your organization is ready for Copilot deployment.
+Before deploying Microsoft 365 Copilot, it's essential to evaluate your organization's data governance maturity and data security controls. This can be achieved by completing the [Microsoft 365 Copilot Optimization Assessment](https://www.microsoft.com/solutionassessments/). Based on the outcomes of the assessment, determine your path forward to ensure that your organization is ready for Copilot deployment.
 
 ### Step 3 - Update channels
 
@@ -181,7 +190,7 @@ To help drive adoption, create a group of early adopters. This group can help yo
 
     With your established community of early adopters or Champions, they can better speak to their peers within their organization and contextualize the value of Copilot to best suit their needs. This framework also provides IT departments with a scalable way to handle questions through Champions, developing a team of experts across your organization.
 
-    To learn more about driving adoption, visit the [Microsoft 365 Copilot adoption hub](https://adoption.microsoft.com/Copilot/).
+To learn more about driving adoption, visit the [Microsoft 365 Copilot adoption hub](https://adoption.microsoft.com/Copilot/).
 
 #### Deploy
 
@@ -214,7 +223,7 @@ To learn more, see:
 
 To enhance data security, enable enterprise data protection (EDP) in Copilot for all users in your organization. Follow these steps:
 
-- **Log into Copilot**: Access Copilot on [copilot.microsoft.com](https://copilot.microsoft.com/) and ensure that enterprise data protection is enabled.
+- **Log in to Copilot**: Access Copilot on [copilot.microsoft.com](https://copilot.microsoft.com/) and ensure that enterprise data protection is enabled.
 - **Review documentation**: Review the [Enterprise Data Protection in Microsoft 365 Copilot documentation](enterprise-data-protection.md) to ensure that EDP is available and properly configured for your users.
 
 ## More resources
