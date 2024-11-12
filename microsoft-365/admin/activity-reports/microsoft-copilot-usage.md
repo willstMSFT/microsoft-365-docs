@@ -25,7 +25,7 @@ description: "Learn about the Microsoft Copilot usage report and gain insights i
 The Microsoft Copilot usage dashboard provides insights into active usage of Microsoft Copilot with enterprise data protection. The report includes total active users, average daily active users, and active users per app (for example, Microsoft 365 App and Microsoft Edge). Usage insights can be viewed as totals and trends for the past 7, 30, 90, or 180-day periods. The report also shows the last activity date per user, anonymized by default. To view all reports, check out [Microsoft 365 Reports in the admin center overview](activity-reports.md).
 
 > [!NOTE]
-> The report is currently limited to just the usage of Microsoft Copilot in the Microsoft 365 App and Edge, and to users with a Microsoft 365 license. Additional apps will be added over time. In addition, the earliest date on which usage history is available for this report is September 15th, 2024.
+> The report is currently limited to just the usage of Microsoft Copilot in the Microsoft 365 App, Microsoft Edge, and to users with a Microsoft 365 license. Additional apps will be added over time. In addition, the earliest date on which usage history is available for this report is September 15th, 2024.
 
 ## How do I get to the Microsoft Copilot usage report?
 
@@ -38,7 +38,7 @@ You can use this report to see the usage of Microsoft Copilot in your organizati
 
 You can view aggregated numbers for Microsoft Copilot active users and average daily active users:
 
-:::image type="content" source="../../media/microsoft-copilot-users.png" alt-text="Screenshot showing the number of active users for Microsoft Copilot usage.":::
+:::image type="content" source="../../media/microsoft-copilot-users.png" alt-text="Screenshot showing the number of active users for Microsoft Copilot usage." lightbox="../../media/microsoft-copilot-users.png":::
 
 - **Active users** shows the total number of users who sent at least one message to Microsoft Copilot (enterprise data protection) during the selected period.
 - **Average daily active users** indicates the average number of people using Microsoft Copilot per day over the selected period.
@@ -49,27 +49,27 @@ In **Recommendations**, the recommended action card highlights where admins can 
 
 You can see the following summary charts in this report as default view:
 
-:::image type="content" source="../../media/microsoft-copilot-adoption.png" alt-text="Screenshot showing the chart to evaluate adoption by app for Microsoft Copilot.":::
+:::image type="content" source="../../media/microsoft-copilot-adoption.png" alt-text="Screenshot showing the chart to evaluate adoption by app for Microsoft Copilot." lightbox="../../media/microsoft-copilot-adoption.png":::
 
 - **Summary view** shows you the total usage of Microsoft Copilot of the time frame.
 - **Trend view** shows you the daily time trend of Microsoft Copilot of the time frame.
 
 You can switch between Summary view and Trend view. When switching to Trend view, you can select one or multiple entry points in the dropdown list to see daily usage or compare among entry points.
 
-:::image type="content" source="../../media/microsoft-copilot-usage-app.png" alt-text="Screenshot showing the chart in Trend view to analyze adoption by app for Microsoft Copilot.":::
+:::image type="content" source="../../media/microsoft-copilot-usage-app.png" alt-text="Screenshot showing the chart in Trend view to analyze adoption by app for Microsoft Copilot." lightbox="../../media/microsoft-copilot-usage-app.png":::
 
 Below is a table of app details for active Microsoft Copilot users:
 
 | App               | Details                                                                 | More information |
 |-------------------|-------------------------------------------------------------------------|------------------|
-| **Edge**          | Microsoft Copilot was used in the Edge web browser.                     | [Copilot - Microsoft Edge](https://www.microsoft.com/edge/features/copilot) |
-| **Microsoft 365 App** | Microsoft Copilot was used in the desktop, mobile, or web version of the Microsoft 365 App, including the following entry points: Microsoft365.com, Office.com, Microsoft 365 desktop app, Microsoft 365 mobile app, M365.cloud.microsoft | [Overview of Copilot - Microsoft Learn](/copilot/overview) |
+| **Edge**          | Microsoft Copilot was used in the Microsoft Edge web browser.                     | [Copilot - Microsoft Edge](https://www.microsoft.com/edge/features/copilot) |
+| **Microsoft 365 App** | Microsoft Copilot was used in the desktop, mobile, or web version of the Microsoft 365 App, including the following entry points: Microsoft365.com, Office.com, Microsoft 365 desktop app, Microsoft 365 mobile app, M365.cloud.microsoft | [Overview of Copilot](/copilot/overview) |
 
 You can also export the report data into an Excel .csv file by selecting the ellipses and then **Export** in the top-right corner.
 
-You can view a table list to show each active user who accessed Microsoft Copilot from Edge or the Microsoft 365 App over the past 180 days.
+You can view a table list to show each active user who accessed Microsoft Copilot from Microsoft Edge or the Microsoft 365 App over the past 180 days.
 
-:::image type="content" source="../../media/microsoft-copilot-export.png" alt-text="Screenshot showing the table list of data for active users for Microsoft Copilot.":::
+:::image type="content" source="../../media/microsoft-copilot-export.png" alt-text="Screenshot showing the table list of data for active users for Microsoft Copilot." lightbox="../../media/microsoft-copilot-usage-app.png":::
 
 You can also export the report data into an Excel .csv file by selecting the **Export** link. This exports the Microsoft Copilot usage data of all users and enables you to do simple sorting, filtering, and searching for further analysis.
 
@@ -79,7 +79,7 @@ You can also export the report data into an Excel .csv file by selecting the **E
 |-----------------------------|-----------------------------------------------------------------------------|
 | **Username**                | The user's principal name.                                                  |
 | **Display name**            | The full name of the user.                                                  |
-| **Last activity date (UTC)**| The most recent date on which the user sent a message to Microsoft Copilot in Edge or the Microsoft 365 App, dating back to September 15, 2024. This date will remain fixed even if the timeframe of the report is changed. |
+| **Last activity date (UTC)**| The most recent date on which the user sent a message to Microsoft Copilot in Microsoft Edge or the Microsoft 365 App, dating back to September 15, 2024. This date will remain fixed even if the timeframe of the report is changed. |
 
 ## User-specific data de-anonymous/anonymous setting
 
