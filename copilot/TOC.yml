@@ -1,11 +1,11 @@
 - name: Microsoft 365 Copilot documentation
   href: index.yml
   items:
-    - name: Get started
+    - name: Get started with Microsoft 365 Copilot
       items:
         - name: Overview
           href: microsoft-365-copilot-overview.md
-        - name: Architecture & how it works
+        - name: Architecture & how Copilot works
           href: microsoft-365-copilot-architecture.md
         - name: Data protection and auditing architecture
           href: microsoft-365-copilot-architecture-data-protection-auditing.md

@@ -105,7 +105,7 @@ The following diagram provides a visual representation of the different features
 
 Let's take a look:
 
-1. Use [Microsoft Purview audit logs](/purview/audit-log-enable-disable) to identify how, when, and where Copilot interactions occurred and which items were accessed, including any sensitivity labels on those items.
+1. Use [Microsoft Purview audit logs](/purview/audit-solutions-overview) to identify how, when, and where Copilot interactions occurred and which items were accessed, including any sensitivity labels on those items.
 
 2. Use [Microsoft Purview eDiscovery](/purview/edisc) to search for keywords in Copilot prompts and responses that might be inappropriate. You can also include this info in an eDiscovery case to review, export, or put this data on hold for an ongoing legal investigation.
 
