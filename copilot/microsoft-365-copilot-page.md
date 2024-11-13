@@ -19,7 +19,7 @@ description: "Learn about the Copilot page and how you can manage Microsoft 365 
 
 # Manage Microsoft 365 Copilot settings in the Microsoft 365 admin center
 
-You can manage Microsoft 365 Copilot through the Microsoft 365 admin center by going to the Settings tab on the Copilot page. Manage how users in your organization interact with Microsoft 365 Copilot, Copilot for Security, and more.
+You can manage Microsoft 365 Copilot through the Microsoft 365 admin center by going to the Settings tab on the Copilot page. Manage how users in your organization interact with Microsoft 365 Copilot, Security Copilot, and more.
 
 ## Before you begin
 
@@ -61,9 +61,9 @@ Copilot can make use of cloud-backed services, called optional connected experie
 
 This link navigates you to the Microsoft Purview compliance portal where you can manage sensitivity labels, retention policies, Copilot interactions, audit records for Copilot, search Copilot interactions, and configure how Microsoft 365 Copilot interacts and references protected documents. Learn more about [how to protect and manage Microsoft 365 Copilot interactions with Microsoft Purview](/purview/ai-microsoft-purview).
 
-### Microsoft Copilot for Security
+### Microsoft Security Copilot
 
-This link directs you to the Copilot for Security portal to manage settings. Copilot for Security is a separate product and license from Microsoft 365 Copilot. If purchased, you can use this link to navigate to Copilot for Security settings page. To learn more, see [Copilot for Security](/copilot/security/).
+This link directs you to the Security Copilot portal to manage settings. Security Copilot is a separate product and license from Microsoft 365 Copilot. If purchased, you can use this link to navigate to Security Copilot settings page. To learn more, see [Security Copilot](/copilot/security/).
 
 ### Microsoft 365 Copilot feedback logs
 
