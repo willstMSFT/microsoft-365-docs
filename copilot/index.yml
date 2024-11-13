@@ -31,9 +31,9 @@ conceptualContent:
             - url: microsoft-365-copilot-overview.md
               itemType: overview
               text: Introduction to Microsoft 365 Copilot
-            - url: microsoft-365/microsoft-365-copilot-architecture.md
+            - url: microsoft-365-copilot-architecture.md
               itemType: architecture
-              text: Microsoft 365 Copilot architecture and illustrations
+              text: Architecture and illustrations
             - url: https://www.youtube.com/playlist?list=PLXtHYVsvn_b-NeN9BbLb5sLpIGfdP8j78
               itemType: video
               text: Mechanics Microsoft 365 Copilot playlist
@@ -60,7 +60,7 @@ conceptualContent:
               text: E5 implementation guide
             - url: microsoft-365-copilot-licensing.md
               itemType: concept
-              text: Licensing requirements
+              text: Licensing options
             - url: https://www.microsoft.com/en-us/solutionassessments/safeedbackform
               itemType: get-started
               text: Microsoft 365 Copilot Optimization Assessment (English only)
@@ -69,10 +69,10 @@ conceptualContent:
           links:
             - url: microsoft-365-copilot-setup.md
               itemType: deploy
-              text: Set up Microsoft 365 Copilot
+              text: Set up and assign Microsoft 365 Copilot licenses
             - url: https://setup.cloud.microsoft/copilot-for-microsoft-365/setup-guide
               itemType: deploy
-              text: Use the Microsoft 365 Copilot setup guide
+              text: Microsoft 365 Copilot setup guide on `setup.cloud.microsoft`
             - url: https://adoption.microsoft.com/copilot/
               itemType: get-started
               text: Best practices and tools for employee engagement
