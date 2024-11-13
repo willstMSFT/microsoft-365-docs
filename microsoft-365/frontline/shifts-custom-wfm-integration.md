@@ -1,5 +1,5 @@
 ---
-title: Create a connector to sync your workforce management system with Shifts in Microsoft Teams
+title: Create a custom integration to sync your workforce management system with Shifts
 author: lana-chin
 ms.author: v-chinlana
 manager: jtremper
@@ -8,7 +8,7 @@ ms.topic: conceptual
 audience: admin
 ms.service: microsoft-365-frontline
 search.appverid: MET150
-description: Learn how to create a connector using the Microsoft Graph API to integrate your workforce management (WFM) system with Shifts. 
+description: Learn how to create a custom integration using the Microsoft Graph API to integrate your workforce management (WFM) system with Shifts. 
 ms.localizationpriority: high
 ms.collection: 
   - M365-collaboration
@@ -17,10 +17,10 @@ ms.collection:
 appliesto: 
   - Microsoft Teams
   - Microsoft 365 for frontline workers
-ms.date: 
+ms.date: 11/13/2024
 ---
 
-# Create a connector to sync your workforce management system with Shifts in Microsoft Teams
+# Create a custom integration to sync your workforce management system with Shifts
 
 ## Overview
 
@@ -54,13 +54,6 @@ You can set up your integration for either a one-way data sync or a two-way data
 ### Get familiar with the integration process
 
 Here's an overview of the integration steps. Review this information to get an understanding of the overall process, including who performs each step.
-
-<!--|Step|&nbsp; |Who performs this step|
-|---------|---------|---------|
-|1|Create your connector:<ul><li>Step 1a: [Sync changes made in Shifts to your WFM system](#step-1a-sync-changes-made-in-shifts-to-your-wfm-system)<ul><li>[/connect endpoint](#post-connect)</li><li>[/update endpoint](#post-teamsteamidupdate)</li></ul><li>Step 1b: [Sync data from your WFM system to Shifts](#step-1b-sync-data-from-your-wfm-system-to-shifts)</li></ul>|Developer|
-|2|[Register an app in the Microsoft Entra admin center](#step-2-register-an-app-in-the-microsoft-entra-admin-center)|An account that is at least a Cloud Application Administrator |
-|3|[Step 3: Create teams and schedules for syncing](#step-3-create-teams-and-schedules-for-syncing)|Developer or Teams administrator |
-|4|Register and enable the workforce integration:<ul><li>Step 4b: [Register the workforce integration in your tenant](#step-4a-register-the-workforce-integration-in-your-tenant)</li><li>Step 4B: [Enable the workforce integration for your team schedules](#step-4b-enable-the-workforce-integration-for-your-team-schedules)</li></ul>|Step 4b: Global Administrator<br>Step 4B: Developer|-->
 
 |Step|One-way sync |Two-way sync|Who performs this step|
 |---------|---------|------------------|------------------|

@@ -118,7 +118,7 @@
           - name: Known issues
             href: shifts-connector-blue-yonder-known-issues.md
       - name: Create a custom WFM integration 
-        href: shifts-custom-connector.md
+        href: shifts-custom-wfm-integration.md
   - name: Digitized processes
     items: 
     - name: Simplify business processes
