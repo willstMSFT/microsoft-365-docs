@@ -477,7 +477,7 @@ If you're new to Microsoft Purview DLP, it's helpful to work through these artic
 1. [Data Loss Prevention policy reference](/purview/dlp-policy-reference.md#data-loss-prevention-policy-reference) - this article introduces all the components of a DLP policy and how each one influences the behavior of a policy
 1. [Design a DLP policy](/purview/dlp-policy-design.md) - this article walks you through creating a policy intent statement and mapping it to a specific policy configuration. 
 1. [Create and Deploy data loss prevention policies](/purview/dlp-create-deploy-policy.md) - This article presents some common policy intent scenarios that you'll map to configuration options, then it walks you through configuring those options.
-1. [Learn about investigating data loss prevention alerts](/purview/dlp-alert-investigation-learn.md) - This article introduces you to the lifecycle of alerts from creation, through final remediation and policy tuning. It also introduces you to the tools you use to investigate alerts.
+1. [Learn about investigating data loss prevention alerts](/purview/dlp-alert-investigation-learn) - This article introduces you to the lifecycle of alerts from creation, through final remediation and policy tuning. It also introduces you to the tools you use to investigate alerts.
 
 #### 1. Create DLP policies
 
