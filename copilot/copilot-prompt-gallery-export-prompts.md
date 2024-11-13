@@ -23,7 +23,7 @@ In [Copilot Prompt Gallery](https://copilot.cloud.microsoft/prompts), users can 
 - The prompts shared with a specific team.
 
 > [!NOTE]
-> The user account running the PowerShell script to export the data needs to be assigned the Global admin role.
+> The user account running the PowerShell script to export the data needs to be assigned the Global Admin role.
 
 ## Configure your Windows PowerShell environment
 
