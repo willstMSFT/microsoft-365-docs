@@ -11,6 +11,8 @@ ms.service: microsoft-365-copilot
 ms.localizationpriority: medium
 ms.collection: m365copilot
 description: Learn how Microsoft 365 Copilot integrates AI to enhance productivity while maintaining robust security and compliance measures.
+appliesto:
+  - ✅ Microsoft 365 Copilot
 ---
 
 # AI security for Microsoft 365 Copilot

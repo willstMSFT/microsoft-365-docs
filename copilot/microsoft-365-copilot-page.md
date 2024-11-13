@@ -15,6 +15,8 @@ ms.collection:
 - m365copilot
 - magic-ai-copilot
 description: "Learn about the Copilot page and how you can manage Microsoft 365 Copilot settings in the Microsoft 365 admin center."
+appliesto:
+  - ✅ Microsoft 365 Copilot
 ---
 
 # Manage Microsoft 365 Copilot settings in the Microsoft 365 admin center
@@ -45,7 +47,7 @@ You can manage Copilot licenses, including assigning and unassigning licenses, f
 
 ### Manage how your organization interacts with Microsoft Copilot
 
-For users signed in with a Microsoft Entra account, Microsoft Copilot offers [enterprise data protection](/copilot/microsoft-365/enterprise-data-protection) (EDP) in an experience designed for work and education. Users who aren’t signed in, or are signed in with a personal account, can use the public version of Copilot, accessed primarily through [copilot.microsoft.com](https://copilot.microsoft.com/) and [bing.com/chat](https://bing.com/chat).
+For users signed in with a Microsoft Entra account, Microsoft Copilot offers [enterprise data protection](/copilot/microsoft-365/enterprise-data-protection) (EDP) in an experience designed for work and education. Users who aren't signed in, or are signed in with a personal account, can use the public version of Copilot, accessed primarily through [copilot.microsoft.com](https://copilot.microsoft.com/) and [bing.com/chat](https://bing.com/chat).
 
 To ensure that users in your organization access Copilot with enterprise data protection for work and education, follow these [instructions on managing Copilot](/copilot/manage).
 
