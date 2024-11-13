@@ -302,7 +302,7 @@ There are features in [Microsoft Purview](/purview/copilot-in-purview-overview) 
 - Detect sensitive data and noncompliant content in Copilot prompts and responses.
 - Review and analyze Copilot prompts and responses.
 
-To learn more about Microsoft Purview, see [Microsoft 365 Copilot in Microsoft Purview Overview](/purview/copilot-in-purview-overview).
+To learn more about Microsoft Purview, see [Security Copilot in Microsoft Purview Overview](/purview/copilot-in-purview-overview).
 
 ### Identify and label sensitive data
 
@@ -443,26 +443,49 @@ If you created the default sensitivity labels and policies, they include both [c
 
 You can edit or create your own autolabeling settings to help identify your organization data that needs a specific sensitivity label to apply protection actions, like encryption.
 
-### Detect and protect sensitive information from unauthorized sharing or leakage
+### Detect senstive information and protect it from unauthorized sharing or leakage
 
-✅ **Use [data loss prevention (DLP) policies](/purview/dlp-learn-about-dlp) to detect sensitive info**
+✅ **Use [data loss prevention (DLP) policies](/purview/dlp-learn-about-dlp) to help protect against unintentional sharing**
 
-[Data loss prevention (DLP)](/purview/dlp-learn-about-dlp) helps organizations protect sensitive information and prevent unauthorized sharing or leakage. The intent is to dynamically protect sensitive information, like financial data, social security numbers, and health records, from being overshared.
+[Microsoft Purview Data Loss Prevention (DLP)](/purview/dlp-learn-about-dlp) helps organizations protect sensitive information by helping guard against unauthorized sharing or leakage. The intent is to dynamically protect sensitive information, like financial data, social security numbers, and health records, from being overshared.
 
-When DLP policies find this data, it can act and help prevent the data from showing up in Copilot results.
+You can create DLP policies to protect sensitive information in these locations:
 
-With DLP policies, you can also use the [trainable classifier tool](/purview/trainable-classifiers-get-started-with) to identify categories of content, like source code, financial documents, and HR.
+- Microsoft 365 services such as Teams, Exchange, SharePoint, and OneDrive accounts
+- Office applications such as Word, Excel, and PowerPoint
+- Windows 10, Windows 11, and macOS (three latest released versions) endpoints
+- non-Microsoft cloud apps
+- on-premises file shares and on-premises SharePoint
+- Fabric and Power BI
 
-This section walks you through the steps to create DLP policies for Microsoft Teams & your Windows and macOS endpoints, and use Adaptive Protection policies integrated with **Insider Risk Management** and DLP.
+When DLP policies find this data, it can act and help prevent the data from showing up in Microsoft 365 Copilot results. For more information, see [Learn about the Microsoft 365 Copilot location in DLP (preview)](/purview/dlp-create-deploy-policy?tabs=purview). 
 
-#### 1. Open the Microsoft Purview portal
+With DLP policies, you can use [trainable classifiers](/purview/trainable-classifiers-get-started-with), [sensitive information types](/purview/sit-sensitive-information-type-learn-about), [sensitivity labels](/purview/sensitivity-labels) and [retention labels](/purview/retention) to identify sensitive information across your organization.
 
-1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as one of the admins listed at [Create and deploy DLP policies - Permissions](/purview/dlp-create-deploy-policy).
-2. Select **Solutions** > **Data Loss Prevention**.
+This section introduces you to the DLP policy creation process. <!-- for, and use Adaptive Protection policies integrated with **Insider Risk Management** and DLP.-->
 
-#### 2. Create the default DLP policies
+Taking the time to design a policy before you implement it gets you to the desired results faster, with fewer unintended issues, than creating it and then tuning by trial and error alone.
+
+If you're new to Microsoft Purview DLP, it's helpful to work through these articles before you start designing a policy:
+
+1. [Administrative units](purview-compliance-portal-permissions.md#administrative-units)
+1. [Learn about Microsoft Purview Data Loss Prevention](dlp-learn-about-dlp.md)  - introduces you to the data loss prevention discipline and Microsoft's implementation of DLP
+1. [Plan for data loss prevention (DLP)](dlp-overview-plan-for-dlp.md#plan-for-data-loss-prevention-dlp) - by working through this article you will:
+    1. [Identify stakeholders](dlp-overview-plan-for-dlp.md#identify-stakeholders)
+    1. [Describe the categories of sensitive information to protect](dlp-overview-plan-for-dlp.md#describe-the-categories-of-sensitive-information-to-protect)
+    1. [Set goals and strategy](dlp-overview-plan-for-dlp.md#set-goals-and-strategy)
+1. [Data Loss Prevention policy reference](dlp-policy-reference.md#data-loss-prevention-policy-reference) - this article introduces all the components of a DLP policy and how each one influences the behavior of a policy
+1. [Design a DLP policy](dlp-policy-design.md) - this article walks you through creating a policy intent statement and mapping it to a specific policy configuration. 
+1. [Create and Deploy data loss prevention policies](dlp-create-deploy-policy.md) - This article presents some common policy intent scenarios that you'll map to configuration options, then it walks you through configuring those options.
+1. [Learn about investigating data loss prevention alerts](dlp-alert-investigation-learn.md) - This article introduces you to the lifecycle of alerts from creation, through final remediation and policy tuning. It also introduces you to the tools you use to investigate alerts.
+
+#### 1. Create DLP policies
 
 For Exchange Online, SharePoint Online, and OneDrive, you can use DLP to identify, monitor, and automatically protect sensitive information across emails and files, including files stored in Microsoft Teams file repositories.
+
+For more information on creating DLP policies, see [Design a DLP policy](dlp-policy-design.md) and [Create and Deploy data loss prevention policies](dlp-create-deploy-policy.md)
+
+<!--
 
 Specifically, you configure DLP to inspect emails and files for sensitive information.
 
@@ -485,10 +508,11 @@ Specifically, you configure DLP to inspect emails and files for sensitive inform
 
     - [Design a DLP policy](/purview/dlp-policy-design)
     - [Create and Deploy DLP policies](/purview/dlp-create-deploy-policy)
+-->
 
-#### 3. Create a DLP policy for Teams
+#### 2. Create a DLP policy for Teams
 
-These policies can detect when sensitive info, like bank account numbers or passport numbers, are shared in Teams messages. Then, you can create policy tips to educate users or add actions that control sharing.
+Here's an example of one way to get started with protecting information in Team. These policies can detect when sensitive info, like bank account numbers or passport numbers, are shared in Teams messages. Then, you can create policy tips to educate users or add actions that control sharing.
 
 By default, Purview includes some policies for Teams that you can enable.
 
@@ -502,19 +526,31 @@ By default, Purview includes some policies for Teams that you can enable.
 
     :::image type="content" source="media/microsoft-365-copilot-e5-guide/purview-dlp-default-policy-teams.png" alt-text="In Microsoft Purview Data Loss Prevention (DLP), turn on the unprotected sensitive info in Teams policy.":::
 
-3. If you're getting started with DLP policies, then enable these default policies. If you're more experienced or want to create your own policies, then you can.
+For more information on using DLP policies to protect information in Teams, see:
 
-To learn more, see:
+- [Learn about the default data loss prevention policy for Microsoft Teams](/purview/dlp-teams-default-policy)
+- [Data Loss Prevention and Microsoft Teams](/purview/dlp-microsoft-teams)
+ 
+#### 3. Create an endpoint DLP policy for your Windows and macOS devices
 
-- [Create and Deploy data loss prevention policies](/purview/dlp-create-deploy-policy)
-- [Teams DLP Policies](/purview/dlp-teams-default-policy)
-- [Data loss prevention and Microsoft Teams](/purview/dlp-microsoft-teams)
+Endpoint data loss prevention (Endpoint DLP) extends DLP monitoring and protection capabilities to sensitive items that are physically stored on Windows 10/11 and macOS (the three latest released major versions) devices.
 
-#### 4. Create an endpoint DLP policy for your Windows and macOS devices
+DLP can monitor and take protective actions on user activities like:
 
-On the devices (also called endpoints), these policies can block specific apps, apply different restrictions to a specific group of printers, and block specific browsers from accessing files.
+- Copy to USB removable device
+- Copy to a network share
+- Print
+- Upload to a restricted cloud service domain or access from an unallowed browser.
 
-1. In **Data Loss Prevention**, select **Overview**.
+This is a partial list of the activities that DLP can monitor and protect. For a full list, see [Learn about Endpoint Data Loss Prevention](/purview/endpoint-dlp-learn-about)
+
+For more information on the prerequisites and steps to create an endpoint DLP policy, see:
+
+- [Get started with endpoint data loss prevention](/purview/endpoint-dlp-getting-started)
+- [Onboard Windows devices into Microsoft 365 overview](/purview/device-onboarding-overview)
+- [Onboard macOS devices into Microsoft 365 overview](/purview/device-onboarding-macos-overview). 
+
+<!--1. In **Data Loss Prevention**, select **Overview**.
 2. Select **Turn on advanced classification**. This action enables the endpoint DLP policies:
 
     :::image type="content" source="media/microsoft-365-copilot-e5-guide/purview-dlp-endpoint-enable.png" alt-text="In Microsoft Purview Data Loss Prevention (DLP), select the turn on advanced classification setting to enables DLP policies." lightbox="media/microsoft-365-copilot-e5-guide/purview-dlp-endpoint-enable.png":::
@@ -533,12 +569,12 @@ To learn more about DLP policies for endpoints, see:
 
 > [!NOTE]
 > If you use a mobile device managment (MDM) service to manage and help protect you devices, like [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), then keep using your MDM provider. The endpoint DLP policies focus on data loss prevention with your Microsoft 365 data. MDM focuses on device management. You use them simulatenously.
+-->
+#### 5. Create Adaptive Protection
 
-#### 5. Create Adaptive Protection policies
+Adaptive Protection integrates information from **Insider Risk Management** with DLP. When [insider risk](/purview/insider-risk-management-adaptive-protection) identifies a user that's engaging in risky behavior, the user is dynamically assigned an [insider risk level](/purview/insider-risk-management-adaptive-protection#insider-risk-levels), like **Elevated**.
 
-[Adaptive Protection](/purview/dlp-adaptive-protection-learn) policies integrate **Insider Risk Management** with DLP. When [insider risk](/purview/insider-risk-management-adaptive-protection) identifies a user that's engaging in risky behavior, the user is dynamically assigned an [insider risk level](/purview/insider-risk-management-adaptive-protection#insider-risk-levels), like **Elevated**.
-
-Adaptive Protection can automatically create DLP policies that help protect the organization against the risky behavior associated with the insider risk level. As the insider risk level changes for users, the DLP policies applied to users can also adjust.
+[Adaptive Protection can automatically create DLP policies](/purview/dlp-adaptive-protection-learn) that help protect the organization against the risky behavior associated with the insider risk level. As the insider risk level changes for users, the DLP policies applied to users can also adjust.
 
 **Turn on Adaptive Protection**:
 
