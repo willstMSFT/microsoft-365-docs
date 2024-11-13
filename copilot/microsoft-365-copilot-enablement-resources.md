@@ -15,6 +15,8 @@ ms.collection:
 - m365copilot
 - magic-ai-copilot
 description: "Take advantage of the many helpful resources available on the Adoption site as you enable Microsoft 365 Copilot in your organization."
+appliesto:
+  - ✅ Microsoft 365 Copilot
 ---
 
 # Adoption and enablement resources available for Microsoft 365 Copilot
