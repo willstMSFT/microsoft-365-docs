@@ -518,7 +518,7 @@ Eligibility filtering is currently supported through the `https://graph.microsof
 Make sure that every Shifts entity in the `supportedEntities` list request body starts with an uppercase letter. For example,
 `"supportedEntities":"Shift,SwapRequest,OpenShift"`.
 
-#### I registered the workforce integration and implemented the /connect, update, and /read endpoints, but the webhook isn't working.
+#### I registered the workforce integration and implemented the /connect, /update, and /read endpoints, but the webhook isn't working.
 
 Make sure your workforce integration is enabled for your team schedule. Additionally, check that the **url** and **apiVersion** properties are correct.
 
