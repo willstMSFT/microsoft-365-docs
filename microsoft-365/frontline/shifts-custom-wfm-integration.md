@@ -35,7 +35,7 @@ You can set up your integration for either a one-way data sync or a two-way data
 - **Two-way sync (WFM system and Shifts)**: This setup allows for a bidirectional sync. Schedule data in your WFM system is synced to Shifts, and any changes made in Shifts by users are synced back to your WFM system. The connector validates and approves the changes users make in Shifts according to business rules enforced by your WFM system before the changes are written to Shifts.
 
 > [!NOTE]
-> You can also used managed connectors to integrate Shifts with your WFM system. To learn more about managed connectors and the supported WFM systems, see [Shifts connectors](shifts-connectors.md).
+> If you're using UKG Pro WFM, Blue Yonder WFM, or Reflexis WFM, you can also use a managed connector to integrate Shifts with your WFM system. To learn more, see [Shifts connectors](shifts-connectors.md).
 
 ### Terminology used in this article
 
@@ -505,7 +505,7 @@ Shifts attempts to retry the /read and /update endpoints multiple times. Eventua
 
 #### How do I identify whether the request was originally made in Shifts or in the WFM system to prevent an infinite loop?
 
-Add the `X-MS-WFMPassthrough: "workforceIntegratonId"` header to all write and update calls to identify/ignore the changes triggered by connector. This header is used to indicate that the request is made because of a preceding call that was made by the connector to Graph API to sync data from your WFM system to Shifts.
+Add the `X-MS-WFMPassthrough: workforceIntegratonId` header to all write and update calls to identify/ignore the changes triggered by connector. This header is used to indicate that the request is made because of a preceding call that was made by the connector to Graph API to sync data from your WFM system to Shifts.
 
 ### Workforce integration registration
 
