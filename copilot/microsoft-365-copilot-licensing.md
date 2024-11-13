@@ -15,6 +15,8 @@ ms.collection:
 - m365copilot
 - magic-ai-copilot
 description: "Understand which plans include Microsoft 365 Copilot, licensing requirements, and availability."
+appliesto:
+  - ✅ Microsoft 365 Copilot
 ---
 
 # Understand licensing requirements for Microsoft 365 Copilot
