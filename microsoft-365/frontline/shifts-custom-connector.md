@@ -28,8 +28,6 @@ Integrate Shifts, the schedule management app in Microsoft Teams, with your work
 
 This article guides you through how to create a connector using the Microsoft Graph API to facilitate this integration.
 
-<!--A connector syncs schedule data between your WFM system and Shifts, bringing your organization's schedules into Teams. Shifts is where your frontline engage for their scheduling needs. Your WFM system is the system of record for business rules, compliance, and intelligence.-->
-
 You can set up your integration for either a one-way data sync or a two-way data sync.
 
 - **One-way sync (WFM system to Shifts)**: In this setup, schedule data in your WFM system is synced to Shifts. The connector reads the data in your WFM system and writes it to Shifts. However, any changes made in Shifts by users aren't reflected back in your WFM system.
@@ -134,7 +132,7 @@ Shifts calls this endpoint to get approval when a change is made to a Shifts ent
 
 As your WFM system is the system of record, when the connector receives a request to this endpoint, it should first attempt to make the change in the WFM system. If the change is successful, return success. Otherwise, return failure.
 
-Shifts calls this endpoint for every change (including changes initiated from the connector/WFM system). If the connector sent an update to Shifts using Graph API and added the `X-MS-WFMPassthrough: workforceIntegratonId` header, the request coming to this endpoint will have the same header. This allows you to identify and handle these requests appropriately. For example, return success without making the same change in the WFM system as it would be redundant and can cause the connector to get stuck in an infinite loop.
+Shifts calls this endpoint for every change (including changes initiated from the connector/WFM system). If the connector sent an update to Shifts using Graph API and added the `X-MS-WFMPassthrough: workforceIntegratonId` header, the request coming to this endpoint will have the same header, which allows you to identify and handle these requests appropriately. For example, return success without making the same change in the WFM system as it would be redundant and can cause the connector to get stuck in an infinite loop.
 
 The following diagram shows the flow of data.
 
@@ -399,7 +397,7 @@ After the first sync, you can choose to:
 - **Synchronously update Shifts with changes in your WFM system**: Send an update to Shifts for every change made in your WFM system.
 - **Asynchronously update Shifts with changes in your WFM system**: Perform a periodic sync by writing all changes that occurred in your WFM system within a certain timeframe (for example, 30 seconds, 10 minutes) to Shifts.
 
-    All write operations to Shifts, including write operations initiated by the connector, trigger a call to the connector’s /update endpoint. We recommend you include the `X-MS-WFMPassthrough: workforceIntegratonId` header to all write calls so the connector can identify and handle them appropriately. For example, your WFM system initiated the change, approve it without applying an update to your WFM system.
+    All write operations to Shifts, including write operations initiated by the connector, trigger a call to the connector’s /update endpoint. We recommend you include the `X-MS-WFMPassthrough: workforceIntegratonId` header to all write calls so the connector can identify and handle them appropriately. For example, if your WFM system initiated the change, approve it without applying an update to your WFM system.
 
   > [!NOTE]
   > If you're setting up your connector for a two-way sync of data between your WFM system and Shifts, exclude changes initiated from Shifts in the periodic sync. These changes are already written in Shifts.
@@ -436,14 +434,14 @@ Set up the teams in Teams that you want to sync. You can use existing teams or c
 
 ## Step 4: Register and enable the workforce integration
 
-A workforce integration defines the encryption settings for communication between Shifts and the connector, the URL for callbacks from Shifts, and the types of entities that will be synced.
+A workforce integration defines the encryption settings for communication between Shifts and the connector, the URL for callbacks from Shifts, and the types of entities to sync.
 
 To register and enable the workforce integration, complete the following steps:
 
 - [Step 4a: Register the workforce integration](#step-4a-register-the-workforce-integration-in-your-tenant)
 - [Step 4b: Enable the workforce integration for your team schedules](#step-4b-enable-the-workforce-integration-for-your-team-schedules)
 
-### Step 4A: Register the workforce integration in your tenant
+### Step 4a: Register the workforce integration in your tenant
 
 You must be a Global Administrator to perform this step.
 
@@ -466,7 +464,7 @@ POST https://graph.microsoft.com/v1.0/teamwork/workforceIntegrations/
 }
 ```
 
-See the following table for more information. To learn more, see [workforceIntegration resource type](/graph/api/resources/workforceintegration?view=graph-rest-1.0).
+See the following table for details. To learn more, see [workforceIntegration resource type](/graph/api/resources/workforceintegration?view=graph-rest-1.0).
 
 |Property  |More information|
 |---------|---------|
@@ -476,7 +474,7 @@ See the following table for more information. To learn more, see [workforceInteg
 |eligibilityFilteringEnabledEntities|**Note**: As of October 2024, this endpoint is supported only in the beta version of the Microsoft Graph API.<br><br>Specify the Shifts entities that you want to connector to support for eligibility filtering. Possible values are:<ul><li>`none`: Empty list</li><li>`SwapRequests`: Shifts calls your connector's [/read](#post-teamsteamidread) endpoint to get a filtered list of shifts a user can choose from for a swap request.</li><li>`TimeOffReasons`: Shifts calls your connector's [/read](#post-teamsteamidread) endpoint to get a filtered list of time-off reasons a user can choose from when they request time off. </li></ul>**Note** This list is an [evolvable enumeration](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations). You must use the `Prefer: include-unknown-enum-members` request header to get all the values.|
 |url|The workforce integration URL for callbacks from Shifts. Your [base URL](#step-1a-sync-changes-made-in-shifts-to-your-wfm-system) is comprised of this property and the **apiVerson** property.|
 
-### Step 4B: Enable the workforce integration for your team schedules
+### Step 4b: Enable the workforce integration for your team schedules
 
 Enable your workforce integration on the schedules you want to manage. To do this, use the [Create or replace schedule](/graph/api/team-put-schedule?view=graph-rest-1.0) API to create or update the schedule for your teams.
 
@@ -494,35 +492,39 @@ POST https://graph.microsoft.com/v1.0/teams/{teamId}/schedule
 - Specify the workforceIntegrationId that was generated when you [registered the workforce integration](#step-4a-register-the-workforce-integration-in-your-tenant).
 - You can enable a maximum of one workforce integration on a schedule. If you include more than one workforceIntegrationId in the request, the first one is used.
 
-## Frequently asked questions
+## Troubleshooting
 
-### What happens if I return a response code other than 200? Does it make any difference whether I return a status other than 200 in the response body?
+### Connector
+
+#### When the connector responds to a request from Shifts, what happens if it returns a response code other than 200? Does it make a difference if it returns a status other than 200 in the response body?
 
 There's a difference between these two scenarios.
 
-- If you return a response code other than 200, Shifts attempts to retry the /read and /update endpoints multiple times. Eventually, Shifts displays a "Something went wrong. The workforce integration setup on your team has responded with invalid data." error message.
-- If you return a status other than 200 in the response body, Shifts displays a "Something went wrong. Sorry, your change couldn’t be completed," error message and stops retrying the endpoints.
+- If the connector returns a response code other than 200, Shifts attempts to retry the /read and /update endpoints multiple times. Eventually, Shifts displays a "Something went wrong. The workforce integration setup on your team has responded with invalid data." error message.
+- If the connector returns a status other than 200 in the response body, Shifts displays a "Something went wrong. Sorry, your change couldn’t be completed," error message and stops retrying the endpoints.
 
-### What happens if I return invalid data in the response body?
+#### What happens if the connector returns invalid data in the response body?
 
-Shifts attempts to retry the /read and /update endpoints multiple times. Eventually, Shifts displays a "Something went wrong. The workforce integration setup on your team has responded with invalid data." error message.
+Shifts attempts to retry the /read and /update endpoints multiple times. Eventually, Shifts displays a "Something went wrong. The workforce integration set up on your team has responded with invalid data." error message.
 
-### How do I identify whether the request originally made in Shifts or in the WFM system to prevent an infinite loop?
+#### How do I identify whether the request was originally made in Shifts or in the WFM system to prevent an infinite loop?
 
-Add the `X-MS-WFMPassthrough: workforceIntegratonId` header to all write and update calls to identify/ignore the changes triggered by connector. This header is used to indicate that the request is made because of a preceding call from the connector to Shifts when performing a data sync.
+Add the `X-MS-WFMPassthrough: "workforceIntegratonId"` header to all write and update calls to identify/ignore the changes triggered by connector. This header is used to indicate that the request is made because of a preceding call that was made by the connector to Graph API to sync data from your WFM system to Shifts.
 
-### I registered the workforce integration through Graph API with eligibilityFilteringEnabledEntities including SwapRequest,OfferShiftRequest,TimeOffReason but the response body doesn't show the eligibilityFilteringEnabledEntities list.
+### Workforce integration registration
+
+#### I registered the workforce integration and specified "eligibilityFilteringEnabledEntities" including "SwapRequest, OfferShiftRequest, and TimeOffReason' but the response body doesn't show the "eligibilityFilteringEnabledEntities" list.
 
 Eligibility filtering is currently supported through the `https://graph.microsoft.com/beta` endpoint, not the `https://graph.microsoft.com/v1` endpoint.
 
-### I registered the workforce integration through Graph API and added "supportedEntities" but I get a 400 Bad Request response and an "Invalid payload: Requested value 'shift, ....' was not found." message
+#### I registered the workforce integration and added "supportedEntities" but receive a 400 Bad Request response and an "Invalid payload: Requested value 'shift, ....' was not found." message
 
-Every Shifts entity in the `supportedEntities` list request body must start with an uppercase letter. For example,
+Make sure that every Shifts entity in the `supportedEntities` list request body starts with an uppercase letter. For example,
 `"supportedEntities":"Shift,SwapRequest,OpenShift"`.
 
-### I registered the workforce integration through Graph API and implemented the /connect, update, and /read endpoints, but the webhook isn't working.
+#### I registered the workforce integration and implemented the /connect, update, and /read endpoints, but the webhook isn't working.
 
-This issue might occur if the workforce integration isn't enabled for the team or if an incorrect workforceintegrationId is registered with a different callback URL.
+Make sure your workforce integration is enabled for your team schedule. Additionally, check that the **url** and **apiVersion** properties are correct.
 
 ## Endpoint reference
 
