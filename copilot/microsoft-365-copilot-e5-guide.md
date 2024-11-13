@@ -468,7 +468,7 @@ Taking the time to design a policy before you implement it gets you to the desir
 
 If you're new to Microsoft Purview DLP, it's helpful to work through these articles before you start designing a policy:
 
-1. [Administrative units](purview-compliance-portal-permissions.md#administrative-units)
+1. [Administrative units](/purview/purview-compliance-portal-permissions.md#administrative-units)
 1. [Learn about Microsoft Purview Data Loss Prevention](/purview/dlp-learn-about-dlp)  - introduces you to the data loss prevention discipline and Microsoft's implementation of DLP
 1. [Plan for data loss prevention (DLP)](/purview/dlp-overview-plan-for-dlp.md#plan-for-data-loss-prevention-dlp) - by working through this article you will:
     1. [Identify stakeholders](/purview/dlp-overview-plan-for-dlp.md#identify-stakeholders)
@@ -483,7 +483,7 @@ If you're new to Microsoft Purview DLP, it's helpful to work through these artic
 
 For Exchange Online, SharePoint Online, and OneDrive, you can use DLP to identify, monitor, and automatically protect sensitive information across emails and files, including files stored in Microsoft Teams file repositories.
 
-For more information on creating DLP policies, see [Design a DLP policy](dlp-policy-design.md) and [Create and Deploy data loss prevention policies](dlp-create-deploy-policy.md)
+For more information on creating DLP policies, see [Design a DLP policy](/purview/dlp-policy-design.md) and [Create and Deploy data loss prevention policies](/purview/dlp-create-deploy-policy.md)
 
 <!--
 
