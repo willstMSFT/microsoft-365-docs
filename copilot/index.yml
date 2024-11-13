@@ -72,7 +72,7 @@ conceptualContent:
               text: Set up and assign Microsoft 365 Copilot licenses
             - url: https://setup.cloud.microsoft/copilot-for-microsoft-365/setup-guide
               itemType: deploy
-              text: Microsoft 365 Copilot setup guide on `setup.cloud.microsoft`
+              text: Microsoft 365 Copilot setup guide on setup.cloud.microsoft
             - url: https://adoption.microsoft.com/copilot/
               itemType: get-started
               text: Best practices and tools for employee engagement
