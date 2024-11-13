@@ -45,6 +45,8 @@ The blueprint provides:
 - Recommended actions specific to E3 or E5 licenses at each stage
 - Detailed guidance for using the tools in the SharePoint Admin Center, SharePoint Advanced Management (SAM), and Microsoft Purview to identify and mitigate oversharing and ongoing governance concerns.
 
+:::image type="content" source="media/microsoft-365-copilot-blueprint-oversharing/blueprint-oversharing-copilot.png" alt-text="Diagram that shows oversharing blueprint for Microsoft 365 Copilot." lightbox="media/microsoft-365-copilot-blueprint-oversharing/blueprint-oversharing-copilot.png":::
+
 ## Phase 1 - Pilot
 
 The initial stage provides steps for customers to quickly enable a Microsoft 365 Copilot pilot.
@@ -74,7 +76,7 @@ It also focuses on:
 
 | Deployment model | Description |
 |---|---|
-|**Address oversharing in Microsoft 365 Copilot**<br/><br/> [![Address internal oversharing concerns in Microsoft 365 Copilot](media/microsoft-365-copilot-blueprint-oversharing/blueprint-oversharing-copilot-thumbprint.png)](https://aka.ms/Copilot/OversharingBlueprintPDF) <br/> Updated November 2024 | Use this deployment model to assist organizations in identifying and mitigating internal oversharing risks. <br/><br/>**This model includes**<br/><ul><li>Blueprint with high level activities and presentation [PDF](https://aka.ms/Copilot/OversharingBlueprintPDF) \| [PowerPoint](https://aka.ms/Copilot/OversharingBlueprintPPT)</li></ul> |
+|**Address oversharing in Microsoft 365 Copilot**<br/><br/> [![Address internal oversharing concerns in Microsoft 365 Copilot](media/microsoft-365-copilot-blueprint-oversharing/blueprint-oversharing-copilot.png)](https://aka.ms/Copilot/OversharingBlueprintPDF) <br/> Updated November 2024 | Use this deployment model to assist organizations in identifying and mitigating internal oversharing risks. <br/><br/>**This model includes**<br/><ul><li>Blueprint with high level activities and presentation [PDF](https://aka.ms/Copilot/OversharingBlueprintPDF) \| [PowerPoint](https://aka.ms/Copilot/OversharingBlueprintPPT)</li></ul> |
 
 ### Documentation resources
 
