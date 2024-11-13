@@ -9,6 +9,8 @@
           href: microsoft-365-copilot-architecture.md
         - name: Data protection and auditing
           href: microsoft-365-copilot-architecture-data-protection-auditing.md
+        - name: Blueprint to prevent oversharing
+          href: microsoft-365-copilot-blueprint-oversharing.md
         - name: Get your data ready for Microsoft 365 Copilot
           items:
             - name: License options
