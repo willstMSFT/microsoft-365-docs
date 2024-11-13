@@ -37,7 +37,7 @@ Before you can export prompts that users saved or shared in Copilot Prompt Galle
 
 1. To get started, you need to [download the CopilotLabDSR PowerShell script](https://download.microsoft.com/download/b/a/b/babff430-cc1f-46e0-b98b-2997d79af5ae/tenant-admin-scripts.zip).
 2. Extract the CopilotLabDSR.psm1 file from the tenant-admin-scripts.zip file to a location you can access from PowerShell.
-3. In File Explorer, go to the location where you extracted the CopilotLabDSR.psm1 file.
+3. In File Explorer, go to the location where you saved the CopilotLabDSR.psm1 file that you extracted.
 4. Right-click on the CopilotLabDSR.psm1 file and select **Properties**.
 5. On the **General** tab, select **Unblock** checkbox, and then select **Ok**.
 
@@ -49,7 +49,7 @@ Before you can export prompts that users saved or shared in Copilot Prompt Galle
    ```PowerShell
    Get-Module -ListAvailable MSAL.PS
    ```
-2. If the module isn't installed, install by running the following command in PowerShell:
+2. If the module isn't installed, install the module by running the following command in PowerShell:
    ```PowerShell
    Install-Module -Name MSAL.PS -Scope CurrentUser 
 
@@ -64,7 +64,7 @@ Before you can export prompts that users saved or shared in Copilot Prompt Galle
 2. Run the following command to import the module with all available cmdlets.
 
    ```PowerShell
-   Import-module "<location of the CopilotLabDSR.psm1 file you extracted>"
+   Import-module "<location where you saved the CopilotLabDSR.psm1 file that you extracted>"
    ```
 
    For example, if your file is saved in C:\AdminScripts, you would type:
