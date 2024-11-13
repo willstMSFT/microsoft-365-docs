@@ -34,13 +34,13 @@
         - name: Adoption resources
           href: microsoft-365-copilot-enablement-resources.md
     - name: Manage Microsoft 365 Copilot
-  items:
+      items:
     - name: Manage Microsoft 365 Copilot settings 
       href: microsoft-365-copilot-page.md
     - name: Pin Microsoft Copilot to the navigation bar
-      href: pin-microsoft-copilot.md
+      href: pin-copilot.md
     - name: Manage Copilot for Microsoft Teams meetings and events
-      href: manage-copilot-teams.md
+      href: /microsoftteams/copilot-teams-transcription?toc=%2Fcopilot%2Fmicrosoft-365%2Ftoc.json&bc=%2Fmicrosoft-365-copilot%2Fbreadcrumb%2Ftoc.json
     - name: Viva and Microsoft 365 Copilot usage
       items:
         - name: Viva Insights Copilot Dashboard
