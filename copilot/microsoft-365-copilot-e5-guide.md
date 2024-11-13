@@ -468,22 +468,22 @@ Taking the time to design a policy before you implement it gets you to the desir
 
 If you're new to Microsoft Purview DLP, it's helpful to work through these articles before you start designing a policy:
 
-1. [Administrative units](/purview/purview-compliance-portal-permissions.md#administrative-units)
+1. [Administrative units](/purview/purview-compliance-portal-permissions#administrative-units)
 1. [Learn about Microsoft Purview Data Loss Prevention](/purview/dlp-learn-about-dlp)  - introduces you to the data loss prevention discipline and Microsoft's implementation of DLP
-1. [Plan for data loss prevention (DLP)](/purview/dlp-overview-plan-for-dlp.md#plan-for-data-loss-prevention-dlp) - by working through this article you will:
-    1. [Identify stakeholders](/purview/dlp-overview-plan-for-dlp.md#identify-stakeholders)
-    1. [Describe the categories of sensitive information to protect](/purview/dlp-overview-plan-for-dlp.md#describe-the-categories-of-sensitive-information-to-protect)
-    1. [Set goals and strategy](/purview/dlp-overview-plan-for-dlp.md#set-goals-and-strategy)
-1. [Data Loss Prevention policy reference](/purview/dlp-policy-reference.md#data-loss-prevention-policy-reference) - this article introduces all the components of a DLP policy and how each one influences the behavior of a policy
-1. [Design a DLP policy](/purview/dlp-policy-design.md) - this article walks you through creating a policy intent statement and mapping it to a specific policy configuration. 
-1. [Create and Deploy data loss prevention policies](/purview/dlp-create-deploy-policy.md) - This article presents some common policy intent scenarios that you'll map to configuration options, then it walks you through configuring those options.
+1. [Plan for data loss prevention (DLP)](/purview/dlp-overview-plan-for-dlp#plan-for-data-loss-prevention-dlp) - by working through this article you will:
+    1. [Identify stakeholders](/purview/dlp-overview-plan-for-dlp#identify-stakeholders)
+    1. [Describe the categories of sensitive information to protect](/purview/dlp-overview-plan-for-dlp#describe-the-categories-of-sensitive-information-to-protect)
+    1. [Set goals and strategy](/purview/dlp-overview-plan-for-dlp#set-goals-and-strategy)
+1. [Data Loss Prevention policy reference](/purview/dlp-policy-reference#data-loss-prevention-policy-reference) - this article introduces all the components of a DLP policy and how each one influences the behavior of a policy
+1. [Design a DLP policy](/purview/dlp-policy-design) - this article walks you through creating a policy intent statement and mapping it to a specific policy configuration. 
+1. [Create and Deploy data loss prevention policies](/purview/dlp-create-deploy-policy) - This article presents some common policy intent scenarios that you'll map to configuration options, then it walks you through configuring those options.
 1. [Learn about investigating data loss prevention alerts](/purview/dlp-alert-investigation-learn) - This article introduces you to the lifecycle of alerts from creation, through final remediation and policy tuning. It also introduces you to the tools you use to investigate alerts.
 
 #### 1. Create DLP policies
 
 For Exchange Online, SharePoint Online, and OneDrive, you can use DLP to identify, monitor, and automatically protect sensitive information across emails and files, including files stored in Microsoft Teams file repositories.
 
-For more information on creating DLP policies, see [Design a DLP policy](/purview/dlp-policy-design.md) and [Create and Deploy data loss prevention policies](/purview/dlp-create-deploy-policy.md)
+For more information on creating DLP policies, see [Design a DLP policy](/purview/dlp-policy-design) and [Create and Deploy data loss prevention policies](/purview/dlp-create-deploy-policy)
 
 <!--
 
