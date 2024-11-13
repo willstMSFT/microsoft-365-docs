@@ -106,14 +106,14 @@ To manage MTO user labels for tenants in your MTO:
       
 1. Select **Save changes**.
 
-## Manage multitenant org notifications
+## Manage multitenant org notifications (private preview)
 
 > [!NOTE]
-> This is currently only available for private preview. 
+> This is currently only available for private preview.
 
 Admins can opt-in for MTO notifications to ensure they don’t miss any updates or changes to their MTO. You will receive email notifications regarding any updates to the MTO such as: a new tenant joined the MTO, a tenant left the MTO, an MTO setting changed (user labels, owner/member role, MTO name), or user sync status changed (Must have full-mesh sync set up via M365 admin center). Email notifications are sent weekly, assuming any updates were made to the MTO.
 
-Additionally, in the MAC MTO portal you can review the updates and see any Microsoft recommended actions. Simply opt-in and select the user(s) in your org who you would like to receive the notifications.
+Additionally, in the MAC MTO portal you can review the updates and see any Microsoft recommended actions. Opt-in and select the user(s) in your org who you would like to receive the notifications.
 
 ![MTO activity center.](media/manage-multitenant-org-settings/image3.png)
 
@@ -134,6 +134,22 @@ To manage MTO notifications:
 
 
 
-### Permissions 
+#### Permissions
 
 
+To enable multitenant org notifications, you must grant application [permissions](/graph/permissions-reference) for the following actions:
+
+These permissions are required to fetch cross-tenant synchronization details and to gather the status of the cross-tenant sync jobs.
+
+- Reading cross-tenant sync information
+
+  - [Application.Read.All](/graph/permissions-reference)
+  
+  - [Synchronization.Read.All](/graph/permissions-reference)
+  
+This permission is required to gather details regarding the multitenant organization.
+
+- Reading MTO details 
+
+  - [MultiTenantOrganization.Read.All](/graph/permissions-reference)
+  
