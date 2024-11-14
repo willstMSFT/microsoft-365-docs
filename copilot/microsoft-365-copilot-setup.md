@@ -26,7 +26,7 @@ appliesto:
 
 It works alongside popular Microsoft 365 Apps, like Word, Excel, PowerPoint, Outlook, Teams, and more. Copilot provides real-time intelligent assistance, enabling users to enhance their creativity, productivity, and skills.
 
-This article provides guidance for administrators on preparing their organization for Microsoft 365 Copilot. It covers baseline implementation and readiness activities, required licenses, and steps to ensure a secure and compliant deployment.
+This article provides guidance for administrators on preparing their organization for Microsoft 365 Copilot. It covers foundational implementation and readiness activities, licensing, and steps to ensure a secure and compliant deployment.
 
 ## Prerequisites
 
@@ -35,7 +35,6 @@ This article provides guidance for administrators on preparing their organizatio
   - **[Microsoft 365 admin center](https://admin.microsoft.com)**: There are different roles depending on the task you need to complete. To learn more about roles, see [Commonly used Microsoft 365 admin center roles](/microsoft-365/admin/add-users/about-admin-roles#commonly-used-microsoft-365-admin-center-roles).
   - **[SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219)**: Sign in as the [SharePoint administrator](/sharepoint/sharepoint-admin-role).
   - **[Microsoft Purview portal](https://purview.microsoft.com)**: There are different roles depending on the task you need to complete. To learn more, see:
-
     - [Permissions required to create and manage sensitivity labels](/purview/get-started-with-sensitivity-labels#permissions-required-to-create-and-manage-sensitivity-labels)
     - [Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview](/defender-office-365/scc-permissions)
 
@@ -62,7 +61,7 @@ To ensure a smooth transition to Microsoft 365 Copilot, administrators should un
 - **Conduct pilot testing**: Perform pilot testing with a select group of users to identify any issues and gather feedback.
 - **Develop a communication plan**: Create a communication plan to inform users about the upcoming changes and provide them with the necessary resources and support.
 - **Review Conditional Access policies**: Ensure that conditional access policies are appropriately configured. Microsoft 365 Copilot supports tenant-level Conditional Access Policies in SharePoint Online. To learn more, see [Conditional Access](/entra/identity/conditional-access/overview).
-- **Review SharePoint Search and Advanced Management Policies**: Use SharePoint Advanced Management (SAM) to control access to content, prevent oversharing, and manage content lifecycle. For detailed steps, see [Get ready for Microsoft 365 Copilot with SharePoint Advanced Management (SAM)](/sharepoint/get-ready-copilot-sharepoint-advanced-management). Additionally, consider implementing restricted SharePoint search to limit the discoverability of sensitive content. To learn more, see [Restricted SharePoint Search](/SharePoint/restricted-sharepoint-search).
+- **Review SharePoint Search and Advanced Management Policies**: Use SharePoint Advanced Management (SAM) to control access to content, prevent oversharing, and manage content lifecycle. For detailed steps, see [Get ready for Microsoft 365 Copilot with SharePoint Advanced Management (SAM)](/sharepoint/get-ready-copilot-sharepoint-advanced-management). Additionally, consider implementing restricted SharePoint search to limit the discoverability of sensitive content. To learn more, see [Address internal oversharing concerns in Microsoft 365 Copilot deployment blueprint](microsoft-365-copilot-blueprint-oversharing.md).
 - **Ensure network compliance**: Review and ensure that your network meets the requirements for Microsoft 365 Copilot services. To learn more, see [Microsoft 365 Copilot network requirements](microsoft-365-copilot-requirements.md#network-requirements).
 
 ## Security measures for Microsoft 365 Copilot
@@ -71,7 +70,7 @@ To ensure a secure and compliant environment for Microsoft 365 Copilot, it's cru
 
 ### Multi-Factor Authentication (MFA)
 
-Multi-factor authentication (MFA) is a critical security measure that requires users to provide two or more verification factors to gain access to a resource such as an application or online account. Implementing MFA helps protect against unauthorized access and enhances the security of your organization's data. To learn more, see [Microsoft Entra multifactor authentication](/entra/identity/authentication/concept-mfa-howitworks).
+Multifactor authentication (MFA) is a critical security measure that requires users to provide two or more verification factors to gain access to a resource such as an application or online account. Implementing MFA helps protect against unauthorized access and enhances the security of your organization's data. To learn more, see [Microsoft Entra multifactor authentication](/entra/identity/authentication/concept-mfa-howitworks).
 
 #### Steps to implement MFA
 
@@ -91,12 +90,14 @@ Audit logging is essential for tracking and monitoring activities within your Mi
 
 ### Restrict sensitive info from Copilot
 
-To ensure that sensitive information is protected during the deployment and use of Microsoft 365 Copilot, take the following steps to identify, assess, and mitigate oversharing risks. These measures will help maintain data security and compliance within your organization:
+To protect sensitive information during the deployment and use of Microsoft 365 Copilot, follow these steps to identify, assess, and mitigate oversharing risks. These measures will help maintain data security and compliance within your organization:
 
-- **Identify most popular sites and assess oversharing** Export the top 100 most used sites from the SharePoint admin center, run the SharePoint Advanced Management (SAM) permission state report, and run the Microsoft Purview Data Security Posture Management (DSPM) Oversharing posture assessment. To learn more, see [Secure by default with Microsoft Purview and protect against oversharing](/purview/deploymentmodels/depmod-securebydefault-intro).
-- **Grant Copilot access to popular, low-risk sites** Cross-reference the report results from SAM and Purview DSPM with the top 100 used sites, and optionally enable Restricted SharePoint Search (RSS) for up to 100 sites identified.
-- **Turn on proactive audit and protection** Disable "everyone except external users" (EEEU) at the tenant level, enable Purview Audit to monitor Copilot interaction activity reports and charts, activate proactive analysis for sensitive data handling with Purview Communications Compliance, and set up audit-mode oversharing policies with SharePoint Online Purview Data Loss Prevention (DLP). To learn more, see [Protect your sensitive data with Microsoft Purview](/purview/information-protection).
-- **Implement access controls and labeling** Initiate SAM Access Review for all sites that are overshared, apply SAM restricted access control (RAC) on business-critical sites, exclude critical sites from Copilot reasoning over them with SAM Restricted Content Discovery (RCD), publish sensitivity labels with Purview Information Protection to Office apps, containers/sites, and Outlook, and exclude Copilot from summarizing sensitive content via sensitivity labels. To learn more, see [Get ready for Microsoft 365 Copilot with SharePoint Advanced Management (SAM)](/sharepoint/get-ready-copilot-sharepoint-advanced-management).
+- **Identify most popular sites and assess oversharing** Export the top 100 most used sites from the SharePoint admin center and run the SharePoint Advanced Management (SAM) permission state report. To learn more, see [Secure by default with Microsoft Purview and protect against oversharing](/purview/deploymentmodels/depmod-securebydefault-intro).
+- **Grant Copilot access to popular, low-risk sites** Cross-reference the report results from SAM and the Microsoft Purview Data Security Posture Management (DSPM) Oversharing posture assessment with the top 100 used sites.
+- **Turn on proactive audit and protection** Disable "everyone except external users" (EEEU) at the tenant level and enable Purview Audit to monitor Copilot interaction activity. To learn more, see [Protect your sensitive data with Microsoft Purview](/purview/information-protection).
+- **Implement access controls and labeling** Initiate SAM Access Review for all sites that are overshared and apply SAM restricted access control on business-critical sites. To learn more, see [Get ready for Microsoft 365 Copilot with SharePoint Advanced Management (SAM)](/sharepoint/get-ready-copilot-sharepoint-advanced-management).
+
+For detailed steps, see [Address internal oversharing concerns in Microsoft 365 Copilot deployment blueprint](microsoft-365-copilot-blueprint-oversharing.md).
 
 ## Get started and deploy
 
@@ -172,7 +173,7 @@ When you're ready to assign Copilot licenses to your users, there are three phas
 
 1. **Pilot**: Assign licenses to a small group of users to test the deployment and gather feedback.
 2. **Deploy**: Assign licenses to a larger group of users.
-3. **Optimize**: Monitor usage and adoption, and make adjustments as needed.
+3. **Operate**: Monitor usage and adoption, and make adjustments as needed.
 
 To learn more about these phases, and possible actions you can take in each phase, see the [Microsoft deployment blueprint to address oversharing in Microsoft 365 Copilot](microsoft-365-copilot-privacy.md#committed-to-responsible-ai).
 
@@ -208,7 +209,7 @@ During this phase, you may also want to:
 - Focus on preventing oversharing by limiting external sharing, restricting access to certain files or folders, and setting up alerts to notify you of any unusual activity. To learn more, see [Site governance, permission, and sharing for site owners](https://support.microsoft.com/office/overview-site-governance-permission-and-sharing-for-site-owners-95e83c3d-e1b0-4aae-9d08-e94dcaa4942e).
 - Use sensitivity labels to classify and protect sensitive information. These labels allow you to automatically encrypt files containing sensitive data or restrict access to files marked as "confidential." To learn more, see [Get started with sensitivity labels](/purview/get-started-with-sensitivity-labels).
 
-#### Optimize
+#### Operate
 
 ✅ **Get insights and user sentiment**
 
