@@ -52,7 +52,7 @@ Administrators should notify the site owners and end users before a site is arch
 
 ## Limitations
 
-Document Center templates are not available to archive with Microsoft 365 Archive.
+Publishing sites, Teams with channel sites, and a handful of legacy site template types are not available to archive with Microsoft 365 Archive.
 
 <!---
 ## Preview limitations

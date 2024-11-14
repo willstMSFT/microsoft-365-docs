@@ -23,6 +23,7 @@ ms.date: 04/01/2024
 |Spain                                                                                |ESP
 |Sweden                                                                               |SWE
 |Switzerland                                                                          |CHE
+|Taiwan                                                                               |TWN
 |United Arab Emirates                                                                 |ARE
 |United Kingdom                                                                       |GBR
 |United States                                                                        |NAM
