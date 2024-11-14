@@ -171,7 +171,7 @@ When you're ready to assign Copilot licenses to your users, there are three phas
 
 1. **Pilot**: Assign licenses to a small group of users to test the deployment and gather feedback.
 2. **Deploy**: Assign licenses to a larger group of users.
-3. **Optimize**: Monitor usage and adoption, and make adjustments as needed.
+3. **Operate**: Monitor usage and adoption, and make adjustments as needed.
 
 To learn more about these phases, and possible actions you can take in each phase, see the [Microsoft deployment blueprint to address oversharing in Microsoft 365 Copilot](microsoft-365-copilot-privacy.md#committed-to-responsible-ai).
 
@@ -207,7 +207,7 @@ During this phase, you may also want to:
 - Focus on preventing oversharing by limiting external sharing, restricting access to certain files or folders, and setting up alerts to notify you of any unusual activity. To learn more, see [Site governance, permission, and sharing for site owners](https://support.microsoft.com/office/overview-site-governance-permission-and-sharing-for-site-owners-95e83c3d-e1b0-4aae-9d08-e94dcaa4942e).
 - Use sensitivity labels to classify and protect sensitive information. These labels allow you to automatically encrypt files containing sensitive data or restrict access to files marked as "confidential." To learn more, see [Get started with sensitivity labels](/purview/get-started-with-sensitivity-labels).
 
-#### Optimize
+#### Operate
 
 ✅ **Get insights and user sentiment**
 
