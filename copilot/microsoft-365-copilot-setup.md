@@ -70,7 +70,7 @@ To ensure a secure and compliant environment for Microsoft 365 Copilot, it's cru
 
 ### Multi-Factor Authentication (MFA)
 
-Multi-factor authentication (MFA) is a critical security measure that requires users to provide two or more verification factors to gain access to a resource such as an application or online account. Implementing MFA helps protect against unauthorized access and enhances the security of your organization's data. To learn more, see [Microsoft Entra multifactor authentication](/entra/identity/authentication/concept-mfa-howitworks).
+Multifactor authentication (MFA) is a critical security measure that requires users to provide two or more verification factors to gain access to a resource such as an application or online account. Implementing MFA helps protect against unauthorized access and enhances the security of your organization's data. To learn more, see [Microsoft Entra multifactor authentication](/entra/identity/authentication/concept-mfa-howitworks).
 
 #### Steps to implement MFA
 
