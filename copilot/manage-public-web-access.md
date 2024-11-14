@@ -28,13 +28,7 @@ When web search is enabled, Microsoft 365 Copilot and Microsoft Copilot may fetc
 
 When web search is enabled, Microsoft 365 Copilot and Microsoft Copilot parse the user’s prompt and identifies terms where information from the web would improve the quality of the response. Based on these terms, Copilot generates a search query that it sends to the Bing search service asking for more information.
 
-This generated search query is different from the user’s original prompt—it consists of a few words informed by the user’s prompt. When using Microsoft 365 Copilot, the generated search query doesn't include the entirety of Microsoft 365 documents associated with the prompt. However, it may also be informed by data within a Microsoft 365 document under the following conditions:
-
-- When a user enters a prompt into Copilot inside a Microsoft 365 application (for example, writing a prompt into Copilot in Microsoft Word while a relevant document is open).
-
-- When the user explicitly references a specific document in their prompt.
-
-The following information isn't included in the generated search query sent to the Bing search service:
+This generated search query is different from the user’s original prompt—it consists of a few words informed by the user’s prompt. The following information isn't included in the generated search query sent to the Bing search service:
 
 - The user's entire prompt, unless the prompt is very short (for example, "local weather")
 
@@ -43,6 +37,12 @@ The following information isn't included in the generated search query sent to t
 - Entire web pages or PDFs summarized by Copilot in Microsoft Edge (only for Microsoft Copilot)
 
 - Any identifying information based on the user's Microsoft Entra ID (for example, username, domain, or tenant ID)
+
+When using Microsoft 365 Copilot, the generated search query doesn't include the entirety of Microsoft 365 documents associated with the prompt. However, it may also be informed by data within a Microsoft 365 document under the following conditions:
+
+- When a user enters a prompt into Copilot inside a Microsoft 365 application (for example, writing a prompt into Copilot in Microsoft Word while a relevant document is open).
+
+- When the user explicitly references a specific document in their prompt.
 
 > [!NOTE]
 > We’re making some improvements to web search query transparency in the near future. For more information, see
