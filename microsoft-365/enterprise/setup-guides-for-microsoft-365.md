@@ -62,7 +62,7 @@ To reach the **Advanced deployment guides & assistance** page:
 
 2. Find the _Training, guides & assistance_ card and select **Advanced deployment guides & assistance**.
 
-3. If you don’t see that card, access the page directly at (https://aka.ms/advanceddeploymentguides).
+3. If you don’t see that card, access the page directly at https://aka.ms/advanceddeploymentguides.
    
    :::image type="content" alt-text="This screenshot shows the training & guides card in the Microsoft 365 admin center." source="../media/setup-guides-for-microsoft-365/thumbnail_ADG-TrainingCard.png":::
 
