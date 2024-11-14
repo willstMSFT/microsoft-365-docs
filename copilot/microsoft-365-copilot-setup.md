@@ -66,7 +66,7 @@ To ensure a smooth transition to Microsoft 365 Copilot, administrators should un
 
 ## Security measures for Microsoft 365 Copilot
 
-To ensure a secure and compliant environment for Microsoft 365 Copilot, it's crucial to implement robust security measures. Two key components of this are Multi-Factor Authentication (MFA) and audit logging. These measures help protect against unauthorized access and provide visibility into user and admin activities.
+To ensure a secure and compliant environment for Microsoft 365 Copilot, it's crucial to implement robust security measures. Some key components of this are Multifactor authentication (MFA), audit logging, and restricting sensitive information. These measures help protect against unauthorized access and provide visibility into user and admin activities.
 
 ### Multi-Factor Authentication (MFA)
 
