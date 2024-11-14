@@ -4,10 +4,11 @@ ms.author: kvice
 ms.reviewer: smithre4
 author: kelleyvice-msft
 manager: scotv
-ms.date: 12/19/2023
+ms.date: 09/25/2024
 audience: ITPro
 ms.topic: article
 ms.service: microsoft-365-enterprise
+ms.subservice: administration
 ms.localizationpriority: medium
 ms.assetid: ef753b32-7251-4c9e-b442-1a5aec14e58d
 ms.collection:
@@ -187,5 +188,4 @@ Verify and check these items off your list before you continue:
 
 - [How to configure Exchange Server on-premises to use Modern Authentication](configure-exchange-server-for-hybrid-modern-authentication.md)
 - [Skype for Business topologies supported with Modern Authentication](/skypeforbusiness/plan-your-deployment/modern-authentication/topologies-supported)
-- [How to configure Skype for Business on-premises to use Modern Authentication](configure-skype-for-business-for-hybrid-modern-authentication.md)
 - [Removing or disabling Hybrid Modern Authentication from Skype for Business and Exchange](remove-or-disable-hybrid-modern-authentication-from-skype-for-business-and-excha.md)

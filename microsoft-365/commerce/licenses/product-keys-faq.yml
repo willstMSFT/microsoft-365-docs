@@ -10,7 +10,7 @@ metadata:
   ms.service: microsoft-365-business
   ms.subservice: m365-commerce-volume-licensing
   ms.collection: 
-  - Tier2
+  - Tier1
   - scotvorg
   ms.custom: 
   - commerce_vl
@@ -58,8 +58,6 @@ sections:
           If your agreement authorizes access to a product that requires a key, you can find those keys by going to **Billing** > **Your products** > **Volume licensing** > **Downloads & keys**. 
 
           However, some products don't require a product key. This information is listed in the product description in the Downloads and Keys catalog.
-
-          To determine if your product requires a key, go to [Product activation and key information](https://licensingapps.microsoft.com/product-activation). Under Find Products, choose a product or search for your product name.
 
       - question: |
           What is a setup key?
@@ -215,7 +213,7 @@ sections:
 
           If you deploy Microsoft 365 using Key Management Service (KMS) as the activation method, note that:
             - You can't activate Microsoft 365 using KMS if you use Windows Server as the KMS host.
-            - A patch isn't available to allow activation of Microsoft 365 apps.
+            - A patch isn't available to allow activation of apps in Microsoft 365.
 
           If you're using Windows Server 2008 as a KMS host, you can:
             - Upgrade the KMS host machine to Windows Server.
@@ -242,8 +240,8 @@ sections:
       - question: |
           Can I use my Volume License Keys to exercise my re-imaging rights?
         answer: |
-          Yes. Re-imaging rights are granted to all Microsoft Volume Licensing customers. Under these rights, customers can re-image Original Equipment Manufacturer (OEM) or Full Packaged Product (FPP) licensed copies by using media provided under their agreement if the copies made from the Volume Licensing media are identical to the original licensed product. As a Volume Licensing customer, you can find the Volume License Keys on the product key page or request your keys through a [Microsoft Activation Center](https://licensingapps.microsoft.com/product-activation).
-
+          Yes. Re-imaging rights are granted to all Microsoft Volume Licensing customers. Under these rights, customers can re-image Original Equipment Manufacturer (OEM) or Full Packaged Product (FPP) licensed copies by using media provided under their agreement if the copies made from the Volume Licensing media are identical to the original licensed product. 
+          
           > [!NOTE]
           > If you're an Open License customer, you must purchase at least one unit of the product that you want to re-image to obtain access to the product media and receive a product key.
 
@@ -275,6 +273,6 @@ additionalContent: |
 
   ## Additional resources
   
-  - [Downloads FAQ](downloads-faq.yml)
+  - [Download volume licensing products](download-vl-products.md)
 
   - [Online service activation for Open programs FAQ](online-service-activation-faq.yml)

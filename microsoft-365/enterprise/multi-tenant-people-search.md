@@ -7,6 +7,7 @@ ms.date: 04/09/2024
 audience: ITPro
 ms.topic: article
 ms.service: microsoft-365-enterprise
+ms.subservice: multi-tenant
 ms.localizationpriority: medium
 ms.collection: 
 - scotvorg
@@ -39,8 +40,7 @@ Megan's user account has been synced from the _Fabrikam_ tenant to the target te
 
 ## Known limitations
 
-- The current experience provides limited information on the people card (basic contact information, job title and office location).
-
+The current experience provides limited information on the people card (basic contact information, job title and office location).
 
 ## Prerequisites
 

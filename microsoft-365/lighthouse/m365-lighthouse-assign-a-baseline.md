@@ -4,10 +4,10 @@ f1.keywords: CSH
 ms.author: sharik
 author: SKjerland
 manager: scotv
-ms.reviewer: shcallaw
-ms.date: 08/16/2023
+ms.reviewer: jatingupta
+ms.date: 10/21/2024
 audience: Admin
-ms.topic: article
+ms.topic: how-to
 ms.service: microsoft-365-lighthouse
 ms.localizationpriority: medium
 ms.collection:

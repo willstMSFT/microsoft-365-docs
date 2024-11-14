@@ -3,7 +3,7 @@ title: Licensing for Microsoft Syntex
 ms.author: chucked
 author: chuckedmonson
 ms.reviewer: ssquires, kkameth
-ms.date: 02/15/2024
+ms.date: 11/08/2024
 manager: jtremper
 audience: admin
 ms.topic: conceptual
@@ -40,20 +40,21 @@ Pay-as-you-go currently supports the following Syntex services:
 - Prebuilt document processing
 - Structured and freeform document processing
 - Unstructured document processing
+- Autofill columns
 - Content assembly
+- Document translation
 - Image tagging
-- Taxonomy tagging
-- Translation
-- Syntex eSignature
 - Optical character recognition
-- Microsoft 365 Archive (Preview)
-- Microsoft 365 Backup (Preview)
+- SharePoint eSignature
+- Taxonomy tagging
+- Microsoft 365 Archive
+- Microsoft 365 Backup
 
 More Syntex services will be added as they become available.
 
 ### Feature limited preview
 
-Pay-as-you-go licensing includes access to additional Syntex features for a limited time as a preview. You won't be charged on a pay-as-you-go basis during the preview. These features include:
+Pay-as-you-go licensing includes access to additional Syntex features for a limited time as a preview. The feature limited preview ends December 31, 2024. You won't be charged on a pay-as-you-go basis during the preview. These features include:
 
 - Content query
 - Universal annotations
@@ -67,7 +68,7 @@ For more information, see [Microsoft Syntex features limited time license agreem
 
 ## If you still have active per-user licenses
 
-As of July 1, 2023, per-user licenses are no longer available for purchase. Per-user licenses purchased before July 1 can still be assigned to new users. After existing per-user licenses expire, you'll need to opt in to Syntex [pay-as-you-go billing](syntex-azure-billing.md) to continue using Syntex services.
+As of July 1, 2023, per-user licenses are no longer available for purchase. Per-user licenses purchased prior to that date can still be assigned to new users. After existing per-user licenses expire, you'll need to opt in to Syntex [pay-as-you-go billing](syntex-azure-billing.md) to continue using Syntex services.
 
 Users with active per-user licenses can perform the following tasks:
 
@@ -83,7 +84,7 @@ Users with active per-user licenses can perform the following tasks:
 - Use the document library rules to move or copy content.
 - Merge and extract PDFs
 
-If you plan to use a custom Power Platform environment for structured or freeform document processing, see [Using a custom Power Platform environment](structured-freeform-setup.md#using-a-custom-power-platform-environment).
+If you plan to use a custom Power Platform environment for structured or freeform document processing, see [Set up a custom Power Platform environment](structured-freeform-setup.md#set-up-a-custom-power-platform-environment).
 
 <!---
 ## AI Builder credits

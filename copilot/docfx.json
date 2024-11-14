@@ -24,8 +24,10 @@
     "resource": [
       {
         "files": [
+          "**/*.gif",
+          "**/*.jpg",
           "**/*.png",
-          "**/*.jpg"
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
@@ -55,8 +57,10 @@
         "Stacyrch140",
         "alexbuckgit", 
         "beccarobins",
-        "v-stchambers",
-        "dstrome"
+        "dstrome",
+        "MarcoLodini",
+        "padmagit77",
+        "aditisrivastava07"
       ]
     },
     "fileMetadata": {},

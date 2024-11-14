@@ -5,9 +5,9 @@ ms.author: sharik
 author: SKjerland
 manager: scotv
 ms.reviewer: sharonchoi
-ms.date: 3/07/2024
+ms.date: 10/07/2024
 audience: Admin
-ms.topic: article
+ms.topic: whats-new
 ms.service: microsoft-365-lighthouse
 ms.localizationpriority: medium
 ms.collection:
@@ -32,11 +32,146 @@ We're continuously adding new features to [Microsoft 365 Lighthouse](m365-lighth
 >
 > To see which new features are currently available in your partner tenant, go to the **Home** page of Microsoft 365 Lighthouse, and then either select the **What's new** link in the upper-right corner of the page or select **What's new** on the **What's new & learning resources** card.
 
+## September 2024
+
+### Delegated access page
+
+We've simplified management of granular delegated administrative privileges (GDAP) in Microsoft 365 Lighthouse by removing the GDAP Setup tool and replacing it with the **Delegated access** page. This new page lets you do the following:
+
+- Create and assign Lighthouse GDAP templates to customer tenants in bulk or singularly.
+- Manage security groups with GDAP permissions.
+- View the status of your GDAP relationships with customers.
+- Identify the nearest expiration date of each GDAP relationship.
+
+To create security groups, you must be a Groups Administrator in the partner tenant. To change user membership in groups, you must be a User Administrator in the partner tenant. To create GDAP relationships, you must be an Admin agent in Partner Center.
+
+To access the **Delegated access** page, in the left navigation pane in Lighthouse, select **Permissions** > **Delegated access**.
+
+[Go to the Delegated access page now](https://lighthouse.microsoft.com/#view/Microsoft_Intune_MTM/DelegatedAccess.ReactView)
+
+For details on how to set up GDAP, see [Set up GDAP in Microsoft 365 Lighthouse](m365-lighthouse-setup-gdap.md).
+
+To learn more about delegated access, see [Overview of the Delegated access page in Microsoft 365 Lighthouse](m365-lighthouse-delegated-access-overview.md).
+
+### Use Copilot insights in Lighthouse to drive Copilot success
+
+The new **Copilot insights** page lets you easily manage and monitor Copilot success across your customer tenants&mdash;all in one place. In addition to recommending customers who are likely to find value from Copilot, the page shows Copilot usage and license assignment and provides links to key resources for you to become a Copilot expert, including Copilot Lab, learning paths, and training videos. The page also shows deployment progress for tasks that we specifically recommend for enabling Copilot.
+
+Moreover, Copilot insights help you pinpoint customers who may need Copilot setup guidance or training. Use the insights to ensure all Copilot users are enabled and set up for success.
+
+To access this new page, in the left navigation pane in Lighthouse, select **Copilot insights**.
+
+[Go to the Copilot insights page now](https://lighthouse.microsoft.com/#view/Microsoft_Intune_MTM/CopilotInsights.ReactView)
+
+### New default baseline deployment task to enable Microsoft Teams transcription
+
+We added a new deployment task to the default baseline that lets you enable automatic transcription in Microsoft Teams in the customer tenant.
+
+Transcription allows users to play back meeting recordings with closed captions and review important discussion items in the transcript. Transcription and captions help create inclusive content for viewers.
+
+Clone this new deployment task to add it to your custom baseline and then go to the deployment plan of your customer tenant to deploy the configuration.
+
+To learn more about transcription and captions, see [Admins - Manage transcription and captions for Teams meetings](/microsoftteams/meeting-transcription-captions).
+
+## August 2024
+
+### Access mailbox storage information from the tenant details page
+
+Our enhanced tenant details page now lets you track mailbox storage usage for users and shared mailboxes in your customer tenants. This feature provides insights into storage consumption, which helps with license resource optimization and planning.
+
+To access mailbox storage information, in the left navigation pane in Lighthouse, select **Tenants**, and then select any tenant in the list to open the tenant details page. From there, select either the **Overview** tab or the **Users** tab, and then select **Mailbox storage usage**.
+
+[Go to the Tenants page now](https://lighthouse.microsoft.com/#view/Microsoft_Intune_MTM/Tenants.ReactView) (once there, select a tenant)
+
+### Alert improvements
+
+Alert rules for Microsoft Defender for Endpoint alerts now include the option to filter by alert status. You can update existing alert rules to exclude **Resolved** endpoint alerts.
+
+To reduce the likelihood of reactivation, a Microsoft 365 Lighthouse alert in the **Dismissed** state will no longer move to the **Resolved** state. 
+
+[Go to the Alerts page now](https://lighthouse.microsoft.com/#view/Microsoft_Intune_MTM/ManagedTenantAlerts.ReactView)
+
+To learn more, see [Overview of the Alerts page in Microsoft 365 Lighthouse](m365-lighthouse-alerts-overview.md).
+
+## June 2024
+
+### Access key information from enhanced tenant details page
+
+We're thrilled to announce a major upgrade to the tenant details page that lets you access key information related to your customer tenants from a single location. You no longer need to view multiple pages to get basic information. Our revamped **Customer information** section provides a centralized place for tracking key customer data and notes to help you stay proactive and optimize resources.
+
+Wondering how much storage your customer tenant users are consuming? You can now monitor mailbox storage usage right from the tenant details page. Want to easily monitor the Microsoft subscriptions you've sold to customers? See subscription details, renewal dates, and any associated services&mdash;all in one place.
+
+Plus, in the coming months we'll roll out even more enhancements:
+
+- Quick navigation: Jump directly to the details page of any tenant from any page in Lighthouse.
+- Customer-facing report: Get ready for a long-awaited feature—a comprehensive report that you can share directly with your customers.
+- And more...stay tuned.
+ 
+To check out the recent enhancements, in the left navigation pane in Lighthouse, select **Tenants**, and then select any tenant in the list to open the tenant details page. 
+
+[Go to the Tenants page now](https://lighthouse.microsoft.com/#view/Microsoft_Intune_MTM/Tenants.ReactView) (once there, select a tenant to view the enhanced tenant details page)
+
+## May 2024
+
+### Improved tenant details page
+
+We've improved the tenant details page to provide a more comprehensive view of customer tenant details. We'll release these improvements in stages over the next few months. The improved tenant details page includes a redesigned **Overview** tab that has a **Summary** section showing high-level insights around baseline deployment progress and alerts, and an expanded **Customer information** section where you can record notes about the customer to facilitate collaboration with your colleagues. We also added an **Action items** tab where you can view summarized tasks for the tenant that require your attention. This new tab includes links to the relevant pages to perform the tasks, providing an easy way to view details and take action.
+
+To check out these improvements, in the left navigation pane in Lighthouse, select **Tenants**, and then select any tenant in the list to open the tenant details page and view the **Overview** tab. From there you can also access the new **Action items** tab. 
+
+[Go to the Tenants page now](https://lighthouse.microsoft.com/#view/Microsoft_Intune_MTM/Tenants.ReactView) (once there, select a tenant)
+
+## April 2024
+
+### Lighthouse RBAC Account Manager role requirement update
+
+You no longer need to have a Microsoft Entra ID P1 license to manage the Lighthouse RBAC Account Manager role. This change means that security groups assigned to the Lighthouse RBAC Account Manager role no longer need to be a role-assignable group. You can now assign any security group, including existing security groups, to the Lighthouse RBAC Account Manager role. 
+
+[Go to the Lighthouse permissions page now ](https://lighthouse.microsoft.com/#view/Microsoft_Intune_MTM/RBAC.ReactView)
+
+To learn more, see [Overview of permissions in Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md).
+
+### View and set up new users
+
+We've added a **New users** page that shows you all new users across your managed tenants in Microsoft 365 Lighthouse. You can use this page to track and ensure that all recently onboarded users across your tenants have been properly set up with licenses, groups, and more.
+
+To access this new page, go to **Users** > **Account management** > **New users**. The **New users** page also lets you quickly add a new user to any of your tenants. 
+
+[Go to the New users page now](https://lighthouse.microsoft.com/#view/Microsoft_Intune_MTM/Users.ReactView)
+
+### Apps & services usage on the Tenants page
+
+We've added a new column to the **Tenants** page in Microsoft 365 Lighthouse that shows the apps and services usage of each customer. This helps you identify customers who aren't fully utilizing the potential of Microsoft 365 and might need your guidance or support. The column displays the usage status of four core workloads: core Microsoft apps (Word, Excel, PowerPoint, and OneNote), Teams, storage (SharePoint or OneDrive), and email (Exchange). A customer who has very low or no adoption of any of these workloads is marked as unhealthy. You can use this information to prioritize your actions and reach out to those customers who need more assistance or help setting up their Microsoft 365 subscription.
+
+To access this functionality, in the left navigation pane in Lighthouse, select **Tenants**, and then check out the **Apps & services usage** column on the **Tenants** page.
+
+[Go to the Tenants page now](https://lighthouse.microsoft.com/#view/Microsoft_Intune_MTM/Tenants.ReactView)
+
+To learn more, see [Overview of the Tenants page](m365-lighthouse-tenants-page-overview.md).
+
+### Manage Microsoft 365 app health from Lighthouse 
+
+The new App management report lets you easily monitor and manage Microsoft 365 app health across your customer tenants. For example, you can check to see if customer devices have Cloud Update enabled, which ensures apps are always up to date. The report also identifies which Microsoft 365 app channels are deployed across customer tenants that have the inventory service enabled in the Microsoft 365 Apps admin center and which app channels customers are receiving updates through.  
+
+In addition, the App management report makes it easy to determine if customers are running unsupported Office builds or are behind on the latest build. This helps you proactively identify potential end-user issues that could arise from using Office builds that are out of date. These insights are available for any customers with Win32 devices&mdash;there's no Intune requirement on the customer tenant. 
+
+To access this new report, go to **Apps** > **App management**.  
+
+[Go to the App management page now ](https://lighthouse.microsoft.com/#view/Microsoft_Intune_MTM/AppHealthManagement.ReactView)
+
 ## March 2024
 
 ### Feedback and support widget
 
 We've made it easier for you to give us feedback. Check out the new feedback and support widget in the lower-right corner of the Lighthouse portal. Make a suggestion, report a problem, or give a compliment by simply selecting the widget. Share your comments today through our enhanced feedback tool and let us know how Lighthouse is working for you.
+
+## February 2024
+
+### Management of PowerShell scripts
+
+You can now create PowerShell scripts and check results for Intune-managed devices in Microsoft 365 Lighthouse instead of having to go to the device Scripts page in the Microsoft Intune admin center for each customer. To access this functionality, select **Tenants** from the left navigation pane in Lighthouse, select a tenant from the list, and then select the **Scripts** tab.
+
+To create a script, select **Create script**. To view a list of targeted devices and the last run time for an existing script, select a script from the list. You can run scripts against all Intune-managed devices in a customer tenant or you can target devices by using Microsoft Entra groups.
 
 ## January 2024
 
@@ -56,7 +191,7 @@ To learn more, see "Optimize your renewal conversations with simplified renewal 
 
 ### Microsoft Copilot opportunities in Sales Advisor
 
-We've added Microsoft Copilot opportunities to Sales Advisor to help you identify customers who are eligible to buy Microsoft Copilot for Microsoft 365. Microsoft Copilot is an AI companion that works everywhere you do and intelligently adapts to your needs.
+We've added Microsoft Copilot opportunities to Sales Advisor to help you identify customers who are eligible to buy Microsoft 365 Copilot. Microsoft Copilot is an AI companion that works everywhere you do and intelligently adapts to your needs.
 
 To access Copilot opportunities, in the left navigation pane in Microsoft 365 Lighthouse, select **Sales Advisor (Project Orland)** > **Opportunities**, and then select the **Customer growth** tab.
 
@@ -68,7 +203,7 @@ To learn more, see [Blog post: Unlock the Copilot opportunity and grow your CSP 
 
 ### Assign GDAP template settings automatically after customer approval of GDAP relationships
 
-You can now set up granular delegated admin privileges (GDAP) for any customer tenant&mdash;regardless of which delegated relationship has already been set up&mdash;without the need for extra steps after a GDAP relationship is activated. Assign a GDAP template to any customer tenant in Microsoft 365 Lighthouse, and once the customer approves the relationship, the security groups and support roles are automatically applied. There's no need to re-run GDAP Setup or take extra steps after a relationship is activated to apply all GDAP template settings.
+You can now set up granular delegated administrative privileges (GDAP) for any customer tenant&mdash;regardless of which delegated relationship has already been set up&mdash;without the need for extra steps after a GDAP relationship is activated. Assign a GDAP template to any customer tenant in Microsoft 365 Lighthouse, and once the customer approves the relationship, the security groups and support roles are automatically applied. There's no need to re-run GDAP Setup or take extra steps after a relationship is activated to apply all GDAP template settings.
 
 To assign a GDAP template, go to the **Home** page of Lighthouse and select **Set up GDAP** on the **GDAP Setup** card.
 
@@ -218,7 +353,7 @@ You can now deploy OneDrive policies by using a deployment task within the defau
 
 ### New GDAP management capabilities
 
-Managed Service Provider (MSP) technicians responsible for managing granular delegated admin privileges (GDAP) can now get at-a-glance details of all their customers' delegated relationships in Microsoft 365 Lighthouse. This new capability helps ensure GDAP is set up correctly for all of your customers. 
+Managed Service Provider (MSP) technicians responsible for managing granular delegated administrative privileges (GDAP) can now get at-a-glance details of all their customers' delegated relationships in Microsoft 365 Lighthouse. This new capability helps ensure GDAP is set up correctly for all of your customers. 
 
 To view the status of your customers' delegated relationships, including delegated access type, whether a GDAP template has been assigned, number of active and pending relationships, nearest expiration date, and security groups with access to manage the customer tenant, go to **Permissions** > **Delegated access**.
 
@@ -234,7 +369,7 @@ Microsoft 365 Lighthouse now surfaces summarized insights into the various secur
 
 ### Tenants page improvements
 
-We've updated the [Tenants page](https://lighthouse.microsoft.com/#view/Microsoft_Intune_MTM/Tenants.ReactView) to help you more easily manage your customer tenants in Microsoft 365 Lighthouse. Using the new List options feature, which you access by selecting the icon next to the search box, you can now view your customer tenants by domain name or tenant ID. We've also updated the Tenants page to reflect the new Granular Delegated Admin Privileges (GDAP) setup and Lighthouse management capabilities.
+We've updated the [Tenants page](https://lighthouse.microsoft.com/#view/Microsoft_Intune_MTM/Tenants.ReactView) to help you more easily manage your customer tenants in Microsoft 365 Lighthouse. Using the new List options feature, which you access by selecting the icon next to the search box, you can now view your customer tenants by domain name or tenant ID. We've also updated the Tenants page to reflect the new granular delegated administrative privileges (GDAP) setup and Lighthouse management capabilities.
 
 You'll notice that customer tenants that don't meet the criteria to be fully managed in Microsoft 365 Lighthouse (for example, they don't have GDAP set up or they're missing a required subscription) show a Lighthouse management status of **Limited**. These tenants are eligible for only a limited set of experiences in Microsoft 365 Lighthouse, including GDAP setup and management, user search, user details, tenant tagging, and service health.
 
@@ -298,9 +433,9 @@ The **Account management** > **Search users** page now shows search results as s
 
 We've updated the Microsoft Defender Firewall and Microsoft Defender Antivirus policy settings in our default baseline to provide enhanced protection for your customer tenants. If you previously deployed the **Configure Microsoft Defender Firewall for Windows 10 and later** or the **Configure Microsoft Defender Antivirus for Windows 10 and later** tasks, your customer tenants are still protected with the original policy settings. However, on the Deployment plan page, the deployment steps for these two tasks will show a status of **Not compliant** until you deploy the new enhanced policy settings. To activate these enhanced policy settings, you'll need to go through the deployment process again for both the Microsoft Defender Firewall and Microsoft Defender Antivirus deployment tasks. Once deployed, the deployment step statuses will show as **Compliant** again.
 
-### Capability to set up granular delegated admin privileges (GDAP)
+### Capability to set up granular delegated administrative privileges (GDAP)
 
-You can now establish GDAP relationships with multiple reseller customers at once from within Microsoft 365 Lighthouse and assign users in the partner tenant to security groups with various roles and levels of permissions. To do this, you'll create reusable templates based on tiers of support for your customers and for various groups of technicians. You'll see recommended roles for each tier of support during this process. Once created, these templates can then be reapplied as needed to new customers. This functionality allows you to quickly establish GDAP with your customers by using a least-privileged approach for users as a replacement for delegated admin privileges (DAP).
+You can now establish GDAP relationships with multiple reseller customers at once from within Microsoft 365 Lighthouse and assign users in the partner tenant to security groups with various roles and levels of permissions. To do this, you'll create reusable templates based on tiers of support for your customers and for various groups of technicians. You'll see recommended roles for each tier of support during this process. Once created, these templates can then be reapplied as needed to new customers. This functionality allows you to quickly establish GDAP with your customers by using a least-privileged approach for users as a replacement for delegated administrative privileges (DAP).
 
 For more information on GDAP in Microsoft 365 Lighthouse, see [Overview of permissions in Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md).
 
@@ -435,7 +570,7 @@ We've redesigned the user details pane to include more user information and more
 
 ### Delegated access type and roles on Tenants page
 
-We've updated the **Tenants** page to list the Managed Service Provider (MSP)'s delegated access type (None, DAP, GDAP, or Both DAP & GDAP) per customer under the **Delegated access** column. We've also added a new column titled **Your roles** that lists the DAP and GDAP roles per customer for a signed-in user. These two enhancements to the **Tenants** page will make it easier for MSP technicians to understand which types of delegated admin privileges are available for each customer and which delegated roles have explicitly been granted to them.
+We've updated the **Tenants** page to list the Managed Service Provider (MSP)'s delegated access type (None, DAP, GDAP, or Both DAP & GDAP) per customer under the **Delegated access** column. We've also added a new column titled **Your roles** that lists the DAP and GDAP roles per customer for a signed-in user. These two enhancements to the **Tenants** page will make it easier for MSP technicians to understand which types of delegated administrative privileges are available for each customer and which delegated roles have explicitly been granted to them.
 
 To learn more, see [Overview of permissions in Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md).
 
@@ -459,9 +594,9 @@ Now that Microsoft 365 Lighthouse is in General Availability, we require our cur
 
 ## February 2022
 
-### Granular delegated admin privileges (GDAP) roles
+### Granular delegated administrative privileges (GDAP) roles
 
-Microsoft 365 Lighthouse now includes the capability for MSPs to use granular delegated admin privileges (GDAP) roles. With the latest update, MSPs can leverage GDAP by assigning roles to their technicians to enforce the principle of least privilege access in Microsoft 365 Lighthouse. This capability reduces the risks inherent in the broad permissions of the delegated admin privileges (DAP) role of the Admin Agent by enabling granular controls on the customers' data and settings that each technician will be able to work with.
+Microsoft 365 Lighthouse now includes the capability for MSPs to use granular delegated administrative privileges (GDAP) roles. With the latest update, MSPs can leverage GDAP by assigning roles to their technicians to enforce the principle of least privilege access in Microsoft 365 Lighthouse. This capability reduces the risks inherent in the broad permissions of the delegated administrative privileges (DAP) role of the Admin Agent by enabling granular controls on the customers' data and settings that each technician will be able to work with.
 
 To learn more about GDAP in Microsoft 365 Lighthouse, see [Configure Microsoft 365 Lighthouse portal security](m365-lighthouse-configure-portal-security.md).
 
@@ -518,7 +653,7 @@ You can now view usage data for Microsoft 365 services from within Microsoft 365
 
 These insights can help inform your customer engagements and deliver more value to your customers by empowering you to help them understand which services their users actively use and where there may be opportunities to enhance their security or productivity.
 
-For more information, see [Overview of the Tenants page in Microsoft 365 Lighthouse: Microsoft 365 services usage section](m365-lighthouse-tenants-page-overview.md#microsoft-365-services-usage-section).
+For more information, see [Overview of the Tenants page in Microsoft 365 Lighthouse: Apps and services usage](m365-lighthouse-tenants-page-overview.md#apps-and-services-usage).
 
 <a name='exchange-online-protection-and-microsoft-365-defender-for-office-365-default-baseline-step'></a>
 

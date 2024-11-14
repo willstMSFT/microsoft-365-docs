@@ -5,6 +5,7 @@ ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
 ms.service: microsoft-365-enterprise
+ms.subservice: advanced-data-residency
 ms.topic: article
 f1.keywords:
 - NOCSH
@@ -27,6 +28,9 @@ Service documentation: [Microsoft Viva Topics overview](/viva/topics/topic-exper
 Capability summary: Viva Topics uses Microsoft Artificial Intelligence technology, Microsoft 365, Microsoft Graph, Search, and other components and services to bring knowledge to your users in the Microsoft 365 apps they use everyday, starting with SharePoint modern pages, Outlook, Microsoft Search, and Search in Word, PowerPoint, and Excel.
 
 ## Data Residency Commitments Available
+
+> [!NOTE]
+> *Viva Topics will be retired on February 22, 2025. Therefore, as of October 31, 2024, Viva Topics will no longer be a supported workload in ADR. Starting with the upcoming local region launches in Taiwan and New Zealand, Viva Topics customer data will not be migrated to new local regions, nor will new customers have Viva Topics stored in existing local regions. For more details, please visit [aka.ms/TopicsFebSupport](https://aka.ms/TopicsFebSupport).
 
 ### Advanced Data Residency add-on
 

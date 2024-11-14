@@ -3,10 +3,11 @@ title: "Manage Microsoft 365 with PowerShell"
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
-ms.date: 12/27/2023
+ms.date: 10/17/2024
 audience: Admin
 ms.topic: conceptual
 ms.service: microsoft-365-enterprise
+ms.subservice: administration
 ms.localizationpriority: medium
 search.appverid:
 - MET150

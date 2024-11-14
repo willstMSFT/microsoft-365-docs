@@ -3,10 +3,11 @@ title: "Step 2. Protect your Microsoft 365 privileged accounts"
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
-ms.date: 12/28/2023
+ms.date: 09/26/2024
 audience: Admin
 ms.topic: article
 ms.service: microsoft-365-enterprise
+ms.subservice: administration
 ms.localizationpriority: medium
 ms.collection: 
 - scotvorg
