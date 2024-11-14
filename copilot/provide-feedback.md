@@ -1,11 +1,11 @@
 ---
-title: "Provide user feedback for Microsoft 365 Copilot"
+title: "Submit admin-initiated Copilot feedback from the Microsoft 365 admin center"
 f1.keywords:
 - NOCSH
 ms.author: camillepack
 author: camillepack
 manager: scotv
-ms.date: 12/12/2023
+ms.date: 11/01/2024
 audience: Admin
 ms.topic: how-to
 ms.service: microsoft-365-copilot
@@ -14,12 +14,12 @@ ms.collection:
 - scotvorg
 - m365copilot
 - magic-ai-copilot
-description: "Learn how to provide Microsoft 365 Copilot feedback to Microsoft on behalf of their users who encounter issues"
+description: "Learn how to provide Microsoft 365 Copilot feedback to Microsoft on behalf of your users who encounter issues"
 ---
 
-# Provide user feedback for Microsoft 365 Copilot
+# Submit admin-initiated Copilot feedback from the Microsoft 365 admin center
 
-Microsoft 365 Copilot is a product that helps users boost their productivity with large-language models (LLM). While Copilot is designed to provide accurate and informative responses based on the knowledge and data available in the Microsoft Graph, it's important to note that answers may not always be completely accurate. This is because Copilot generates responses based on patterns and probabilities in language data. Providing feedback is essential to improve the product and make it more dependable for users.
+Microsoft 365 Copilot is a product that helps users boost their productivity with large-language models (LLM). While Copilot is designed to provide accurate and informative responses based on the knowledge and data available in the Microsoft Graph, it's important to note that answers may not always be accurate. This is because Copilot generates responses based on patterns and probabilities in language data. Providing feedback is essential to improve the product and make it more dependable for users.
 
 Microsoft 365 Copilot currently allows user-initiated feedback. As an admin, you can give feedback to supplement the user-initiated process. This helps Microsoft receive comprehensive diagnostic data to aid in debugging, especially in cases where users may not be able to provide feedback themselves. By providing feedback on behalf of your users, you can help enhance the overall experience of Copilot for your organization by improving the quality and relevance of its responses.
 
@@ -29,9 +29,9 @@ This article explains how you can initiate feedback on behalf of your users.
 
 Before you begin, you must have the following:
 
-- A Microsoft 365 subscription with Microsoft 365 Copilot5 license
+- A Microsoft 365 subscription with a Microsoft 365 Copilot license
 
-- Global Admin role to complete the task in this article. For more information, see [About admin roles in the Microsoft 365 admin center](/microsoft-365/admin/add-users/about-admin-roles).
+- Global admin role to complete the task in this article. For more information, see [About admin roles in the Microsoft 365 admin center](/microsoft-365/admin/add-users/about-admin-roles).
 
 - An email address of the user who experienced an issue with Microsoft 365 Copilot.
 
@@ -50,7 +50,7 @@ To provide feedback to Microsoft on behalf of a user who encountered a problem w
    > [!NOTE]
    > The maximum number of conversations you can share is 30.
 
-4. After a short wait, you’ll receive a JSON file containing the user's conversations with Copilot for the past X interactions (utterance/response pairs) that you select, along with their feedback logs. The file will be redacted to protect Microsoft IP, if any. You can use any JSON viewer tool to inspect the data and include additional comments for the feedback. The file will be available for download once it's generated.
+4. After a short wait, you’ll receive a JSON file containing the user's conversations with Copilot for the past X interactions (utterance/response pairs) that you select, along with their feedback logs. The file is redacted to protect Microsoft IP, if any. You can use any JSON viewer tool to inspect the data and include additional comments for the feedback. The file will be available for download once it's generated.
 
 5. Decide whether or not to move forward with the feedback submission to Microsoft. If you choose to share the data, select **Submit**. If you don’t want to share the data, select **Cancel**.
 

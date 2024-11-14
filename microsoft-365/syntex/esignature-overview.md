@@ -4,7 +4,7 @@ ms.author: chucked
 author: chuckedmonson
 manager: jtremper
 ms.reviewer: amcdonnell
-ms.date: 09/10/2024
+ms.date: 10/31/2024
 audience: enabler
 ms.topic: conceptual
 ms.service: microsoft-syntex
@@ -20,7 +20,7 @@ description: Learn about SharePoint eSignature and how to send electronic signat
 # Overview of SharePoint eSignature
 
 > [!NOTE]
-> Through June 2025, you can try out eSignature by sending up to five requests at no cost if you have [pay-as-you-go billing](syntex-azure-billing.md) set up. For information and limitations, see [Try out Microsoft Syntex and explore its services](promo-syntex.md).
+> Through June 2025, you can try out a [limited amount](promo-syntex.md#monthly-included-capacity) of eSignature by sending up to five requests at no cost if you have [pay-as-you-go billing](syntex-azure-billing.md) set up. For information and limitations, see [Try out Microsoft Syntex and explore its services](promo-syntex.md).
 
 SharePoint eSignature simplifies the process of signing and sharing documents, while providing the security and compliance of Microsoft 365.
 
@@ -30,7 +30,7 @@ With SharePoint eSignature, you can quickly and securely send documents for sign
 
 ## Regional availability
 
-SharePoint eSignature is currently available in the US, UK, and Canada. By November 2024, it will be available to the EU and APAC, and it will be available globally in 2025.
+SharePoint eSignature is currently available in the US, UK, and Canada. By November 2024, it will be available to the EU and Australia Pacific, and it will be available globally in 2025.
 <!---
 Beginning September 2024, SharePoint eSignature will be rolling out to the UK, Canada, and the following European countries/regions: Austria, Belgium, Bulgaria, Croatia, Cyprus, Czechia, Denmark, Estonia, Finland, Greece, Hungary, Ireland, Latvia, Lithuania, Luxembourg, Malta, Poland, Portugal, Romania, Slovakia, Slovenia, and Sweden.
 

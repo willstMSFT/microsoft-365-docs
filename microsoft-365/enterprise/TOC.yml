@@ -51,7 +51,7 @@
               href: microsoft-365-vpn-implement-split-tunnel.md
             - name: Securing Teams media traffic for VPN split tunneling
               href: microsoft-365-vpn-securing-teams.md
-            - name: Stream and live events in VPN environments
+            - name: Teams events in VPN environments
               href: microsoft-365-vpn-stream-and-live-events.md
             - name: Microsoft 365 optimization for China users
               href: microsoft-365-networking-china.md

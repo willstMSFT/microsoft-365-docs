@@ -51,6 +51,9 @@ You can view several numbers for Microsoft 365 Copilot usage, which highlight th
 
 **Active Users** shows the total number of enabled users in your organization who tried a user-initiated Microsoft 365 Copilot feature, in one or more apps in Microsoft 365 over the selected time period.
 
+> [!NOTE]
+> Active users now includes Business Chat (web) usage starting from August 20, 2024. We'll update this documentation once the specific usage of the entry point for Business Chat (web) is available.
+
 **Active users rate** shows you the number of active users in your organization divided by the number of enabled users.
 
 In Recommendations, the recommended action card highlights [Microsoft Copilot Dashboard](/viva/insights/org-team-insights/copilot-dashboard), where you can deliver insights to your IT leaders to explore Copilot readiness, adoption, and impact in Viva Insights.  
@@ -136,6 +139,9 @@ To ensure data quality, we perform daily data validation checks for the past thr
 | Last activity date of OneNote Copilot (UTC)    | The latest date the user had activity in OneNote Copilot, including any of the intentional activities, regardless of the selected time period of past 7/30/90/180 days.                                       |
 | Last activity date of Loop Copilot (UTC)       | The latest date the user had activity in Loop Copilot, including any of the intentional activities, regardless of the selected time period of past 7/30/90/180 days.                                          |
 | Last activity date of Copilot chat (UTC)        | The latest date the user had activity in Copilot chat, including any of the intentional activities, regardless of the selected time period of past 7/30/90/180 days.                                         |
+
+> [!NOTE]
+> The Last activity date (UTC) now includes the latest date the user had activity in Business Chat (web) starting from August 20, 2024, including any of the intentional activities, regardless of the selected time period of the past 7/30/90/180 days.
 
 ## Make the user-specific data anonymous
 

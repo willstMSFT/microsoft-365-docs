@@ -2,8 +2,8 @@
 title: Working with device groups in Microsoft 365 Business Premium
 description: "Learn about device groups and how to apply policies with Intune in Microsoft 365 Business Premium, and increase protection from cyberattacks."
 search.appverid: MET150
-ms.author: siosulli
-author: siosulli
+ms.author: chrisda
+author: chrisda
 manager: deniseb
 audience: Admin
 ms.topic: how-to
