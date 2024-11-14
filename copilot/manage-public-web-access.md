@@ -38,15 +38,15 @@ This generated search query is different from the user’s original prompt—it 
 
 - Any identifying information based on the user's Microsoft Entra ID (for example, username, domain, or tenant ID)
 
+> [!NOTE]
+> We’re making some improvements to web search query transparency in the near future. For more information, see
+[Introducing web search query transparency for Microsoft 365 Copilot and Microsoft Copilot](https://techcommunity.microsoft.com/t5/microsoft-365-copilot/introducing-web-search-query-transparency-for-microsoft-365/ba-p/4253080).
+
 When using Microsoft 365 Copilot, the generated search query doesn't include the entirety of Microsoft 365 documents associated with the prompt. However, it may also be informed by data within a Microsoft 365 document under the following conditions:
 
 - When a user enters a prompt into Copilot inside a Microsoft 365 application (for example, writing a prompt into Copilot in Microsoft Word while a relevant document is open).
 
 - When the user explicitly references a specific document in their prompt.
-
-> [!NOTE]
-> We’re making some improvements to web search query transparency in the near future. For more information, see
-[Introducing web search query transparency for Microsoft 365 Copilot and Microsoft Copilot](https://techcommunity.microsoft.com/t5/microsoft-365-copilot/introducing-web-search-query-transparency-for-microsoft-365/ba-p/4253080).
 
 The user's prompts and Copilot's responses are stored within Microsoft 365 and never leave the service boundary for both Microsoft 365 Copilot and Microsoft Copilot.
 
@@ -67,7 +67,7 @@ The user can see results from both. Additionally, if the results are from the we
 The following table provides multiple examples of a user's prompt and the generated search queries sent to Bing. It also explains how Microsoft 365 Copilot and Microsoft Copilot formulate a response. Brackets indicate placeholders for specific information referenced by the user or inferred by Copilot.
 
 > [!NOTE]
-> Unlike with Microsoft 365 Copilot, users can't invoke organizational content like files, emails, or chats, when prompting in Microsoft Copilot chat. For examples of purely web-based user prompts for Microsoft Copilot, see [Privacy and security of generated search queries](/copilot/privacy-and-protections#generated-search-queries).
+> Unlike with Microsoft 365 Copilot, users can't invoke organizational content like files, emails, or chats, when prompting in Microsoft Copilot chat. For examples of purely web-based user prompts for Microsoft Copilot, see [Privacy and security of generated search queries](/copilot/privacy-and-protections#privacy-and-security-of-generated-search-queries).
 
 | User prompt  | Generated search queries | How Copilot provides a response |
 |------|----|--------|
