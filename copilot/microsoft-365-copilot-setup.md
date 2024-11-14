@@ -24,7 +24,7 @@ description: Learn how IT administrators can prepare their organization for Micr
 
 It works alongside popular Microsoft 365 Apps, like Word, Excel, PowerPoint, Outlook, Teams, and more. Copilot provides real-time intelligent assistance, enabling users to enhance their creativity, productivity, and skills.
 
-This article provides guidance for administrators on preparing their organization for Microsoft 365 Copilot. It covers baseline implementation and readiness activities, required licenses, and steps to ensure a secure and compliant deployment.
+This article provides guidance for administrators on preparing their organization for Microsoft 365 Copilot. It covers foundational implementation and readiness activities, licensing, and steps to ensure a secure and compliant deployment.
 
 ## Prerequisites
 
@@ -33,7 +33,6 @@ This article provides guidance for administrators on preparing their organizatio
   - **[Microsoft 365 admin center](https://admin.microsoft.com)**: There are different roles depending on the task you need to complete. To learn more about roles, see [Commonly used Microsoft 365 admin center roles](/microsoft-365/admin/add-users/about-admin-roles#commonly-used-microsoft-365-admin-center-roles).
   - **[SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219)**: Sign in as the [SharePoint administrator](/sharepoint/sharepoint-admin-role).
   - **[Microsoft Purview portal](https://purview.microsoft.com)**: There are different roles depending on the task you need to complete. To learn more, see:
-
     - [Permissions required to create and manage sensitivity labels](/purview/get-started-with-sensitivity-labels#permissions-required-to-create-and-manage-sensitivity-labels)
     - [Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview](/defender-office-365/scc-permissions)
 
@@ -89,12 +88,14 @@ Audit logging is essential for tracking and monitoring activities within your Mi
 
 ### Restrict sensitive info from Copilot
 
-To ensure that sensitive information is protected during the deployment and use of Microsoft 365 Copilot, take the following steps to identify, assess, and mitigate oversharing risks. These measures will help maintain data security and compliance within your organization:
+To protect sensitive information during the deployment and use of Microsoft 365 Copilot, follow these steps to identify, assess, and mitigate oversharing risks. These measures will help maintain data security and compliance within your organization:
 
-- **Identify most popular sites and assess oversharing** Export the top 100 most used sites from the SharePoint admin center, run the SharePoint Advanced Management (SAM) permission state report, and run the Microsoft Purview Data Security Posture Management (DSPM) Oversharing posture assessment. To learn more, see [Secure by default with Microsoft Purview and protect against oversharing](/purview/deploymentmodels/depmod-securebydefault-intro).
-- **Grant Copilot access to popular, low-risk sites** Cross-reference the report results from SAM and Purview DSPM with the top 100 used sites, and optionally enable Restricted SharePoint Search (RSS) for up to 100 sites identified.
-- **Turn on proactive audit and protection** Disable "everyone except external users" (EEEU) at the tenant level, enable Purview Audit to monitor Copilot interaction activity reports and charts, activate proactive analysis for sensitive data handling with Purview Communications Compliance, and set up audit-mode oversharing policies with SharePoint Online Purview Data Loss Prevention (DLP). To learn more, see [Protect your sensitive data with Microsoft Purview](/purview/information-protection).
-- **Implement access controls and labeling** Initiate SAM Access Review for all sites that are overshared, apply SAM restricted access control (RAC) on business-critical sites, exclude critical sites from Copilot reasoning over them with SAM Restricted Content Discovery (RCD), publish sensitivity labels with Purview Information Protection to Office apps, containers/sites, and Outlook, and exclude Copilot from summarizing sensitive content via sensitivity labels. To learn more, see [Get ready for Microsoft 365 Copilot with SharePoint Advanced Management (SAM)](/sharepoint/get-ready-copilot-sharepoint-advanced-management).
+- **Identify most popular sites and assess oversharing** Export the top 100 most used sites from the SharePoint admin center and run the SharePoint Advanced Management (SAM) permission state report. To learn more, see [Secure by default with Microsoft Purview and protect against oversharing](/purview/deploymentmodels/depmod-securebydefault-intro).
+- **Grant Copilot access to popular, low-risk sites** Cross-reference the report results from SAM and the Microsoft Purview Data Security Posture Management (DSPM) Oversharing posture assessment with the top 100 used sites.
+- **Turn on proactive audit and protection** Disable "everyone except external users" (EEEU) at the tenant level and enable Purview Audit to monitor Copilot interaction activity. To learn more, see [Protect your sensitive data with Microsoft Purview](/purview/information-protection).
+- **Implement access controls and labeling** Initiate SAM Access Review for all sites that are overshared and apply SAM restricted access control on business-critical sites. To learn more, see [Get ready for Microsoft 365 Copilot with SharePoint Advanced Management (SAM)](/sharepoint/get-ready-copilot-sharepoint-advanced-management).
+
+For detailed steps, see [Address internal oversharing concerns in Microsoft 365 Copilot deployment blueprint](microsoft-365-copilot-blueprint-oversharing.md).
 
 ## Get started and deploy
 
