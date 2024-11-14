@@ -64,11 +64,11 @@ By default, SharePoint eSignature is turned on for libraries in all SharePoint s
 
 2. On the **eSignature** panel, under **Sites where eSignature can be used**, select **Select sites**.
 
-    a. Choose the site or sites on which this service should be enabled.
+   1. Choose the site or sites on which this service should be enabled.
 
-    b. To restrict user access to this service, select **No sites** or **Selected sites (up to 100)**. Follow the instructions to either select the sites or upload a CSV listing a maximum of 100 sites. Be sure to add your content center site if you want it to be included. You can then manage site access permissions for the sites you selected.
+   1. To restrict user access to this service, select **No sites** or **Selected sites (up to 100)**. Follow the instructions to either select the sites or upload a CSV listing a maximum of 100 sites. Be sure to add your content center site if you want it to be included. You can then manage site access permissions for the sites you selected.
 
-    c. Select **Save**.
+   1. Select **Save**.
 
 > [!NOTE]
 > The first eSignature request in a Microsoft 365 tenant might take a little longer to execute than usual. It can take a few seconds to a few minutes; however, subsequent requests are executed normally. We recommend that admins create the first eSignature request in a SharePoint site as the final setup step.
