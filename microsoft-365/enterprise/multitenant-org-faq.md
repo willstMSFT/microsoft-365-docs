@@ -23,11 +23,11 @@ Read about frequently asked questions for Microsoft multitenant organizations. T
 
 Administrators create an [MTO ](https://techcommunity.microsoft.com/blog/microsoft_365blog/multi-tenant-organization-capabilities-now-available-in-microsoft-365/4122812)in the Microsoft 365 admin center and configure collaboration capabilities for users across the tenants. [MTO configuration](/microsoft-365/enterprise/plan-multi-tenant-org-overview) includes the creation of cross-tenant sync jobs. 
 
-### Are cross tenant sync jobs auto generated when an MTO is created?
+### Are cross-tenant sync jobs auto generated when an MTO is created?
 
 When an MTO is created or a tenant joins an existing one, cross-tenant sync jobs are auto generated to enable sync between any existing tenants and the new one. However, these jobs start executing periodically only after a tenant admin shared users to be synced across the MTO.
 
-### Can existing cross tenant sync jobs created in the EntraID portal be used?
+### Can existing cross-tenant sync jobs created in the EntraID portal be used?
 
 Existing cross-tenant sync jobs with B2B collaboration members can be used instead of the ones automatically created when you set up an MTO. These existing B2B members will be able to use MTO features after the MTO is created. 
 
@@ -47,9 +47,9 @@ If the user exists as a B2B member, they will automatically start to experience 
 
 ### What happens when a synced user already exists as a contact on the target tenant? 
 
-The contact objects will remain unaffected by the creation of an MTO or cross tenant sync jobs. Cross-tenant sync will create B2B member objects which might cause duplicate entries to show when the user is searched for. We recommend cleaning up main contacts before implementing MTO. [Common considerations for multitenant user management in Microsoft Entra ID - Microsoft Entra | Microsoft Learn](/entra/architecture/multi-tenant-common-considerations#issues-with-using-mail-contact-objects-instead-of-external-users-or-members) 
+The contact objects will remain unaffected by the creation of an MTO or cross-tenant sync jobs. Cross-tenant sync will create B2B member objects which might cause duplicate entries to show when the user is searched for. We recommend cleaning up main contacts before implementing MTO. [Common considerations for multitenant user management in Microsoft Entra ID - Microsoft Entra | Microsoft Learn](/entra/architecture/multi-tenant-common-considerations#issues-with-using-mail-contact-objects-instead-of-external-users-or-members) 
 
-### Can security groups be synced across tenants? 
+### Can security groups be synced across tenants?
 
 While groups can be used to sync users across tenants via Entra CTS, the security groups themselves cannot be synced across tenants. 
 
@@ -87,7 +87,7 @@ The guiding principle is that one human only needs one license. So, if you are l
 
 ## Teams
 
-### Is cross tenant sync setup sufficient to leverage MTO functionality on Teams?
+### Is cross-tenant sync setup sufficient to leverage MTO functionality on Teams?
 
 MTO specific Teams functionality requires an MTO to be set up. [External access](/microsoft-365/enterprise/plan-multi-tenant-org-overview#trusted-organizations-in-external-access) policy setup and [B2B direct connect](/microsoft-365/enterprise/plan-multi-tenant-org-overview#shared-channels-in-multitenant-organizations) policy setup that is part of the MTO setup is essential to leverage MTO functionality on Teams. Learn more about Teams multi-tenant capabilities [here](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/announcing-more-seamless-collaboration-in-microsoft-teams-for/ba-p/3901092). It is important to keep in mind that these capabilities are only available on the mobile (iOS and Android) and new Teams desktop client. The customers using web client would not see any benefits or optimized experience for MTO. 
 
@@ -136,4 +136,18 @@ Teams and conference room booking across tenants are not yet supported in an MTO
 ### Can I still use Teams Federation with MTO?
 
 There is no impact on Teams Federation. Customers will still be able to chat via that method. MTO would make Teams chat easier by providing a more seamless People search and centralized chat notification experience within the MTO group.
+
+## SharePoint Online (SPO) 
+
+### Are org shareable links visible to all MTO users by default? Can this be restricted?
+
+Org Shareable links or “Anyone in my organization” links are redeemable by all MTO users since MTO users are B2B member users. However, the link would have to be shared with the MTO user somehow, whether that is by chat, email or on a document somewhere etc. 
+
+### What changes occur in Teams when a B2B guest user is converted to a member after MTO creation?
+
+When a B2B guest user is converted to a member, they can leverage MTO experiences. Users that previously had guest access to a file will not lose access once their account is converted to a member. 
+
+### Attributes for some users are not accurate on the SharePoint sites. Is this a known issue?
+
+Cached SPUser records in specific SPO/ODC sites or attributes for the user records such as UserType are not automatically updated from Entra ID when changes are made via MTO formation. We currently rely on a timer job to update these records in the short term with a long-term solution for a dynamic sync with Entra in progress. Tenants who formed an MTO before the short-term solution rolled out across all farms may run into access denied issues and if these are consistently occurring should reach out the Microsoft Support team to initiate manual process to resolve the gaps. 
 
