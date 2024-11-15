@@ -38,11 +38,11 @@ This article provides guidance for administrators on preparing their organizatio
     - [Permissions required to create and manage sensitivity labels](/purview/get-started-with-sensitivity-labels#permissions-required-to-create-and-manage-sensitivity-labels)
     - [Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview](/defender-office-365/scc-permissions)
 
-- You must have an appropriate **subscription plan to purchase Microsoft 365 Copilot**.
-
-  You can purchase Microsoft 365 Copilot licenses through the [Microsoft 365 admin center](https://admin.microsoft.com) (**Billing** > **Purchase services**), Microsoft partners, or your Microsoft account team.
+- You must have an appropriate subscription plan to purchase Microsoft 365 Copilot.
 
   Microsoft 365 Copilot licenses are available as an add-on to other licensing plans. To learn more, see [Understand licensing for Microsoft 365 Copilot](microsoft-365-copilot-licensing.md).
+
+  You can purchase Microsoft 365 Copilot licenses through the [Microsoft 365 admin center](https://admin.microsoft.com) (**Billing** > **Purchase services**), Microsoft partners, or your Microsoft account team.
 
 - More licenses might be required to use some of the features describes in this article, like Microsoft Purview and SharePoint Advanced Management.
 
