@@ -55,28 +55,28 @@ This article provides guidance for administrators on preparing their organizatio
 
 ## Readiness activities
 
-To ensure a smooth transition to Microsoft 365 Copilot, administrators should undertake the following readiness activities:
+To ensure a smooth transition to Microsoft 365 Copilot, admins should undertake the following readiness activities:
 
-- **Set up a test environment**: Establish a test environment with necessary licenses to validate configurations and test scenarios.
-- **Conduct pilot testing**: Perform pilot testing with a select group of users to identify any issues and gather feedback.
-- **Develop a communication plan**: Create a communication plan to inform users about the upcoming changes and provide them with the necessary resources and support.
-- **Review Conditional Access policies**: Ensure that conditional access policies are appropriately configured. Microsoft 365 Copilot supports tenant-level Conditional Access Policies in SharePoint Online. To learn more, see [Conditional Access](/entra/identity/conditional-access/overview).
-- **Review SharePoint Search and Advanced Management Policies**: Use SharePoint Advanced Management (SAM) to control access to content, prevent oversharing, and manage content lifecycle. For detailed steps, see [Get ready for Microsoft 365 Copilot with SharePoint Advanced Management (SAM)](/sharepoint/get-ready-copilot-sharepoint-advanced-management). Additionally, consider implementing restricted SharePoint search to limit the discoverability of sensitive content. To learn more, see [Address internal oversharing concerns in Microsoft 365 Copilot deployment blueprint](microsoft-365-copilot-blueprint-oversharing.md).
-- **Ensure network compliance**: Review and ensure that your network meets the requirements for Microsoft 365 Copilot services. To learn more, see [Microsoft 365 Copilot network requirements](microsoft-365-copilot-requirements.md#network-requirements).
+- **Set up a test environment** Establish a test environment with necessary licenses to validate configurations and test scenarios.
+- **Conduct pilot testing** Perform pilot testing with a select group of users to identify any issues and gather feedback.
+- **Develop a communication plan** Create a communication plan to inform users about the upcoming changes and provide them with the necessary resources and support.
+- **Review Conditional Access policies** Ensure that conditional access policies are appropriately configured. Microsoft 365 Copilot supports tenant-level Conditional Access Policies in SharePoint Online. To learn more, see [Conditional Access](/entra/identity/conditional-access/overview).
+- **Review SharePoint Search and Advanced Management Policies** Use SharePoint Advanced Management (SAM) to control access to content, prevent oversharing, and manage content lifecycle. For detailed steps, see [Get ready for Microsoft 365 Copilot with SharePoint Advanced Management (SAM)](/sharepoint/get-ready-copilot-sharepoint-advanced-management). Additionally, consider implementing restricted SharePoint search to limit the discoverability of sensitive content. To learn more, see [Address internal oversharing concerns in Microsoft 365 Copilot deployment blueprint](microsoft-365-copilot-blueprint-oversharing.md).
+- **Ensure network compliance** Review and ensure that your network meets the requirements for Microsoft 365 Copilot services. To learn more, see [Microsoft 365 Copilot network requirements](microsoft-365-copilot-requirements.md#network-requirements).
 
-## Security measures for Microsoft 365 Copilot
+## Security measures
 
 To ensure a secure and compliant environment for Microsoft 365 Copilot, it's crucial to implement robust security measures. Some key components of this are Multifactor authentication (MFA), audit logging, and restricting sensitive information. These measures help protect against unauthorized access and provide visibility into user and admin activities.
 
-### Multi-Factor Authentication (MFA)
+### Multifactor authentication (MFA)
 
 Multifactor authentication (MFA) is a critical security measure that requires users to provide two or more verification factors to gain access to a resource such as an application or online account. Implementing MFA helps protect against unauthorized access and enhances the security of your organization's data. To learn more, see [Microsoft Entra multifactor authentication](/entra/identity/authentication/concept-mfa-howitworks).
 
 #### Steps to implement MFA
 
-- **Enable MFA for all users**: Ensure that MFA is enabled for all users in your organization. This can be done through the Microsoft 365 admin center. To learn more, see [Set up multifactor authentication for Microsoft 365](/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication).
-- **Configure Conditional Access policies**: Set up conditional access policies to enforce MFA based on user risk, location, and device compliance. For a tutorial, see [Secure user sign-in events with Microsoft Entra multifactor authentication](/entra/identity/authentication/tutorial-enable-azure-mfa)
-- **Educate users**: Provide training and resources to help users understand the importance of MFA and how to use it effectively.
+- **Enable MFA for all users** Ensure that MFA is enabled for all users in your organization. This can be done through the Microsoft 365 admin center. To learn more, see [Set up multifactor authentication for Microsoft 365](/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication).
+- **Configure Conditional Access policies** Set up Conditional Access policies to enforce MFA based on user risk, location, and device compliance. For a tutorial, see [Secure user sign-in events with Microsoft Entra multifactor authentication](/entra/identity/authentication/tutorial-enable-azure-mfa).
+- **Educate users** Provide training and resources to help users understand the importance of MFA and how to use it effectively.
 
 ### Audit logging
 
@@ -84,9 +84,9 @@ Audit logging is essential for tracking and monitoring activities within your Mi
 
 #### Steps to implement audit logging
 
-- **Enable unified audit logging**: Turn on unified audit logging in the Microsoft Purview compliance portal to capture all user and admin activities.
-- **Configure audit log retention**: Set up retention policies to ensure that audit logs are retained for the required period based on your organization's compliance needs.
-- **Monitor and review logs**: Regularly monitor and review audit logs to identify any suspicious activities or potential security threats.
+- **Enable unified audit logging** Turn on unified audit logging in the Microsoft Purview compliance portal to capture all user and admin activities.
+- **Configure audit log retention** Set up retention policies to ensure that audit logs are retained for the required period based on your organization's compliance needs.
+- **Monitor and review logs** Regularly monitor and review audit logs to identify any suspicious activities or potential security threats.
 
 ### Restrict sensitive info from Copilot
 
@@ -226,8 +226,8 @@ To learn more, see:
 
 To enhance data security, enable enterprise data protection (EDP) in Copilot for all users in your organization. Follow these steps:
 
-- **Log in to Copilot**: Access Copilot on [copilot.microsoft.com](https://copilot.microsoft.com/) and ensure that enterprise data protection is enabled.
-- **Review documentation**: Review the [Enterprise Data Protection in Microsoft 365 Copilot documentation](enterprise-data-protection.md) to ensure that EDP is available and properly configured for your users.
+- **Log in to Copilot** Access Copilot on [copilot.microsoft.com](https://copilot.microsoft.com/) and ensure that enterprise data protection is enabled.
+- **Review documentation** Review the [Enterprise Data Protection in Microsoft 365 Copilot documentation](enterprise-data-protection.md) to ensure that EDP is available and properly configured for your users.
 
 ## More resources
 
