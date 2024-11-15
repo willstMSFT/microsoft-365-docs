@@ -72,9 +72,9 @@ Once pay-as-you-go billing is enabled for Microsoft Syntex in the Microsoft 365 
 
 1. On the **Turn on SharePoint site archive** panel, select **Turn on**. 
 
-:::image type="content" source="../media/archive/syntex2.png" alt-text="Screenshot of Microsoft 365 Archive enabled." lightbox="../media/archive/syntex2.png":::
+    :::image type="content" source="../media/archive/syntex2.png" alt-text="Screenshot of Microsoft 365 Archive enabled." lightbox="../media/archive/syntex2.png":::
 
-Microsoft 365 Archive is now enabled for you, and you're able to archive content from the SharePoint admin center.
+    Microsoft 365 Archive is now enabled for you, and you're able to archive content from the SharePoint admin center.
 
 ## Turn off Microsoft 365 Archive
 
@@ -84,4 +84,4 @@ To turn off Microsoft 365 Archive:
 
 2. On the **Archive** panel, select **Turn off**.
 
-When you turn off Microsoft 365 Archive, any further archiving stops. The sites already archived continue to be in an archive state, and will be billed. The sites can be reactivated with reactivation cost or deleted.
+    When you turn off Microsoft 365 Archive, any further archiving stops. The sites already archived continue to be in an archive state, and will be billed. The sites can be reactivated with reactivation cost or deleted.
