@@ -273,14 +273,20 @@ Success: Return HTTP `200 OK`
 The following response shows that the eligible time off reason IDs for the user are "TOR_29f4a110-ae53-458b-83d6-00c910fe2fbc" and "TOR_8c0e8d07-ac1a-48dc-b3af-7bc71a62ff7d". In this scenario, the user sees the corresponding time-off reasons to choose from in Shifts.
 
 ```http
- { 
-  "requests": [ 
-    { 
-      "id": "aa162a04-bec6-4b81-ba99-96caa7b2b24d", 
-      "method": "GET", 
-      "url": "/users/aa162a04-bec6-4b81-ba99-96caa7b2b24d/timeOffReasons?requestType=TimeOffReason"
-    } 
-  ] 
+{
+    "responses": [ 
+      { 
+        "id": "aa162a04-bec6-4b81-ba99-96caa7b2b24d", 
+        "status": 200, 
+        "body": { 
+          "data": [ 
+            "TOR_29f4a110-ae53-458b-83d6-00c910fe2fbc", 
+            "TOR_8c0e8d07-ac1a-48dc-b3af-7bc71a62ff7d" 
+          ], 
+          "error": null 
+          } 
+        }
+    ]
 }
 ```
 
