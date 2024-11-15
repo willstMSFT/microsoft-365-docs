@@ -21,7 +21,7 @@ Read about frequently asked questions for Microsoft multitenant organizations. T
 
 ### How is a multitenant organization (MTO) set up?
 
-Administrators create an [MTO ](https://techcommunity.microsoft.com/blog/microsoft_365blog/multi-tenant-organization-capabilities-now-available-in-microsoft-365/4122812)in the Microsoft 365 admin center and configure collaboration capabilities for users across the tenants. [MTO configuration](/microsoft-365/enterprise/plan-multi-tenant-org-overview?view=o365-worldwide) includes the creation of cross-tenant sync jobs. 
+Administrators create an [MTO ](https://techcommunity.microsoft.com/blog/microsoft_365blog/multi-tenant-organization-capabilities-now-available-in-microsoft-365/4122812)in the Microsoft 365 admin center and configure collaboration capabilities for users across the tenants. [MTO configuration](/microsoft-365/enterprise/plan-multi-tenant-org-overview) includes the creation of cross-tenant sync jobs. 
 
 ### Are cross tenant sync jobs auto generated when an MTO is created?
 
@@ -89,7 +89,7 @@ The guiding principle is that one human only needs one license. So, if you are l
 
 ### Is cross tenant sync setup sufficient to leverage MTO functionality on Teams?
 
-MTO specific Teams functionality requires an MTO to be set up. [External access](/microsoft-365/enterprise/plan-multi-tenant-org-overview?view=o365-worldwide#trusted-organizations-in-external-access) policy setup and [B2B direct connect](/microsoft-365/enterprise/plan-multi-tenant-org-overview?view=o365-worldwide#shared-channels-in-multitenant-organizations) policy setup that is part of the MTO setup is essential to leverage MTO functionality on Teams. Learn more about Teams multi-tenant capabilities [here](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/announcing-more-seamless-collaboration-in-microsoft-teams-for/ba-p/3901092). It is important to keep in mind that these capabilities are only available on the mobile (iOS and Android) and new Teams desktop client. The customers using web client would not see any benefits or optimized experience for MTO. 
+MTO specific Teams functionality requires an MTO to be set up. [External access](/microsoft-365/enterprise/plan-multi-tenant-org-overview#trusted-organizations-in-external-access) policy setup and [B2B direct connect](/microsoft-365/enterprise/plan-multi-tenant-org-overview#shared-channels-in-multitenant-organizations) policy setup that is part of the MTO setup is essential to leverage MTO functionality on Teams. Learn more about Teams multi-tenant capabilities [here](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/announcing-more-seamless-collaboration-in-microsoft-teams-for/ba-p/3901092). It is important to keep in mind that these capabilities are only available on the mobile (iOS and Android) and new Teams desktop client. The customers using web client would not see any benefits or optimized experience for MTO. 
 
 ### Do old chats get merged when a user is converted from a B2B guest to a member? 
 
