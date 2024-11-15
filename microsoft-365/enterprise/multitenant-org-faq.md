@@ -6,7 +6,7 @@
 title: Multitenant orgs FAQ
 description: Frequently asked questions regarding multitenant organizations
 author:      jakeost-msft # GitHub alias
-ms.author:   jacob.osterloh # Microsoft alias
+ms.author: jakeost
 ms.service: microsoft-365-enterprise
 ms.topic: faq
 ms.date:     11/01/2024
