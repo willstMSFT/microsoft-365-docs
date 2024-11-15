@@ -162,7 +162,7 @@ To learn more, see:
 
 2. Educate your users and provide guidance on when to apply the correct sensitivity label.
 
-    Users should change the label if needed, especially for more sensitive content that requires encryption.
+    Users should change the label if needed, especially for more sensitive content.
 
     To help you with this step, see [End-user documentation for sensitivity labels](/purview/get-started-with-sensitivity-labels#end-user-documentation-for-sensitivity-labels).
 
