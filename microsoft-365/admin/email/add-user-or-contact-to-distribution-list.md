@@ -44,10 +44,10 @@ As the admin of an organization, you may need to add one of your users or contac
 
 4. On the **View Members** page, select **Add members**, and select the user or contact you want to add to the distribution group.
 
-5. Select **Add** and close.
-
    > [!NOTE]
-   > You can also remove a user on this page. Select the user, select the ellipsis symbol and choose **Remove member**.
+   > You can also remove a user on **View Members** page. Select the user, select the ellipsis symbol and choose **Remove member**.
+
+5. Select **Add** and close.
   
 ## Next steps
 
