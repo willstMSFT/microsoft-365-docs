@@ -25,7 +25,7 @@ As an admin, you can support Copilot Prompt Gallery adoption and success within 
 
 ## Overview
 
-**[image pending]**
+:::image type="content" source="media/prompt-gallery-overview.png" alt-text="Screenshot showing the prompts available to try in Copilot Prompt Gallery." lightbox="media/prompt-gallery-overview.png":::
 
 Copilot Prompt Gallery is a comprehensive repository that provides users with access to a catalog of Copilot prompts. The catalog includes prompts created by Microsoft that highlight key scenarios and capabilities of Microsoft Copilot, designed to help users understand and use Microsoft Copilot more effectively.
 
@@ -37,7 +37,7 @@ Each suggested prompt in the prompt Gallery includes additional information abou
 
 Copilot Prompt Gallery processes and manages data in a structured manner to ensure compliance and security. The following are key data flows and compliance considerations:
 
-**[diagram pending]**
+:::image type="content" source="media/copilot-lab-tech-diagram.png" alt-text="Diagram showing the data flow for Copilot Prompt Gallery." lightbox="media/copilot-lab-tech-diagram.png":::
 
 - Copilot Prompt Gallery is both a website and a feature of Copilot that allows users to discover, manage, use, and share Copilot prompts.
 - A user accesses Copilot Prompt Gallery, either via the Copilot Prompt Gallery website or in Copilot through an app.
