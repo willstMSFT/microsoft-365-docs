@@ -55,9 +55,9 @@ To ensure that users in your organization access Copilot with enterprise data pr
 
 To learn more about managing agents that work with Microsoft 365 Copilot, including how to control the integration of non-Microsoft apps and first-party apps, see [Manage Copilot agents in Integrated Apps](/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps).
 
-### Optional connected experiences for Microsoft 365 Copilot and Microsoft Copilot
+### Web search for Microsoft 365 Copilot and Microsoft Copilot
 
-Copilot can make use of cloud-backed services, called optional connected experiences, to provide additional functionality to Copilot users. For example, Copilot can [reference web content](manage-public-web-access.md) to improve the quality of its responses to user prompts. For Copilot to use these cloud-backed services, optional connected experiences must be on. For more information, see [Microsoft 365 Copilot and privacy controls for connected experiences](microsoft-365-copilot-privacy.md#microsoft-365-copilot-and-privacy-controls-for-connected-experiences).
+Copilot can reference web content to improve the quality of its responses, but only if access to web search is turned on. For more information, see [Data, privacy, and security for web search in Microsoft 365 Copilot and Microsoft Copilot](manage-public-web-access.md).
 
 ### Data, Security, and Compliance
 
@@ -69,9 +69,9 @@ This link directs you to the Security Copilot portal to manage settings. Securit
 
 ### Microsoft 365 Copilot feedback logs
 
-When users have an issue and aren't able to send feedback logs to Microsoft, you can submit feedback logs on their behalf. The data will include prompts and generated responses, relevant content samples, and additional log file. Using this feature to send feedback logs will temporarily override any user level feedback policy.
+When users have an issue and aren't able to send feedback logs to Microsoft, you can submit feedback logs on their behalf. The data will include prompts and generated responses, relevant content samples, and additional log files. Using this feature to send feedback logs will temporarily override any user level feedback policy.
 
-To learn more, see [Provide user feedback for Microsoft 365 Copilot](provide-feedback.md).
+To learn more, see [Submit admin-initiated Copilot feedback from the Microsoft 365 admin center](provide-feedback.md).
 
 ### Pin Microsoft Copilot to the navigation bar
 
