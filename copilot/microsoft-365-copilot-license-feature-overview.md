@@ -6,8 +6,9 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: laurawi
-ms.date: 11/12/2024
+ms.date: 11/14/2024
 audience: Admin
+ms.reviewer: emilyblundo, sophieke
 ms.topic: get-started
 ms.service: microsoft-365-copilot
 ms.localizationpriority: medium
@@ -21,16 +22,13 @@ appliesto:
   - ✅ Microsoft 365 Copilot
 ---
 
-# Microsoft 365 license feature comparison list for Microsoft 365 Copilot
-
-> [!WARNING]
-> This article is a work in progress for Ignite. Do not publish.
+# Microsoft 365 license feature comparison list to address oversharing for Microsoft 365 Copilot
 
 [Microsoft 365 Copilot](microsoft-365-copilot-overview.md) is an AI-powered productivity assistant that can help users with different tasks, like finding information and creating content. You can use Copilot in your Microsoft 365 apps, like Word, Outlook, and Teams.
 
-Since Copilot accesses the data your users have access to, it's important to make sure your data is ready for Copilot. This task includes making sure your data is shared with only the users who need access and is labeled for sensitivity.
+Since Copilot accesses the data your users have access to, it's important to make sure your data is ready for Copilot. This task involves ensuring that your data is shared only with the people who need access. While also making sure that the data is labeled for sensitivity where necessary.
 
-There are different features in the Microsoft 365 E3 and E5 licenses that can help you get your data ready for Copilot. These features:
+There are different features in the Microsoft 365 E3 and E5 licenses that can help you get your data ready for Copilot. These features can:
 
 - Help prevent oversharing
 - Declutter data sources
@@ -48,7 +46,7 @@ This article applies to:
 
 ## Microsoft 365 license feature table
 
-The following table lists some of the features that can help with Copilot. These features impact Copilot results and can help you manage Copilot interactions (prompts and responses).
+The following table lists some of the features that can help get your data ready for Copilot. These features affect Copilot results and can help you manage Copilot interactions (prompts and responses).
 
 | &nbsp; | E3 license | E5 license |
 | --- | --- | --- |
@@ -56,10 +54,10 @@ The following table lists some of the features that can help with Copilot. These
 | Restricted SharePoint Search (RSS) | ✅  | ✅  |
 | &nbsp; | &nbsp; | &nbsp; |
 | **Microsoft Purview features** | &nbsp; | &nbsp; |
-| Sensitivity labels |  ✅ <br/><br/> You can: <br/><br/>- Create custom labels. <br/> - Manually apply labels. | ✅ <br/><br/> You can: <br/><br/> - Create custom labels. <br/> - Use default built-in labels. <br/> - Manually apply labels. <br/> - Auto-apply labels. <br/> - Can apply to containers, like a SharePoint or Teams site |
+| Sensitivity labels |  ✅ <br/><br/> You can: <br/><br/>- Create custom labels. <br/> - Manually apply labels. | ✅ <br/><br/> You can: <br/><br/> - Create custom labels. <br/> - Use default built-in labels. <br/> - Manually apply labels. <br/> - Automatically apply labels. <br/> - Can apply labels to containers, like a SharePoint or Teams site |
 | Data loss prevention (DLP)| ✅ <br/><br/>Policies can target: <br/><br/>- SharePoint <br/> - Exchange <br/> - OneDrive | ✅ <br/><br/> Policies can target: <br/><br/>- SharePoint <br/> - Exchange <br/> - OneDrive <br/> - Teams <br/> - Endpoints |
 | Adaptive Protection | n/a | ✅ |
-| Data lifecycle management  | ✅ <br/><br/> You can: <br/><br/> - Create retention policies<br/> - Manually apply retention labels<br/> - Use Content explorer | ✅ <br/><br/> You can: <br/><br/> - Create retention policies<br/> - Manually apply retention labels<br/> - Auto-apply retention labels <br/> - Use Content explorer <br/> - Use Activity explorer <br/> - Can use Data Lifecycle Management or Records Management |
+| Data lifecycle management  | ✅ <br/><br/> You can: <br/><br/> - Create retention policies<br/> - Manually apply retention labels<br/> - Use Content explorer | ✅ <br/><br/> You can: <br/><br/> - Create retention policies<br/> - Manually apply retention labels<br/> - Automatically apply retention labels <br/> - Use Content explorer <br/> - Use Activity explorer <br/> - Can use Data Lifecycle Management or Records Management |
 | Communication Compliance | n/a | ✅ |
 | eDiscovery | ✅ <br/><br/>Can search. | ✅ <br/><br/> Can search and delete. |
 | Data Security Posture Management for AI (previously called AI Hub) |  ✅ | ✅ |
@@ -74,7 +72,7 @@ The following table lists some of the features that can help with Copilot. These
 
 ---
 
-To learn more about these features and how they affect Copilot, see:
+To learn more about these features and how they can prepare your data for Copilot, see:
 
 - [Microsoft 365 Copilot admin guide for E3 licenses](microsoft-365-copilot-e3-guide.md)
 - [Microsoft 365 Copilot admin guide for E5 licenses](microsoft-365-copilot-e5-guide.md)
@@ -85,19 +83,20 @@ To learn more about licensing, see:
 - [Microsoft Purview service description](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description)
 - [Microsoft SharePoint Premium - SharePoint Advanced Management licensing](/sharepoint/advanced-management#licensing)
 
-## More features to help you get ready for Copilot
+## More features to help get your data ready for Copilot
 
 Microsoft continues to invest in features that help you get ready for Copilot. This section describes some more services and features that are available to you.
 
 ### Data Security Posture Management for AI in Microsoft Purview
 
-[Data Security Posture Management for AI](/purview/ai-microsoft-purview) is a central location that helps you secure data for AI apps and proactively monitor AI use. It has preconfigured policies that focus on AI and reports that give information into AI use within your organization. It also includes eDiscovery and you can use it to analyze Copilot prompts and responses.
+[Data Security Posture Management for AI](/purview/ai-microsoft-purview) is a central location that helps you secure data for AI apps and proactively monitor AI use. It has preconfigured policies that focus on AI and reports that give information into AI use within your organization.
 
-If your focus is on Copilot, then use Data Security Posture Management for AI (previously called AI Hub).
+To access Data Security Posture Management for AI (previously called AI Hub), use the following steps:
 
 1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as an admin in one of the groups listed at [Microsoft Purview Data Security Posture Management for AI - permissions](/purview/ai-microsoft-purview-permissions).
 1. Select **Solutions** > **Data Security Posture Management for AI** > **Recommendations**.
 1. Create the recommended policies.
+1. Select **Reports** to view details of the Copilot interactions.
 
 To learn more about these policies, see [Data Security Posture Management for AI - one-click policies](/purview/ai-microsoft-purview-considerations#one-click-policies-from-the-ai-hub).
 
@@ -113,6 +112,17 @@ The dashboard shows metrics on readiness, adoption, impact, and sentiment.
 
 To learn more, see [Microsoft Copilot Dashboard for Microsoft 365 customers](/viva/insights/org-team-insights/copilot-dashboard).
 
+### Microsoft Security Copilot
+
+[Security Copilot](/copilot/security/microsoft-security-copilot) is a natural language, assistive AI experience. It helps support security professionals in various end-to-end scenarios, like incident response, threat hunting, intelligence gathering, posture management, and more.
+
+Security Copilot integrates with other services that help you manage device and data security, like Microsoft Purview, Microsoft Defender, and Microsoft Intune.
+
+To learn more, see:
+
+- [Get started with Microsoft Security Copilot](/copilot/security/get-started-security-copilot)
+- [Access training and more technical readiness resources at the Microsoft Security Copilot Adoption hub](https://aka.ms/SecurityCopilot/Adoption)
+
 ## Get started with your E3 or E5 features
 
 The next step is to start using the features in your license:
@@ -125,3 +135,4 @@ The next step is to start using the features in your license:
 - [Microsoft 365 Copilot licensing](microsoft-365-copilot-licensing.md)
 - [Microsoft 365 Copilot admin guide for E3 licenses](microsoft-365-copilot-e3-guide.md)
 - [Microsoft 365 Copilot admin guide for E5 licenses](microsoft-365-copilot-e5-guide.md)
+- [Microsoft 365 Copilot adoption resources](https://adoption.microsoft.com/copilot)
