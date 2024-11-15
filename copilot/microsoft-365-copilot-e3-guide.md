@@ -46,21 +46,21 @@ This article applies to:
 
 ## Before you begin
 
-- Microsoft recommends you also follow the steps in [Microsoft 365 Copilot - best practices with SharePoint](/sharepoint/sharepoint-copilot-best-practices). This article helps you optimize your search in SharePoint, update sharing settings in SharePoint & OneDrive, and check permissions & site access on your SharePoint sites.
+- Microsoft recommends you also follow the steps in [Microsoft 365 Copilot - best practices with SharePoint](/sharepoint/sharepoint-copilot-best-practices). It helps you optimize your search in SharePoint, update sharing settings in SharePoint & OneDrive, and check permissions & site access on your SharePoint sites.
 
 - The following licenses are required to use the features in this article:
 
-  - [Microsoft 365 E3](https://www.microsoft.com/microsoft-365/enterprise/e3) or [Office 365 E3](https://www.microsoft.com/microsoft-365/enterprise/office-365-e3)
+  - **[Microsoft 365 E3](https://www.microsoft.com/microsoft-365/enterprise/e3)** or **[Office 365 E3](https://www.microsoft.com/microsoft-365/enterprise/office-365-e3)**
 
-    - [Microsoft Purview](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description) - Included with your E3 license
+    - **[Microsoft Purview](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description)** - Included with your E3 license
 
     For a list of the features and services you get with your license, see [Microsoft 365, Office 365, Enterprise Mobility + Security, and Windows 11 Subscriptions](https://aka.ms/M365EnterprisePlans).
 
-  - [Microsoft SharePoint Premium - SharePoint Advanced Management](/sharepoint/advanced-management#licensing)
+  - **[Microsoft SharePoint Premium - SharePoint Advanced Management](/sharepoint/advanced-management#licensing)**
 
     There are some features in SharePoint Advanced Management (SAM) that are included with your Microsoft 365 Copilot license. To get the full version of SAM and use all the features described in this article, you need the [Microsoft SharePoint Premium - SharePoint Advanced Management](/sharepoint/advanced-management#licensing) license.
 
-  - [Microsoft 365 Copilot](microsoft-365-copilot-licensing.md)
+  - **[Microsoft 365 Copilot](microsoft-365-copilot-licensing.md)**
 
     Depending on your subscription plan, you might be able purchase Microsoft 365 Copilot licenses through the [Microsoft 365 admin center](https://admin.microsoft.com) (**Billing** > **Purchase services**), Microsoft partners, or your Microsoft account team.
 

@@ -46,20 +46,20 @@ This article applies to:
 
 ## Before you begin
 
-- Microsoft recommends you also follow the steps in [Microsoft 365 Copilot - best practices with SharePoint](/sharepoint/sharepoint-copilot-best-practices). This article helps you optimize your search in SharePoint, update sharing settings in SharePoint & OneDrive, and check permissions & site access on your SharePoint sites.
+- Microsoft recommends you also follow the steps in [Microsoft 365 Copilot - best practices with SharePoint](/sharepoint/sharepoint-copilot-best-practices). It helps you optimize your search in SharePoint, update sharing settings in SharePoint & OneDrive, and check permissions & site access on your SharePoint sites.
 
 - The following licenses are required to use the features in this article:
 
-  - [Microsoft 365 E5](https://www.microsoft.com/microsoft-365/enterprise/e5) or [Office 365 E5](https://www.microsoft.com/microsoft-365/enterprise/office-365-e5)
-    - [Microsoft Purview](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description) - Included with your E5 license
+  - **[Microsoft 365 E5](https://www.microsoft.com/microsoft-365/enterprise/e5)** or **[Office 365 E5](https://www.microsoft.com/microsoft-365/enterprise/office-365-e5)**
+    - **[Microsoft Purview](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description)** - Included with your E5 license
 
     For a list of the features and services you get with your license, see [Microsoft 365, Office 365, Enterprise Mobility + Security, and Windows 11 Subscriptions](https://aka.ms/M365EnterprisePlans).
 
-  - [Microsoft SharePoint Premium - SharePoint Advanced Management](/sharepoint/advanced-management#licensing)
+  - **[Microsoft SharePoint Premium - SharePoint Advanced Management](/sharepoint/advanced-management#licensing)**
 
     There are some features in SharePoint Advanced Management (SAM) that are included with your Microsoft 365 Copilot license. To get the full version of SAM and use all the features described in this article, you need the [Microsoft SharePoint Premium - SharePoint Advanced Management](/sharepoint/advanced-management#licensing) license.
 
-  - [Microsoft 365 Copilot](microsoft-365-copilot-licensing.md)
+  - **[Microsoft 365 Copilot](microsoft-365-copilot-licensing.md)**
 
     Depending on your subscription plan, you might be able purchase Microsoft 365 Copilot licenses through the [Microsoft 365 admin center](https://admin.microsoft.com) (**Billing** > **Purchase services**), Microsoft partners, or your Microsoft account team.
 
@@ -300,20 +300,6 @@ To learn more about Microsoft Purview, see [Security Copilot in Microsoft Purvie
 
 ### Identify and label sensitive data
 
-✅ **Create and apply [sensitivity labels](/purview/get-started-with-sensitivity-labels) to protect your data**
-
-[Sensitivity labels](/purview/sensitivity-labels) are a way to identify and classify the sensitivity of your organization's data, adding an extra layer of protection to your data.
-
-When sensitivity labels are applied to items, like documents and emails, the labels add the protection directly to this data. As a result, that protection persists, wherever the data is stored. When sensitivity labels are applied to containers, like SharePoint sites and groups, the labels add protection indirectly by controlling access to the container where the data is stored. For example, privacy settings, external user access, and access from unmanaged devices.
-
-The sensitivity labels can also affect Copilot results, including:
-
-- The label settings include protection actions, like access to sites, customizable headers and footers, and encryption.
-- If the label applies encryption, Copilot checks the usage rights for the user. For Copilot to return data from that item, the user must be granted permissions to copy from it.
-- A prompt session with Copilot (called Business Chat) can reference data from different types of items. Sensitivity labels are shown in the returned results. The latest response displays the sensitivity label with the [highest priority](/purview/sensitivity-labels#label-priority-order-matters).
-
-- If Copilot creates new content from labeled items, the sensitivity label from the source item is automatically inherited.
-
 [!INCLUDE [copilot-e5-e3-create-apply-sensitivity-labels](./includes/copilot-e5-e3-create-apply-sensitivity-labels.md)]
 
 This section walks you through the steps to create and use the default sensitivity labels from Microsoft Purview. If you need to use your own label names and configurations, create the labels manually or edit the default labels. If you already created your own sensitivity labels, then you can't create the default labels.
@@ -374,20 +360,6 @@ For more information, including details of all the available label settings that
 3. Monitor your labels. Select **Information protection** > **Reports**. You can see the usage of your labels.
 
 #### 4. Enable sensitivity labels for files in SharePoint and OneDrive
-
-This step is a one-time configuration that is required to enable sensitivity labels for SharePoint and OneDrive. It's also required for Microsoft 365 Copilot to access encrypted files stored in these locations.
-
-As with all tenant-level configuration changes for SharePoint and OneDrive, it takes about 15 minutes for the change to take effect. Then users can select sensitivity labels in Office on the web and you can create policies that automatically label files in these locations.
-
-You have two options:
-
-- **Option 1**: Select **Information Protection** > **Sensitivity labels**. If you see the following message, select **Turn on now**:
-
-  :::image type="content" source="media/microsoft-365-copilot-e5-guide/purview-sensitivity-labels-prompt.png" alt-text="In Microsoft Purview Information Protection, turn on sensitivity labels for SharePoint and OneDrive." lightbox="media/microsoft-365-copilot-e5-guide/purview-sensitivity-labels-prompt.png":::
-
-- **Option 2**: Use the `[Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant)` Windows PowerShell cmdlet.
-
-To learn more about this configuration, see [Enable sensitivity labels for files in SharePoint and OneDrive](/purview/sensitivity-labels-sharepoint-onedrive-files).
 
 [!INCLUDE [copilot-e5-e3-enable-sensitivity-labels-sharepoint-onedrive](./includes/copilot-e5-e3-enable-sensitivity-labels-sharepoint-onedrive.md)]
 
@@ -468,16 +440,9 @@ This section introduces you to the DLP policy creation process. DLP policies are
 
 #### 1. Open the Microsoft Purview portal
 
-1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as one of the admins listed at [Create and deploy DLP policies - Permissions](/purview/dlp-create-deploy-policy).
-2. Select **Solutions** > **Data Loss Prevention**.
-
 [!INCLUDE [copilot-e5-e3-open-purview-portal](./includes/copilot-e5-e3-open-purview-portal.md)]
 
 #### 2. Create DLP policies
-
-For Exchange Online, SharePoint Online, and OneDrive, you can use DLP to identify, monitor, and automatically protect sensitive information across emails and files, including files stored in Microsoft Teams file repositories.
-
-- For the steps, see [Design a DLP policy](/purview/dlp-policy-design) and [Create and Deploy data loss prevention policies](/purview/dlp-create-deploy-policy).
 
 [!INCLUDE [copilot-e5-e3-create-dlp-policy](./includes/copilot-e5-e3-create-dlp-policy.md)]
 
@@ -728,14 +693,6 @@ To learn more, see [Search for and optionally delete Copilot interactions in eDi
 ---
 
 ## Technical and deployment resources available to you
-
-- Organizations with a minimum number of Copilot licenses are eligible for a Microsoft co-investment in deployment and adoption through eligible Microsoft Partners.
-
-  To learn more, see [Microsoft 365 Copilot Partner Directory](https://cloudpartners.transform.microsoft.com/copilot-directory).
-
-- Eligible customers can request technical and deployment assistance from Microsoft FastTrack. FastTrack provides guidance and resources to help you plan, deploy, and adopt Microsoft 365.
-
-  To learn more, see [FastTrack for Microsoft 365](https://aka.ms/AMC/FASTTRACK).
 
 [!INCLUDE [copilot-e5-e3-deployment-resources](./includes/copilot-e5-e3-deployment-resources.md)]
 

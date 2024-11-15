@@ -21,7 +21,7 @@ appliesto:
 
 # Adoption and enablement resources for Microsoft 365 Copilot
 
-[Microsoft 365 Copilot](microsoft-365/microsoft-365-copilot-overview.md) is an AI tool that can find information, get answers to questions, and help with tasks.
+[Microsoft 365 Copilot](microsoft-365-copilot-overview.md) is an AI tool that can find information, get answers to questions, and help with tasks.
 
 **[Microsoft Adoption](https://adoption.microsoft.com/copilot)** includes resources that help you enable and use Copilot in your organization, including:
 
