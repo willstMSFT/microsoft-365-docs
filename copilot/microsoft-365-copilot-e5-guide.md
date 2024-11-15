@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: laurawi
-ms.date: 11/12/2024
+ms.date: 11/14/2024
 ms.reviewer: cabailey, ruihu
 audience: Admin
 ms.topic: get-started
@@ -23,9 +23,6 @@ appliesto:
 ---
 
 # Microsoft 365 Copilot admin guide for E5 licenses
-
-> [!WARNING]
-> This article is a work in progress for Ignite. Do not publish.
 
 When preparing your organization for [Microsoft 365 Copilot](microsoft-365-copilot-overview.md) or you're ready to start using Copilot, there are features in your E5 license that can help get your data ready.
 
@@ -49,17 +46,14 @@ This article applies to:
 
 ## Before you begin
 
-- Microsoft recommends you start with the steps in [Baseline](need link). In Baseline, you optimize your search in SharePoint, update sharing settings in SharePoint & OneDrive, and check permissions & site access on your SharePoint sites.
-
-  ??Make sure this info is in E5 article, and then delete bullet??
+- Microsoft recommends you also follow the steps in [Microsoft 365 Copilot - best practices with SharePoint](/sharepoint/sharepoint-copilot-best-practices). This article helps you optimize your search in SharePoint, update sharing settings in SharePoint & OneDrive, and check permissions & site access on your SharePoint sites.
 
 - The following licenses are required to use the features in this article:
 
   - [Microsoft 365 E5](https://www.microsoft.com/microsoft-365/enterprise/e5) or [Office 365 E5](https://www.microsoft.com/microsoft-365/enterprise/office-365-e5)
     - [Microsoft Purview](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description) - Included with your E5 license
 
-  > [!TIP]
-  > For a list of the features and services you get with your license, see [Microsoft 365, Office 365, Enterprise Mobility + Security, and Windows 11 Subscriptions](https://aka.ms/M365EnterprisePlans).
+    For a list of the features and services you get with your license, see [Microsoft 365, Office 365, Enterprise Mobility + Security, and Windows 11 Subscriptions](https://aka.ms/M365EnterprisePlans).
 
   - [Microsoft SharePoint Premium - SharePoint Advanced Management](/sharepoint/advanced-management#licensing)
 
@@ -320,6 +314,8 @@ The sensitivity labels can also affect Copilot results, including:
 
 - If Copilot creates new content from labeled items, the sensitivity label from the source item is automatically inherited.
 
+[!INCLUDE [copilot-e5-e3-create-apply-sensitivity-labels](./includes/copilot-e5-e3-create-apply-sensitivity-labels.md)]
+
 This section walks you through the steps to create and use the default sensitivity labels from Microsoft Purview. If you need to use your own label names and configurations, create the labels manually or edit the default labels. If you already created your own sensitivity labels, then you can't create the default labels.
 
 To learn more about sensitivity labels, see:
@@ -379,7 +375,7 @@ For more information, including details of all the available label settings that
 
 #### 4. Enable sensitivity labels for files in SharePoint and OneDrive
 
-This step is a one-time configuration that is required to enable sensitivity labels for SharePoint and OneDrive. It is also required for Microsoft 365 Copilot to access encrypted files stored in these locations.
+This step is a one-time configuration that is required to enable sensitivity labels for SharePoint and OneDrive. It's also required for Microsoft 365 Copilot to access encrypted files stored in these locations.
 
 As with all tenant-level configuration changes for SharePoint and OneDrive, it takes about 15 minutes for the change to take effect. Then users can select sensitivity labels in Office on the web and you can create policies that automatically label files in these locations.
 
@@ -392,6 +388,8 @@ You have two options:
 - **Option 2**: Use the `[Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant)` Windows PowerShell cmdlet.
 
 To learn more about this configuration, see [Enable sensitivity labels for files in SharePoint and OneDrive](/purview/sensitivity-labels-sharepoint-onedrive-files).
+
+[!INCLUDE [copilot-e5-e3-enable-sensitivity-labels-sharepoint-onedrive](./includes/copilot-e5-e3-enable-sensitivity-labels-sharepoint-onedrive.md)]
 
 > [!TIP]
 > Although not related to Copilot, now is a good time to [enable co-authoring for encrypted files](/purview/sensitivity-labels-coauthoring), if it's not already enabled. This setting ensures the best user experience for collaboration.
@@ -414,9 +412,9 @@ The SharePoint site admin can select a default label for the document library.
 1. In your SharePoint site, select **Documents** > **Settings** icon > **Library settings** > **More library settings**.
 2. In **Default sensitivity labels** (Apply label to items in this list or library):
 
-    a. For a standard default sensitivity label, from the drop-down box, select a sensitivity label that's suitable for most of the files in the library. It can be a sensitivity label that is configured for admin-defined permissions, such as **Confidential \ All Employees**. Or, a sensitivity label that doesn't apply encryption, such as **Public**. Don't select **Extend protection on download, copy, or move**.
+    a. For a standard default sensitivity label, from the drop-down box, select a sensitivity label that's suitable for most of the files in the library. It can be a sensitivity label that is configured for admin-defined permissions, like **Confidential \ All Employees**. Or, a sensitivity label that doesn't apply encryption, like **Public**. Don't select **Extend protection on download, copy, or move**.
 
-    b. For a default sensitivity label that extends protection to files that are downloaded, copied, or moved, select **Extend protection on download, copy, or move**. Then from the drop-down box, select a sensitivity label that is configured for user-defined permissions, such as **Confidential \ Trusted People**.
+    b. For a default sensitivity label that extends protection to files that are downloaded, copied, or moved, select **Extend protection on download, copy, or move**. Then from the drop-down box, select a sensitivity label that is configured for user-defined permissions, like **Confidential \ Trusted People**.
 
     > [!NOTE]
     > The **Extend protection on download, copy, or move** checkbox isn't displayed until the prerequisite PowerShell commands are complete.
@@ -434,7 +432,7 @@ You can automatically apply labels to files in SharePoint sites, OneDrive accoun
 
 - For the specific steps and information that you need to know, including learning about simulation mode for autolabeling policies, see [Apply a sensitivity label to content automatically](/purview/apply-sensitivity-label-automatically).
 
-##### Client-side auto-labeling vs. service-side auto-labeling
+##### Client-side autolabeling vs. service-side autolabeling
 
 - When you autolabel documents and emails in use by Word, Excel, PowerPoint, and Outlook, it's using client-side autolabeling. Users see the label automatically applied in their Office apps, or you can recommend the appropriate label to the user.
 - When you autolabel documents stored in all SharePoint or OneDrive sites, and all emails sent using Exchange Online, it's using service-side autolabeling. There isn't any user interaction. You can label at scale for files at rest in OneDrive and SharePoint, and all emails that are sent and received.
@@ -443,78 +441,51 @@ If you created the default sensitivity labels and policies, they include both [c
 
 You can edit or create your own autolabeling settings to help identify your organization data that needs a specific sensitivity label to apply protection actions, like encryption.
 
-### Detect senstive information and protect it from unauthorized sharing or leakage
+### Detect sensitive information and protect it from unauthorized sharing or leakage
 
 ✅ **Use [data loss prevention (DLP) policies](/purview/dlp-learn-about-dlp) to help protect against unintentional sharing**
 
 [Microsoft Purview Data Loss Prevention (DLP)](/purview/dlp-learn-about-dlp) helps organizations protect sensitive information by helping guard against unauthorized sharing or leakage. The intent is to dynamically protect sensitive information, like financial data, social security numbers, and health records, from being overshared.
 
-You can create DLP policies to protect sensitive information in these locations:
+You can create DLP policies to protect sensitive information in the following locations:
 
-- Microsoft 365 services such as Teams, Exchange, SharePoint, and OneDrive accounts
-- Office applications such as Word, Excel, and PowerPoint
+- Microsoft 365 services, like Teams, Exchange, SharePoint, and OneDrive accounts
+- Office applications, like Word, Excel, and PowerPoint
 - Windows 10, Windows 11, and macOS (three latest released versions) endpoints
-- non-Microsoft cloud apps
-- on-premises file shares and on-premises SharePoint
+- Non-Microsoft cloud apps
+- On-premises file shares and on-premises SharePoint
 - Fabric and Power BI
 
-When DLP policies find this data, it can act and help prevent the data from showing up in Microsoft 365 Copilot results. For more information, see [Learn about the Microsoft 365 Copilot location in DLP (preview)](/purview/dlp-create-deploy-policy?tabs=purview). 
+When DLP policies find this data, it can act and help prevent the data from showing up in Microsoft 365 Copilot results. To learn more, see [Learn about the Microsoft 365 Copilot location in DLP](/purview/dlp-create-deploy-policy). It can also help prevent items that have specific sensitivity labels applied from being used in the Copilot response summarization. To learn more, see [Learn about the Microsoft 365 Copilot policy location](/purview/dlp-microsoft365-copilot-location-learn-about).
 
-With DLP policies, you can use [trainable classifiers](/purview/trainable-classifiers-get-started-with), [sensitive information types](/purview/sit-sensitive-information-type-learn-about), [sensitivity labels](/purview/sensitivity-labels) and [retention labels](/purview/retention) to identify sensitive information across your organization.
+With DLP policies, you can use [trainable classifiers](/purview/trainable-classifiers-get-started-with), [sensitive information types](/purview/sit-sensitive-information-type-learn-about), [sensitivity labels](/purview/sensitivity-labels), and [retention labels](/purview/retention) to identify sensitive information across your organization.
 
-This section introduces you to the DLP policy creation process. <!-- for, and use Adaptive Protection policies integrated with **Insider Risk Management** and DLP.-->
+This section introduces you to the DLP policy creation process. DLP policies are a powerful tool. Make sure you:
 
-Taking the time to design a policy before you implement it gets you to the desired results faster, with fewer unintended issues, than creating it and then tuning by trial and error alone.
+- Understand the data you're protecting and the goals you want to achieve.
+- Take time to design a policy before you implement it. You want to avoid any unintended issues. It's not recommended to create a policy, and then only tune the policy by trial-and-error.
+- Work through [Data loss prevention - Before you begin](/purview/dlp-learn-about-dlp#before-you-begin) before you start designing a policy. This step helps you understand the concepts and the tools you use to create and manage DLP policies.
 
-If you're new to Microsoft Purview DLP, it's helpful to work through these articles before you start designing a policy:
+#### 1. Open the Microsoft Purview portal
 
-1. [Administrative units](/purview/purview-compliance-portal-permissions#administrative-units)
-1. [Learn about Microsoft Purview Data Loss Prevention](/purview/dlp-learn-about-dlp)  - introduces you to the data loss prevention discipline and Microsoft's implementation of DLP
-1. [Plan for data loss prevention (DLP)](/purview/dlp-overview-plan-for-dlp#plan-for-data-loss-prevention-dlp) - by working through this article you will:
-    1. [Identify stakeholders](/purview/dlp-overview-plan-for-dlp#identify-stakeholders)
-    1. [Describe the categories of sensitive information to protect](/purview/dlp-overview-plan-for-dlp#describe-the-categories-of-sensitive-information-to-protect)
-    1. [Set goals and strategy](/purview/dlp-overview-plan-for-dlp#set-goals-and-strategy)
-1. [Data Loss Prevention policy reference](/purview/dlp-policy-reference#data-loss-prevention-policy-reference) - this article introduces all the components of a DLP policy and how each one influences the behavior of a policy
-1. [Design a DLP policy](/purview/dlp-policy-design) - this article walks you through creating a policy intent statement and mapping it to a specific policy configuration. 
-1. [Create and Deploy data loss prevention policies](/purview/dlp-create-deploy-policy) - This article presents some common policy intent scenarios that you'll map to configuration options, then it walks you through configuring those options.
-1. [Learn about investigating data loss prevention alerts](/purview/dlp-alert-investigation-learn) - This article introduces you to the lifecycle of alerts from creation, through final remediation and policy tuning. It also introduces you to the tools you use to investigate alerts.
+1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as one of the admins listed at [Create and deploy DLP policies - Permissions](/purview/dlp-create-deploy-policy).
+2. Select **Solutions** > **Data Loss Prevention**.
 
-#### 1. Create DLP policies
+[!INCLUDE [copilot-e5-e3-open-purview-portal](./includes/copilot-e5-e3-open-purview-portal.md)]
+
+#### 2. Create DLP policies
 
 For Exchange Online, SharePoint Online, and OneDrive, you can use DLP to identify, monitor, and automatically protect sensitive information across emails and files, including files stored in Microsoft Teams file repositories.
 
-For more information on creating DLP policies, see [Design a DLP policy](/purview/dlp-policy-design) and [Create and Deploy data loss prevention policies](/purview/dlp-create-deploy-policy)
+- For the steps, see [Design a DLP policy](/purview/dlp-policy-design) and [Create and Deploy data loss prevention policies](/purview/dlp-create-deploy-policy).
 
-<!--
+[!INCLUDE [copilot-e5-e3-create-dlp-policy](./includes/copilot-e5-e3-create-dlp-policy.md)]
 
-Specifically, you configure DLP to inspect emails and files for sensitive information.
+#### 3. Create a DLP policy for Teams
 
-1. In **Data Loss Prevention**, select **Overview**.
-2. In **Protect sensitive info**, you might see a list of sensitive information types that DLP already detected in your organization:
+By default, Purview includes some policies for Teams that you can enable. These policies are a quick way to get started with protecting information in Teams.
 
-    :::image type="content" source="media/microsoft-365-copilot-e5-guide/purview-dlp-protect-sensitive-info.png" alt-text="In Microsoft Purview Data Loss Prevention, go to protect sensitive info and view the sensitive information detected by DLP." lightbox="media/microsoft-365-copilot-e5-guide/purview-dlp-protect-sensitive-info.png":::
-
-3. Select **Get started** > **Create selected policies**. This step creates the default policies:
-
-    :::image type="content" source="media/microsoft-365-copilot-e5-guide/purview-dlp-create-default-policies.png" alt-text="In Microsoft Purview Data Loss Prevention, go to protect sensitive info and create the default policies." lightbox="media/microsoft-365-copilot-e5-guide/purview-dlp-create-default-policies.png":::
-
-    By default, Exchange Online emails, SharePoint sites, and OneDrive accounts are automatically enabled locations for all users within the tenant. So when you create a DLP policy, the policy automatically applies to these locations.
-
-4. To create a new DLP policy, select **Policies** > **Create policy**.
-
-    When you create your own policy, you can choose the category, like Financial or Medical. If your organization has sensitive information in these areas, then you should create a custom DLP policy.
-
-    To learn more, see:
-
-    - [Design a DLP policy](/purview/dlp-policy-design)
-    - [Create and Deploy DLP policies](/purview/dlp-create-deploy-policy)
--->
-
-#### 2. Create a DLP policy for Teams
-
-Here's an example of one way to get started with protecting information in Team. These policies can detect when sensitive info, like bank account numbers or passport numbers, are shared in Teams messages. Then, you can create policy tips to educate users or add actions that control sharing.
-
-By default, Purview includes some policies for Teams that you can enable.
+These policies can detect when sensitive info, like bank account numbers or passport numbers, are shared in Teams messages. Then, you can create policy tips to educate users or add actions that control sharing.
 
 1. In **Data Loss Prevention**, select **Overview**.
 2. Scroll down to see the following policies:
@@ -530,19 +501,19 @@ For more information on using DLP policies to protect information in Teams, see:
 
 - [Learn about the default data loss prevention policy for Microsoft Teams](/purview/dlp-teams-default-policy)
 - [Data Loss Prevention and Microsoft Teams](/purview/dlp-microsoft-teams)
- 
-#### 3. Create an endpoint DLP policy for your Windows and macOS devices
+
+#### 4. Create an endpoint DLP policy for your Windows and macOS devices
 
 Endpoint data loss prevention (Endpoint DLP) extends DLP monitoring and protection capabilities to sensitive items that are physically stored on Windows 10/11 and macOS (the three latest released major versions) devices.
 
-DLP can monitor and take protective actions on user activities like:
+DLP can monitor and take protective actions on user activities, like:
 
 - Copy to USB removable device
 - Copy to a network share
 - Print
-- Upload to a restricted cloud service domain or access from an unallowed browser.
+- Upload to a restricted cloud service domain or access from an unallowed browser
 
-This is a partial list of the activities that DLP can monitor and protect. For a full list, see [Learn about Endpoint Data Loss Prevention](/purview/endpoint-dlp-learn-about)
+These activities are only some of the activities that DLP can monitor and protect. For a full list, see [Learn about Endpoint Data Loss Prevention](/purview/endpoint-dlp-learn-about).
 
 For more information on the prerequisites and steps to create an endpoint DLP policy, see:
 
@@ -550,26 +521,9 @@ For more information on the prerequisites and steps to create an endpoint DLP po
 - [Onboard Windows devices into Microsoft 365 overview](/purview/device-onboarding-overview)
 - [Onboard macOS devices into Microsoft 365 overview](/purview/device-onboarding-macos-overview). 
 
-<!--1. In **Data Loss Prevention**, select **Overview**.
-2. Select **Turn on advanced classification**. This action enables the endpoint DLP policies:
-
-    :::image type="content" source="media/microsoft-365-copilot-e5-guide/purview-dlp-endpoint-enable.png" alt-text="In Microsoft Purview Data Loss Prevention (DLP), select the turn on advanced classification setting to enables DLP policies." lightbox="media/microsoft-365-copilot-e5-guide/purview-dlp-endpoint-enable.png":::
-
-3. In **Overview**, select the settings icon (top right corner) > **Data Loss Prevention**:
-
-    :::image type="content" source="media/microsoft-365-copilot-e5-guide/purview-dlp-solution-settings.png" alt-text="In Microsoft Purview Data Loss Prevention (DLP), select settings and then select Data Loss Prevention.":::
-
-4. In **Endpoint DLP settings**, you can see all the different type of settings you can configure. To learn more about these policy settings, see [Configure endpoint data loss prevention settings](/purview/dlp-configure-endpoint-settings).
-
-To learn more about DLP policies for endpoints, see:
-
-- [Get started with endpoint data loss prevention](/purview/endpoint-dlp-getting-started)
-- [Configure endpoint data loss prevention settings](/purview/dlp-configure-endpoint-settings)
-- [Use Endpoint data loss prevention](/purview/endpoint-dlp-using)
-
 > [!NOTE]
 > If you use a mobile device managment (MDM) service to manage and help protect you devices, like [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), then keep using your MDM provider. The endpoint DLP policies focus on data loss prevention with your Microsoft 365 data. MDM focuses on device management. You use them simulatenously.
--->
+
 #### 5. Create Adaptive Protection
 
 Adaptive Protection integrates information from **Insider Risk Management** with DLP. When [insider risk](/purview/insider-risk-management-adaptive-protection) identifies a user that's engaging in risky behavior, the user is dynamically assigned an [insider risk level](/purview/insider-risk-management-adaptive-protection#insider-risk-levels), like **Elevated**.
@@ -696,7 +650,7 @@ To learn more, see:
 
 ### Detect sensitive data and noncompliant content in Copilot interactions
 
-✅ **Create [Communication Compliance policies](/purview/communication-compliance) to monitor interactions with Microsoft 365 Copilot**
+✅ **Create [Communication Compliance policies](/purview/communication-compliance-copilot) to monitor interactions with Microsoft 365 Copilot**
 
 [Communication Compliance](/purview/communication-compliance) can detect, capture, and act on potentially inappropriate messages in your organization. The inappropriate content includes sensitive or confidential information, harassing or threatening language, and sharing of adult content.
 
@@ -733,7 +687,7 @@ To learn more, see:
 
 ### Review and analyze Copilot prompts and responses
 
-✅ **Use [Data Security Posture Management for AI](/purview/ai-microsoft-purview) or [eDiscovery](/purview/edisc) to analyze Copilot user prompts and responses**
+✅ **Use [Data Security Posture Management (DSPM) for AI](/purview/ai-microsoft-purview) or [eDiscovery](/purview/edisc) to analyze Copilot user prompts and responses**
 
 When users enter a prompt and get a response from Copilot, you can view and search these interactions. Specifically, these features help you:
 
@@ -743,9 +697,9 @@ When users enter a prompt and get a response from Copilot, you can view and sear
 
 There are two ways to review and analyze Copilot prompts and responses - **Data Security Posture Management for AI** and **eDiscovery**.
 
-# [Data Security Posture Management for AI](#tab/aihub)
+# [DSPM for AI](#tab/aihub)
 
-[Data Security Posture Management for AI](/purview/ai-microsoft-purview#microsoft-purview-ai-hub-provides-insights-policies-and-controls-for-ai-apps) (previously called AI Hub) is a central location in the Microsoft Purview portal that proactively monitors AI use. It includes eDiscovery and you can use it to analyze and review Copilot prompts and responses.
+[Data Security Posture Management (DSPM) for AI](/purview/ai-microsoft-purview#microsoft-purview-ai-hub-provides-insights-policies-and-controls-for-ai-apps) (previously called AI Hub) is a central location in the Microsoft Purview portal that proactively monitors AI use. It includes eDiscovery and you can use it to analyze and review Copilot prompts and responses.
 
 1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as an admin in one of the groups listed at [Data Security Posture Management for AI - Permissions](/purview/ai-microsoft-purview-permissions).
 2. Select **Solutions** > **Data Security Posture Management for AI** > **Activity Explorer**.
@@ -775,7 +729,7 @@ To learn more, see [Search for and optionally delete Copilot interactions in eDi
 
 ## Technical and deployment resources available to you
 
-- Organizations with a minimum number of Copilot licenses are eligible for a Microsoft coinvestment in deployment and adoption through eligible Microsoft Partners.
+- Organizations with a minimum number of Copilot licenses are eligible for a Microsoft co-investment in deployment and adoption through eligible Microsoft Partners.
 
   To learn more, see [Microsoft 365 Copilot Partner Directory](https://cloudpartners.transform.microsoft.com/copilot-directory).
 
@@ -783,7 +737,10 @@ To learn more, see [Search for and optionally delete Copilot interactions in eDi
 
   To learn more, see [FastTrack for Microsoft 365](https://aka.ms/AMC/FASTTRACK).
 
+[!INCLUDE [copilot-e5-e3-deployment-resources](./includes/copilot-e5-e3-deployment-resources.md)]
+
 ## Related content
 
 - [Microsoft 365 Copilot requirements and prerequisites](/copilot/microsoft-365/microsoft-365-copilot-requirements)
 - [Provision Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-setup)
+- [Microsoft 365 Copilot adoption resources](https://adoption.microsoft.com/copilot)
