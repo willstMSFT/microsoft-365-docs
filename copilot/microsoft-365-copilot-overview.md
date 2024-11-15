@@ -24,9 +24,6 @@ appliesto:
 
 # Microsoft 365 Copilot overview
 
-> [!WARNING]
-> This article is a work in progress for Ignite. Do not publish.
-
 **Microsoft 365 Copilot is an AI-powered productivity tool**.
 
 It provides real-time intelligence that enables users to complete tasks more efficiently, enhance their productivity & skills, and improve their overall work experience. From a business impact perspective, users get content relevant to their work tasks, like drafting, summarizing, and answering questions; all in the context of their work within their Microsoft 365 app.

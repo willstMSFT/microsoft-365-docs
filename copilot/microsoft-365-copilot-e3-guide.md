@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: laurawi
-ms.date: 11/11/2024
+ms.date: 11/14/2024
 ms.reviewer: cabailey, ruihu
 audience: Admin
 ms.topic: get-started
@@ -23,9 +23,6 @@ appliesto:
 ---
 
 # Microsoft 365 Copilot admin guide for E3 licenses
-
-> [!WARNING]
-> This article is a work in progress for Ignite. Do not publish.
 
 When you're preparing your organization for [Microsoft 365 Copilot](microsoft-365-copilot-overview.md) or you're ready to start using Copilot, there are features in your E3 license that can help get your data ready.
 
@@ -49,23 +46,21 @@ This article applies to:
 
 ## Before you begin
 
-- Microsoft recommends you start with the steps in [Baseline](need link). In Baseline, you optimize your search in SharePoint, update sharing settings in SharePoint & OneDrive, and check permissions & site access on your SharePoint sites.
-
-  ??Make sure this info is in E3 article, and then delete bullet??
+- Microsoft recommends you also follow the steps in [Microsoft 365 Copilot - best practices with SharePoint](/sharepoint/sharepoint-copilot-best-practices). It helps you optimize your search in SharePoint, update sharing settings in SharePoint & OneDrive, and check permissions & site access on your SharePoint sites.
 
 - The following licenses are required to use the features in this article:
 
-  - [Microsoft 365 E3](https://www.microsoft.com/microsoft-365/enterprise/e3) or [Office 365 E3](https://www.microsoft.com/microsoft-365/enterprise/office-365-e3)
+  - **[Microsoft 365 E3](https://www.microsoft.com/microsoft-365/enterprise/e3)** or **[Office 365 E3](https://www.microsoft.com/microsoft-365/enterprise/office-365-e3)**
 
-    - [Microsoft Purview](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description) - Included with your E3 license
+    - **[Microsoft Purview](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description)** - Included with your E3 license
 
     For a list of the features and services you get with your license, see [Microsoft 365, Office 365, Enterprise Mobility + Security, and Windows 11 Subscriptions](https://aka.ms/M365EnterprisePlans).
 
-  - [Microsoft SharePoint Premium - SharePoint Advanced Management](/sharepoint/advanced-management#licensing)
+  - **[Microsoft SharePoint Premium - SharePoint Advanced Management](/sharepoint/advanced-management#licensing)**
 
     There are some features in SharePoint Advanced Management (SAM) that are included with your Microsoft 365 Copilot license. To get the full version of SAM and use all the features described in this article, you need the [Microsoft SharePoint Premium - SharePoint Advanced Management](/sharepoint/advanced-management#licensing) license.
 
-  - [Microsoft 365 Copilot](microsoft-365-copilot-licensing.md)
+  - **[Microsoft 365 Copilot](microsoft-365-copilot-licensing.md)**
 
     Depending on your subscription plan, you might be able purchase Microsoft 365 Copilot licenses through the [Microsoft 365 admin center](https://admin.microsoft.com) (**Billing** > **Purchase services**), Microsoft partners, or your Microsoft account team.
 
@@ -138,7 +133,7 @@ To learn more about Microsoft Purview, see [Microsoft 365 Copilot in Microsoft P
 
 ### Identify and label sensitive data
 
-- Create include files and copy content from E5 guide.
+[!INCLUDE [copilot-e5-e3-create-apply-sensitivity-labels](./includes/copilot-e5-e3-create-apply-sensitivity-labels.md)]
 
 This section walks you through the steps to create and use sensitivity labels in Microsoft Purview. You create your own label names and configurations. To learn more about sensitivity labels, see:
 
@@ -161,11 +156,21 @@ To learn more, see:
 
 #### 2. Publish your labels and educate your users
 
-- Create include files and copy content from E5 guide.
+1. Add your labels to a publishing policy. When they're published, users can manually apply the labels in their Office apps. The publishing policies also have settings that you need to consider, like a default label and requiring users to label their data.
+
+    To learn more, see [Publish sensitivity labels by creating a label policy](/purview/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
+
+2. Educate your users and provide guidance on when to apply the correct sensitivity label.
+
+    Users should change the label if needed, especially for more sensitive content.
+
+    To help you with this step, see [End-user documentation for sensitivity labels](/purview/get-started-with-sensitivity-labels#end-user-documentation-for-sensitivity-labels).
+
+3. Monitor your labels. Select **Information protection** > **Reports**. You can see the usage of your labels.
 
 #### 3. Enable sensitivity labels for files in SharePoint and OneDrive
 
-- Create include files and copy content from E5 guide.
+[!INCLUDE [copilot-e5-e3-enable-sensitivity-labels-sharepoint-onedrive](./includes/copilot-e5-e3-enable-sensitivity-labels-sharepoint-onedrive.md)]
 
 #### 4. Apply a sensitivity label to your SharePoint document libraries
 
@@ -187,23 +192,29 @@ To learn more, see:
 - [Overview - Default sensitivity labels for SharePoint document libraries](/purview/sensitivity-labels-sharepoint-default-label)
 - [Steps - Add a sensitivity label to SharePoint document library](https://support.microsoft.com/office/add-a-sensitivity-label-to-sharepoint-document-library-54b1602b-db0a-4bcb-b9ac-5e20cbc28089)
 
-### Detect and protect sensitive information from unauthorized sharing or leakage
+### Detect sensitive information and protect it from unauthorized sharing or leakage
 
-✅ **Use [data loss prevention (DLP) policies](/purview/dlp-learn-about-dlp) to detect sensitive info**
+✅ **Use [data loss prevention (DLP) policies](/purview/dlp-learn-about-dlp) to help protect against unintentional sharing**
 
-[Data loss prevention (DLP)](/purview/dlp-learn-about-dlp) helps organizations protect sensitive information and prevent unauthorized sharing or leakage. The intent is to dynamically protect sensitive information, like financial data, social security numbers, and health records, from being overshared.
+[Microsoft Purview Data Loss Prevention (DLP)](/purview/dlp-learn-about-dlp) helps organizations protect sensitive information by helping guard against unauthorized sharing or leakage. The intent is to dynamically protect sensitive information, like financial data, social security numbers, and health records, from being overshared.
 
-When DLP policies find this data, it can act and help prevent the data from showing up in Copilot results.
+You can create DLP policies to protect sensitive information with your Microsoft 365 services, like Exchange, SharePoint, and OneDrive accounts.
 
-This section walks you through the creating the default DLP policies for Exchange Online, SharePoint Online, and OneDrive, and creating your own DLP policy.
+When DLP policies find this data, it can act and help prevent the data from showing up in Microsoft 365 Copilot results. To learn more, see [Learn about the Microsoft 365 Copilot location in DLP](/purview/dlp-create-deploy-policy?tabs=purview).
+
+This section introduces you to the DLP policy creation process. DLP policies are a powerful tool. Make sure you:
+
+- Understand the data you're protecting and the goals you want to achieve.
+- Take time to design a policy before you implement it. You want to avoid any unintended issues. It's not recommended to create a policy, and then only tune the policy by trial-and-error.
+- If you're new to Microsoft Purview DLP, it's helpful to work through [Data loss prevention - Before you begin](/purview/dlp-learn-about-dlp#before-you-begin) before you start designing a policy. This step helps you understand the concepts and the tools you use to create and manage DLP policies.
 
 #### 1. Open the Microsoft Purview portal
 
-- Create include files and copy content from E5 guide.
+[!INCLUDE [copilot-e5-e3-open-purview-portal](./includes/copilot-e5-e3-open-purview-portal.md)]
 
-#### 2. Create the default DLP policies
+#### 2. Create DLP policies
 
-- Create include files and copy content from E5 guide.
+[!INCLUDE [copilot-e5-e3-create-dlp-policy](./includes/copilot-e5-e3-create-dlp-policy.md)]
 
 #### 3. Test and monitor your policies
 
@@ -266,7 +277,7 @@ To learn more, see:
 
 ### Review and analyze Copilot prompts and responses
 
-✅ **Use [Data Security Posture Management for AI](/purview/ai-microsoft-purview) or [eDiscovery](/purview/edisc) to analyze Copilot user prompts and responses**
+✅ **Use [Data Security Posture Management (DSPM) for AI](/purview/ai-microsoft-purview) or [eDiscovery](/purview/edisc) to analyze Copilot user prompts and responses**
 
 When users enter a prompt and get a response from Copilot, you can view and search these interactions. Specifically, these features help you:
 
@@ -275,9 +286,9 @@ When users enter a prompt and get a response from Copilot, you can view and sear
 
 There are two ways to review and analyze Copilot prompts and responses - **Data Security Posture Management for AI** and **eDiscovery**.
 
-# [Data Security Posture Management for AI](#tab/aihub)
+# [DSPM for AI](#tab/aihub)
 
-[Data Security Posture Management for AI](/purview/ai-microsoft-purview#microsoft-purview-ai-hub-provides-insights-policies-and-controls-for-ai-apps) (previously called AI Hub) is a central location in the Microsoft Purview portal that proactively monitors AI use. It includes eDiscovery and you can use it to analyze and review Copilot prompts and responses.
+[Data Security Posture Management (DSPM) for AI](/purview/ai-microsoft-purview#microsoft-purview-ai-hub-provides-insights-policies-and-controls-for-ai-apps) (previously called AI Hub) is a central location in the Microsoft Purview portal that proactively monitors AI use. It includes eDiscovery and you can use it to analyze and review Copilot prompts and responses.
 
 1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as an admin in one of the groups listed at [Data Security Posture Management for AI - Permissions](/purview/ai-microsoft-purview-permissions).
 2. Select **Solutions** > **Data Security Posture Management for AI** > **Activity Explorer**.
@@ -305,11 +316,12 @@ To learn more, see [Search for Copilot interactions in eDiscovery](/purview/edis
 
 ---
 
-## More resources available to you
+## Technical and deployment resources available to you
 
-- Create include files and copy content from E5 guide.
+[!INCLUDE [copilot-e5-e3-deployment-resources](./includes/copilot-e5-e3-deployment-resources.md)]
 
 ## Related content
 
 - [Microsoft 365 Copilot requirements and prerequisites](/copilot/microsoft-365/microsoft-365-copilot-requirements)
 - [Provision Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-setup)
+- [Microsoft 365 Copilot adoption resources](https://adoption.microsoft.com/copilot)

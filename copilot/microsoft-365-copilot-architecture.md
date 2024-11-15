@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 11/11/2024
+ms.date: 11/14/2024
 audience: Admin
 ms.reviewer: mandia, bcarter
 ms.topic: overview
@@ -23,9 +23,6 @@ appliesto:
 ---
 
 # Microsoft 365 Copilot architecture and how it works
-
-> [!WARNING]
-> This article is a work in progress for Ignite. Do not publish.
 
 When you create a Microsoft 365 subscription, a tenant is automatically created for your organization. Your tenant sits inside the **Microsoft 365 service boundary**, where [Microsoft 365 Copilot](microsoft-365-copilot-overview.md) can access your organization's data.
 
