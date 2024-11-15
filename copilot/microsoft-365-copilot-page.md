@@ -67,9 +67,9 @@ This link directs you to the Copilot for Security portal to manage settings. Cop
 
 ### Microsoft 365 Copilot feedback logs
 
-When users have an issue and aren't able to send feedback logs to Microsoft, you can submit feedback logs on their behalf. The data will include prompts and generated responses, relevant content samples, and additional log file. Using this feature to send feedback logs will temporarily override any user level feedback policy.
+When users have an issue and aren't able to send feedback logs to Microsoft, you can submit feedback logs on their behalf. The data will include prompts and generated responses, relevant content samples, and additional log files. Using this feature to send feedback logs will temporarily override any user level feedback policy.
 
-To learn more, see [Provide user feedback for Microsoft 365 Copilot](provide-feedback.md).
+To learn more, see [Submit admin-initiated Copilot feedback from the Microsoft 365 admin center](provide-feedback.md).
 
 ### Pin Microsoft Copilot to the navigation bar
 
