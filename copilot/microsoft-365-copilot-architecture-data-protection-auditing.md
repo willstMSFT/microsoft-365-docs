@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: laurawi
-ms.date: 11/11/2024
+ms.date: 11/14/2024
 audience: Admin
 ms.reviewer: mandia, bcarter
 ms.topic: overview
@@ -84,11 +84,9 @@ Let's take a look:
 
 4. Also, with SharePoint Advanced Management, create an **[inactive site policy](/sharepoint/site-lifecycle-management#create-an-inactive-site-policy)** to automatically manage and reduce inactive sites.
 
-5. Finally, SharePoint Advanced Management allows you to restrict access to SharePoint sites and content to users in a specific group by using a **[site access restriction policy](/sharepoint/restricted-access-control)**.
+5-6. Finally, SharePoint Advanced Management allows you to restrict access to SharePoint sites and a user's OneDrive content to users in a specific group by using a **[site access restriction policy](/sharepoint/restricted-access-control)** and a **[OneDrive access restriction policy](/sharepoint/onedrive-site-access-restriction)**.
 
-    Users that aren't members of the specified group can't access the site or its content, even if they had prior permissions or a shared link. This policy can be used with Microsoft 365 Group-connected, Teams-connected, and non-group connected sites.
-
-6. You can also restrict access to a user's OneDrive content to users in a security group by using a **[OneDrive access restriction policy](/sharepoint/onedrive-site-access-restriction)**. Users that aren't members of the specified Microsoft Entra security group can't access the content in that user's OneDrive, even if they had prior permissions or a shared link.
+    Users that aren't members of the specified group can't access the site or content, even if they had prior permissions or a shared link. This policy can be used with Microsoft 365 Group-connected, Teams-connected, and non-group connected sites.
 
 7. Use [Microsoft Purview sensitivity labels](/purview/sensitivity-labels) that apply encryption to restrict which files Copilot can access. The user must have the EXTRACT and VIEW usage rights for Copilot to summarize the data.
 
