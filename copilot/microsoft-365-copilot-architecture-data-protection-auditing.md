@@ -80,13 +80,15 @@ Let's take a look:
     - Hide broad scoped permissions from users, like the **Everyone Except External Users** claim.
     - Site admin need to use site level controls to restrict member sharing, and ensure **Site Owners** handle access requests.
 
-3. With SharePoint Advanced Management, use **[data access governance reports](/SharePoint/data-access-governance-reports)** to identify sites that contain potentially overshared or sensitive content.
+3. In SharePoint Advanced Management, use **[data access governance reports](/SharePoint/data-access-governance-reports)** to identify sites that contain potentially overshared or sensitive content.
 
-4. Also, with SharePoint Advanced Management, create an **[inactive site policy](/sharepoint/site-lifecycle-management#create-an-inactive-site-policy)** to automatically manage and reduce inactive sites.
+4. In SharePoint Advanced Management, create an **[inactive site policy](/sharepoint/site-lifecycle-management#create-an-inactive-site-policy)** to automatically manage and reduce inactive sites.
 
-5-6. Finally, SharePoint Advanced Management allows you to restrict access to SharePoint sites and a user's OneDrive content to users in a specific group by using a **[site access restriction policy](/sharepoint/restricted-access-control)** and a **[OneDrive access restriction policy](/sharepoint/onedrive-site-access-restriction)**.
+5. In SharePoint Advanced Management, you can restrict access to SharePoint sites to users in a specific group by using a **[site access restriction policy](/sharepoint/restricted-access-control)**.
 
     Users that aren't members of the specified group can't access the site or content, even if they had prior permissions or a shared link. This policy can be used with Microsoft 365 Group-connected, Teams-connected, and non-group connected sites.
+
+6. You can also restrict access to a user's OneDrive content to users in a specific group by using and a **[OneDrive access restriction policy](/sharepoint/onedrive-site-access-restriction)**.
 
 7. Use [Microsoft Purview sensitivity labels](/purview/sensitivity-labels) that apply encryption to restrict which files Copilot can access. The user must have the EXTRACT and VIEW usage rights for Copilot to summarize the data.
 
