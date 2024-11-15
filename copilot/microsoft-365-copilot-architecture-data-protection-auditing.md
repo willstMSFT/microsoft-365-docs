@@ -24,9 +24,6 @@ appliesto:
 
 # Microsoft 365 Copilot data protection and auditing architecture
 
-> [!WARNING]
-> This article is a work in progress for Ignite. Do not publish.
-
 [Microsoft 365 Copilot](microsoft-365-copilot-overview.md) honors your security & data protection controls, and includes tools for auditing usage data. This article describes and illustrates:
 
 - How Copilot works with Microsoft Purview sensitivity labels.
