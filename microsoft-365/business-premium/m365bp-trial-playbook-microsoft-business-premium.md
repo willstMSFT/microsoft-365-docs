@@ -31,7 +31,7 @@ When you [start a trial or purchase Microsoft 365 Business Premium](get-microsof
 > [!TIP]
 > Save this trial user guide to your browser favorites. When links in the trial user guide take you away from this location, it'll be easier to return to this guide to continue.
 
-1. [Set up your trial](/m365-business-premium-setup.md)!
+1. [Set up your trial](m365-business-premium-setup.md)!
 
    After you start your trial and complete the setup process, it can take up to two hours for changes to take effect.
 
@@ -69,7 +69,7 @@ Microsoft 365 Business Premium includes Defender for Business, a new security so
 
 1. Go to the Microsoft Defender portal (<https://security.microsoft.com>) and sign in.
 
-2. Go to **Assets** > **Devices**. If Defender for Business isn't already set up, you're prompted to run the [setup wizard](/defender-business/mdb-use-wizard).
+2. Go to **Assets** > **Devices**. If Defender for Business isn't already set up, you're prompted to run the [setup wizard](/defender-business/mdb-setup-configuration).
 
 3. [Onboard devices](/defender-business/mdb-onboard-devices).
 

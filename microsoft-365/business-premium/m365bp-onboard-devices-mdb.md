@@ -37,7 +37,7 @@ This article also includes:
 - [How to offboard a device](#offboard-a-device) if a device is replaced or someone leaves the organization
 
 > [!IMPORTANT]
-> If something goes wrong and your onboarding process fails, see [Microsoft Defender for Business troubleshooting](/defender-business/mdb-troubleshooting.yml).
+> If something goes wrong and your onboarding process fails, see [Microsoft Defender for Business troubleshooting](/defender-business/mdb-troubleshooting).
 
 ## Use automatic onboarding for Windows devices that are already enrolled in Intune
 
@@ -52,7 +52,7 @@ Note that the automatic onboarding option applies to Windows client devices only
 > [!TIP]
 > If you're prompted to use automatic onboarding, we recommend selecting the "all devices enrolled" option. That way, when Windows devices are enrolled in Intune later on, they'll be onboarded to Defender for Business automatically.
 
-To learn more about automatic onboarding, see [Use the wizard to set up Microsoft Defender for Business](/defender-business/mdb-use-wizard).
+To learn more about automatic onboarding, see [Use the wizard to set up Microsoft Defender for Business](/defender-business/mdb-setup-configuration).
 
 ## Use a local script to onboard Windows and Mac devices to Defender for Business
 
@@ -78,7 +78,7 @@ See [Device enrollment in Microsoft Intune](/mem/intune/enrollment/device-enroll
 
 ## What about servers?
 
-To onboard servers, an additional license, such as Microsoft Defender for Business servers, is required. See [How to get Microsoft Defender for Business servers](/defender-business/get-defender-business-servers).
+To onboard servers, an additional license, such as Microsoft Defender for Business servers, is required. See [How to get Microsoft Defender for Business servers](/defender-business/get-defender-business).
 
 ## Run a detection test on a Windows device
 
