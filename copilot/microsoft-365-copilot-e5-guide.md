@@ -315,8 +315,8 @@ To learn more about sensitivity labels, see:
 
 1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as an admin in one of the groups listed at [Sensitivity labels - permissions](/purview/get-started-with-sensitivity-labels#permissions-required-to-create-and-manage-sensitivity-labels).
 
-2. Select **Solutions** > **Data Security Posture Management for AI** > **Overview**.
-3. In the **Recommendations** section, select **Fortify your data security for AI**. This step creates the default labels and their policies.
+2. Select **Solutions** > **DSPM for AI** > **Overview**.
+3. In the **Recommendations** section, select **Information Protection Policy for Sensitivity Labels**. This step creates the default labels and their policies.
 4. To see or edit the default labels, or to create your own labels, select **Information protection** > **Sensitivity labels**. You might have to select **Refresh**.
 
 When you have the default sensitivity labels:
@@ -327,17 +327,17 @@ When you have the default sensitivity labels:
 
 #### 2. Enable and configure sensitivity labels for containers
 
-The default sensitivity labels don't include settings for groups and sites, which let you apply a sensitivity label to a SharePoint or Teams site. When these sites have a sensitivity label applied, items in the container don't inherit the sensitivity label. Instead, the label settings can restrict access to the container. This restriction provides an extra layer of security when you use Copilot. If a user can't access the site, then Copilot can't access the site on behalf of that user.
+The default sensitivity labels don't include settings for groups and sites, which let you apply a sensitivity label to a SharePoint or Teams site, or Microsoft Loop workspace. Items in the container don't inherit the sensitivity label. Instead, the label settings can restrict access to the container. This restriction provides an extra layer of security when you use Copilot. If a user can't access the site or workspace, Copilot can't access it on behalf of that user.
 
 For example, you can set the privacy setting to **Private**, which restricts site access to only approved members in your organization. When the label is applied to the site, it replaces any previous setting and locks it for as long as the label is applied. This feature is a more secure setting than letting anybody access the site and allowing users to change the setting. When only approved members can access the data, it helps prevent oversharing of data that Copilot might access.
 
-To you can configure any label settings for groups and sites, you must enable this capability for your tenant and then synchronize your labels. This step is a one-time step using the `Execute-AzureAdLabelSync` PowerShell cmdlet. To learn more, see [How to enable sensitivity labels for containers and synchronize labels](/purview/sensitivity-labels-teams-groups-sites#how-to-enable-sensitivity-labels-for-containers-and-synchronize-labels).
+To configure any label settings for groups and sites, you must enable this capability for your tenant and then synchronize your labels. This step is a one-time step using the `Execute-AzureAdLabelSync` PowerShell cmdlet. To learn more, see [How to enable sensitivity labels for containers and synchronize labels](/purview/sensitivity-labels-teams-groups-sites#how-to-enable-sensitivity-labels-for-containers-and-synchronize-labels).
 
 You can then edit your sensitivity labels, or create new sensitivity labels specifically for groups and sites:
 
-1. For the sensitivity label scope, select **Groups & sites**. Remember, you must have already used the `Execute-AzureAdLabelSync` cmdlet. If you didn't, you can't select this scope.
+1. For the sensitivity label scope, select **Groups & sites**. Remember, you must have already run the Powershell commands. If you didn't, you can't select this scope.
 
-2. Select the groupings of settings to configure. Some of the settings have backend dependencies, like Conditional Access that must be already configured. The privacy setting, which is included in **Privacy and external user access settings**, doesn't have any backend dependencies.
+2. Select the groupings of settings to configure. Some of the settings have backend dependencies before they can be enforced, like Conditional Access that must be already configured. The privacy setting, which is included in **Privacy and external user access settings**, doesn't have any backend dependencies.
 
 3. Configure the settings you want to use and save your changes.
 
@@ -347,11 +347,11 @@ For more information, including details of all the available label settings that
 
 1. If you're using the default sensitivity labels, the labels are automatically published to all users, even if you edit the labels.
 
-    If you created your own sensitivity labels, you must add your labels to a publishing policy. When they're published, users can manually apply the labels in their Office apps. For labels that include the **Groups & sites** scope, users can apply these labels to new and existing sites and teams. The publishing policies also have settings that you need to consider, like a default label and requiring users to label their data.
+    If you created your own sensitivity labels, you must add your labels to a publishing policy. When they're published, users can manually apply the labels in their Office apps. For labels that include the **Groups & sites** scope, users can apply these labels to new and existing sites, teams, and Loop workspaces. The publishing policies also have settings that you need to consider, like a default label and requiring users to label their data.
 
     To learn more, see [Publish sensitivity labels by creating a label policy](/purview/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
 
-2. Educate your users and provide guidance on when to apply the correct sensitivity label.
+2. Educate your users and provide guidance for when they should apply each sensitivity label.
 
     In addition to manually applying labels, the default label policy includes applying the **General \ All Employees (unrestricted)** label as the default label for items. This label offers a base layer of protection. But, users should change the label if needed, especially for more sensitive content that requires encryption.
 
@@ -364,7 +364,7 @@ For more information, including details of all the available label settings that
 [!INCLUDE [copilot-e5-e3-enable-sensitivity-labels-sharepoint-onedrive](./includes/copilot-e5-e3-enable-sensitivity-labels-sharepoint-onedrive.md)]
 
 > [!TIP]
-> Although not related to Copilot, now is a good time to [enable co-authoring for encrypted files](/purview/sensitivity-labels-coauthoring), if it's not already enabled. This setting ensures the best user experience for collaboration.
+> Although not related to Copilot, now is a good time to [enable co-authoring for encrypted files](/purview/sensitivity-labels-coauthoring), if it's not already enabled. This setting ensures the best user experience for collaboration and might be required for other labeling scenarios.
 
 #### 5. Set default sensitivity labels for your SharePoint document libraries
 
@@ -375,7 +375,7 @@ You have two automatic labeling options for files in the same document library:
 | Library option | When to use this option |
 | -------------- | ----------------------- |
 | **Option 1** - Default sensitivity label that can apply admin-defined permissions (the **Assign permissions now** encryption option), or no encryption. | Recommended for new document libraries and when they store files that usually have the same level of known sensitivity. For exceptions, you want users to be able to select an alternative label that doesn't apply encryption.|
-| **Option 2** - Default sensitivity label that extends protection to files that are downloaded, copied, or moved. This label must be configured with user-defined permissions (the **Let users assign permissions** encryption option). <br/><br/> Currently in preview, this configuration requires PowerShell commands at the tenant-level and then the site level before you can select a sensitivity label. | Recommended for existing document libraries when you want to centralize permissions and continue to protect files when they're downloaded. This option is suitable when you haven't inspected the file contents for sensitivity. Copilot can't access the labeled file contents, so it can also help to prevent oversharing.|
+| **Option 2** - Default sensitivity label that extends protection to files that are downloaded, copied, or moved. This label must be configured with user-defined permissions (the **Let users assign permissions** encryption option). <br/><br/> Currently in preview, this configuration requires PowerShell commands at the tenant-level and then the site level before you can select a sensitivity label. | Recommended for existing document libraries when you want to centralize permissions and continue to protect files when they're downloaded. This option is suitable when you haven't inspected the file contents for sensitivity.|
 
 Both options provide a baseline level of protection that's specific to the document library, doesn't require content inspection, and doesn't rely on action from end users.
 
@@ -384,9 +384,9 @@ The SharePoint site admin can select a default label for the document library.
 1. In your SharePoint site, select **Documents** > **Settings** icon > **Library settings** > **More library settings**.
 2. In **Default sensitivity labels** (Apply label to items in this list or library):
 
-    a. For a standard default sensitivity label, from the drop-down box, select a sensitivity label that's suitable for most of the files in the library. It can be a sensitivity label that is configured for admin-defined permissions, like **Confidential \ All Employees**. Or, a sensitivity label that doesn't apply encryption, like **Public**. Don't select **Extend protection on download, copy, or move**.
+    a. For a standard default sensitivity label, from the drop-down box, select a sensitivity label that's suitable for most of the files in the library. It can be a sensitivity label that is configured for admin-defined permissions, such as **Confidential \ All Employees**. Or, a sensitivity label that doesn't apply encryption, such as **Public**. Don't select **Extend protection on download, copy, or move**.
 
-    b. For a default sensitivity label that extends protection to files that are downloaded, copied, or moved, select **Extend protection on download, copy, or move**. Then from the drop-down box, select a sensitivity label that is configured for user-defined permissions, like **Confidential \ Trusted People**.
+    b. For a default sensitivity label that extends protection to files that are downloaded, copied, or moved, select **Extend protection on download, copy, or move**. Then from the drop-down box, select a sensitivity label that is configured for user-defined permissions, such as **Confidential \ Trusted People**.
 
     > [!NOTE]
     > The **Extend protection on download, copy, or move** checkbox isn't displayed until the prerequisite PowerShell commands are complete.
