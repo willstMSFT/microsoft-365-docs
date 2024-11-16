@@ -63,7 +63,7 @@ Let's take a look:
 
 4. Copilot takes this response from the LLM and post-processes it.
 
-5. This post-processing includes more grounding calls to Microsoft Graph, responsible AI checks, security, compliance and privacy reviews, and command generation.
+5. This post-processing includes more grounding calls to Microsoft Graph, responsible AI checks, security, compliance and Purview tasks, and command generation.
 
 Copilot returns the response to the app, where the user can review and assess the response.
 

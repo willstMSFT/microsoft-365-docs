@@ -354,7 +354,7 @@
             items: 
               - name: Overview
                 href: hybrid-solutions.md
-              - name: Use Microsoft Entra ID for SharePoint Server 2016 authentication
+              - name: Use Microsoft Entra ID for SharePoint Server authentication
                 href: /azure/active-directory/saas-apps/sharepoint-on-premises-tutorial
               - name: Connect an on-premises network to an Azure virtual network
                 href: connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md
