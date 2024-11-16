@@ -28,7 +28,7 @@ When you create a Microsoft 365 subscription, a tenant is automatically created 
 
 This data includes information that the user can access, including their activities, and the content they create & interact with in Microsoft 365 apps.
 
-:::image type="content" source="media/microsoft-365-copilot-architecture/copilot-tenant-architecture.png" alt-text="Diagram that shows the Microsoft 365 tenant architecture with Microsoft 365 Copilot and user data." lightbox="media/microsoft-365-copilot-architecture/copilot-tenant-architecture.png":::
+:::image type="content" source="media/microsoft-365-copilot-architecture/copilot-tenant-architecture.svg" alt-text="Diagram that shows the Microsoft 365 tenant architecture with Microsoft 365 Copilot and user data." lightbox="media/microsoft-365-copilot-architecture/copilot-tenant-architecture.svg":::
 
 Copilot is a shared service, just like many other services in Microsoft 365. When using Copilot in your tenant:
 
