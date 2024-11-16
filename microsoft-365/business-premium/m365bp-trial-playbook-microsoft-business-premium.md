@@ -93,7 +93,7 @@ Microsoft 365 Business Premium includes Defender for Business, a new security so
 
 2. Take some time to [familiarize yourself with the portal](/defender-business/mdb-get-started).
 
-3. Now, [assess your security posture](../security/defender/microsoft-secure-score.md), and see how you can improve your score.
+3. Now, [assess your security posture](/defender-xdr/microsoft-secure-score), and see how you can improve your score.
 
 4. Learn how to [respond to a security incident](/defender-business/mdb-respond-mitigate-threats).
 
