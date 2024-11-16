@@ -28,7 +28,7 @@ description: "Learn best practices to protect your data using Microsoft 365 Busi
 > [!TIP]
 > **This article is for small and medium-sized businesses who have up to 300 users**.
 > If you're looking for information for enterprise organizations, see [Deploy ransomware protection for your Microsoft 365 tenant](../solutions/ransomware-protection-microsoft-365.md).
-> If you're a Microsoft partner, see [Resources for Microsoft partners working with small and medium-sized businesses](../security/defender-business/mdb-partners.md).
+> If you're a Microsoft partner, see [Resources for Microsoft partners working with small and medium-sized businesses](/defender-business/mdb-partners).
 
 Microsoft 365 Business Basic, Standard, and Premium all include antiphishing, antispam, and antimalware protection to protect your email online. Microsoft 365 Business Premium includes even more security capabilities, such as advanced cybersecurity protection for:
 
