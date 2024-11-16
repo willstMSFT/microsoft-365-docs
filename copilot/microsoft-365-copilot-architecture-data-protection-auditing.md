@@ -40,7 +40,7 @@ Copilot works together with your Microsoft Purview sensitivity labels and encryp
 
 The following diagram provides a visual representation of how Copilot honors your information protection controls using sensitivity labels and encryption.
 
-:::image type="content" source="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-sensitivity-labels.png" alt-text="Diagram that shows how Copilot works with documents with Microsoft Purview sensitivity labels." lightbox="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-sensitivity-labels.png":::
+:::image type="content" source="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-sensitivity-labels.svg" alt-text="Diagram that shows how Copilot works with documents with Microsoft Purview sensitivity labels." lightbox="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-sensitivity-labels.svg":::
 
 Let's take a look:
 
@@ -68,7 +68,7 @@ Microsoft 365 includes controls to help you prevent oversharing data through Cop
 
 The following diagram provides a visual representation of some of the features in your Microsoft 365 E3+ and SharePoint Advanced Management licenses that help you prevent oversharing.
 
-:::image type="content" source="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-oversharing-controls.png" alt-text="Diagram that shows the controls you can use to prevent sharing specific data in SharePoint Online and OneDrive, and how they affect Microsoft 365 Copilot." lightbox="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-oversharing-controls.png":::
+:::image type="content" source="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-oversharing-controls.svg" alt-text="Diagram that shows the controls you can use to prevent sharing specific data in SharePoint Online and OneDrive, and how they affect Microsoft 365 Copilot." lightbox="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-oversharing-controls.svg":::
 
 Let's take a look:
 
@@ -88,9 +88,11 @@ Let's take a look:
 
     Users that aren't members of the specified group can't access the site or content, even if they had prior permissions or a shared link. This policy can be used with Microsoft 365 Group-connected, Teams-connected, and non-group connected sites.
 
-6. You can also restrict access to a user's OneDrive content to users in a specific group by using and a **[OneDrive access restriction policy](/sharepoint/onedrive-site-access-restriction)**.
+    You can also restrict access to a user's OneDrive content to users in a specific group by using and a **[OneDrive access restriction policy](/sharepoint/onedrive-site-access-restriction)**. 
 
-7. Use [Microsoft Purview sensitivity labels](/purview/sensitivity-labels) that apply encryption to restrict which files Copilot can access. The user must have the EXTRACT and VIEW usage rights for Copilot to summarize the data.
+    Users that aren’t members of the specified group can't access the site or content, even if they had prior permissions or a shared link. This policy can be used with Microsoft 365 Group-connected, Teams-connected, and non-group connected sites.
+
+6. Use [Microsoft Purview sensitivity labels](/purview/sensitivity-labels) that apply encryption to restrict which files Copilot can access. The user must have the EXTRACT and VIEW usage rights for Copilot to summarize the data.
 
 ## Where Copilot usage data is stored and how you can audit it
 
@@ -98,7 +100,7 @@ Copilot usage data is stored in several places. You can use the tools provided w
 
 The following diagram provides a visual representation of the different features in your Microsoft 365 E5 license that help you search and audit Copilot data.
 
-:::image type="content" source="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-auditing-tools.png" alt-text="Diagram that shows the eDiscovery, Communication Compliance, and retention features in Microsoft 365 and how they affect Microsoft 365 Copilot." lightbox="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-auditing-tools.png":::
+:::image type="content" source="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-auditing-tools.svg" alt-text="Diagram that shows the eDiscovery, Communication Compliance, and retention features in Microsoft 365 and how they affect Microsoft 365 Copilot." lightbox="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-auditing-tools.svg":::
 
 Let's take a look:
 
