@@ -28,7 +28,7 @@ When you create a Microsoft 365 subscription, a tenant is automatically created 
 
 This data includes information that the user can access, including their activities, and the content they create & interact with in Microsoft 365 apps.
 
-:::image type="content" source="media/microsoft-365-copilot-architecture/copilot-tenant-architecture.png" alt-text="Diagram that shows the Microsoft 365 tenant architecture with Microsoft 365 Copilot and user data." lightbox="media/microsoft-365-copilot-architecture/copilot-tenant-architecture.png":::
+:::image type="content" source="media/microsoft-365-copilot-architecture/copilot-tenant-architecture.svg" alt-text="Diagram that shows the Microsoft 365 tenant architecture with Microsoft 365 Copilot and user data." lightbox="media/microsoft-365-copilot-architecture/copilot-tenant-architecture.svg":::
 
 Copilot is a shared service, just like many other services in Microsoft 365. When using Copilot in your tenant:
 
@@ -47,13 +47,13 @@ When users open a Microsoft 365 app, like Word or PowerPoint, they can use Copil
 
 The following diagram provides a visual representation of how a Copilot prompt works.
 
-:::image type="content" source="media/microsoft-365-copilot-architecture/copilot-query-flow.png" alt-text="Diagram that shows the relationship between users, devices, apps, and Microsoft 365 Copilot." lightbox="media/microsoft-365-copilot-architecture/copilot-query-flow.png":::
+:::image type="content" source="media/microsoft-365-copilot-architecture/copilot-query-flow.svg" alt-text="Diagram that shows the relationship between users, devices, apps, and Microsoft 365 Copilot." lightbox="media/microsoft-365-copilot-architecture/copilot-query-flow.svg":::
 
 Let's take a look:
 
 1. In a Microsoft 365 app, a user enters a prompt in Copilot.
 
-2. Copilot preprocesses the input prompt using **grounding** and accesses Microsoft Graph & the [Semantic Index for Copilot](/microsoftsearch/semantic-index-for-copilot) in the user's tenant.
+2. Copilot preprocesses the input prompt using **grounding** and accesses Microsoft Graph in the user's tenant.
 
     - Grounding improves the specificity of your prompt, and helps you get answers that are relevant and actionable to your specific task. The prompt can include text from input files or other content Copilot discovers.
 
@@ -69,7 +69,7 @@ Copilot only accesses data that an individual user is authorized to access, base
 
 The following diagram provides a visual representation of how Copilot and user access work together.
 
-:::image type="content" source="media/microsoft-365-copilot-architecture/copilot-user-access.png" alt-text="Diagram that shows Microsoft 365 Copilot only accesses the data the user has permissions to access." lightbox="media/microsoft-365-copilot-architecture/copilot-user-access.png":::
+:::image type="content" source="media/microsoft-365-copilot-architecture/copilot-user-access.svg" alt-text="Diagram that shows Microsoft 365 Copilot only accesses the data the user has permissions to access." lightbox="media/microsoft-365-copilot-architecture/copilot-user-access.svg":::
 
 Let's take a look:
 
@@ -89,7 +89,7 @@ To learn more, see [Data stored about user interactions with Microsoft 365 Copil
 
 Copilot honors Conditional Access policies and multifactor authentication (MFA).
 
-:::image type="content" source="media/microsoft-365-copilot-architecture/copilot-conditional-access-mfa.png" alt-text="Diagram that shows Conditional Access and MFA can control access to Microsoft 365 Copilot." lightbox="media/microsoft-365-copilot-architecture/copilot-conditional-access-mfa.png":::
+:::image type="content" source="media/microsoft-365-copilot-architecture/copilot-conditional-access-mfa.svg" alt-text="Diagram that shows Conditional Access and MFA can control access to Microsoft 365 Copilot." lightbox="media/microsoft-365-copilot-architecture/copilot-conditional-access-mfa.svg":::
 
 This means:
 
