@@ -293,7 +293,7 @@ With a GET request, you specify the query parameters in the URL. With a POST req
 #### Sample GET request that's fanned out to **all** geo locations
 
 ```http
-https://<tenant\>/_api/search/query?querytext='sharepoint'&Properties='EnableMultiGeoSearch:true'&ClientType='my_client_id'
+https://<tenant>/_api/search/query?querytext='sharepoint'&Properties='EnableMultiGeoSearch:true'&ClientType='my_client_id'
 ```
 
 #### Sample GET request to fan out to **some** geo locations

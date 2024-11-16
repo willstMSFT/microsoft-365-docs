@@ -77,6 +77,8 @@ After you have subscribed to Microsoft 365 for Campaigns, your next step is to g
 
 ## Before you begin your setup process
 
+[Sign in and set up Microsoft 365 Business Premium](m365-business-premium-setup.md)
+
 Make sure that you meet the following requirements before you begin your setup process:
 
 |Requirement|Description|
