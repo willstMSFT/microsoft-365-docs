@@ -260,10 +260,11 @@ Settings in a retention policy apply at the container level, like a SharePoint s
 
     1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as one of the admins listed at [Content explorer - Permissions](/purview/data-classification-content-explorer).
 
-    2. Use [Content explorer](/purview/data-classification-content-explorer) to get information on the items using retention labels.
+    2. Use [content explorer](/purview/data-classification-content-explorer) to get information on the items using retention labels.
 
-        There are a few ways to open Content Explorer:
+        There are a few ways to open content explorer:
 
+        - **Data Lifecycle Management** > **Explorers**
         - **Data Loss Prevention** > **Explorers**
         - **Information protection** > **Explorers**
 
@@ -288,8 +289,8 @@ There are two ways to review and analyze Copilot prompts and responses - **Data 
 [Data Security Posture Management (DSPM) for AI](/purview/ai-microsoft-purview#microsoft-purview-ai-hub-provides-insights-policies-and-controls-for-ai-apps) (previously called AI Hub) is a central location in the Microsoft Purview portal that proactively monitors AI use. It includes eDiscovery and you can use it to analyze and review Copilot prompts and responses.
 
 1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as an admin in one of the groups listed at [Data Security Posture Management for AI - Permissions](/purview/ai-microsoft-purview-permissions).
-2. Select **Solutions** > **Data Security Posture Management for AI** > **Activity Explorer**.
-3. Select an existing activity in the list. For example, if there's a **Sensitive info types detected** activity, select it.
+2. Select **Solutions** > **DSPM for AI** > **Activity explorer**.
+3. Select an existing activity in the list. For example, if there's a **Sensitive info types** activity, select it.
 4. Select **View related AI interaction activity**. In **Interaction details**, you can see the app and export an activity.
 
 To learn more, see:
