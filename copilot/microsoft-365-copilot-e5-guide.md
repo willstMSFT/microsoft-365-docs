@@ -296,13 +296,13 @@ There are features in [Microsoft Purview](/purview/copilot-in-purview-overview) 
 - Detect sensitive data and noncompliant content in Copilot prompts and responses.
 - Review and analyze Copilot prompts and responses.
 
-To learn more about Microsoft Purview, see [Security Copilot in Microsoft Purview Overview](/purview/copilot-in-purview-overview).
+To learn more about how Microsoft Purview can help you to govern, protect, and manage your data, see [Learn about Microsoft Purview](/purview/purview).
 
 ### Identify and label sensitive data
 
 [!INCLUDE [copilot-e5-e3-create-apply-sensitivity-labels](./includes/copilot-e5-e3-create-apply-sensitivity-labels.md)]
 
-This section walks you through the steps to create and use the default sensitivity labels from Microsoft Purview. If you need to use your own label names and configurations, create the labels manually or edit the default labels. If you already created your own sensitivity labels, then you can't create the default labels.
+This section walks you through the steps to create and use the default sensitivity labels from Microsoft Purview. If you need to use your own label names and configurations, create the labels manually or edit the default labels. If you already created your own sensitivity labels, you can't create the default labels.
 
 To learn more about sensitivity labels, see:
 
@@ -331,7 +331,7 @@ The default sensitivity labels don't include settings for groups and sites, whic
 
 For example, you can set the privacy setting to **Private**, which restricts site access to only approved members in your organization. When the label is applied to the site, it replaces any previous setting and locks it for as long as the label is applied. This feature is a more secure setting than letting anybody access the site and allowing users to change the setting. When only approved members can access the data, it helps prevent oversharing of data that Copilot might access.
 
-To configure any label settings for groups and sites, you must enable this capability for your tenant and then synchronize your labels. This step is a one-time step using the `Execute-AzureAdLabelSync` PowerShell cmdlet. To learn more, see [How to enable sensitivity labels for containers and synchronize labels](/purview/sensitivity-labels-teams-groups-sites#how-to-enable-sensitivity-labels-for-containers-and-synchronize-labels).
+To configure any label settings for groups and sites, you must enable this capability for your tenant and then synchronize your labels. This is a one-time configuration. To learn more, see [How to enable sensitivity labels for containers and synchronize labels](/purview/sensitivity-labels-teams-groups-sites#how-to-enable-sensitivity-labels-for-containers-and-synchronize-labels).
 
 You can then edit your sensitivity labels, or create new sensitivity labels specifically for groups and sites:
 
@@ -537,11 +537,11 @@ To learn more, see [Adaptive Protection policies](/purview/insider-risk-manageme
 
 For example, your organization might have regulatory requirements that require you to keep content for a certain period of time. Or, you might have content that you want to delete because it's old, outdated, or no longer needed.
 
-If you have stale data in your organization, then create and use retention policies. These policies help Copilot return more accurate information from your documents and emails.
+If you have stale data in your organization, create and use retention policies. These policies help Copilot return more accurate information from your documents and emails.
 
-Retention policies can also retain Copilot prompts and responses for compliance requirements, even if [users delete their Copilot activity](https://support.microsoft.com/office/delete-your-microsoft-365-copilot-activity-history-76de8afa-5eaf-43b0-bda8-0076d6e0390f). To learn more, see [Learn about retention for Copilot](/purview/retention-policies-copilot).
+Retention policies can also retain Copilot prompts and responses for compliance requirements, even if [users delete their Copilot activity](https://support.microsoft.com/office/delete-your-microsoft-365-copilot-activity-history-76de8afa-5eaf-43b0-bda8-0076d6e0390f). To learn more, see [Learn about retention for Copilot & AI apps](/purview/retention-policies-copilot).
 
-Settings in a retention policy apply at the container level, like a SharePoint site or an Exchange mailbox. These settings are automatically inherited by the data in that container. If you need [exceptions for individual emails or documents](/purview/create-retention-labels-data-lifecycle-management), then use retention labels. For example, you have a retention policy to delete data in OneDrive if the data is older than one year. But, users can apply retention labels to keep specific documents from automatic deletion.
+Settings in a retention policy apply at the container level, like a SharePoint site or an Exchange mailbox. These settings are automatically inherited by the data in that container. If you need [exceptions for individual emails or documents](/purview/create-retention-labels-data-lifecycle-management), use retention labels. For example, you have a retention policy to delete data in OneDrive if the data is older than one year. But, users can apply retention labels to keep specific documents from automatic deletion.
 
 1. To create retention policies, sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as a Compliance Administrator.
 
@@ -599,13 +599,13 @@ Settings in a retention policy apply at the container level, like a SharePoint s
         - **Records Management** > **Explorers**
         - **Information protection** > **Explorers**
 
-    3. Use [Activity explorer](/purview/data-classification-activity-explorer) to get a historical view of activities on your content that has retention labels. There are different filters you can use.
+    3. Use [activity explorer](/purview/data-classification-activity-explorer) to get a historical view of activities on your content that has retention labels. There are different filters you can use.
 
-        There are a few ways to open Activity Explorer:
+        There are a few ways to open activity explorer:
 
-        - **Data Security Posture Management for AI**
-        - **Data Loss Prevention** > **Explorers**
+        - **Data Lifecycle Management** > **Explorers**
         - **Records Management** > **Explorers**
+        - **Data Loss Prevention** > **Explorers**
         - **Information protection** > **Explorers**
 
 To learn more, see:
@@ -667,8 +667,8 @@ There are two ways to review and analyze Copilot prompts and responses - **Data 
 [Data Security Posture Management (DSPM) for AI](/purview/ai-microsoft-purview#microsoft-purview-ai-hub-provides-insights-policies-and-controls-for-ai-apps) (previously called AI Hub) is a central location in the Microsoft Purview portal that proactively monitors AI use. It includes eDiscovery and you can use it to analyze and review Copilot prompts and responses.
 
 1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as an admin in one of the groups listed at [Data Security Posture Management for AI - Permissions](/purview/ai-microsoft-purview-permissions).
-2. Select **Solutions** > **Data Security Posture Management for AI** > **Activity Explorer**.
-3. Select an existing activity in the list. For example, if there's a **Sensitive info types detected** activity, select it.
+2. Select **Solutions** > **DSPM for AI** > **Activity explorer**.
+3. Select an existing activity in the list. For example, if there's a **Sensitive info types** activity, select it.
 4. Select **View related AI interaction activity**. In **Interaction details**, you can see the app, and the prompt & response. You can also export an activity.
 
 To learn more, see:
