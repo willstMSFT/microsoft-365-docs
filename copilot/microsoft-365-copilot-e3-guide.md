@@ -144,15 +144,12 @@ This section walks you through the steps to create and use sensitivity labels in
 
 1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as an admin in one of the groups listed at [Sensitivity labels - permissions](/purview/get-started-with-sensitivity-labels#permissions-required-to-create-and-manage-sensitivity-labels).
 2. Select **Solutions** > **Information protection** > **Sensitivity labels** > **Create a label**.
-3. In the scope, select **Files and other data assets**. This scope allows your custom label to be used in SharePoint document libraries.
-4. Continue creating the label and [publish the label](/purview/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
-
-When it's published, your SharePoint site admins can use this label in their document libraries.
+3. In the scope, select **Files and other data assets**. This scope allows your labels to be applied to documents and emails.
+4. Continue creating the sensitivity labels you need.
 
 To learn more, see:
 
 - [Create and configure sensitivity labels and their policies](/purview/create-sensitivity-labels)
-- [Common scenarios for sensitivity labels](/purview/get-started-with-sensitivity-labels#common-scenarios-for-sensitivity-labels)
 
 #### 2. Publish your labels and educate your users
 
