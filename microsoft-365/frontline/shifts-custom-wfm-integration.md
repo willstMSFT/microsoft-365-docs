@@ -135,7 +135,7 @@ The following diagram shows the flow of data.
 :::image type="content" source="media/shifts-custom-integration-update-from-shifts.png" alt-text="Diagram showing the flow for updates from Shifts to your WFM system." lightbox="media/shifts-custom-integration-update-from-shifts.png":::
 
 > [!NOTE]
-> See [WfiRequest](#wfirequest) in the **Endpoint reference** section of this article for more information on Request and Response models.
+> For more information on Request and Response models, see [WfiRequest](#wfirequest) in the **Endpoint reference** section of this article.
 
 **Return response code**<br>
 Any response from the integration, including an error, must have an HTTP response code `200 OK`. The response body must have the status and error message that reflects the appropriate sub call error state. Any response from the integration other than `200 OK` is treated as an error and returned to the caller (client or Microsoft Graph).
