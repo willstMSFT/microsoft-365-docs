@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: laurawi
-ms.date: 11/14/2024
+ms.date: 11/19/2024
 audience: Admin
 ms.reviewer: emilyblundo, sophieke
 ms.topic: get-started

@@ -5,9 +5,9 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: laurawi
-ms.date: 11/14/2024
+ms.date: 11/19/2024
 audience: Admin
-ms.reviewer: mandia, bcarter
+ms.reviewer: mandia, bcarter, ruihu, cabailey
 ms.topic: overview
 ms.service: microsoft-365-copilot
 ms.localizationpriority: medium
@@ -87,6 +87,11 @@ Let's take a look:
 5. In SharePoint Advanced Management, create an **[inactive site policy](/sharepoint/site-lifecycle-management#create-an-inactive-site-policy)** to automatically manage and reduce inactive sites.
 
 6. In SharePoint Advanced Management, you can restrict access to SharePoint and OneDrive sites to users in a specific group by using the **[restricted access control policy](/sharepoint/restricted-access-control)**.     Users that aren't members of the specified group can't access the site or content, even if they had prior permissions or a shared link. This policy can be used with Microsoft 365 Group-connected, Teams-connected, and non-group connected sites.
+
+    To learn more, see:
+
+    - [SharePoint restricted access control policy](/sharepoint/restricted-access-control)
+    - [OneDrive restricted access control policy](/sharepoint/onedrive-site-access-restriction)
 
 7. Microsoft Purview includes capabilities to limit oversharing:
 
