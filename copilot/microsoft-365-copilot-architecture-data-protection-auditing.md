@@ -5,9 +5,9 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: laurawi
-ms.date: 11/14/2024
+ms.date: 11/19/2024
 audience: Admin
-ms.reviewer: mandia, bcarter
+ms.reviewer: mandia, bcarter, ruihu, cabailey
 ms.topic: overview
 ms.service: microsoft-365-copilot
 ms.localizationpriority: medium
@@ -84,13 +84,14 @@ Let's take a look:
 
 4. In SharePoint Advanced Management, create an **[inactive site policy](/sharepoint/site-lifecycle-management#create-an-inactive-site-policy)** to automatically manage and reduce inactive sites.
 
-5. In SharePoint Advanced Management, you can restrict access to SharePoint sites to users in a specific group by using a **[site access restriction policy](/sharepoint/restricted-access-control)**.
+5. In SharePoint Advanced Management, you can restrict access to SharePoint sites and a user's OneDrive content to users in a specific group by using restricted access control policies.
 
     Users that aren't members of the specified group can't access the site or content, even if they had prior permissions or a shared link. This policy can be used with Microsoft 365 Group-connected, Teams-connected, and non-group connected sites.
 
-    You can also restrict access to a user's OneDrive content to users in a specific group by using and a **[OneDrive access restriction policy](/sharepoint/onedrive-site-access-restriction)**. 
+    To learn more, see:
 
-    Users that aren’t members of the specified group can't access the site or content, even if they had prior permissions or a shared link. This policy can be used with Microsoft 365 Group-connected, Teams-connected, and non-group connected sites.
+    - [SharePoint restricted access control policy](/sharepoint/restricted-access-control)
+    - [OneDrive restricted access control policy](/sharepoint/onedrive-site-access-restriction)
 
 6. Use [Microsoft Purview sensitivity labels](/purview/sensitivity-labels) that apply encryption to restrict which files Copilot can access. The user must have the EXTRACT and VIEW usage rights for Copilot to summarize the data.
 
