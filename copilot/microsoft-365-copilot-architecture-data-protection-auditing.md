@@ -78,17 +78,17 @@ Let's take a look:
 
     - Use **Specific people links** instead of organization-wide sharing by default.
     - Hide broad scoped permissions from users, like the **Everyone Except External Users** claim.
-    - Site admin need to use site level controls to restrict member sharing, and ensure **Site Owners** handle access requests.
+    - Site admins can use site level controls to restrict member sharing, and ensure **Site Owners** handle access requests.
 
 3. In SharePoint Advanced Management, use **[data access governance reports](/SharePoint/data-access-governance-reports)** to identify sites that contain potentially overshared or sensitive content.
 
 4. In SharePoint Advanced Management, create an **[inactive site policy](/sharepoint/site-lifecycle-management#create-an-inactive-site-policy)** to automatically manage and reduce inactive sites.
 
-5. In SharePoint Advanced Management, you can restrict access to SharePoint sites to users in a specific group by using a **[site access restriction policy](/sharepoint/restricted-access-control)**.
+5. In SharePoint Advanced Management, you can restrict access to SharePoint sites to users in a specific group by using the **[restricted access control policy](/sharepoint/restricted-access-control)**.
 
     Users that aren't members of the specified group can't access the site or content, even if they had prior permissions or a shared link. This policy can be used with Microsoft 365 Group-connected, Teams-connected, and non-group connected sites.
 
-    You can also restrict access to a user's OneDrive content to users in a specific group by using and a **[OneDrive access restriction policy](/sharepoint/onedrive-site-access-restriction)**. 
+    You can also restrict access to a user's OneDrive content to users in a specific group by using a **[OneDrive restricted access policy](/sharepoint/onedrive-site-access-restriction)**. 
 
     Users that aren’t members of the specified group can't access the site or content, even if they had prior permissions or a shared link. This policy can be used with Microsoft 365 Group-connected, Teams-connected, and non-group connected sites.
 
