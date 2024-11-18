@@ -283,19 +283,19 @@
 			</v:userDefs>
 			<path d="M0 617.3 L585.19 617.3" class="st19"/>
 		</g>
-		<g id="shape1303-60" v:mID="1303" v:groupContext="shape" v:layerMember="2" transform="translate(234.098,-505.574)">
+		<g id="shape1303-60" v:mID="1303" v:groupContext="shape" v:layerMember="2" transform="translate(234.098,-506.103)">
 			<title>Dynamic connector</title>
 			<v:userDefs>
 				<v:ud v:nameU="visNavOrder" v:val="VT0(50000):26"/>
 			</v:userDefs>
-			<path d="M0 617.3 L0 668.22 A4.5 4.5 0 0 1 -4.5 672.72 L-64.13 672.72" class="st20"/>
+			<path d="M0 617.3 L0 673.85 A4.5 4.5 0 0 1 -4.5 678.35 L-65.25 678.35" class="st20"/>
 		</g>
 		<g id="shape1304-63" v:mID="1304" v:groupContext="shape" v:layerMember="2" transform="translate(328.598,-505.574)">
 			<title>Dynamic connector.1142</title>
 			<v:userDefs>
 				<v:ud v:nameU="visNavOrder" v:val="VT0(51000):26"/>
 			</v:userDefs>
-			<path d="M0 617.3 L0 676.1 A4.5 4.5 0 0 1 -4.5 680.6 L-159.75 680.6" class="st20"/>
+			<path d="M0 617.3 L0 681.72 A4.5 4.5 0 0 1 -4.5 686.22 L-159.75 686.22" class="st20"/>
 		</g>
 		<g id="shape1305-66" v:mID="1305" v:groupContext="shape" v:layerMember="2" transform="translate(496.222,-505.574)">
 			<title>Dynamic connector.1145</title>
