@@ -78,22 +78,26 @@ Let's take a look:
 
     - Use **Specific people links** instead of organization-wide sharing by default.
     - Hide broad scoped permissions from users, like the **Everyone Except External Users** claim.
-    - Site admin need to use site level controls to restrict member sharing, and ensure **Site Owners** handle access requests.
+    - Site admins can use site level controls to restrict member sharing, and ensure **Site Owners** handle access requests.
 
 3. In SharePoint Advanced Management, use **[data access governance reports](/SharePoint/data-access-governance-reports)** to identify sites that contain potentially overshared or sensitive content.
 
-4. In SharePoint Advanced Management, create an **[inactive site policy](/sharepoint/site-lifecycle-management#create-an-inactive-site-policy)** to automatically manage and reduce inactive sites.
+4. With **[Restricted Content Discovery](/SharePoint/restricted-content-discovery)**, organizations can put a flag on sites so that users can't find them through Copilot or Org-wide search. Restricted content discovery doesn't change users' existing permissions. Users with access can still visit sites and open files.
 
-5. In SharePoint Advanced Management, you can restrict access to SharePoint sites and a user's OneDrive content to users in a specific group by using restricted access control policies.
+5. In SharePoint Advanced Management, create an **[inactive site policy](/sharepoint/site-lifecycle-management#create-an-inactive-site-policy)** to automatically manage and reduce inactive sites.
 
-    Users that aren't members of the specified group can't access the site or content, even if they had prior permissions or a shared link. This policy can be used with Microsoft 365 Group-connected, Teams-connected, and non-group connected sites.
+6. In SharePoint Advanced Management, you can restrict access to SharePoint and OneDrive sites to users in a specific group by using the **[restricted access control policy](/sharepoint/restricted-access-control)**.     Users that aren't members of the specified group can't access the site or content, even if they had prior permissions or a shared link. This policy can be used with Microsoft 365 Group-connected, Teams-connected, and non-group connected sites.
 
     To learn more, see:
 
     - [SharePoint restricted access control policy](/sharepoint/restricted-access-control)
     - [OneDrive restricted access control policy](/sharepoint/onedrive-site-access-restriction)
 
-6. Use [Microsoft Purview sensitivity labels](/purview/sensitivity-labels) that apply encryption to restrict which files Copilot can access. The user must have the EXTRACT and VIEW usage rights for Copilot to summarize the data.
+7. Microsoft Purview includes capabilities to limit oversharing:
+
+   - Use [Microsoft Purview sensitivity labels](/purview/sensitivity-labels) that apply encryption to restrict which files Copilot can access. The user must have the EXTRACT and VIEW usage rights for Copilot to summarize the data.
+
+    - Microsoft Purview Data Loss Prevention (DLP) can help you prevent items that have specific sensitivity labels applied from being used in the response summarization to prompts in Microsoft 365 Copilot (preview). You do this by creating DLP policies that use the [Microsoft 365 Copilot (preview) policy](/purview/dlp-microsoft365-copilot-location-learn-about) location with the **Content contains > Sensitivity labels** condition to exclude items from being processed. Identified items will still be available in the citations of the response, but the content of the item won't be used in the response. 
 
 ## Where Copilot usage data is stored and how you can audit it
 
