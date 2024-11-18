@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: laurawi
-ms.date: 11/14/2024
+ms.date: 11/19/2024
 ms.reviewer: cabailey, ruihu
 audience: Admin
 ms.topic: get-started
@@ -76,7 +76,7 @@ This article applies to:
 
 ## Step 1 - Use SharePoint Advanced Management (SAM) features
 
-- Create include files and copy content from E5 guide.
+[!INCLUDE [copilot-e5-e3-sharepoint-advanced-management](./includes/copilot-e5-e3-sharepoint-advanced-management.md)]
 
 ## Step 2 - Restrict SharePoint Search (RSS)
 
