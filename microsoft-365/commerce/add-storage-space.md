@@ -59,7 +59,7 @@ If you start to run out of storage for your SharePoint sites, you can use the Of
 2. The upper right side of the page shows the amount of storage used across all sites, and the total storage for your subscription. If your organization has configured Multi-Geo in Microsoft 365, the bar also shows the amount of storage used across all geo locations.
 
    > [!NOTE]
-   > SharePoint storage is calculated in binary Gigabytes (GB), where 1 GB = 2<sup></sup>30 bytes. The storage used doesn't include changes made within the last 24-48 hours.
+   > SharePoint storage is calculated in binary Gigabytes (GB), where 1 GB = 2<sup>30</sup> bytes. The storage used doesn't include changes made within the last 24-48 hours.
 
 After you determine how much storage you're using, you can add or remove storage space for your subscription. To find out how much it costs to add storage space, follow the steps in this article, and review the pricing information before you buy more.
   
