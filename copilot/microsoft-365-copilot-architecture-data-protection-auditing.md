@@ -97,7 +97,7 @@ Let's take a look:
 
    - Use [Microsoft Purview sensitivity labels](/purview/sensitivity-labels) that apply encryption to restrict which files Copilot can access. The user must have the EXTRACT and VIEW usage rights for Copilot to summarize the data.
 
-    - Microsoft Purview Data Loss Prevention (DLP) can help you prevent items that have specific sensitivity labels applied from being used in the response summarization to prompts in Microsoft 365 Copilot (preview). You do this by creating DLP policies that use the [Microsoft 365 Copilot (preview) policy](/purview/dlp-microsoft365-copilot-location-learn-about) location with the **Content contains > Sensitivity labels** condition to exclude items from being processed. Identified items will still be available in the citations of the response, but the content of the item won't be used in the response. 
+    - Use [Data Loss Prevention (DLP) for Microsoft 365 Copilot](/purview/dlp-microsoft365-copilot-location-learn-about) to prevent Copilot from accessing content that has specific sensitivity labels applied.
 
 ## Where Copilot usage data is stored and how you can audit it
 
