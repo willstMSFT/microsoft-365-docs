@@ -599,7 +599,7 @@ Number of elements in a request:
 |Property  |Type |Description |
 |---------|---------|---------|
 |id  |String|ID of the entity|
-|method |Is always `GET`.|
+|method |String|Is always `GET`.|
 |url|String|<ul><li>**TimeOffReasons**: The format is `/users/{userId}/timeOffReasons?requestType=TimeOffReason`. For example, `/users/aa162a04-bec6-4b81-ba99-96caa7b2b24d/timeOffReasons?requestType=TimeOffReason`.</li><li>**SwapRequest**: The format is `/shifts/{ShiftsId}/requestableShifts?requestType=SwapRequest\u0026startTime={startTime}\u0026endTime={endTime}`. For example, `shifts/SHFT_1132430e-365e-4dc5-b8b0-b800592a81a8/requestableShifts?requestType=SwapRequest\u0026startTime=2024-10-01T07:00:00.0000000Z\u0026endTime=2024-11-01T06:59:59.9990000Z`. </li></ul>|
 |header|WfiRequestHeader |Header|
 |body|ShiftsEntity |Is always `null`.|
