@@ -199,9 +199,6 @@
 
         - name: Multitenant organizations
           items:
-            - name: Multitenant org FAQ
-              href: multitenant-org-faq.md
-              displayName: FAQ
             - name: Plan for multitenant orgs
               href: plan-multi-tenant-org-overview.md
             - name: Set up a multitenant org
@@ -212,6 +209,8 @@
               href: sync-users-multi-tenant-orgs.md
             - name: Multitenant Organization People Search
               href: multi-tenant-people-search.md
+            - name: Multitenant org FAQ
+              href: multitenant-org-faq.md
 
         - name: Cross-tenant OneDrive migration
           items:
