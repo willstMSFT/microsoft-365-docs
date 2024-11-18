@@ -212,6 +212,9 @@
 
         - name: Cross-tenant OneDrive migration
           items:
+            - name: Multitenant org FAQ
+              href: multitenant-org-faq.md
+              displayName: FAQ
             - name: Cross-tenant OneDrive migration overview
               href: cross-tenant-onedrive-migration.md
             - name: Step 1. Connect to tenants
@@ -351,7 +354,7 @@
             items: 
               - name: Overview
                 href: hybrid-solutions.md
-              - name: Use Microsoft Entra ID for SharePoint Server 2016 authentication
+              - name: Use Microsoft Entra ID for SharePoint Server authentication
                 href: /azure/active-directory/saas-apps/sharepoint-on-premises-tutorial
               - name: Connect an on-premises network to an Azure virtual network
                 href: connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md
