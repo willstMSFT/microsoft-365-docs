@@ -212,6 +212,9 @@
 
         - name: Cross-tenant OneDrive migration
           items:
+            - name: Multitenant org FAQ
+              href: multitenant-org-faq.md
+              displayName: FAQ
             - name: Cross-tenant OneDrive migration overview
               href: cross-tenant-onedrive-migration.md
             - name: Step 1. Connect to tenants
