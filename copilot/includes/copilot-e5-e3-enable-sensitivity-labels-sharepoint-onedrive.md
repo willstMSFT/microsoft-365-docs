@@ -2,10 +2,11 @@
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
+ms.reviewer: cabailey
 ms.service: microsoft-365-copilot
 ms.topic: include
 description: Enable Microsoft Purview sensitivity labels for files in SharePoint and OneDrive for Microsoft 365 Copilot.
-ms.date: 11/14/2024
+ms.date: 11/19/2024
 ---
 
 This step is a one-time configuration that is required to enable sensitivity labels for SharePoint and OneDrive. It's also required for Microsoft 365 Copilot to access encrypted files stored in these locations.

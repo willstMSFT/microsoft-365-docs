@@ -2,10 +2,11 @@
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
+ms.reviewer: cabailey
 ms.service: microsoft-365-copilot
 ms.topic: include
 description: Create and apply Microsoft Purview sensitivity labels for Microsoft 365 Copilot.
-ms.date: 11/14/2024
+ms.date: 11/19/2024
 ---
 
 ✅ **Create and apply [sensitivity labels](/purview/get-started-with-sensitivity-labels) to protect your data**
