@@ -589,7 +589,7 @@ Number of elements in a request:
 |Property  |Type |Description |
 |---------|---------|---------|
 |id  |String|ID of the entity|
-|method |String|`POST` indicates an entity was created, `PUT` indicates an entity was updated, `DELETE` indicates an entity was deleted. |
+|method |String|`POST` to create an entity, `PUT` to update an entity, `DELETE` to delete an entity. |
 |url|String|The format is `/{EntityType}/{EntityId}`. Possible values for `{EntityType}` are `shifts`, `swapRequests`, `timeoffReasons`, `openshifts`, `openshiftrequests`, `offershiftrequests`, `timesoff`, `timeOffRequests`. For example, `/shifts/SHFT_12345678-1234-1234-1234-1234567890ab`.|
 |header|WfiRequestHeader |Header|
 |body|ShiftsEntity |Must match `{EntityType}` in the **url** property. Use one of [shift](/graph/api/resources/shift?view=graph-rest-1.0), [swapShiftsChangeRequest](/graph/api/resources/swapshiftschangerequest?view=graph-rest-1.0), [timeOffReason](/graph/api/resources/timeoffreason?view=graph-rest-1.0), [openshift](/graph/api/resources/openshift?view=graph-rest-1.0), [openShiftChangeRequest](/graph/api/resources/openshiftchangerequest?view=graph-rest-beta), [offerShiftRequests](/graph/api/resources/offershiftrequest?view=graph-rest-1.0), [timeOff](/graph/api/resources/timeoff?view=graph-rest-1.0), [timeOffRequest](/graph/api/resources/timeoffrequest?view=graph-rest-1.0). For example, `/shifts/SHFT_12345678-1234-1234-1234-1234567890ab`.|
