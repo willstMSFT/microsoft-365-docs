@@ -60,7 +60,7 @@ To use a simple document processing model, follow these steps:
 
 ## Step 1: Create the model
 
-Follow the instructions in [Create a model in Syntex](create-syntex-model.md) [Test](create-syntex-model?tabs=single-class-model%2Ccontract-processing#create-a-prebuilt-model) to create a simple document processing model. Then continue with the following steps to complete your model.
+Follow the instructions in [Create a model in Syntex](create-syntex-model.md#create-a-prebuilt-model) to create a simple document processing model. Then continue with the following steps to complete your model.
 <!---
 Follow the instructions in [Create a model in Syntex](create-syntex-model.md#create-a-prebuilt-model) to create a simple document processing model. Then continue with the following steps to complete your model.
 --->
