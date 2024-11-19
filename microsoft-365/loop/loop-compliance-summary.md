@@ -27,24 +27,6 @@ description: "Learn about the governance, data lifecycle management, and complia
 
 As a Compliance Manager or IT administrator, it's crucial to stay up-to-date on the latest governance, data lifecycle, and compliance posture for the software solutions being used in your organization. This article details the capabilities available and not available yet for [Microsoft Loop](https://www.microsoft.com/en-us/microsoft-loop).
 
-## Loop Storage
-
-Where Loop content is stored impacts the admin management, governance, data lifecycle, and compliance capabilities available. Microsoft Loop is built on top of SharePoint, OneDrive, and [SharePoint Embedded](https://techcommunity.microsoft.com/t5/sharepoint-premium-blog/announcing-sharepoint-embedded-public-preview-at-espc23/ba-p/3993428), which means that most of these capabilities work just like existing files in your ecosystem. Because Loop pages and components are files, they can be managed in a familiar way, within your existing workflows. The table should help clarify how Loop content is stored in the Microsoft ecosystem.
-
-Where the Loop content was originally created determines its storage location:
-
-|Loop content originally created in|️️️Loop content stored in SharePoint Embedded|Loop content stored in SharePoint Site|Loop content stored in User's OneDrive|
-|-----|-----|-----|-----|
-|Loop app|✔️in Loop workspace|||
-|Copilot Pages|✔️in Loop workspace|||
-|Teams channel meeting||✔️in Channel folder||
-|Teams channel||✔️in Channel folder||
-|Teams private chat|||✔️in Microsoft Teams Chat files folder|
-|Teams private meeting|||✔️in Meetings folder|
-|Outlook email message|||✔️in Attachments folder|
-|OneNote for Windows or for the web|||✔️in OneNote Loop files folder|
-|Whiteboard|||✔️in Whiteboard\Components folder|
-
 ## Summary table of admin management, governance, lifecycle, and compliance capabilities based on where Loop content is stored
 |Category|OneDrive or SharePoint|SharePoint Embedded|
 |-----|-----|-----|
@@ -61,10 +43,10 @@ Where the Loop content was originally created determines its storage location:
 |Programmatic APIs for Loop content  |Yes, they're files in OneDrive or SharePoint and all current functionality applies.|Guest app access to Loop workspace containers is available. This enables  third party export and eDiscovery tools, migration tools, tools used to communicate in bulk to end-users about their content such as compliance requirements, and developer APIs. Use PowerShell to [Get](/powershell/module/sharepoint-online/get-spoapplication) and [Set](/powershell/module/sharepoint-online/set-spoapplicationpermission) guest app permissions.|
 |***Data Lifecycle***|---|---|
 |Multi-Geo  |**[Multi-Geo](/microsoft-365/enterprise/microsoft-365-multi-geo)** capabilities are supported, including creation of .loop files in a user's OneDrive in the geo that matches the user's [preferred data location](/microsoft-365/enterprise/plan-for-multi-geo#best-practices) and ability to move the user's OneDrive when their preferred data location changes.|**[Multi-Geo](/microsoft-365/enterprise/microsoft-365-multi-geo)** capabilities for Loop workspaces are supported using the [same mechanism as SharePoint sites](/microsoft-365/enterprise/m365-dr-workload-spo#move-a-sharepoint-site-or-sharepoint-embedded-container-site), including rehome and creation in the tenant's default geo. Manage the location of shared Loop workspaces like you would other collaboration artifacts, like SharePoint Communication sites.  <br><br>**[Multi-Geo](/microsoft-365/enterprise/microsoft-365-multi-geo)** capabilities for Copilot Pages are supported. Copilot Pages is a user-owned workspace, and is created in the geo that matches the user's preferred data location.  <br><br>**Not Yet Available**:  <br>Shared workspaces are not yet created in the user's preferred data location, they are instead created in the tenant's default geo, like SharePoint Communication sites are.|
-|User leaves organization  |When a user leaves an organization, [OneDrive retention policies](/sharepoint/retention-and-deletion) apply to the .loop files in their OneDrive just as they do to other content created by the user. See [Loop storage](#loop-storage) for more information.|Manage the lifetime of shared Loop workspaces like you would other collaboration artifacts, like SharePoint sites.  <br><br>**Not Yet Available**:  <br>Loop doesn't create user-owned workspaces. All workspaces are created as tenant-owned.|
+|User leaves organization  |When a user leaves an organization, [OneDrive retention policies](/sharepoint/retention-and-deletion) apply to the .loop files in their OneDrive just as they do to other content created by the user. See [Loop storage](/microsoft-365/loop/loop-workspaces-storage-permission#storage-management-after-user-departure) for more information.|Manage the lifetime of shared Loop workspaces like you would other collaboration artifacts, like SharePoint sites.</br></br>Manage the lifetime of user-owned personal Loop workspaces like Copilot Pages, like you would manage the user's OneDrive. See [Loop storage](/microsoft-365/loop/loop-workspaces-storage-permission#storage-management-after-user-departure) for more information.|
 |Loop workspaces  |n/a|See [Available](#available-admin-capabilities) and [Admin Management not yet available](#admin-management-not-yet-available).|
 |Recycle bin  |End user Recycle bin for deleted content is available.|End user Recycle bin for deleted content is available in each Loop workspace.  <br><br>**Not Yet Available**:  <br>End user Recycle bin for deleted Loop workspaces.|
-|Version history  |**Version History** [export in Purview](/purview/ediscovery-export-search-results#step-1-prepare-search-results-for-export) or via [Graph API](/graph/api/driveitem-get-content-format) is available. Loop files in OneDrive or SharePoint follow the same file versioning settings as other files.|**Version History** [export in Purview](/purview/ediscovery-export-search-results#step-1-prepare-search-results-for-export) is available. Loop files in SharePoint Embedded are configured at 50 versions and no admin setting is available to change this.|
+|Version history  |**Version History** [export in Purview](/purview/ediscovery-export-search-results#step-1-prepare-search-results-for-export) or via [Graph API](/graph/api/driveitem-get-content-format) is available. Loop files in OneDrive or SharePoint follow the same file versioning settings as other files.|**Version History** [export in Purview](/purview/ediscovery-export-search-results#step-1-prepare-search-results-for-export) or via [Graph API](/graph/api/driveitem-get-content-format) is available. Loop files in SharePoint Embedded are configured at 50 versions and no admin setting is available to change this.|
 |Quota  |Loop files in their OneDrive and SharePoint locations follow the quotas of those storage containers.  |One Loop workspace corresponds to one SharePoint Embedded container. Loop SharePoint Embedded containers have a default quota of 1TB. There is no admin setting available to change this.|
 |Audit logs and events  |**Audit** logs for all events: search and export Microsoft 365 service events for security and compliance investigations  <ol><li>Use the [Microsoft Purview portal](https://purview.microsoft.com/auditlogsearch)<li>Search audit logs for "loop" or "loot" or "fluid"<li>Further filter exported results by "SourceFileExtension":"loop" or "SourceFileExtension":"loot" (templates) or "SourceFileExtension":"fluid" (deprecated)|**Audit** logs for all events: search and export Microsoft 365 service events for security and compliance investigations <ol><li>Use the [Microsoft Purview portal](https://purview.microsoft.com/auditlogsearch)<li>Search audit logs for Loop Web Application ID `a187e399-0c36-4b98-8f04-1edc167a0996` and Loop Mobile Application ID `0922ef46-e1b9-4f7e-9134-9ad00547eb41`</ol>Note: Loop workspaces create and update .pod files to manage content in the workspace.|
 |Audit log access  |**Audit** logs are retained, can be exported, and can be streamed to third party tools|**Audit** logs are retained, can be exported, and can be streamed to third party tools|
@@ -117,6 +99,5 @@ By reviewing this information, you can make an informed decision on whether Micr
 ## Related topics
 
 - [Overview of Loop components in Microsoft 365](/microsoft-365/loop/loop-components-teams)
-- [Manage Loop components in OneDrive and SharePoint](/microsoft-365/loop/loop-components-configuration)
 - [Overview of Loop workspaces storage and permissions](/microsoft-365/loop/loop-workspaces-storage-permission)
-- [Manage Loop workspace experiences in SharePoint Embedded](/microsoft-365/loop/loop-workspaces-configuration)
+- [Loop admin policies for Loop components and Loop workspaces](/microsoft-365/loop/loop-components-configuration)

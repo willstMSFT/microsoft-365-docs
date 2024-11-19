@@ -56,7 +56,7 @@ If you prefer, you can also create other types of groups to use with Cloud Polic
 
 ## Available policy settings
 
-There are several IT Admin settings provided to enable creation of Loop content across Microsoft 365:
+There are several IT Admin policy settings provided to enable creation of Loop content across Microsoft 365:
 
 |Configure  |Setting Type  |Specific Policy  |Notes  |
 |---------|---------|---------|---------|
@@ -65,6 +65,22 @@ There are several IT Admin settings provided to enable creation of Loop content 
 |Copilot Pages creation and integration  |  Cloud Policy  |  **Create and view Loop files in Microsoft 365 Copilot Chat**  |  Applies to Copilot Pages in a Copilot chat experience  |
 |Outlook creation and integration of Loop experiences  |  Cloud Policy  |  **Create and view Loop files in Outlook**  |  First checks **Create and view Loop files in Microsoft apps that support Loop**; then applies **Create and view Loop files in Outlook**, if applicable.  |
 |Teams creation and integration  |  SharePoint property  |  See [Settings management for Loop components in Teams](#settings-management-for-loop-functionality-in-teams)  |  Teams only checks the settings in this row.  |
+
+## Storage based view of the admin policy settings
+
+Configure the creation of content in these locations by using the appropriate policy setting:
+
+|Loop content originally created in|️️️Manage with this policy|Loop content storage|
+|-----|-----|-----|
+|Loop app|Cloud Policy: **Create and view Loop workspaces in Loop**|SharePoint Embedded: ✔️in Loop workspace|
+|Copilot Pages|Cloud Policy: **Create and view Loop files in Microsoft 365 Copilot Chat**|SharePoint Embedded: ✔️in Loop workspace|
+|Teams channel meeting|SharePoint property `Set-SPOTenant -IsCollabMeetingNotesFluidEnabled $true`|SharePoint Site: ✔️in Channel folder|
+|Teams channel|SharePoint property `Set-SPOTenant -IsCollabMeetingNotesFluidEnabled $true`|SharePoint Site: ✔️in Channel folder|
+|Teams private chat|SharePoint property `Set-SPOTenant -IsLoopEnabled $true`|User's OneDrive: 📁`Microsoft Teams Chat files`|
+|Teams private meeting|SharePoint property `Set-SPOTenant -IsLoopEnabled $true`|User's OneDrive: 📁`Meetings`|
+|Outlook email message|Cloud Policy: **Create and view Loop files in Microsoft apps that support Loop** -or- **Create and view Loop files in Outlook**|User's OneDrive: 📁`Attachments`|
+|OneNote for Windows or for the web|Cloud Policy: **Create and view Loop files in Microsoft apps that support Loop**|User's OneDrive: 📁`OneNote Loop files`|
+|Whiteboard|Cloud Policy: **Create and view Loop files in Microsoft apps that support Loop**|User's OneDrive: 📁`Whiteboard\Components`|
 
 ## Example configurations
 
@@ -80,15 +96,11 @@ As described in this topic, you can control the ability for users in your enviro
 
 ### Here's what you should expect when using the Loop IT admin controls configured to Disabled
 
-When Loop IT admin controls in this article are set to Disabled, the creation of new Loop files and SharePoint Embedded containers is prevented, but existing user data is not deleted. Users can still access existing Loop files. To prevent new files and access to these existing files, use both the admin policies and Conditional Access policies to block access to Loop experiences on browsers and mobile devices.
+When Loop IT admin controls in this article are set to Disabled, the creation of new Loop files and SharePoint Embedded containers is prevented, but existing user data is not deleted. Users can still access existing Loop files. To prevent new files and access to these existing files, use both the admin policies and [Conditional Access policies](/sharepoint/control-access-from-unmanaged-devices) to block access to Loop experiences on browsers and mobile devices.
 
 Even with the admin policies disabled, Loop content and icons may still appear in certain places. Files created before disabling new creation can still be found in Microsoft365.com, the Loop component viewer and editor (loop.cloud.microsoft), and links shared in messages or documents. Access to these files is determined by their permissions, so users with edit access can still open and edit them.
 
 There are no separate licensing requirements for the Loop component viewer and editor, only the need for OneDrive access. Users can still access the Loop component viewer and editor via loop.cloud.microsoft and the All apps view in Microsoft365.com. To prevent users from seeing the Loop app in the All apps view, disable their access to OneDrive or configure a conditional access policy for loop.cloud.microsoft.
-
-### Additional IT Admin resources
-
-Learn more about [Loop storage](/microsoft-365/loop/loop-compliance-summary#loop-storage) or [Conditional Access Policies](/sharepoint/control-access-from-unmanaged-devices).
 
 ## Settings management in the Microsoft Admin Center
 

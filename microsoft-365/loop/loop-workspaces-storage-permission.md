@@ -25,7 +25,23 @@ appliesto:
 
 # Overview of Loop workspaces storage and permissions
 
-Where the loop content was originally created determines its storage location. See the [Loop Storage](/microsoft-365/loop/loop-compliance-summary#loop-storage) section in [Summary of governance, lifecycle, and compliance capabilities](/microsoft-365/loop/loop-compliance-summary) for Loop for a diagram and more information.
+## Loop Storage
+
+Where Loop content is stored impacts the admin management, governance, data lifecycle, and compliance capabilities available. Microsoft Loop is built on top of SharePoint, OneDrive, and [SharePoint Embedded](/sharepoint/dev/embedded/concepts/admin-exp/consuming-tenant-admin/cta), which means that most of these capabilities work just like existing files in your ecosystem. Because Loop pages and components are files, they can be managed in a familiar way, within your existing workflows. The table should help clarify how Loop content is stored in the Microsoft ecosystem.
+
+Where the Loop content was originally created determines its storage location:
+
+|Loop content originally created in|️️️Loop content stored in SharePoint Embedded|Loop content stored in SharePoint Site|Loop content stored in User's OneDrive|
+|-----|-----|-----|-----|
+|Loop app|✔️in Loop workspace|||
+|Copilot Pages|✔️in Loop workspace|||
+|Teams channel meeting||✔️in Channel folder||
+|Teams channel||✔️in Channel folder||
+|Teams private chat|||✔️in 📁`Microsoft Teams Chat files`|
+|Teams private meeting|||✔️in 📁`Meetings`|
+|Outlook email message|||✔️in 📁`Attachments`|
+|OneNote for Windows or for the web|||✔️in 📁`OneNote Loop files`|
+|Whiteboard|||✔️in 📁`Whiteboard\Components`|
 
 ## Loop app's usage of organization's storage quota
 
@@ -33,7 +49,7 @@ Loop app workspaces are stored inside your tenant, within SharePoint Embedded. A
 
 ## Content permissions mechanism
 
-Each Loop app workspace uses storage for the workspace in [SharePoint Embedded](https://techcommunity.microsoft.com/t5/sharepoint-premium-blog/announcing-sharepoint-embedded-public-preview-at-espc23/ba-p/3993428). Additionally, the Loop app creates a roster for that workspace to govern access to the full workspace. When pages are shared from the workspace, we create a sharing link using your company's default sharing link type as configured for OneDrive and SharePoint.
+Each Loop app workspace uses storage for the workspace in [SharePoint Embedded](/sharepoint/dev/embedded/concepts/admin-exp/consuming-tenant-admin/cta). Additionally, the Loop app creates a roster for that workspace to govern access to the full workspace. When pages are shared from the workspace, we create a sharing link using your company's default sharing link type as configured for OneDrive and SharePoint.
 
 Sharing the workspace in Loop adds the user to the workspace roster. All workspace roster members have access and "*editing*" permissions to all the Loop pages in that workspace.
 
@@ -114,8 +130,6 @@ Note: A feature for IT admins to assign additional temporary custodians during t
 ### In Loop components created in Microsoft 365 outside of the Loop app
 
 Loop components created outside of Loop are stored in the OneDrive of the person who created the component, or if created in a place with shared storage like a Teams channel, they are stored in the SharePoint folder for that channel. When stored in OneDrive, if that user leaves the organization, the standard OneDrive IT policy is applied. When stored in SharePoint, the standard SharePoint IT policy is applied.
-
-For more information on the storage location of components based on where they are created, see [Loop Storage](/microsoft-365/loop/loop-compliance-summary#loop-storage).
 
 ## Management of Loop content
 
