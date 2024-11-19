@@ -138,8 +138,6 @@ There are features in [Microsoft Purview](/purview/copilot-in-purview-overview) 
 
 ✅ **Copilot goals with Purview**:
 
-[!div class="checklist"]
-
 - Identify and label sensitive data in Microsoft 365.
 - Detect and protect sensitive information from unauthorized sharing or leakage.
 - Delete the content you don't need.
@@ -282,7 +280,7 @@ When DLP policies find this data, it can act and help prevent the data from show
 
 To learn more, see:
 
-- [Learn about the Microsoft 365 Copilot location in DLP](/purview/dlp-create-deploy-policy)
+- [Create and Deploy data loss prevention policies](/purview/dlp-create-deploy-policy)
 - [Learn about the Microsoft 365 Copilot policy location](/purview/dlp-microsoft365-copilot-location-learn-about)
 
 With DLP policies, you can use [trainable classifiers](/purview/trainable-classifiers-get-started-with), [sensitive information types](/purview/sit-sensitive-information-type-learn-about), [sensitivity labels](/purview/sensitivity-labels), and [retention labels](/purview/retention) to identify sensitive information across your organization.

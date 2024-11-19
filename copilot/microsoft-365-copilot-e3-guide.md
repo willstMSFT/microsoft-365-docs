@@ -122,8 +122,6 @@ There are features in Microsoft Purview that can help you get ready for Copilot.
 
 ✅ **Copilot goals with Purview**:
 
-[!div class="checklist"]
-
 - Identify and label sensitive data in your Microsoft 365 and Office files.
 - Detect and protect sensitive information from unauthorized sharing or leakage.
 - Delete the content you don't need.
