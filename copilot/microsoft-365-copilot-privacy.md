@@ -13,7 +13,7 @@ ms.collection:
 - m365copilot
 - magic-ai-copilot
 hideEdit: true
-ms.date: 11/01/2024
+ms.date: 11/15/2024
 ms.custom: [copilot-learning-hub]
 ---
 
@@ -157,7 +157,7 @@ There's also a privacy control that turns off all connected experiences, includi
 
 #### Privacy control for optional connected experiences
 
-If you turn off optional connected experiences in your organization, Microsoft 365 Copilot features that are optional connected experiences won’t be available to your users. For example, [web search](manage-public-web-access.md) won’t be available to your users.
+If you turn off optional connected experiences in your organization, Microsoft 365 Copilot features that are optional connected experiences won’t be available to your users. For example, turning off optional connected experiences could affect the availability of [web search](manage-public-web-access.md#it-admin-control-for-both-microsoft-365-copilot-and-microsoft-copilot).
 
 There's also a privacy control that turns off all connected experiences, including optional connected experiences. If you use that privacy control, Microsoft 365 Copilot features that are optional connected experiences won’t be available.
 

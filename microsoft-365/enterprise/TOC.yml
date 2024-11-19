@@ -197,7 +197,7 @@
         - name: Cross-tenant identity mapping
           href: cross-tenant-identity-mapping.md
 
-        - name: Multitenant collaboration
+        - name: Multitenant organizations
           items:
             - name: Plan for multitenant orgs
               href: plan-multi-tenant-org-overview.md
@@ -209,6 +209,8 @@
               href: sync-users-multi-tenant-orgs.md
             - name: Multitenant Organization People Search
               href: multi-tenant-people-search.md
+            - name: Multitenant org FAQ
+              href: multitenant-org-faq.md
 
         - name: Cross-tenant OneDrive migration
           items:
@@ -351,7 +353,7 @@
             items: 
               - name: Overview
                 href: hybrid-solutions.md
-              - name: Use Microsoft Entra ID for SharePoint Server 2016 authentication
+              - name: Use Microsoft Entra ID for SharePoint Server authentication
                 href: /azure/active-directory/saas-apps/sharepoint-on-premises-tutorial
               - name: Connect an on-premises network to an Azure virtual network
                 href: connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md
