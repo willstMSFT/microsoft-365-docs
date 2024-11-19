@@ -76,7 +76,7 @@ The following table describes the actions that each Lighthouse RBAC role can per
 |  | Activate and inactivate a tenant |  | &check; | &check; |  |  | No |
 |  | View delegated access status | &check; | &check; | &check; | &check; | &check; | No |
 |  | View Microsoft Secure Score |  |  |  |  |  | Yes |
-|  | View baseline assignments | &check; | &check; | &check; | &check; | &check; | &check; | No |
+|  | View baseline assignments | &check; | &check; | &check; | &check; | &check; | No |
 |  | View deployment status |  |  |  | &check; |  | Yes |
 |  | View apps and services usage |  |  |  | &check; |  | Yes |
 |  | View and edit customer contact and website info | &check; | &check; |  | &check; | &check; | No |
