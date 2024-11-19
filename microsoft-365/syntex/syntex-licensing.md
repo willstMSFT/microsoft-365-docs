@@ -50,7 +50,7 @@ Pay-as-you-go currently supports the following Syntex services:
 - Microsoft 365 Archive
 - Microsoft 365 Backup
 
-More Syntex services will be added as they become available.
+More services will be added as they become available.
 
 ### Feature limited preview
 
@@ -62,7 +62,7 @@ Pay-as-you-go licensing includes access to additional Syntex features for a limi
 - Accounts payable accelerator
 - Taxonomy features (including import using SKOS, SKOS formatting reference, push content type to hub, and term store reports)
 - PDF merge and extract pages
-- Content processing: Move or copy a file, set a content type from file name
+- Content processing rules (including move or copy a file, set a content type, and translate a document)
 
 For more information, see [Microsoft Syntex features limited time license agreement](feature-limited-license.md).
 
