@@ -34,7 +34,7 @@ search.appverid:
 - MET150
 ROBOTS: NOINDEX
 description: "Learn how to choose a Microsoft 365 for business plan, sign up, and set up your subscription."
-ms.date: 01/11/2024
+ms.date: 11/04/2024
 ---
 
 # How to sign up for a Microsoft 365 for business plan - Admin Help

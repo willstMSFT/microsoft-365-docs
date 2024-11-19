@@ -154,7 +154,7 @@ conceptualContent:
   # Card
     - title: Protect email content and Microsoft 365 files
       links:
-        - url: ../security/office-365-security/index.yml
+        - url: /defender-office-365/
           itemType: overview
           text: Get started with Microsoft Defender for Office 365
         - url: ../business-premium/m365bp-protect-against-malware-cyberthreats.md
