@@ -72,7 +72,7 @@ Web search query citations are available only in Microsoft 365 Copilot Business 
 > [!NOTE]
 > This feature is rolling out to customers in the second half of November 2024.
 
-Web search query logging is available so that admins can perform search, audit, and eDiscovery on the exact web search queries Copilot derived from the user's prompt. Admins can already perform these actions for prompts and responses and will be able to use their familiar tools to extend those actions to search queries.  For more information, see [Audit log activities](purview/audit-log-activities#copilot-activities), [Copilot interaction events overview](/office/office-365-management-api/copilot-schema), and [Search for and delete Copilot data in eDiscovery (preview)](/purview/edisc-search-copilot-data#identifying-web-queries-in-microsoft-365-copilot-usage).
+Web search query logging is available so that admins can perform search, audit, and eDiscovery on the exact web search queries Copilot derived from the user's prompt. Admins can already perform these actions for prompts and responses and will be able to use their familiar tools to extend those actions to search queries.  For more information, see [Audit log activities](/purview/audit-log-activities#copilot-activities), [Copilot interaction events overview](/office/office-365-management-api/copilot-schema), and [Search for and delete Copilot data in eDiscovery (preview)](/purview/edisc-search-copilot-data#identifying-web-queries-in-microsoft-365-copilot-usage).
 
 ### Examples of generated search queries
 
