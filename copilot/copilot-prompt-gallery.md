@@ -37,7 +37,7 @@ Each suggested prompt in the prompt Gallery includes additional information abou
 
 Copilot Prompt Gallery processes and manages data in a structured manner to ensure compliance and security. The following are key data flows and compliance considerations:
 
-:::image type="content" source="media/copilot-lab-tech-diagram.png" alt-text="Diagram showing the data flow for Copilot Prompt Gallery." lightbox="media/copilot-lab-tech-diagram.png":::
+:::image type="content" source="media/copilot-prompt-gallery-diagram.png" alt-text="Diagram showing the data flow for Copilot Prompt Gallery." lightbox="media/copilot-prompt-gallery-diagram.png":::
 
 - Copilot Prompt Gallery is both a website and a feature of Copilot that allows users to discover, manage, use, and share Copilot prompts.
 - A user accesses Copilot Prompt Gallery, either via the Copilot Prompt Gallery website or in Copilot through an app.
