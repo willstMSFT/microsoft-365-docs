@@ -175,8 +175,8 @@ You'll need the [latest version of SharePoint PowerShell module](/powershell/sha
 
 |Experience  |SharePoint organization properties  |Notes  |
 |---------|---------|---------|
-|Loop components in Teams  | `IsLoopEnabled` (boolean)  |  This property controls Loop component creation and integration in Microsoft Teams.  |
-|Collaborative meeting notes  |  `IsCollabMeetingNotesFluidEnabled` (boolean)  |  This property controls the collaborative meeting notes creation and integration in Microsoft Teams.  |
+|Loop components in Teams  | `IsLoopEnabled` (boolean)  |  This property controls Loop component creation and integration in Microsoft Teams. It applies to the entire tenant and can not be configured at the user level.  |
+|Collaborative meeting notes  |  `IsCollabMeetingNotesFluidEnabled` (boolean)  |  This property controls the collaborative meeting notes creation and integration in Microsoft Teams. It applies to the entire tenant and can not be configured at the user level.  |
 
 To check your tenant's default file permissions, perform the following steps:
 
@@ -189,6 +189,8 @@ To check if Loop components are enabled, run `Get-SPOTenant` without any argumen
 To enable Loop components in Teams, run `Set-SPOTenant -IsLoopEnabled $true`. The change will take a short time to apply across your organization.
 
 To disable Loop components in Teams, run `Set-SPOTenant -IsLoopEnabled $false`. The change will take a short time to apply across your organization. If your organization has multiple regions (that is, organization URLs), you need to disable loop components for all the regions to have consistent results across the organization.
+
+These tenant-level properties 
 
 ## Related topics
 
