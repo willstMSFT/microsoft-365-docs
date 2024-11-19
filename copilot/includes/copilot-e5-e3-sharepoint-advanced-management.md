@@ -13,8 +13,6 @@ There are features in [SharePoint Advanced Management (SAM)](/sharepoint/get-rea
 
 ✅ **Copilot goals with SAM**:
 
-[!div class="checklist"]
-
 - Declutter data sources by finding and removing inactive SharePoint sites.
 - Identify SharePoint sites with overshared or sensitive content.
 - Use policy to restrict access to SharePoint sites that are business critical or have sensitive content.

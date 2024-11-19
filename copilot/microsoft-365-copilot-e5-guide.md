@@ -138,8 +138,6 @@ There are features in [Microsoft Purview](/purview/copilot-in-purview-overview) 
 
 ✅ **Copilot goals with Purview**:
 
-[!div class="checklist"]
-
 - Identify and label sensitive data in Microsoft 365.
 - Detect and protect sensitive information from unauthorized sharing or leakage.
 - Delete the content you don't need.
