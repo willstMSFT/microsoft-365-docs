@@ -30,7 +30,7 @@ description: Read frequently asked questions about Microsoft 365 Archive.
 
 Microsoft 365 Archive allows you to keep your data in place in SharePoint, providing the following benefits not possible when the data is migrated elsewhere:
 
-- Archiving happens quickly, usually withing minutes, regardless of the amount or size of content being archived.
+- Archiving happens quickly, usually within minutes, regardless of the amount or size of content being archived.
 
 - No need to manage data in a separate security and compliance domain, therefore allowing your security and compliance tooling to operate seamlessly—including eDiscovery, retention policies, and more.
 
