@@ -51,7 +51,7 @@ You can share Loop workspaces, pages, and components with users external to your
 
 - Your organization must allow sharing files with guests. Learn how to [manage this policy](/sharepoint/turn-external-sharing-on-or-off#change-the-organization-level-external-sharing-setting).
 - The user you're sharing with must have a guest account in your tenant or [Business-to-Business Invitation Manager is enabled](/entra/external-id/what-is-b2b).
-- Your organization doesn't have sensitivity labels configured. Loop external sharing doesn't work for companies with sensitivity labels configured. Once sensitivity labels for Loop workspaces, pages, and components are generally available, then external sharing for companies with sensitivity labels configured does not function.
+- Your organization doesn't have sensitivity labels configured. Loop external sharing doesn't work for companies with sensitivity labels configured. Once sensitivity labels for Loop workspaces, pages, and components are generally available, then external sharing for companies with sensitivity labels configured does not function. Microsoft Roadmap ID 421614 addresses this.
 
 Workspaces can only be shared with users that have an existing guest account in your tenant. If Business-to-business Invitation Manager is enabled, users can share a page or component with a guest, which enables the flow to create a guest account for the user.
 
@@ -73,13 +73,13 @@ Unlike SharePoint sites, there is no admin setting to configure guest sharing of
 
 ## Loop workspace membership and Microsoft 365 groups
 
-Loop workspaces currently have one type, with membership visible and manageable within the Loop app by the workspace owner. However, there's no integration with Microsoft 365 groups or Security groups.
+Loop workspaces currently have one type, with membership visible and manageable within the Loop app by the workspace owner. However, there's no integration with Microsoft 365 groups or Security groups. Microsoft Roadmap ID 422728 addresses this for Microsoft 365 groups.
 
-Currently, owners can't assign new members as owners. If the owner leaves the company, the workspace becomes ownerless, remain in the tenant, and isn't automatically deleted. Administrators can't assign new owners to ownerless workspaces.
+Currently, owners can't assign new members as owners. If the owner leaves the company, the workspace becomes ownerless, remain in the tenant, and isn't automatically deleted. Administrators can't assign new owners to ownerless workspaces. Microsoft Roadmap ID 362124 and 421613 address this.
 
 PowerShell support for number of owners on a SharePoint Embedded container isn't yet available. Once it is, to find ownerless workspaces, query Loop workspace containers in SharePoint Embedded. For more information, see [Consuming Tenant Admin](/sharepoint/dev/embedded/concepts/admin-exp/cta), and [Get-SPO Container](/powershell/module/sharepoint-online/get-spocontainer). The Loop Application ID is listed in [Summary of governance, lifecycle, and compliance capabilities](/microsoft-365/loop/loop-compliance-summary).
 
-There are other types of groups and membership lists in the Microsoft ecosystem, such as Microsoft 365 groups and Security groups. Currently, Loop workspace membership doesn't use these groups or lists.
+There are other types of groups and membership lists in the Microsoft ecosystem, such as Microsoft 365 groups and Security groups. Currently, Loop workspace membership doesn't use these groups or lists. Microsoft Roadmap ID 422728 addresses this for Microsoft 365 groups.
 
 ## Storage management after user departure
 
@@ -109,7 +109,7 @@ The Loop app is designed for both shared and personal workspaces.
 - User-owned workspaces cannot be permanently reassigned to a new owner. These workspaces follow the same cleanup schedule as OneDrive: 30 days active, then soft deleted, and permanently purged 93 days after soft deletion.
 - Admins can recover content during the soft delete period using the SharePoint Admin Center or PowerShell.
 
-Note: A feature for IT admins to assign additional temporary custodians during the cleanup period of user-owned workspaces to make copies of content is not yet available.
+Note: A feature for IT admins to assign additional temporary custodians during the cleanup period of user-owned workspaces to make copies of content is not yet available. Microsoft Roadmap ID 421612 addresses this.
 
 ### In Loop components created in Microsoft 365 outside of the Loop app
 
