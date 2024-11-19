@@ -80,7 +80,7 @@ Before working with organizational messages, make sure your team satisfies the f
   - For example, any message configured to be delivered to a Windows channel, like Windows Spotlight, requires that recipients use **Windows 11 Enterprise**.
 
 > [!IMPORTANT]
-> During our preview period, Organizational messages preview experiences were not restricted based on the licenses held by participating tenants, authors, approvers, or message recipients. However, now that the product is in general availability, some organizational messages experiences are restricted to particular Microsoft licenses. To learn more, see [Premium features](#premium-features).
+> During our preview period, Organizational messages preview experiences were not restricted based on the licenses held by participating tenants, authors, approvers, or message recipients. However, now that the product is in general availability, some organizational messages experiences are restricted to particular Microsoft licenses. To learn more, see [Advanced features](#advanced-features).
 
 ## Get started
 
@@ -184,7 +184,7 @@ There are two primary forms of message creation that are enabled in this experie
 1. **Fully customized creation** (or 'create your own') – this is an open-ended format of entering in arbitrary content for messages, allowing your team to make messages that include your company name or other specifics that are unique to your company, group, or team. For example, an author can select ‘create your own’ and type all of the words of the message themselves.
 
 > [!NOTE]
-> The ability to create fully customized messages is enabled if your organization has at least one Microsoft license as described in the [Premium features](#premium-features) section.
+> The ability to create fully customized messages is enabled if your organization has at least one Microsoft license as described in the [Advanced features](#advanced-features) section.
 
 2. **Premade messages** (or ‘templatized’ messages) – this is a method of selecting and customizing content that is partially created by Microsoft for general purpose use. For example, Microsoft might provide various generic messages that your team can pick and add your logo and URL to drive awareness of a software update.
 
@@ -217,7 +217,7 @@ This advanced targeting in organizational messages can be enabled using the foll
 5. Select the “Organizational attributes” checkbox and then the “Turn on selected filters” button.
 
 > [!NOTE]
-> The ability to use advanced targeting options is enabled if your organization has at least one Microsoft license as described in the [Premium features](#premium-features) section.
+> The ability to use advanced targeting options is enabled if your organization has at least one Microsoft license as described in the [Advanced features](#advanced-features) section.
 
 ### How to create a message by copying an existing message
 
@@ -238,7 +238,7 @@ This advanced targeting in organizational messages can be enabled using the foll
 
 ### Urgent delivery
 
-For some time-sensitive communications, admins and other communicators might need to get a message out fast. For example, when an event is occurring on a corporate campus or a service outage has begun, admins might need to quickly broadcast such events to all employees so they can be prepared. To support communications in such events, admins in Microsoft 365 admin center will be able to select the ‘Urgent messages’ button in the “Top Actions” section.
+For some time-sensitive communications, admins and other communicators might need to get a message out fast. For example, when an event is occurring on a corporate campus or a service outage has begun, admins might need to quickly broadcast such events to some employees so they can be prepared. To support communications in such events, admins in Microsoft 365 admin center will be able to select the ‘Urgent messages’ button in the “Top Actions” section.
 
 The message creation experience for an urgent message is similar to the flow for creating other messages with these exceptions:
 
@@ -268,35 +268,34 @@ If you or your team would like to work with your tenant’s message performance 
 
 2. Select the **Export to CSV** button and save the file locally.
 
-## Premium features
+## Advanced features
 
-Starting with general availability, organizational messages will also introduce the concept of ‘premium’ features.  These experiences are ones within the Organizational messages Microsoft 365 admin center which have tenant and end user requirements as follows:
+Starting with general availability, organizational messages will also introduce the concept of ‘advanced’ features.  These experiences are ones within the Organizational messages Microsoft 365 admin center which have tenant and end user requirements as follows:
 
-### Tenant - accessing premium features when creating messages
+### Tenant - accessing advanced features when creating messages
 
-Premium features will be accessible to admins within Organizational messages in Microsoft 365 admin center when their tenant has one of the following:
+Advanced features will be accessible to admins within Organizational messages in Microsoft 365 admin center when their tenant has one of the following:
 
 1. -1+ Microsoft 365 E3-E5 licenses
-2. -1+ Office 365 E3-E5 licenses
+1. -1+ Office 365 E3-E5 licenses
+1. -1+ Windows 365 E3-E5 licenses
 
-    -1+ Windows 365 E3-E5 licenses
+### End user – receiving messages with advanced features
 
-### End user – receiving messages with premium features
-
-End users within a tenant will be eligible to receive messages created using premium features when these end users personally have one of the following:
+End users within a tenant will be eligible to receive messages created using advanced features when these end users personally have one of the following:
 
 - Microsoft 365 E3-E5 license
 - Office 365 E3-E5 license
 - Windows 365 E3-E5 license
 
-### Current premium features
+### Current advanced features
 
-For general availability, the premium features in Organizational messages in Microsoft 365 admin center are the following:
+For general availability, the advanced features in Organizational messages in Microsoft 365 admin center are the following:
 
 1. Fully customized message creation
 
 > [!NOTE]
-> In general availability, message authors whose tenant satisfies premium feature requirements will be able to Edit a templatized message within the message creation flow.
+> In general availability, message authors whose tenant satisfies advanced feature requirements will be able to Edit a templatized message within the message creation flow.
 
 2. Advanced targeting – group level aggregates (Department, Location, Company)
 
@@ -364,7 +363,7 @@ If using Device Restrictions, follow these steps:
 
 For non-urgent messages, after your message has been scheduled by the Organizational Messages platform (for example, after approval from your Organizational Messages approvers is acquired as needed), at the earliest, it will take a few hours before the message will be eligible to be delivered to end user devices. For example, if you set the Start Date to be now/today, you should expect a few hours before any end user devices in your testing tenant receive the message payload.
 
-Further, Windows buffers messages on a set period for each of the channels. (In other words, this experience is delivered on a ‘pull’ model.) So, expect that your message might take 24 or more hours for targeted end users in your testing tenant to receive and render the message as their devices might be configured to request content at different times.
+Further, Windows buffers messages on a set period for each of the channels. (In other words, this experience is delivered on a ‘pull’ model.) So, expect that your message might take 24 or more hours for targeted end users in your tenant to receive and render the message as their devices might be configured to request content at different times.
 
 Once your message has been actively delivering for over 24 hours, you can return to the Manage experience to review the latest delivery data for your message.
 
@@ -391,7 +390,7 @@ The Organizational messages centralized experience is the ‘one-stop-shop’ fo
 
 ### Why do I need to update my MDM policies?
 
-The MDM policies listed under Prerequisites control whether the service delivering the messages is able to access each location where organizational messages could be delivered. Previously, the CSPs only affected consumer scenarios and controlled whether Microsoft messaging can be delivered, however, since we’re using the same service, the policies affect admin-created messages as well.
+The MDM policies listed under **Setting tenant policies** control whether the service delivering the messages is able to access each location where organizational messages could be delivered. Previously, the CSPs only affected consumer scenarios and controlled whether Microsoft messaging can be delivered, however, since we’re using the same service, the policies affect admin-created messages as well.
 
 ### How can I get my MDM settings for troubleshooting purposes?
 
@@ -473,11 +472,11 @@ For example, if the Organizational Messages Writer (admin) selects message A to 
 
 For example, if the Organizational Messages Writer (admin) has their Microsoft 365 admin center product language set to French when they create their message B from scratch, end users with related product language set to English will not receive the message B. However, end users with French set as their related product language will qualify to receive the message B.
 
-### Does Organizational messages support government environments, such as GCC, GCCH, etc.?
+### Does Organizational Messages support government environments, such as GCC, GCCH, etc.?
 
 No, not at this time.
 
-### Our team previously authored messages for the Windows Get Started location within the Organizational messages experience in Intune/Microsoft Endpoint Manager – can we still do that in this experience within Microsoft 365 admin center? 
+### Our team previously authored messages for the Windows Get Started location within the Organizational messages experience in Intune/Microsoft Endpoint Manager – can we still do that in this experience within Microsoft 365 admin center?
 
 Any Get Started messages that you created in Organizational messages experience within Intune/Microsoft Endpoint Manager that have not completed can be viewed within the Microsoft 365 admin center experience.  However, new Get Started message creation is not yet supported at this time.
 
@@ -491,8 +490,8 @@ Based on customer feedback, organizational messages now delivers to both Windows
 
 ### My tenant only wants our end users to see messages from us, not Microsoft; how can we do that?
 
-After your admins enable all of the policies described in the above section on “Setting Tenant Policies”, you can then go to the ‘Settings’ feature within the Organizational messages in Microsoft 365 admin center portal (top right corner of the landing page), deselect the option “Allow Microsoft messages to display”, and click ‘Save’.  This will ensure Organizational messages platform sends only your team’s messages to Windows surfaces, like Taskbar.
+After your admins enable all of the policies described in the above section on “Setting Tenant Policies”, you can then go to the ‘Settings’ feature within the Organizational messages in Microsoft 365 admin center portal (top right corner of the landing page), deselect the option “Allow Microsoft messages to display”, and select ‘Save’.  This will ensure Organizational messages platform sends only your team’s messages to Windows surfaces, like Taskbar.
 
-### If my organization only has an Office 365 E3 or E5 license, should I expect to be able to create fully customized messages on Windows locations, like Notifications area or Taskbar?  Likewise, if my organization only has a Windows E3 or E5 license, should I expect to be able to create fully customized messages on the Teams location?  
+### If my organization only has an Office 365 E3 or E5 license, should I expect to be able to create fully customized messages on Windows locations, like Notifications area or Taskbar?  Likewise, if my organization only has a Windows E3 or E5 license, should I expect to be able to create fully customized messages on the Teams location?
 
-No, the organizational messages creation flow will automatically disable authoring experiences that your tenant cannot access based on the license requirements listed in the [Premium features](#premium-features) section.  However, your organization may be able to create premade messages without such E3 or E5 licenses.  For example, your team will not be able to create a fully customized message on Windows locations if your organization does not have at least a Windows E3 or E5 license or an Microsoft 365 E3 or E5 license.  Similarly, your team will not be able to create a fully customized message on the Teams location if your organization does not have at least an Office 365 E3 or E5 license or a Microsoft 365 E3 or E5 license.
+No, the organizational messages creation flow will automatically disable authoring experiences that your tenant can't access based on the license requirements listed in the [Advanced features](#advanced-features) section.  However, your organization may be able to create premade messages without such E3 or E5 licenses.  For example, your team will not be able to create a fully customized message on Windows locations if your organization does not have at least a Windows E3 or E5 license or an Microsoft 365 E3 or E5 license.  Similarly, your team will not be able to create a fully customized message on the Teams location if your organization does not have at least an Office 365 E3 or E5 license or a Microsoft 365 E3 or E5 license.
