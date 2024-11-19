@@ -1,10 +1,10 @@
 ---
 title: Create an enterprise model in Microsoft Syntex
 ms.author: chucked
-author: lkueter
+author: chuckedmonson
 manager: jtremper
 ms.reviewer: ssquires
-ms.date: 11/05/2024
+ms.date: 11/19/2024
 audience: admin
 ms.topic: conceptual
 ms.service: microsoft-syntex
