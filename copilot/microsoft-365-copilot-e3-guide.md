@@ -197,8 +197,6 @@ To learn more, see:
 
 You can create DLP policies to protect sensitive information with your Microsoft 365 services, like Exchange, SharePoint, and OneDrive accounts.
 
-When DLP policies find this data, it can act and help prevent the data from showing up in Microsoft 365 Copilot results. To learn more, see [Learn about the Microsoft 365 Copilot location in DLP](/purview/dlp-create-deploy-policy?tabs=purview).
-
 This section introduces you to the DLP policy creation process. DLP policies are a powerful tool. Make sure you:
 
 - Understand the data you're protecting and the goals you want to achieve.
