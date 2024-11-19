@@ -49,4 +49,4 @@ Microsoft 365 Business Premium includes security, compliance, identity, and mana
 6. [Secure Microsoft 365 Copilot](m365bp-secure-copilot.md)
 
 > [!TIP]
-> If you're a Microsoft partner, see [Resources for Microsoft partners working with small and medium-sized businesses](../security/defender-business/mdb-partners.md) and download our security guide and checklist!
+> If you're a Microsoft partner, see [Resources for Microsoft partners working with small and medium-sized businesses](/defender-business/mdb-partners) and download our security guide and checklist!

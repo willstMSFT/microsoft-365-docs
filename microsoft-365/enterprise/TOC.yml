@@ -197,7 +197,7 @@
         - name: Cross-tenant identity mapping
           href: cross-tenant-identity-mapping.md
 
-        - name: Multitenant collaboration
+        - name: Multitenant organizations
           items:
             - name: Plan for multitenant orgs
               href: plan-multi-tenant-org-overview.md
@@ -209,6 +209,8 @@
               href: sync-users-multi-tenant-orgs.md
             - name: Multitenant Organization People Search
               href: multi-tenant-people-search.md
+            - name: Multitenant org FAQ
+              href: multitenant-org-faq.md
 
         - name: Cross-tenant OneDrive migration
           items:
