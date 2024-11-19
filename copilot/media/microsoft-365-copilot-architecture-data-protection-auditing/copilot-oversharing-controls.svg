@@ -1018,7 +1018,7 @@
 						x="6.71" dy="1.2em" class="st8">Search and built</tspan>-in controls</text>		</g>
 		<g id="shape1325-248" v:mID="1325" v:groupContext="shape" transform="translate(771.848,-496.027) scale(-1,1)">
 			<title>Sheet.1325</title>
-			<desc>Sensitivity labels and encryption, DLP</desc>
+			<desc>Microsoft Purview Information Protection</desc>
 			<v:userDefs>
 				<v:ud v:nameU="visNavOrder" v:val="VT0(49000):26"/>
 			</v:userDefs>
@@ -1029,8 +1029,8 @@
 				<rect x="0" y="572.303" width="189" height="45" rx="4.5" ry="4.5" class="st2"/>
 			</g>
 			<rect x="0" y="572.303" width="189" height="45" rx="4.5" ry="4.5" class="st39"/>
-			<text x="-146.98" y="590.6" transform="scale(-1,1)" class="st41" v:langID="1033"><v:paragraph v:spAfter="6"
-						v:horizAlign="1"/><v:tabList/>Sensitivity labels <v:lf/><tspan x="-158.61" dy="1.2em" class="st8">and encryption, DLP</tspan></text>		</g>
+			<text x="-152.09" y="590.6" transform="scale(-1,1)" class="st41" v:langID="1033"><v:paragraph v:spAfter="6"
+						v:horizAlign="1"/><v:tabList/>Microsoft Purview <tspan x="-167.23" dy="1.2em" class="st8">Information Protection</tspan></text>		</g>
 		<g id="shape1311-255" v:mID="1311" v:groupContext="shape" transform="translate(521.847,-218.026)">
 			<title>Sheet.1311</title>
 			<desc>6</desc>
