@@ -47,6 +47,8 @@
               href: prebuilt-model-receipt.md
             - name: Sensitive information 
               href: prebuilt-model-sensitive-info.md
+            - name: Simple documents 
+              href: prebuilt-model-simple.md
             - name: Manage your model
               items:
                 - name: Apply a model
