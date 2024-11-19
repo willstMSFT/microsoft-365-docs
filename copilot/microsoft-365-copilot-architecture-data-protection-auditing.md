@@ -82,7 +82,7 @@ Let's take a look:
 
 3. In SharePoint Advanced Management, use **[data access governance reports](/SharePoint/data-access-governance-reports)** to identify sites that contain potentially overshared or sensitive content.
 
-4. With **[Restricted Content Discovery](/SharePoint/restricted-content-discovery)**, organizations can put a flag on sites so that users can't find them through Copilot or Org-wide search. Restricted content discovery doesn't change users' existing permissions. Users with access can still visit sites and open files.
+4. With **[Restricted Content Discovery](/sharepoint/restricted-content-discovery)**, organizations can put a flag on sites so that users can't find them through Copilot or Org-wide search. Restricted content discovery doesn't change users' existing permissions. Users with access can still visit sites and open files.
 
 5. In SharePoint Advanced Management, create an **[inactive site policy](/sharepoint/site-lifecycle-management#create-an-inactive-site-policy)** to automatically manage and reduce inactive sites.
 

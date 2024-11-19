@@ -114,9 +114,9 @@ A [restricted access control policy](/sharepoint/restricted-access-control) rest
 
 When users in the group have permissions to the content, then that content can show in Copilot results. Users not in the group don't see this info in their Copilot results. You can set up restricted access control for individual sites or OneDrive.
 
-✅ **Use [restricted content discoverability policy (RCD)](/sharepoint/restricted-content-discoverability) in the SharePoint admin center**
+✅ **Use [restricted content discoverability policy (RCD)](/sharepoint/restricted-content-discovery) in the SharePoint admin center**
 
-A [restricted content discoverability policy (RCD)](/sharepoint/restricted-content-discoverability) doesn't change the site access. Instead, it changes the site's content discoverability. When you apply RCD to a site, the site's content isn't discoverable by Copilot or organization-wide search results for all users.
+A [restricted content discoverability policy (RCD)](/sharepoint/restricted-content-discovery) doesn't change the site access. Instead, it changes the site's content discoverability. When you apply RCD to a site, the site's content isn't discoverable by Copilot or organization-wide search results for all users.
 
 The SharePoint Admin can set restricted content discoverability on individual sites.
 
