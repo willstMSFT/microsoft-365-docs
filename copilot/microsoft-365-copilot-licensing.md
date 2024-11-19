@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: camillepack
 author: camillepack
 manager: scotv
-ms.date: 09/12/2024
+ms.date: 11/19/2024
 audience: Admin
 ms.topic: get-started
 ms.service: microsoft-365-copilot
@@ -15,13 +15,15 @@ ms.collection:
 - m365copilot
 - magic-ai-copilot
 description: "Understand which plans include Microsoft 365 Copilot, licensing requirements, and availability."
+appliesto:
+  - ✅ Microsoft 365 Copilot
 ---
 
 # Understand licensing requirements for Microsoft 365 Copilot
 
-Microsoft 365 Copilot is available as an [add-on plan](https://www.microsoft.com/microsoft-365/microsoft-copilot) with one of the following licensing prerequisites:
+Microsoft 365 Copilot is available as an [add-on plan](https://www.microsoft.com/microsoft-365/microsoft-copilot) with one of the following licensing prerequisites.
 
-**For Business and Enterprise:**
+## For Business and Enterprise
 
 - **Microsoft 365 plans:**
   - Microsoft 365 E5
@@ -71,7 +73,7 @@ Microsoft 365 Copilot is available as an [add-on plan](https://www.microsoft.com
 - **Other plans:**
   - Microsoft ClipChamp
 
-**For Education Faculty and Higher Education Students Aged 18+:**
+## For Education Faculty and Higher Education Students Aged 18+
 
 - Microsoft 365 A1*
 - Microsoft 365 A3*
