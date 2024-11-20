@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: laurawi
-ms.date: 11/19/2024
+ms.date: 11/20/2024
 ms.reviewer: cabailey, ruihu
 audience: Admin
 ms.topic: get-started
@@ -32,6 +32,8 @@ This article provides guidance for IT admins with **Microsoft 365 E5** and **Sha
 
 - Use SharePoint Advanced Management (SAM) to help prevent oversharing, declutter data sources, and monitor SharePoint site changes.
 - Use Microsoft Purview to enable sensitivity labels, identify and protect sensitive data, restrict endpoints, and delete the content you don't need.
+
+To learn more, watch [Oversharing Control at Enterprise Scale](https://www.youtube.com/watch?v=F1ARVMTBAak) (opens YouTube's website).
 
 When you use the features described in this article, your organization is better prepared for Copilot, including getting more accurate results from Copilot.
 
@@ -554,3 +556,4 @@ To learn more, see [Search for and optionally delete Copilot interactions in eDi
 - [Microsoft 365 Copilot requirements and prerequisites](/copilot/microsoft-365/microsoft-365-copilot-requirements)
 - [Provision Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-setup)
 - [Microsoft 365 Copilot adoption resources](https://adoption.microsoft.com/copilot)
+- [Watch: Oversharing Control at Enterprise Scale](https://www.youtube.com/watch?v=F1ARVMTBAak)
