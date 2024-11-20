@@ -13,7 +13,7 @@ ms.collection:
 - m365copilot
 - magic-ai-copilot
 hideEdit: true
-ms.date: 11/15/2024
+ms.date: 11/19/2024
 ---
 
 # Data, privacy, and security for web search in Microsoft 365 Copilot and Microsoft Copilot
@@ -38,10 +38,6 @@ This generated search query is different from the user’s original prompt—it 
 
 - Any identifying information based on the user's Microsoft Entra ID (for example, username, domain, or tenant ID)
 
-> [!NOTE]
-> We’re making some improvements to web search query transparency in the near future. For more information, see
-[Introducing web search query transparency for Microsoft 365 Copilot and Microsoft Copilot](https://techcommunity.microsoft.com/t5/microsoft-365-copilot/introducing-web-search-query-transparency-for-microsoft-365/ba-p/4253080).
-
 When using Microsoft 365 Copilot, the generated search query doesn't include the entirety of Microsoft 365 documents associated with the prompt. However, it may also be informed by data within a Microsoft 365 document under the following conditions:
 
 - When a user enters a prompt into Copilot inside a Microsoft 365 application (for example, writing a prompt into Copilot in Microsoft Word while a relevant document is open).
@@ -61,6 +57,22 @@ When a Microsoft 365 Copilot user submits their prompt with the **Web content** 
     - **From the web:**
 
 The user can see results from both. Additionally, if the results are from the web only, the user sees the same **From the web:** heading.
+
+### Web search query citations
+
+> [!NOTE]
+> This feature is rolling out to customers in the second half of November 2024.
+
+To provide greater visibility into the generated search queries, web search query citations are shown to users in the linked citation section of the Copilot response. The section shows the exact web search queries (derived from the user’s prompt) that were sent to the Bing search service. Showing the exact web search queries helps users understand what search queries, along with the sites searched, were used to enhance Copilot’s response to their prompt. This information can help users improve their prompts and use Copilot more effectively.
+
+Web search query citations are available only in Microsoft 365 Copilot Business Chat. Citations aren’t available in the Copilot pane within a Microsoft 365 app, such as Word or PowerPoint. Also, the web search queries are only available for 24 hours.
+
+### Web search query logging
+
+> [!NOTE]
+> This feature is rolling out to customers in the second half of November 2024.
+
+Web search query logging is available so that admins can perform search, audit, and eDiscovery on the exact web search queries Copilot derived from the user's prompt. Admins can already perform these actions for prompts and responses and will be able to use their familiar tools to extend those actions to search queries.  For more information, see [Audit log activities](/purview/audit-log-activities#copilot-activities), [Copilot interaction events overview](/office/office-365-management-api/copilot-schema), and [Search for and delete Copilot data in eDiscovery (preview)](/purview/edisc-search-copilot-data#identifying-web-queries-in-microsoft-365-copilot-usage).
 
 ### Examples of generated search queries
 
@@ -87,7 +99,7 @@ Generated search queries sent to the Bing search service have the user and tenan
 - Answers or features like Rich Captions
 - Social features like Auto Suggest, Trending, and Zero Input
 
-The Bing search service operates separately from Microsoft 365 and has different data-handling practices. The use of Bing is covered by the [Microsoft Services Agreement](https://www.microsoft.com/servicesagreement) between each user and Microsoft, together with the [Microsoft Privacy Statement](https://www.microsoft.com/privacy/privacystatement). The [Microsoft Products and Services Data Protection Addendum (DPA)](https://www.microsoft.com/licensing/docs/view/Microsoft-Products-and-Services-Data-Protection-Addendum-DPA) doesn't apply to the use of the **Web content** toggle in Microsoft 365 Copilot, Microsoft Copilot, or the Bing search service.
+The Bing search service operates separately from Microsoft 365 and has different data-handling practices. The use of Bing is covered by the [Microsoft Services Agreement](https://www.microsoft.com/servicesagreement) between each user and Microsoft, together with the [Microsoft Privacy Statement](https://www.microsoft.com/privacy/privacystatement). The [Microsoft Products and Services Data Protection Addendum (DPA)](https://www.microsoft.com/licensing/docs/view/Microsoft-Products-and-Services-Data-Protection-Addendum-DPA) doesn't apply to the use of the **Web content** toggle in Microsoft 365 Copilot, Microsoft Copilot, or the Bing search service.
 
 ## Controls available to manage web search
 
