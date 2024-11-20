@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: laurawi
-ms.date: 11/19/2024
+ms.date: 11/20/2024
 ms.reviewer: cabailey, ruihu
 audience: Admin
 ms.topic: get-started
@@ -319,3 +319,4 @@ To learn more, see [Search for Copilot interactions in eDiscovery](/purview/edis
 - [Microsoft 365 Copilot requirements and prerequisites](/copilot/microsoft-365/microsoft-365-copilot-requirements)
 - [Provision Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-setup)
 - [Microsoft 365 Copilot adoption resources](https://adoption.microsoft.com/copilot)
+- [Watch: Oversharing Control at Enterprise Scale](https://www.youtube.com/watch?v=F1ARVMTBAak)
