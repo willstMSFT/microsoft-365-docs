@@ -100,19 +100,7 @@ To sync changes to one or only selected libraries:
 An applied model processes all files and folder content uploaded to the document library after it's applied. You can also do the following steps to run the model on files and folder content that already exist in the document library prior to the model being applied.
 
 > [!NOTE]
-> You must have a Syntex subscription in order to see custom Syntex commands, such as **Classify & extract** or **Translate**, when you add a document library web part to a SharePoint site page.
-
-> [!NOTE]
-> When you add a document library web part to a SharePoint site page, you must have a Syntex subscription in order to see custom Syntex commands, such as **Classify & extract** or **Translate**.
-
-> [!NOTE]
-> You must have a Syntex subscription in order for the custom Syntex commands, such as **Classify & extract** or **Translate**, to display when you add a document library web part to a SharePoint site page.
-
-> [!NOTE]
-> When you add a document library web part to a SharePoint site page, you must have a Syntex subscription in order to display the custom Syntex commands, such as **Classify & extract** or **Translate**.
-
-> [!NOTE]
-> To display the custom Syntex commands, such as **Classify & extract** or **Translate**, you must have a Syntex subscription when you add a document library web part to a SharePoint site page.  
+> To see custom Syntex commands like **Classify & extract** when you add a document library web part to a SharePoint site page, you must have a Syntex subscription.
 
 1. In your document library, select the files and folders that you want to be processed by your model.
 
