@@ -38,8 +38,8 @@ landingContent:
             url: https://www.linkedin.com/learning/search?keywords=syntex&upsellOrderOrigin=default_guest_learning&trk=homepage-learning_learning-search-bar_search-submit
       - linkListType: whats-new
         links:
-          - text: Track and manage eSignature requests using Approvals in Teams
-            url: esignature-approvals.md
+          - text: Use a prebuilt model to extract information from simple documents
+            url: prebuilt-model-simple.md
 
 # Card 2
   - title: Get started
