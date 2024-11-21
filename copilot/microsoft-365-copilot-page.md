@@ -15,11 +15,13 @@ ms.collection:
 - m365copilot
 - magic-ai-copilot
 description: "Learn about the Copilot page and how you can manage Microsoft 365 Copilot settings in the Microsoft 365 admin center."
+appliesto:
+  - ✅ Microsoft 365 Copilot
 ---
 
 # Manage Microsoft 365 Copilot settings in the Microsoft 365 admin center
 
-You can manage Microsoft 365 Copilot through the Microsoft 365 admin center by going to the Settings tab on the Copilot page. Manage how users in your organization interact with Microsoft 365 Copilot, Copilot for Security, and more.
+You can manage Microsoft 365 Copilot through the Microsoft 365 admin center by going to the Settings tab on the Copilot page. Manage how users in your organization interact with Microsoft 365 Copilot, Security Copilot, and more.
 
 ## Before you begin
 
@@ -45,7 +47,7 @@ You can manage Copilot licenses, including assigning and unassigning licenses, f
 
 ### Manage how your organization interacts with Microsoft Copilot
 
-For users signed in with a Microsoft Entra account, Microsoft Copilot offers [enterprise data protection](/copilot/microsoft-365/enterprise-data-protection) (EDP) in an experience designed for work and education. Users who aren’t signed in, or are signed in with a personal account, can use the public version of Copilot, accessed primarily through [copilot.microsoft.com](https://copilot.microsoft.com/) and [bing.com/chat](https://bing.com/chat).
+For users signed in with a Microsoft Entra account, Microsoft Copilot offers [enterprise data protection](/copilot/microsoft-365/enterprise-data-protection) (EDP) in an experience designed for work and education. Users who aren't signed in, or are signed in with a personal account, can use the public version of Copilot, accessed primarily through [copilot.microsoft.com](https://copilot.microsoft.com/) and [bing.com/chat](https://bing.com/chat).
 
 To ensure that users in your organization access Copilot with enterprise data protection for work and education, follow these [instructions on managing Copilot](/copilot/manage).
 
@@ -53,23 +55,23 @@ To ensure that users in your organization access Copilot with enterprise data pr
 
 To learn more about managing agents that work with Microsoft 365 Copilot, including how to control the integration of non-Microsoft apps and first-party apps, see [Manage Copilot agents in Integrated Apps](/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps).
 
-### Optional connected experiences for Microsoft 365 Copilot and Microsoft Copilot
+### Web search for Microsoft 365 Copilot and Microsoft Copilot
 
-Copilot can make use of cloud-backed services, called optional connected experiences, to provide additional functionality to Copilot users. For example, Copilot can [reference web content](manage-public-web-access.md) to improve the quality of its responses to user prompts. For Copilot to use these cloud-backed services, optional connected experiences must be on. For more information, see [Microsoft 365 Copilot and privacy controls for connected experiences](microsoft-365-copilot-privacy.md#microsoft-365-copilot-and-privacy-controls-for-connected-experiences).
+Copilot can reference web content to improve the quality of its responses, but only if access to web search is turned on. For more information, see [Data, privacy, and security for web search in Microsoft 365 Copilot and Microsoft Copilot](manage-public-web-access.md).
 
 ### Data, Security, and Compliance
 
 This link navigates you to the Microsoft Purview compliance portal where you can manage sensitivity labels, retention policies, Copilot interactions, audit records for Copilot, search Copilot interactions, and configure how Microsoft 365 Copilot interacts and references protected documents. Learn more about [how to protect and manage Microsoft 365 Copilot interactions with Microsoft Purview](/purview/ai-microsoft-purview).
 
-### Microsoft Copilot for Security
+### Microsoft Security Copilot
 
-This link directs you to the Copilot for Security portal to manage settings. Copilot for Security is a separate product and license from Microsoft 365 Copilot. If purchased, you can use this link to navigate to Copilot for Security settings page. To learn more, see [Copilot for Security](/copilot/security/).
+This link directs you to the Security Copilot portal to manage settings. Security Copilot is a separate product and license from Microsoft 365 Copilot. If purchased, you can use this link to navigate to Security Copilot settings page. To learn more, see [Security Copilot](/copilot/security/).
 
 ### Microsoft 365 Copilot feedback logs
 
-When users have an issue and aren't able to send feedback logs to Microsoft, you can submit feedback logs on their behalf. The data will include prompts and generated responses, relevant content samples, and additional log file. Using this feature to send feedback logs will temporarily override any user level feedback policy.
+When users have an issue and aren't able to send feedback logs to Microsoft, you can submit feedback logs on their behalf. The data will include prompts and generated responses, relevant content samples, and additional log files. Using this feature to send feedback logs will temporarily override any user level feedback policy.
 
-To learn more, see [Provide user feedback for Microsoft 365 Copilot](provide-feedback.md).
+To learn more, see [Submit admin-initiated Copilot feedback from the Microsoft 365 admin center](provide-feedback.md).
 
 ### Pin Microsoft Copilot to the navigation bar
 
