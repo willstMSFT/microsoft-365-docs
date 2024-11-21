@@ -110,10 +110,8 @@
               href: office-365-network-mac-perf-onboarding-tool.md
     - name: Microsoft 365 Networking Partner Program
       href: microsoft-365-networking-partner-program.md
-
-            - name: Manage multitenant org settings
-              href: manage-multitenant-org-settings.md
-              displayName: multitenant
+        - name: Manage multitenant org settings
+          href: manage-multitenant-org-settings.md
 - name: Tenant
   items: 
     - name: Roadmap
