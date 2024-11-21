@@ -16,7 +16,6 @@ ms.collection:
 - Adm_NonTOC
 - m365copilot
 - magic-ai-copilot
-ROBOTS: NOINDEX; NOFOLLOW
 description: "Learn about the Microsoft Copilot usage report and gain insights into the Microsoft Copilot activity in your organization."
 ---
 
