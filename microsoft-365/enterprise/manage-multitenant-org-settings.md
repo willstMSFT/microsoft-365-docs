@@ -1,12 +1,9 @@
 ---
-# Required metadata
-# For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
-# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
-
 title: Manage multitenant org settings
 description: Details regarding multitenant org settings found in the Microsoft Admin Center
-author:      jakeost-msft # GitHub alias
-ms.author: jakeost
+author: kelleyvice-msft
+ms.author: kvice
+manager: scotv
 ms.service: microsoft-365-enterprise
 ms.topic: article
 ms.date:     11/01/2024
@@ -74,11 +71,9 @@ MTO group admins can now configure an optional label for each tenant that will b
 
 ![Teams people card shows MTO user label "US".](media/manage-multitenant-org-settings/teams-mto-label-people-card.png)
 
-
 > *Fig 1: Teams people card shows MTO user label "US"*
 
-![teams-mto-search](media/manage-multitenant-org-settings/teams-mto-search.png)
-
+![Teams MTO search](media/manage-multitenant-org-settings/teams-mto-search.png)
 
 > *Fig 2: Teams search experience shows MTO user label “US”*
 
