@@ -111,6 +111,9 @@
     - name: Microsoft 365 Networking Partner Program
       href: microsoft-365-networking-partner-program.md
 
+            - name: Manage multitenant org settings
+              href: manage-multitenant-org-settings.md
+              displayName: multitenant
 - name: Tenant
   items: 
     - name: Roadmap
@@ -212,9 +215,6 @@
 
         - name: Cross-tenant OneDrive migration
           items:
-            - name: Manage multitenant org settings
-              href: manage-multitenant-org-settings.md
-              displayName: multitenant
             - name: Cross-tenant OneDrive migration overview
               href: cross-tenant-onedrive-migration.md
             - name: Step 1. Connect to tenants

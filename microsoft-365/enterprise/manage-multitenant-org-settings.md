@@ -74,12 +74,12 @@ The calendar sharing feature for MTO utilizes [Organization relationships in Exc
 
 MTO group admins can now configure an optional label for each tenant that will be displayed alongside MTO synced user's display name in Teams. This allows MTO synced users to be distinguishable within the MTO in Teams interactions. 
 
-![Teams people card shows MTO user label "US".](media/manage-multitenant-org-settings/image2.png)
+![teams-mto-label-people-card](media/manage-multitenant-org-settings/teams-mto-label-people-card.png)
 
 
 > *Fig 1: Teams people card shows MTO user label "US"*
 
-![Teams search experience shows MTO user label "US".](media/manage-multitenant-org-settings/image.png)
+![teams-mto-search](media/manage-multitenant-org-settings/teams-mto-search.png)
 
 
 > *Fig 2: Teams search experience shows MTO user label “US”*
@@ -111,11 +111,11 @@ To manage MTO user labels for tenants in your MTO:
 > [!NOTE]
 > This is currently only available for private preview.
 
-Admins can opt-in for MTO notifications to ensure they don’t miss any updates or changes to their MTO. You will receive email notifications regarding any updates to the MTO such as: a new tenant joined the MTO, a tenant left the MTO, an MTO setting changed (user labels, owner/member role, MTO name), or user sync status changed (Must have full-mesh sync set up via M365 admin center). Email notifications are sent weekly, assuming any updates were made to the MTO.
+Admins can opt-in for MTO notifications to ensure they don’t miss any updates or changes to their MTO. Receive email notifications regarding any updates to the MTO such as: a new tenant joined the MTO, a tenant left the MTO, an MTO setting changed (user labels, owner/member role, MTO name), or user sync status changed (Must have full-mesh sync set up via M365 admin center). Email notifications are sent weekly, as long as any updates were made to the MTO. No notification will be sent if nothing has changed.
 
 Additionally, in the MAC MTO portal you can review the updates and see any Microsoft recommended actions. Opt-in and select the user(s) in your org who you would like to receive the notifications.
 
-![MTO activity center.](media/manage-multitenant-org-settings/image3.png)
+![activity center](media/manage-multitenant-org-settings/activity-center.png)
 
 To manage MTO notifications:
 
