@@ -83,20 +83,6 @@ The following customer data is stored at rest in the _Local Region Geography_:
 
 ## Microsoft Purview
 
-###### **Table 1: Eligible Microsoft Purview Services for Advanced Data Residency**
-
-| Solution Area | Services | Components |
-|:-----|:-----|:-----
-| Data Security |Data Loss Prevention (DLP) |See [insert .md page] for specific commitments.|
-| Data Security |Information Barriers |See [insert .md page] for specific commitments.|
-| Data Security |Information Protection (MIP) |See [insert .md page] for specific commitments.|
-| Risk & Compliance |Audit (Standard) |See [insert .md page] for specific commitments.|
-| Risk & Compliance |Audit (Premium) |See [insert .md page] for specific commitments.|
-| Risk & Compliance |Data Lifecycle Management (DLM) |See [insert .md page] for specific commitments.|
-
-> [!NOTE]
-> *The Microsoft Purview services list mentioned above includes all services covered as part of the Advanced Data Residency commitment as of November 2024. Additional Microsoft Purview services are not currently supported.
-
 ### Data Loss Prevention (DLP)
 
 The following customer data is stored at rest in the _Local Region Geography_:
