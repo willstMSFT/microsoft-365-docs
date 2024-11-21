@@ -49,9 +49,7 @@ To edit the tenant role for a tenant in your MTO:
 1. Select **Save changes**.
 
 ## Manage calendar sharing for tenants in your MTO
-
 Calendar sharing allows users in each multitenant organization (MTO) tenant to view free/busy (time only) calendar availability information.
-
 > [!NOTE]
 > Calendar sharing via Multitenant collaboration portal is currently not available in Microsoft 365 GCC, GCC High, DoD, or Microsoft 365 China (operated by 21Vianet).
 
@@ -110,6 +108,9 @@ To manage MTO user labels for tenants in your MTO:
 
 > [!NOTE]
 > This is currently only available for private preview.
+
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 Admins can opt-in for MTO notifications to ensure they don’t miss any updates or changes to their MTO. Receive email notifications regarding any updates to the MTO such as: a new tenant joined the MTO, a tenant left the MTO, an MTO setting changed (user labels, owner/member role, MTO name), or user sync status changed (Must have full-mesh sync set up via M365 admin center). Email notifications are sent weekly, as long as any updates were made to the MTO. No notification will be sent if nothing has changed.
 
