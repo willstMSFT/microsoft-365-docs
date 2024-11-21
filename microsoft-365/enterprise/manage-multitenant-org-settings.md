@@ -22,6 +22,9 @@ Management of various multitenant org settings can be found in the Microsoft adm
 
 Only an owner tenant can edit the MTO name in an MTO.
 
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. Using least-privileged accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
 To edit the multitenant organization name for your MTO:
 
 1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/) as a global administrator.
@@ -35,6 +38,9 @@ To edit the multitenant organization name for your MTO:
 ## Edit tenant role for multitenant org tenant
 
 Only an owner tenant can change a tenant's role in an MTO.
+
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. Using least-privileged accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 To edit the tenant role for a tenant in your MTO:
 
@@ -104,14 +110,14 @@ To manage MTO user labels for tenants in your MTO:
 > [!NOTE]
 > This is currently only available for private preview.
 
-> [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. Using least-privileged accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
-
 Admins can opt-in for MTO notifications to ensure they don’t miss any updates or changes to their MTO. Receive email notifications regarding any updates to the MTO such as: a new tenant joined the MTO, a tenant left the MTO, an MTO setting changed (user labels, owner/member role, MTO name), or user sync status changed (Must have full-mesh sync set up via M365 admin center). Email notifications are sent weekly, as long as any updates were made to the MTO. No notification will be sent if nothing has changed.
 
 Additionally, in the MAC MTO portal you can review the updates and see any Microsoft recommended actions. Opt-in and select the user(s) in your org who you would like to receive the notifications.
 
 ![activity center](media/manage-multitenant-org-settings/activity-center.png)
+
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. Using least-privileged accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 To manage MTO notifications:
 
