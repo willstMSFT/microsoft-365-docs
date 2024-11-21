@@ -6,7 +6,7 @@
 title: Manage multitenant org settings
 description: Details regarding multitenant org settings found in the Microsoft Admin Center
 author:      jakeost-msft # GitHub alias
-ms.author:   jacob.osterloh # Microsoft alias
+ms.author: jakeost
 ms.service: microsoft-365-enterprise
 ms.topic: article
 ms.date:     11/01/2024
