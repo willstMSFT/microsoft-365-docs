@@ -74,7 +74,7 @@ The calendar sharing feature for MTO utilizes [Organization relationships in Exc
 
 MTO group admins can now configure an optional label for each tenant that will be displayed alongside MTO synced user's display name in Teams. This allows MTO synced users to be distinguishable within the MTO in Teams interactions. 
 
-![teams-mto-label-people-card](media/manage-multitenant-org-settings/teams-mto-label-people-card.png)
+![Teams people card shows MTO user label "US".](media/manage-multitenant-org-settings/teams-mto-label-people-card.png)
 
 
 > *Fig 1: Teams people card shows MTO user label "US"*
