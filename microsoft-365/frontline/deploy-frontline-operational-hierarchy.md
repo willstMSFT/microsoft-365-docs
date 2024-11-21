@@ -47,7 +47,7 @@ It's important to understand the following terms as you navigate hierarchies. Te
 
 ## Set up your hierarchy
 
-1. In the left navigation of the [Teams admin center](https://admin.teams.microsoft.com/), choose **Teams** > **Manage frontline teams**.
+1. In the left navigation of the [Teams admin center](https://admin.teams.microsoft.com/), choose **Frontline deployment** > **Manage frontline teams**.
 1. Go to the **Operational hierarchy** tab.
 
     :::image type="content" source="media/frontline-hierarchy-get-started.png" alt-text="Screenshot of the Operational hierarchy tab on the Manage frontline teams page, showing the Get started button." lightbox="media/frontline-hierarchy-get-started.png":::
@@ -109,7 +109,7 @@ When you add an attribute column, keep the following things in mind:
 
 ## Manage your hierarchy
 
-1. In the left navigation of the [Teams admin center](https://admin.teams.microsoft.com/), choose **Teams** > **Manage frontline teams**.
+1. In the left navigation of the [Teams admin center](https://admin.teams.microsoft.com/), choose **Frontline deployment** > **Manage frontline teams**.
 1. Go to the **Operational hierarchy** tab.
 
       :::image type="content" source="media/frontline-hierarchy-manage.png" alt-text="Screenshot of the table on the Operational hierarchy tab of the Manage frontline teams page, showing options after setup is completed." lightbox="media/frontline-hierarchy-manage.png":::
