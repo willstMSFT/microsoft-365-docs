@@ -4,10 +4,14 @@ description: Details regarding multitenant org settings found in the Microsoft A
 author: kelleyvice-msft
 ms.author: kvice
 manager: scotv
+ms.reviewer: jakeost
 ms.service: microsoft-365-enterprise
 ms.topic: article
-ms.date:     11/01/2024
+ms.date: 11/01/2024
 ms.subservice: multi-tenant
+ms.collection:
+- must-keep
+ms.localizationpriority: medium
 ---
 
 # Manage multitenant org settings
