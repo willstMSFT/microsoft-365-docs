@@ -36,7 +36,7 @@ The following workloads are included in ADR. For more information, see:
 - [Office for the Web](m365-dr-workload-office-for-web.md)
 - [Viva Connections](m365-dr-workload-viva-connections.md)
 - [Viva Topics](m365-dr-workload-viva-topics.md)*
-- [Microsoft Purview](m365-dr-workload-purview.md)*
+- [Microsoft Purview](m365-dr-workload-purview.md)**
   - [Data Loss Prevention](m365-dr-workload-purview.md#information-protection---data-loss-prevention-dlp)
   - [Information Barriers](m365-dr-workload-purview.md#risk-and-compliance---information-barriers)
   - [Information Protection (MIP)](m365-dr-workload-purview.md#risk-and-compliance---information-barriers)
