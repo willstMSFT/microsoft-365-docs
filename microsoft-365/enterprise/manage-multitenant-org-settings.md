@@ -30,7 +30,6 @@ To edit the multitenant organization name for your MTO:
 1. Select **Manage settings**.
 1. Select **Edit** under **Multitenant organization name**.
 1. Enter the new multitenant org name.
-
 1. Select **Save changes**.
 
 ## Edit tenant role for multitenant org tenant
@@ -43,19 +42,18 @@ To edit the tenant role for a tenant in your MTO:
 1. Expand **Settings** and select **Org settings**.
 1. On the **Organization profile** tab, select **Multitenant collaboration**.
 1. Select the associated tenant for which you would like to change their role.
-
 1. Under Details select **Edit** under **Tenant role**.
-
 1. Select either **Owner** or **Member**.
 1. Select **Save changes**.
 
 ## Manage calendar sharing for tenants in your MTO
 Calendar sharing allows users in each multitenant organization (MTO) tenant to view free/busy (time only) calendar availability information.
+
 > [!NOTE]
 > Calendar sharing via Multitenant collaboration portal is currently not available in Microsoft 365 GCC, GCC High, DoD, or Microsoft 365 China (operated by 21Vianet).
 
 > [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> Microsoft recommends that you use roles with the fewest permissions. Using least-privileged accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 To manage free/busy calendar sharing for tenants in your MTO:
 
@@ -84,7 +82,7 @@ MTO group admins can now configure an optional label for each tenant that will b
 Only MTO owners can manage the MTO user labels. Label changes may take some time to process and will only apply to active tenants.
 
 > [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> Microsoft recommends that you use roles with the fewest permissions. Using least-privileged accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 To manage MTO user labels for tenants in your MTO:
 
@@ -96,9 +94,7 @@ To manage MTO user labels for tenants in your MTO:
 1. Select either:
 
    1. No label.
-      
    1. Use the multitenant organization name for all tenants.
-      
    1. Custom (assign a label for each tenant, which cannot be blank).
       
 1. Select **Save changes**.
@@ -109,7 +105,7 @@ To manage MTO user labels for tenants in your MTO:
 > This is currently only available for private preview.
 
 > [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> Microsoft recommends that you use roles with the fewest permissions. Using least-privileged accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 Admins can opt-in for MTO notifications to ensure they don’t miss any updates or changes to their MTO. Receive email notifications regarding any updates to the MTO such as: a new tenant joined the MTO, a tenant left the MTO, an MTO setting changed (user labels, owner/member role, MTO name), or user sync status changed (Must have full-mesh sync set up via M365 admin center). Email notifications are sent weekly, as long as any updates were made to the MTO. No notification will be sent if nothing has changed.
 
@@ -125,17 +121,11 @@ To manage MTO notifications:
 1. Select **Manage settings**.
 1. Select **Edit** under **Email notifications**.
 1. Select **Allow email notifications**.
-
 1. Enter the email addresses you would like to receive the notifications.
-
 1. Select **Save changes**.
-
 1. Grant permissions requested in dialog box.
 
-
-
 #### Permissions
-
 
 To enable multitenant org notifications, you must grant application [permissions](/graph/permissions-reference) for the following actions:
 
@@ -152,4 +142,3 @@ This permission is required to gather details regarding the multitenant organiza
 - Reading MTO details 
 
   - [MultiTenantOrganization.Read.All](/graph/permissions-reference)
-  
