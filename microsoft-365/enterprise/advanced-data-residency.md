@@ -37,12 +37,12 @@ The following workloads are included in ADR. For more information, see:
 - [Viva Connections](m365-dr-workload-viva-connections.md)
 - [Viva Topics](m365-dr-workload-viva-topics.md)*
 - [Microsoft Purview](m365-dr-workload-purview.md)**
-  - [Data Loss Prevention](m365-dr-workload-purview.md#information-protection---data-loss-prevention-dlp)
-  - [Information Barriers](m365-dr-workload-purview.md#risk-and-compliance---information-barriers)
-  - [Information Protection (MIP)](m365-dr-workload-purview.md#risk-and-compliance---information-barriers)
-  - [Audit (Standard)](m365-dr-workload-purview.md#purview-audit-standard)
-  - [Audit (Premium)](m365-dr-workload-purview.md#purview-audit-premium)
-  - [Data Lifecycle Management (DLM)](m365-dr-workload-purview.md#purview-audit-premium)
+  - [Data Loss Prevention](m365-dr-workload-purview.md#data-security---data-loss-prevention-dlp)
+  - [Information Barriers](m365-dr-workload-purview.md#data-security---information-barriers)
+  - [Information Protection (MIP)](m365-dr-workload-purview.md#data-security---information-protection-mip)
+  - [Audit (Standard)](m365-dr-workload-purview.md#risk--compliance---audit-standard)
+  - [Audit (Premium)](m365-dr-workload-purview.md#risk--compliance---audit-premium)
+  - [Data Lifecycle Management (DLM)](m365-dr-workload-purview.md#risk--compliance---data-lifecycle-management-dlm)
 
 > [!NOTE]
 > *Viva Topics will be retired on February 22, 2025. Therefore, as of October 31, 2024, Viva Topics will no longer be a supported workload in ADR. Starting with the upcoming local region launches in Taiwan and New Zealand, Viva Topics customer data will not be migrated to new local regions, nor will new customers have Viva Topics stored in existing local regions. For more details, please visit [aka.ms/TopicsFebSupport](https://aka.ms/TopicsFebSupport).
