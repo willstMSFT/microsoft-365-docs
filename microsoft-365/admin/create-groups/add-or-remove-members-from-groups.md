@@ -33,7 +33,7 @@ In Microsoft 365, group members typically create their own groups, add themselve
 > If you're not an admin, you can [add or remove members using Outlook](https://support.microsoft.com/office/3b650f4a-5c9b-4f94-a1bb-0cca4b1091de).
   
 > [!NOTE]
-> Nesting of groups isn't supported with regard to Microsoft 365 Group, that is, you can't add an existing Distribution List (DL) OR M365 Group as member of another Microsoft 365 Group.
+> Nesting of groups isn't supported with regard to Microsoft 365 Group, that is, you can't add an existing Distribution List (DL) or M365 Group as member of another Microsoft 365 Group.
 
 ## Add a member to a group in the admin center
 
