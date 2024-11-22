@@ -54,7 +54,7 @@ If you start to run out of storage for your SharePoint sites, you can use the Of
 
 ## View available storage
 
-In the [SharePoint admin center](https://go.microsoft.com/fwlink/p/?linkid=2185219), go to <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**Active sites**</a>, and sign in with an account that has [admin permissions](/sharepoint/sharepoint-admin-role) for your organization.
+In the [SharePoint admin center](https://go.microsoft.com/fwlink/p/?linkid=2185219), Go to [**Active sites**](https://go.microsoft.com/fwlink/?linkid=2185220), and sign in with an account that has [admin permissions](/sharepoint/sharepoint-admin-role) for your organization.
 
 The upper right side of the page shows the amount of storage used across all sites, and the total storage for your subscription. If your organization has configured Multi-Geo in Microsoft 365, the bar also shows the amount of storage used across all geo locations.
 
