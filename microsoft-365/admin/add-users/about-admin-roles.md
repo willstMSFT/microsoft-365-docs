@@ -76,6 +76,7 @@ You'll probably only need to assign the following roles in your organization. By
 
 |Admin role     |Who should be assigned this role?  |
 |---------|---------|
+| AI administrator | Assign the AI Administrator role to users who need to do the following tasks:<br> &bull; Manage all aspects of Microsoft 365 Copilot <br> &bull; Manage AI-related enterprise services, extensibility, and copilot agents from the Integrated apps page in the Microsoft 365 admin center <br> &bull; Approve and publish line-of-business copilot agents <br> &bull; Allow users to install an app or install an app for users in the organization if the app does not require permission <br> &bull; Read and configure Azure and Microsoft 365 service health dashboards <br> &bull; View usage reports, adoption insights, and organizational insight <br> &bull; Create and manage support tickets in Azure and the Microsoft 365 admin center<br/>|
 |Billing admin     |   Assign the Billing admin role to users who make purchases, manage subscriptions and service requests, and monitor service health. Billing admins cannot assign licenses; If a Billing admin is also a License or User Administrator, visit [Licenses](https://go.microsoft.com/fwlink/p/?linkid=842264) to assign licenses.<br><br> Billing admins also can:<br> &bull; Manage all aspects of billing<br> &bull; Create and manage support tickets in the Azure portal <br/><br/>|
 |Exchange admin     |   Assign the Exchange admin role to users who need to view and manage your user's email mailboxes, Microsoft 365 groups, and Exchange Online. <br><br> Exchange admins can also:<br> &bull; Recover deleted items in a user's mailbox <br> &bull; Set up "Send As" and "Send on behalf" delegates <br>  |
 |Fabric admin |   Assign the Fabric admin role to users who need to do the following: <br> &bull; Manage all admin features for Microsoft Fabric and Power BI <br> &bull; Report on usage and performance <br> &bull; Review and manage auditing  |
@@ -114,6 +115,7 @@ You'll probably only need to assign the following roles in your organization. By
 | Skype admin  | Read | Read | Read | Read |
 | Service admin  | Read | Read  | Read | Read |
 | Group admin  | Create, Read, Update, Delete, ***Can't update EXO properties*** | Create, Read, Update, Delete | Read | Read |
+| AI administrator | Read | Read | Read | Read | 
 
 ## Delegated administration for Microsoft Partners
 
