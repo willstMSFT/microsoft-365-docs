@@ -48,7 +48,7 @@ By default, taxonomy tagging is available for libraries on all SharePoint sites.
 
 3. On the **Automate content processes with Syntex** page, select **Go to Syntex settings**.
 
-4. On the Syntex page, in the **Documents & images** section, select **Taxonomy tagging**.
+4. On the Syntex page, in the **Document & image services** section, select **Taxonomy tagging**.
 
 5. On the **Taxonomy tagging** panel:
 

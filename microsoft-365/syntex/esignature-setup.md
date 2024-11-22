@@ -47,7 +47,7 @@ You must be a [SharePoint Administrator](/entra/identity/role-based-access-contr
 
 3. On the **Automate content processes with Syntex** page, select **Go to Syntex settings**.
 
-4. On the Syntex page, in the **Documents & images** section, select **eSignature**.
+4. On the Syntex page, in the **Document & image services** section, select **eSignature**.
 
 5. On the **eSignature** panel, select **Let people in your organization use eSignature**.
 

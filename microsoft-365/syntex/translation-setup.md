@@ -47,7 +47,7 @@ By default, document translation is turned on for libraries in all SharePoint si
 
 3. On the **Automate content processes with Syntex** page, select **Go to Syntex settings**.
 
-4. On the Syntex page, in the **Documents & images** section, select **Document translation**.
+4. On the Syntex page, in the **Document & image services** section, select **Document translation**.
 
 5. On the **Document translation** panel:
 

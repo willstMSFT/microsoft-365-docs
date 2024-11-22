@@ -47,7 +47,7 @@ By default, content assembly is available for libraries on all SharePoint sites.
 
 3. On the **Automate content processes with Syntex** page, select **Go to Syntex settings**.
 
-4. On the Syntex page, in the **Documents & images** section, select **Content assembly**.
+4. On the Syntex page, in the **Document & image services** section, select **Content assembly**.
 
 5. On the **Content assembly** panel, select **Edit**.
 

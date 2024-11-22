@@ -50,7 +50,7 @@ By default, image tagging is available for libraries on all SharePoint sites. Fo
 
 3. On the **Automate content processes with Syntex** page, select **Go to Syntex settings**.
 
-4. On the Syntex page, in the **Documents & images** section, select **Image tagging**.
+4. On the Syntex page, in the **Document & image services** section, select **Image tagging**.
 
 5. On the **Image tagging** panel:
 
