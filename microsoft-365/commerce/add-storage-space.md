@@ -34,7 +34,7 @@ ms.date: 08/28/2023
 
 # Add more SharePoint storage to your subscription
 
-If you start to run out of storage for your SharePoint sites, you can use the Office 365 Extra File Storage add-on to add more storage in 1 GB increments. You buy the add-on in the <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 admin center</a>. If you don't see the **Office 365 Extra File Storage** in the list of available add-ons, it means that your plan isn't eligible to buy it. For more information, see [Is my plan eligible?](#is-my-plan-eligible-for-office-365-extra-file-storage).
+If you start to run out of storage for your SharePoint sites, you can use the Office 365 Extra File Storage add-on to add more storage in 1 GB increments. You buy the add-on in the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339). If you don't see the **Office 365 Extra File Storage** in the list of available add-ons, it means that your plan isn't eligible to buy it. For more information, see [Is my plan eligible?](#is-my-plan-eligible-for-office-365-extra-file-storage)
 
 > [!NOTE]
 > If you bought your subscription through Volume Licensing or a Cloud Solution Provider (CSP), you can't buy **Office 365 Extra File Storage** directly from Microsoft. Contact your representative or partner for help.
@@ -45,7 +45,7 @@ If you start to run out of storage for your SharePoint sites, you can use the Of
 
 ## Before you begin
 
-- [Find out what type of billing account you have.](manage-billing-accounts.md#view-my-billing-accounts).
+- [Find out what type of billing account you have](manage-billing-accounts.md#view-my-billing-accounts).
 - If you have a Microsoft Customer Agreement (MCA) billing account type, you must be a Billing account owner or contributor, or a Billing profile owner or contributor to do the tasks described in this article. For information about billing account and billing profile roles, see [Understand your Microsoft business billing account](manage-billing-accounts.md) and [Manage your Microsoft business billing profiles](billing-and-payments/manage-billing-profiles.md).
 - If you have a Microsoft Online Subscription Agreement (MOSA), you must be at least a Billing Administrator to do the tasks described in this article. For more information, see [About admin roles](../admin/add-users/about-admin-roles.md).
 
