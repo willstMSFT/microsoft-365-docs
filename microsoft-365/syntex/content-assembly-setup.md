@@ -14,7 +14,7 @@ ms.collection:
     - enabler-strategic
     - m365initiative-syntex
 ms.localizationpriority:  medium
-description: Learn to create set up and manage content assembly in Microsoft Syntex.
+description: Learn to create set up and manage content assembly in SharePoint.
 ---
 
 # Set up and manage content assembly in Microsoft Syntex
@@ -25,7 +25,7 @@ The content assembly service for Microsoft Syntex is set up in the Microsoft 365
 
 ### Licensing
 
-Before you can use content assembly in Microsoft Syntex, you must first link an Azure subscription in [Syntex pay-as-you-go](syntex-azure-billing.md). Content assembly in Syntex is billed based on the [type and number of transactions](syntex-pay-as-you-go-services.md).
+Before you can use content assembly, you must first link an Azure subscription in [Syntex pay-as-you-go](syntex-azure-billing.md). Content assembly is billed based on the [type and number of transactions](syntex-pay-as-you-go-services.md).
 
 ### Permissions
 
@@ -35,7 +35,7 @@ You must be a [SharePoint Administrator](/entra/identity/role-based-access-contr
 
 ## Set up content assembly
 
-After an [Azure subscription is linked to Microsoft Syntex](syntex-azure-billing.md), content assembly will be automatically set up and enabled for all SharePoint sites.
+After an [Azure subscription is linked to Microsoft Syntex](syntex-azure-billing.md), content assembly is automatically set up and enabled for all SharePoint sites.
 
 ## Manage sites
 
@@ -47,7 +47,7 @@ By default, content assembly is available for libraries on all SharePoint sites.
 
 3. On the **Automate content processes with Syntex** page, select **Go to Syntex settings**.
 
-4. On the Syntex page, in the **Document & image services** section, select **Content assembly**.
+4. On the Syntex page, in the **Documents & images** section, select **Content assembly**.
 
 5. On the **Content assembly** panel, select **Edit**.
 

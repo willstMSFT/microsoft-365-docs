@@ -15,7 +15,7 @@ ms.collection:
     - enabler-strategic
     - m365initiative-syntex
 ms.localizationpriority:  medium
-description: Learn how to set and configure enhanced image tagging in Microsoft Syntex.
+description: Learn how to set and configure enhanced image tagging in SharePoint.
 ---
 
 # Set up and manage enhanced image tagging in Microsoft Syntex
@@ -26,7 +26,7 @@ The image tagging service for Microsoft Syntex is set up in the Microsoft 365 ad
 
 ### Licensing
 
-Before you can use image tagging in Syntex, you must first link an Azure subscription in [Syntex pay-as-you-go](syntex-azure-billing.md). Image tagging in Syntex is billed based on the [type and number of transactions](syntex-pay-as-you-go-services.md).
+Before you can use image tagging, you must first link an Azure subscription in [Syntex pay-as-you-go](syntex-azure-billing.md). Image tagging is billed based on the [type and number of transactions](syntex-pay-as-you-go-services.md).
 
 ### Permissions
 
@@ -36,7 +36,7 @@ You must be a [SharePoint Administrator](/entra/identity/role-based-access-contr
 
 ## Set up image tagging
 
-After an [Azure subscription is linked to Microsoft Syntex](syntex-azure-billing.md), image tagging will be automatically set up and enabled for all SharePoint sites.
+After an [Azure subscription is linked to Microsoft Syntex](syntex-azure-billing.md), image tagging is automatically set up and enabled for all SharePoint sites.
 
 Although you enable pay-as-you-go billing for image tagging, you'll be charged only when [image tagging is enabled on a document library](image-tagging.md).
 
@@ -50,7 +50,7 @@ By default, image tagging is available for libraries on all SharePoint sites. Fo
 
 3. On the **Automate content processes with Syntex** page, select **Go to Syntex settings**.
 
-4. On the Syntex page, in the **Document & image services** section, select **Image tagging**.
+4. On the Syntex page, in the **Documents & images** section, select **Image tagging**.
 
 5. On the **Image tagging** panel:
 
