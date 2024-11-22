@@ -59,10 +59,10 @@ Follow these steps to limit on which sites users can create prebuilt models to p
     b. On the **Sites where models can be used** panel, select **All sites** or **Selected sites (up to 100)**. For selected sites, follow the instructions to either select the sites or upload a CSV file listing a maximum of 100 sites. You can then manage site access permissions for the sites you selected.
 
     > [!NOTE]
-    > Disabling a site after a model is made available to process files on that site will not disable the model. Models can still be used to process files and incur charges. A model can be made available to process files by being created on that site or in a content center.
+    > You must be a member of any site that you want to include in the CSV file.
 
     > [!NOTE]
-    > You must be a member of any site that you want to include in the CSV file.
+    > Disabling a site after a model is made available to process files on that site will not disable the model. Models can still be used to process files and incur charges. A model can be made available to process files by being created on that site or in a content center.
 
     > [!NOTE]
     > For multi-geo environments, the **No sites** and **Selected sites** settings apply only to the primary geo of multi-geo tenants. If you want to restrict or add sites in non-primary geos, contact Microsoft support.
