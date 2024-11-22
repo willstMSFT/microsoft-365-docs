@@ -36,13 +36,11 @@ You must be a [SharePoint Administrator](/entra/identity/role-based-access-contr
 
 ## Set up prebuilt document processing
 
-After an [Azure subscription is linked to Microsoft Syntex](syntex-azure-billing.md), prebuilt document processing will be automatically set up and enabled for all SharePoint sites.
+After an [Azure subscription is linked to Microsoft Syntex](syntex-azure-billing.md), prebuilt document processing is automatically set up and enabled for all SharePoint sites.
 
 ## Manage sites
 
-By default, prebuilt document processing is turned on for libraries in all SharePoint sites. When prebuilt document processing is on, prebuilt models are allowed to run. Prebuilt models can also be created and applied on sites that are specified.
-
-Follow these steps to limit on which sites users can create prebuilt models to process files.
+By default, prebuilt document processing is turned on for libraries in all SharePoint sites. Follow these steps to restrict the sites where users can create prebuilt models for processing files.
 
 1. In the Microsoft 365 admin center, select <a href="https://go.microsoft.com/fwlink/p/?linkid=2171997" target="_blank">**Setup**</a>.
 
