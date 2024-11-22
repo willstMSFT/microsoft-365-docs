@@ -123,8 +123,9 @@ The following customer data is stored at rest in the _Local Region Geography_:
 - Encryption policies
 - Admin settings
 - Encrypted messages
- 
+
 #### Classifiers
+
 - Sensitive information types, including Enhanced Data Match (EDM) and Trainable Classifiers, configured by customers
 
 ### Audit (Standard)
