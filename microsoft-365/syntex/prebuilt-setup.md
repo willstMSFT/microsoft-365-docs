@@ -48,7 +48,7 @@ By default, prebuilt document processing is turned on for libraries in all Share
 
 3. On the **Automate content processes with Syntex** page, select **Go to Syntex settings**.
 
-4. On the Syntex page, in the **Document & images** section, select **Prebuilt document processing**.
+4. On the Syntex page, in the **Document & image services** section, select **Prebuilt document processing**.
 
 5. On the **Prebuilt document processing** panel:
 
