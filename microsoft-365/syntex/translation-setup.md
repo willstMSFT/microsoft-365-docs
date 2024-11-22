@@ -14,7 +14,7 @@ ms.collection:
     - enabler-strategic
     - m365initiative-syntex
 ms.localizationpriority:  medium
-description: Learn how to set up document translation in Microsoft Syntex.
+description: Learn how to set up document translation in SharePoint.
 ---
 
 # Set up and manage document translation in Microsoft Syntex
@@ -25,7 +25,7 @@ The document translation service for Microsoft Syntex is set up in the Microsoft
 
 ### Licensing
 
-Before you can use translation in Syntex, you must first link an Azure subscription in [Syntex pay-as-you-go](syntex-azure-billing.md). Translation in Syntex is billed based on the [type and number of transactions](syntex-pay-as-you-go-services.md).
+Before you can use document translation, you must first link an Azure subscription in [Syntex pay-as-you-go](syntex-azure-billing.md). Document translation is billed based on the [type and number of transactions](syntex-pay-as-you-go-services.md).
 
 ### Permissions
 
@@ -35,7 +35,7 @@ You must be a [SharePoint Administrator](/entra/identity/role-based-access-contr
 
 ## Set up translation
 
-After an [Azure subscription is linked to Microsoft Syntex](syntex-azure-billing.md), translation is automatically set up and turned on for all SharePoint sites.
+After an [Azure subscription is linked to Microsoft Syntex](syntex-azure-billing.md), document translation is automatically set up and turned on for all SharePoint sites.
 
 ## Manage sites
 
