@@ -102,16 +102,26 @@ jobs:
                             echo "" >> $env:GITHUB_STEP_SUMMARY
                             echo "Build validation completed with a status of `"$ValidationResult`" in PR: $PrHtmlUrl. Builds must be free of errors and warnings before PRs can be merged." >> $env:GITHUB_STEP_SUMMARY
 
+                            # Capitalize first letter of result.
+                            $CapValidationResult = $ValidationResult.Substring(0,1).ToUpper() + $ValidationResult.Substring(1)
+
                             $Status.state = "failure"
-                            $Status.description = "Validation status: $ValidationResult"
+                            $Status.description = "Blocking merge. $CapValidationResult must be resolved before merge."
                         
+                        } ElseIf ($ValidationResult -like "*suggestion*") {
+                        
+                            write-host "Build validation completed with a status of `"$ValidationResult`". Allowing merge."
+
+                            $Status.state = "success"
+                            $Status.description = "Allowing merge. Please resolve $ValidationResult."
+
                         } Else {
                         
                             write-host "Build validation completed with a status of `"$ValidationResult`". Allowing merge."
 
                             $Status.state = "success"
-                            $Status.description = "Validation status: $ValidationResult"
-
+                            $Status.description = "Allowing merge."
+                        
                         }
 
                         $StatusJson = $Status | ConvertTo-Json
