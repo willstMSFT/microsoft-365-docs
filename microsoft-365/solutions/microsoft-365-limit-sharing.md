@@ -1,7 +1,7 @@
 ---
 title: "Limit sharing in Microsoft 365"
-ms.author: 
-author: ruihu
+ms.author: ruihu
+author: maggierui
 manager: jtremper
 ms.date: 12/15/2023
 audience: ITPro
