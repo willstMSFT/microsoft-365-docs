@@ -34,7 +34,7 @@ ms.date: 08/28/2023
 
 # Add more SharePoint storage to your subscription
 
-If you start to run out of storage for your SharePoint sites, you can use the Office 365 Extra File Storage add-on to add more storage in 1 GB increments. You buy the add-on in the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339). If you don't see the **Office 365 Extra File Storage** in the list of available add-ons, it means that your plan isn't eligible to buy it. For more information, see [Is my plan eligible?](#is-my-plan-eligible-for-office-365-extra-file-storage)
+If you start to run out of storage for your SharePoint sites, you can use the Office 365 Extra File Storage add-on to add more storage in 1 GB increments. You buy the add-on in the <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 admin center</a>. If you don't see the **Office 365 Extra File Storage** in the list of available add-ons, it means that your plan isn't eligible to buy it. For more information, see [Is my plan eligible?](#is-my-plan-eligible-for-office-365-extra-file-storage)
 
 > [!NOTE]
 > If you bought your subscription through Volume Licensing or a Cloud Solution Provider (CSP), you can't buy **Office 365 Extra File Storage** directly from Microsoft. Contact your representative or partner for help.
@@ -54,7 +54,7 @@ If you start to run out of storage for your SharePoint sites, you can use the Of
 
 ## View available storage
 
-In the [SharePoint admin center](https://go.microsoft.com/fwlink/p/?linkid=2185219), Go to [**Active sites**](https://go.microsoft.com/fwlink/?linkid=2185220), and sign in with an account that has [admin permissions](/sharepoint/sharepoint-admin-role) for your organization.
+In the <a href="https://go.microsoft.com/fwlink/p/?linkid=2185219" target="_blank">SharePoint admin center</a>, go to <a href="https://go.microsoft.com/fwlink/p/?linkid=2185220" target="_blank">Active sites</a>, and sign in with an account that has [admin permissions](/sharepoint/sharepoint-admin-role) for your organization.
 
 The upper right side of the page shows the amount of storage used across all sites, and the total storage for your subscription. If your organization has configured Multi-Geo in Microsoft 365, the bar also shows the amount of storage used across all geo locations.
 
