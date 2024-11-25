@@ -15,7 +15,7 @@ ms.collection:
     - enabler-strategic
     - m365initiative-syntex
 ms.localizationpriority: medium
-description: Learn how to set up and manage optical character recognition in Microsoft Syntex.
+description: Learn how to set up and manage optical character recognition in SharePoint.
 ---
 
 # Set up and manage optical character recognition in Microsoft Syntex
@@ -26,7 +26,7 @@ The optical character recognition (OCR) service for Microsoft Syntex is set up i
 
 ### Licensing
 
-Before you can use the OCR service in Microsoft Syntex, you must first link an Azure subscription in [Syntex pay-as-you-go](syntex-azure-billing.md). OCR in Syntex is billed based on the [type and number of transactions](syntex-pay-as-you-go-services.md).
+Before you can use the OCR service, you must first link an Azure subscription in [Syntex pay-as-you-go](syntex-azure-billing.md). OCR is billed based on the [type and number of transactions](syntex-pay-as-you-go-services.md).
 
 ### Permissions
 

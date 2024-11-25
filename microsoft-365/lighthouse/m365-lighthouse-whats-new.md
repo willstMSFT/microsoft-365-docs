@@ -5,7 +5,7 @@ ms.author: sharik
 author: SKjerland
 manager: scotv
 ms.reviewer: sharonchoi
-ms.date: 11/19/2024
+ms.date: 11/21/2024
 audience: Admin
 ms.topic: whats-new
 ms.service: microsoft-365-lighthouse
@@ -51,6 +51,18 @@ To assign RBAC roles, in the left navigation pane in Lighthouse, select **Permis
 [Go to the Lighthouse permissions page now](https://lighthouse.microsoft.com/#view/Microsoft_Intune_MTM/RBAC.ReactView)
 
 To learn more, see [Overview of permissions in Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md).
+
+### New Home page card to quickly get you started with Lighthouse
+
+We're excited to introduce a new **Let's start with the basics** card on the **Home** page. When a user signs in to Microsoft 365 Lighthouse, the new card identifies key tasks and learning resources&mdash;scoped to the user's assigned Lighthouse RBAC role or roles&mdash;to help them set up their accounts and learn the basics of Lighthouse.
+
+The new card contains a list of relevant tasks and interactive guides in the form of a checklist. Selecting an item in the list simultaneously launches the task or resource and marks the item as initiated, making it easy for users to track their progress.
+
+The **Let's start with the basics** card is a great way for new users to quickly get up to speed and comfortable with Lighthouse, so they can more effectively work with customers to keep them safe, secure, and productive. The card also benefits existing users of Lighthouse by serving as a helpful refresher.
+
+To get started, go to the **Home** page of Lighthouse, locate the **Let's start with the basics** card, and then select an item from the list on the card.
+
+[Go to the Home page now](https://lighthouse.microsoft.com/#view/Microsoft_Intune_MTM/HomePage.ReactView)
 
 ## October 2024
 
