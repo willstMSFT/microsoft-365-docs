@@ -16,7 +16,10 @@ ms.localizationpriority:  medium
 description: Learn about Microsoft 365 Archive for Education, including tenant eligibility, pricing model, and billing scenarios. 
 ---
 
-# Education offering
+# Education offering for Microsoft 365 Archive
+
+> [!NOTE]
+> The Microsoft 365 Archive feature is now generally available. It is currently rolling out and might not yet be fully available to all organizations.
 
 This article provides an overview of Microsoft 365 Archive for Education, including tenant eligibility, pricing model, and billing scenarios. 
 

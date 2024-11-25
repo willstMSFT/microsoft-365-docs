@@ -18,6 +18,9 @@ description: Learn about end-user features for archived sites in Microsoft 365 A
 
 # End user experience in Microsoft 365 Archive
 
+> [!NOTE]
+> The Microsoft 365 Archive feature is now generally available. It is currently rolling out and might not yet be fully available to all organizations.
+
 End users aren't able to access or search for any content that has been archived. Whenever users try to access archived content, they see a message stating that the site has been archived.
 
 ![Screenshot of the Site is archived message end users receive when they try to access content that has been archived.](../media/m365-archive/site-is-archived-message.png)

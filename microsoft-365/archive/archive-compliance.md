@@ -20,6 +20,7 @@ description: Learn about compliance features for archived sites in Microsoft 365
 
 > [!NOTE]
 > Microsoft Purview features work seamlessly with archived content. For example, you can apply retention hold on archived content without needing to unarchive it. Likewise, you can also archive content in retention hold without needing to move or delete it from retention scope.
+> The Microsoft 365 Archive feature is now generally available. It is currently rolling out and might not yet be fully available to all organizations.
 
 Archived SharePoint sites, just like active SharePoint sites, maintain a baseline level of data promises. These promises include the following considerations:
 
