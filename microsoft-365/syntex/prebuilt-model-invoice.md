@@ -30,7 +30,7 @@ To use an invoices model, follow these steps:
 
 ## Step 1: Create an invoices model
 
-Follow the instructions in [Create a model in Syntex](create-syntex-model.md#set-up-a-prebuilt-model) to create an invoices prebuilt model. Then continue with the following steps to complete your model.
+Follow the instructions in [Create a model in Syntex](create-syntex-model.md#create-a-prebuilt-model) to create an invoices prebuilt model. Then continue with the following steps to complete your model.
 
 ## Step 2: Upload an example file to analyze
 

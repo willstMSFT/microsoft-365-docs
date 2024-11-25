@@ -30,7 +30,7 @@ With SharePoint eSignature, you can quickly and securely send documents for sign
 
 ## Regional availability
 
-SharePoint eSignature is currently available in the US, UK, and Canada. By November 2024, it will be available to the EU and Australia Pacific, and it will be available globally in 2025.
+SharePoint eSignature is currently available in the US, UK, and Canada. It will be available in the EU and Australia Pacific by November 2024, and globally in 2025. Furthermore, the use of other eSignature providers as an integration with the SharePoint eSignature platform is available globally.
 <!---
 Beginning September 2024, SharePoint eSignature will be rolling out to the UK, Canada, and the following European countries/regions: Austria, Belgium, Bulgaria, Croatia, Cyprus, Czechia, Denmark, Estonia, Finland, Greece, Hungary, Ireland, Latvia, Lithuania, Luxembourg, Malta, Poland, Portugal, Romania, Slovakia, Slovenia, and Sweden.
 
@@ -63,6 +63,7 @@ The providers facilitate the signing process and send out all relevant notificat
 - SharePoint eSignature is available for only PDF documents at this time.
 - Tracking of SharePoint eSignature requests through the Approvals app in Microsoft Teams is now available.
 - Support for Adobe Acrobat Sign and Docusign is now available. In the future, there will be potential integration with other electronic signature providers.
+- Support for Adobe Acrobat sign and Docusign is now available globally
 
 <br>
 
