@@ -18,9 +18,6 @@ description: Read frequently asked questions about Microsoft 365 Archive.
 
 # Frequently asked questions about Microsoft 365 Archive
 
-> [!NOTE]
-> The Microsoft 365 Archive feature is now generally available. It is currently rolling out and might not yet be fully available to all organizations.
-
 #### What is the difference between Microsoft 365 Archive and SharePoint Advanced Management?
 
 - Microsoft 365 Archive gives the ability to archive a site in SharePoint.

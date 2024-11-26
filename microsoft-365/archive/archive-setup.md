@@ -18,9 +18,6 @@ description: Learn how to set up and configure Microsoft 365 Archive.
 
 # Set up Microsoft 365 Archive
 
-> [!NOTE]
-> The Microsoft 365 Archive feature is now generally available. It is currently rolling out and might not yet be fully available to all organizations.
-
 Microsoft 365 Archive follows a pay-as-you-go model, and is configured through the Microsoft 365 admin center.
 
 ![Diagram showing four steps of the setup process for Microsoft 365 Archive.](../media/m365-archive/archive-setup-diagram.png)

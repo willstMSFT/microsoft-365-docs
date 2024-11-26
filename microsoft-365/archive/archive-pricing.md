@@ -18,9 +18,6 @@ description: Learn about the pricing model for storage consumption and site reac
 
 # Pricing model for Microsoft 365 Archive
 
-> [!NOTE]
-> The Microsoft 365 Archive feature is now generally available. It is currently rolling out and might not yet be fully available to all organizations.
-
 Microsoft 365 Archive charges you for storage and reactivation.
 
 - **Storage consumption** that is charged at a per-GB monthly rate. This meter is charged only when archived storage plus active storage in SharePoint exceeds the included or licensed allocated SharePoint storage capacity limit of the tenant. In other words, there's no additional storage cost for archived sites if the tenant has not consumed its already licensed storage quota. For more information about storage capacity limits, see [SharePoint limits](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits).

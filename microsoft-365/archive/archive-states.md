@@ -18,9 +18,6 @@ description: Learn about the archive states and what they mean in Microsoft 365 
 
 # Archive states in Microsoft 365 Archive
 
-> [!NOTE]
-> The Microsoft 365 Archive feature is now generally available. It is currently rolling out and might not yet be fully available to all organizations.
-
 The following table describes the archive states and allowed operations.
 
 |Archive state  |Description  |Allowed operations  |
