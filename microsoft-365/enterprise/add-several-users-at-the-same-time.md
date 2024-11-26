@@ -3,7 +3,7 @@ title: "Add several users at the same time to Microsoft 365 - Admin Help"
 ms.author: kwekua
 author: kwekuako
 manager: scotv
-ms.date: 10/30/2023
+ms.date: 11/26/2024
 audience: Admin
 ms.topic: article
 ms.service: microsoft-365-enterprise
