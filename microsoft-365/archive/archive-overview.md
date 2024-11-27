@@ -5,7 +5,7 @@ author: chuckedmonson
 manager: jtremper
 audience: admin
 ms.reviewer: sreelakshmi
-ms.date: 10/30/2024
+ms.date: 11/26/2024
 ms.topic: conceptual
 ms.service: microsoft-365-archive
 ms.custom: archive
@@ -17,9 +17,6 @@ description: Learn about how Microsoft 365 Archive can provide your with organiz
 ---
 
 # Overview of Microsoft 365 Archive
-
-> [!NOTE]
-> This feature is now generally available. It is currently rolling out and might not yet be fully available to all organizations.
 
 Microsoft 365 Archive offers cost-effective storage for inactive SharePoint sites.
 
