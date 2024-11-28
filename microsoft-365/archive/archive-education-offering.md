@@ -19,7 +19,7 @@ description: Learn about Microsoft 365 Archive for Education, including tenant e
 # Education offering for Microsoft 365 Archive
 
 > [!NOTE]
-> The education pricing for Microsoft 365 Archive is still rolling out and will be fully available to all education tenants by January 31, 2024.
+> The education pricing for Microsoft 365 Archive is still rolling out and will be fully available to all education tenants by January 31, 2025.
 
 This article provides an overview of Microsoft 365 Archive for Education, including tenant eligibility, pricing model, and billing scenarios. 
 
