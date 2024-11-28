@@ -60,6 +60,19 @@ Admins can view Copilot agents from the list of available, deployed, or blocked 
 
 You can also check if a specific app has Copilot support by selecting it from apps list and checking if the app overview mentions **Copilot** as a host product.
 
+## Enable or disable Copilot extensibility
+
+Admins can enable or disable Copilot extensibility for their org by using a preview setting in the tenant default options in the Integrated Apps section of the Microsoft 365 admin center. This setting lets you control who can access Copilot agents in their organization. The setting will be available until February 12th, 2025. Over the next 90 days, we’ll introduce additional agent reports and controls in each of the experiences, as well as more comprehensive guidance about how to manage this spectrum of agents across these controls.
+
+The preview setting has three options:
+
+- **All Users** This is the default option and it means that all users in the organization can access Copilot agents, subject to the existing app policies and user assignments.
+- **No Users** This option means that no users in the organization can access Copilot agents, and the third party agents are disabled in the Copilot agents flyout. This option also hides Copilot agents from the list of Available and Deployed apps on the Integrated Apps page.
+- **Specific Users** This option lets you select specific users or groups in your organization to have access to Copilot agents. So while all or specific users in your organization may have permissions to install and use apps from the Available apps and Deployed apps lists, only the users or groups you select in this setting can use Copilot agents.
+
+> [!NOTE]
+> Once extensibility is disabled, the Microsoft pinned Visual Creator agent and entry point for Agent Builder will no longer be visible in BizChat.  Once extensibility is disabled in the tenant, it can take up to 24 hours for agents to disappear for users and for Agent Builder and Visual Creator to disappear.
+
 ## Deploy or remove Copilot agents
 
 Admins can deploy or remove Copilot agents across the whole organization or for specific users or groups by using the same gestures and controls that work for any other app in the Microsoft 365 admin center. Admins can select a Copilot agent from the list of Available or Deployed apps and select **Deploy** or **Remove**. Admins can also choose to deploy or remove the agents for everyone or specific users or groups. Deploying or removing an agent affects its availability and functionality in Copilot and in the other host products, such as Outlook, Teams, or Microsoft 365.
