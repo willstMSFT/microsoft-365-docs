@@ -17,7 +17,7 @@ ms.collection:
 appliesto: 
   - Microsoft Teams
   - Microsoft 365 for frontline workers
-ms.date: 10/31/2023
+ms.date: 12/02/2024
 ---
 
 # Prerequisites and requirements for the Teams Shifts connector for UKG Pro Workforce Management
@@ -171,7 +171,7 @@ Assumptions:
 - Some frontline workers are allowed to take shifts from other stores within the Central London Area. In other words, in UKG Pro WFM, these frontline workers are part of a job transfer set.
 
 > [!NOTE]
-> Shifts doesn't yet support workers' requests across different teams. This means that workers can't offer or swap shifts with workers who are in different locations (that is, on different teams in Teams). Workers can only perform these actions within their own team.
+> Shifts doesn't yet support workers' requests across different teams when integrated with a WFM system. This means that workers can't offer or swap shifts with workers who are in different locations (that is, on different teams in Teams). Workers can only perform these actions within their own team.
 
 ### UKG Pro Workforce Management location structure
 
@@ -210,8 +210,6 @@ In this scenario, the IT admin organizes teams in Teams as follows.
     > [!NOTE]
     > In UKG Pro WFM, if you have departments with business locations, create teams for each department (instead of for each store). As mentioned earlier in this article, to establish the mapping between platforms, we take the location path up to the node and consider that a team.
 
-    <!--As mentioned earlier in this article, to establish the mapping between platforms, employees who have the same location path up to node before the job type are considered as part of the same team-->
-
 #### What does this mean when I run the Shifts connector wizard?
 
 When the IT admin sets up a connection instance in the [wizard](shifts-connector-wizard-ukg.md), they map each store location to the relevant team, as shown in the following table.
@@ -236,7 +234,7 @@ Within each store, in Shifts:
 
 For employees who work at multiple stores, in Shifts:
 
-- Frontline workers and managers can only make requests within a particular store. Shifts currently doesn't support workers' request between different stores.
+- Frontline workers and managers can only make requests within a particular store. Shifts currently doesn't support workers' requests between different stores when integrated with a WFM system.
 - Frontline workers can view their schedule and their team’s schedule in any store they work at.
 
 ## Related articles
