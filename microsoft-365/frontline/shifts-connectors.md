@@ -50,7 +50,7 @@ Managed Shifts connectors are connectors developed in collaboration with our par
 |[Reflexis Shifts connector for Microsoft Teams](#reflexis-shifts-connector-for-microsoft-teams)|Use this connector to integrate Shifts with Reflexis Workforce Management. This connector is hosted and managed by Zebra. |To learn more, go to <https://connect.zebra.com/microsoft-connectors>.|
 
 > [!NOTE]
-> You can also create a custom solution to integrate Shifts with your WFM system using the Microsoft Graph API. To learn more, see [Create a custom integration to sync your workforce management system with Shifts](shifts-custom-wfm-integration.md).
+> You can also create your own custom solution to integrate Shifts with your WFM system using the Microsoft Graph API. To learn more, see [Create a custom integration to sync your workforce management system with Shifts](shifts-custom-wfm-integration.md).
 
 <a name="blue_yonder"> </a>
 ## Microsoft Teams Shifts connector for Blue Yonder
