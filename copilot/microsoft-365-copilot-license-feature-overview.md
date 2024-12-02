@@ -60,7 +60,7 @@ The following table lists some of the features that can help get your data ready
 | Data lifecycle management  | ✅ <br/><br/> You can: <br/><br/> - Create retention policies<br/> - Manually apply retention labels<br/> - Use Content explorer | ✅ <br/><br/> You can: <br/><br/> - Create retention policies<br/> - Manually apply retention labels<br/> - Automatically apply retention labels <br/> - Use Content explorer <br/> - Use Activity explorer <br/> - Can use Data Lifecycle Management or Records Management |
 | Communication Compliance | n/a | ✅ |
 | eDiscovery | ✅ <br/><br/>Can search. | ✅ <br/><br/> Can search and delete. |
-| Data Security Posture Management for AI (previously called AI Hub) |  ✅ <br/><br/> You can: <br/><br/>- View app info <br/>- Export activity | ✅ <br/><br/> <br/><br/> You can: <br/><br/>- View app info <br/>- View prompt & response <br/>- Export activity |
+| Data Security Posture Management for AI (previously called AI Hub) |  ✅ <br/><br/> You can: <br/><br/>- View app info <br/>- Export activity | ✅ <br/><br/> <br/><br/> You can: <br/><br/>- View app info <br/>- Export activity <br/>- View prompt & response |
 | &nbsp; | &nbsp; | &nbsp; |
 | **SharePoint Advanced Management (SAM) features** | &nbsp; | &nbsp; |
 | Site ownership policy | ✅ | ✅ |
