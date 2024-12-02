@@ -48,19 +48,19 @@ This article applies to:
 
 The following table lists some of the features that can help get your data ready for Copilot. These features affect Copilot results and can help you manage Copilot interactions (prompts and responses).
 
-| &nbsp; | E3 license | E5 license |
+| &nbsp; | E3 + SAM license | E5 + SAM license |
 | --- | --- | --- |
 | License requirements | - Microsoft 365 E3 or Office 365 E3 <br/>- SharePoint Advanced Management <br/>- Microsoft 365 Copilot | - Microsoft 365 E5 or Office 365 E5 <br/>- SharePoint Advanced Management <br/>- Microsoft 365 Copilot |
 | Restricted SharePoint Search (RSS) | ✅  | ✅  |
 | &nbsp; | &nbsp; | &nbsp; |
 | **Microsoft Purview features** | &nbsp; | &nbsp; |
 | Sensitivity labels |  ✅ <br/><br/> You can: <br/><br/>- Create custom labels. <br/> - Manually apply labels. | ✅ <br/><br/> You can: <br/><br/> - Create custom labels. <br/> - Use default built-in labels. <br/> - Manually apply labels. <br/> - Automatically apply labels. <br/> - Can apply labels to containers, like a SharePoint or Teams site |
-| Data loss prevention (DLP)| ✅ <br/><br/>Policies can target: <br/><br/>- SharePoint <br/> - Exchange <br/> - OneDrive | ✅ <br/><br/> Policies can target: <br/><br/>- SharePoint <br/> - Exchange <br/> - OneDrive <br/> - Teams <br/> - Endpoints <br/><br/> Also get [DLP for Microsoft 365 Copilot](/purview/dlp-microsoft365-copilot-location-learn-about). |
+| Data loss prevention (DLP)| ✅ <br/><br/>Policies can target: <br/><br/>- SharePoint <br/> - Exchange <br/> - OneDrive | ✅ <br/><br/> Policies can target: <br/><br/>- SharePoint <br/> - Exchange <br/> - OneDrive <br/> - Teams <br/> - Endpoints <br/><br/> Also use [DLP for Microsoft 365 Copilot](/purview/dlp-microsoft365-copilot-location-learn-about). |
 | Adaptive Protection | n/a | ✅ |
 | Data lifecycle management  | ✅ <br/><br/> You can: <br/><br/> - Create retention policies<br/> - Manually apply retention labels<br/> - Use Content explorer | ✅ <br/><br/> You can: <br/><br/> - Create retention policies<br/> - Manually apply retention labels<br/> - Automatically apply retention labels <br/> - Use Content explorer <br/> - Use Activity explorer <br/> - Can use Data Lifecycle Management or Records Management |
 | Communication Compliance | n/a | ✅ |
 | eDiscovery | ✅ <br/><br/>Can search. | ✅ <br/><br/> Can search and delete. |
-| Data Security Posture Management for AI (previously called AI Hub) |  ✅ <br/><br/> You can: <br/><br/>- View app info <br/>- Export activity <br/>- Turn on auditing | ✅ <br/><br/> You can: <br/><br/>- View app info <br/>- Export activity <br/>- Turn on auditing <br/>- View prompt & response <br/>- Create default sensitivity labels & their policies |
+| Data Security Posture Management for AI (previously called AI Hub) |  ✅ <br/><br/> You can: <br/><br/>- View app info <br/>- Export activity <br/>- Turn on auditing | ✅ <br/><br/> You can: <br/><br/>- View app info <br/>- Export activity <br/>- Turn on auditing <br/>- View prompt & response |
 | &nbsp; | &nbsp; | &nbsp; |
 | **SharePoint Advanced Management (SAM) features** | &nbsp; | &nbsp; |
 | Site ownership policy | ✅ | ✅ |
