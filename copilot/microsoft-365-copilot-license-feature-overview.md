@@ -54,7 +54,7 @@ The following table lists some of the features that can help get your data ready
 | Restricted SharePoint Search (RSS) | ✅  | ✅  |
 | &nbsp; | &nbsp; | &nbsp; |
 | **Microsoft Purview features** | &nbsp; | &nbsp; |
-| Sensitivity labels |  ✅ <br/><br/> You can: <br/><br/>- Create custom labels. <br/> - Manually apply labels. | ✅ <br/><br/> You can: <br/><br/> - Create custom labels. <br/> - Use default built-in labels. <br/> - Manually apply labels. <br/> - Automatically apply labels. <br/> - Can apply labels to containers, like a SharePoint or Teams site |
+| Sensitivity labels |  ✅ <br/><br/> You can: <br/><br/>- Create custom labels. <br/> - Manually apply labels. | ✅ <br/><br/> You can: <br/><br/> - Create custom labels. <br/> - Create default labels and their policies. <br/> - Manually apply labels. <br/> - Automatically apply labels. <br/> - Can apply labels to containers, like a SharePoint or Teams site |
 | Data loss prevention (DLP)| ✅ <br/><br/>Policies can target: <br/><br/>- SharePoint <br/> - Exchange <br/> - OneDrive | ✅ <br/><br/> Policies can target: <br/><br/>- SharePoint <br/> - Exchange <br/> - OneDrive <br/> - Teams <br/> - Endpoints <br/><br/> Also use [DLP for Microsoft 365 Copilot](/purview/dlp-microsoft365-copilot-location-learn-about). |
 | Adaptive Protection | n/a | ✅ |
 | Data lifecycle management  | ✅ <br/><br/> You can: <br/><br/> - Create retention policies<br/> - Manually apply retention labels<br/> - Use Content explorer | ✅ <br/><br/> You can: <br/><br/> - Create retention policies<br/> - Manually apply retention labels<br/> - Automatically apply retention labels <br/> - Use Content explorer <br/> - Use Activity explorer <br/> - Can use Data Lifecycle Management or Records Management |
