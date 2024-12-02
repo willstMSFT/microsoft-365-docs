@@ -51,6 +51,11 @@ Administrators should notify the site owners and end users before a site is arch
 
 Publishing sites, Teams with channel sites, and a handful of legacy site template types are not available to archive with Microsoft 365 Archive.
 
+## Related articles
+
+[Education offering](archive-education-offering.md)
+
+
 <!---
 ## Preview limitations
 
