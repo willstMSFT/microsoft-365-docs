@@ -337,9 +337,9 @@ The audit log summary provides a comprehensive overview or count of the activiti
 
 #### Inputs 
 
-- Search days prior to the current date (max 30 days)
+- Search the number of days prior to the current date (max 30 days)
 
-  - If you enter 10, the diagnostic will review the log for up to 10 days prior to the current date.
+  - If you enter 10, the diagnostic will review the log for up to 10 days prior to the current date
   
   - If left blank, the diagnostic will run with the value of 7 days 
   
@@ -347,7 +347,7 @@ The audit log summary provides a comprehensive overview or count of the activiti
 
 The output is split into two sections: 
 
-Users with High Activity – Users who have performed a specific action at a much higher rate than the average user will be listed here, along with the count of each action they have taken. 
+1. Users with High Activity – Users who have performed a specific action at a much higher rate than the average user will be listed here, along with the count of each action they have taken. 
 
 1. Full User List – All users, along with a list of their activities and corresponding counts, will be displayed here in alphabetical order. Actions performed by apps will be grouped together. 
 
