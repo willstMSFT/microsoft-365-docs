@@ -276,9 +276,9 @@ Starting with general availability, organizational messages will also introduce 
 
 Premium features will be accessible to admins within Organizational messages in Microsoft 365 admin center when their tenant has one of the following:
 
-1. -1+ Microsoft 365 E3-E5 licenses
-1. -1+ Office 365 E3-E5 licenses
-1. -1+ Windows 365 E3-E5 licenses
+- Microsoft 365 E3-E5 licenses
+- Office 365 E3-E5 licenses
+- Windows 365 E3-E5 licenses
 
 ### End user – receiving messages with premium features
 
