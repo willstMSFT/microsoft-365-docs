@@ -110,7 +110,7 @@ To manage MTO user labels for tenants in your MTO:
 > [!NOTE]
 > This is currently only available for private preview.
 
-Admins can opt-in for MTO notifications to ensure they don’t miss any updates or changes to their MTO. Receive email notifications regarding any updates to the MTO such as: a new tenant joined the MTO, a tenant left the MTO, an MTO setting changed (user labels, owner/member role, MTO name), or user sync status changed (Must have full-mesh sync set up via M365 admin center). Email notifications are sent weekly, as long as any updates were made to the MTO. No notification will be sent if nothing has changed.
+Admins can opt-in for MTO notifications to ensure they don’t miss any updates or changes to their MTO. Receive email notifications regarding any updates to the MTO such as: a new tenant joined the MTO, a tenant left the MTO, an MTO setting changed (user labels, owner/member role, MTO name), or user sync status changed (Must have full-mesh sync set up via M365 admin center). Email notifications are sent daily, as long as any updates were made to the MTO. No notification is sent if nothing has changed.
 
 Additionally, in the MAC MTO portal you can review the updates and see any Microsoft recommended actions. Opt-in and select the user(s) in your org who you would like to receive the notifications.
 
@@ -139,12 +139,12 @@ These permissions are required to fetch cross-tenant synchronization details and
 
 - Reading cross-tenant sync information
 
-  - [Application.Read.All](/graph/permissions-reference)
+  - [Application.Read.All](/graph/permissions-reference#applicationreadall)
   
-  - [Synchronization.Read.All](/graph/permissions-reference)
+  - [Synchronization.Read.All](/graph/permissions-reference#synchronizationreadall)
   
 This permission is required to gather details regarding the multitenant organization.
 
 - Reading MTO details 
 
-  - [MultiTenantOrganization.Read.All](/graph/permissions-reference)
+  - [MultiTenantOrganization.Read.All](/graph/permissions-reference#multitenantorganizationreadall)
