@@ -28,10 +28,6 @@ description: "Determine where your Microsoft 365 customer data is stored worldwi
 > [!NOTE]
 > The **Taiwan** local data center region launched on November 1, 2024. If your organization requires the migration of your Microsoft 365 customer data to Taiwan, and data residency commitments for Taiwan, see [Advanced Data Residency](advanced-data-residency.md).
 > [!NOTE]
-> The **Spain** local data center region launched on May 31, 2024. If your organization requires the migration of your Microsoft 365 customer data to Spain, and data residency commitments for Spain, see [Advanced Data Residency](advanced-data-residency.md).
-  > [!NOTE]
-> The **Mexico** local data center region launched on May 3, 2024. If your organization requires the migration of your Microsoft 365 customer data to Mexico, and data residency commitments for Mexico, see [Advanced Data Residency](advanced-data-residency.md).
-> [!NOTE]
 > For tenants in Australia, Brazil, Canada, France, Germany, India, Israel, Italy, Japan, Mexico, Norway, Poland, Qatar, South Africa, South Korea, Spain, Sweden, Switzerland, Taiwan, United Arab Emirates, and the United Kingdom, additional workloads are available for data residency commitments. For more information, see [Advanced Data Residency](advanced-data-residency.md).
 
 See the following links to understand how you can determine current data residency and data residency commitments.
