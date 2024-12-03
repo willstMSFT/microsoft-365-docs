@@ -29,7 +29,7 @@ appliesto:
   - Microsoft Teams
   - Microsoft 365 for frontline workers
 ms.custom: seo-marvel-jun2020
-ms.date: 12/02/2024
+ms.date: 12/03/2024
 ---
 
 # Shifts for your frontline organization
@@ -55,7 +55,7 @@ Here are options for integrating Shifts with external WFM systems.
 |UKG Pro Workforce Management |[Teams Shifts connector for UKG Pro Workforce Management](shifts-connectors.md#microsoft-teams-shifts-connector-for-ukg-pro-workforce-management)<br/> (Hosted and managed by Microsoft)|Shifts doesn't support every configuration and capability of your WFM system. Learn more about [Shifts capabilities](#shifts-capabilities) when using Microsoft managed connectors.|
 |Blue Yonder Workforce Management version 2020.3, 2021.1, or 2021.2 |[Teams Shifts connector for Blue Yonder](shifts-connectors.md#microsoft-teams-shifts-connector-for-blue-yonder) <br/>(Hosted and managed by Microsoft)|Shifts doesn't support every configuration and capability of your WFM system. Learn more about [Shifts capabilities](#shifts-capabilities) when using Microsoft managed connectors.|
 |Reflexis Workforce Management version 4.3.2, 4.4, or 4.5|[Reflexis Shifts connector for Microsoft Teams](shifts-connectors.md#reflexis-shifts-connector-for-microsoft-teams) <br/> (Hosted and managed by Zebra)|Shifts doesn't support every configuration and capability of your WFM system. [Learn more](shifts-connectors.md#reflexis-shifts-connector-for-microsoft-teams).|
-|Any WFM system|[Create a custom integration to sync your workforce management system with Shifts](shifts-custom-wfm-integration.md)| This option gives you the flexbility to integrate any WFM system with Shifts. You can set up your integration for either a one-way data sync or a two-way data sync. |
+|Any WFM system|[Create a custom integration to sync your workforce management system with Shifts](shifts-custom-wfm-integration.md)| This option gives you the flexbility to integrate Shifts with any WFM system. You can set up your integration for a one-way or two-way data sync. |
 
 ## Deployment overview
 

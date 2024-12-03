@@ -17,7 +17,7 @@ ms.collection:
 appliesto: 
   - Microsoft Teams
   - Microsoft 365 for frontline workers
-ms.date: 12/02/2024
+ms.date: 12/03/2024
 ---
 
 # Prerequisites and requirements for the Teams Shifts connector for UKG Pro Workforce Management
@@ -229,7 +229,7 @@ Within each store, in Shifts:
 - Frontline managers see employees within their respective schedule groups (that is, job types).
 - Frontline workers see their own schedule and their team's schedule.
 - Frontline workers can communicate with coworkers in their own store through chat.
-- Frontline workers and managers can request time off, swap shifts, offer shifts and open shifts if the requests are configured in UKG Pro WFM and set to be synced in the connection instance settings that you configure in the [wizard](shifts-connector-wizard-ukg.md).
+- Frontline workers and managers can request time off, swap shifts, offer shifts, and open shifts if the requests are configured in UKG Pro WFM and set to be synced in the connection instance settings that you configure in the [wizard](shifts-connector-wizard-ukg.md).
 - Frontline workers and managers can reach other employees in their store who are on shift, if [shift-based tags](/microsoftteams/manage-tags) are enabled.
 
 For employees who work at multiple stores, in Shifts:
