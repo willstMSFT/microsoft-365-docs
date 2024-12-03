@@ -27,7 +27,6 @@ description: "Determine where your Microsoft 365 customer data is stored worldwi
 
 > [!NOTE]
 > The **Taiwan** local data center region launched on November 1, 2024. If your organization requires the migration of your Microsoft 365 customer data to Taiwan, and data residency commitments for Taiwan, see [Advanced Data Residency](advanced-data-residency.md).
-
 > [!NOTE]
 > For tenants in Australia, Brazil, Canada, France, Germany, India, Israel, Italy, Japan, Mexico, Norway, Poland, Qatar, South Africa, South Korea, Spain, Sweden, Switzerland, Taiwan, United Arab Emirates, and the United Kingdom, additional workloads are available for data residency commitments. For more information, see [Advanced Data Residency](advanced-data-residency.md).
 
@@ -43,14 +42,12 @@ See the following links to understand how you can determine current data residen
 - Viva Topics [Data Location](m365-dr-workload-viva-topics.md#how-can-i-determine-customer-data-location)
 - Microsoft Purview (select services)  [Data Location](m365-dr-workload-purview.md#how-can-i-determine-customer-data-location)
 
+  - Data Loss Prevention
+  - Information Barriers
+  - Information Protection (MIP)
   - Audit (Standard)
   - Audit (Premium)
-  - Data loss prevention
-  - Data retention
-  - Information barriers
-  - Office message encryption
-  - Records management
-  - Sensitivity labels  
+  - Data Lifecycle Management (DLM)
   
 - Microsoft Entra ID [Data Location](m365-dr-workload-other.md#azure-active-directory-aad)
 - Whiteboard [Data Location](m365-dr-workload-other.md#whiteboard)
