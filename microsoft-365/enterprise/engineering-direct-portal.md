@@ -94,7 +94,7 @@ In this section:
 - [Auto Archive Detection](#auto-archive-detection)
 - [Remediate a Compromised Account](#remediate-a-compromised-account)
 
-- [Audit Log Summary](https://)
+- [Audit Log Summary](#audit-log-summary)
 
 <!---
 - [Guest Access in Teams](#guest-access-in-teams)
