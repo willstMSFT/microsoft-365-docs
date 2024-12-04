@@ -54,6 +54,7 @@ See the following links to understand how you can determine current data residen
 - Forms [Data Location](m365-dr-workload-other.md#forms)
 - Intune [Data Location](m365-dr-workload-other.md#intune)
 - Planner [Data Location](m365-dr-workload-other.md#planner)
+- Viva Glint [Data Location](m365-dr-workload-other.md#viva-glint)
 - Viva Goals [Data Location](m365-dr-workload-other.md#viva-goals)
 - Viva Insights – Advanced, Manager and leader [Data Location](m365-dr-workload-other.md#viva-insights--advanced-mgr-leader)
 - Viva Insights – Personal [Data Location](m365-dr-workload-other.md#viva-insights--personal)
