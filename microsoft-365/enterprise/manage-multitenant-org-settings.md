@@ -73,6 +73,22 @@ To manage free/busy calendar sharing for tenants in your MTO:
 
 The calendar sharing feature for MTO utilizes [Organization relationships in Exchange Online](/exchange/sharing/organization-relationships/organization-relationships). The organization relationship will share all users calendar availability and must also be set up by the other tenants in your MTO for free/busy information to be shared.
 
+#### Troubleshoot calendar sharing issues
+
+There are a couple of reasons that calendar sharing enablement doesn't work as it should:
+
+1. "Failed to edit or create an organization relationship with [tenant]. Please try again later"
+
+   1. This error typically only requires a refresh after some time. If error persists, review the setting in [Exchange Online](https://admin.exchange.microsoft.com/#/organizationsharing) to see if there is an existing organization relationship with this tenant.
+      
+1. "Failed to get all domain names for [tenant]. This is an issue with how [tenant] has their primary domain name configured."
+
+   1. This error typically requires the partner [tenant] to manage the status of their default domain here: [https://admin.microsoft.com/#/Domains](https://admin.microsoft.com/#/Domains). Additional details regarding domain troubleshooting can be found here: [Manage domains ](/microsoft-365/admin/get-help-with-domains/find-and-fix-issues?view=o365-worldwide)
+      
+1. "Failed to create a new organization relationship with [tenant]. This could be due to a duplicate organization relationship." 
+
+   1. Review existing organization relationships in [Exchange Online](https://admin.exchange.microsoft.com/#/organizationsharing) to see if one already exists with this tenant. If organization relationship already exists with [tenant], review settings to ensure it is setup as desired.
+   
 ## Set up MTO user labels in Teams for tenants in your MTO
 
 MTO group admins can now configure an optional label for each tenant that will be displayed alongside MTO synced user's display name in Teams. This allows MTO synced users to be distinguishable within the MTO in Teams interactions. 
