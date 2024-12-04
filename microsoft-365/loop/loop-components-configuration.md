@@ -25,15 +25,15 @@ description: "Learn how to manage Loop components in your organization."
 
 # Loop admin policies for Loop components and Loop workspaces
 
-Loop components and integrations are backed by .loop files (earlier releases of Loop created these as .fluid files), stored in OneDrive, SharePoint, or [SharePoint Embedded](/sharepoint/dev/embedded/concepts/admin-exp/consuming-tenant-admin/cta). IT administrators need to manage creation of Loop content and integrations using **BOTH**:
-1. Cloud Policy
+Loop components and integrations are backed by `.loop` files (earlier releases of Loop created these as `.fluid` files), stored in OneDrive, SharePoint, or [SharePoint Embedded](/sharepoint/dev/embedded/concepts/admin-exp/consuming-tenant-admin/cta). IT administrators need to manage creation of Loop content and integrations using **BOTH**:
+1. Cloud Policy 
 2. SharePoint PowerShell command (Teams only)
 
-Loop workspaces, Copilot Pages, and the .loop files and content created in Loop workspaces are stored in SharePoint Embedded containers. IT admins can manage creation of Loop workspaces using Cloud Policy.
+Loop workspaces, Copilot Pages, and the `.loop` files and content created in Loop workspaces are stored in SharePoint Embedded containers. IT admins can manage creation of Loop workspaces using Cloud Policy. 
 
 ## Requirements
 
-Just like other Microsoft 365 experiences, Loop and Copilot Pages also leverage core services across SharePoint and Microsoft 365. To effectively enable creation of Loop content and Loop integration experiences, Copilot Pages, or OneDrive and SharePoint files-backed experiences powered by Fluid Framework, follow the instructions in [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges) to ensure connections to Loop services are available and enabled.
+Just like other Microsoft 365 experiences, Loop and Copilot Pages also leverage core services across SharePoint and Microsoft 365. To effectively enable creation of Loop content and Loop integration experiences, Copilot Pages, or OneDrive and SharePoint files-backed experiences powered by Fluid Framework, follow the instructions in the [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges) to ensure connections to Loop services are available and enabled.
 
 ### WebSocket connections
 
@@ -102,7 +102,7 @@ When Loop IT admin controls are set to Disabled, the creation of new Loop files 
 
 Even with the admin policies disabled, Loop content and icons may still appear in certain places. Files created before disabling new creation can still be found in Microsoft365.com, the Loop component viewer and editor (loop.cloud.microsoft), and links shared in messages or documents. Access to these files is determined by their permissions, so users with edit access can still open and edit them.
 
-There are no separate licensing requirements for the Loop component viewer and editor, only the need for OneDrive access. Users can still access the Loop component viewer and editor via loop.cloud.microsoft and the All apps view in Microsoft365.com. To prevent users from seeing the Loop icon in the All apps view, disable their access to OneDrive or configure a conditional access policy for loop.cloud.microsoft to block navigations to Loop.
+There are no separate licensing requirements for the Loop component viewer and editor, only the need for OneDrive access. Users can still access the Loop component viewer and editor via loop.cloud.microsoft and the All apps view in Microsoft365.com. To prevent users from seeing the Loop icon in the All apps view, disable their access to OneDrive or configure a conditional access policy for loop.cloud.microsoft to block navigation to Loop.
 
 ## Settings management in the Microsoft Admin Center
 
@@ -153,9 +153,9 @@ The Loop experiences (except for Microsoft Teams) check the following [Cloud Pol
         - **Disabled**: Creation of Loop components and integration isn't available to the users.
         - **Not configured**: Creation of Loop components and integration is available to the users.   
     - For **Create and view Loop files in Microsoft 365 Copilot Chat**
-        - **Enabled**: Copilot pages creation and integration is available to the users.
-        - **Disabled**: Copilot pages creation and integration isn't available to the users.
-        - **Not configured**: Copilot pages creation and integration is available to the users.
+        - **Enabled**: Copilot pages creation and integration are available to the users.
+        - **Disabled**: Copilot pages creation and integration aren't available to the users.
+        - **Not configured**: Copilot pages creation and integration are available to the users.
         - **NOTE**: If your organization has [disabled the creation of OneDrive](/sharepoint/manage-user-profiles#disable-onedrive-creation-for-some-users), regardless of the setting noted here, these people in your organization will not be able to create a Copilot Pages workspace.
     - For **Create and view Loop files in Outlook**:
         - **Enabled**: Creation of Loop components and integration is available to the users.
@@ -177,8 +177,8 @@ You'll need the [latest version of SharePoint PowerShell module](/powershell/sha
 
 |Experience  |SharePoint organization properties  |Notes  |
 |---------|---------|---------|
-|Loop components in Teams  | `IsLoopEnabled` (boolean)  |  This property controls Loop component creation and integration in Microsoft Teams. It applies to the entire tenant and can not be configured at the user level.  |
-|Collaborative meeting notes  |  `IsCollabMeetingNotesFluidEnabled` (boolean)  |  This property controls the collaborative meeting notes creation and integration in Microsoft Teams. It applies to the entire tenant and can not be configured at the user level.  |
+|Loop components in Teams  | `IsLoopEnabled` (boolean)  |  This property controls Loop component creation and integration in Microsoft Teams. It applies to the entire tenant and cannot be configured at the user level.  |
+|Collaborative meeting notes  |  `IsCollabMeetingNotesFluidEnabled` (boolean)  |  This property controls the collaborative meeting notes creation and integration in Microsoft Teams. It applies to the entire tenant and cannot be configured at the user level.  |
 
 To check your tenant's default file permissions, perform the following steps:
 
