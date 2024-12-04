@@ -92,15 +92,17 @@ Configure the creation of content in these locations by using the appropriate po
 
 ## User experience expectations when admin settings are configured
 
-As described in this topic, you can control the ability for users in your environment to create new Loop content. You can configure this either via select groups or for your entire tenant. To prevent collaboration between certain groups in your organization, refer to [Information Barriers](/en-us/purview/information-barriers-sharepoint).
+As described in this topic, you can control the ability for users in your environment to create new Loop content. **You cannot prevent access to existing content using the admin controls.** You can configure the admin controls via select groups or for your entire tenant (except for the Teams controls, which apply to the entire tenant only).
+- To prevent collaboration between certain groups in your organization, refer to [Information Barriers](/en-us/purview/information-barriers-sharepoint).
+- To prevent access to existing content and the Loop app with workspaces, refer to [Conditional Access policies](/sharepoint/control-access-from-unmanaged-devices).
 
 ### Here's what you should expect when using the Loop IT admin controls configured to Disabled
 
-When Loop IT admin controls in this article are set to Disabled, the creation of new Loop files and SharePoint Embedded containers is prevented, but existing user data is not deleted. Users can still access existing Loop files. To prevent new files and access to these existing files, use both the admin policies and [Conditional Access policies](/sharepoint/control-access-from-unmanaged-devices) to block access to Loop experiences on browsers and mobile devices.
+When Loop IT admin controls are set to Disabled, the creation of new Loop files and SharePoint Embedded containers is prevented. Existing user data is not deleted, and users can still find, see, and access existing Loop files and Loop workspaces.
 
 Even with the admin policies disabled, Loop content and icons may still appear in certain places. Files created before disabling new creation can still be found in Microsoft365.com, the Loop component viewer and editor (loop.cloud.microsoft), and links shared in messages or documents. Access to these files is determined by their permissions, so users with edit access can still open and edit them.
 
-There are no separate licensing requirements for the Loop component viewer and editor, only the need for OneDrive access. Users can still access the Loop component viewer and editor via loop.cloud.microsoft and the All apps view in Microsoft365.com. To prevent users from seeing the Loop app in the All apps view, disable their access to OneDrive or configure a conditional access policy for loop.cloud.microsoft.
+There are no separate licensing requirements for the Loop component viewer and editor, only the need for OneDrive access. Users can still access the Loop component viewer and editor via loop.cloud.microsoft and the All apps view in Microsoft365.com. To prevent users from seeing the Loop icon in the All apps view, disable their access to OneDrive or configure a conditional access policy for loop.cloud.microsoft to block navigations to Loop.
 
 ## Settings management in the Microsoft Admin Center
 
