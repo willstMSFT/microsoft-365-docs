@@ -75,7 +75,7 @@ The calendar sharing feature for MTO utilizes [Organization relationships in Exc
 
 #### Troubleshoot calendar sharing issues
 
-There are a couple of reasons that calendar sharing enablement doesn't work as it should:
+There are a couple of reasons that calendar sharing enablement might not work as it should:
 
 1. "Failed to edit or create an organization relationship with [tenant]. Please try again later"
 
@@ -83,11 +83,11 @@ There are a couple of reasons that calendar sharing enablement doesn't work as i
       
 1. "Failed to get all domain names for [tenant]. This is an issue with how [tenant] has their primary domain name configured."
 
-   1. This error typically requires the partner [tenant] to manage the status of their default domain here: [https://admin.microsoft.com/#/Domains](https://admin.microsoft.com/#/Domains). Additional details regarding domain troubleshooting can be found here: [Manage domains ](/microsoft-365/admin/get-help-with-domains/find-and-fix-issues?view=o365-worldwide)
+   1. This error typically requires the partner [tenant] to manage the status of their default domain here: [https://admin.microsoft.com/#/Domains](https://admin.microsoft.com/#/Domains). Additional details regarding domain troubleshooting can be found here: [Manage domains ](/microsoft-365/admin/get-help-with-domains/find-and-fix-issues)
       
 1. "Failed to create a new organization relationship with [tenant]. This could be due to a duplicate organization relationship." 
 
-   1. Review existing organization relationships in [Exchange Online](https://admin.exchange.microsoft.com/#/organizationsharing) to see if one already exists with this tenant. If organization relationship already exists with [tenant], review settings to ensure it is setup as desired.
+   1. Review existing organization relationships in [Exchange Online](https://admin.exchange.microsoft.com/#/organizationsharing) to see if one already exists with this tenant. If organization relationship already exists with [tenant], review settings to ensure it is set up as desired.
    
 ## Set up MTO user labels in Teams for tenants in your MTO
 
