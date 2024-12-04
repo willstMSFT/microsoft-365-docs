@@ -147,12 +147,12 @@
                   href: apply-a-retention-label-to-a-model.md
                 - name: Apply a sensitivity label 
                   href: apply-a-sensitivity-label-to-a-model.md
-                - name: Duplicate a model
-                  href: duplicate-a-model.md
                 - name: Rename a model
                   href: rename-a-model.md
                 - name: Delete a model
                   href: delete-a-model.md
+                - name: Duplicate a model
+                  href: duplicate-a-model.md
                 - name: Manage library settings 
                   href: manage-library-settings.md
                 - name: Choose a library view 
