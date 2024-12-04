@@ -115,9 +115,9 @@ If you're looking for a simple way to turn on or off the creation of only Loop w
 1. Choose your desired state for Loop workspaces via the checkbox.
     > [!NOTE]
     > The checkbox may not reflect your configured state on load. However, the state you select and choose Save in the Admin Center will persist and override any defaults for your tenant.
-1. Select Save.
+1. Select **Save**.
 
-The Microsoft Admin Center configures the Cloud Policy setting **Create and view Loop workspaces in Loop**, described in the next section, targeted at All users (your full tenant). See the next section if you wish to perform more advanced controls. If you configured **Create and view Loop workspaces in Loop** in Cloud Policy, review your Cloud Policy settings to confirm they still match your expectation after configuring in the Microsoft Admin Center.
+    The Microsoft Admin Center configures the Cloud Policy setting **Create and view Loop workspaces in Loop**, described in the next section, targeted at All users (your full tenant). See the next section if you wish to perform more advanced controls. If you configured **Create and view Loop workspaces in Loop** in Cloud Policy, review your Cloud Policy settings to confirm they still match your expectation after configuring in the Microsoft Admin Center.
 
 ## Settings management in Cloud Policy
 
@@ -156,7 +156,9 @@ The Loop experiences (except for Microsoft Teams) check the following [Cloud Pol
         - **Enabled**: Copilot pages creation and integration are available to the users.
         - **Disabled**: Copilot pages creation and integration aren't available to the users.
         - **Not configured**: Copilot pages creation and integration are available to the users.
-        - **NOTE**: If your organization has [disabled the creation of OneDrive](/sharepoint/manage-user-profiles#disable-onedrive-creation-for-some-users), regardless of the setting noted here, these people in your organization will not be able to create a Copilot Pages workspace.
+          >[!NOTE]
+          
+          >If your organization has [disabled the creation of OneDrive](/sharepoint/manage-user-profiles#disable-onedrive-creation-for-some-users), regardless of the setting noted here, these people in your organization will not be able to create a Copilot Pages workspace.  
     - For **Create and view Loop files in Outlook**:
         - **Enabled**: Creation of Loop components and integration is available to the users.
         - **Disabled**: Creation of Loop components and integration isn't available to the users.
@@ -177,8 +179,8 @@ You'll need the [latest version of SharePoint PowerShell module](/powershell/sha
 
 |Experience  |SharePoint organization properties  |Notes  |
 |---------|---------|---------|
-|Loop components in Teams  | `IsLoopEnabled` (boolean)  |  This property controls Loop component creation and integration in Microsoft Teams. It applies to the entire tenant and cannot be configured at the user level.  |
-|Collaborative meeting notes  |  `IsCollabMeetingNotesFluidEnabled` (boolean)  |  This property controls the collaborative meeting notes creation and integration in Microsoft Teams. It applies to the entire tenant and cannot be configured at the user level.  |
+|Loop components in Teams  | `IsLoopEnabled` (boolean)  |  This property controls Loop component creation and integration in Microsoft Teams. It applies to the entire tenant and can't be configured at the user level.  |
+|Collaborative meeting notes  |  `IsCollabMeetingNotesFluidEnabled` (boolean)  |  This property controls the collaborative meeting notes creation and integration in Microsoft Teams. It applies to the entire tenant and can't be configured at the user level.  |
 
 To check your tenant's default file permissions, perform the following steps:
 
