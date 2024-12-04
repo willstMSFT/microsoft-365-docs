@@ -3,7 +3,7 @@ title: "Microsoft 365 network connectivity test tool"
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
-ms.date: 04/05/2024
+ms.date: 12/04/2024
 audience: Admin
 ms.topic: conceptual
 ms.service: microsoft-365-enterprise
@@ -256,7 +256,7 @@ This section shows the results of an ICMP traceroute to the Exchange Online serv
 
 ### Microsoft 365 Copilot
 
-We start the public preview of tests for Microsoft 365 Copilot from mid of December 2024.  You can navigate to <https://connectivity.office.com/copilot> or click the link on the home page <https://connectivity.office.com> to get started. 
+The public preview of tests for Microsoft 365 Copilot begins in December 2024.  You can navigate to <https://connectivity.office.com/copilot> or click the link on the home page <https://connectivity.office.com> to get started. 
 
 ![image](https://github.com/user-attachments/assets/1859bece-dd87-4f3e-bc87-a6055c2588a1)
 
@@ -265,7 +265,7 @@ The feature allow users to test the network connectivity, websocket enablement a
 You can read more about the network requirements for Microsoft 365 Copilot from the learn doc (<https://github.com/user-attachments/assets/0bec82c2-8d80-4d83-86a8-bdb60ff2d0c7>).
 
 > [!NOTE]
-> Please note this feature is only available to Global version of the tool currently, and it is in public preview stage.
+> This feature is currently only available in the global version of the tool, and it is in public preview.
 
 ![image](https://github.com/user-attachments/assets/6f334c06-7f2d-4d00-8a27-9dd4681f2371)
 
