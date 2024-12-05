@@ -87,7 +87,7 @@ The following table lists the terms shown on the billing account details page.
 |Agreements|Links to the agreements signed by your organization with Microsoft|
 
 > [!NOTE]
-> If you need to change the **Sold-to** name, you must [contact support](../admin/get-help-support.md) to change it. Requests to change the **Sold-to** name require a credit check. Complete [this form](https://www.microsoft.com/download/details.aspx?id=102732), and be ready to share one of following documents with Microsoft when you contact support:
+> If you need to change the **Sold-to** name, you must [contact support](../admin/get-help-support.md) to change it. Requests to change the **Sold-to** name require a credit check. Complete [this form](https://www.microsoft.com/download/details.aspx?id=102732), and be ready to share one of the following documents with Microsoft when you contact support:
 >
 > - Government-issued document or registration letter
 > - Print out of the local company's registry
