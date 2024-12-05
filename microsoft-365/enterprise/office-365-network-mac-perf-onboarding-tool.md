@@ -262,7 +262,7 @@ The public preview of tests for Microsoft 365 Copilot begins in December 2024.  
 
 The feature allow users to test the network connectivity, websocket enablement and latency of the major endpoints of Microsoft 365 Copilot, and also supports mobile device testing.
 
-You can read more about the network requirements for Microsoft 365 Copilot from the learn doc (<https://learn.microsoft.com/copilot/microsoft-365/microsoft-365-copilot-requirements#network-requirements>).
+You can read more about the network requirements for Microsoft 365 Copilot in [Microsoft 365 Copilot requirements](/copilot/microsoft-365/microsoft-365-copilot-requirements#network-requirements).
 
 > [!NOTE]
 > This feature is currently only available in the global version of the tool, and it is in public preview.
