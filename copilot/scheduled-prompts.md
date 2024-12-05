@@ -50,7 +50,7 @@ To learn more about adding connectors to policies, see [Add-ConnectorsToPolicy](
 
 To use the Scheduled prompts feature as an admin, no action is required if no DLP policies are in place and if the Optional connected experiences setting is already enabled. This feature is automatically included as part of the Optional Connected Experiences admin setting. However, if you have DLP policies in place that block new connectors, you may need to run the command script mentioned previously. You can check if you have such policies in the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 
-If you prefer to not have this feature available to your organization, you can disable the Optional connected experiences setting at [config.office.com](https://config.office.com/). For more information, see [Admin controls for optional connected experiences](//microsoft-365-apps/privacy/optional-connected-experiences).
+If you prefer to not have this feature available to your organization, you can disable the Optional connected experiences setting at [config.office.com](https://config.office.com/). For more information, see [Admin controls for optional connected experiences](/microsoft-365-apps/privacy/optional-connected-experiences).
 
 If you turn off the Optional connected experiences setting, this action will prevent anyone in your organization from seeing Scheduled prompts in Copilot.
 
