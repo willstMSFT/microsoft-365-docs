@@ -5,7 +5,7 @@ ms.author: sharik
 author: SKjerland
 manager: scotv
 ms.reviewer: sharonchoi
-ms.date: 10/07/2024
+ms.date: 11/21/2024
 audience: Admin
 ms.topic: whats-new
 ms.service: microsoft-365-lighthouse
@@ -32,6 +32,44 @@ We're continuously adding new features to [Microsoft 365 Lighthouse](m365-lighth
 >
 > To see which new features are currently available in your partner tenant, go to the **Home** page of Microsoft 365 Lighthouse, and then either select the **What's new** link in the upper-right corner of the page or select **What's new** on the **What's new & learning resources** card.
 
+## November 2024
+
+### New Lighthouse RBAC roles to manage partner tenant permissions
+
+Microsoft 365 Lighthouse now includes the following role-based access control (RBAC) roles that you can use to manage partner tenant permissions in Lighthouse. To assign these roles, you must be a Lighthouse Administrator or a Privileged Role Administrator in Microsoft Entra ID in the partner tenant.
+
+- Lighthouse Account Manager
+- Lighthouse Administrator
+- Lighthouse Author
+- Lighthouse Operator (automatically assigned to users with GDAP permissions for a customer tenant)
+- Lighthouse Reader
+
+Each role has a set of permissions that determines which data users can access and change within the partner tenant. For example, you can assign the Lighthouse Account Manager role to users who require access to Sales Advisor.
+
+To assign RBAC roles, in the left navigation pane in Lighthouse, select **Permissions** > **Lighthouse permissions**.
+
+[Go to the Lighthouse permissions page now](https://lighthouse.microsoft.com/#view/Microsoft_Intune_MTM/RBAC.ReactView)
+
+To learn more, see [Overview of permissions in Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md).
+
+### New Home page card to quickly get you started with Lighthouse
+
+We're excited to introduce a new **Let's start with the basics** card on the **Home** page. When a user signs in to Microsoft 365 Lighthouse, the new card identifies key tasks and learning resources&mdash;scoped to the user's assigned Lighthouse RBAC role or roles&mdash;to help them set up their accounts and learn the basics of Lighthouse.
+
+The new card contains a list of relevant tasks and interactive guides in the form of a checklist. Selecting an item in the list simultaneously launches the task or resource and marks the item as initiated, making it easy for users to track their progress.
+
+The **Let's start with the basics** card is a great way for new users to quickly get up to speed and comfortable with Lighthouse, so they can more effectively work with customers to keep them safe, secure, and productive. The card also benefits existing users of Lighthouse by serving as a helpful refresher.
+
+To get started, go to the **Home** page of Lighthouse, locate the **Let's start with the basics** card, and then select an item from the list on the card.
+
+[Go to the Home page now](https://lighthouse.microsoft.com/#view/Microsoft_Intune_MTM/HomePage.ReactView)
+
+## October 2024
+
+### Easily access tenant details from any page in Lighthouse
+
+We've made it easy for you to access customer tenant details from any page in Lighthouse. Previously, you had to go to the **Tenants** page and then select a tenant from the list to view the details for that tenant. Now, when you select a tenant from the **Tenants** filter on any page, a link appears next to the filter that takes you directly to the details page for the selected tenant. This functionality helps you more efficiently manage your customer tenants by giving you one-click access to important tenant information no matter where you are in Lighthouse.
+
 ## September 2024
 
 ### Delegated access page
@@ -55,7 +93,7 @@ To learn more about delegated access, see [Overview of the Delegated access page
 
 ### Use Copilot insights in Lighthouse to drive Copilot success
 
-The new **Copilot insights** page lets you easily manage and monitor Copilot success across your customer tenants&mdash;all in one place. In addition to recommending customers who are likely to find value from Copilot, the page shows Copilot usage and license assignment and provides links to key resources for you to become a Copilot expert, including Copilot Lab, learning paths, and training videos. The page also shows deployment progress for tasks that we specifically recommend for enabling Copilot.
+The new **Copilot insights** page lets you easily manage and monitor Copilot success across your customer tenants&mdash;all in one place. In addition to recommending customers who are likely to find value from Copilot, the page shows Copilot usage and license assignment and provides links to key resources for you to become a Copilot expert, including Copilot Prompt Gallery, learning paths, and training videos. The page also shows deployment progress for tasks that we specifically recommend for enabling Copilot.
 
 Moreover, Copilot insights help you pinpoint customers who may need Copilot setup guidance or training. Use the insights to ensure all Copilot users are enabled and set up for success.
 

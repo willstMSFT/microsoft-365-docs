@@ -59,7 +59,7 @@ You can create a new device group while you are in the process of creating or ed
 
 8. On the **Device groups** step, review the list of device groups for the policy. If needed, remove a group from the list. Then choose **Next**.
 
-9. On the **Configuration settings** page, review and edit settings as needed, and then choose **Next**. For more information about these settings, see [Understand next-generation configuration settings in Microsoft Defender for Business](../security/defender-business/mdb-next-gen-configuration-settings.md).
+9. On the **Configuration settings** page, review and edit settings as needed, and then choose **Next**. For more information about these settings, see [Understand next-generation configuration settings in Microsoft Defender for Business](/defender-business/mdb-next-generation-protection).
 
 10. On the **Review your policy** step, review all the settings, make any needed edits, and then choose **Create policy** or **Update policy**.
 

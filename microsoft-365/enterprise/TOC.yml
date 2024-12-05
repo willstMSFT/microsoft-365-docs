@@ -110,7 +110,6 @@
               href: office-365-network-mac-perf-onboarding-tool.md
     - name: Microsoft 365 Networking Partner Program
       href: microsoft-365-networking-partner-program.md
-
 - name: Tenant
   items: 
     - name: Roadmap
@@ -197,7 +196,7 @@
         - name: Cross-tenant identity mapping
           href: cross-tenant-identity-mapping.md
 
-        - name: Multitenant collaboration
+        - name: Multitenant organizations
           items:
             - name: Plan for multitenant orgs
               href: plan-multi-tenant-org-overview.md
@@ -209,6 +208,10 @@
               href: sync-users-multi-tenant-orgs.md
             - name: Multitenant Organization People Search
               href: multi-tenant-people-search.md
+            - name: Manage multitenant org settings
+              href: manage-multitenant-org-settings.md
+            - name: Multitenant org FAQ
+              href: multitenant-org-faq.md
 
         - name: Cross-tenant OneDrive migration
           items:

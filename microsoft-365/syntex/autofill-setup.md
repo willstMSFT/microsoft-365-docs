@@ -14,7 +14,7 @@ ms.collection:
     - enabler-strategic
     - m365initiative-syntex
 ms.localizationpriority:  medium
-description: Learn how to set up autofill columns in Microsoft Syntex.
+description: Learn how to set up autofill columns in SharePoint.
 ---
 
 # Set up and manage autofill columns in Microsoft Syntex
@@ -25,7 +25,7 @@ The autofill columns service for Microsoft Syntex is set up in the Microsoft 365
 
 ### Licensing
 
-Before you can use autofill columns in Syntex, you must first link an Azure subscription in [Syntex pay-as-you-go](syntex-azure-billing.md). Autofill columns in Syntex is billed based on the [type and number of transactions](syntex-pay-as-you-go-services.md).
+Before you can use autofill columns, you must first link an Azure subscription in [Syntex pay-as-you-go](syntex-azure-billing.md). Autofill columns is billed based on the [type and number of transactions](syntex-pay-as-you-go-services.md).
 
 ### Permissions
 

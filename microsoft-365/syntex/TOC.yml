@@ -47,6 +47,8 @@
               href: prebuilt-model-receipt.md
             - name: Sensitive information 
               href: prebuilt-model-sensitive-info.md
+            - name: Simple documents 
+              href: prebuilt-model-simple.md
             - name: Manage your model
               items:
                 - name: Apply a model
@@ -133,8 +135,6 @@
                   href: accessibility-mode.md
                 - name: Rename an extractor
                   href: rename-an-extractor.md
-            - name: Duplicate a model
-              href: duplicate-a-model.md
             - name: Manage your model
               items:
                 - name: Apply a model
@@ -151,6 +151,8 @@
                   href: rename-a-model.md
                 - name: Delete a model
                   href: delete-a-model.md
+                - name: Duplicate a model
+                  href: duplicate-a-model.md
                 - name: Manage library settings 
                   href: manage-library-settings.md
                 - name: Choose a library view 

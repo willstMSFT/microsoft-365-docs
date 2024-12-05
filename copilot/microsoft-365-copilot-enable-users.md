@@ -15,6 +15,8 @@ ms.collection:
 - m365copilot
 - magic-ai-copilot
 description: "Learn about the steps to deploy Microsoft 365 Copilot to your users."
+appliesto:
+  - ✅ Microsoft 365 Copilot
 ---
 
 # Enable users for Microsoft 365 Copilot
@@ -49,7 +51,7 @@ Once you've assigned licenses, the Copilot experience will automatically appear 
 
 ## Send welcome email
 
-After licensing your users for Microsoft 365 Copilot, we recommend sending them a welcome email to introduce them to Microsoft 365 Copilot and help them understand what it can do for them. The easiest way to do this is to use the [Microsoft 365 Copilot setup guide](https://admin.microsoft.com/Adminportal/Home?Q=learndocs#/modernonboarding/microsoft365copilotsetupguide), which includes an option for sending a welcome email to your Copilot users. Here’s an example of this email:
+After licensing your users for Microsoft 365 Copilot, we recommend sending them a welcome email to introduce them to Microsoft 365 Copilot and help them understand what it can do for them. The easiest way to do this is to use the [Microsoft 365 Copilot setup guide](https://admin.microsoft.com/Adminportal/Home?Q=learndocs#/modernonboarding/microsoft365copilotsetupguide), which includes an option for sending a welcome email to your Copilot users. Here's an example of this email:
 
 :::image type="content" source="media/copilot-ga-welcome-email.png" alt-text="An image of an email introducing Microsoft 365 Copilot and its capabilities that an admin can provide to users.":::
 
