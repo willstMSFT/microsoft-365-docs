@@ -258,16 +258,16 @@ This section shows the results of an ICMP traceroute to the Exchange Online serv
 
 The public preview of tests for Microsoft 365 Copilot begins in December 2024.  You can navigate to <https://connectivity.office.com/copilot> or click the link on the home page <https://connectivity.office.com> to get started. 
 
-![mct-copilot-homepage](../media/m365-mac-perf/mct-copilot-homepage.png)
+![The home page of connectivity test tool](../media/m365-mac-perf/mct-copilot-homepage.png)
 
 The feature allow users to test the network connectivity, websocket enablement and latency of the major endpoints of Microsoft 365 Copilot, and also supports mobile device testing.
 
-You can read more about the network requirements for Microsoft 365 Copilot from the learn doc (<https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-requirements#network-requirements>).
+You can read more about the network requirements for Microsoft 365 Copilot from the learn doc (<https://learn.microsoft.com/copilot/microsoft-365/microsoft-365-copilot-requirements#network-requirements>).
 
 > [!NOTE]
 > This feature is currently only available in the global version of the tool, and it is in public preview.
 
-![mct-copilot-resultpage](../media/m365-mac-perf/mct-copilot-resultpae.png)
+![The result page of tests for Copilot](../media/m365-mac-perf/mct-copilot-resultpae.png)
 
 
 
