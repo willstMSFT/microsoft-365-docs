@@ -55,7 +55,7 @@ The <a href="https://go.microsoft.com/fwlink/p/?linkid=2084771" target="_blank">
 
 ## Select a default billing account
 
-If you have more than one billing account, you can use the billing account selector to set a default billing account. When you set a default billing account, we use that account as the first choice for all your billing activities. You can change your default billing account at any time.
+If you have more than one billing account, you can use the billing account selector to set a default billing account. When you set a default billing account, we use that account as the first choice for all your billing and purchasing activities. You can change your default billing account at any time.
 
 1. Go to the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339%22%22).
 1. Select the **Navigation menu**, then select **Billing** > <a href="https://go.microsoft.com/fwlink/p/?linkid=2102895" target="_blank">Bills & payments</a>.
