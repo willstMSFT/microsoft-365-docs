@@ -50,7 +50,7 @@ To learn more about adding connectors to policies, see [Add-ConnectorsToPolicy](
 
 To use the Scheduled prompts feature as an admin, no action is required if no DLP policies are in place and if the Optional connected experiences setting is already enabled. This feature is automatically included as part of the Optional Connected Experiences admin setting. However, if you have DLP policies in place that block new connectors, you may need to run the command script mentioned previously. You can check if you have such policies in the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 
-If you prefer to not have this feature available to your organization, you can disable the Optional connected experiences setting at [config.office.com](https://config.office.com/). For more information, see [Admin controls for optional connected experiences](/microsoft-365-apps/privacy/optional-connected-experiencess).
+If you prefer to not have this feature available to your organization, you can disable the Optional connected experiences setting at [config.office.com](https://config.office.com/). For more information, see [Admin controls for optional connected experiences](//microsoft-365-apps/privacy/optional-connected-experiences).
 
 If you turn off the Optional connected experiences setting, this action will prevent anyone in your organization from seeing Scheduled prompts in Copilot.
 
@@ -84,7 +84,7 @@ To manage their Scheduled prompts, users can follow these steps:
 
 Users can schedule up to 10 prompts to run at specific times, with responses delivered to the right rail of their Bizchat experience. These prompts can be set to run on a recurring basis, ensuring users receive necessary information aligned with their workflow. Responses from scheduled prompts are bolded and have a recurring icon to help users identify them easily.
 
-To learn more about Scheduled prompts for your users, see [support article link].
+To learn more about prompts for your users, see [Learn about Copilot prompts](https://support.microsoft.com/topic/learn-about-copilot-prompts-f6c3b467-f07c-4db1-ae54-ffac96184dd5).
 
 ## Opt in or out of preview
 
