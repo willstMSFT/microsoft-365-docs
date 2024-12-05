@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: laurawi
-ms.date: 11/20/2024
+ms.date: 12/05/2024
 ms.reviewer: cabailey, ruihu
 audience: Admin
 ms.topic: get-started
@@ -59,7 +59,7 @@ This article applies to:
 
   - **[Microsoft SharePoint Premium - SharePoint Advanced Management](/sharepoint/advanced-management#licensing)**
 
-    There are some features in SharePoint Advanced Management (SAM) that are included with your Microsoft 365 Copilot license. To get the full version of SAM and use all the features described in this article, you need the [Microsoft SharePoint Premium - SharePoint Advanced Management](/sharepoint/advanced-management#licensing) license.
+    Beginning in early 2025, Microsoft SharePoint Premium - SharePoint Advanced Management (SAM) will be included with your Microsoft 365 Copilot license. To learn more about SAM licensing, see [Microsoft SharePoint Premium - SharePoint Advanced Management](/sharepoint/advanced-management#licensing).
 
   - **[Microsoft 365 Copilot](microsoft-365-copilot-licensing.md)**
 
