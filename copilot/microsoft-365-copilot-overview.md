@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: camillepack
 author: camillepack
 manager: scotv
-ms.date: 11/19/2024
+ms.date: 12/05/2024
 audience: Admin
 ms.reviewer: mandia
 ms.topic: overview
@@ -100,7 +100,7 @@ Some of these features include:
 
 In your Microsoft 365 license, there are services and features that can help you get your data and organization ready for Copilot.
 
-- **SharePoint Advanced Managed (SAM)**
+- **SharePoint Advanced Management (SAM)**
 
   Microsoft SharePoint Premium – SharePoint Advanced Management (SAM) can help you reduce oversharing and cleanup inactive sites. These tasks help declutter Copilot's data sources and improve the quality of the responses.
 
