@@ -47,21 +47,21 @@ At the top, you can filter by different periods. The Microsoft 365 Copilot agent
 > [!NOTE]
 > Copilot agent data is only available starting Nov 1, 2024.
 
-:::image type="content" source="{source}" alt-text="{alt-text}":::
+:::image type="content" source="../../media/agents-hero-metrics.png" alt-text="Screenshot showing the active agents metrics for Microsoft 365 Copilot.":::
 
 **Active agents** shows the distinct number of apps with a declarative agent element in that app with at least one active user over the selected time period. For more information, see [Declarative agents FAQ](/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps). As defined earlier, only agents that have been created by your org including both admin approved and shared by users in your org are included.  
 
-End users can interact with agents in two ways: either by at-mentioning the agent or selecting the agent from the side panel to the right in Business chat, or from the hamburger menu on the top left corner in Copilot in Word, Excel or PowerPoint. An active user of an agent, is a user who received a response from Microsoft 365 Copilot, after interacting with the agent as previously described, followed by the user sending a prompt.  
+End users can interact with agents in two ways: either by at-mentioning the agent or selecting the agent from the side panel to the right in Business chat, or from the hamburger menu on the top left corner in Copilot in Word, Excel or PowerPoint. An active user of an agent, is a user who received a response from Microsoft 365 Copilot, after interacting with the agent as previously described, followed by the user sending a prompt.
 
 In Recommendations, the recommended action card highlights where Admins can go to, to manage Copilot agents as apps in the Integrated apps section of the Microsoft 365 admin center and enable agents for users in their org.
 
-:::image type="content" source="{source}" alt-text="{alt-text}":::
+:::image type="content" source="../../media/agents-recommendation.png" alt-text="Screenshot showing the recommendation card for the Microsoft 365 Copilot usage report.":::
 
 To learn more about managing and enabling agents in your org, see [Manage Copilot agents in Integrated Apps](/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps).
 
 You can see the following summary charts in this report as default view:
 
-:::image type="content" source="{source}" alt-text="{alt-text}":::
+:::image type="content" source="../../media/agents-summary.png" alt-text="Screenshot showing the summary chart for agent usage in Microsoft 365 Copilot." lightbox="../../media/agents-summary.png":::
 
 The definition of active agents is the same as provided earlier.
 
@@ -71,11 +71,11 @@ You can switch between Summary view and Trend view.
 
 **Trend view** shows you the daily time trend of agents in the time frame.
 
-:::image type="content" source="{source}" alt-text="{alt-text}":::
+:::image type="content" source="../../media/agents-trend-chart.png" alt-text="Screenshot showing the trend chart for agent usage in Microsoft 365 Copilot." lightbox="../../media/agents-trend-chart.png":::
 
 ## Agent details table
 
-:::image type="content" source="{source}" alt-text="{alt-text}":::
+:::image type="content" source="../../media/agents-details.png" alt-text="Screenshot showing the detail table for agent usage in Microsoft 365 Copilot." lightbox="../../media/agents-details.png":::
 
 | Item | Description |
 | --- | --- |
@@ -87,7 +87,7 @@ You can switch between Summary view and Trend view.
 > [!NOTE]
 > The agent metrics on the Usage page and Agents page include both admin approved and user-created agents, the table in the Agents details only shows agents that were admin approved. The breakout of agents created and shared by users in your org are now displayed in the table.
 
-## FAQ 
+## FAQ
 
 ### Are agents created from Microsoft Copilot Studio and Teams Tool Kit included?  
 

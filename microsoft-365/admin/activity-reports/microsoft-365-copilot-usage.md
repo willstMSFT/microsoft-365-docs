@@ -45,7 +45,7 @@ At the top, you can filter by different periods. The Microsoft 365 Copilot repor
 
 You can view several numbers for Microsoft 365 Copilot usage, which highlight the enablement number and the adoption of the enablement:
 
-:::image type="content" alt-text="Screenshot showing Microsoft 365 Copilot usage summary information." source="../../media/copilot-usage-numbers.png":::
+:::image type="content" alt-text="Screenshot showing Microsoft 365 Copilot usage summary information." source="../../media/copilot-usage-hero.png":::
 
 **Enabled Users** shows the total number of unique users in your organization with Microsoft 365 Copilot licenses over the selected time period.
 
@@ -87,15 +87,15 @@ When switching to Trend view, you can select one product in the dropdown list to
 
 :::image type="content" source="{source}" alt-text="{alt-text}":::
 
-**Agent adoption** shows active users using agents in Microsoft 365 Copilot for the selected period. As described earlier, only usage of agents that have been created by your org including both admin approved and shared by users in your organization are included.  
+**Agent adoption** shows active users of agents in Microsoft 365 Copilot for the selected period. As described earlier, only usage of agents that have been created by your org including both admin-approved agents and agents shared by users in your organization.  
 
 **Summary view** shows the total number of users using agents in Microsoft 365 Copilot in the time frame.
 
-:::image type="content" source="{source}" alt-text="{alt-text}":::
+:::image type="content" source="../../media/copilot-usage-agents.png" alt-text="Screenshot showing the agents adoption chart for Microsoft 365 Copilot usage." lightbox="../../media/copilot-usage-agents.png":::
 
 **Trend view** shows the daily trend of how frequently users are using agents in Microsoft 365 Copilot in the time frame.
 
-:::image type="content" source="{source}" alt-text="{alt-text}":::
+:::image type="content" source="../../media/copilot-usage-agents-trend.png" alt-text="Screenshot showing the trend view of the agents usage in Microsoft 365 Copilot." lightbox="../../media/copilot-usage-agents-trend.png":::
 
 The following table lists the features included for active users of Copilot apps:
 
@@ -140,7 +140,7 @@ You can view a table list to show each Microsoft 365 Copilot enabled user's last
 
 Select **Choose columns** to add or remove columns from the table.
 
-:::image type="content" alt-text="Screenshot showing the columns you can select for the Microsoft 365 Copilot usage report." source="../../media/copilot-usage-choose-columns2.png":::
+:::image type="content" alt-text="Screenshot showing the columns you can select for the Microsoft 365 Copilot usage report." source="../../media/copilot-usage-column.png":::
 
 You can also export the report data into an Excel .csv file by selecting the Export link. This exports the Microsoft 365 Copilot usage data of all users and enables you to do simple sorting, filtering, and searching for further analysis.
 
