@@ -30,10 +30,10 @@ The lab provides you with an automatically provisioned virtual lab environment. 
 
 The labs include evaluation versions of the following products:
 
-NEW! Windows 11 Enterprise, version 24H2
-NEW! Microsoft Configuration Manager, version 2409
-Windows Assessment and Deployment Kit for Windows 11
-Windows Server 2022
+- NEW! Windows 11 Enterprise, version 24H2
+- NEW! Microsoft Configuration Manager, version 2409
+- Windows Assessment and Deployment Kit for Windows 11
+- Windows Server 2022
 
 The labs are designed for you to connect them to trials for the following services:
 
