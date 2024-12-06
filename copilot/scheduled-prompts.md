@@ -33,7 +33,7 @@ You must have both of the following licenses to manage Scheduled prompts:
 
 Before you start using the Scheduled prompts feature, ensure that the Optional connected experiences setting is on in your tenant admin portal. This setting should be on by default, but you can double-check by accessing the Optional connected experiences setting at [config.office.com](https://config.office.com/).
 
-Additionally, if you block all new connectors by default using Power Platform Data Loss Prevention (DLP) policies, you’ll need to run the following command to explicitly reclassify the connector:
+Additionally, if you block all new connectors by default using Power Platform Data Loss Prevention (DLP) policies, you need to run the following command to explicitly reclassify the connector:
 
 ```powershell
 $connectorsToReclassify = @([pscustomobject]@{
@@ -48,11 +48,11 @@ To learn more about adding connectors to policies, see [Add-ConnectorsToPolicy](
 
 ## Admin controls
 
-To use the Scheduled prompts feature as an admin, no action is required if no DLP policies are in place and if the Optional connected experiences setting is already enabled. This feature is automatically included as part of the Optional Connected Experiences admin setting. However, if you have DLP policies in place that block new connectors, you may need to run the command script mentioned previously. You can check if you have such policies in the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
+To use the Scheduled prompts feature as an admin, no action is required if no DLP policies are in place and if the Optional connected experiences setting is already enabled. This feature is automatically included as part of the Optional Connected Experiences admin setting. However, if you have DLP policies in place that block new connectors, you might need to run the command script mentioned previously. You can check if you have such policies in the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 
 If you prefer to not have this feature available to your organization, you can disable the Optional connected experiences setting at [config.office.com](https://config.office.com/). For more information, see [Admin controls for optional connected experiences](/microsoft-365-apps/privacy/optional-connected-experiences).
 
-If you turn off the Optional connected experiences setting, this action will prevent anyone in your organization from seeing Scheduled prompts in Copilot.
+If you turn off the Optional connected experiences setting, this action prevents anyone in your organization from seeing Scheduled prompts in Copilot.
 
 ### Data policies
 
@@ -65,14 +65,14 @@ To prevent exposing organizational data, you should also create a data policy in
 If you disable this feature after someone in your organization has already used it:
 
 - Users will no longer be able to manage previously scheduled prompts.
-- Sessions for previously run scheduled prompts will continue to exist.
+- Sessions for previously run scheduled prompts continue to exist.
 - Users will no longer see the Scheduled prompts feature or the prompt management pane if the Optional Connected Experiences setting is disabled.
 
-Users will still see the feature if the Optional Connected Experiences setting is enabled and DLP policies are in place, but they will not be able to successfully create a scheduled prompt, and will be made aware that this failure is a result of their organization’s data policy.
+Users will still see the feature if the Optional Connected Experiences setting is enabled and DLP policies are in place, but they won't be able to successfully create a scheduled prompt, and will be made aware that this failure is a result of their organization’s data policy.
 
 ## User controls
 
-:::image type="content" source="media/prompt-set-up.png" alt-text="Screenshot showing the set up text for a new scheduled prompt in Copilot." lightbox="media/prompts-set-up.png":::
+:::image type="content" source="media/prompt-set-up.png" alt-text="Screenshot showing the setup text for a new scheduled prompt in Copilot." lightbox="media/prompt-set-up.png":::
 
 Your users can find the Scheduled prompts feature by hovering over a prompt they have submitted to Copilot. When a user selects the Save and activate button to confirm the scheduled prompt, a user's prompt information will be sent to the Power Automate and Power Platform system, and the [Power Automate terms of service and privacy policy](/power-platform/admin/wp-compliance-data-privacy) apply.
 
@@ -88,10 +88,10 @@ To learn more about prompts for your users, see [Learn about Copilot prompts](ht
 
 ## Opt in or out of preview
 
-If you’re interested in joining the preview, you must opt-in. To be eligible, you must have:
+If you’re interested in joining the preview, you must opt in. To be eligible, you must have:
 
 - Copilot license
-- Optional Connected Experience (OCE) admin toggle enabled
+- Optional connected experiences admin toggle enabled
 - DLP policies configured to allow the Microsoft 365 Copilot connector in your default Power Platform environment
 
 You can start the opt-in process by submitting a support ticket and stating that you would like to join the Scheduled Prompts preview. Our engineers can help validate eligibility criteria and enroll you into the preview program.
