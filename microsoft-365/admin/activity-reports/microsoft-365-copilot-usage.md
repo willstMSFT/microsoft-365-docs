@@ -58,14 +58,10 @@ You can view several numbers for Microsoft 365 Copilot usage, which highlight th
 
 In Recommendations, the recommended action card highlights [Microsoft Copilot Dashboard](/viva/insights/org-team-insights/copilot-dashboard), where you can deliver insights to your IT leaders to explore Copilot readiness, adoption, and impact in Viva Insights.
 
-**Active agent users** shows you the total number of unique Microsoft 365 Copilot users in your org, who used agents that are built by your org, and include agents that were approved by admin and agents created via agent builder  and shared with users in your org.
-
-End-users can interact with agents in two ways: either by at-mentioning the agent or selecting the agent from the side panel to the right in Business chat, or from the hamburger menu on the top left corner in Copilot in Word, Excel or PowerPoint. Learn more about which agent usage are included in Agent usage in Microsoft 365 Copilot.
-
-An active user of an agent, is a user who received a response from Microsoft 365 Copilot, after interacting with the agent as previously described, followed by the user sending a prompt.  
+**Active agent users** shows you the total number of unique Microsoft 365 Copilot users in your org who used agents built by your org (including admin-approved agents and agents created via agent builder and shared with users in your org).
 
 > [!NOTE]
-> Data for usage of agents is only available starting November 1, 2024
+> Agent usage is available starting November 1, 2024, and is currently limited to agents built by your org. Usage of agents built by Microsoft and Microsoft Partners will be introduced in the coming months.
 
 **Adoption by app** shows enabled users and active users of Copilot in Microsoft 365 apps.
 
@@ -85,15 +81,15 @@ When switching to Trend view, you can select one product in the dropdown list to
 
 **Business Chat adoption** shows enabled users and total usage of Business Chat and split usage between Business Chat (work) and Business Chat (web).
 
-:::image type="content" source="{source}" alt-text="{alt-text}":::
+:::image type="content" source="../../media/copilot-usage-business-chat.png" alt-text="Screenshot showing the business chat usage chart in the Microsoft 365 Copilot usage report.":::
 
-**Agent adoption** shows active users of agents in Microsoft 365 Copilot for the selected period. As described earlier, only usage of agents that have been created by your org including both admin-approved agents and agents shared by users in your organization.  
+**Agent adoption** shows active users of agents in Microsoft 365 Copilot for the selected period. As described earlier, only usage of agents that have been created by your org including both admin-approved agents and agents shared by users in your org.
 
-**Summary view** shows the total number of users using agents in Microsoft 365 Copilot in the time frame.
+**Summary view** shows the total number of agent users in Microsoft 365 Copilot over the selected time frame.
 
 :::image type="content" source="../../media/copilot-usage-agents.png" alt-text="Screenshot showing the agents adoption chart for Microsoft 365 Copilot usage." lightbox="../../media/copilot-usage-agents.png":::
 
-**Trend view** shows the daily trend of how frequently users are using agents in Microsoft 365 Copilot in the time frame.
+**Trend view** shows the daily trend of active agent users in Microsoft 365 Copilot over the selected time frame.
 
 :::image type="content" source="../../media/copilot-usage-agents-trend.png" alt-text="Screenshot showing the trend view of the agents usage in Microsoft 365 Copilot." lightbox="../../media/copilot-usage-agents-trend.png":::
 
@@ -122,6 +118,13 @@ The following table lists the features included for active users of Copilot apps
 | Loop         | All Copilot in Loop features are automatically included in the Microsoft 365 Copilot usage report. Usage of any Copilot in Loop feature counts towards the Active users metric and is indicated in the per-user Last activity date (UTC). |                                                                                                                                                                                                                                                                   | To learn more about Copilot in Loop features, refer to [Get started with Microsoft 365 Copilot in Loop - Microsoft Support](https://support.microsoft.com/office/get-started-with-copilot-for-microsoft-365-in-loop-966eb1a2-b5ec-4532-8a9d-f1aaeda7f90e).                                                                                                                                   |
 
 To note, Active users of Word, Excel, and PowerPoint is incomplete prior to Jan 25, 2024.
+
+The following table lists the features included for active users of agents:
+
+| Feature | How to use | Learn more about the feature |
+| --- | --- | --- |
+| UX interactions that count towards agent usage | End-users can interact with agents in two ways: 1) by at-mentioning the agent in a chat experience or 2) by selecting the agent from the right-side panel in Business Chat or from the hamburger menu on the top left corner in Copilot in Word or PowerPoint. <br> <br> An active user of an agent is a user who sends a prompt request to an agent and receives a response | Learn about [Getting started with agents for Microsoft 365 Copilot](https://support.microsoft.com/topic/get-started-with-agents-for-microsoft-365-copilot-169469d7-328d-4d37-9090-bfc2058a39bd)  |
+
 
 > [!IMPORTANT]
 > The metrics displayed in this report are powered by data that is classified as required service data. Optional diagnostic data is not required for comprehensive information, although this may change in the future. [Learn more about required service data](/DeployOffice/privacy/required-service-data).
