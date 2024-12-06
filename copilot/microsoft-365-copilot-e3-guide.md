@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: laurawi
-ms.date: 11/20/2024
+ms.date: 12/05/2024
 ms.reviewer: cabailey, ruihu
 audience: Admin
 ms.topic: get-started
@@ -58,7 +58,7 @@ This article applies to:
 
   - **[Microsoft SharePoint Premium - SharePoint Advanced Management](/sharepoint/advanced-management#licensing)**
 
-    There are some features in SharePoint Advanced Management (SAM) that are included with your Microsoft 365 Copilot license. To get the full version of SAM and use all the features described in this article, you need the [Microsoft SharePoint Premium - SharePoint Advanced Management](/sharepoint/advanced-management#licensing) license.
+    Beginning in early 2025, Microsoft SharePoint Premium - SharePoint Advanced Management (SAM) will be included with your Microsoft 365 Copilot license. To learn more about SAM licensing, see [Microsoft SharePoint Premium - SharePoint Advanced Management](/sharepoint/advanced-management#licensing) license.
 
   - **[Microsoft 365 Copilot](microsoft-365-copilot-licensing.md)**
 
@@ -271,30 +271,12 @@ To learn more, see:
 
 ### Review and analyze Copilot prompts and responses
 
-✅ **Use [Data Security Posture Management (DSPM) for AI](/purview/ai-microsoft-purview) or [eDiscovery](/purview/edisc) to analyze Copilot user prompts and responses**
+✅ **Use [eDiscovery](/purview/edisc) to analyze Copilot user prompts and responses**
 
 When users enter a prompt and get a response from Copilot, you can view and search these interactions. Specifically, these features help you:
 
 - Find sensitive information or inappropriate content included in Copilot activities.
 - Respond to a data spillage incident when confidential or malicious information is released through Copilot-related activity.
-
-There are two ways to review and analyze Copilot prompts and responses - **Data Security Posture Management for AI** and **eDiscovery**.
-
-# [DSPM for AI](#tab/aihub)
-
-[Data Security Posture Management (DSPM) for AI](/purview/ai-microsoft-purview#microsoft-purview-ai-hub-provides-insights-policies-and-controls-for-ai-apps) (previously called AI Hub) is a central location in the Microsoft Purview portal that proactively monitors AI use. It includes eDiscovery and you can use it to analyze and review Copilot prompts and responses.
-
-1. Sign into the [Microsoft Purview portal](https://purview.microsoft.com/) as an admin in one of the groups listed at [Data Security Posture Management for AI - Permissions](/purview/ai-microsoft-purview-permissions).
-2. Select **Solutions** > **DSPM for AI** > **Activity explorer**.
-3. Select an existing activity in the list. For example, if there's a **Sensitive info types** activity, select it.
-4. Select **View related AI interaction activity**. In **Interaction details**, you can see the app and export an activity.
-
-To learn more, see:
-
-- [Microsoft Purview Data Security Posture Management for AI](/purview/ai-microsoft-purview-considerations)
-- [Data Security Posture Management for AI - Activity explorer events](/purview/ai-microsoft-purview-considerations#activity-explorer-events)
-
-# [eDiscovery](#tab/edisc)
 
 [eDiscovery](/purview/edisc) uses cases to identify, hold, export, and analyze content found in mailboxes and sites. You can this feature to analyze Copilot prompts and responses.
 
@@ -307,8 +289,6 @@ To learn more, see:
 4. The data returned is the Copilot prompts and responses. You can review and export this information. If the data contains sensitive information, you can also delete it.
 
 To learn more, see [Search for Copilot interactions in eDiscovery](/purview/edisc-search-copilot-data).
-
----
 
 ## Technical and deployment resources available to you
 
