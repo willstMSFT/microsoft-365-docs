@@ -7,7 +7,7 @@ ms.author: aaroncz
 author: cdmm12
 manager: aaroncz
 ms.reviewer: alainme
-ms.date: 08/13/2024
+ms.date: 12/06/2024
 ms.audience: ITPro
 ms.topic: conceptual
 ms.service: microsoft-365-enterprise
@@ -34,8 +34,8 @@ The labs include evaluation versions of the following products:
 
 |Windows 11 lab|
 |---|
-|Windows 11 Enterprise, version 23H2|
-|Microsoft Configuration Manager, version 2303|
+|NEW! Windows 11 Enterprise, version 24H2|
+|NEW! Microsoft Configuration Manager, version 2409|
 |Windows Assessment and Deployment Kit for Windows 11|
 |Windows Server 2022|
 
