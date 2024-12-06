@@ -15,7 +15,7 @@ ms.collection:
     - enabler-strategic
     - m365initiative-syntex
 ms.localizationpriority:  medium
-description: Learn how to set up and configure taxonomy tagging in Microsoft Syntex.
+description: Learn how to set up and configure taxonomy tagging in SharePoint.
 ---
 
 # Set up and manage taxonomy tagging in Microsoft Syntex
@@ -26,7 +26,7 @@ The taxonomy tagging service for Microsoft Syntex is set up in the Microsoft 365
 
 ### Licensing
 
-Before you can use taxonomy tagging in Syntex, you must first link an Azure subscription in [Syntex pay-as-you-go](syntex-azure-billing.md). Taxonomy tagging in Syntex is billed based on the [type and number of transactions](syntex-pay-as-you-go-services.md).
+Before you can use taxonomy tagging, you must first link an Azure subscription in [Syntex pay-as-you-go](syntex-azure-billing.md). Taxonomy tagging is billed based on the [type and number of transactions](syntex-pay-as-you-go-services.md).
 
 ### Permissions
 
@@ -36,7 +36,7 @@ You must be a [SharePoint Administrator](/entra/identity/role-based-access-contr
 
 ## Set up taxonomy tagging
 
-After an [Azure subscription is linked to Microsoft Syntex](syntex-azure-billing.md), taxonomy tagging will be automatically set up and enabled for all SharePoint sites.
+After an [Azure subscription is linked to Microsoft Syntex](syntex-azure-billing.md), taxonomy tagging is automatically set up and enabled for all SharePoint sites.
 
 ## Manage sites
 

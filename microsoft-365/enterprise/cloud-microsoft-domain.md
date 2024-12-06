@@ -44,10 +44,12 @@ Since 2023, *.cloud.microsoft and other domains related to the domain unificatio
 ## Microsoft product and service URLs
 | Service | URL |
 |:-----|:-----|
+|Microsoft 365 |[m365.cloud.microsoft](https://m365.cloud.microsoft)|
 |Microsoft 365 Copilot Business Chat |[m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat)|
 |Microsoft Excel | [excel.cloud.microsoft](https://excel.cloud.microsoft)|
 |Microsoft PowerPoint | [powerpoint.cloud.microsoft](https://powerpoint.cloud.microsoft)|
 |Microsoft Word | [word.cloud.microsoft](https://word.cloud.microsoft)|
+|Microsoft Outlook | [outlook.cloud.microsoft](https://outlook.cloud.microsoft)|
 |Microsoft 365 Service Health Status Page |[status.cloud.microsoft](https://status.cloud.microsoft)|
 |Microsoft Admin Center| [admin.cloud.microsoft](https://admin.cloud.microsoft)|
 |Microsoft Loop | [loop.cloud.microsoft](https://loop.cloud.microsoft)|

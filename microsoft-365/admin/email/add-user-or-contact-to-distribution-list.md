@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: kwekua
 author: kwekuako
 manager: scotv
-ms.date: 10/02/2023
+ms.date: 11/14/2024
 audience: Admin
 ms.topic: article
 ms.service: microsoft-365-business
@@ -36,7 +36,7 @@ As the admin of an organization, you may need to add one of your users or contac
 
 ## Steps
 
-1. In the Microsoft 365 admin center, select **Teams and groups** \> **Active teams and groups** \> **Distribution lists**.
+1. In the Microsoft 365 admin center, select **Teams and groups** \> **Active teams and groups** \> **Distribution list**.
 
 2. On the group page, select the name of the group you want to add a contact to.
 
@@ -44,12 +44,10 @@ As the admin of an organization, you may need to add one of your users or contac
 
 4. On the **View Members** page, select **Add members**, and select the user or contact you want to add to the distribution group.
 
-    ![Add members to distribution group.](../../media/f79f59f8-1606-43fe-bae6-df74f5b6259d.png)
+   > [!NOTE]
+   > You can also remove a user on **View Members** page. Select the user, select the ellipsis symbol and choose **Remove member**.
 
 5. Select **Add** and close.
-
-   > [!NOTE]
-   > You can also remove a user on this page. Select the user, select the ellipsis symbol and choose **Remove member**.
   
 ## Next steps
 

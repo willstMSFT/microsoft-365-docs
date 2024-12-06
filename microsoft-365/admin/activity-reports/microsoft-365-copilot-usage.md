@@ -29,7 +29,7 @@ description: "Learn how to get the Microsoft 365 Copilot usage report and gain i
 
 The Microsoft 365 Usage dashboard shows you the activity overview across the Microsoft 365 productivity apps in your organization. It enables you to drill into individual product-level reports to give you more granular insight about the activities within each app. To view all reports, check out the [Reports overview article](activity-reports.md).
 
-In the Microsoft 365 Copilot usage report, which is in continuous enhancement, you can view a summary of how users’ adoption, retention, and engagement are with Microsoft 365 Copilot, and the activity of every Copilot user in your organization. For Copilot activity on a given day, the report becomes available within 72 hours of the end of that day (in UTC).
+In the Microsoft 365 Copilot usage report, which is in continuous enhancement, you can view a summary of how users' adoption, retention, and engagement are with Microsoft 365 Copilot, and the activity of every Copilot user in your organization. For Copilot activity on a given day, the report becomes available within 72 hours of the end of that day (in UTC).
 
 ## How do I get to the Microsoft 365 Copilot usage report?
 
@@ -50,6 +50,9 @@ You can view several numbers for Microsoft 365 Copilot usage, which highlight th
 **Enabled Users** shows the total number of unique users in your organization with Microsoft 365 Copilot licenses over the selected time period.
 
 **Active Users** shows the total number of enabled users in your organization who tried a user-initiated Microsoft 365 Copilot feature, in one or more apps in Microsoft 365 over the selected time period.
+
+> [!NOTE]
+> Active users now includes Business Chat (web) usage starting from August 20, 2024. We'll update this documentation once the specific usage of the entry point for Business Chat (web) is available.
 
 **Active users rate** shows you the number of active users in your organization divided by the number of enabled users.
 
@@ -109,7 +112,7 @@ To learn more about using organizational messages for Microsoft 365 Copilot, see
 
 You can also export the report data into an Excel .csv file by selecting the ellipses and then **Export** in the top-right corner.
 
-You can view a table list to show each Microsoft 365 Copilot enabled user’s last activity date among Microsoft 365 Copilot products.
+You can view a table list to show each Microsoft 365 Copilot enabled user's last activity date among Microsoft 365 Copilot products.
 
 :::image type="content" alt-text="Screenshot showing the activity for the Microsoft 365 Copilot usage report." source="../../media/copilot-usage-last-activity.png" lightbox="../../media/copilot-usage-last-activity.png":::
 
@@ -137,6 +140,9 @@ To ensure data quality, we perform daily data validation checks for the past thr
 | Last activity date of Loop Copilot (UTC)       | The latest date the user had activity in Loop Copilot, including any of the intentional activities, regardless of the selected time period of past 7/30/90/180 days.                                          |
 | Last activity date of Copilot chat (UTC)        | The latest date the user had activity in Copilot chat, including any of the intentional activities, regardless of the selected time period of past 7/30/90/180 days.                                         |
 
+> [!NOTE]
+> The Last activity date (UTC) now includes the latest date the user had activity in Business Chat (web) starting from August 20, 2024, including any of the intentional activities, regardless of the selected time period of the past 7/30/90/180 days.
+
 ## Make the user-specific data anonymous
 
 To make the data in the Microsoft 365 Copilot report anonymous, you must be a global administrator. This will hide identifiable information (using MD5 hashes) such as display name, email, and Microsoft Entra Object ID in report and their export.
@@ -155,7 +161,7 @@ A user is considered active in a given app if they performed an intentional acti
 
 ### What's the difference between the user activity table and audit log?
 
-The audit log data that powers Microsoft Purview solutions, such as AI hub, are built for data security and compliance purposes, and provide comprehensive visibility into Copilot interactions for these use cases (for example, to discover data oversharing risks or to collect interactions for regulatory compliance or legal purposes). They are not, however, intended to be used as the basis for Copilot usage reporting. Any aggregated metrics that customers build on top of this data, such as "prompt count" or "active user count," may not be consistent with the corresponding data points in the official Copilot usage reports provided by Microsoft. Microsoft cannot provide guidance on how to use audit log data as the basis for usage reporting, nor can Microsoft guarantee that aggregated usage metrics built on top of audit log data will match similar usage metrics reported in other tools.
+The audit log data that powers Microsoft Purview solutions, such as Data Security Posture Management for AI (prevoius called AI Hub), are built for data security and compliance purposes, and provide comprehensive visibility into Copilot interactions for these use cases (for example, to discover data oversharing risks or to collect interactions for regulatory compliance or legal purposes). They are not, however, intended to be used as the basis for Copilot usage reporting. Any aggregated metrics that customers build on top of this data, such as "prompt count" or "active user count," may not be consistent with the corresponding data points in the official Copilot usage reports provided by Microsoft. Microsoft cannot provide guidance on how to use audit log data as the basis for usage reporting, nor can Microsoft guarantee that aggregated usage metrics built on top of audit log data will match similar usage metrics reported in other tools.
 
 To access accurate information on Microsoft 365 Copilot usage, use one of the following reports: the [Microsoft 365 Copilot usage report](microsoft-365-copilot-usage.md) in the Microsoft 365 Admin Center or the [Copilot Dashboard](/viva/insights/org-team-insights/copilot-dashboard) in Viva Insights.
 
@@ -163,7 +169,7 @@ To access accurate information on Microsoft 365 Copilot usage, use one of the fo
 
 No. Meanwhile, Copilot chat in Outlook usage is counted towards Copilot chat active users.
 
-### What’s the scope of the user-level table?
+### What's the scope of the user-level table?
 
 The user-level table in the report is configured to show all users who were licensed for Microsoft 365 Copilot at any point over the past 180 days, even if the user has since had the license removed or never had any Copilot active usage.
 

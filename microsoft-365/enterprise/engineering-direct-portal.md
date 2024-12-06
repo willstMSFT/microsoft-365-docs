@@ -1,26 +1,26 @@
----  
+---
 title: "Engineering Direct Portal in the Microsoft 365 Admin Center"
 author: kelleyvice-msft
 ms.author: kvice  
 manager: scotv
-ms.date: 10/04/2024
+ms.date: 12/03/2024
 ms.topic: article
-ms.service: microsoft-365-business  
-ms.subservice: m365-admin-center  
+ms.service: microsoft-365-enterprise
+ms.subservice: administration
 ms.localizationpriority: medium
 ms.collection: 
 - scotvorg
 - must-keep
 ms.custom: QuickDraft  
-ms.reviewer: kwekua; holliep  
+ms.reviewer: holliep  
 search.appverid: MET150  
 f1.keywords:  
 audience:  
 description: Understand the new Engineering Direct Portal in the Microsoft 365 admin center and learn how to access and use its features
 ai-usage: ai-assisted  
----  
+---
 
-# Engineering Direct Portal in the Microsoft 365 Admin Center
+  # Engineering Direct Portal in the Microsoft 365 Admin Center
 
 The Engineering Direct Portal is a new feature within the Microsoft 365 admin center designed to provide Office Engineering Direct (OED) customers with an enhanced engineering experience. This article provides an overview of the portal's features, how to access it, and its functionality.
 
@@ -49,7 +49,7 @@ The Engineering Direct Portal is located under **Support** within the Microsoft 
 Once in the portal, you'll see the **Overview** page. This page contains several key elements:
 
 - **ACE Contact**: If you have an Advanced Cloud Engineer (ACE) assigned, you'll see an ACE tile with primary contact information. This lists your ACE email address with a clickable option to start an email. The tile won't be visible to customers without an ACE.
-- **Insights: Key Metrics**: This tile lists both your engineering escalations and those that have been resolved for the last six months. An issue is considered an 'engineering escalation' once it has been raised to and assigned to a Microsoft Engineering team member (either through our support organization, or through your usage of the "Escalate to Engineering" feature).
+- **Insights: Key Metrics**: This tile lists both your engineering escalations and those escalations that have been resolved for the last six months. An issue is considered an 'engineering escalation' once it has been raised to and assigned to a Microsoft Engineering team member (either through our support organization, or through your usage of the "Escalate to Engineering" feature).
   - Total escalations include open or closed tickets
   - Active escalations include only those tickets that are open
 - **Customer Advisory Board (CAB)**: The CAB tile will list the last and next CAB events as well as the last and next community calls. This is informational only; registrations and calendar blockers will continue to be provided separately through existing process channels.
@@ -92,6 +92,13 @@ In this section:
 - [Visual Mail Flow](#visual-mail-flow)
 - [Validate DKIM Signing Configuration](#validate-dkim-signing-configuration)
 - [Auto Archive Detection](#auto-archive-detection)
+- [Remediate a Compromised Account](#remediate-a-compromised-account)
+
+- [Audit Log Summary](#audit-log-summary)
+
+<!---
+- [Guest Access in Teams](#guest-access-in-teams)
+- -->
 
 ### Visual Mail Flow
 
@@ -157,7 +164,7 @@ The Validate DKIM Signing Configuration tool is used to:
 This diagnostic tool is particularly useful in the following scenarios: 
 
 - **Initial Setup:** After configuring DKIM for a new domain, use the tool to verify that the setup is complete and correct. 
-- **Troubleshooting:** If emails from your domain are being marked as spam or are not passing DKIM validation, use the tool to diagnose potential configuration issues. 
+- **Troubleshooting:** If emails from your domain are being marked as spam or aren't passing DKIM validation, use the tool to diagnose potential configuration issues. 
 - **Configuration Updates:** When updating DKIM settings or DNS records, use the tool to confirm that changes have been applied correctly. 
 
 #### Steps and Outputs
@@ -166,7 +173,7 @@ This diagnostic tool is particularly useful in the following scenarios:
 
   Navigate to Microsoft Admin Center: 
 
-    - Log in to the Microsoft Admin Center. 
+    - Sign in to the Microsoft Admin Center. 
     - Go to the Diagnostics section. 
 
   Select Validate DKIM Signing Configuration: 
@@ -185,11 +192,11 @@ This diagnostic tool is particularly useful in the following scenarios:
 
 - **Step 3: Review Diagnostic Results**
 
-  After running the diagnostic, you will receive one of the following results, depending on the status of your DKIM configuration: 
+  After running the diagnostic, you'll receive one of the following results, depending on the status of your DKIM configuration: 
 
   **Slide 1: No Configuration Created nor Enabled**
 
-    - Description: DKIM signing configuration for the domain has not been created. Emails may use default domain settings. 
+    - Description: DKIM signing configuration for the domain hasn't been created. Emails might use default domain settings. 
     - Action Required: Create the necessary DKIM signing configuration. Follow the PowerShell link provided in the diagnostic output to create the configuration. Then, configure DKIM using the steps outlined in the [Set up DKIM to sign mail from your Microsoft 365 domain](/defender-office-365/email-authentication-dkim-configure) article. 
 
   **Slide 2: Configured but Possibly Published Incorrectly**
@@ -219,9 +226,9 @@ By using the Validate DKIM Signing Configuration tool effectively, you can ensur
 
 ### Auto Archive Detection
 
-Auto Archive Detection helps manage your mailbox by automatically archiving or deleting old items. This feature can be configured differently in Outlook Desktop and Outlook on the Web (OWA). Editing Auto Archive settings in Outlook can help you effectively manage your mailbox, keeping it organized and free of clutter. Whether you are using Outlook Desktop or Outlook on the Web, the steps provided will guide you through the process of configuring Auto Archive to suit your needs.
+Auto Archive Detection helps manage your mailbox by automatically archiving or deleting old items. This feature can be configured differently in Outlook Desktop and Outlook on the Web (OWA). Editing Auto Archive settings in Outlook can help you effectively manage your mailbox, keeping it organized and free of clutter. Whether you're using Outlook Desktop or Outlook on the Web, the steps provided will guide you through the process of configuring Auto Archive to suit your needs.
 
-Follow the steps below to enable and customize Auto Archive settings based on your version of Outlook. 
+Follow the following steps to enable and customize Auto Archive settings based on your version of Outlook. 
 
 #### For Outlook Desktop
 
@@ -260,8 +267,133 @@ Follow the steps below to enable and customize Auto Archive settings based on yo
 
 1. Save your changes to apply the new settings. 
 
+### Remediate a Compromised Account
+
+If you or your user suspects an account has been accessed by someone who shouldn’t have access, it may be compromised. The **Remediate a Compromised Account** diagnostic will help you check different aspects of the affected mailbox and guide you through the steps to recover the account. Please use this diagnostic if you or your user notice any signs that one of your user's accounts may have been compromised.
+
+This diagnostic is split into multiple sections that detail steps to remediate the account. Each step lists the actions required or links to an article that can be explained in more detail. Furthermore, there will be additional account details for each step, such as when the user last reset the password, what MFA is enabled on the account, and which IP addresses have accessed the mailbox.
+
+**Inputs**
+
+- Email Address of Compromised Account
+
+#### Steps and Output
+
+1. Force Sign Out - First, it is important to force a user to sign out of all sessions:
+
+    - Go to the [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/homepage).
+
+    - Navigate to _Users > Active users_.
+
+    - Click on the desired user.
+
+    - On the Account Tab, under _Sign-out_, select _Sign out of all sessions_.
+
+2. Reset Password - [Reset the password.](/microsoft-365/admin/add-users/reset-passwords) Don't send the new password to the user through email, because the attacker may still have access to the mailbox. Be sure to use a strong and unique password: upper and lowercase letters, at least one number, and at least one special character.
+
+    - The last time a user reset the password will be displayed.
+
+3. Enable multifactor authentication - [Multi-Factor Authentication (MFA)](/entra/identity/authentication/concept-mfa-howitworks) is crucial for enhancing security and protecting user accounts. [Enable MFA](/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication).
+
+    - A list of types of MFA enabled on the user will be displayed.
+
+4. Block Suspicious IP Addresses - Blocking suspicious or harmful IP addresses is an essential cybersecurity measure. [Review the IP Addresses that have activity on this account and block any that are suspicious](/defender-office-365/tenant-allow-block-list-urls-configure).
+
+    - A list of IP addresses that performed actions on the account will be displayed.
+
+5. Remove Account from Administrative Roles - To ensure that the attacker can't perform administrative actions, [remove compromised account from any administrative roles](/microsoft-365/admin/add-users/assign-admin-roles?WT.mc_id=365AdminCSH_SupportCentral). You can restore the user's membership once the account is secured.
+
+6. Enable Mailbox Logging - Mailbox logging is the capability of capturing and analyzing audit logs related to security, compliance, and other activities within Microsoft 365 or Office 365. [Enable mailbox logging.](/purview/audit-log-enable-disable?tabs=microsoft-purview-portal)
+
+    - The status of logging on the mailbox will be shown (Enabled or Disabled).
+
+7. Remove Unusual Mailbox Delegates - A mailbox delegate is someone you authorize to manage your email and calendar on your behalf. Displayed below are all the delegates that aren't the mailbox owner. [Delete any unknown users.](/exchange/recipients-in-exchange-online/manage-permissions-for-recipients)
+
+    - Users who have delegate permission will be displayed with the fields `user (email)`, `isinherited`, and `access rights`.
+
+8. Remove Unusual Inbox Rules - Inbox rules are often used by attackers to forward emails to themselves. [Check if there are any unusual rules and delete them.](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules)
+
+    - The inbox rules registered on the mailbox will be displayed with the identity, name, description, `forwardto` address, and enabled status.
+
+9. Remove Unusual SMTP Forwarding - Simple Mail Transfer Protocol (SMTP) is the protocol responsible for sending emails from the sender's email client to the email server. [Check if there is SMTP forwarding.](/exchange/recipients-in-exchange-online/manage-user-mailboxes/manage-user-mailboxes)
+
+    - SMTP forwarding registered on the mailbox will be displayed.
+
+10. Remove Unusual Accepted Domains - An accepted domain in a mailbox allows users in a domain to send and receive mail. [Delete any unusual domains.](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains)
+
+    - Accepted domains registered on the tenant will be displayed.
+
+11. Remove Unusual Inbound and Outbound Connectors - Inbound connectors manage email traffic coming into your organization, while outbound connectors control the flow of emails leaving your organization. [Check if there are any unusual connectors and delete them.](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/set-up-connectors-to-route-mail)
+
+    - Connectors registered on the tenant will be displayed.
+
+**Further Steps**
+
+If the user still shows signs of being compromised, reach out to Microsoft Support for further help.
+
+### Audit Log Summary
+
+The audit log summary provides a comprehensive overview or count of the activities tracked within your tenant’s audit log. This diagnostic tool is useful for reviewing admin actions, identifying unusual administrative activity, or investigating potential rogue administrators. 
+
+#### Inputs 
+
+- Search the number of days prior to the current date (max 30 days)
+
+  - If you enter 10, the diagnostic will review the log for up to 10 days prior to the current date
+  
+  - If left blank, the diagnostic will run with the value of 7 days 
+  
+#### Outputs 
+
+The output is split into two sections: 
+
+1. Users with High Activity – Users who have performed a specific action at a much higher rate than the average user will be listed here, along with the count of each action they have taken. 
+
+1. Full User List – All users, along with a list of their activities and corresponding counts, will be displayed here in alphabetical order. Actions performed by apps will be grouped together. 
+
+<!---
+### Guest Access in Teams
+
+The **Guest Access Diagnostic for Microsoft Teams** helps troubleshoot various issues that may hinder guests from accessing a team, such as inviting guests, accessing team content, and using specific guest features. Since guest settings are managed at both organizational and team levels, this diagnostic checks for any misconfigurations that could impact guest access. It aggregates these issues and presents them in one place, with each misconfigured setting accompanied by guidance for admins. Additionally, the diagnostic assesses the provisioning of guest user accounts. It also allows for optional inputs at org, team and user levels, giving you the flexibility to customize the output you receive.
+
+#### Org-level settings
+
+These settings at the organization level are evaluated to check for misconfiguration.  
+
+|Setting|Where it's located|Setting values considered “misconfigured”|
+| -------- | -------- | -------- |
+|External collaboration setting's guest invite setting|Microsoft Entra Admin Center |<li>No one in this organization can invite guest users including admins (most restrictive)</li><li>Only users assigned to specific admin roles can invite guests</li> |
+|M365 group guest setting|Microsoft Admin Center |Either one or both of these settings are turned off:<li>Let group owners add people outside your organization to Microsoft 365 Groups as guests</li><li>Let guest group members access group content</li> |
+|SharePoint External Sharing settings |SharePoint Admin Center |<li>Only people in your organization</li><li>Existing guests only</li> |
+|Guest Access setting |Teams Admin Center |Off |
+
+#### User-level setup
+
+This diagnostic checks the guest user account provisioning in both Entra and Teams when a guest user is provided as input. If a Teams team is also specified, it will verify the guest user's membership in that team. 
+
+#### Additional settings
+
+In addition, this diagnostic also displays some settings that could affect your guest access experience. These settings are not evaluated for misconfiguration.  
+
+1. Guest user access restriction setting and collaboration restrictions setting in Microsoft Entra Admin Center 
+
+    ![Guest user access restriction setting and collaboration restriction setting](../media/eng-direct-portal/eng-direct-portal-additional-settings-1.png)   
+
+2. Guest feature settings in Teams Admin Center 
+
+    ![Guest feature settings](../media/eng-direct-portal/eng-direct-portal-additional-settings-2.png)   
+
+3. Teams guest permissions in Teams app 
+
+    ![Teams guest permissions in Teams app](../media/eng-direct-portal/eng-direct-portal-additional-settings-3.png) 
+
+This diagnostic should assist to resolve your guest access issues and provide a seamless guest experience in Teams.  
+
+If problems persist, reach out to Microsoft support for assistance. 
+-->
+
 ## More information
 
 As we roll out new features, your experience might change.
 
-If you would like to get help or have questions, reach out to [edfeedback@microsoft.com](mailto:edfeedback@microsoft.com) or use the feedback mechanism within the Engineering Direct Portal page. If you are encountering any technical issues, open a support ticket via your normal support channel.
+If you would like to get help or have questions, reach out to [edfeedback@microsoft.com](mailto:edfeedback@microsoft.com) or use the feedback mechanism within the Engineering Direct Portal page. If you're encountering any technical issues, open a support ticket via your normal support channel.

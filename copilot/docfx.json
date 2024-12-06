@@ -24,8 +24,10 @@
     "resource": [
       {
         "files": [
+          "**/*.gif",
+          "**/*.jpg",
           "**/*.png",
-          "**/*.jpg"
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",

@@ -13,7 +13,7 @@ ms.collection:
 - m365copilot
 - magic-ai-copilot
 hideEdit: true
-ms.date: 10/10/2024
+ms.date: 11/08/2024
 ---
 
 # Enterprise data protection in Microsoft 365 Copilot and Microsoft Copilot
@@ -59,9 +59,9 @@ In addition to prompts and responses, web search queries (different from Microso
 
 - [Learn more about data, privacy, and security of web queries in Microsoft 365 Copilot and Microsoft Copilot](manage-public-web-access.md)
 
-## Plugins in Microsoft 365 Copilot
+## Agents in Microsoft 365 Copilot
 
-When you’re using plugins to help Microsoft 365 Copilot to provide more relevant information, check the privacy statement and terms of use of the plugin to determine how it will handle your organization’s data. For more information, see [Extensibility of Microsoft 365 Copilot](microsoft-365-copilot-privacy.md#extensibility-of-microsoft-365-copilot).
+When you’re using agents in Microsoft 365 Copilot, check the privacy statement and terms of use of the agents to determine how they'll handle your organization’s data.
 
 ## Footnotes
 

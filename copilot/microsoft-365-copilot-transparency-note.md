@@ -226,4 +226,4 @@ Microsoft provides tools like the Microsoft Copilot Dashboard for Microsoft 365 
 - [Microsoft AI principles](https://www.microsoft.com/ai/responsible-ai)
 - [Microsoft responsible AI resources](https://www.microsoft.com/ai/tools-practices)
 - [Microsoft Azure Learning courses on responsible AI](/ai/)
-- [2024 RAI Transparency Report](https://aka.ms/RAITransparencyReport2024)
+- [Responsible AI Transparency Report](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/msc/documents/presentations/CSR/Responsible-AI-Transparency-Report-2024.pdf)

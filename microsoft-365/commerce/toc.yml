@@ -55,8 +55,8 @@
           href: licenses/contracts-faq.yml
         - name: User roles FAQs
           href: licenses/user-roles-faq.yml
-        - name: Downloads FAQs
-          href: licenses/downloads-faq.yml
+        - name: Download volume licensing products
+          href: licenses/download-vl-products.md
         - name: Product keys FAQ
           href: licenses/product-keys-faq.yml
         - name: License Reservations FAQ

@@ -51,7 +51,7 @@
               href: microsoft-365-vpn-implement-split-tunnel.md
             - name: Securing Teams media traffic for VPN split tunneling
               href: microsoft-365-vpn-securing-teams.md
-            - name: Stream and live events in VPN environments
+            - name: Teams events in VPN environments
               href: microsoft-365-vpn-stream-and-live-events.md
             - name: Microsoft 365 optimization for China users
               href: microsoft-365-networking-china.md
@@ -110,7 +110,6 @@
               href: office-365-network-mac-perf-onboarding-tool.md
     - name: Microsoft 365 Networking Partner Program
       href: microsoft-365-networking-partner-program.md
-
 - name: Tenant
   items: 
     - name: Roadmap
@@ -197,7 +196,7 @@
         - name: Cross-tenant identity mapping
           href: cross-tenant-identity-mapping.md
 
-        - name: Multitenant collaboration
+        - name: Multitenant organizations
           items:
             - name: Plan for multitenant orgs
               href: plan-multi-tenant-org-overview.md
@@ -209,6 +208,10 @@
               href: sync-users-multi-tenant-orgs.md
             - name: Multitenant Organization People Search
               href: multi-tenant-people-search.md
+            - name: Manage multitenant org settings
+              href: manage-multitenant-org-settings.md
+            - name: Multitenant org FAQ
+              href: multitenant-org-faq.md
 
         - name: Cross-tenant OneDrive migration
           items:
@@ -351,7 +354,7 @@
             items: 
               - name: Overview
                 href: hybrid-solutions.md
-              - name: Use Microsoft Entra ID for SharePoint Server 2016 authentication
+              - name: Use Microsoft Entra ID for SharePoint Server authentication
                 href: /azure/active-directory/saas-apps/sharepoint-on-premises-tutorial
               - name: Connect an on-premises network to an Azure virtual network
                 href: connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md

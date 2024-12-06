@@ -110,20 +110,6 @@ You can submit your Fapiao request to our [Fapiao management system](https://go.
 
 You can download your tax receipt in certain jurisdictions from the **Billing** > **Billing and payments** page. If a tax receipt is available for an invoice, you see a **Download tax receipt** option on the context menu next to the invoice ID.
 
-## Run the Unknown Charge Diagnostic
-
-If you're a Microsoft 365 Global Administrator and you have a Microsoft Online Services Agreement (MOSA) billing account type, you can use a diagnostic tool to research unexpected charges in your invoice. The tool runs within the Microsoft 365 admin center, and lets you investigate charges from Microsoft that appear on your credit or debit card statement. [Find out what type of billing account you have](../manage-billing-accounts.md#view-my-billing-accounts).
-
-[!INCLUDE [ga-roles-limitation](../../includes/ga-roles-limitation.md)]
-
-> [!NOTE]
-> The Unknown Charge Diagnostic is only available for customers who bought their products and services from Microsoft.com, including Microsoft 365 Enterprise, Education, and Non-profit.
-
-Select the following **Run Tests: Unknown Charge** link to open the diagnostic tool in the Microsoft 365 admin center.
-
->[!div class="nextstepaction"]
->[Run Tests: Unknown Charge](https://aka.ms/PillarUnknownCharge)
-
 ## Related content
 
 [Understand your invoice for your Microsoft MCA billing account](understand-your-invoice.md) (article)\

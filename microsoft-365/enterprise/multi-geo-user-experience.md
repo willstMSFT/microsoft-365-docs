@@ -1,7 +1,7 @@
 ---
 title: "User experience in a multi-geo environment"
 ms.reviewer:
-ms.date: 09/25/2024
+ms.date: 10/29/2024
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
@@ -107,4 +107,6 @@ There are two constituents of the Microsoft 365 Person data:
 
 - My Microsoft 365 People dataset ([contact resource type](/graph/api/resources/contact?view=graph-rest-1.0&preserve-view=true)), which represents the list of the user's Microsoft 365 contacts along with the user’s version of their contacts' Microsoft 365 profile. This edited or unedited version of another user’s profile will always remain private in the current user’s mailbox and won't be replicated anywhere.
 
-To enable discovery, rich people search, and full fidelity collaboration experiences, the Microsoft 365 profile of users in the tenant is replicated across geos when a Multi-Geo tenant is first set up (for instance, to provide the Global Address List) and in response to user actions. Examples of user actions include direct and indirect interactions with one or more users in the tenant via activities like joining the Organization, creating and\or joining Teams meetings, sharing and\or co-editing files, profile card lookup, and adding of contacts as described in [Add, find, edit, or delete a contact in Outlook](https://support.microsoft.com/office/add-find-edit-or-delete-a-contact-in-outlook-e1dc4548-3bd6-4644-aecd-47b5728f7b0d#:~:text=information%20any%20time.-,Select%20the%20contact%20from%20the%20list%2C%20then%20select%20Edit%20contact,and%20begin%20adding%20more%20information.&text=someone's%20profile%20card-,In%20Mail%2C%20open%20an%20email%20message%20in%20the%20reading%20pane,card%2C%20select%20Add%20to%20contacts.). The replicated Microsoft 365 profiles of other users from an interaction\collaboration are stored in the Microsoft 365 People dataset of the target user shard.
+To enable discovery, organizational structure exploration, rich people search, and full fidelity collaboration experiences, the Global Address List (GAL) and the Microsoft 365 Profile of users in the tenant is replicated and kept in sync across geos both when a Multi-Geo tenant is first set up and in response to certain user actions. Examples of user actions include direct and indirect interactions with one or more users in the tenant via activities like becoming part of the Organization, creating and/or joining Teams meetings, sharing and/or co-editing files, profile card lookup, and adding of contacts as described in [Add, find, edit, or delete a contact in Outlook](https://support.microsoft.com/office/add-find-edit-or-delete-a-contact-in-outlook-e1dc4548-3bd6-4644-aecd-47b5728f7b0d#:~:text=information%20any%20time.-,Select%20the%20contact%20from%20the%20list%2C%20then%20select%20Edit%20contact,and%20begin%20adding%20more%20information.&text=someone's%20profile%20card-,In%20Mail%2C%20open%20an%20email%20message%20in%20the%20reading%20pane,card%2C%20select%20Add%20to%20contacts.). 
+
+In addition to the central GAL, replicated Microsoft 365 Profiles of other users from an interaction or collaboration are stored in the Microsoft 365 People dataset of the target user's mailbox.
