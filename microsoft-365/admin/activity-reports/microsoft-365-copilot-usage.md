@@ -67,7 +67,7 @@ In Recommendations, the recommended action card highlights [Microsoft Copilot Da
 
 You can see the following summary charts in this report as default view:
 
-:::image type="content" alt-text="Screenshot showing Microsoft 365 Copilot usage adoption chart." source="../../media/copilot-usage-adoption-chart2.png":::
+:::image type="content" alt-text="Screenshot showing Microsoft 365 Copilot usage adoption chart." source="../../media/copilot-usage-adoption-chart2.png" lightbox="../../media/copilot-usage-adoption-chart2.png":::
 
 The definitions for Enabled Users and Active Users metrics are the same as provided earlier.
 
@@ -81,7 +81,7 @@ When switching to Trend view, you can select one product in the dropdown list to
 
 **Business Chat adoption** shows enabled users and total usage of Business Chat and split usage between Business Chat (work) and Business Chat (web).
 
-:::image type="content" source="../../media/copilot-usage-business-chat.png" alt-text="Screenshot showing the business chat usage chart in the Microsoft 365 Copilot usage report.":::
+:::image type="content" source="../../media/copilot-usage-business-chat.png" alt-text="Screenshot showing the business chat usage chart in the Microsoft 365 Copilot usage report." lightbox="../../media/copilot-usage-business-chat.png":::
 
 **Agent adoption** shows active users of agents in Microsoft 365 Copilot for the selected period. As described earlier, only usage of agents that have been created by your org including both admin-approved agents and agents shared by users in your org.
 
@@ -143,7 +143,7 @@ You can view a table list to show each Microsoft 365 Copilot enabled user's last
 
 Select **Choose columns** to add or remove columns from the table.
 
-:::image type="content" alt-text="Screenshot showing the columns you can select for the Microsoft 365 Copilot usage report." source="../../media/copilot-usage-column.png":::
+:::image type="content" alt-text="Screenshot showing the columns you can select for the Microsoft 365 Copilot usage report." source="../../media/copilot-usage-column.png" lightbox="../../media/copilot-usage-column.png":::
 
 You can also export the report data into an Excel .csv file by selecting the Export link. This exports the Microsoft 365 Copilot usage data of all users and enables you to do simple sorting, filtering, and searching for further analysis.
 
