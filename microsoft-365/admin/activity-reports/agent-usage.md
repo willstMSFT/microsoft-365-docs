@@ -30,7 +30,7 @@ description: "Learn about agent usage in Microsoft 365 copilot and gain insights
 In the Microsoft 365 Copilot agent usage report, you can view the adoption of agents in Microsoft 365 Copilot in your org. For agent activity on a given day, the report becomes available within 72 hours of the end of that day (in UTC).
 
 > [!NOTE]
-> The report is currently limited to agents built by your org through Microsoft Copilot Studio or Teams Tool Kit (including admin-approved agents and agents created by users through agent builder). The report captures usage of agents in Business Chat (work) and Copilot in Word, Excel and PowerPoint. SharePoint agents and agents built by Microsoft and Microsoft partners are not yet included but will be added at a later date.
+> The report is currently limited to agents built by your org through Microsoft Copilot Studio or Teams Tool Kit (including admin-approved agents and agents created by users through agent builder). The report captures usage of agents in Business Chat (work) and Copilot in Word and PowerPoint. SharePoint agents and agents built by Microsoft and Microsoft partners are not yet included but will be added at a later date.
 
 ## How do I get to the agent usage in Microsoft 365 Copilot report?
 
