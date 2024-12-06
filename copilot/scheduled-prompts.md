@@ -72,7 +72,7 @@ Users will still see the feature if the Optional Connected Experiences setting i
 
 ## User controls
 
-:::image type="content" source="media/prompts-set-up.png" alt-text="Screenshot showing the set up text for a new scheduled prompt in Copilot." lightbox="media/prompts-set-up.png":::
+:::image type="content" source="media/prompt-set-up.png" alt-text="Screenshot showing the set up text for a new scheduled prompt in Copilot." lightbox="media/prompts-set-up.png":::
 
 Your users can find the Scheduled prompts feature by hovering over a prompt they have submitted to Copilot. When a user selects the Save and activate button to confirm the scheduled prompt, a user's prompt information will be sent to the Power Automate and Power Platform system, and the [Power Automate terms of service and privacy policy](/power-platform/admin/wp-compliance-data-privacy) apply.
 
