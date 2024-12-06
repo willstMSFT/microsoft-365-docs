@@ -60,9 +60,9 @@ There are several IT Admin policy settings provided to enable creation of Loop c
 
 |Configure  |Setting Type  |Specific Policy  |Notes  |
 |---------|---------|---------|---------|
-|Loop workspaces creation  |  Cloud Policy  |  **Create and view Loop workspaces in Loop**  |  Loop workspaces  |
+|Loop workspaces creation  |  Cloud Policy  |  **Create Loop workspaces in Loop**  |  Applies to: Loop workspaces (previously titled Create and view Loop workspaces in Loop)  |
 |Loop component creation and integration across Microsoft 365  |  Cloud Policy  | **Create and view Loop files in Microsoft apps that support Loop**  |  Applies to: <br/> - Outlook integration<br> - OneNote integration<br> - Whiteboard integration<br> Does **NOT** apply to:<br> - Loop workspaces<br> - Teams integration<br> - Copilot Pages  |
-|Copilot Pages creation and integration  |  Cloud Policy  |  **Create and view Loop files in Microsoft 365 Copilot Chat**  |  Applies to Copilot Pages in a Copilot chat experience  |
+|Copilot Pages creation and integration  |  Cloud Policy  |  **Create and view Loop files in Microsoft 365 Copilot Chat**  |  Applies to: Copilot Pages in a Copilot chat experience  |
 |Outlook creation and integration of Loop experiences  |  Cloud Policy  |  **Create and view Loop files in Outlook**  |  First checks **Create and view Loop files in Microsoft apps that support Loop**; then applies **Create and view Loop files in Outlook**, if applicable.  |
 |Teams creation and integration  |  SharePoint property  |  See [Settings management for Loop components in Teams](#settings-management-for-loop-functionality-in-teams)  |  Teams only checks the settings in this row.  |
 
@@ -72,7 +72,7 @@ Configure the creation of content in these locations by using the appropriate po
 
 |Loop content originally created in|️️️Manage with this policy|Loop content storage|
 |-----|-----|-----|
-|Loop app|Cloud Policy: **Create and view Loop workspaces in Loop**|SharePoint Embedded: ✔️in Loop workspace|
+|Loop app|Cloud Policy: **Create  Loop workspaces in Loop**|SharePoint Embedded: ✔️in Loop workspace|
 |Copilot Pages|Cloud Policy: **Create and view Loop files in Microsoft 365 Copilot Chat**|SharePoint Embedded: ✔️in Loop workspace|
 |Teams channel meeting|SharePoint property `Set-SPOTenant -IsCollabMeetingNotesFluidEnabled $true`|SharePoint Site: ✔️in Channel folder|
 |Teams channel|SharePoint property `Set-SPOTenant -IsCollabMeetingNotesFluidEnabled $true`|SharePoint Site: ✔️in Channel folder|
@@ -86,9 +86,9 @@ Configure the creation of content in these locations by using the appropriate po
 
 |Scenario  |  Policies Configured  |
 |---------|---------|
-|✅Enable Loop workspaces creation and Loop component creation and integration everywhere  |  ✅ **Create and view Loop workspaces in Loop** = Enabled (or Not Configured)<br/>✅ **Create and view Loop files in Microsoft apps that support Loop** = Enabled (or Not Configured)<br/>✅ **Create and view Loop files in Microsoft 365 Copilot Chat** = Enabled (or Not Configured)<br/>✅ [Teams-only] `Set-SPOTenant -IsLoopEnabled $true`, `Set-SPOTenant -IsCollabMeetingNotesFluidEnabled $true`  |
-|✅Enable Loop workspaces creation and Loop component creation and integration everywhere, but ⛔Disable Loop component creation and integration in Communication apps (Outlook, Teams)  |  ✅ **Create and view Loop workspaces in Loop** = Enabled (or Not Configured)<br/>✅ **Create and view Loop files in Microsoft apps that support Loop** = Enabled (or Not Configured)<br/>✅ **Create and view Loop files in Microsoft 365 Copilot Chat** = Enabled (or Not Configured)<br/>⛔ **Create and view Loop files in Outlook** = Disabled<br/>⛔ [Teams-only] `Set-SPOTenant -IsLoopEnabled $false`, `Set-SPOTenant -IsCollabMeetingNotesFluidEnabled $false`  |
-|⛔Disable Loop workspace creation and Loop component creation and integration everywhere  |  ⛔ **Create and view Loop workspaces in Loop** = Disabled<br/>⛔ **Create and view Loop files in Microsoft apps that support Loop** = Disabled<br/>⛔ **Create and view Loop files in Microsoft 365 Copilot Chat** = Disabled<br/>⛔ [Teams-only] `Set-SPOTenant -IsLoopEnabled $false`, `Set-SPOTenant -IsCollabMeetingNotesFluidEnabled $false`  |
+|✅Enable Loop workspaces creation and Loop component creation and integration everywhere  |  ✅ **Create Loop workspaces in Loop** = Enabled (or Not Configured)<br/>✅ **Create and view Loop files in Microsoft apps that support Loop** = Enabled (or Not Configured)<br/>✅ **Create and view Loop files in Microsoft 365 Copilot Chat** = Enabled (or Not Configured)<br/>✅ [Teams-only] `Set-SPOTenant -IsLoopEnabled $true`, `Set-SPOTenant -IsCollabMeetingNotesFluidEnabled $true`  |
+|✅Enable Loop workspaces creation and Loop component creation and integration everywhere, but ⛔Disable Loop component creation and integration in Communication apps (Outlook, Teams)  |  ✅ **Create Loop workspaces in Loop** = Enabled (or Not Configured)<br/>✅ **Create and view Loop files in Microsoft apps that support Loop** = Enabled (or Not Configured)<br/>✅ **Create and view Loop files in Microsoft 365 Copilot Chat** = Enabled (or Not Configured)<br/>⛔ **Create and view Loop files in Outlook** = Disabled<br/>⛔ [Teams-only] `Set-SPOTenant -IsLoopEnabled $false`, `Set-SPOTenant -IsCollabMeetingNotesFluidEnabled $false`  |
+|⛔Disable Loop workspace creation and Loop component creation and integration everywhere  |  ⛔ **Create Loop workspaces in Loop** = Disabled<br/>⛔ **Create and view Loop files in Microsoft apps that support Loop** = Disabled<br/>⛔ **Create and view Loop files in Microsoft 365 Copilot Chat** = Disabled<br/>⛔ [Teams-only] `Set-SPOTenant -IsLoopEnabled $false`, `Set-SPOTenant -IsCollabMeetingNotesFluidEnabled $false`  |
 
 ## User experience expectations when admin settings are configured
 
@@ -117,13 +117,13 @@ If you're looking for a simple way to turn on or off the creation of only Loop w
     > The checkbox may not reflect your configured state on load. However, the state you select and choose Save in the Admin Center will persist and override any defaults for your tenant.
 1. Select **Save**.
 
-    The Microsoft Admin Center configures the Cloud Policy setting **Create and view Loop workspaces in Loop**, described in the next section, targeted at All users (your full tenant). See the next section if you wish to perform more advanced controls. If you configured **Create and view Loop workspaces in Loop** in Cloud Policy, review your Cloud Policy settings to confirm they still match your expectation after configuring in the Microsoft Admin Center.
+    The Microsoft Admin Center configures the Cloud Policy setting **Create Loop workspaces in Loop**, described in the next section, targeted at All users (your full tenant). See the next section if you wish to perform more advanced controls. If you configured **Create Loop workspaces in Loop** in Cloud Policy, review your Cloud Policy settings to confirm they still match your expectation after configuring in the Microsoft Admin Center.
 
 ## Settings management in Cloud Policy
 
 The Loop experiences (except for Microsoft Teams) check the following [Cloud Policy](/deployoffice/admincenter/overview-cloud-policy) settings. See [Available policy settings](#available-policy-settings) to understand how each app checks these settings:
 
-- **Create and view Loop workspaces in Loop**
+- **Create Loop workspaces in Loop**
 - **Create and view Loop files in Microsoft apps that support Loop**
 - **Create and view Loop files in Microsoft 365 Copilot Chat**
 - **Create and view Loop files in Outlook**
@@ -134,7 +134,7 @@ The Loop experiences (except for Microsoft Teams) check the following [Cloud Pol
 1. Create a new policy configuration or edit an existing one.
 1. From the **Choose the scope** dropdown list, choose either **All users** or select the group for which you want to apply the policy. For more information, See [Microsoft 365 Groups for Cloud Policy](#microsoft-365-groups-for-cloud-policy).
 1. In **Configure Settings**, choose one of the following settings:
-    - For **Create and view Loop workspaces in Loop**:
+    - For **Create Loop workspaces in Loop**:
         - **Disabled**: Creation of Loop workspaces isn't available to the users.
         - Loop app will open Loop components when workspaces is disabled.
         - **Enabled**: Creation of Loop workspaces is available to the users.
