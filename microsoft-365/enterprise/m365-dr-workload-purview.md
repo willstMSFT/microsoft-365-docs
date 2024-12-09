@@ -9,7 +9,7 @@ ms.subservice: advanced-data-residency
 ms.topic: article
 f1.keywords:
 - NOCSH
-ms.date: 02/29/2024
+ms.date: 12/09/2024
 ms.reviewer: deanw
 ms.custom:
 - it-pro
@@ -43,12 +43,12 @@ We are in the process of updating the actual data location in _Tenant_ Admin Cen
 
 | Solution Area | Services | Components |
 |:-----|:-----|:----- |
-| Data Security |Data Loss Prevention (DLP) |See (m365-dr-commitments.md#data-loss-prevention-dlp) for specific commitments.|
-| Data Security |Information Barriers |See (m365-dr-commitments.md#information-barriers) for specific commitments.|
-| Data Security |Information Protection (MIP) |See (m365-dr-commitments.md#information-protection-mip) for specific commitments.|
-| Risk & Compliance |Audit (Standard) |See (m365-dr-commitments.md#audit-standard) for specific commitments.|
-| Risk & Compliance |Audit (Premium) |See (m365-dr-commitments.md#audit-premium) for specific commitments.|
-| Risk & Compliance |Data Lifecycle Management (DLM) |See (m365-dr-commitments.md#data-lifecycle-management-dlm) for specific commitments.|
+| Data Security |Data Loss Prevention (DLP) |See [ADR Commitments](m365-dr-commitments.md#data-loss-prevention-dlp) for specific commitments.|
+| Data Security |Information Barriers |See [ADR Commitments](m365-dr-commitments.md#information-barriers) for specific commitments.|
+| Data Security |Information Protection (MIP) |See [ADR Commitments](m365-dr-commitments.md#information-protection-mip) for specific commitments.|
+| Risk & Compliance |Audit (Standard) |See [ADR Commitments](m365-dr-commitments.md#audit-standard) for specific commitments.|
+| Risk & Compliance |Audit (Premium) |See [ADR Commitments](m365-dr-commitments.md#audit-premium) for specific commitments.|
+| Risk & Compliance |Data Lifecycle Management (DLM) |See [ADR Commitments](m365-dr-commitments.md#data-lifecycle-management-dlm) for specific commitments.|
 
 > [!NOTE]
 > The Microsoft Purview services list mentioned above includes all services covered as part of the Advanced Data Residency commitment as of November 2024. Additional Microsoft Purview services are not currently supported.
