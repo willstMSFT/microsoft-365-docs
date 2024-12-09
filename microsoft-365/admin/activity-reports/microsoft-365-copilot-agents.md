@@ -22,7 +22,7 @@ search.appverid:
 - MST160
 - MET150
 - MOE150
-description: "Learn about agent usage in Microsoft 365 copilot and gain insights into the Microsoft 365 Copilot activity in your anization."
+description: "Learn about agent usage in Microsoft 365 copilot and gain insights into the Microsoft 365 Copilot activity in your organization."
 ---
 
 # Microsoft 365 reports in the admin center – Agent usage in Microsoft 365 Copilot
