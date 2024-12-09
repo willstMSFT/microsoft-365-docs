@@ -277,6 +277,8 @@
               href: activity-reports/activity-reports.md
             - name: Active Users
               href: activity-reports/active-users-ww.md
+            - name: Agent usage in Microsoft 365 Copilot
+              href: activity-reports/agent-usage.md
             - name: Microsoft browser usage
               href: activity-reports/browser-usage-report.md
             - name: Microsoft 365 Copilot readiness
