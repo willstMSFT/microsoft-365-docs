@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: laurawi
-ms.date: 12/02/2024
+ms.date: 12/05/2024
 audience: Admin
 ms.reviewer: emilyblundo, sophieke
 ms.topic: get-started
@@ -48,9 +48,9 @@ This article applies to:
 
 The following table lists some of the features that can help get your data ready for Copilot. These features affect Copilot results and can help you manage Copilot interactions (prompts and responses).
 
-| &nbsp; | E3 + SAM license | E5 + SAM license |
+| &nbsp; | E3 + Copilot license | E5 + Copilot license |
 | --- | --- | --- |
-| License requirements | - Microsoft 365 E3 or Office 365 E3 <br/>- SharePoint Advanced Management <br/>- Microsoft 365 Copilot | - Microsoft 365 E5 or Office 365 E5 <br/>- SharePoint Advanced Management <br/>- Microsoft 365 Copilot |
+| License requirements | - Microsoft 365 E3 or Office 365 E3 <br/>- Microsoft 365 Copilot <br/> - SharePoint Advanced Management (SAM)<br/><br/>Beginning in early 2025, SAM will be included with your Microsoft 365 Copilot license.| - Microsoft 365 E5 or Office 365 E5 <br/>- Microsoft 365 Copilot <br/> - SharePoint Advanced Management (SAM) <br/><br/>Beginning in early 2025, SAM will be included with your Microsoft 365 Copilot license.|
 | Restricted SharePoint Search (RSS) | ✅  | ✅  |
 | &nbsp; | &nbsp; | &nbsp; |
 | **Microsoft Purview features** | &nbsp; | &nbsp; |
