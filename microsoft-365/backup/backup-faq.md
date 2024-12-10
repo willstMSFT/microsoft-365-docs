@@ -101,7 +101,7 @@ For Exchange, if the user account is currently or permanently deleted, Microsoft
 - [Restore an inactive mailbox](/purview/restore-an-inactive-mailbox)
 
 Once an inactive mailbox is recovered and restored to a new mailbox, the new mailbox must be added to the backup policy if desired.
-
+#### What if your in the Microsoft 365 Government Community Cloud(GCC) 
 <!---
 - For Exchange, a user account will be in a soft-deleted state for 30 days after it's deleted. To restore the user, see [Restore a user in the Microsoft 365 admin center](/microsoft-365/admin/add-users/restore-user). Once you restore the user, you can use the restore feature in Microsoft 365 Backup to restore as usual.
 --->
